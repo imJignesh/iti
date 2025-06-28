@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Galano Grotesque';
+  src: url('/fonts/galano-grotesque/Galano Grotesque Regular.otf') format('opentype');
+  font-style: normal;
+  font-display: swap;
+} 
+
+body {
+  font-family: var(--font-galano);
+}
+
+:root {
+  --blue-color: #161664;
+  --skyblue-color: #0091d0;
+  --green-color: #003E37;
+  --lightgreen-color: #00A491;
+  --border-color:#A3CAF5;
+  --green-text: #A6EAC7;
+  --blue-text: #262E46;
+  --grey-text:#233467;
+  --white-color:#F8FBFF;
+  --white-bg:#ffffff;
+  --black-color:#000000;
+  --font-galano: 'Galano Grotesque', Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Container - Use this in all pages */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Alternative container sizes if needed */
+.container-sm {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.container-lg {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.SubHeading {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: linear-gradient(to left , var(--skyblue-color), var(--blue-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  padding: 0 40px;
+  display: inline-block;
+}
+.SubHeading:before{ 
+  content: '';
+  width: 16px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(/images/heading-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.SubHeading:after{
+  content: '';
+  width: 16px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(/images/heading-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
