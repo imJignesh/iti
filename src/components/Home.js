@@ -444,7 +444,7 @@ const Home = () => {
                   />
                 </div>
                 <Image
-                  src="/images/about-us.png"
+                  src="/images/about-us-img.png"
                   alt="Teacher"
                   className={styles.aboutImage}
                 />
