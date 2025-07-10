@@ -1068,7 +1068,7 @@
   -webkit-text-fill-color: #a6eac7;
 }
 .subjectSection .subjectDesc {
-  color: var(--white-color);
+  color: #7285a8;
   font-size: 20px;
   max-width: 420px;
   line-height: 1.2;
@@ -1652,7 +1652,7 @@
 }
 .trainersSection .trainerCard:nth-child(7),
 .trainersSection .trainerCard:nth-child(9) {
-  transform: translateY(30px);
+  transform: translateY(30px) !important;
 }
 
 .trainersSection .trainerCard[data-color="blue"] {

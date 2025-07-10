@@ -22,7 +22,8 @@ const Footer = () => {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section"
+              
+          className={`fade-in-section ${styles.footerTop}`}
               style={{ animationDelay: "0.2s" }}
             >
               <img src="/images/footerImage.jpg" alt="Footer" className={styles.footerMainImg} />
@@ -31,7 +32,8 @@ const Footer = () => {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section"
+              
+          className={`fade-in-section ${styles.footerTop}`}
               style={{ animationDelay: "0.3s" }}
             >
               <div className={styles.footerDesc}>
@@ -56,7 +58,8 @@ const Footer = () => {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section"
+              
+          className={`fade-in-section ${styles.footerTop}`}
               style={{ animationDelay: `${0.4 + colIdx * 0.1}s` }}
             >
               <div className={styles.footerLinksCol}>
