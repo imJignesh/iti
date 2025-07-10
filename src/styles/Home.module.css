@@ -480,6 +480,31 @@
   }
 }
 
+@keyframes bannerSplitIn {
+  0% {
+    opacity: 0;
+    letter-spacing: 2em;
+    transform: scaleX(0.7) scaleY(0.7) skewX(12deg);
+    filter: blur(8px);
+  }
+  60% {
+    opacity: 1;
+    letter-spacing: 0.2em;
+    transform: scaleX(1.05) scaleY(1.05) skewX(-2deg);
+    filter: blur(0.5px);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 0.25em;
+    transform: scaleX(1) scaleY(1) skewX(0deg);
+    filter: blur(0);
+  }
+}
+
+.bannerSplitIn {
+  animation: bannerSplitIn 1.2s cubic-bezier(0.4,0,0.2,1) both;
+}
+
 /* About Us Section  */
 
 .aboutSection {

@@ -86,3 +86,21 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.is-inview {
+  animation: fadeInUp 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

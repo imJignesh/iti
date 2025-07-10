@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/Header.module.css';
 import Image from 'next/image';
 
 const Header = () => {
+    const [show, setShow] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY < 50) {
+                setShow(true);
+            } else if (window.scrollY < lastScrollY) {
+                setShow(true);
+            } else {
+                setShow(false);
+            }
+            setLastScrollY(window.scrollY);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY]);
+
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${show ? styles.headerAnimated : styles.headerHidden}`}>
             <div className={styles.header_left_content}>
                 <div className={styles.logo}>
                     <Image src="/images/logo.svg" width={200} height={80} quality={100} />

@@ -4,7 +4,13 @@ import styles from '../styles/Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.footerWrap}>
-        <div className={styles.footerTop}>
+        <div
+          className={`fade-in-section ${styles.footerTop}`}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+          style={{ animationDelay: "0.1s" }}
+        >
           <div className={styles.footerContactRow}>
             <span className="SubHeading">CONTACT US</span>
           </div>
@@ -12,10 +18,22 @@ const Footer = () => {
             LOREM IPSUM DOLOR SIT AMET, CONSECTETUR
           </h2>
           <div className={styles.footerMainRow}>
-            <div className={styles.footerImgCol}>
-                      <img src="/images/footerImage.jpg" alt="Footer" className={styles.footerMainImg} />
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <img src="/images/footerImage.jpg" alt="Footer" className={styles.footerMainImg} />
             </div>
-            <div className={styles.footerRightCol}>
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.3s" }}
+            >
               <div className={styles.footerDesc}>
                 Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.
               </div>
@@ -32,42 +50,49 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.footerLinksRow}>
-          <div className={styles.footerLinksCol}>
-            <div className={styles.footerLinksTitle}>LOREM</div>
-            <ul>
-              <li>Lorem Ipsum Dolor</li>
-              <li>Lorem Ipsum Dolor Sit</li>
-              <li>Lorem Ipsum Dolor</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum Dolor Sit</li>
-            </ul>
-          </div>
-          <div className={styles.footerLinksCol}>
-            <div className={styles.footerLinksTitle}>LOREM</div>
-            <ul>
-              <li>Lorem Ipsum Dolor</li>
-              <li>Lorem Ipsum Dolor Sit</li>
-              <li>Lorem Ipsum Dolor</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum Dolor Sit</li>
-            </ul>
-          </div>
-          <div className={styles.footerLinksCol}>
-            <div className={styles.footerLinksTitle}>LOREM</div>
-            <ul>
-              <li>Lorem Ipsum Dolor</li>
-              <li>Lorem Ipsum Dolor Sit</li>
-              <li>Lorem Ipsum Dolor</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum Dolor Sit</li>
-            </ul>
-          </div>
+          {[0,1,2].map((colIdx) => (
+            <div
+              key={colIdx}
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: `${0.4 + colIdx * 0.1}s` }}
+            >
+              <div className={styles.footerLinksCol}>
+                <div className={styles.footerLinksTitle}>LOREM</div>
+                <ul>
+                  <li>Lorem Ipsum Dolor</li>
+                  <li>Lorem Ipsum Dolor Sit</li>
+                  <li>Lorem Ipsum Dolor</li>
+                  <li>Lorem Ipsum</li>
+                  <li>Lorem Ipsum Dolor Sit</li>
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
         <div className={styles.footerBottomRow}>
-          <div className={styles.footerAddressLabel}>ADDRESS</div>
-          <div className={styles.footerAddress}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</div>
-          <div className={styles.footerContactLabel}>CONTACT</div>
-          <div className={styles.footerContact}>+00 97686 93485</div>
+          <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
+            style={{ animationDelay: "0.7s" }}
+          >
+            <div className={styles.footerAddressLabel}>ADDRESS</div>
+            <div className={styles.footerAddress}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</div>
+          </div>
+          <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
+            style={{ animationDelay: "0.8s" }}
+          >
+            <div className={styles.footerContactLabel}>CONTACT</div>
+            <div className={styles.footerContact}>+00 97686 93485</div>
+          </div>
         </div>
     </footer>
   );

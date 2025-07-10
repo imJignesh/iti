@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import "swiper/css";
@@ -7,6 +7,27 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
+
+function useInViewAnimation(threshold = 0.3) {
+  const [inView, setInView] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setInView(true);
+        });
+      },
+      { threshold }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
+  }, [threshold]);
+  return [ref, inView];
+}
 
 const courseData = [
   {
@@ -277,83 +298,160 @@ const Home = () => {
   const [hovered, setHovered] = useState(1);
   const [active, setActive] = useState(1);
   const [activeIndex, setActiveIndex] = React.useState(1);
+  const scrollRef = useRef(null);
+  const [courseHeadingRef, courseHeadingInView] = useInViewAnimation();
+  // Remove split-in state and effect
+
+  useEffect(() => {
+    let scroll;
+    if (typeof window !== "undefined") {
+      import("locomotive-scroll").then((LocomotiveScrollModule) => {
+        scroll = new LocomotiveScrollModule.default({
+          el: scrollRef.current,
+          smooth: true,
+          lerp: 0.08,
+        });
+      });
+    }
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
 
   return (
     <>
       {/* Banner Section */}
-      <section className={styles.hero}>
-        <div className="container">
-          <div className={styles.heroMain}>
-            <div className={styles.heroLeft}>
-              <h3 className="SubHeading">Welcome to Ignite</h3>
-              <h1 className={styles.heroTitle}>
-                Lorem ipsum dolor sit amet,{" "}
-                <span className={styles.highlight}>consectetur</span> adipiscing
-              </h1>
-              <p className={styles.heroParagraph}>
-                <span>Lorem ipsum dolor sit amet</span>
-                Achieve academic excellence in IBDP, MYP, I/GCSE, A-Levels & AP
-                with Ignite's expert tutors in Dubai. Our curriculum-focused
-                programs are designed to boost your grades and confidence!
-              </p>
-            </div>
-            <div className={styles.heroRight}>
-              <Image
-                src="/images/banner-image-right.png"
-                alt="Education Platform"
-                className={styles.heroImage}
-                width={500}
-                height={500}
-                quality={100}
-              />
-              <div className={styles.buttonGroup}>
-                <button type="button">
-                  Get A Free Demo{" "}
+      <div ref={scrollRef} data-scroll-container>
+        <section className={styles.hero} data-scroll-section>
+          <div className="container">
+            <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
+              <div className={styles.heroMain}>
+                <div className={styles.heroLeft}>
+                  <div
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className="fade-in-section"
+                    style={{ animationDelay: "0.2s" }}
+                  >
+                    <h3 className="SubHeading">Welcome to Ignite</h3>
+                  </div>
+                  <div
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className="fade-in-section"
+                    style={{ animationDelay: "0.4s" }}
+                  >
+                    <h1 className={styles.heroTitle}>
+                      Lorem ipsum dolor sit amet,{" "}
+                      <span className={styles.highlight}>consectetur</span> adipiscing
+                    </h1>
+                  </div>
+                  <div
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className="fade-in-section"
+                    style={{ animationDelay: "0.6s" }}
+                  >
+                    <p className={styles.heroParagraph}>
+                      <span>Lorem ipsum dolor sit amet</span>
+                      Achieve academic excellence in IBDP, MYP, I/GCSE, A-Levels & AP
+                      with Ignite's expert tutors in Dubai. Our curriculum-focused
+                      programs are designed to boost your grades and confidence!
+                    </p>
+                  </div>
+                </div>
+                <div className={styles.heroRight}>
                   <Image
-                    src="/images/right-arrow-skyblue.png"
-                    width={40}
-                    height={40}
+                    src="/images/banner-image-right.png"
+                    alt="Education Platform"
+                    className={styles.heroImage}
+                    width={500}
+                    height={500}
                     quality={100}
                   />
-                </button>
-                <button type="button">
-                  Explore Classes{" "}
-                  <Image
-                    src="/images/right-arrow-blue.png"
-                    width={40}
-                    height={40}
-                    quality={100}
-                  />
-                </button>
+                  <div className={styles.buttonGroup}>
+                    <button type="button">
+                      Get A Free Demo{" "}
+                      <Image
+                        src="/images/right-arrow-skyblue.png"
+                        width={40}
+                        height={40}
+                        quality={100}
+                      />
+                    </button>
+                    <button type="button">
+                      Explore Classes{" "}
+                      <Image
+                        src="/images/right-arrow-blue.png"
+                        width={40}
+                        height={40}
+                        quality={100}
+                      />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Course Section  */}
       <section className={styles.courseSection}>
         <div className="container">
           <div className={styles.courseHeadings}>
-            <h3 className="SubHeading">TUTORING COURSES</h3>
-            <h1 className={styles.courseTitle}>
-              Lorem ipsum dolor sit amet,{" "}
-              <span className={styles.highlight}>consectetur</span> adipiscing
-            </h1>
-            <p>
-              Choosing us means partnering with experienced coaches who are
-              dedicated to unlocking your potential.
-            </p>
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <h3 className="SubHeading">TUTORING COURSES</h3>
+            </div>
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.25s" }}
+            >
+              <h1 className={styles.courseTitle}>
+                Lorem ipsum dolor sit amet,{" "}
+                <span className={styles.highlight}>consectetur</span> adipiscing
+              </h1>
+            </div>
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <p>
+                Choosing us means partnering with experienced coaches who are
+                dedicated to unlocking your potential.
+              </p>
+            </div>
           </div>
-          <div className={styles.courseInner}>
+          <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.courseInner}`}
+            style={{ animationDelay: "0.4s" }}
+          >
             {courseData.map((card, idx) => {
               const isActive = hovered === idx;
               return (
                 <div
                   key={idx}
                   className={isActive ? styles.mainCard : styles.sideCard}
-                  onMouseEnter={() => setHovered(idx)}
                   style={{ background: "none" }}
+                  onMouseEnter={() => setHovered(idx)}
                 >
                   <span className={styles.cardNumber}>{card.number}</span>
                   <span className={styles.cardTitle}>{card.title}</span>
@@ -399,10 +497,13 @@ const Home = () => {
       </section>
 
       {/* Moving Banner Section */}
-      <div className={styles.bannerScroll}>
-        {/* <marquee behavior="scroll" direction="left" scrollamount="6">
-                WHERE GRADE IMPROVEMENT BEGINS &nbsp; <span className={styles.dot}>●</span> &nbsp; WHERE GRADE IMPROVEMENT BEGINS &nbsp; <span className={styles.dot}>●</span> &nbsp; WHERE GRADE IMPROVEMENT BEGINS &nbsp; <span className={styles.dot}>●</span> &nbsp; WHERE GRADE IMPROVEMENT BEGINS &nbsp; <span className={styles.dot}>●</span> &nbsp; WHERE GRADE IMPROVEMENT BEGINS
-            </marquee> */}
+      <div
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true"
+        className={`fade-in-section ${styles.bannerScroll}`}
+        style={{ animationDelay: "0.4s" }}
+      >
         <span>
           WHERE GRADE IMPROVEMENT BEGINS &nbsp;{" "}
           <span className={styles.dot}>●</span> &nbsp; WHERE GRADE IMPROVEMENT
@@ -423,39 +524,64 @@ const Home = () => {
               <div className={styles.aboutImageWrap}>
                 <div>
                   <img
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className={`fade-in-section ${styles.rectangleBG}`}
                     src="/images/rectangle-bg1.png"
                     alt="Teacher"
-                    className={styles.rectangleBG}
                   />
                   <img
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className={`fade-in-section ${styles.rectangleBG}`}
                     src="/images/rectangle-bg2.png"
                     alt="Teacher"
-                    className={styles.rectangleBG}
                   />
                   <img
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className={`fade-in-section ${styles.rectangleBG}`}
                     src="/images/rectangle-bg2.png"
                     alt="Teacher"
-                    className={styles.rectangleBG}
                   />
                   <img
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className={`fade-in-section ${styles.rectangleBG}`}
                     src="/images/rectangle-bg2.png"
                     alt="Teacher"
-                    className={styles.rectangleBG}
                   />
                 </div>
                 <Image
                   src="/images/about-us-img.png"
                   alt="Teacher"
-                  className={styles.aboutImage}
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                  className={`fade-in-section ${styles.aboutImage}`}
+                  width={500}
+                  height={400}
                 />
-                <div className={styles.statCard + " " + styles.statCardYears}>
+                <div
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                  className={`fade-in-section ${styles.statCard + " " + styles.statCardYears}`}
+                  >
                   <div className={styles.statBig}>11 YEARS +</div>
                   <div className={styles.statSmall}>
                     OF RICH TUTORING EXPERIENCE
                   </div>
                 </div>
                 <div
-                  className={styles.statCard + " " + styles.statCardResources}
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                  className={`fade-in-section ${styles.statCard + " " + styles.statCardResources}`}
                 >
                   <div className={styles.statBig}>1000+</div>
                   <div className={styles.statSmall}>
@@ -468,34 +594,69 @@ const Home = () => {
               </div>
             </div>
             <div className={styles.aboutRight}>
-              <div className={styles.aboutHeadingRow}>
-                <span className="SubHeading">ABOUT US</span>
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section"
+                style={{ animationDelay: "0.1s" }}
+              >
+                <div className={styles.aboutHeadingRow}>
+                  <span className="SubHeading">ABOUT US</span>
+                </div>
               </div>
-              <h2 className={styles.aboutTitle}>
+              <h2
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`fade-in-section ${styles.aboutTitle}`}
+                style={{ animationDelay: "0.2s" }}
+              >
                 LOREM IPSUM DOLOR SIT AMET, CONSECTETUR{" "}
                 <span className={styles.aboutHighlight}>ADIPISCING</span>
               </h2>
-              <p className={styles.aboutDesc}>
+              <p
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`fade-in-section ${styles.aboutDesc}`}
+                style={{ animationDelay: "0.3s" }}
+              >
                 Choosing us means partnering with experienced coaches who are
                 dedicated to unlocking your potential.We offer personalized
                 strategies, proven methods, and unwavering support to help you
                 navigate challenges.
               </p>
-              <div className={styles.aboutStatsRow}>
-                <div className={styles.aboutStatBlock}>
-                  <div className={styles.aboutStatBig}>2300+</div>
-                  <div className={styles.aboutStatLabel}>
-                    TRULY HAPPY STUDENTS FROM UAE
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section"
+                style={{ animationDelay: "0.4s" }}
+              >
+                <div className={styles.aboutStatsRow}>
+                  <div className={styles.aboutStatBlock}>
+                    <div className={styles.aboutStatBig}>2300+</div>
+                    <div className={styles.aboutStatLabel}>
+                      TRULY HAPPY STUDENTS FROM UAE
+                    </div>
                   </div>
-                </div>
-                <div className={styles.aboutStatBlock}>
-                  <div className={styles.aboutStatBig}>89%</div>
-                  <div className={styles.aboutStatLabel}>
-                    OF STUDENTS ACCEPTED TO TOP UNIVERSITIES
+                  <div className={styles.aboutStatBlock}>
+                    <div className={styles.aboutStatBig}>89%</div>
+                    <div className={styles.aboutStatLabel}>
+                      OF STUDENTS ACCEPTED TO TOP UNIVERSITIES
+                    </div>
                   </div>
                 </div>
               </div>
-              <button className={styles.aboutBtn} type="button">
+              <button
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`${styles.aboutBtn} fade-in-section`}
+                style={{ animationDelay: "0.5s" }}
+                type="button"
+              >
                 GET A FREE DEMO{" "}
                 <Image
                   src="/images/right-arrow-blue.png"
@@ -513,8 +674,22 @@ const Home = () => {
 
       <section className={styles.testSection}>
         <div className={styles.testHeadings}>
-          <div className="SubHeading">STANDARDISED TESTS</div>
-          <h1 className={styles.testTitle}>
+          <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <div className="SubHeading">STANDARDISED TESTS</div>
+          </div>
+          <h1
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.testTitle}`}
+            style={{ animationDelay: "0.2s" }}
+          >
             LOREM IPSUM DOLOR SIT AMET,
             <br />
             CONSECTETUR <span className={styles.highlight}>ADIPISCING</span>
@@ -526,7 +701,11 @@ const Home = () => {
             return (
               <div
                 key={idx}
-                className={styles.testCard}
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`fade-in-section ${styles.testCard}`}
+                style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
                 onMouseEnter={() => setActive(idx)}
               >
                 <div
@@ -593,12 +772,32 @@ const Home = () => {
             />
             {/* Left Side: Heading and Description */}
             <div className={styles.subjectLeft}>
-              <span className="SubHeading">SUBJECT TUTORING</span>
-              <h1 className={styles.subjectTitle}>
+              <span
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section SubHeading"
+                style={{ animationDelay: "0.1s" }}
+              >
+                SUBJECT TUTORING
+              </span>
+              <h1
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`fade-in-section ${styles.subjectTitle}`}
+                style={{ animationDelay: "0.2s" }}
+              >
                 LOREM IPSUM DOLOR SIT AMET, CONSECTETUR{" "}
                 <span className={styles.subjectHighlight}>ADIPISCING</span>
               </h1>
-              <p className={styles.subjectDesc}>
+              <p
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`fade-in-section ${styles.subjectDesc}`}
+                style={{ animationDelay: "0.3s" }}
+              >
                 Choosing us means partnering with experienced coaches who are
                 dedicated to unlocking your potential.
               </p>
@@ -607,7 +806,14 @@ const Home = () => {
             <div className={styles.subjectRight}>
               <div className={styles.subjectBubblesGrid}>
                 {subjectRows.map((row, rowIdx) => (
-                  <div className={styles.subjectBubbleRow} key={rowIdx}>
+                  <div
+                    key={rowIdx}
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className={`fade-in-section ${styles.subjectBubbleRow}`}
+                    style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
+                  >
                     {row.map((subj) => (
                       <div key={subj} className={styles.subjectBubble}>
                         {subj}
@@ -626,8 +832,22 @@ const Home = () => {
       <section className={styles.alumniSection}>
         <div className="container">
           <div className={styles.alumniSubSection}>
-            <h3 className="SubHeading">OUR ALUMNI IN TOP UNIVERSITIES</h3>
-            <h2 className={styles.alumniTitle} style={{ margin: "24px 0 0 0" }}>
+            <h3
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section SubHeading"
+              style={{ animationDelay: "0.1s" }}
+            >
+              OUR ALUMNI IN TOP UNIVERSITIES
+            </h3>
+            <h2
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className={`fade-in-section ${styles.alumniTitle}`}
+              style={{ margin: "24px 0 0 0", animationDelay: "0.2s" }}
+            >
               LOREM IPSUM DOLOR SIT AMET, consectetur{" "}
               <span className={styles.alumniHighlight}> ADIPISCING</span>
             </h2>
@@ -661,6 +881,7 @@ const Home = () => {
                 modifier: 2,
                 slideShadows: false,
               }}
+              initialSlide={1}
               slidesPerView={3}
               centeredSlides={true}
               spaceBetween={80}
@@ -680,7 +901,13 @@ const Home = () => {
               {alumniData.map((alumni, idx) => (
                 <SwiperSlide key={idx}>
                   {({ isActive }) => (
-                    <div className={styles.alumniCard}>
+                    <div
+                      data-scroll
+                      data-scroll-class="is-inview"
+                      data-scroll-repeat="true"
+                      className={`fade-in-section ${styles.alumniCard}`}
+                      style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
+                    >
                       <div
                         className={
                           isActive
@@ -724,18 +951,53 @@ const Home = () => {
 
       <section className={styles.uspSection}>
         <div className={styles.uspLeft}>
-          <span className="SubHeading">OUR USP'S</span>
-          <h2 className={styles.uspTitle}>
+          <span
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section SubHeading"
+            style={{ animationDelay: "0.1s" }}
+          >
+            OUR USP'S
+          </span>
+          <h2
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.uspTitle}`}
+            style={{ animationDelay: "0.2s" }}
+          >
             LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING
           </h2>
-          <div className={styles.uspSubtitle}>LOREM IPSUM DOLOR SIT AMET</div>
-          <p className={styles.uspDesc}>
+          <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.uspSubtitle}`}
+            style={{ animationDelay: "0.3s" }}
+          >
+            LOREM IPSUM DOLOR SIT AMET
+          </div>
+          <p
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.uspDesc}`}
+            style={{ animationDelay: "0.4s" }}
+          >
             Choosing us means partnering with experienced coaches who are
             dedicated to unlocking your potential. We offer personalized
             strategies, proven methods, and unwavering support to help you
             navigate challenges.
           </p>
-          <button className={styles.uspBtn} type="button">
+          <button
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`${styles.uspBtn} fade-in-section`}
+            style={{ animationDelay: "0.5s" }}
+            type="button"
+          >
             KNOW MORE{" "}
             <Image
               src="/images/right-arrow-blue.png"
@@ -747,7 +1009,14 @@ const Home = () => {
         </div>
         <div className={styles.uspGrid}>
           {uspData.map((usp, i) => (
-            <div className={styles.uspItem} key={i}>
+            <div
+              key={i}
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className={`fade-in-section ${styles.uspItem}`}
+              style={{ animationDelay: `${0.2 + i * 0.12}s` }}
+            >
               <div className={styles.uspNumber}>{usp.number}</div>
               <div className={styles.uspIconCircle}>
                 <img src={usp.icon} alt="" className={styles.uspIcon} />
@@ -763,18 +1032,38 @@ const Home = () => {
 
       <section className={styles.trainersSection}>
         <div className="container">
-          <div className={styles.trainersHeader}>
+          <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
+            style={{ animationDelay: "0.1s" }}
+          >
             <span className="SubHeading">OUR TRAINERS</span>
-            <h2 className={styles.trainersTitle}>
-              LOREM IPSUM DOLOR SIT AMET,
-              <br />
-              CONSECTETUR{" "}
-              <span className={styles.trainersHighlight}>ADIPISCING</span>
-            </h2>
           </div>
+          <h2
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.trainersTitle}`}
+            style={{ animationDelay: "0.2s" }}
+          >
+            LOREM IPSUM DOLOR SIT AMET,
+            <br />
+            CONSECTETUR{" "}
+            <span className={styles.trainersHighlight}>ADIPISCING</span>
+          </h2>
           <div className={styles.trainersGrid}>
             {trainers.map((t, i) => (
-              <div className={styles.trainerCard} data-color={t.color} key={i}>
+              <div
+                key={i}
+                data-color={t.color}
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`fade-in-section ${styles.trainerCard}`}
+                style={{ animationDelay: `${0.3 + i * 0.12}s` }}
+              >
                 <div className={styles.trainerName}>{t.name}</div>
                 <div className={styles.trainerImgWrap}>
                   <img src={t.img} alt={t.name} className={styles.trainerImg} />
@@ -784,14 +1073,30 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <button className={styles.trainersSeeMore}>SEE MORE</button>
+          <button
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.trainersSeeMore}`}
+            style={{ animationDelay: `${0.3 + trainers.length * 0.12}s` }}
+          >
+            SEE MORE
+          </button>
         </div>
       </section>
 
       {/* Testimonial Section */}
       <section className={styles.testimonialSection}>
-        <div className={styles.testimonialHeader}>
-          <span className="SubHeading">REVIEWS & TESTIMONIALS</span>
+        <div
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+          className="fade-in-section"
+          style={{ animationDelay: "0.1s" }}
+        >
+          <div className={styles.testimonialHeader}>
+            <span className="SubHeading">REVIEWS & TESTIMONIALS</span>
+          </div>
         </div>
         <div className={styles.testimonialBgBox}>
           {/* Decorative rectangles */}
@@ -810,7 +1115,13 @@ const Home = () => {
             alt="bg-shape"
             className={styles.testimonialRect}
           />
-          <h2 className={styles.testimonialTitle}>
+          <h2
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.testimonialTitle}`}
+            style={{ animationDelay: "0.2s" }}
+          >
             LOREM IPSUM DOLOR SIT AMET,
             <br />
             CONSECTETUR ADIPISCING
@@ -845,9 +1156,10 @@ const Home = () => {
               <SwiperSlide key={idx}>
                 {item.type === "video" ? (
                   <div
-                    className={
-                      styles.testimonialCard + " " + styles.testimonialCardVideo
-                    }
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className={`${styles.testimonialCard} ${styles.testimonialCardVideo} fade-in-section`}
                   >
                     <img
                       src={item.img}
@@ -867,7 +1179,7 @@ const Home = () => {
                           r="23"
                           fill="#0000008a"
                           stroke="#ffffff60"
-                          stroke-width="2"
+                          strokeWidth="2"
                         />
                         <polygon points="20,16 34,24 20,32" fill="#ffffff90" />
                       </svg>
@@ -875,9 +1187,10 @@ const Home = () => {
                   </div>
                 ) : (
                   <div
-                    className={
-                      styles.testimonialCard + " " + styles.testimonialCardText
-                    }
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className={`${styles.testimonialCard} ${styles.testimonialCardText} fade-in-section`}
                   >
                     <div className={styles.testimonialText}>{item.text}</div>
                     <div className={styles.testimonialTextName}>
@@ -908,20 +1221,44 @@ const Home = () => {
       <section className="container">
         <div className={styles.blogSection}>
           <div className={styles.blogLeft}>
-            <div className={styles.blogHeadingRow}>
+            <div
+              className={`fade-in-section ${styles.blogHeadingRow}`}
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              style={{ animationDelay: "0.1s" }}
+            >
               <span className="SubHeading">BLOGS</span>
             </div>
-            <h2 className={styles.blogTitle}>
+            <h2
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className={`fade-in-section ${styles.blogTitle}`}
+              style={{ animationDelay: "0.2s" }}
+            >
               LOREM IPSUM DOLOR
               <br />
               SIT AMET, CONSECTETUR
               <br />
               ADIPISCING
             </h2>
-            <div className={styles.blogSubtitle}>
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className={`fade-in-section ${styles.blogSubtitle}`}
+              style={{ animationDelay: "0.3s" }}
+            >
               LOREM IPSUM DOLOR SIT AMET
             </div>
-            <button className={styles.blogAllBtn}>
+            <button
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className={`${styles.blogAllBtn} fade-in-section`}
+              style={{ animationDelay: "0.4s" }}
+            >
               VIEW ALL BLOGS
               <img
                 src="/images/right-arrow-skyblue.png"
@@ -933,7 +1270,14 @@ const Home = () => {
           </div>
           <div className={styles.blogRight}>
             {blogData.map((blog, i) => (
-              <div className={styles.blogCard} key={i}>
+              <div
+                key={i}
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`fade-in-section ${styles.blogCard}`}
+                style={{ animationDelay: "0.2" }}
+              >
                 <img src={blog.img} alt="blog" className={styles.blogImg} />
                 <div className={styles.blogCardContent}>
                   <div className={styles.blogCardTitle}>{blog.title}</div>

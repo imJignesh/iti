@@ -3,9 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  max-width: 90vw;
+  max-width: 85vw;
   margin: 0 auto;
   background: #fff;
+  z-index: 99 !important;
+  position: relative;
 }
 
 header .header_left_content {
@@ -236,4 +238,25 @@ header .megaMenuBox h4 {
   font-weight: 600;
   color: var(--blue-color);
   margin: 0;
+}
+
+@keyframes headerSlideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.headerAnimated {
+  animation: headerSlideDownFade 1.2s cubic-bezier(0.4,0,0.2,1) 0.2s both;
+}
+
+.headerHidden {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.7s, transform 0.7s;
 }
