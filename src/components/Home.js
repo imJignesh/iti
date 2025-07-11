@@ -299,22 +299,37 @@ const Home = () => {
   const [active, setActive] = useState(1);
   const [activeIndex, setActiveIndex] = React.useState(1);
   const scrollRef = useRef(null);
+  const scrollInstanceRef = useRef(null);
   const [courseHeadingRef, courseHeadingInView] = useInViewAnimation();
-  // Remove split-in state and effect
+
 
   useEffect(() => {
     let scroll;
-    if (typeof window !== "undefined") {
-      import("locomotive-scroll").then((LocomotiveScrollModule) => {
-        scroll = new LocomotiveScrollModule.default({
-          el: scrollRef.current,
-          smooth: true,
-          lerp: 0.08,
-        });
+
+    const initScroll = async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      if (!scrollRef.current) return;
+      scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.1,
       });
+
+      scrollInstanceRef.current = scroll;
+      // setTimeout(() => {
+      //   if (scrollInstanceRef.current?.update) {
+      //     scrollInstanceRef.current.update();
+      //     console.log("✅ LocomotiveScroll updated");
+      //   }
+      // }, 500);
+    };
+    if (typeof window !== "undefined") {
+      initScroll();
     }
+
     return () => {
-      if (scroll) scroll.destroy();
+      scrollInstanceRef.current?.destroy();
+      scrollInstanceRef.current = null;
     };
   }, []);
 
@@ -325,8 +340,8 @@ const Home = () => {
         <section className={styles.hero} data-scroll-section>
           <div className="container">
             <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
-              <div className={styles.heroMain}>
-                <div className={styles.heroLeft}>
+              <div className={`row ${styles.heroMain}`}>
+                <div className={`col-12 col-lg  -6 col-xl-7 pe-5 ${styles.heroLeft}`}>
                   <div
                     data-scroll
                     data-scroll-class="is-inview"
@@ -363,7 +378,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className={styles.heroRight}>
+                <div className={`col-12 col-lg -6 col-xl-5 ${styles.heroRight}`}>
                   <Image
                     src="/images/banner-image-right.png"
                     alt="Education Platform"
@@ -504,23 +519,23 @@ const Home = () => {
         className={`fade-in-section ${styles.bannerScroll}`}
         style={{ animationDelay: "0.4s" }}
       >
-        <span>
+        <b>
           WHERE GRADE IMPROVEMENT BEGINS &nbsp;{" "}
-          <span className={styles.dot}>●</span> &nbsp; WHERE GRADE IMPROVEMENT
-          BEGINS &nbsp; <span className={styles.dot}>●</span> &nbsp; WHERE GRADE
-          IMPROVEMENT BEGINS &nbsp; <span className={styles.dot}>●</span> &nbsp;
+          <b className={styles.dot}>●</b> &nbsp; WHERE GRADE IMPROVEMENT
+          BEGINS &nbsp; <b className={styles.dot}>●</b> &nbsp; WHERE GRADE
+          IMPROVEMENT BEGINS &nbsp; <b className={styles.dot}>●</b> &nbsp;
           WHERE GRADE IMPROVEMENT BEGINS &nbsp;{" "}
-          <span className={styles.dot}>●</span> &nbsp; WHERE GRADE IMPROVEMENT
-          BEGINS &nbsp; <span className={styles.dot}>●</span> &nbsp; WHERE GRADE
+          <b className={styles.dot}>●</b> &nbsp; WHERE GRADE IMPROVEMENT
+          BEGINS &nbsp; <b className={styles.dot}>●</b> &nbsp; WHERE GRADE
           IMPROVEMENT BEGINS
-        </span>
+        </b>
       </div>
 
       {/* About US Section  */}
       <section className={styles.aboutSection}>
         <div className="container">
-          <div className={styles.aboutSectionInner}>
-            <div className={styles.aboutLeft}>
+          <div className={`row ${styles.aboutSectionInner}`}>
+            <div className={`col-12 col-lg-6 ${styles.aboutLeft}`}>
               <div className={styles.aboutImageWrap}>
                 <div>
                   <img
@@ -571,7 +586,7 @@ const Home = () => {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className={`fade-in-section ${styles.statCard + " " + styles.statCardYears}`}
-                  >
+                >
                   <div className={styles.statBig}>11 YEARS +</div>
                   <div className={styles.statSmall}>
                     OF RICH TUTORING EXPERIENCE
@@ -593,7 +608,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.aboutRight}>
+            <div className={`col-12 col-lg-6 ${styles.aboutRight}`}>
               <div
                 data-scroll
                 data-scroll-class="is-inview"
@@ -631,7 +646,7 @@ const Home = () => {
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
-                className="fade-in-section"
+                className="fade-in-section w-100"
                 style={{ animationDelay: "0.4s" }}
               >
                 <div className={styles.aboutStatsRow}>
@@ -673,79 +688,81 @@ const Home = () => {
       {/* Test Section  */}
 
       <section className={styles.testSection}>
-        <div className={styles.testHeadings}>
-          <div
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <div className="SubHeading">STANDARDISED TESTS</div>
+        <div className="container">
+          <div className={styles.testHeadings}>
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className={`SubHeading ${styles.testSubheading}`}>STANDARDISED TESTS</div>
+            </div>
+            <h1
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className={`fade-in-section ${styles.testTitle}`}
+              style={{ animationDelay: "0.2s" }}
+            >
+              LOREM IPSUM DOLOR SIT AMET,
+              <br />
+              CONSECTETUR <span className={styles.highlight}>ADIPISCING</span>
+            </h1>
           </div>
-          <h1
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className={`fade-in-section ${styles.testTitle}`}
-            style={{ animationDelay: "0.2s" }}
-          >
-            LOREM IPSUM DOLOR SIT AMET,
-            <br />
-            CONSECTETUR <span className={styles.highlight}>ADIPISCING</span>
-          </h1>
-        </div>
-        <div className={styles.testCardsRow}>
-          {testData.map((card, idx) => {
-            const isCardActive = active === idx;
-            return (
-              <div
-                key={idx}
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className={`fade-in-section ${styles.testCard}`}
-                style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
-                onMouseEnter={() => setActive(idx)}
-              >
+          <div className={`row ${styles.testCardsRow}`} >
+            {testData.map((card, idx) => {
+              const isCardActive = active === idx;
+              return (
                 <div
-                  className={
-                    styles.cardImageArea +
-                    " " +
-                    (isCardActive ? styles.activeImageArea : "")
-                  }
-                  style={{ backgroundImage: `url('${card.img}')` }}
+                  key={idx}
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                  className={`fade-in-section col-4 px-3 ${styles.testCard}`}
+                  style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
+                  onMouseEnter={() => setActive(idx)}
                 >
-                  <div className={styles.imageOverlay}></div>
-                  <span className={styles.cardNumber}>{card.number}</span>
-                  <span className={styles.cardTitle}>{card.title}</span>
-                </div>
-
-                <div
-                  className={
-                    styles.cardContentArea +
-                    " " +
-                    (isCardActive ? styles.showContent : styles.hideContent)
-                  }
-                >
-                  <div className={styles.cardLabel}>{card.label}</div>
-                  <div className={styles.cardDetails}>
-                    {card.details &&
-                      card.details.map((d, i) => <p key={i}>{d}</p>)}
+                  <div
+                    className={
+                      styles.cardImageArea +
+                      " " +
+                      (isCardActive ? styles.activeImageArea : "")
+                    }
+                    style={{ backgroundImage: `url('${card.img}')` }}
+                  >
+                    <div className={styles.imageOverlay}></div>
+                    <span className={styles.cardNumber}>{card.number}</span>
+                    <span className={styles.cardTitle}>{card.title}</span>
                   </div>
-                  <button className={styles.cardBtn} type="button">
-                    {card.btn}{" "}
-                    <Image
-                      src="/images/right-arrow-blue.png"
-                      width={40}
-                      height={40}
-                      quality={100}
-                    />
-                  </button>
+
+                  <div
+                    className={
+                      styles.cardContentArea +
+                      " " +
+                      (isCardActive ? styles.showContent : styles.hideContent)
+                    }
+                  >
+                    <div className={styles.cardLabel}>{card.label}</div>
+                    <div className={styles.cardDetails}>
+                      {card.details &&
+                        card.details.map((d, i) => <p key={i}>{d}</p>)}
+                    </div>
+                    <button className={styles.cardBtn} type="button">
+                      {card.btn}{" "}
+                      <Image
+                        src="/images/right-arrow-blue.png"
+                        width={40}
+                        height={40}
+                        quality={100}
+                      />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -771,7 +788,7 @@ const Home = () => {
               className={styles.bgRect}
             />
             {/* Left Side: Heading and Description */}
-            <div className={styles.subjectLeft}>
+            <div  className={`col-6 px-5 ${styles.subjectLeft}`}>
               <span
                 data-scroll
                 data-scroll-class="is-inview"
@@ -803,7 +820,7 @@ const Home = () => {
               </p>
             </div>
             {/* Right Side: Subject Bubbles in rows */}
-            <div className={styles.subjectRight}>
+            <div className={`col-6 px-5 ${styles.subjectRight}`}>
               <div className={styles.subjectBubblesGrid}>
                 {subjectRows.map((row, rowIdx) => (
                   <div

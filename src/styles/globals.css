@@ -1,12 +1,15 @@
+@import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
+
 @font-face {
   font-family: 'Galano Grotesque';
   src: url('/fonts/galano-grotesque/Galano Grotesque Regular.otf') format('opentype');
   font-style: normal;
   font-display: swap;
+  transform: scaleY(0.9);
 } 
 
 body {
-  font-family: var(--font-galano);
+  font-family: var(--font-galano) !important;
 }
 
 :root {
@@ -32,27 +35,15 @@ body {
 
 /* Global Container - Use this in all pages */
 .container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 85vw !important;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
 }
-
-/* Alternative container sizes if needed */
-.container-sm {
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 100%;
+p, h1, h2, h3, h4, h5, h6,a ,span{
+  transform: scaleY(0.9) !important;
 }
-
-.container-lg {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 100%;
-}
-
 .SubHeading {
   font-size: 30px;
   font-weight: 600;
@@ -62,11 +53,11 @@ body {
   -webkit-text-fill-color: transparent;
   position: relative;
   padding: 0 40px;
-  display: inline-block;
+  display: inline-block;  
 }
 .SubHeading:before{ 
   content: '';
-  width: 16px;
+  width: 18px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -77,7 +68,7 @@ body {
 }
 .SubHeading:after{
   content: '';
-  width: 16px;
+  width: 18px;
   height: 100%;
   position: absolute;
   top: 0;

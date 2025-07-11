@@ -55,7 +55,7 @@ const Footer = () => {
           {[0,1,2].map((colIdx) => (
             <div
               key={colIdx}
-              data-scroll
+              data-scroll 
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               
