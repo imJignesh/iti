@@ -788,7 +788,7 @@ const Home = () => {
               className={styles.bgRect}
             />
             {/* Left Side: Heading and Description */}
-            <div  className={`col-6 px-5 ${styles.subjectLeft}`}>
+            <div className={`col-6 px-5 ${styles.subjectLeft}`}>
               <span
                 data-scroll
                 data-scroll-class="is-inview"
@@ -853,7 +853,7 @@ const Home = () => {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section SubHeading"
+              className={`fade-in-section SubHeading ${styles.alumniSubHeading}`}
               style={{ animationDelay: "0.1s" }}
             >
               OUR ALUMNI IN TOP UNIVERSITIES
@@ -893,8 +893,8 @@ const Home = () => {
               effect="coverflow"
               coverflowEffect={{
                 rotate: 0,
-                stretch: 0,
-                depth: 120,
+                stretch: -20,
+                depth: 200,
                 modifier: 2,
                 slideShadows: false,
               }}
@@ -1056,7 +1056,7 @@ const Home = () => {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <span className="SubHeading">OUR TRAINERS</span>
+            <span className={`SubHeading ${styles.trainersSubheading}`}>OUR TRAINERS</span>
           </div>
           <h2
             data-scroll
@@ -1235,85 +1235,87 @@ const Home = () => {
 
       {/* Blogs Section  */}
 
-      <section className="container">
-        <div className={styles.blogSection}>
-          <div className={styles.blogLeft}>
-            <div
-              className={`fade-in-section ${styles.blogHeadingRow}`}
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <span className="SubHeading">BLOGS</span>
-            </div>
-            <h2
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className={`fade-in-section ${styles.blogTitle}`}
-              style={{ animationDelay: "0.2s" }}
-            >
-              LOREM IPSUM DOLOR
-              <br />
-              SIT AMET, CONSECTETUR
-              <br />
-              ADIPISCING
-            </h2>
-            <div
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className={`fade-in-section ${styles.blogSubtitle}`}
-              style={{ animationDelay: "0.3s" }}
-            >
-              LOREM IPSUM DOLOR SIT AMET
-            </div>
-            <button
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className={`${styles.blogAllBtn} fade-in-section`}
-              style={{ animationDelay: "0.4s" }}
-            >
-              VIEW ALL BLOGS
-              <img
-                src="/images/right-arrow-skyblue.png"
-                alt="arrow"
-                width={24}
-                height={24}
-              />
-            </button>
-          </div>
-          <div className={styles.blogRight}>
-            {blogData.map((blog, i) => (
+      <section className={styles.blogSection} >
+        <div className="container">
+          <div className="row">
+            <div className={`col-4 ${styles.blogLeft}`}>
               <div
-                key={i}
+                className={`fade-in-section ${styles.blogHeadingRow}`}
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
-                className={`fade-in-section ${styles.blogCard}`}
-                style={{ animationDelay: "0.2" }}
+                style={{ animationDelay: "0.1s" }}
               >
-                <img src={blog.img} alt="blog" className={styles.blogImg} />
-                <div className={styles.blogCardContent}>
-                  <div className={styles.blogCardTitle}>{blog.title}</div>
-                  <div className={styles.blogCardDesc}>{blog.desc}</div>
-                  <span className={styles.blogCardLine}></span>
-                  <button className={styles.blogReadMoreBtn}>
-                    READ MORE
-                    <span className={styles.blogReadMoreArrow}>
-                      <img
-                        src="/images/right-arrow-blue.png"
-                        alt="arrow"
-                        width={20}
-                        height={20}
-                      />
-                    </span>
-                  </button>
-                </div>
+                <span className="SubHeading">BLOGS</span>
               </div>
-            ))}
+              <h2
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`fade-in-section ${styles.blogTitle}`}
+                style={{ animationDelay: "0.2s" }}
+              >
+                LOREM IPSUM DOLOR
+                <br />
+                SIT AMET, CONSECTETUR
+                <br />
+                ADIPISCING
+              </h2>
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`fade-in-section ${styles.blogSubtitle}`}
+                style={{ animationDelay: "0.3s" }}
+              >
+                LOREM IPSUM DOLOR SIT AMET
+              </div>
+              <button
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`${styles.blogAllBtn} fade-in-section`}
+                style={{ animationDelay: "0.4s" }}
+              >
+                VIEW ALL BLOGS
+                <img
+                  src="/images/right-arrow-skyblue.png"
+                  alt="arrow"
+                  width={24}
+                  height={24}
+                />
+              </button>
+            </div>
+            <div className={`col-8 ${styles.blogRight}`} >
+              {blogData.map((blog, i) => (
+                <div
+                  key={i}
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                  className={`fade-in-section ${styles.blogCard}`}
+                  style={{ animationDelay: "0.2" }}
+                >
+                  <img src={blog.img} alt="blog" className={styles.blogImg} />
+                  <div className={styles.blogCardContent}>
+                    <div className={styles.blogCardTitle}>{blog.title}</div>
+                    <div className={styles.blogCardDesc}>{blog.desc}</div>
+                    <span className={styles.blogCardLine}></span>
+                    <button className={styles.blogReadMoreBtn}>
+                      READ MORE
+                      <span className={styles.blogReadMoreArrow}>
+                        <img
+                          src="/images/right-arrow-blue.png"
+                          alt="arrow"
+                          width={20}
+                          height={20}
+                        />
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

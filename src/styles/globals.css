@@ -2,10 +2,9 @@
 
 @font-face {
   font-family: 'Galano Grotesque';
-  src: url('/fonts/galano-grotesque/Galano Grotesque Regular.otf') format('opentype');
+  src: url('/fonts/galano-grotesque/Galano Grotesque Medium.otf') format('opentype');
   font-style: normal;
   font-display: swap;
-  transform: scaleY(0.9);
 } 
 
 body {
@@ -24,7 +23,7 @@ body {
   --white-color:#F8FBFF;
   --white-bg:#ffffff;
   --black-color:#000000;
-  --font-galano: 'Galano Grotesque', Arial, sans-serif;
+  --font-galano: 'Galano Grotesque';
 }
 
 * {
@@ -42,7 +41,7 @@ body {
   width: 100%;
 }
 p, h1, h2, h3, h4, h5, h6,a ,span{
-  transform: scaleY(0.9) !important;
+  /* transform: scaleY(0.9)  !important; */
 }
 .SubHeading {
   font-size: 30px;
@@ -60,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6,a ,span{
   width: 18px;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 8px;
   left: 0;
   background: url(/images/heading-icon.png);
   background-size: contain;
@@ -71,7 +70,7 @@ p, h1, h2, h3, h4, h5, h6,a ,span{
   width: 18px;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 8px;
   right: 0;
   background: url(/images/heading-icon.png);
   background-size: contain;
