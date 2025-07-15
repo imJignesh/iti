@@ -301,6 +301,27 @@ const Home = () => {
   const scrollRef = useRef(null);
   const scrollInstanceRef = useRef(null);
   const [courseHeadingRef, courseHeadingInView] = useInViewAnimation();
+  // Responsive state for Test section Swiper
+  const [isMobileSwiper, setIsMobileSwiper] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileSwiper(window.innerWidth <= 991);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Responsive state for Trainers section Swiper
+  const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsTrainersSwiper(window.innerWidth <= 1199);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
 
   useEffect(() => {
@@ -341,7 +362,7 @@ const Home = () => {
           <div className="container">
             <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
               <div className={`row ${styles.heroMain}`}>
-                <div className={`col-12 col-lg  -6 col-xl-7 pe-5 ${styles.heroLeft}`}>
+                <div className={`col-12 col-lg  -6 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
                   <div
                     data-scroll
                     data-scroll-class="is-inview"
@@ -372,9 +393,9 @@ const Home = () => {
                   >
                     <p className={styles.heroParagraph}>
                       <span>Lorem ipsum dolor sit amet</span>
-                      Achieve academic excellence in IBDP, MYP, I/GCSE, A-Levels & AP
-                      with Ignite's expert tutors in Dubai. Our curriculum-focused
-                      programs are designed to boost your grades and confidence!
+                      <b> Achieve academic excellence in IBDP, MYP, I/GCSE, A-Levels & AP
+                        with Ignite's expert tutors in Dubai. Our curriculum-focused
+                        programs are designed to boost your grades and confidence!</b>
                     </p>
                   </div>
                 </div>
@@ -387,6 +408,10 @@ const Home = () => {
                     height={500}
                     quality={100}
                   />
+                  <p className={styles.mobielContent}>
+                    Achieve academic excellence in IBDP, MYP, I/GCSE, A-Levels & AP
+                    with Ignite's expert tutors in Dubai.
+                  </p>
                   <div className={styles.buttonGroup}>
                     <button type="button">
                       Get A Free Demo{" "}
@@ -407,6 +432,27 @@ const Home = () => {
                       />
                     </button>
                   </div>
+                </div>
+
+                <div className={styles.buttonGroupMobile}>
+                  <button type="button">
+                    Get A Free Demo{" "}
+                    <Image
+                      src="/images/right-arrow-skyblue.png"
+                      width={40}
+                      height={40}
+                      quality={100}
+                    />
+                  </button>
+                  <button type="button">
+                    Explore Classes{" "}
+                    <Image
+                      src="/images/right-arrow-blue.png"
+                      width={40}
+                      height={40}
+                      quality={100}
+                    />
+                  </button>
                 </div>
               </div>
             </div>
@@ -534,6 +580,9 @@ const Home = () => {
       {/* About US Section  */}
       <section className={styles.aboutSection}>
         <div className="container">
+          <div className={styles.aboutHeading}>
+            <span className="SubHeading">ABOUT US</span>
+          </div>
           <div className={`row ${styles.aboutSectionInner}`}>
             <div className={`col-12 col-lg-6 ${styles.aboutLeft}`}>
               <div className={styles.aboutImageWrap}>
@@ -656,6 +705,7 @@ const Home = () => {
                       TRULY HAPPY STUDENTS FROM UAE
                     </div>
                   </div>
+                  <span className={styles.aboutStatBorder}></span>
                   <div className={styles.aboutStatBlock}>
                     <div className={styles.aboutStatBig}>89%</div>
                     <div className={styles.aboutStatLabel}>
@@ -699,7 +749,7 @@ const Home = () => {
             >
               <div className={`SubHeading ${styles.testSubheading}`}>STANDARDISED TESTS</div>
             </div>
-            <h1
+            <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -709,69 +759,121 @@ const Home = () => {
               LOREM IPSUM DOLOR SIT AMET,
               <br />
               CONSECTETUR <span className={styles.highlight}>ADIPISCING</span>
-            </h1>
+            </h2>
           </div>
-          <div className={`row ${styles.testCardsRow}`} >
-            {testData.map((card, idx) => {
-              const isCardActive = active === idx;
-              return (
-                <div
-                  key={idx}
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
-                  className={`fade-in-section col-4 px-3 ${styles.testCard}`}
-                  style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
-                  onMouseEnter={() => setActive(idx)}
-                >
-                  <div
-                    className={
-                      styles.cardImageArea +
-                      " " +
-                      (isCardActive ? styles.activeImageArea : "")
-                    }
-                    style={{ backgroundImage: `url('${card.img}')` }}
-                  >
-                    <div className={styles.imageOverlay}></div>
-                    <span className={styles.cardNumber}>{card.number}</span>
-                    <span className={styles.cardTitle}>{card.title}</span>
-                  </div>
-
-                  <div
-                    className={
-                      styles.cardContentArea +
-                      " " +
-                      (isCardActive ? styles.showContent : styles.hideContent)
-                    }
-                  >
-                    <div className={styles.cardLabel}>{card.label}</div>
-                    <div className={styles.cardDetails}>
-                      {card.details &&
-                        card.details.map((d, i) => <p key={i}>{d}</p>)}
+          {isMobileSwiper ? (
+            <Swiper
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className={`fade-in-section ${styles.testMobileSwiper}`}
+              spaceBetween={15}
+              loop={true}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+                400: { slidesPerView: 1.2 },
+                575: { slidesPerView: 1.5 },
+                786: { slidesPerView: 1.8 },
+                900: { slidesPerView: 2.2 }
+              }}
+            >
+              {testData.map((card, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className={styles.testCardMobile}>
+                    <div className={styles.testCardImageWrap}>
+                      <img src={card.img} alt={card.title} className={styles.testCardImage} />
+                      <span className={styles.testCardNumber}>{card.number}</span>
+                      <div className={styles.testCardOverlay}>
+                        <span className={styles.testCardTitle}>{card.title}</span>
+                        <span className={styles.testCardSubtitle}>{card.label}</span>
+                      </div>
                     </div>
-                    <button className={styles.cardBtn} type="button">
-                      {card.btn}{" "}
-                      <Image
-                        src="/images/right-arrow-blue.png"
-                        width={40}
-                        height={40}
-                        quality={100}
-                      />
-                    </button>
+                    <div className={styles.testCardDetailsWrap}>
+                      <div className={styles.testCardDetails}>
+                        {card.details && card.details.map((d, i) => <span key={i}>{d}</span>)}
+                      </div>
+                      <button className={styles.testCardBtnMobile} type="button">
+                        {card.btn}
+                        <Image
+                          src="/images/right-arrow-blue.png"
+                          width={24}
+                          height={24}
+                          quality={100}
+                        />
+                      </button>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className={`row ${styles.testCardsRow}`} >
+              {testData.map((card, idx) => {
+                const isCardActive = active === idx;
+                return (
+                  <div
+                    key={idx}
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className={`fade-in-section col-4 px-3 ${styles.testCard}`}
+                    style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
+                    onMouseEnter={() => setActive(idx)}
+                  >
+                    <div
+                      className={
+                        styles.cardImageArea +
+                        " " +
+                        (isCardActive ? styles.activeImageArea : "")
+                      }
+                      style={{ backgroundImage: `url('${card.img}')` }}
+                    >
+                      <div className={styles.imageOverlay}></div>
+                      <span className={styles.cardNumber}>{card.number}</span>
+                      <span className={styles.cardTitle}>{card.title}</span>
+                    </div>
+
+                    <div
+                      className={
+                        styles.cardContentArea +
+                        " " +
+                        (isCardActive ? styles.showContent : styles.hideContent)
+                      }
+                    >
+                      <div className={styles.cardLabel}>{card.label}</div>
+                      <div className={styles.cardDetails}>
+                        {card.details &&
+                          card.details.map((d, i) => <p key={i}>{d}</p>)}
+                      </div>
+                      <button className={styles.cardBtn} type="button">
+                        {card.btn}{" "}
+                        <Image
+                          src="/images/right-arrow-blue.png"
+                          width={40}
+                          height={40}
+                          quality={100}
+                        />
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 
       {/* Subject Section */}
 
-      <section className={styles.subjectSection}>
+      <section
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true"
+        className={`fade-in-section ${styles.subjectSection}`}
+        style={{ animationDelay: "0.2s" }}>
         <div className="container">
           <div className={styles.subjectSectionInner}>
-            {/* Decorative rectangles */}
             <img
               src="/images/rectangle-bg4.png"
               alt="bg-shape"
@@ -787,7 +889,6 @@ const Home = () => {
               alt="bg-shape"
               className={styles.bgRect}
             />
-            {/* Left Side: Heading and Description */}
             <div className={`col-6 px-5 ${styles.subjectLeft}`}>
               <span
                 data-scroll
@@ -819,7 +920,6 @@ const Home = () => {
                 dedicated to unlocking your potential.
               </p>
             </div>
-            {/* Right Side: Subject Bubbles in rows */}
             <div className={`col-6 px-5 ${styles.subjectRight}`}>
               <div className={styles.subjectBubblesGrid}>
                 {subjectRows.map((row, rowIdx) => (
@@ -896,6 +996,7 @@ const Home = () => {
                 stretch: -20,
                 depth: 200,
                 modifier: 2,
+                initialSlide: 1,
                 slideShadows: false,
               }}
               initialSlide={1}
@@ -910,8 +1011,8 @@ const Home = () => {
               onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
               className={styles.alumniSwiper}
               breakpoints={{
-                0: { slidesPerView: 1 },
-                700: { slidesPerView: 2 },
+                0: { slidesPerView: 1.5 },
+                767: { slidesPerView: 2 },
                 1100: { slidesPerView: 3 },
               }}
             >
@@ -966,7 +1067,12 @@ const Home = () => {
 
       {/* Our USPs */}
 
-      <section className={styles.uspSection}>
+      <section
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true"
+        className={`fade-in-section ${styles.uspSection}`}
+        style={{ animationDelay: "0.2s" }}>
         <div className={styles.uspLeft}>
           <span
             data-scroll
@@ -1038,15 +1144,16 @@ const Home = () => {
               <div className={styles.uspIconCircle}>
                 <img src={usp.icon} alt="" className={styles.uspIcon} />
               </div>
-              <div className={styles.uspItemTitle}>{usp.title}</div>
-              <div className={styles.uspItemDesc}>{usp.desc}</div>
+              <div className={styles.uspContent}>
+                <div className={styles.uspItemTitle}>{usp.title}</div>
+                <div className={styles.uspItemDesc}>{usp.desc}</div>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
       {/* Trainers Section */}
-
       <section className={styles.trainersSection}>
         <div className="container">
           <div
@@ -1070,35 +1177,108 @@ const Home = () => {
             CONSECTETUR{" "}
             <span className={styles.trainersHighlight}>ADIPISCING</span>
           </h2>
-          <div className={styles.trainersGrid}>
-            {trainers.map((t, i) => (
-              <div
-                key={i}
-                data-color={t.color}
+          {isTrainersSwiper ? (
+            <div className={styles.trainersSwiperWrap}>
+              <Swiper
+                modules={[Navigation, Pagination]}
+                slidesPerView={4}
+                spaceBetween={20}
+                navigation={{
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                }}
+                pagination={{ clickable: true, el: "." + styles.trainersPagination }}
+                breakpoints={{
+                  0: { slidesPerView: 1 },
+                  575:{ slidesPerView: 2},
+                  768: { slidesPerView: 3 },
+                  992: { slidesPerView: 4 },
+                }}
+                className={styles.trainersSwiper}
+              >
+                <button className={`swiper-button-prev ${styles.customNavBtn}`} tabIndex={0} aria-label="Previous trainer">
+                  <img
+                    src="/images/right-arrow-blue.png"
+                    alt="Prev"
+                    style={{ transform: "rotate(180deg)" }}
+                    width={32}
+                    height={32}
+                  />
+                </button>
+                {trainers.map((t, i) => (
+                  <SwiperSlide key={i}>
+                    {({ isActive }) => (
+                      <div
+                        data-color={t.color}
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        className={`fade-in-section ${styles.trainerCard} ${isActive ? styles.activeTrainer : styles.inactiveTrainer}`}
+                        style={{ animationDelay: 0.2 }}
+                      >
+                        <div className={styles.trainerName}>{t.name}</div>
+                        <div className={styles.trainerImgWrap}>
+                          <img src={t.img} alt={t.name} className={styles.trainerImg} />
+                        </div>
+                        <div className={styles.trainerSubtitle}>{t.subtitle}</div>
+                        <div className={styles.trainerExp}>{t.experience}</div>
+                      </div>
+                    )}
+                  </SwiperSlide>
+                ))}
+                <button className={`swiper-button-next ${styles.customNavBtn}`} tabIndex={0} aria-label="Next trainer">
+                  <img
+                    src="/images/right-arrow-blue.png"
+                    alt="Next"
+                    width={32}
+                    height={32}
+                  />
+                </button>
+              </Swiper>
+              <div className={styles.trainersPagination}></div>
+              <button
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
-                className={`fade-in-section ${styles.trainerCard}`}
-                style={{ animationDelay: `${0.3 + i * 0.12}s` }}
+                className={`fade-in-section ${styles.trainersSeeMore}`}
+                style={{ animationDelay: `${0.3 + trainers.length * 0.06}s` }}
               >
-                <div className={styles.trainerName}>{t.name}</div>
-                <div className={styles.trainerImgWrap}>
-                  <img src={t.img} alt={t.name} className={styles.trainerImg} />
-                </div>
-                <div className={styles.trainerSubtitle}>{t.subtitle}</div>
-                <div className={styles.trainerExp}>{t.experience}</div>
+                SEE MORE
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className={styles.trainersGrid}>
+                {trainers.map((t, i) => (
+                  <div
+                    key={i}
+                    data-color={t.color}
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className={`fade-in-section ${styles.trainerCard}`}
+                    style={{ animationDelay: `${0.3 + i * 0.12}s` }}
+                  >
+                    <div className={styles.trainerName}>{t.name}</div>
+                    <div className={styles.trainerImgWrap}>
+                      <img src={t.img} alt={t.name} className={styles.trainerImg} />
+                    </div>
+                    <div className={styles.trainerSubtitle}>{t.subtitle}</div>
+                    <div className={styles.trainerExp}>{t.experience}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <button
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className={`fade-in-section ${styles.trainersSeeMore}`}
-            style={{ animationDelay: `${0.3 + trainers.length * 0.12}s` }}
-          >
-            SEE MORE
-          </button>
+              <button
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className={`fade-in-section ${styles.trainersSeeMore}`}
+                style={{ animationDelay: `${0.3 + trainers.length * 0.06}s` }}
+              >
+                SEE MORE
+              </button>
+            </>
+          )}
         </div>
       </section>
 
@@ -1115,7 +1295,12 @@ const Home = () => {
             <span className="SubHeading">REVIEWS & TESTIMONIALS</span>
           </div>
         </div>
-        <div className={styles.testimonialBgBox}>
+        <div
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+          className={`fade-in-section ${styles.testimonialBgBox}`}
+          style={{ animationDelay: "0.2s" }}>
           {/* Decorative rectangles */}
           <img
             src="/images/rectangle-bg4.png"
@@ -1147,7 +1332,6 @@ const Home = () => {
         <div className={styles.testimonialSliderWrap}>
           <Swiper
             modules={[Navigation, Pagination]}
-            slidesPerView={4}
             loop={true}
             spaceBetween={20}
             navigation={{
@@ -1158,9 +1342,15 @@ const Home = () => {
               clickable: true,
               el: "." + styles.testimonialPagination,
             }}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              576: { slidesPerView: 2 },
+              992: { slidesPerView: 3 },
+              1200: { slidesPerView: 4 },
+            }}
             className={styles.testimonialSwiper}
           >
-            <button className={`swiper-button-prev`}>
+            <button className={`swiper-button-prev`} tabIndex={0} aria-label="Previous testimonial">
               <img
                 src="/images/right-arrow-blue.png"
                 alt="Prev"
@@ -1220,7 +1410,7 @@ const Home = () => {
                 )}
               </SwiperSlide>
             ))}
-            <button className={`swiper-button-next`}>
+            <button className={`swiper-button-next`} tabIndex={0} aria-label="Next testimonial">
               <img
                 src="/images/right-arrow-blue.png"
                 alt="Next"
@@ -1237,8 +1427,8 @@ const Home = () => {
 
       <section className={styles.blogSection} >
         <div className="container">
-          <div className="row">
-            <div className={`col-4 ${styles.blogLeft}`}>
+          <div className="row gap-5 gap-lg-0">
+            <div className={`col-12 col-lg-4 ${styles.blogLeft}`}>
               <div
                 className={`fade-in-section ${styles.blogHeadingRow}`}
                 data-scroll
@@ -1255,11 +1445,9 @@ const Home = () => {
                 className={`fade-in-section ${styles.blogTitle}`}
                 style={{ animationDelay: "0.2s" }}
               >
-                LOREM IPSUM DOLOR
-                <br />
-                SIT AMET, CONSECTETUR
-                <br />
-                ADIPISCING
+                LOREM IPSUM DOLOR 
+                SIT AMET, CONSECTETUR  
+                ADIPISCING 
               </h2>
               <div
                 data-scroll
@@ -1286,7 +1474,7 @@ const Home = () => {
                 />
               </button>
             </div>
-            <div className={`col-8 ${styles.blogRight}`} >
+            <div className={`col-12 col-lg-8 ${styles.blogRight}`} >
               {blogData.map((blog, i) => (
                 <div
                   key={i}
@@ -1316,6 +1504,21 @@ const Home = () => {
                 </div>
               ))}
             </div>
+            <button
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className={`${styles.blogAllBtnmobile} fade-in-section`}
+              style={{ animationDelay: "0.4s" }}
+            >
+              VIEW ALL BLOGS
+              <img
+                src="/images/right-arrow-skyblue.png"
+                alt="arrow"
+                width={24}
+                height={24}
+              />
+            </button>
           </div>
         </div>
       </section>

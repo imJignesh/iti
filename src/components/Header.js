@@ -32,30 +32,18 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`${styles.header} ${show ? styles.headerAnimated : styles.headerHidden} w-100`}>
-            <div className={`d-flex w-100 m-0 ${styles.header_left_content}`}> 
-                <div className={`col-auto ${styles.logo}`}> 
+        <header className={`${styles.header} ${show ? styles.headerAnimated : styles.headerHidden}`}>
+            <div className={`d-flex w-100 m-0 ${styles.header_left_content}`}>
+                <div className={`col-auto ${styles.logo}`}>
                     <Image src="/images/logo.svg" width={200} height={80} quality={100} />
                 </div>
-                {/* Hamburger toggle button for mobile/tablet */}
-                <button
-                    className="navbar-toggler d-lg-none ms-auto me-2"
-                    type="button"
-                    aria-label="Toggle navigation"
-                    onClick={() => setNavOpen((open) => !open)}
-                    style={{border: 'none', background: 'transparent', fontSize: 28}}
-                >
-                    <span className="navbar-toggler-icon" style={{display: 'inline-block', width: 30, height: 30, background: 'none'}}>
-                        <svg width="30" height="30" viewBox="0 0 30 30"><path stroke="black" strokeWidth="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
-                    </span>
-                </button>
                 {/* Nav links: hidden on mobile/tablet unless toggled, always visible on lg+ */}
                 <nav
-                    className={`col ${styles.nav} ${navOpen ? 'd-flex flex-column position-absolute top-100 start-0 w-100 bg-white shadow-lg p-3 z-3' : 'd-none'} d-lg-flex flex-lg-row position-lg-static w-lg-auto bg-lg-none shadow-lg-none p-lg-0 z-lg-auto`}
-                    style={navOpen ? {left: 0} : {}}
+                    className={`col ${styles.nav} ${navOpen ? 'd-flex flex-column position-absolute top-100 start-0 w-100 bg-white shadow-lg p-4 px-5 z-3' : 'd-none'} d-lg-flex flex-lg-row position-lg-static w-lg-auto bg-lg-none shadow-lg-none p-lg-0 z-lg-auto`}
+                    style={navOpen ? { left: 0 } : {}}
                 >
                     <div className={styles.megaMenuWrapper}>
-                        <a href="#" className={styles.link}>Lorem</a>
+                        <a href="#" className={styles.link} onClick={e => {e.preventDefault();}}>Lorem</a>
                         <div className={styles.megaMenu}>
                             <div className={styles.megaMenuContent}>
                                 <div className={styles.megaMenuLeft}>
@@ -87,21 +75,42 @@ const Header = () => {
                     <a href="#" className={styles.link}>Ipsum</a>
                     <a href="#" className={styles.link}>Lorem</a>
                     <a href="#" className={styles.link}>Ipsum</a>
+                    {/* Mobile buttons: only show on <=575px */}
+                    <div className="d-flex flex-column gap-2 d-sm-none ">
+                        <button>
+                            <Image src="/images/mobile.png" width={25} height={25} quality={100} />
+                            Call
+                        </button>
+                        <button>
+                            <Image src="/images/whatsapp.png" width={25} height={25} quality={100} />
+                            Whatsapp
+                        </button>
+                    </div>
                 </nav>
             </div>
-            <div className={`d-flex justify-content-end w-100 m-0 ${styles.header_right_content}`}> 
-                <div className="col-auto p-0"> 
+            <div className={`d-flex justify-content-end w-100 m-0 ${styles.header_right_content}`}>
+                <div className="col-auto p-0 d-none d-sm-block">
                     <button>
                         <Image src="/images/mobile.png" width={25} height={25} quality={100} />
                         Call
                     </button>
                 </div>
-                <div className="col-auto p-0"> 
+                <div className="col-auto p-0 d-none d-sm-block">
                     <button>
                         <Image src="/images/whatsapp.png" width={25} height={25} quality={100} />
                         Whatsapp
                     </button>
                 </div>
+                {/* Hamburger toggle button for mobile/tablet */}
+                <button
+                    className={`d-lg-none ${styles.toggleButton}`}
+                    type="button"
+                    aria-label="Toggle navigation"
+                    onClick={() => setNavOpen((open) => !open)}
+                    style={{ border: 'none', background: 'transparent' }}
+                >
+                    <Image src="/images/hamburger.png" width={35} height={35} quality={100} />
+                </button>
             </div>
         </header>
     );

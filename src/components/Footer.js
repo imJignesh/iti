@@ -3,7 +3,12 @@ import styles from '../styles/Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className={styles.footerWrap}>
+    <footer
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat="true"
+      className={`fade-in-section ${styles.footerWrap}`}
+      style={{ animationDelay: "0.2s" }}>
         <div
           className={`fade-in-section ${styles.footerTop}`}
           data-scroll
