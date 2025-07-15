@@ -1,12 +1,7 @@
 @import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
+@import "/fonts/stylesheet.css";
 
-@font-face {
-  font-family: "Galano Grotesque";
-  src: url("/fonts/galano-grotesque/Galano Grotesque Medium.otf")
-    format("opentype");
-  font-style: normal;
-  font-display: swap;
-}
+
 
 body {
   font-family: var(--font-galano) !important;
@@ -24,7 +19,7 @@ body {
   --white-color: #f8fbff;
   --white-bg: #ffffff;
   --black-color: #000000;
-  --font-galano: "Galano Grotesque";
+  --font-galano: "GalanoGrotesqueAlt";
 }
 
 * {
