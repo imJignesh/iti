@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-ExtraLightItalic.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-Italic.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-LightItalic.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-Light.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-MediumItalic.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-ExtraLight.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-ExtraLight.woff2') format('woff2'),
+        url('GalanoGrotesque-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-ExtraLightItalic.woff2') format('woff2'),
+        url('GalanoGrotesque-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-Thin.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-Medium.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-SemiBoldItalic.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-SemiBold.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-ThinItalic.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-Italic.woff2') format('woff2'),
+        url('GalanoGrotesque-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesqueAlt';
+    src: url('GalanoGrotesqueAlt-Regular.woff2') format('woff2'),
+        url('GalanoGrotesqueAlt-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-SemiBold.woff2') format('woff2'),
+        url('GalanoGrotesque-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-Medium.woff2') format('woff2'),
+        url('GalanoGrotesque-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-ThinItalic.woff2') format('woff2'),
+        url('GalanoGrotesque-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-Regular.woff2') format('woff2'),
+        url('GalanoGrotesque-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-Thin.woff2') format('woff2'),
+        url('GalanoGrotesque-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-MediumItalic.woff2') format('woff2'),
+        url('GalanoGrotesque-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-LightItalic.woff2') format('woff2'),
+        url('GalanoGrotesque-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-Light.woff2') format('woff2'),
+        url('GalanoGrotesque-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('GalanoGrotesque-SemiBoldItalic.woff2') format('woff2'),
+        url('GalanoGrotesque-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
