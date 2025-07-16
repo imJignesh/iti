@@ -972,6 +972,9 @@
 }
 
 @media (max-width: 991px) {
+  .aboutSection{
+    overflow-x: hidden;
+  }
   .aboutSection .aboutImageWrap {
     max-width: 600px;
     margin: 0 auto;
@@ -2594,7 +2597,6 @@
   display: flex;
   flex-direction: column;
   gap: 36px;
-  min-width: 400px;
 }
 .blogSection .blogCard {
   display: flex;
