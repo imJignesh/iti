@@ -1,6 +1,6 @@
-import Header from '../components/Header';
+import Header from './Header';
 import Home from '../components/Home';
-import Footer from '@/components/Footer';
+import Footer from '@/pages/Footer';
 
 export default function Index() {
   return (
