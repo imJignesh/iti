@@ -400,14 +400,27 @@ const Home = () => {
                   </div>
                 </div>
                 <div className={`col-12 col-lg -6 col-xl-5 ${styles.heroRight}`}>
-                  <Image
-                    src="/images/banner-image-right.png"
-                    alt="Education Platform"
-                    className={styles.heroImage}
-                    width={500}
-                    height={500}
-                    quality={100}
-                  />
+                  <div className={styles.videoContainer}>
+                    <video
+                      className={styles.heroVideo}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      poster="/images/banner-image-right.png"
+                    >
+                      <source src="/videos/education-video.mp4" type="video/mp4" />
+                      {/* Fallback image if video doesn't load */}
+                      <Image
+                        src="/images/banner-image-right.png"
+                        alt="Education Platform"
+                        className={styles.heroImage}
+                        width={500}
+                        height={500}
+                        quality={100}
+                      />
+                    </video>
+                  </div>
                   <p className={styles.mobielContent}>
                     Achieve academic excellence in IBDP, MYP, I/GCSE, A-Levels & AP
                     with Ignite's expert tutors in Dubai.
@@ -509,9 +522,12 @@ const Home = () => {
               const isActive = hovered === idx;
               return (
                 <div
-                  key={idx}
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
                   className={isActive ? styles.mainCard : styles.sideCard}
-                  style={{ background: "none" }}
+                  style={{ animationDelay: `${0.3 + idx * 0.25}s`, background: "none" }}
+                  key={idx}
                   onMouseEnter={() => setHovered(idx)}
                 >
                   <span className={styles.cardNumber}>{card.number}</span>
@@ -1190,7 +1206,7 @@ const Home = () => {
                 pagination={{ clickable: true, el: "." + styles.trainersPagination }}
                 breakpoints={{
                   0: { slidesPerView: 1 },
-                  575:{ slidesPerView: 2},
+                  575: { slidesPerView: 2 },
                   768: { slidesPerView: 3 },
                   992: { slidesPerView: 4 },
                 }}
@@ -1445,9 +1461,9 @@ const Home = () => {
                 className={`fade-in-section ${styles.blogTitle}`}
                 style={{ animationDelay: "0.2s" }}
               >
-                LOREM IPSUM DOLOR 
-                SIT AMET, CONSECTETUR  
-                ADIPISCING 
+                LOREM IPSUM DOLOR
+                SIT AMET, CONSECTETUR
+                ADIPISCING
               </h2>
               <div
                 data-scroll
