@@ -162,6 +162,18 @@ const uspData = [
     title: "INDIVIDUAL SUPPORT",
     desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
   },
+  {
+    number: "07",
+    icon: "/images/usp-icon1.png",
+    title: "EXPERIENCED TUTORS",
+    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+  },
+  {
+    number: "08",
+    icon: "/images/usp-icon2.png",
+    title: "STRUCTURED LEARNING",
+    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+  },
 ];
 
 const trainers = [
