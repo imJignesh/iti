@@ -1,13 +1,5 @@
-import Header from './Header';
-import Home from '../components/Home';
-import Footer from '@/pages/Footer';
+// src/pages/index.js
 
 export default function Index() {
-  return (
-    <>
-      <Header />
-      <Home />
-      <Footer />
-    </>
-  );
+  return null; // Sab kuch _app.js me render ho raha hai
 }

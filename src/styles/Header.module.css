@@ -390,7 +390,11 @@ header .toggleButton img {
 }
 @media (max-width: 575px) {
   header .header_left_content .logo img {
-    width: 150px;
+    width: 100px;
+  }
+  header .header_right_content button img {
+    width: 15px;
+    height: 15px;
   }
   .header,
   header .nav {
@@ -401,7 +405,36 @@ header .toggleButton img {
     padding: 20px 15px;
   }
 }
+@media (max-width: 500px) {
+  header .header_right_content {
+    gap: 10px;
+  }
+  header .header_right_content button {
+    font-size: 12px;
+    padding: 6px 10px;
+    letter-spacing: 1px;
+  }
+}
 @media (max-width: 425px) {
+  .header  {
+    gap: 10px;
+  }
+  header .header_left_content .logo img {
+    width: 80px;
+  }
+  header .header_right_content {
+    gap: 5px;
+  }
+    header .header_right_content button {
+      padding: 3px 8px;
+      border-radius: 10px;
+      letter-spacing: 0.3px;
+      gap: 5px;
+    }
+    header .header_right_content button img {
+    width: 12px;
+    height: 12px;
+  }
   header .megaMenuLeft h3 {
     font-size: 16px;
   }
