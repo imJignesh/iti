@@ -5,8 +5,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
+import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  EffectCoverflow,
+  Scrollbar,
+  Mousewheel,
+} from "swiper/modules";
 
 function useInViewAnimation(threshold = 0.3) {
   const [inView, setInView] = useState(false);
@@ -335,6 +342,10 @@ const Home = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const uspDataRows = [];
+  for (let i = 0; i < uspData.length; i += 2) {
+    uspDataRows.push(uspData.slice(i, i + 2));
+  }
 
   useEffect(() => {
     let scroll;
@@ -774,7 +785,7 @@ const Home = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className={`fade-in-section ${styles.testMobileSwiper}`}
-              spaceBetween={15}
+              spaceBetween={25}
               loop={true}
               pagination={{ clickable: true }}
               breakpoints={{
@@ -788,26 +799,30 @@ const Home = () => {
               {testData.map((card, idx) => (
                 <SwiperSlide key={idx}>
                   <div className={styles.testCardMobile}>
-                    <div className={styles.testCardImageWrap}>
-                      <img src={card.img} alt={card.title} className={styles.testCardImage} />
+                    <div
+                      className={styles.testCardImageWrap}
+                      style={{ backgroundImage: `url(${card.img})` }}
+                    >
                       <span className={styles.testCardNumber}>{card.number}</span>
-                      <div className={styles.testCardOverlay}>
-                        <span className={styles.testCardTitle}>{card.title}</span>
-                        <span className={styles.testCardSubtitle}>{card.label}</span>
-                      </div>
+                      <span className={styles.testCardTitle}>{card.title}</span>
                     </div>
                     <div className={styles.testCardDetailsWrap}>
+                      <div className={styles.testCardLabel}>{card.label}</div>
                       <div className={styles.testCardDetails}>
-                        {card.details && card.details.map((d, i) => <span key={i}>{d}</span>)}
+                        {card.details &&
+                          card.details.map((d, i) => <span key={i}>{d}</span>)}
                       </div>
                       <button className={styles.testCardBtnMobile} type="button">
                         {card.btn}
-                        <Image
-                          src="/images/right-arrow-blue.png"
-                          width={24}
-                          height={24}
-                          quality={100}
-                        />
+                        <span className={styles.btnArrow}>
+                          <Image
+                            src="/images/right-arrow-blue.png"
+                            width={30}
+                            height={30}
+                            quality={100}
+                            alt="arrow"
+                          />
+                        </span>
                       </button>
                     </div>
                   </div>
@@ -851,7 +866,7 @@ const Home = () => {
                       <div className={styles.cardLabel}>{card.label}</div>
                       <div className={styles.cardDetails}>
                         {card.details &&
-                          card.details.map((d, i) => <p key={i}>{d}</p>)}
+                          card.details.map((d, i) => <p key={i} className="m-0">{d}</p>)}
                       </div>
                       <button className={styles.cardBtn} type="button">
                         {card.btn}{" "}
@@ -1137,26 +1152,44 @@ const Home = () => {
             />
           </button>
         </div>
-        <div className={styles.uspGrid}>
-          {uspData.map((usp, i) => (
-            <div
-              key={i}
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className={`fade-in-section ${styles.uspItem}`}
-              style={{ animationDelay: `${0.2 + i * 0.12}s` }}
-            >
-              <div className={styles.uspNumber}>{usp.number}</div>
-              <div className={styles.uspIconCircle}>
-                <img src={usp.icon} alt="" className={styles.uspIcon} />
-              </div>
-              <div className={styles.uspContent}>
-                <div className={styles.uspItemTitle}>{usp.title}</div>
-                <div className={styles.uspItemDesc}>{usp.desc}</div>
-              </div>
-            </div>
-          ))}
+        <div className={styles.uspRight}>
+          <Swiper
+            direction="vertical"
+            slidesPerView="auto"
+            spaceBetween={80}
+            speed={800}
+            freeMode={true}
+            grabCursor={true}
+            mousewheel={true}
+            scrollbar={{
+              el: `.${styles.uspScrollbar}`,
+              draggable: true,
+            }}
+            modules={[Scrollbar , Mousewheel]}
+            className={styles.uspSwiper}
+          >
+            {uspDataRows.map((row, index) => (
+              <SwiperSlide key={index} className={styles.uspSlide}>
+                {row.map((usp, i) => (
+                  <div key={i} className={styles.uspItem}>
+                    <div className={styles.uspNumber}>{usp.number}</div>
+                    <div className={styles.uspIconCircle}>
+                      <img
+                        src={usp.icon}
+                        alt={usp.title}
+                        className={styles.uspIcon}
+                      />
+                    </div>
+                    <div className={styles.uspContent}>
+                      <div className={styles.uspItemTitle}>{usp.title}</div>
+                      <div className={styles.uspItemDesc}>{usp.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className={styles.uspScrollbar} />
         </div>
       </section>
 

@@ -355,7 +355,7 @@
 .mainCard,
 .activeCard {
   position: relative;
-  border-radius: 25px;
+  border-radius: 40px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -365,7 +365,7 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   background: rgba(255, 255, 255, 0.7);
   flex-shrink: 0;
-  height: 550px;
+  height: 650px;
   transition: flex-basis 0.8s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.8s,
     box-shadow 0.8s, background 0.8s;
 }
@@ -384,6 +384,7 @@
   background: #fff;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   cursor: pointer;
+  border-radius: 50px;
 }
 
 .courseSection .mainCard .cardTitle {
@@ -424,7 +425,7 @@
   justify-content: flex-end;
   gap: 18px;
   color: #fff;
-  padding: 32px 18px 18px 18px;
+  padding: 40px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.01) 0%,
@@ -504,20 +505,22 @@
 }
 
 .courseSection .mainCardLabel {
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   font-weight: 700;
   letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 20px;
 }
 
 .courseSection .mainCardTitle {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   margin-top: 2px;
 }
 
 .courseSection .mainCardDetails {
-  font-size: 1rem;
+  font-size: 1.2rem;
   opacity: 0.9;
   display: flex;
   gap: 12px;
@@ -593,7 +596,15 @@
   vertical-align: middle;
   margin: 0 36px;
 }
-
+@media (max-width: 1440px) {
+  .courseSection .sideCard,
+  .courseSection .inactiveCard,
+  .courseSection .mainCard,
+  .courseSection .activeCard {
+    height: 550px;
+    border-radius: 30px;
+  }
+}
 @media (max-width: 1124px) {
   .courseSection .sideCard,
   .courseSection .inactiveCard,
@@ -602,25 +613,26 @@
     height: 400px;
     padding-top: 120px;
   }
-
-  .courseSection .mainCard,
-  .courseSection .activeCard {
-    flex-basis: 380px;
-  }
-
   .courseSection .sideCard,
   .courseSection .inactiveCard {
     flex-basis: 100px;
+  }
+  .courseSection .mainCardContent {
+    gap: 10px;
   }
   .courseSection .cardTitle {
     font-size: 22px;
   }
   .courseSection .cardNumber {
-    font-size: 30px;
+    font-size: 35px;
     padding-bottom: 20px;
   }
+  .courseSection .mainCardTitle {
+    font-size: 18px;
+  }
   .courseSection .mainCardLabel {
-    font-size: 28px;
+    font-size: 32px;
+    margin-bottom: 8px;
   }
 }
 @media (max-width: 1024px) {
@@ -633,6 +645,10 @@
   }
 }
 @media (max-width: 991px) {
+  .courseSection .mainCard,
+  .courseSection .activeCard {
+    flex-basis: 380px;
+  }
   .courseSection .courseHeadings .courseTitle {
     font-size: 30px;
   }
@@ -1034,7 +1050,7 @@
   color: var(--blue-color);
   font-weight: 600;
   opacity: 0.8;
-  max-width: 220px;
+  max-width: 250px;
 }
 .aboutSection .aboutBtn {
   margin-top: 30px;
@@ -1075,9 +1091,6 @@
 }
 
 @media (max-width: 991px) {
-  .aboutSection {
-    overflow-x: hidden;
-  }
   .aboutSection .aboutImageWrap {
     max-width: 600px;
     margin: 0 auto;
@@ -1160,6 +1173,11 @@
     font-size: 0.8rem;
   }
 }
+@media (max-width: 375px) {
+  .aboutSection .aboutSectionInner {
+    overflow: hidden;
+  }
+}
 
 /* Test Section  */
 
@@ -1221,7 +1239,7 @@
 .testSection .cardImageArea {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-size: cover;
   background-position: center;
   border-radius: 32px;
@@ -1233,10 +1251,11 @@
   box-shadow: none;
 }
 .testSection .activeImageArea {
-  height: 250px;
+  height: 300px;
 }
 .testSection .activeImageArea .cardTitle {
-  left: 50%;
+  width: 100px;
+  left: 20%;
   transform: translate(-50%) !important;
 }
 
@@ -1273,7 +1292,7 @@
 
 .testSection .cardTitle {
   position: absolute;
-  left: 20%;
+  left: 50%;
   bottom: 32px;
   transform: translate(-50%);
   font-size: 2.2rem;
@@ -1297,6 +1316,8 @@
   opacity: 0;
   max-height: 0;
   pointer-events: none;
+  position: absolute;
+  top: 50%;
   transform: translateY(-30px);
   transition: opacity 0.5s, max-height 0.5s, transform 0.5s;
 }
@@ -1314,7 +1335,7 @@
 }
 
 .testSection .cardLabel {
-  font-size: 1.15rem;
+  font-size: 1.8vw;
   font-weight: 900;
   color: var(--blue-color);
   margin-bottom: 10px;
@@ -1325,12 +1346,13 @@
 .testSection .cardDetails {
   font-size: 1.08rem;
   color: var(--blue-color);
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   opacity: 0.9;
   font-weight: 500;
 }
 
 .testSection .cardBtn {
+  width: 100%;
   padding: 10px 30px;
   border-radius: 40px;
   font-size: 1.2vw;
@@ -1350,6 +1372,18 @@
   transform: scale(1.04);
 }
 
+@media (max-width: 1440px) {
+  .testSection .cardImageArea {
+    height: 500px;
+  }
+  .testSection .activeImageArea {
+    height: 250px;
+  }
+  .testSection .cardLabel {
+    font-size: 26px;
+    line-height: 1;
+  }
+}
 @media (max-width: 1199px) {
   .testSection .cardTitle {
     left: 25%;
@@ -1379,20 +1413,28 @@
   .testSection .testCardMobile {
     display: flex;
     flex-direction: column;
+    gap: 24px;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
   }
   .testSection .testCardImageWrap {
     border-radius: 24px;
     position: relative;
     width: 100%;
-    aspect-ratio: 1/1.3;
+    height: 320px;
     overflow: hidden;
-    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
   }
   .testSection .testCardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    display: none;
   }
   .testSection .testCardImageWrap::before {
     content: "";
@@ -1401,90 +1443,79 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to top, #000000cc, #66666633);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    z-index: 0;
   }
   .testSection .testCardNumber {
-    position: absolute;
-    top: 0;
-    left: 30px;
-    font-size: 100px;
-    line-height: 100px;
+    position: relative;
+    font-size: 3rem;
+    line-height: 1;
     color: #fff;
-    opacity: 0.5;
+    opacity: 0.9;
     font-weight: 700;
     z-index: 2;
     pointer-events: none;
   }
-  .testSection .testCardOverlay {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 24px 20px 18px 20px;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.01) 0%,
-      rgba(0, 0, 0, 0.7) 100%
-    );
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
   .testSection .testCardTitle {
-    color: #fff;
-    font-size: 2.8rem;
+    position: relative;
+    font-size: 4rem;
     font-weight: 700;
-    letter-spacing: 1px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-    padding-bottom: 10px;
-  }
-  .testSection .testCardSubtitle {
     color: #fff;
-    font-size: 1.8rem;
-    line-height: 1.2;
-    font-weight: 400;
-    opacity: 0.85;
+    z-index: 2;
   }
+
   .testSection .testCardDetailsWrap {
-    padding: 18px 20px 0 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: flex-start;
+  }
+  .testSection .testCardLabel {
+    color: var(--blue-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
   }
   .testSection .testCardDetails {
     color: var(--blue-color);
     padding: 0;
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.4;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
   }
   .testSection .testCardDetails span:first-child {
-    border-right: 1px solid var(--blue-color);
-    padding-right: 10px;
+    border-right: none;
+    padding-right: 0;
   }
   .testSection .testCardBtnMobile {
-    padding: 10px 30px 15px 30px;
+    padding: 15px 25px;
     border-radius: 40px;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 600;
     text-transform: uppercase;
     border: 0;
     color: var(--blue-color);
-    background: linear-gradient(to right, var(--border-color), #e7f6ff);
+    background: #eaf8ff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     cursor: pointer;
     transition: 0.4s all;
+    width: 100%;
   }
   .testSection .testCardBtnMobile:hover {
-    transform: scale(1.04);
+    transform: scale(1.02);
   }
 }
 
@@ -1525,6 +1556,9 @@
 @media (max-width: 575px) {
   .testSection .testSubheading {
     font-size: 20px;
+  }
+  .testSection .testCardTitle {
+    font-size: 3rem;
   }
 }
 
@@ -1780,6 +1814,12 @@
   z-index: 3;
 }
 
+.alumniSection .alumniSwiper :global(.swiper-slide) {
+  opacity: 0.6;
+}
+.alumniSection .alumniSwiper :global(.swiper-slide-active) {
+  opacity: 1;
+}
 .alumniSection :global(.swiper-wrapper) {
   align-items: end;
 }
@@ -1950,6 +1990,7 @@
 
 .uspSection {
   display: flex;
+  align-items: center;
   background: linear-gradient(
     to right,
     var(--green-color) 0%,
@@ -2038,13 +2079,27 @@
   transform: scale(1.04);
 }
 
-.uspSection .uspGrid {
+.uspSection .uspRight {
   flex: 2;
-  display: grid;
-  margin: 50px 0 20px 0;
-  grid-template-columns: 1fr 1fr;
+  position: relative;
+  user-select: none;
+}
+
+.uspSection .uspSwiper {
+  width: 100%;
+  height: 500px;
+  padding: 20px 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.uspSection .uspSlide {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   gap: 50px;
-  align-items: start;
+  height: auto !important;
+  flex-wrap: wrap;
 }
 
 .uspSection .uspItem {
@@ -2056,14 +2111,15 @@
   align-items: flex-start;
   color: var(--white-color);
   min-width: 0;
+  flex: 1;
   position: relative;
 }
 
 .uspSection .uspNumber {
   position: absolute;
-  top: -30px;
+  top: -40px;
   left: -30px;
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #b2e6d4;
   opacity: 0.7;
@@ -2073,8 +2129,8 @@
 .uspSection .uspIconCircle {
   background: #baefd4;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2082,8 +2138,8 @@
 }
 
 .uspSection .uspIcon {
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
 }
 
@@ -2103,6 +2159,19 @@
   opacity: 0.7;
   line-height: 1.5;
 }
+.uspSection .uspScrollbar {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.uspSection .uspScrollbar :global(.swiper-scrollbar-drag) {
+  background: #fff;
+}
+
 @media (max-width: 1280px) {
   .uspSection .uspDesc {
     font-size: 0.8rem;
@@ -2147,7 +2216,6 @@
     padding-bottom: 30px;
   }
   .uspSection .uspIconCircle {
-    width: auto;
     min-width: 70px;
   }
   .uspSection .uspContent {
@@ -2165,7 +2233,22 @@
     grid-template-columns: 1fr;
   }
   .uspSection .uspItem:last-child {
-    border: none;
+    /* border: none; */
+  }
+  .uspSwiper{
+    height: 400px;
+  }
+  .uspSection .uspSlide {
+    margin-bottom: 20px !important; 
+  }
+  .uspSection .uspItem {
+    flex: 0 0 100%; /* 👈 2 items per row */
+    max-width: 100%;
+  }
+
+  .uspSection .uspSlide {
+    justify-content: space-between; /* better spacing */
+    gap: 20px;
   }
 }
 
