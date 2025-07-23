@@ -1260,7 +1260,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: none;
 }
 .testSection .activeImageArea {
@@ -1332,7 +1332,7 @@
   position: absolute;
   bottom: 0%;
   transform: translateY(-30px);
-  transition: opacity 0.5s, max-height 0.5s, transform 0.5s;
+  transition: opacity 0.8s, max-height 0.8s, transform 0.8s;
 }
 .testSection .showContent {
   opacity: 1;
