@@ -1439,10 +1439,7 @@ const Home = () => {
               <SwiperSlide key={idx}>
                 {item.type === "video" ? (
                   <div
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat="true"
-                    className={`${styles.testimonialCard} ${styles.testimonialCardVideo} fade-in-section`}
+                    className={`${styles.testimonialCard} ${styles.testimonialCardVideo}`}
                   >
                     <img
                       src={item.img}
@@ -1475,10 +1472,7 @@ const Home = () => {
                   </div>
                 ) : (
                   <div
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat="true"
-                    className={`${styles.testimonialCard} ${styles.testimonialCardText} fade-in-section`}
+                    className={`${styles.testimonialCard} ${styles.testimonialCardText}`}
                   >
                     <div className={styles.testimonialText}>{item.text}</div>
                     <div className={styles.testimonialTextName}>

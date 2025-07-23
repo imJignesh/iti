@@ -2251,7 +2251,13 @@
     padding-bottom: 30px;
   }
   .uspSection .uspIconCircle {
-    min-width: 70px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+  }
+  .uspSection .uspIcon {
+    width: 40px;
+    height: 40px;
   }
   .uspSection .uspContent {
     width: 80%;
