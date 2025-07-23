@@ -154,11 +154,12 @@
 .footerWrap .footerContactLabel {
   font-weight: 700;
   letter-spacing: 1px;
-  margin-top: 8px;
+  margin: 8px 0;
 }
 .footerWrap .footerAddress,
 .footerWrap .footerContact {
   font-size: 1rem;
+  margin-bottom: 10px;
   opacity: 0.9;
   color: var(--white-color);
   opacity: 0.7;

@@ -75,17 +75,6 @@ const Header = () => {
                     <a href="#" className={styles.link}>Ipsum</a>
                     <a href="#" className={styles.link}>Lorem</a>
                     <a href="#" className={styles.link}>Ipsum</a>
-                    {/* Mobile buttons: only show on <=575px */}
-                    <div className="d-flex flex-column gap-2 d-sm-none ">
-                        <button>
-                            <Image src="/images/mobile.png" width={25} height={25} quality={100} />
-                            Call
-                        </button>
-                        <button>
-                            <Image src="/images/whatsapp.png" width={25} height={25} quality={100} />
-                            Whatsapp
-                        </button>
-                    </div>
                 </nav>
             </div>
             <div className={`d-flex justify-content-end w-100 m-0 ${styles.header_right_content}`}>

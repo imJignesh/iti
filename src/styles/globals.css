@@ -1,8 +1,13 @@
 @import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+.montserrat{
+  font-family: "Montserrat", sans-serif;
+}
 
 body {
-  font-family: var(--font-galano) !important;
+  font-family: var(--font-monstserrat) !important;
 }
 
 :root {
@@ -17,7 +22,7 @@ body {
   --white-color: #f8fbff;
   --white-bg: #ffffff;
   --black-color: #000000;
-  --font-galano: "GalanoGrotesque";
+  --font-monstserrat: "Montserrat", sans-serif;
 }
 
 * {
@@ -46,7 +51,7 @@ body {
 .SubHeading {
   font-size: 30px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1;
   text-transform: uppercase;
   background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
   -webkit-background-clip: text;
@@ -60,7 +65,7 @@ body {
   width: 18px;
   height: 100%;
   position: absolute;
-  top: 8px;
+  top: 0;
   left: 0;
   background: url(/images/heading-icon.png);
   background-size: contain;
@@ -71,7 +76,7 @@ body {
   width: 18px;
   height: 100%;
   position: absolute;
-  top: 8px;
+  top: 0;
   right: 0;
   background: url(/images/heading-icon.png);
   background-size: contain;
@@ -95,6 +100,11 @@ body {
   .SubHeading:before,
   .SubHeading:after {
     width: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .SubHeading {
+    font-size: 4vw !important;
   }
 }
 

@@ -261,37 +261,40 @@ const testimonialData = [
     type: "video",
     img: "/images/testimonial1.jpg",
     video: true,
-    name: "Student Name",
+    name: "LOREM IPSUM",
+    subtitle: "Lorem ipsum dolor sit",
   },
   {
     type: "text",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua.",
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "",
+    subtitle: "",
   },
   {
     type: "video",
     img: "/images/testimonial2.jpg",
     video: true,
-    name: "Student Name",
+    name: "LOREM IPSUM",
+    subtitle: "Lorem ipsum dolor sit",
   },
   {
     type: "text",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua.",
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "",
+    subtitle: "",
   },
   {
     type: "video",
     img: "/images/testimonial2.jpg",
     video: true,
-    name: "Student Name",
+    name: "LOREM IPSUM",
+    subtitle: "Lorem ipsum dolor sit",
   },
   {
     type: "text",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua.",
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "",
+    subtitle: "",
   },
 ];
 
@@ -1165,7 +1168,7 @@ const Home = () => {
               el: `.${styles.uspScrollbar}`,
               draggable: true,
             }}
-            modules={[Scrollbar , Mousewheel]}
+            modules={[Scrollbar, Mousewheel]}
             className={styles.uspSwiper}
           >
             {uspDataRows.map((row, index) => (
@@ -1223,13 +1226,15 @@ const Home = () => {
                 modules={[Navigation, Pagination]}
                 slidesPerView={4}
                 spaceBetween={20}
+                centeredSlides={true}
+                loop={true}
                 navigation={{
                   nextEl: ".swiper-button-next",
                   prevEl: ".swiper-button-prev",
                 }}
                 pagination={{ clickable: true, el: "." + styles.trainersPagination }}
                 breakpoints={{
-                  0: { slidesPerView: 1 },
+                  0: { slidesPerView: 1.4 },
                   575: { slidesPerView: 2 },
                   768: { slidesPerView: 3 },
                   992: { slidesPerView: 4 },
@@ -1357,17 +1362,48 @@ const Home = () => {
             alt="bg-shape"
             className={styles.testimonialRect}
           />
+
+          <img
+            src="/images/google-logo.png"
+            alt="bg-shape"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.googlelogo}`}
+            style={{ animationDelay: "0.2s" }}
+            width={250}
+            height={80}
+          />
           <h2
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className={`fade-in-section ${styles.testimonialTitle}`}
-            style={{ animationDelay: "0.2s" }}
+            style={{ animationDelay: "0.3s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
-            <br />
-            CONSECTETUR ADIPISCING
+            IGNITE TRAINING INSTITUTE - TUTORS IN DUBAI
           </h2>
+          <p
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.googleReview}`}
+            style={{ animationDelay: "0.4s" }}
+          >
+            <span>4.9 </span>
+            Google Reviews
+          </p>
+          <img
+            src="/images/star-review.png"
+            alt="bg-shape"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className={`fade-in-section ${styles.starReview}`}
+            style={{ animationDelay: "0.5s" }}
+            width={250}
+            height={80}
+          />
         </div>
         <div className={styles.testimonialSliderWrap}>
           <Swiper
@@ -1413,6 +1449,7 @@ const Home = () => {
                       alt={item.name}
                       className={styles.testimonialImg}
                     />
+                    <div className={styles.testimonialVideoOverlay}></div>
                     <div className={styles.testimonialPlayBtn}>
                       <svg
                         width="48"
@@ -1430,6 +1467,10 @@ const Home = () => {
                         />
                         <polygon points="20,16 34,24 20,32" fill="#ffffff90" />
                       </svg>
+                    </div>
+                    <div className={styles.testimonialVideoText}>
+                      <b>{item.name}</b>
+                      <span>{item.subtitle}</span>
                     </div>
                   </div>
                 ) : (
