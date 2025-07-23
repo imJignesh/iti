@@ -110,29 +110,18 @@ body {
 
 .fade-in-section {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(80px);
 }
 .is-inview {
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation: fadeInUp 0.8s 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(80px);
   }
   to {
     opacity: 1;
     transform: none;
   }
-}
-
-@media (max-width: 1124px) {
-}
-@media (max-width: 1024px) {
-}
-@media (max-width: 991px) {
-}
-@media (max-width: 767px) {
-}
-@media (max-width: 575px) {
 }

@@ -1,9 +1,9 @@
 /* Hero Banner Section */
 .hero {
-  padding: 80px 0;
+  padding: 100px 0;
   background: url(/images/banner-bg.png);
   background-repeat: no-repeat;
-  background-size: 500px;
+  background-size: 600px;
 }
 
 .hero .heroMain {
@@ -65,7 +65,6 @@
   position: relative;
 }
 
-/* Video Container Styles */
 .hero .videoContainer {
   position: relative;
   width: 100%;
@@ -81,7 +80,6 @@
   object-fit: cover;
   object-position: right;
   border-radius: 10px;
-  /* Apply mask to video */
   mask: url("/images/banner-image-right.png") no-repeat center;
   mask-size: contain;
   -webkit-mask: url("/images/banner-image-right.png") no-repeat center;
@@ -96,7 +94,6 @@
   height: 100%;
   pointer-events: none;
   z-index: 2;
-  /* Hide the mask overlay since we're using CSS mask */
   display: none;
 }
 
@@ -156,6 +153,11 @@
   transform: scale(1.05);
 }
 
+@media (max-width: 1500px) {
+  .hero {
+    background-position: top 10% left;
+  }
+}
 @media (max-width: 1280px) {
   .hero .heroRight .buttonGroup {
     top: 65%;
@@ -345,7 +347,7 @@
   justify-content: center;
   align-items: stretch;
   margin-top: 40px;
-  max-width: 100%;
+  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -365,7 +367,7 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   background: rgba(255, 255, 255, 0.7);
   flex-shrink: 0;
-  height: 650px;
+  height: 718px;
   transition: flex-basis 0.8s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.8s,
     box-shadow 0.8s, background 0.8s;
 }
@@ -379,7 +381,7 @@
 
 .courseSection .mainCard,
 .activeCard {
-  flex-basis: 50%;
+  flex-basis: 640px;
   z-index: 2;
   background: #fff;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -601,17 +603,28 @@
   .courseSection .inactiveCard,
   .courseSection .mainCard,
   .courseSection .activeCard {
-    height: 550px;
+    height: 561px;
     border-radius: 30px;
+  }
+  .courseSection .mainCard,
+  .courseSection .activeCard {
+    flex-basis: 500px;
   }
 }
 @media (max-width: 1124px) {
+  .courseSection .courseInner {
+    max-width: 100%;
+  }
   .courseSection .sideCard,
   .courseSection .inactiveCard,
   .courseSection .mainCard,
   .courseSection .activeCard {
     height: 400px;
     padding-top: 120px;
+  }
+  .courseSection .mainCard,
+  .courseSection .activeCard {
+    flex-basis: 400px;
   }
   .courseSection .sideCard,
   .courseSection .inactiveCard {
@@ -1239,7 +1252,7 @@
 .testSection .cardImageArea {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 680px;
   background-size: cover;
   background-position: center;
   border-radius: 32px;
@@ -1251,7 +1264,7 @@
   box-shadow: none;
 }
 .testSection .activeImageArea {
-  height: 300px;
+  height: 460px;
 }
 .testSection .activeImageArea .cardTitle {
   width: 100px;
@@ -1317,7 +1330,7 @@
   max-height: 0;
   pointer-events: none;
   position: absolute;
-  top: 50%;
+  bottom: 0%;
   transform: translateY(-30px);
   transition: opacity 0.5s, max-height 0.5s, transform 0.5s;
 }
@@ -1336,7 +1349,7 @@
 
 .testSection .cardLabel {
   font-size: 1.8vw;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--blue-color);
   margin-bottom: 10px;
   letter-spacing: 0.04em;
@@ -1344,7 +1357,7 @@
 }
 
 .testSection .cardDetails {
-  font-size: 1.08rem;
+  font-size: 1.38rem;
   color: var(--blue-color);
   margin-bottom: 18px;
   opacity: 0.9;
@@ -1374,14 +1387,30 @@
 
 @media (max-width: 1440px) {
   .testSection .cardImageArea {
-    height: 500px;
-  }
-  .testSection .activeImageArea {
-    height: 250px;
+    height: 480px;
   }
   .testSection .cardLabel {
-    font-size: 26px;
-    line-height: 1;
+    font-size: 20px;
+  }
+  .testSection .cardDetails {
+    font-size: 1rem;
+  }
+  .testSection .activeImageArea {
+    height: 300px;
+  }
+  .testSection .activeImageArea {
+    height: 300px;
+  }
+}
+@media (max-width: 1280px) {
+  .testSection .cardLabel {
+    font-size: 20px;
+  }
+  .testSection .cardDetails {
+    font-size: 1rem;
+  }
+  .testSection .activeImageArea {
+    height: 300px;
   }
 }
 @media (max-width: 1199px) {
@@ -1392,7 +1421,7 @@
     height: 400px;
   }
   .testSection .activeImageArea {
-    height: 200px;
+    height: 225px;
   }
   .testSection .cardDetails {
     margin-bottom: 15px;
@@ -1572,7 +1601,7 @@
   background: url(/images/blue-bg.png);
   background-size: cover;
   background-position: center;
-  padding: 100px 30px;
+  padding: 150px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1590,11 +1619,11 @@
 }
 .subjectSection .bgRect:nth-child(1) {
   width: 350px;
-  top: 30px;
+  top: 10%;
   left: 0;
 }
 .subjectSection .bgRect:nth-child(2) {
-  top: 30%;
+  top: 25%;
   left: 20px;
 }
 .subjectSection .bgRect:nth-child(3) {
@@ -1602,7 +1631,7 @@
   object-fit: fill;
   object-position: left;
   border-radius: 0 20px 20px 0;
-  bottom: 30px;
+  bottom: 15%;
   left: 20px;
 }
 .subjectSection .subjectLeft {
@@ -1611,6 +1640,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-left: 40px;
   gap: 18px;
   padding-left: 30px;
   position: relative;
@@ -1631,6 +1661,7 @@
   font-weight: 800;
   line-height: 1.2;
   text-transform: uppercase;
+  max-width: 500px;
 }
 .subjectSection .subjectTitle .subjectHighlight {
   font-size: 1.8vw;
@@ -1653,7 +1684,7 @@
 .subjectSection .subjectBubblesGrid {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -1662,7 +1693,7 @@
 }
 .subjectSection .subjectBubbleRow {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
   justify-content: flex-start;
   position: relative;
@@ -1674,7 +1705,7 @@
   color: var(--green-text);
   font-size: 1.2vw;
   font-weight: 400;
-  padding: 8px 40px 14px 40px;
+  padding: 10px 45px;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: none;
@@ -1707,7 +1738,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
-    padding: 50px 20px;
+    padding: 70px 20px;
   }
   .subjectSection .subjectLeft span {
     margin-bottom: 10px;
@@ -1718,7 +1749,13 @@
   .subjectSection .subjectBubble {
     font-size: 1rem;
   }
+  .subjectSection .bgRect:nth-child(1) {
+    width: 100%;
+    top: 40px;
+    left: 0;
+  }
   .subjectSection .subjectLeft {
+    margin-left: 0;
     width: 100%;
     align-items: center;
     text-align: center;
@@ -1858,19 +1895,19 @@
 
 .alumniSection .alumniImage {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   object-position: center;
-  max-height: 800px;
+  max-height: 450px;
 }
 .alumniSection .alumniLogoBox {
   position: absolute;
-  top: 18px;
-  left: 80%;
+  top: 50px;
+  left: 75%;
   transform: translate(-50%);
   background: #fff;
   border-radius: 15px;
-  padding: 30px 40px 30px 60px;
+  padding: 20px 30px 20px 50px;
   z-index: -1;
   border: 1.5px solid #b6d6f6;
   display: flex;
@@ -1878,11 +1915,12 @@
   justify-content: center;
 }
 .alumniSection .alumniLogoBox img {
-  width: 100px;
+  width: 80px;
   height: 100%;
 }
 .alumniSection .alumniName {
-  margin-top: 18px;
+  margin-top: 45px;
+  line-height: 0.8;
   font-size: 1.1rem;
   font-weight: 700;
   color: #7a8ca3;
@@ -2232,11 +2270,11 @@
   .uspSection .uspItem:last-child {
     /* border: none; */
   }
-  .uspSwiper{
+  .uspSwiper {
     height: 400px;
   }
   .uspSection .uspSlide {
-    margin-bottom: 20px !important; 
+    margin-bottom: 20px !important;
   }
   .uspSection .uspItem {
     flex: 0 0 100%; /* 👈 2 items per row */
@@ -2516,7 +2554,7 @@
   margin: 50px 0;
 }
 .testimonialSection .testimonialBgBox {
-  margin: 40px  auto 60px auto;
+  margin: 40px auto 60px auto;
   position: relative;
   z-index: 1;
 }
@@ -2575,7 +2613,7 @@
   font-weight: 500;
   margin-bottom: 20px;
 }
-.testimonialSection .googleReview span{
+.testimonialSection .googleReview span {
   color: var(--lightgreen-color);
 }
 .testimonialSection .starReview {
@@ -2670,7 +2708,7 @@
   bottom: 0;
   left: 0;
   padding: 30px 40px;
-  background: linear-gradient(to top ,var(--blue-color) , transparent);
+  background: linear-gradient(to top, var(--blue-color), transparent);
   width: 100%;
   height: 50%;
   color: var(--white-color);
@@ -2730,24 +2768,24 @@
   .testimonialSection .testimonialTextSubtitle {
     font-size: 1rem;
   }
-  .testimonialSection .testimonialTitle{
+  .testimonialSection .testimonialTitle {
     max-width: 600px;
     font-size: 32px;
   }
-  .testimonialSection .googleReview{
+  .testimonialSection .googleReview {
     font-size: 20px;
   }
-.testimonialSection .testimonialRect:nth-child(1){
-  top: 0;
-  max-width: 35%;
-}
-.testimonialSection .testimonialRect:nth-child(2){
-  display: none;
-}
-.testimonialSection .testimonialRect:nth-child(3){
-  top: 80%;
-  max-width: 35%;
-}
+  .testimonialSection .testimonialRect:nth-child(1) {
+    top: 0;
+    max-width: 35%;
+  }
+  .testimonialSection .testimonialRect:nth-child(2) {
+    display: none;
+  }
+  .testimonialSection .testimonialRect:nth-child(3) {
+    top: 80%;
+    max-width: 35%;
+  }
 }
 @media (max-width: 991px) {
   .testimonialSection {
@@ -2767,7 +2805,8 @@
   .testimonialSection .testimonialTitle {
     font-size: 1.4rem;
   }
-  .testimonialSection .googlelogo , .testimonialSection .starReview{
+  .testimonialSection .googlelogo,
+  .testimonialSection .starReview {
     max-width: 150px;
   }
   .testimonialSection .testimonialSwiper :global(.swiper-wrapper) {

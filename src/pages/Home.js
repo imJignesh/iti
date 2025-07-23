@@ -393,8 +393,8 @@ const Home = () => {
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat="true"
-                    className="fade-in-section"
-                    style={{ animationDelay: "0.2s" }}
+                    className={`fade-in-section ${styles.heroMainHeading}`}
+                    style={{ animationDelay: "0.4s" }}
                   >
                     <h3 className="SubHeading">Welcome to Ignite</h3>
                   </div>
@@ -403,7 +403,7 @@ const Home = () => {
                     data-scroll-class="is-inview"
                     data-scroll-repeat="true"
                     className="fade-in-section"
-                    style={{ animationDelay: "0.4s" }}
+                    style={{ animationDelay: "0.6s" }}
                   >
                     <h1 className={styles.heroTitle}>
                       Lorem ipsum dolor sit amet,{" "}
@@ -415,7 +415,7 @@ const Home = () => {
                     data-scroll-class="is-inview"
                     data-scroll-repeat="true"
                     className="fade-in-section"
-                    style={{ animationDelay: "0.6s" }}
+                    style={{ animationDelay: "0.8s" }}
                   >
                     <p className={styles.heroParagraph}>
                       <span>Lorem ipsum dolor sit amet</span>
@@ -914,7 +914,7 @@ const Home = () => {
               alt="bg-shape"
               className={styles.bgRect}
             />
-            <div className={`col-6 px-5 ${styles.subjectLeft}`}>
+            <div className={`col-5 ${styles.subjectLeft}`}>
               <span
                 data-scroll
                 data-scroll-class="is-inview"
@@ -945,7 +945,7 @@ const Home = () => {
                 dedicated to unlocking your potential.
               </p>
             </div>
-            <div className={`col-6 px-5 ${styles.subjectRight}`}>
+            <div className={`col-7 pe-5 ${styles.subjectRight}`}>
               <div className={styles.subjectBubblesGrid}>
                 {subjectRows.map((row, rowIdx) => (
                   <div
