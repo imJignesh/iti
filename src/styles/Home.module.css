@@ -4,7 +4,19 @@
   background: url(/images/banner-bg.png);
   background-repeat: no-repeat;
   background-size: 600px;
+  clip-path: inset(0 100% 0 0 );
+  animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
 }
+
+@keyframes revealClipLeftToRight{
+  from {
+    clip-path: inset(0 100% 0 0 );
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 
 .hero .heroMain {
   display: flex;
@@ -128,29 +140,9 @@
   gap: 15px;
 }
 .hero .heroRight .buttonGroup button {
-  padding: 10px 30px;
-  border-radius: 40px;
   font-size: 18px;
   font-weight: 400;
   line-height: 16px;
-  text-transform: uppercase;
-  border: 0;
-  color: var(--white-color);
-  background: linear-gradient(to right, var(--blue-color), #3f88ba);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  cursor: pointer;
-  transition: 0.4s all;
-}
-
-.hero .heroRight .buttonGroup button:last-child {
-  color: var(--blue-color);
-  background: linear-gradient(to right, var(--border-color), #e7f6ff);
-}
-.hero .heroRight .buttonGroup button:hover {
-  transform: scale(1.05);
 }
 
 @media (max-width: 1500px) {
@@ -184,6 +176,7 @@
 @media (max-width: 991px) {
   .hero {
     padding-bottom: 30px;
+    animation: revealClipLeftToRight 1.8s 1s ease forwards;
   }
   .hero .heroRight .buttonGroup {
     top: 70%;
@@ -209,13 +202,25 @@
   }
 }
 @media (max-width: 767px) {
-  .hero {
-    background: url(/images/banner-bg-mobile.png);
-    background-repeat: no-repeat;
-    background-size: 85%;
-    background-position: top right;
-    padding: 40px 0 0 0;
+ .hero {
+  background: url(/images/banner-bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: top right;
+  padding: 40px 0 0 0;
+    clip-path: inset(0 0 0 100%);
+    animation: revealClipRightToLeft 1.8s 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes revealClipRightToLeft {
+  from {
+    clip-path: inset(0 0 0 100%);
   }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
   .hero .heroRight .buttonGroup {
     left: 40%;
     right: 15%;
@@ -532,35 +537,7 @@
 }
 
 .courseSection .mainCardBtn {
-  margin-top: 18px;
-  padding: 12px 28px;
-  border-radius: 24px;
-  background: var(--border-color);
-  color: var(--blue-color);
-  font-weight: 700;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: background 0.2s, color 0.2s;
-  align-self: flex-start;
-}
-
-.courseSection .mainCardBtn:hover {
-  background: var(--blue-color);
-  color: #fff;
-}
-
-.courseSection .mainCardBtn img {
-  width: 30px !important;
-  height: auto !important;
-  transition: transform 0.3s;
-}
-
-.courseSection .mainCardBtn:hover img {
-  transform: translateX(4px);
+  width: max-content;
 }
 
 .courseSection .arrow {
@@ -756,7 +733,7 @@
   }
   .courseSection .mainCard .cardBg,
   .courseSection .sideCard .cardBg {
-    border-radius: 20px;
+    border-radius: 0;
   }
   .courseSection .sideCard .cardBg::before {
     background: #e7f6ff7a;
@@ -768,6 +745,11 @@
 }
 
 @media (max-width: 575px) {
+    .courseSection .sideCard,
+  .courseSection .inactiveCard {
+    flex-basis: 80px;
+    border-radius: 15px;
+  }
   .courseSection .courseHeadings .courseTitle {
     font-size: 25px;
   }
@@ -775,14 +757,23 @@
     font-size: 16px;
     line-height: 22px;
   }
+  .courseSection .sideCard .cardNumber {
+    font-size: 1.6rem;
+    padding: 0 20px 0 10px;
+  }
+  .courseSection .sideCard .cardTitle {
+    font-size: 1.6rem;
+    margin-left: 20px;
+  }
   .courseSection .mainCard .mainCardLabel,
   .courseSection .sideCard .mainCardLabel {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 30px;
   }
   .courseSection .mainCard .mainCardTitle,
   .courseSection .sideCard .mainCardTitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
     line-height: 24px;
     margin: 12px 0;
   }
@@ -791,7 +782,7 @@
   }
   .courseSection .mainCard .mainCardDetails,
   .courseSection .sideCard .mainCardDetails {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -1067,23 +1058,7 @@
 }
 .aboutSection .aboutBtn {
   margin-top: 30px;
-  padding: 10px 30px;
-  border-radius: 40px;
-  font-size: 1vw;
-  font-weight: 500;
-  text-transform: uppercase;
-  border: 0;
-  color: var(--blue-color);
-  background: linear-gradient(to right, var(--border-color), #e7f6ff);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  cursor: pointer;
-  transition: 0.4s all;
-}
-.aboutSection .aboutBtn:hover {
-  transform: scale(1.05);
+  width: max-content;
 }
 @media (max-width: 1199px) {
   .aboutSection .statSmall {
@@ -1215,8 +1190,9 @@
 .testSection .testTitle {
   font-size: 2vw;
   font-weight: 800;
+  max-width: 60%;
   color: var(--blue-color);
-  margin: 40px 0;
+  margin: 40px auto;
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -1414,6 +1390,9 @@
   }
 }
 @media (max-width: 1199px) {
+  .testSection .cardLabel {
+    font-size: 18;
+  }
   .testSection .cardTitle {
     left: 25%;
   }
@@ -1436,8 +1415,9 @@
     padding: 0 0 30px 0;
   }
   .testSection .testTitle {
+    max-width: 600px;
     font-size: 1.5rem;
-    margin: 20px 0;
+    margin: 20px auto;
   }
   .testSection .testCardMobile {
     display: flex;
@@ -1595,7 +1575,7 @@
 
 .subjectSection {
   width: 100%;
-  padding: 40px 0;
+  padding: 80px 0;
 }
 .subjectSection .subjectSectionInner {
   background: url(/images/blue-bg.png);
@@ -1731,6 +1711,23 @@
   .subjectSection .subjectTitle .subjectHighlight {
     font-size: 24px;
     line-height: 1.4;
+  }
+}
+@media (max-width: 1199px) {
+  .subjectSection .subjectSectionInner {
+    padding: 140px 30px;
+  }
+  .subjectSection .subjectLeft {
+    gap: 5px;
+  }
+  .subjectSection .subjectRight .subjectBubblesGrid {
+    gap: 10px;
+  }
+  .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow {
+    gap: 10px;
+  }
+  .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
+    padding: 10px 30px;
   }
 }
 @media (max-width: 1100px) {
@@ -2123,7 +2120,7 @@
 .uspSection .uspSwiper {
   width: 100%;
   height: 500px;
-  padding: 20px 30px;
+  padding: 25px 30px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2270,11 +2267,14 @@
   .uspSection {
     max-width: 95vw;
   }
+  .uspSection .uspSwiper {
+    padding: 0  ;
+  }
   .uspSection .uspGrid {
     grid-template-columns: 1fr;
   }
-  .uspSection .uspItem:last-child {
-    /* border: none; */
+  .uspSection .uspSlide:last-child .uspItem:last-child {
+    border: none;
   }
   .uspSwiper {
     height: 400px;
@@ -2283,12 +2283,12 @@
     margin-bottom: 20px !important;
   }
   .uspSection .uspItem {
-    flex: 0 0 100%; /* 👈 2 items per row */
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .uspSection .uspSlide {
-    justify-content: space-between; /* better spacing */
+    justify-content: space-between;
     gap: 20px;
   }
 }
@@ -2314,7 +2314,7 @@
 .trainersSection .trainersTitle {
   font-size: 2.2vw;
   font-weight: 700;
-  max-width: 70%;
+  max-width: 60%;
   margin: 40px auto;
   line-height: 1.1;
   text-transform: uppercase;

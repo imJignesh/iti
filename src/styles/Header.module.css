@@ -393,7 +393,7 @@ header .toggleButton img {
   }
 }
 @media (max-width: 425px) {
-  .header  {
+  .header {
     gap: 10px;
   }
   header .header_left_content .logo img {
@@ -402,13 +402,13 @@ header .toggleButton img {
   header .header_right_content {
     gap: 5px;
   }
-    header .header_right_content button {
-      padding: 3px 8px;
-      border-radius: 10px;
-      letter-spacing: 0.3px;
-      gap: 5px;
-    }
-    header .header_right_content button img {
+  header .header_right_content button {
+    padding: 3px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.3px;
+    gap: 5px;
+  }
+  header .header_right_content button img {
     width: 12px;
     height: 12px;
   }
@@ -417,5 +417,16 @@ header .toggleButton img {
   }
   header .megaMenuBox h4 {
     font-size: 14px;
+  }
+}
+@media (max-width: 330px) {
+  .header {
+    padding: 10px !important;
+  }
+  header .header_right_content button img {
+    display: none;
+  }
+  header .header_right_content .toggleButton img {
+    display: block;
   }
 }

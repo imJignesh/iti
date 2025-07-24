@@ -384,7 +384,7 @@ const Home = () => {
     <>
       {/* Banner Section */}
       <div ref={scrollRef} data-scroll-container>
-        <section className={styles.hero} data-scroll-section>
+        <section className={`${styles.hero}  revealClipRightToLeft`} data-scroll-section>
           <div className="container">
             <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
               <div className={`row ${styles.heroMain}`}>
@@ -452,7 +452,7 @@ const Home = () => {
                     </video>
                   </div>
                   <div className={styles.buttonGroup}>
-                    <button type="button">
+                    <button type="button" className="buttonBlue">
                       Get A Free Demo{" "}
                       <Image
                         src="/images/right-arrow-skyblue.png"
@@ -461,7 +461,7 @@ const Home = () => {
                         quality={100}
                       />
                     </button>
-                    <button type="button">
+                    <button type="button" className="buttonSkyBlue">
                       Explore Classes{" "}
                       <Image
                         src="/images/right-arrow-blue.png"
@@ -561,7 +561,7 @@ const Home = () => {
                         <span key={i}>{d}</span>
                       ))}
                     </div>
-                    <button className={styles.mainCardBtn}>
+                    <button className={`buttonSkyBlue ${styles.mainCardBtn}`}>
                       VIEW COURSE{" "}
                       <Image
                         src="/images/right-arrow-blue.png"
@@ -739,7 +739,7 @@ const Home = () => {
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
-                className={`${styles.aboutBtn} fade-in-section`}
+                className={`${styles.aboutBtn} fade-in-section buttonSkyBlue`}
                 style={{ animationDelay: "0.5s" }}
                 type="button"
               >
@@ -766,7 +766,7 @@ const Home = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
+              style={{ animationDelay: "0.1s" }} 
             >
               <div className={`SubHeading ${styles.testSubheading}`}>STANDARDISED TESTS</div>
             </div>
@@ -778,7 +778,6 @@ const Home = () => {
               style={{ animationDelay: "0.2s" }}
             >
               LOREM IPSUM DOLOR SIT AMET,
-              <br />
               CONSECTETUR <span className={styles.highlight}>ADIPISCING</span>
             </h2>
           </div>
@@ -1216,7 +1215,6 @@ const Home = () => {
             style={{ animationDelay: "0.2s" }}
           >
             LOREM IPSUM DOLOR SIT AMET,
-            <br />
             CONSECTETUR{" "}
             <span className={styles.trainersHighlight}>ADIPISCING</span>
           </h2>

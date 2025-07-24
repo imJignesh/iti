@@ -48,6 +48,11 @@ body {
     max-width: 95vw !important;
   }
 }
+@media (max-width: 767px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
 .SubHeading {
   font-size: 30px;
   font-weight: 600;
@@ -107,6 +112,45 @@ body {
     font-size: 4vw !important;
   }
 }
+
+/* Buttons  */
+
+.buttonBlue{
+  padding: 10px 30px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  border: 0;
+  color: var(--white-color);
+  background: linear-gradient(to right, var(--blue-color), #3f88ba);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.buttonSkyBlue{
+  padding: 10px 30px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  border: 0;
+  color: var(--blue-color);
+  background: linear-gradient(to right, var(--border-color), #e7f6ff);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+ .buttonBlue:hover, .buttonSkyBlue:hover{
+  scale: 1.05;
+}
+.buttonBlue img, .buttonSkyBlue img{
+  width: 30px;
+  height: auto;
+}
+
 
 .fade-in-section {
   opacity: 0;
