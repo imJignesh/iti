@@ -4,19 +4,18 @@
   background: url(/images/banner-bg.png);
   background-repeat: no-repeat;
   background-size: 600px;
-  clip-path: inset(0 100% 0 0 );
+  clip-path: inset(0 100% 0 0);
   animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
 }
 
-@keyframes revealClipLeftToRight{
+@keyframes revealClipLeftToRight {
   from {
-    clip-path: inset(0 100% 0 0 );
+    clip-path: inset(0 100% 0 0);
   }
   to {
     clip-path: inset(0 0 0 0);
   }
 }
-
 
 .hero .heroMain {
   display: flex;
@@ -202,24 +201,25 @@
   }
 }
 @media (max-width: 767px) {
- .hero {
-  background: url(/images/banner-bg-mobile.png);
-  background-repeat: no-repeat;
-  background-size: 85%;
-  background-position: top right;
-  padding: 40px 0 0 0;
+  .hero {
+    background: url(/images/banner-bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: top right;
+    padding: 40px 0 0 0;
     clip-path: inset(0 0 0 100%);
-    animation: revealClipRightToLeft 1.8s 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
+    animation: revealClipRightToLeft 1.8s 1s cubic-bezier(0.4, 0, 0.2, 1)
+      forwards;
+  }
 
-@keyframes revealClipRightToLeft {
-  from {
-    clip-path: inset(0 0 0 100%);
+  @keyframes revealClipRightToLeft {
+    from {
+      clip-path: inset(0 0 0 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
   }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
 
   .hero .heroRight .buttonGroup {
     left: 40%;
@@ -745,7 +745,7 @@
 }
 
 @media (max-width: 575px) {
-    .courseSection .sideCard,
+  .courseSection .sideCard,
   .courseSection .inactiveCard {
     flex-basis: 80px;
     border-radius: 15px;
@@ -958,7 +958,7 @@
   right: 90%;
   bottom: 40%;
   color: var(--blue-color);
-  writing-mode: vertical-rl;
+  writing-mode: sideways-lr;
   transform: rotate(180deg);
   font-size: 1.2vw;
   font-weight: 700;
@@ -1123,6 +1123,11 @@
   }
   .aboutSection .aboutStatsRow .aboutStatBorder {
     display: block;
+  }
+}
+@media (max-width: 767px) {
+  .aboutSection .aboutLeft {
+    overflow: hidden;
   }
 }
 @media (max-width: 575px) {
@@ -1341,24 +1346,8 @@
 }
 
 .testSection .cardBtn {
-  width: 100%;
-  padding: 10px 30px;
-  border-radius: 40px;
   font-size: 1.2vw;
   font-weight: 500;
-  text-transform: uppercase;
-  border: 0;
-  color: var(--blue-color);
-  background: linear-gradient(to right, var(--border-color), #e7f6ff);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  cursor: pointer;
-  transition: 0.4s all;
-}
-.testSection .cardBtn:hover {
-  transform: scale(1.04);
 }
 
 @media (max-width: 1440px) {
@@ -1507,24 +1496,8 @@
     padding-right: 0;
   }
   .testSection .testCardBtnMobile {
-    padding: 15px 25px;
-    border-radius: 40px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border: 0;
-    color: var(--blue-color);
-    background: #eaf8ff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    cursor: pointer;
-    transition: 0.4s all;
     width: 100%;
-  }
-  .testSection .testCardBtnMobile:hover {
-    transform: scale(1.02);
+    font-weight: 500;
   }
 }
 
@@ -1726,7 +1699,11 @@
   .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow {
     gap: 10px;
   }
-  .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
+  .subjectSection
+    .subjectRight
+    .subjectBubblesGrid
+    .subjectBubbleRow
+    .subjectBubble {
     padding: 10px 30px;
   }
 }
@@ -2088,27 +2065,9 @@
 }
 
 .uspSection .uspBtn {
-  background: linear-gradient(
-    to right,
-    var(--border-color) 50%,
-    var(--white-color)
-  );
-  color: #1a2a49;
   width: max-content;
   font-weight: 700;
   font-size: 1.1rem;
-  border: none;
-  border-radius: 40px;
-  padding: 10px 25px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: 0.2s all;
-}
-.uspSection .uspBtn:hover {
-  transform: scale(1.04);
 }
 
 .uspSection .uspRight {
@@ -2268,7 +2227,7 @@
     max-width: 95vw;
   }
   .uspSection .uspSwiper {
-    padding: 0  ;
+    padding: 0;
   }
   .uspSection .uspGrid {
     grid-template-columns: 1fr;
@@ -2437,24 +2396,50 @@
   background-clip: text;
 }
 .trainersSection .trainersSeeMore {
+  position: relative;
+  overflow: hidden;
   margin: 32px auto 0 auto;
   padding: 12px 40px;
-  background-color: var(--white-color);
-  background: linear-gradient(white, white) padding-box,
-    linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
   border-radius: 40px;
   border: 3px solid transparent;
+  background-color: var(--white-color);
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
   color: var(--blue-color);
   font-size: 1vw;
   font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: 0.2s all;
+  transition: transform 0.3s ease, color 0.3s ease;
+  z-index: 1;
 }
+
+.trainersSection .trainersSeeMore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #e7f6ff 60%, var(--border-color) 85% , var(--border-color));
+  z-index: -1;
+  transition: transform 0.6s ease-in-out;
+}
+
+.trainersSection .trainersSeeMore:hover::before {
+  transform: translateX(-50%);
+}
+
+.trainersSection .trainersSeeMore * {
+  position: relative;
+  z-index: 1;
+}
+
 .trainersSection .trainersSeeMore:hover {
   color: var(--black-color);
   transform: scale(1.05);
 }
+
 
 .trainersSection .trainersPagination {
   margin-top: 32px;
@@ -2858,25 +2843,9 @@
 }
 .blogSection .blogAllBtn,
 .blogSection .blogAllBtnmobile {
-  margin-top: 18px;
-  padding: 15px 20px;
-  border-radius: 40px;
-  width: max-content;
   font-size: 1rem;
   font-weight: 700;
-  text-transform: uppercase;
-  border: none;
-  color: #fff;
-  background: linear-gradient(90deg, #1a2a49 0%, #3f88ba 100%);
-  display: flex;
-  align-items: flex-end;
-  gap: 18px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: 0.2s all;
-}
-.blogSection .blogAllBtn:hover {
-  transform: scale(1.04);
+  width: max-content;
 }
 .blogSection .blogAllBtnmobile {
   display: none;
@@ -2927,20 +2896,8 @@
   margin: 8px 0;
 }
 .blogSection .blogReadMoreBtn {
-  padding: 8px 20px;
-  border-radius: 40px;
   font-size: 1rem;
   font-weight: 700;
-  text-transform: uppercase;
-  border: none;
-  color: var(--blue-color);
-  background: linear-gradient(to left, #eaf8ff 0%, #b6d6f6 100%);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: 0.2s all;
 }
 .blogSection .blogReadMoreBtn:hover {
   transform: scale(1.05);
@@ -2980,7 +2937,6 @@
     margin: 20px auto;
   }
   .blogSection .blogAllBtn {
-    padding: 10px 20px 15px 20px;
     margin: 0 auto;
   }
   .blogSection .blogCard {

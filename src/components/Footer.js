@@ -24,14 +24,16 @@ const Footer = () => {
         </h2>
         <div className={styles.footerMainRow}>
           <div
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-
-            className={`fade-in-section ${styles.footerTop}`}
-            style={{ animationDelay: "0.2s" }}
+            className={styles.footerTop}
           >
-            <img src="/images/footerImage.jpg" alt="Footer" className={styles.footerMainImg} />
+            <img
+              src="/images/footerImage.jpg"
+              data-scroll
+              data-scroll-class="is-clipped"
+              data-scroll-repeat
+              alt="Footer"
+              className={`${styles.footerMainImg}`}
+            />
           </div>
           <div
             data-scroll

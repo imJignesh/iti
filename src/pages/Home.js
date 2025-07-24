@@ -653,9 +653,9 @@ const Home = () => {
                 />
                 <div
                   data-scroll
-                  data-scroll-class="is-inview"
+                  data-scroll-class="is-clipped"
                   data-scroll-repeat="true"
-                  className={`fade-in-section ${styles.statCard + " " + styles.statCardYears}`}
+                  className={`${styles.statCard + " " + styles.statCardYears}`}
                 >
                   <div className={styles.statBig}>11 YEARS +</div>
                   <div className={styles.statSmall}>
@@ -664,16 +664,22 @@ const Home = () => {
                 </div>
                 <div
                   data-scroll
-                  data-scroll-class="is-inview"
+                  data-scroll-class="is-clipped"
                   data-scroll-repeat="true"
-                  className={`fade-in-section ${styles.statCard + " " + styles.statCardResources}`}
+                  className={`${styles.statCard + " " + styles.statCardResources}`}
                 >
                   <div className={styles.statBig}>1000+</div>
                   <div className={styles.statSmall}>
                     RESOURCES THAT HELP YOU JOIN THE TOP 1%
                   </div>
                 </div>
-                <div className={styles.verticalLabel}>
+                <div
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                 className={`${styles.verticalLabel} fade-in-section`}
+                 style={{ animationDelay: "0.8s" }}
+                 >
                   <span>4.9</span> GOOGLE REVIEWS
                 </div>
               </div>
@@ -802,6 +808,8 @@ const Home = () => {
                 <SwiperSlide key={idx}>
                   <div className={styles.testCardMobile}>
                     <div
+                      data-scroll
+                      data-scroll-class="is-clipped"
                       className={styles.testCardImageWrap}
                       style={{ backgroundImage: `url(${card.img})` }}
                     >
@@ -814,7 +822,7 @@ const Home = () => {
                         {card.details &&
                           card.details.map((d, i) => <span key={i}>{d}</span>)}
                       </div>
-                      <button className={styles.testCardBtnMobile} type="button">
+                      <button className={`${styles.testCardBtnMobile} buttonSkyBlue`} type="button">
                         {card.btn}
                         <span className={styles.btnArrow}>
                           <Image
@@ -846,6 +854,8 @@ const Home = () => {
                     onMouseEnter={() => setActive(idx)}
                   >
                     <div
+                      data-scroll
+                      data-scroll-class="is-clipped"  
                       className={
                         styles.cardImageArea +
                         " " +
@@ -870,7 +880,7 @@ const Home = () => {
                         {card.details &&
                           card.details.map((d, i) => <p key={i} className="m-0">{d}</p>)}
                       </div>
-                      <button className={styles.cardBtn} type="button">
+                      <button className={`${styles.cardBtn} buttonSkyBlue`} type="button">
                         {card.btn}{" "}
                         <Image
                           src="/images/right-arrow-blue.png"
@@ -899,16 +909,25 @@ const Home = () => {
         <div className="container">
           <div className={styles.subjectSectionInner}>
             <img
+              data-scroll
+              data-scroll-class="is-clipped"
+              data-scroll-repeat="true"
               src="/images/rectangle-bg4.png"
               alt="bg-shape"
               className={styles.bgRect}
             />
             <img
+              data-scroll
+              data-scroll-class="is-clipped"
+              data-scroll-repeat="true"
               src="/images/rectangle-bg5.png"
               alt="bg-shape"
               className={styles.bgRect}
             />
             <img
+              data-scroll
+              data-scroll-class="is-clipped"
+              data-scroll-repeat="true"
               src="/images/rectangle-bg4.png"
               alt="bg-shape"
               className={styles.bgRect}
@@ -1061,12 +1080,17 @@ const Home = () => {
                         <img
                           src={alumni.img}
                           alt={alumni.name}
+                          data-scroll
+                          data-scroll-class="is-inview"
+                          data-scroll-repeat="true"
                           className={styles.alumniImage}
                         />
                         <div className={styles.alumniLogoBox}>
                           <img
                             src={alumni.logo}
                             alt="university logo"
+                            data-scroll 
+                            data-scroll-class="is-clipped"
                             className={styles.alumniLogo}
                           />
                         </div>
@@ -1141,7 +1165,7 @@ const Home = () => {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className={`${styles.uspBtn} fade-in-section`}
+            className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
             style={{ animationDelay: "0.5s" }}
             type="button"
           >
@@ -1175,7 +1199,7 @@ const Home = () => {
                 {row.map((usp, i) => (
                   <div key={i} className={styles.uspItem}>
                     <div className={styles.uspNumber}>{usp.number}</div>
-                    <div className={styles.uspIconCircle}>
+                    <div className={styles.uspIconCircle} >
                       <img
                         src={usp.icon}
                         alt={usp.title}
@@ -1365,9 +1389,9 @@ const Home = () => {
             src="/images/google-logo.png"
             alt="bg-shape"
             data-scroll
-            data-scroll-class="is-inview"
+            data-scroll-class="is-clipped"
             data-scroll-repeat="true"
-            className={`fade-in-section ${styles.googlelogo}`}
+            className={`${styles.googlelogo}`}
             style={{ animationDelay: "0.2s" }}
             width={250}
             height={80}
@@ -1395,9 +1419,9 @@ const Home = () => {
             src="/images/star-review.png"
             alt="bg-shape"
             data-scroll
-            data-scroll-class="is-inview"
+            data-scroll-class="is-clipped"
             data-scroll-repeat="true"
-            className={`fade-in-section ${styles.starReview}`}
+            className={`${styles.starReview}`}
             style={{ animationDelay: "0.5s" }}
             width={250}
             height={80}
@@ -1535,7 +1559,7 @@ const Home = () => {
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
-                className={`${styles.blogAllBtn} fade-in-section`}
+                className={`${styles.blogAllBtn} buttonBlue fade-in-section`}
                 style={{ animationDelay: "0.4s" }}
               >
                 VIEW ALL BLOGS
@@ -1557,12 +1581,12 @@ const Home = () => {
                   className={`fade-in-section ${styles.blogCard}`}
                   style={{ animationDelay: "0.2" }}
                 >
-                  <img src={blog.img} alt="blog" className={styles.blogImg} />
+                  <img src={blog.img} alt="blog" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" className={styles.blogImg} />
                   <div className={styles.blogCardContent}>
                     <div className={styles.blogCardTitle}>{blog.title}</div>
                     <div className={styles.blogCardDesc}>{blog.desc}</div>
                     <span className={styles.blogCardLine}></span>
-                    <button className={styles.blogReadMoreBtn}>
+                    <button className={`${styles.blogReadMoreBtn} buttonSkyBlue`}>
                       READ MORE
                       <span className={styles.blogReadMoreArrow}>
                         <img
@@ -1581,7 +1605,7 @@ const Home = () => {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className={`${styles.blogAllBtnmobile} fade-in-section`}
+              className={`${styles.blogAllBtnmobile} buttonBlue fade-in-section`}
               style={{ animationDelay: "0.4s" }}
             >
               VIEW ALL BLOGS

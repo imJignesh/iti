@@ -33,7 +33,7 @@ header .header_left_content .link {
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
-  transition: color 0.2s;
+  transition: 0.2s all;
 }
 header .header_left_content .link::after {
   content: "";
@@ -176,7 +176,7 @@ header .megaMenuContent a {
   color: var(--blue-text);
   text-decoration: none;
   font-size: 16px;
-  transition: color 0.2s;
+  transition:  0.2s all;
 }
 
 header .megaMenuContent a:hover {
@@ -206,7 +206,7 @@ header .megaMenuLeft h3 {
   font-weight: 600;
   color: var(--blue-text);
   cursor: pointer;
-  transition: color 0.2s;
+  transition:  0.2s all;
 }
 
 header .megaMenuLeft h3:hover {

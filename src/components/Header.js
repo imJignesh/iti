@@ -33,9 +33,9 @@ const Header = () => {
 
     return (
         <header className={`${styles.header} ${show ? styles.headerAnimated : styles.headerHidden}`}>
-            <div className={`d-flex w-100 m-0 ${styles.header_left_content}`}>
+            <div  className={`d-flex w-100 m-0 ${styles.header_left_content}`}>
                 <div className={`col-auto ${styles.logo}`}>
-                    <Image src="/images/logo.svg" width={200} height={80} quality={100} />
+                    <Image src="/images/logo.svg" width={200} height={80} quality={100}  />
                 </div>
                 {/* Nav links: hidden on mobile/tablet unless toggled, always visible on lg+ */}
                 <nav
@@ -52,22 +52,22 @@ const Header = () => {
                                     <h3><span>03</span> Homeschooling</h3>
                                 </div>
                                 <div className={styles.megaMenuRight}>
-                                    <div className={styles.megaMenuBox}>
-                                        <img src="/images/header-menu1.png" alt="Box 1" />
+                                    <a href='/ibdp' className={styles.megaMenuBox}>
+                                        <img src="/images/header-menu1.png" alt="Box 1" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                         <h4>IBDP</h4>
-                                    </div>
-                                    <div className={styles.megaMenuBox}>
-                                        <img src="/images/header-menu2.png" alt="Box 2" />
+                                    </a>
+                                    <a href='#' className={styles.megaMenuBox}>
+                                        <img src="/images/header-menu2.png" alt="Box 2" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                         <h4>MYP</h4>
-                                    </div>
-                                    <div className={styles.megaMenuBox}>
-                                        <img src="/images/header-menu3.png" alt="Box 3" />
+                                    </a>
+                                    <a href='#' className={styles.megaMenuBox}>
+                                        <img src="/images/header-menu3.png" alt="Box 3" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                         <h4>A LEVELS</h4>
-                                    </div>
-                                    <div className={styles.megaMenuBox}>
-                                        <img src="/images/header-menu4.png" alt="Box 4" />
+                                    </a>
+                                    <a href='#' className={styles.megaMenuBox}>
+                                        <img src="/images/header-menu4.png" alt="Box 4" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                         <h4>I/GCSE</h4>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>

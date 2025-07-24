@@ -1,8 +1,7 @@
 @import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-
-.montserrat{
+.montserrat {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -115,47 +114,69 @@ body {
 
 /* Buttons  */
 
-.buttonBlue{
+.buttonBlue,
+.buttonSkyBlue {
+  position: relative;
+  overflow: hidden;
   padding: 10px 30px;
   border-radius: 40px;
   text-transform: uppercase;
   border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+.buttonBlue {
   color: var(--white-color);
   background: linear-gradient(to right, var(--blue-color), #3f88ba);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  cursor: pointer;
-  transition: 0.4s all;
 }
-.buttonSkyBlue{
-  padding: 10px 30px;
-  border-radius: 40px;
-  text-transform: uppercase;
-  border: 0;
+.buttonSkyBlue {
   color: var(--blue-color);
   background: linear-gradient(to right, var(--border-color), #e7f6ff);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  cursor: pointer;
-  transition: 0.4s all;
 }
- .buttonBlue:hover, .buttonSkyBlue:hover{
+.buttonBlue::before,
+.buttonSkyBlue::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 200%;
+  height: 100%;
+  z-index: -1;
+  transition:  0.4s ease-in-out;
+}
+.buttonBlue::before {
+  background: linear-gradient(to right, var(--blue-color), #3f88ba 55%, var(--blue-color) 85% , var(--blue-color));
+}
+.buttonSkyBlue::before {
+  background: linear-gradient(to right, var(--border-color), #e7f6ff 55%, var(--border-color) 85% , var(--border-color));
+}
+.buttonBlue:hover::before,
+.buttonSkyBlue:hover::before {
+  transform: translateX(-50%);
+}
+.buttonBlue:hover,
+.buttonSkyBlue:hover {
   scale: 1.05;
 }
-.buttonBlue img, .buttonSkyBlue img{
+
+.buttonBlue img,
+.buttonSkyBlue img {
   width: 30px;
   height: auto;
 }
 
 
+/* Fade-In Animation */
 .fade-in-section {
   opacity: 0;
   transform: translateY(80px);
 }
+
 .is-inview {
   animation: fadeInUp 0.8s 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
@@ -167,5 +188,20 @@ body {
   to {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Clip Path Animation */
+
+.is-clipped {
+  clip-path: inset(0 0% 0 0);
+  animation: revealImageClip 1.2s 0.6s cubic-bezier(0.4, 0, 0.2, 1.4) forwards;
+}
+@keyframes revealImageClip {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0% 0 0);
   }
 }
