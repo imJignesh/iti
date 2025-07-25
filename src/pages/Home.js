@@ -812,7 +812,6 @@ const Home = () => {
                     <div
                       data-scroll
                       data-scroll-class="is-clipped"
-                      data-scroll-repeat="true"
                       data-scroll-offset="-10%" 
                       className={styles.testCardImageWrap}
                       style={{ backgroundImage: `url(${card.img})` }}
@@ -1101,7 +1100,6 @@ const Home = () => {
                             data-scroll
                             data-scroll-class="is-clipped"
                             data-scroll-offset="-10%"
-                            data-scroll-repeat="true"
                             className={styles.alumniLogo}
                           />
                         </div>
