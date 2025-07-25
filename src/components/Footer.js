@@ -30,7 +30,8 @@ const Footer = () => {
               src="/images/footerImage.jpg"
               data-scroll
               data-scroll-class="is-clipped"
-              data-scroll-repeat
+              data-scroll-repeat="true"
+              data-scroll-offset="-10%"
               alt="Footer"
               className={`${styles.footerMainImg}`}
             />

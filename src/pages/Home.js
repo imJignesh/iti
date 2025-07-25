@@ -655,6 +655,7 @@ const Home = () => {
                   data-scroll
                   data-scroll-class="is-clipped"
                   data-scroll-repeat="true"
+                  data-scroll-offset="-10%"
                   className={`${styles.statCard + " " + styles.statCardYears}`}
                 >
                   <div className={styles.statBig}>11 YEARS +</div>
@@ -666,6 +667,7 @@ const Home = () => {
                   data-scroll
                   data-scroll-class="is-clipped"
                   data-scroll-repeat="true"
+                  data-scroll-offset="-10%"
                   className={`${styles.statCard + " " + styles.statCardResources}`}
                 >
                   <div className={styles.statBig}>1000+</div>
@@ -677,9 +679,9 @@ const Home = () => {
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
-                 className={`${styles.verticalLabel} fade-in-section`}
-                 style={{ animationDelay: "0.8s" }}
-                 >
+                  className={`${styles.verticalLabel} fade-in-section`}
+                  style={{ animationDelay: "0.8s" }}
+                >
                   <span>4.9</span> GOOGLE REVIEWS
                 </div>
               </div>
@@ -772,7 +774,7 @@ const Home = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }} 
+              style={{ animationDelay: "0.1s" }}
             >
               <div className={`SubHeading ${styles.testSubheading}`}>STANDARDISED TESTS</div>
             </div>
@@ -810,6 +812,8 @@ const Home = () => {
                     <div
                       data-scroll
                       data-scroll-class="is-clipped"
+                      data-scroll-repeat="true"
+                      data-scroll-offset="-10%" 
                       className={styles.testCardImageWrap}
                       style={{ backgroundImage: `url(${card.img})` }}
                     >
@@ -855,7 +859,9 @@ const Home = () => {
                   >
                     <div
                       data-scroll
-                      data-scroll-class="is-clipped"  
+                      data-scroll-class="is-clipped"
+                      data-scroll-offset="-10%"
+                      data-scroll-repeat="true"
                       className={
                         styles.cardImageArea +
                         " " +
@@ -912,6 +918,7 @@ const Home = () => {
               data-scroll
               data-scroll-class="is-clipped"
               data-scroll-repeat="true"
+              data-scroll-offset="-10%"
               src="/images/rectangle-bg4.png"
               alt="bg-shape"
               className={styles.bgRect}
@@ -920,6 +927,7 @@ const Home = () => {
               data-scroll
               data-scroll-class="is-clipped"
               data-scroll-repeat="true"
+              data-scroll-offset="-10%"
               src="/images/rectangle-bg5.png"
               alt="bg-shape"
               className={styles.bgRect}
@@ -928,6 +936,7 @@ const Home = () => {
               data-scroll
               data-scroll-class="is-clipped"
               data-scroll-repeat="true"
+              data-scroll-offset="-10%"
               src="/images/rectangle-bg4.png"
               alt="bg-shape"
               className={styles.bgRect}
@@ -1089,8 +1098,10 @@ const Home = () => {
                           <img
                             src={alumni.logo}
                             alt="university logo"
-                            data-scroll 
+                            data-scroll
                             data-scroll-class="is-clipped"
+                            data-scroll-offset="-10%"
+                            data-scroll-repeat="true"
                             className={styles.alumniLogo}
                           />
                         </div>
@@ -1391,6 +1402,7 @@ const Home = () => {
             data-scroll
             data-scroll-class="is-clipped"
             data-scroll-repeat="true"
+            data-scroll-offset="-10%"
             className={`${styles.googlelogo}`}
             style={{ animationDelay: "0.2s" }}
             width={250}
@@ -1421,6 +1433,7 @@ const Home = () => {
             data-scroll
             data-scroll-class="is-clipped"
             data-scroll-repeat="true"
+            data-scroll-offset="-10%"
             className={`${styles.starReview}`}
             style={{ animationDelay: "0.5s" }}
             width={250}
@@ -1581,7 +1594,7 @@ const Home = () => {
                   className={`fade-in-section ${styles.blogCard}`}
                   style={{ animationDelay: "0.2" }}
                 >
-                  <img src={blog.img} alt="blog" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" className={styles.blogImg} />
+                  <img src={blog.img} alt="blog" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" data-scroll-offset="-10%" className={styles.blogImg} />
                   <div className={styles.blogCardContent}>
                     <div className={styles.blogCardTitle}>{blog.title}</div>
                     <div className={styles.blogCardDesc}>{blog.desc}</div>

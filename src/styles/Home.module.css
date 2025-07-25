@@ -89,7 +89,7 @@
   height: 600px;
   max-height: 600px;
   object-fit: cover;
-  object-position: right;
+  object-position: center;
   border-radius: 10px;
   mask: url("/images/banner-image-right.png") no-repeat center;
   mask-size: contain;
