@@ -1,6 +1,12 @@
 // src/pages/_app.js
 
 import "@/styles/globals.css";
+//Home Page Css
+import "@/styles/home/Hero.css";
+import "@/styles/home/Course.css";
+import "@/styles/home/About.css";
+import "@/styles/home/Test.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";

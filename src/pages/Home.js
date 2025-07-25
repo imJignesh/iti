@@ -14,6 +14,8 @@ import {
   Scrollbar,
   Mousewheel,
 } from "swiper/modules";
+import Hero from "@/components/home/Hero";
+import Course from "@/components/home/Course";
 
 function useInViewAnimation(threshold = 0.3) {
   const [inView, setInView] = useState(false);
@@ -36,48 +38,6 @@ function useInViewAnimation(threshold = 0.3) {
   return [ref, inView];
 }
 
-const courseData = [
-  {
-    number: "01.",
-    title: "IBDP",
-    label: "IB Diploma Programme",
-    subtitle: "INTERNATIONAL BACCALAUREATE",
-    details: ["Total Courses: 7", "|", "Online & In-Person"],
-    img: "/images/course-bg1.jpg",
-  },
-  {
-    number: "02.",
-    title: "IB",
-    label: "IB",
-    subtitle: "INTERNATIONAL BACCALAUREATE",
-    details: ["Total Courses: 7", "|", "Online & In-Person"],
-    img: "/images/course-bg2.jpg",
-  },
-  {
-    number: "03.",
-    title: "MYP",
-    label: "MYP",
-    subtitle: "MIDDLE YEARS PROGRAMME",
-    details: ["Total Courses: 5", "|", "Online & In-Person"],
-    img: "/images/course-bg3.jpg",
-  },
-  {
-    number: "04.",
-    title: "IGCSE",
-    label: "IGCSE",
-    subtitle: "INTERNATIONAL GCSE",
-    details: ["Total Courses: 8", "|", "Online & In-Person"],
-    img: "/images/course-bg4.jpg",
-  },
-  {
-    number: "05.",
-    title: "A-LEVELS",
-    label: "A-LEVELS",
-    subtitle: "ADVANCED LEVELS",
-    details: ["Total Courses: 6", "|", "Online & In-Person"],
-    img: "/images/course-bg5.jpg",
-  },
-];
 
 const testData = [
   {
@@ -383,200 +343,10 @@ const Home = () => {
   return (
     <>
       {/* Banner Section */}
-      <div ref={scrollRef} data-scroll-container>
-        <section className={`${styles.hero}  revealClipRightToLeft`} data-scroll-section>
-          <div className="container">
-            <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
-              <div className={`row ${styles.heroMain}`}>
-                <div className={`col-12 col-lg  -6 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
-                  <div
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat="true"
-                    className={`fade-in-section ${styles.heroMainHeading}`}
-                    style={{ animationDelay: "0.4s" }}
-                  >
-                    <h3 className="SubHeading">Welcome to Ignite</h3>
-                  </div>
-                  <div
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat="true"
-                    className="fade-in-section"
-                    style={{ animationDelay: "0.6s" }}
-                  >
-                    <h1 className={styles.heroTitle}>
-                      Lorem ipsum dolor sit amet,{" "}
-                      <span className={styles.highlight}>consectetur</span> adipiscing
-                    </h1>
-                  </div>
-                  <div
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat="true"
-                    className="fade-in-section"
-                    style={{ animationDelay: "0.8s" }}
-                  >
-                    <p className={styles.heroParagraph}>
-                      <span>Lorem ipsum dolor sit amet</span>
-                      <b> Achieve academic excellence in IBDP, MYP, I/GCSE, A-Levels & AP
-                        with Ignite's expert tutors in Dubai. Our curriculum-focused
-                        programs are designed to boost your grades and confidence!</b>
-                      <strong>
-                        Achieve academic excellence in IBDP, MYP, I/GCSE, A-Levels & AP
-                        with Ignite's expert tutors in Dubai.
-                      </strong>
-                    </p>
-                  </div>
-                </div>
-                <div className={`col-12 col-lg -6 col-xl-5 ${styles.heroRight}`}>
-                  <div className={styles.videoContainer}>
-                    <video
-                      className={styles.heroVideo}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      poster="/images/banner-image-right.png"
-                    >
-                      <source src="/videos/education-video.mp4" type="video/mp4" />
-                      {/* Fallback image if video doesn't load */}
-                      <Image
-                        src="/images/banner-image-right.png"
-                        alt="Education Platform"
-                        className={styles.heroImage}
-                        width={500}
-                        height={500}
-                        quality={100}
-                      />
-                    </video>
-                  </div>
-                  <div className={styles.buttonGroup}>
-                    <button type="button" className="buttonBlue">
-                      Get A Free Demo{" "}
-                      <Image
-                        src="/images/right-arrow-skyblue.png"
-                        width={40}
-                        height={40}
-                        quality={100}
-                      />
-                    </button>
-                    <button type="button" className="buttonSkyBlue">
-                      Explore Classes{" "}
-                      <Image
-                        src="/images/right-arrow-blue.png"
-                        width={40}
-                        height={40}
-                        quality={100}
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+      <Hero />
 
       {/* Course Section  */}
-      <section className={styles.courseSection}>
-        <div className="container">
-          <div className={styles.courseHeadings}>
-            <div
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <h3 className="SubHeading">TUTORING COURSES</h3>
-            </div>
-            <div
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className="fade-in-section"
-              style={{ animationDelay: "0.25s" }}
-            >
-              <h1 className={styles.courseTitle}>
-                Lorem ipsum dolor sit amet,{" "}
-                <span className={styles.highlight}>consectetur</span> adipiscing
-              </h1>
-            </div>
-            <div
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className="fade-in-section"
-              style={{ animationDelay: "0.4s" }}
-            >
-              <p>
-                Choosing us means partnering with experienced coaches who are
-                dedicated to unlocking your potential.
-              </p>
-            </div>
-          </div>
-          <div
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className={`fade-in-section ${styles.courseInner}`}
-            style={{ animationDelay: "0.4s" }}
-          >
-            {courseData.map((card, idx) => {
-              const isActive = hovered === idx;
-              return (
-                <div
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
-                  className={isActive ? styles.mainCard : styles.sideCard}
-                  style={{ animationDelay: `${0.3 + idx * 0.25}s`, background: "none" }}
-                  key={idx}
-                  onMouseEnter={() => setHovered(idx)}
-                >
-                  <span className={styles.cardNumber}>{card.number}</span>
-                  <span className={styles.cardTitle}>{card.title}</span>
-                  <div
-                    className={styles.cardBg}
-                    style={{ backgroundImage: `url('${card.img}')` }}
-                  />
-                  <div
-                    className={
-                      (isActive
-                        ? styles.mainCardContent
-                        : styles.sideCardContent) +
-                      " " +
-                      (isActive ? styles.activeOverlay : styles.inactiveOverlay)
-                    }
-                  >
-                    <div>
-                      <div className={styles.mainCardLabel}>{card.label}</div>
-                      <div className={styles.mainCardTitle}>
-                        {card.subtitle}
-                      </div>
-                    </div>
-                    <div className={styles.mainCardDetails}>
-                      {card.details.map((d, i) => (
-                        <span key={i}>{d}</span>
-                      ))}
-                    </div>
-                    <button className={`buttonSkyBlue ${styles.mainCardBtn}`}>
-                      VIEW COURSE{" "}
-                      <Image
-                        src="/images/right-arrow-blue.png"
-                        width={40}
-                        height={40}
-                        quality={100}
-                      />
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <Course />
 
       {/* Moving Banner Section */}
       <div
@@ -677,9 +447,9 @@ const Home = () => {
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
-                 className={`${styles.verticalLabel} fade-in-section`}
-                 style={{ animationDelay: "0.8s" }}
-                 >
+                  className={`${styles.verticalLabel} fade-in-section`}
+                  style={{ animationDelay: "0.8s" }}
+                >
                   <span>4.9</span> GOOGLE REVIEWS
                 </div>
               </div>
@@ -772,7 +542,7 @@ const Home = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }} 
+              style={{ animationDelay: "0.1s" }}
             >
               <div className={`SubHeading ${styles.testSubheading}`}>STANDARDISED TESTS</div>
             </div>
@@ -855,7 +625,7 @@ const Home = () => {
                   >
                     <div
                       data-scroll
-                      data-scroll-class="is-clipped"  
+                      data-scroll-class="is-clipped"
                       className={
                         styles.cardImageArea +
                         " " +
@@ -1089,7 +859,7 @@ const Home = () => {
                           <img
                             src={alumni.logo}
                             alt="university logo"
-                            data-scroll 
+                            data-scroll
                             data-scroll-class="is-clipped"
                             className={styles.alumniLogo}
                           />
