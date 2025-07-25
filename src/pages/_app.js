@@ -6,11 +6,16 @@ import "@/styles/home/Hero.css";
 import "@/styles/home/Course.css";
 import "@/styles/home/About.css";
 import "@/styles/home/Test.css";
+import "@/styles/home/MovingBanner.css";
+import "@/styles/home/Subjects.css";
+import "@/styles/home/Alumni.css";
+import "@/styles/home/Usps.css";
+import "@/styles/home/Trainers.css";
+import "@/styles/home/Testimonial.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
 
 import { useRouter } from "next/router";
 import Home from "./Home";
