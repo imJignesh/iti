@@ -1,0 +1,371 @@
+/* Test Section  */
+
+.testSection {
+  padding: 20px 0;
+  background: #fff;
+}
+
+.testSection .testHeadings {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.testSection .testSubheading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  letter-spacing: 0.15em;
+}
+
+.testSection .testTitle {
+  font-size: 2vw;
+  font-weight: 800;
+  max-width: 60%;
+  color: var(--blue-color);
+  margin: 40px auto;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.testSection .highlight {
+  background: linear-gradient(
+    to right,
+    var(--lightgreen-color),
+    var(--green-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.testSection .testCardsRow {
+  margin-top: 40px;
+}
+
+.testSection .testCard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: none;
+  box-shadow: none;
+  overflow: visible;
+  position: relative;
+  border-radius: 0;
+  padding: 0;
+}
+
+.testSection .cardImageArea {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+}
+.testSection .activeImageArea {
+  height: 460px;
+}
+.testSection .activeImageArea .cardTitle {
+  width: 100px;
+  left: 20%;
+  transform: translate(-50%) !important;
+}
+
+.testSection .imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 20, 20, 0.45) 60%,
+    rgba(20, 20, 20, 0.7) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.testSection .cardNumber {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #fff;
+  opacity: 0.7;
+  z-index: 2;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  line-height: 1;
+  transition: 0.3s all;
+}
+.testSection .activeImageArea .cardNumber {
+  font-size: 1.8rem;
+  opacity: 1;
+}
+
+.testSection .cardTitle {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translate(-50%);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  z-index: 2;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  line-height: 1;
+  opacity: 0.85;
+  transition: 0.4s all;
+}
+
+.testSection .cardContentArea {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100px;
+  z-index: 1;
+  opacity: 0;
+  max-height: 0;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0%;
+  transform: translateY(-30px);
+  transition: opacity 0.8s, max-height 0.8s, transform 0.8s;
+}
+.testSection .showContent {
+  opacity: 1;
+  max-height: 300px;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.testSection .hideContent {
+  opacity: 0;
+  max-height: 0;
+  pointer-events: none;
+  transform: translateY(-150px);
+}
+
+.testSection .cardLabel {
+  font-size: 1.8vw;
+  font-weight: 800;
+  color: var(--blue-color);
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.testSection .cardDetails {
+  font-size: 1.38rem;
+  color: var(--blue-color);
+  margin-bottom: 18px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.testSection .cardBtn {
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+@media (max-width: 1440px) {
+  .testSection .cardImageArea {
+    height: 480px;
+  }
+  .testSection .cardLabel {
+    font-size: 20px;
+  }
+  .testSection .cardDetails {
+    font-size: 1rem;
+  }
+  .testSection .activeImageArea {
+    height: 300px;
+  }
+  .testSection .activeImageArea {
+    height: 300px;
+  }
+}
+@media (max-width: 1280px) {
+  .testSection .cardLabel {
+    font-size: 20px;
+  }
+  .testSection .cardDetails {
+    font-size: 1rem;
+  }
+  .testSection .activeImageArea {
+    height: 300px;
+  }
+}
+@media (max-width: 1199px) {
+  .testSection .cardLabel {
+    font-size: 18;
+  }
+  .testSection .cardTitle {
+    left: 25%;
+  }
+  .testSection .cardImageArea {
+    height: 400px;
+  }
+  .testSection .activeImageArea {
+    height: 225px;
+  }
+  .testSection .cardDetails {
+    margin-bottom: 15px;
+  }
+  .testSection .cardDetails p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .testSection {
+    padding: 0 0 30px 0;
+  }
+  .testSection .testTitle {
+    max-width: 600px;
+    font-size: 1.5rem;
+    margin: 20px auto;
+  }
+  .testSection .testCardMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .testSection .testCardImageWrap {
+    border-radius: 24px;
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .testSection .testCardImage {
+    display: none;
+  }
+  .testSection .testCardImageWrap::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    z-index: 0;
+  }
+  .testSection .testCardNumber {
+    position: relative;
+    font-size: 3rem;
+    line-height: 1;
+    color: #fff;
+    opacity: 0.9;
+    font-weight: 700;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .testSection .testCardTitle {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    z-index: 2;
+  }
+
+  .testSection .testCardDetailsWrap {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .testSection .testCardLabel {
+    color: var(--blue-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .testSection .testCardDetails {
+    color: var(--blue-color);
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+  .testSection .testCardDetails span:first-child {
+    border-right: none;
+    padding-right: 0;
+  }
+  .testSection .testCardBtnMobile {
+    width: 100%;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 900px) {
+  .testSection .testCardsRow {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .testSection .testCard {
+    max-width: 95vw;
+    min-width: 220px;
+    width: 100%;
+  }
+  .testSection .cardImageArea {
+    border-radius: 18px;
+    height: 160px;
+  }
+  .testSection .activeImageArea {
+    height: 90px;
+  }
+  .testSection .cardContentArea {
+    padding: 24px 16px 16px 16px;
+    border-radius: 18px;
+    margin-top: 12px;
+  }
+  .testSection .cardTitle {
+    font-size: 1.3rem;
+    left: 18px;
+    bottom: 18px;
+  }
+  .testSection .cardNumber {
+    font-size: 1.5rem;
+    top: 14px;
+    left: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .testSection .testSubheading {
+    font-size: 20px;
+  }
+  .testSection .testCardTitle {
+    font-size: 3rem;
+  }
+}
