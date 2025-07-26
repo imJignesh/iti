@@ -111,7 +111,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 18px;
+  gap: 30px;
 }
 .aboutSection .aboutHeading {
   display: none;
@@ -156,7 +156,7 @@
 .aboutSection .aboutStatsRow {
   display: flex;
   gap: 48px;
-  border-top: 1px solid #e6f6ff;
+  border-top: 2px solid #e6f6ff;
   padding-top: 18px;
 }
 .aboutSection .aboutStatsRow .aboutStatBorder {
@@ -199,7 +199,7 @@
 }
 @media (max-width: 1199px) {
   .aboutSection .statSmall {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .aboutSection .aboutTitle {
     font-size: 1.8rem;
@@ -273,7 +273,7 @@
   }
   .aboutSection .statCard {
     height: max-content;
-    padding: 20px;
+    padding: 30px;
   }
   .aboutSection .statCardYears {
     width: 45%;
@@ -285,7 +285,7 @@
   .aboutSection .verticalLabel {
     font-size: 14px;
     top: 0;
-    bottom: auto;
+    bottom: 40%;
   }
   .aboutSection .aboutRight {
     gap: 10px;
@@ -294,7 +294,7 @@
     font-size: 1.5rem;
   }
   .aboutSection .statBig {
-    font-size: 18px;
+    font-size: 25px;
   }
   .aboutSection .aboutStatBig {
     font-size: 2rem;
@@ -303,8 +303,33 @@
     font-size: 0.8rem;
   }
 }
+@media (max-width:500px) {
+  .aboutSection .statCard{
+    padding: 25px;
+  }
+  .aboutSection .statBig{
+    font-size: 22px;
+  }
+  .aboutSection .statSmall{
+    font-size: 0.7rem;
+  }
+}
+@media (max-width:425px) {
+  .aboutSection .statCard{
+    padding: 22px;
+  }
+  .aboutSection .statBig{
+    font-size: 20px;
+  }
+}
 @media (max-width: 375px) {
   .aboutSection .aboutSectionInner {
     overflow: hidden;
+  }
+    .aboutSection .statCard{
+    padding: 10px;
+  }
+  .aboutSection .statBig{
+    font-size: 18px;
   }
 }

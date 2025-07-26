@@ -1,6 +1,15 @@
 import React from "react";
 
-export default function Subjects({ subjectRows }) {
+
+const subjectRows = [
+  ["English", "French"],
+  ["Spanish", "Computer", "Economics"],
+  ["Biology", "Chemistry"],
+  ["Physics", "Maths", "Accounting"],
+  ["Business Studies"],
+];
+
+export default function Subjects({}) {
   return (
     <section
       data-scroll
@@ -32,13 +41,12 @@ export default function Subjects({ subjectRows }) {
           <img
             data-scroll
             data-scroll-class="is-clipped"
-            data-scroll-repeat="true"
             data-scroll-offset="-10%"
             src="/images/rectangle-bg4.png"
             alt="bg-shape"
             className="bgRect"
           />
-          <div className="col-5 subjectLeft">
+          <div className="col-4 subjectLeft">
             <span
               data-scroll
               data-scroll-class="is-inview"
@@ -69,7 +77,7 @@ export default function Subjects({ subjectRows }) {
               dedicated to unlocking your potential.
             </p>
           </div>
-          <div className="col-7 pe-5 subjectRight">
+          <div className="col-8 pe-5 subjectRight">
             <div className="subjectBubblesGrid">
               {subjectRows.map((row, rowIdx) => (
                 <div

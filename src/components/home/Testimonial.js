@@ -12,7 +12,52 @@ import {
   Scrollbar,
   Mousewheel,
 } from "swiper/modules";
-export default function Testimonial({ testimonialData }) {
+
+
+const testimonialData = [
+  {
+    type: "video",
+    img: "/images/testimonial1.jpg",
+    video: true,
+    name: "LOREM IPSUM",
+    subtitle: "Lorem ipsum dolor sit",
+  },
+  {
+    type: "text",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "",
+    subtitle: "",
+  },
+  {
+    type: "video",
+    img: "/images/testimonial2.jpg",
+    video: true,
+    name: "LOREM IPSUM",
+    subtitle: "Lorem ipsum dolor sit",
+  },
+  {
+    type: "text",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "",
+    subtitle: "",
+  },
+  {
+    type: "video",
+    img: "/images/testimonial2.jpg",
+    video: true,
+    name: "LOREM IPSUM",
+    subtitle: "Lorem ipsum dolor sit",
+  },
+  {
+    type: "text",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "",
+    subtitle: "",
+  },
+];
+
+
+export default function Testimonial({ }) {
   return (
     <>
       <section className="testimonialSection">
@@ -102,22 +147,14 @@ export default function Testimonial({ testimonialData }) {
               el: ".testimonialPagination",
             }}
             breakpoints={{
-              0: { slidesPerView: 1 },
+              0: { slidesPerView: 2 , slidesPerGroup:2},
               576: { slidesPerView: 2 },
               992: { slidesPerView: 3 },
               1200: { slidesPerView: 4 },
             }}
             className="testimonialSwiper"
           >
-            <button className="swiper-button-prev" tabIndex={0} aria-label="Previous testimonial">
-              <img
-                src="/images/right-arrow-blue.png"
-                alt="Prev"
-                style={{ transform: "rotate(180deg)" }}
-                width={32}
-                height={32}
-              />
-            </button>
+          
 
             {testimonialData.map((item, idx) => (
               <SwiperSlide key={idx}>
@@ -164,15 +201,23 @@ export default function Testimonial({ testimonialData }) {
               </SwiperSlide>
             ))}
 
-            <button className="swiper-button-next" tabIndex={0} aria-label="Next testimonial">
-              <img
-                src="/images/right-arrow-blue.png"
-                alt="Next"
-                width={32}
-                height={32}
-              />
-            </button>
-          </Swiper>
+          </Swiper>  <button className="swiper-button-prev" tabIndex={0} aria-label="Previous testimonial">
+            <img
+              src="/images/right-arrow-blue.png"
+              alt="Prev"
+              style={{ transform: "rotate(180deg)" }}
+              width={32}
+              height={32}
+            />
+          </button>
+          <button className="swiper-button-next" tabIndex={0} aria-label="Next testimonial">
+            <img
+              src="/images/right-arrow-blue.png"
+              alt="Next"
+              width={32}
+              height={32}
+            />
+          </button>
 
           <div className="testimonialPagination"></div>
         </div>

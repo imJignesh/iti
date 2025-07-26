@@ -76,7 +76,7 @@
 }
 .subjectSection .subjectDesc {
   color: #7285a8;
-  font-size: 1.3vw;
+  font-size: 1vw;
   max-width: 80%;
   line-height: 1.2;
   opacity: 0.4;
@@ -110,9 +110,9 @@
   border: 2px solid var(--border-color);
   border-radius: 40px;
   color: var(--green-text);
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   font-weight: 400;
-  padding: 10px 45px;
+  padding: 10px 55px;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: none;
@@ -130,6 +130,12 @@
   background-color: #ffffff4d;
   box-shadow: 2px 2px 5px 0 var(--blue-text);
 }
+
+@media (max-width: 1280px) {
+  .subjectSection .subjectBubble{
+    padding: 10px 45px;
+  }
+}
 @media (max-width: 1199px) {
   .subjectSection .subjectLeft span {
     font-size: 18px;
@@ -139,8 +145,6 @@
     font-size: 24px;
     line-height: 1.4;
   }
-}
-@media (max-width: 1199px) {
   .subjectSection .subjectSectionInner {
     padding: 140px 30px;
   }
@@ -187,7 +191,7 @@
     width: 100%;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 15px;
     padding: 0 !important;
   }
   .subjectSection .subjectRight {
@@ -209,11 +213,30 @@
   }
 }
 @media (max-width: 575px) {
+  .subjectSection .bgRect:nth-child(2){    
+    top: 42%;
+    left: 0;
+    width: 15%;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 0 20px 20px 0;
+  }
+  .subjectSection .bgRect:nth-child(3){    
+    bottom: 8%;
+    left: auto;
+    right: 0;
+    width: 22%;
+    height: 55px;
+    rotate: 180deg;
+  }
   .subjectSection .subjectLeft {
     min-width: auto;
   }
   .subjectSection .subjectBubbleRow {
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble{
+    padding: 10px 40px;
   }
 }

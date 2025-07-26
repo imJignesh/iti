@@ -5,7 +5,35 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const Test = ({ isMobileSwiper, active, setActive, testData }) => {
+const testData = [
+  {
+    number: "01.",
+    title: "ACT",
+    img: "/images/test-section1.jpg",
+    label: "ACT",
+    details: ["Total Courses: 3", "Online & In-Person"],
+    btn: "VIEW TUTORING COURSE",
+  },
+  {
+    number: "02.",
+    title: "AP",
+    img: "/images/test-section2.jpg",
+    label: "ADVANCED PLACEMENTS",
+    details: ["Total Courses: 2", "Online & In-Person"],
+    btn: "VIEW TUTORING COURSE",
+  },
+  {
+    number: "03.",
+    title: "UCAT",
+    img: "/images/test-section3.jpg",
+    label: "UCAT",
+    details: ["Total Courses: 1", "Online & In-Person"],
+    btn: "VIEW TUTORING COURSE",
+  },
+];
+
+
+const Test = ({ isMobileSwiper, active, setActive }) => {
   return (
     <section className="testSection">
       <div className="container">

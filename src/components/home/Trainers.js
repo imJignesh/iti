@@ -1,8 +1,95 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper,  SwiperSlide } from "swiper/react";
 
-export default function Trainers({ isTrainersSwiper, trainers }) {
+
+const trainers = [
+  {
+    name: "NIKHIL PAWAR",
+    img: "/images/trainer1.png",
+    subtitle: "Lorem ipsum dolor sit",
+    experience: "12+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "PRAKSHI SHARMA",
+    img: "/images/trainer2.png",
+    subtitle: "Lorem ipsum dolor sit",
+    experience: "12+ YEARS",
+    color: "green",
+  },
+  {
+    name: "NIKHIL PAWAR",
+    img: "/images/trainer1.png",
+    subtitle: "Lorem ipsum dolor sit",
+    experience: "12+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "PRAKSHI SHARMA",
+    img: "/images/trainer2.png",
+    subtitle: "Lorem ipsum dolor sit",
+    experience: "12+ YEARS",
+    color: "green",
+  },
+  {
+    name: "NIKHIL PAWAR",
+    img: "/images/trainer1.png",
+    subtitle: "Lorem ipsum dolor sit",
+    experience: "12+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "PRAKSHI SHARMA",
+    img: "/images/trainer2.png",
+    subtitle: "Lorem ipsum dolor sit",
+    experience: "12+ YEARS",
+    color: "green",
+  },
+  {
+    name: "NIKHIL PAWAR",
+    img: "/images/trainer1.png",
+    subtitle: "Lorem ipsum dolor sit",
+    experience: "12+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "PRAKSHI SHARMA",
+    img: "/images/trainer2.png",
+    subtitle: "Lorem ipsum dolor sit",
+    experience: "12+ YEARS",
+    color: "green",
+  },
+  {
+    name: "NIKHIL PAWAR",
+    img: "/images/trainer1.png",
+    subtitle: "Lorem ipsum dolor sit",
+    experience: "12+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "PRAKSHI SHARMA",
+    img: "/images/trainer2.png",
+    subtitle: "Lorem ipsum dolor sit",
+    experience: "12+ YEARS",
+    color: "green",
+  },
+];
+
+
+export default function Trainers({ }) {
+
+    const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
+    useEffect(() => {
+      const handleResize = () => {
+        setIsTrainersSwiper(window.innerWidth <= 1199);
+      };
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+  
+
   return (
     <>
       <section className="trainersSection">
@@ -64,10 +151,7 @@ export default function Trainers({ isTrainersSwiper, trainers }) {
                     {({ isActive }) => (
                       <div
                         data-color={t.color}
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat="true"
-                        className={`fade-in-section trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
+                        className={` trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
                         style={{ animationDelay: 0.2 }}
                       >
                         <div className="trainerName">{t.name}</div>
@@ -91,7 +175,6 @@ export default function Trainers({ isTrainersSwiper, trainers }) {
                 </button>
               </Swiper>
 
-              <div className="trainersPagination"></div>
 
               <button
                 data-scroll
@@ -102,6 +185,7 @@ export default function Trainers({ isTrainersSwiper, trainers }) {
               >
                 SEE MORE
               </button>
+              <div className="trainersPagination"></div>
             </div>
           ) : (
             <>

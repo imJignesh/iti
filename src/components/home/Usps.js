@@ -14,7 +14,63 @@ import {
 } from "swiper/modules";
 import Image from "next/image";
 
-export default function Usps({ uspDataRows }) {
+const uspData = [
+  {
+    number: "01",
+    icon: "/images/usp-icon1.png",
+    title: "EXPERIENCED TUTORS",
+    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+  },
+  {
+    number: "02",
+    icon: "/images/usp-icon2.png",
+    title: "STRUCTURED LEARNING",
+    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+  },
+  {
+    number: "03",
+    icon: "/images/usp-icon3.png",
+    title: "TAILORED COURSES",
+    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+  },
+  {
+    number: "04",
+    icon: "/images/usp-icon4.png",
+    title: "FLEXIBLE SCHEDULING",
+    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+  },
+  {
+    number: "05",
+    icon: "/images/usp-icon5.png",
+    title: "INTERACTIVE SESSIONS",
+    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+  },
+  {
+    number: "06",
+    icon: "/images/usp-icon6.png",
+    title: "INDIVIDUAL SUPPORT",
+    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+  },
+  {
+    number: "07",
+    icon: "/images/usp-icon1.png",
+    title: "EXPERIENCED TUTORS",
+    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+  },
+  {
+    number: "08",
+    icon: "/images/usp-icon2.png",
+    title: "STRUCTURED LEARNING",
+    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+  },
+];
+
+  const uspDataRows = [];
+  for (let i = 0; i < uspData.length; i += 2) {
+    uspDataRows.push(uspData.slice(i, i + 2));
+  }
+
+export default function Usps({}) {
   return (
     <>
       {" "}
@@ -95,7 +151,6 @@ export default function Usps({ uspDataRows }) {
             speed={800}
             freeMode={true}
             grabCursor={true}
-            mousewheel={true}
             scrollbar={{
               el: ".uspScrollbar",
               draggable: true,

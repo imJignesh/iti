@@ -10,6 +10,7 @@
 .footerWrap .footerTop {
   width: 100%;
   text-align: center;
+  padding: 0 20px;
 }
 .footerWrap .footerContactRow {
   margin-bottom: 18px;
@@ -209,7 +210,32 @@
   .footerWrap .footerLinksRow .footerTop{
     width: max-content;
   }
+  .footerWrap .footerMainImg{
+    width: 90%;
+    max-height: 180px;
+  }
   .footerWrap .footerTitle{
     font-size: 1.6rem;
+  }
+  .footerWrap .footerDesc{
+    display: none;
+  }
+  .footerWrap .footerNewsletterWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .footerWrap .footerNewsletterLabel{
+    text-align: center;
+  }
+  .footerWrap .footerNewsletterForm{
+    max-width: 70%;
+  }
+  .footerWrap .footerNewsletterForm .footerNewsletterInput{
+    padding: 10px 60px 10px 30px;
+  }
+  .footerWrap .footerLinksCol{
+    
   }
 }

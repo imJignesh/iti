@@ -9,11 +9,28 @@ import {
   Navigation,
   Pagination,
   EffectCoverflow,
-  Scrollbar,
-  Mousewheel,
 } from "swiper/modules";
 
-export default function Alumni({ alumniData, setActiveIndex }) {
+
+const alumniData = [
+  {
+    name: "LOREM IPSUM DOLOR",
+    img: "/images/alumni-slider1.png",
+    logo: "/images/university_logo.png",
+  },
+  {
+    name: "LOREM IPSUM DOLOR",
+    img: "/images/alumni-slider2.png",
+    logo: "/images/university_logo.png",
+  },
+  {
+    name: "LOREM IPSUM DOLOR",
+    img: "/images/alumni-slider3.png",
+    logo: "/images/university_logo.png",
+  },
+];
+
+export default function Alumni({  setActiveIndex }) {
   return (
     <>
       <section className="alumniSection">
@@ -64,8 +81,8 @@ export default function Alumni({ alumniData, setActiveIndex }) {
               modules={[Navigation, Pagination, EffectCoverflow]}
               effect="coverflow"
               coverflowEffect={{
-                rotate: 0,
-                stretch: -20,
+                rotate: 0, 
+                stretch: -50,
                 depth: 200,
                 modifier: 2,
                 initialSlide: 1,

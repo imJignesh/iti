@@ -144,13 +144,13 @@
 .trainersSection .trainersSeeMore {
   position: relative;
   overflow: hidden;
-  margin: 32px auto 0 auto;
-  padding: 12px 40px;
+  margin: 0 auto;
+  padding: 5px 40px;
   border-radius: 40px;
   border: 3px solid transparent;
   background-color: var(--white-color);
   background: linear-gradient(white, white) padding-box,
-              linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
+    linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
   color: var(--blue-color);
   font-size: 1vw;
   font-weight: 700;
@@ -167,7 +167,13 @@
   left: 0%;
   width: 200%;
   height: 100%;
-  background: linear-gradient(to right, transparent, #e7f6ff 60%, var(--border-color) 85% , var(--border-color));
+  background: linear-gradient(
+    to right,
+    transparent,
+    #e7f6ff 60%,
+    var(--border-color) 85%,
+    var(--border-color)
+  );
   z-index: -1;
   transition: transform 0.6s ease-in-out;
 }
@@ -185,7 +191,6 @@
   color: var(--black-color);
   transform: scale(1.05);
 }
-
 
 .trainersSection .trainersPagination {
   margin-top: 32px;
@@ -227,13 +232,33 @@
 .trainersSection .customNavBtn:after {
   display: none;
 }
-.trainersSection .swiper-button-prev.customNavBtn {
-  left: -24px;
-}
-.trainersSection .swiper-button-next.customNavBtn {
-  right: -24px;
-}
 
+@media (max-width: 1199px) {
+  .trainersSection .trainerImg {
+    height: 300px;
+  }
+  .trainersSection .trainerCard[data-color="green"] {
+    margin-bottom: 20px;
+  }
+  .trainersSection .trainerCard[data-color="green"] .trainerExp {
+    font-size: 20px;
+    background: linear-gradient(
+      to right,
+      var(--lightgreen-color),
+      var(--green-color)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    bottom: 20px;
+    padding-top: 10px;
+  }
+  .trainersSection .trainerCard:nth-child(odd) .trainerSubtitle{
+    bottom: 60px;
+  }
+  .trainersSection .trainerCard[data-color="green"]:before{
+    background: linear-gradient(to top, #d7f6e6 60%, transparent);
+  }
+}
 @media (max-width: 1100px) {
   .trainersSection .trainersGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -270,11 +295,5 @@
   .trainersSection .customNavBtn {
     width: 32px;
     height: 32px;
-  }
-  .trainersSection .swiper-button-prev.customNavBtn {
-    left: -10px;
-  }
-  .trainersSection .swiper-button-next.customNavBtn {
-    right: -10px;
   }
 }

@@ -12,6 +12,7 @@ import "@/styles/home/Alumni.css";
 import "@/styles/home/Usps.css";
 import "@/styles/home/Trainers.css";
 import "@/styles/home/Testimonial.css";
+import "@/styles/home/Blog.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";

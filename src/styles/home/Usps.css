@@ -41,7 +41,7 @@
 
 .uspSection .uspTitle {
   font-size: 1.6vw;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 18px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -196,7 +196,9 @@
   .uspSection .uspDesc {
     font-size: 1rem;
     border: none;
-    padding: 0;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    opacity: 0.8 !important;
   }
   .uspSection .uspGrid {
     gap: 30px 40px;
@@ -229,8 +231,12 @@
   .uspSection {
     max-width: 95vw;
   }
+  .uspSection .uspLeft span:before,
+  .uspSection .uspLeft span:after {
+    width: 10px;
+  }
   .uspSection .uspSwiper {
-    padding: 0;
+    padding: 20px;
   }
   .uspSection .uspGrid {
     grid-template-columns: 1fr;
@@ -252,5 +258,10 @@
   .uspSection .uspSlide {
     justify-content: space-between;
     gap: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .uspSection .uspSwiper {
+    padding: 0;
   }
 }

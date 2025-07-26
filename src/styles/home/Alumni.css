@@ -17,23 +17,22 @@
   height: 100%;
   position: absolute;
   top: 0;
-  right: -40%;
+  right: -50%;
   border: 3px solid black;
   border-radius: 30px;
   background-color: var(--white-color);
   background: linear-gradient(white, white) padding-box,
     linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
-  border-radius: 40px;
   border: 2px solid transparent;
   z-index: -1;
 }
 .alumniSection .alumniSubHeading {
-  font-size: 1.8vw;
+  font-size: 1.6vw;
 }
 .alumniSection .alumniTitle {
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-weight: 700;
-  max-width: 70%;
+  max-width: 50%;
   margin: 30px auto 0 !important;
   line-height: 1.1;
   text-transform: uppercase;

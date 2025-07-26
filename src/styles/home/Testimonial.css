@@ -134,10 +134,11 @@
 }
 .testimonialSection .testimonialCardText {
   background: #eaf8ff;
-  padding: 40px;
+  padding: 40px 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  border: 2px solid #4dbd92;
 }
 .testimonialSection .testimonialImg {
   width: 100%;
@@ -209,9 +210,16 @@
   background: transparent;
   border: 0;
   padding: 0;
+  scale: 1.1;
 }
 .testimonialSection .testimonialSliderWrap button:after {
   display: none;
+}
+.testimonialSection .testimonialSliderWrap .swiper-button-prev {
+  left: 3%;
+}
+.testimonialSection .testimonialSliderWrap .swiper-button-next {
+  right: 3%;
 }
 @media (max-width: 1199px) {
   .testimonialSection .testimonialTitle {
@@ -255,7 +263,27 @@
     max-width: 95vw;
   }
 }
+@media (max-width: 700px) {
+  .testimonialSection .testimonialCardText {
+    padding: 20px;
+  }
+  .testimonialSection .testimonialText {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 575px) {
+  .testimonialSection .testimonialRect{
+    height: 70px !important;
+  }
+  .testimonialSection .testimonialRect:nth-child(1){
+    max-width: 30%;
+    top: -20px;
+  }
+  .testimonialSection .testimonialRect:nth-child(3){
+    max-width: 25%;
+    top: 65%;
+  }
   .testimonialSection .testimonialTitle {
     font-size: 1.4rem;
   }
@@ -265,5 +293,58 @@
   }
   .testimonialSection .testimonialSwiper :global(.swiper-wrapper) {
     height: 400px;
+  }
+  .testimonialSection .testimonialVideoText {
+    padding: 20px;
+  }
+  .testimonialSection .testimonialText {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .testimonialSection .testimonialPagination {
+    margin-top: 80px;
+  }
+  .testimonialSection .testimonialSliderWrap .swiper-button-prev {
+    top: 90%;
+    left: 44%;
+  }
+  .testimonialSection .testimonialSliderWrap .swiper-button-next {
+    top: 90%;
+    right: 44%;
+  }
+}
+
+@media (max-width: 500px) {
+  .testimonialSection .testimonialText {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+  .testimonialSection .testimonialSliderWrap .swiper-button-prev {
+    left: 40%;
+  }
+  .testimonialSection .testimonialSliderWrap .swiper-button-next {
+    right: 40%;
+  }
+}
+@media (max-width: 480px) {
+  .testimonialSection .testimonialCardText {
+    padding: 15px;
+  }
+  .testimonialSection .testimonialText {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+}
+@media (max-width: 425px) {
+  .testimonialSection .testimonialText {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+  }
+}
+@media (max-width: 375px) {
+  .testimonialSection .testimonialText {
+    font-size: 11px;
+    line-height: 1.15;
   }
 }
