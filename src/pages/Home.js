@@ -47,29 +47,35 @@ function useInViewAnimation(threshold = 0.3) {
   return [ref, inView];
 }
 
-
 const Home = () => {
   const [active, setActive] = useState(1);
   const [activeIndex, setActiveIndex] = React.useState(1);
   const scrollRef = useRef(null);
   const scrollInstanceRef = useRef(null);
   const [courseHeadingRef, courseHeadingInView] = useInViewAnimation();
+  const [isMobile, setIsMobile] = useState(false);
 
   const [isMobileSwiper, setIsMobileSwiper] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileSwiper(window.innerWidth <= 991);
+      const mobile = window.innerWidth <= 991;
+      setIsMobile(mobile);
+      setIsMobileSwiper(mobile);
     };
+
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
   useEffect(() => {
     let scroll;
 
     const initScroll = async () => {
+      // Don't initialize Locomotive Scroll on mobile
+      if (isMobile) return;
+
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       if (!scrollRef.current) return;
       scroll = new LocomotiveScroll({
@@ -79,22 +85,19 @@ const Home = () => {
       });
 
       scrollInstanceRef.current = scroll;
-      // setTimeout(() => {
-      //   if (scrollInstanceRef.current?.update) {
-      //     scrollInstanceRef.current.update();
-      //     console.log("✅ LocomotiveScroll updated");
-      //   }
-      // }, 500);
     };
+
     if (typeof window !== "undefined") {
       initScroll();
     }
 
     return () => {
-      scrollInstanceRef.current?.destroy();
-      scrollInstanceRef.current = null;
+      if (scrollInstanceRef.current) {
+        scrollInstanceRef.current.destroy();
+        scrollInstanceRef.current = null;
+      }
     };
-  }, []);
+  }, [isMobile]); // Add isMobile as dependency
 
   return (
     <>
@@ -123,17 +126,16 @@ const Home = () => {
       <Alumni setActiveIndex={setActiveIndex} />
 
       {/* Our USPs */}
-      <Usps  />
+      <Usps />
 
       {/* Trainers Section */}
       <Trainers />
-      
+
       {/* Testimonial Section */}
       <Testimonial />
 
       {/* Blogs Section  */}
       <Blog />
-
     </>
   );
 };

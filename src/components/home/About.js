@@ -1,7 +1,50 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const About = () => {
+  const [studentCount, setStudentCount] = useState(0);
+  const [acceptanceRate, setAcceptanceRate] = useState(0);
+  const targetStudents = 2300;
+  const targetRate = 89;
+  const duration = 2000; // Animation duration in milliseconds
+  const steps = 50; // Number of steps in the animation
+
+  useEffect(() => {
+    const increment = targetStudents / steps;
+    const interval = duration / steps;
+
+    const studentTimer = setInterval(() => {
+      setStudentCount(prev => {
+        const newValue = prev + increment;
+        if (newValue >= targetStudents) {
+          clearInterval(studentTimer);
+          return targetStudents;
+        }
+        return newValue;
+      });
+    }, interval);
+
+    return () => clearInterval(studentTimer);
+  }, []);
+
+  useEffect(() => {
+    const increment = targetRate / steps;
+    const interval = duration / steps;
+
+    const rateTimer = setInterval(() => {
+      setAcceptanceRate(prev => {
+        const newValue = prev + increment;
+        if (newValue >= targetRate) {
+          clearInterval(rateTimer);
+          return targetRate;
+        }
+        return newValue;
+      });
+    }, interval);
+
+    return () => clearInterval(rateTimer);
+  }, []);
+
   return (
     <section className="aboutSection">
       <div className="container">
@@ -137,14 +180,14 @@ const About = () => {
             >
               <div className="aboutStatsRow">
                 <div className="aboutStatBlock">
-                  <div className="aboutStatBig">2300+</div>
+                  <div className="aboutStatBig">{Math.floor(studentCount)}+</div>
                   <div className="aboutStatLabel">
                     TRULY HAPPY STUDENTS FROM UAE
                   </div>
                 </div>
                 <span className="aboutStatBorder"></span>
                 <div className="aboutStatBlock">
-                  <div className="aboutStatBig">89%</div>
+                  <div className="aboutStatBig">{Math.floor(acceptanceRate)}%</div>
                   <div className="aboutStatLabel">
                     OF STUDENTS ACCEPTED TO TOP UNIVERSITIES
                   </div>
@@ -172,7 +215,6 @@ const About = () => {
         </div>
       </div>
     </section>
-
   );
 };
 

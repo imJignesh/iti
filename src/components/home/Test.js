@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const testData = [
   {
@@ -30,12 +31,39 @@ const testData = [
     details: ["Total Courses: 1", "Online & In-Person"],
     btn: "VIEW TUTORING COURSE",
   },
+  {
+    number: "04.",
+    title: "GMAT",
+    img: "/images/test-section1.jpg",
+    label: "GRADUATE MANAGEMENT ADMISSION TEST",
+    details: ["Total Courses: 2", "Online Only"],
+    btn: "VIEW TUTORING COURSE",
+  },
+  {
+    number: "05.",
+    title: "GRE",
+    img: "/images/test-section2.jpg",
+    label: "GRADUATE RECORD EXAMINATIONS",
+    details: ["Total Courses: 3", "In-Person Only"],
+    btn: "VIEW TUTORING COURSE",
+  },
 ];
 
 
 const Test = ({ isMobileSwiper, active, setActive }) => {
+
+  // Set initial active slide for mobile, and initial active card for desktop
+  useEffect(() => {
+    if (isMobileSwiper && setActive) {
+      setActive(1); // Set the second slide (index 1) as active initially for mobile
+    } else if (!isMobileSwiper && setActive) {
+      setActive(1); // Set the second card (index 1) as active initially for desktop
+    }
+  }, [isMobileSwiper, setActive]);
+
+
   return (
-    <section className="testSection">
+    <section className="testSection1">
       <div className="container">
         <div className="testHeadings">
           <div
@@ -58,38 +86,72 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             CONSECTETUR <span className="highlight">ADIPISCING</span>
           </h2>
         </div>
+      </div> {/* End container for headings */}
 
-        {isMobileSwiper ? (
-          <Swiper
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section testMobileSwiper"
-            spaceBetween={25}
-            loop={true}
-            pagination={{ clickable: true }}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              400: { slidesPerView: 1.2 },
-              575: { slidesPerView: 1.5 },
-              786: { slidesPerView: 1.8 },
-              900: { slidesPerView: 2.2 },
-            }}
-          >
-            {testData.map((card, idx) => (
+      {/* Conditional Rendering: Swiper for Mobile (outside container), Static Cards for Desktop (inside container) */}
+      {isMobileSwiper ? (
+        <Swiper
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+          className="fade-in-section testMobileSwiper"
+          // spaceBetween={25} // Default value, overridden by breakpoints
+          centeredSlides={true}
+          loop={true} // Enable looping for mobile
+          pagination={false} // HIDE PAGINATION BULLETS
+          modules={[Pagination, Navigation, Autoplay]}
+          initialSlide={1} // Start with the second slide (index 1)
+          onSlideChange={(swiper) => {
+            if (setActive) {
+              setActive(swiper.realIndex);
+            }
+          }}
+          // navigation={true} // Uncomment if you want navigation arrows
+
+          breakpoints={{
+            0: {
+              slidesPerView: 1.1,
+              spaceBetween: 20, // Adjusted for more visibility
+              centeredSlides: true,
+            },
+            400: {
+              slidesPerView: 1.1,
+              spaceBetween: 25, // Adjusted for more visibility
+              centeredSlides: true,
+            },
+            575: {
+              slidesPerView: 1.2,
+              spaceBetween: 25, // Adjusted for more visibility
+              centeredSlides: true,
+            },
+            786: {
+              slidesPerView: 1.5,
+              spaceBetween: 30, // Adjusted for more visibility
+              centeredSlides: true,
+            },
+            900: {
+              slidesPerView: 1.8,
+              spaceBetween: 30, // Adjusted for more visibility
+              centeredSlides: true,
+            },
+          }}
+        >
+          {testData.map((card, idx) => {
+            const isCardActive = active === idx;
+            return (
               <SwiperSlide key={idx}>
                 <div className="testCardMobile">
                   <div
                     data-scroll
                     data-scroll-class="is-clipped"
                     data-scroll-offset="-10%"
-                    className="testCardImageWrap"
+                    className={`testCardImageWrap ${isCardActive ? "mobileActiveImageArea" : ""}`}
                     style={{ backgroundImage: `url(${card.img})` }}
                   >
-                    <span className="testCardNumber">{card.number}</span>
-                    <span className="testCardTitle">{card.title}</span>
+                    <span className={`testCardNumber ${isCardActive ? "mobileActiveNumber" : ""}`}>{card.number}</span>
+                    <span className={`testCardTitle ${isCardActive ? "mobileActiveTitle" : ""}`}>{card.title}</span>
                   </div>
-                  <div className="testCardDetailsWrap">
+                  <div className={`testCardDetailsWrap ${isCardActive ? "mobileShowContent" : "mobileHideContent"}`}>
                     <div className="testCardLabel">{card.label}</div>
                     <div className="testCardDetails">
                       {card.details &&
@@ -110,11 +172,14 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                   </div>
                 </div>
               </SwiperSlide>
-            ))}
-          </Swiper>
-        ) : (
+            );
+          })}
+        </Swiper>
+      ) : (
+        // Desktop Version: Remains inside container
+        <div className="container">
           <div className="row testCardsRow">
-            {testData.map((card, idx) => {
+            {testData.slice(0, 3).map((card, idx) => {
               const isCardActive = active === idx;
               return (
                 <div
@@ -125,6 +190,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                   className={`fade-in-section col-4 px-3 testCard`}
                   style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
                   onMouseEnter={() => setActive(idx)}
+                  onMouseLeave={() => setActive(1)}
                 >
                   <div
                     data-scroll
@@ -156,6 +222,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                         width={40}
                         height={40}
                         quality={100}
+                        alt="arrow"
                       />
                     </button>
                   </div>
@@ -163,10 +230,9 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
               );
             })}
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </section>
-
   );
 };
 
