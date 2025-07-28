@@ -23,7 +23,7 @@
 }
 
 .courseSection .courseHeadings .courseTitle .highlight {
-    background: linear-gradient(to left,
+    background: linear-gradient(to right,
             var(--lightgreen-color),
             var(--green-color));
     -webkit-background-clip: text;
@@ -238,7 +238,8 @@
     font-size: 1.2rem;
     padding: 15px 20px;
 }
-.courseSection .mainCardBtn img{
+
+.courseSection .mainCardBtn img {
     width: 40px;
 }
 
@@ -539,8 +540,9 @@
         font-weight: 500;
     }
 }
+
 @media (max-width:440px) {
     .courseSection .mainCard {
         flex-basis: 360px;
-    }    
+    }
 }

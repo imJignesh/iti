@@ -70,7 +70,7 @@ const Course = () => {
                         style={{ animationDelay: "0.25s" }}
                     >
                         <h1 className="courseTitle">
-                            Lorem ipsum dolor sit amet, <span className="highlight">consectetur</span> adipiscing
+                            Lorem ipsum dolor sit amet, consectetur <span className="highlight">adipiscing</span>
                         </h1>
                     </div>
                     <div
