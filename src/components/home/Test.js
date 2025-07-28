@@ -31,22 +31,6 @@ const testData = [
     details: ["Total Courses: 1", "Online & In-Person"],
     btn: "VIEW TUTORING COURSE",
   },
-  {
-    number: "04.",
-    title: "GMAT",
-    img: "/images/test-section1.jpg",
-    label: "GRADUATE MANAGEMENT ADMISSION TEST",
-    details: ["Total Courses: 2", "Online Only"],
-    btn: "VIEW TUTORING COURSE",
-  },
-  {
-    number: "05.",
-    title: "GRE",
-    img: "/images/test-section2.jpg",
-    label: "GRADUATE RECORD EXAMINATIONS",
-    details: ["Total Courses: 3", "In-Person Only"],
-    btn: "VIEW TUTORING COURSE",
-  },
 ];
 
 
@@ -97,7 +81,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
           className="fade-in-section testMobileSwiper"
           // spaceBetween={25} // Default value, overridden by breakpoints
           centeredSlides={true}
-          loop={true} // Enable looping for mobile
+          loop={false} // Enable looping for mobile
           pagination={false} // HIDE PAGINATION BULLETS
           modules={[Pagination, Navigation, Autoplay]}
           initialSlide={1} // Start with the second slide (index 1)
