@@ -19,7 +19,7 @@ const blogData = [
     },
 ];
 
-const Blog = () => {
+const BlogSection = () => {
     return (
         <section className="blogSection">
             <div className="container">
@@ -132,4 +132,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default BlogSection;
