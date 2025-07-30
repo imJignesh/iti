@@ -1,7 +1,7 @@
 'use client';
 
 import useSWR from 'swr';
-import { useState, useEffect, useCallback, useRef } from 'react'; // Import useRef
+import { useState, useEffect, useCallback, useRef } from 'react';
 
 // Fetcher function for SWR
 const fetcher = async (url) => {
@@ -15,48 +15,41 @@ const fetcher = async (url) => {
 };
 
 export default function WpPosts() {
-    const [posts, setPosts] = useState([]); // Stores all loaded posts
-    const [page, setPage] = useState(1); // Tracks the current page number for API requests
+    const [posts, setPosts] = useState([]);
+    const [page, setPage] = useState(1);
     const [tagsMap, setTagsMap] = useState({});
     const [categories, setCategories] = useState([]);
-    const [selectedCategories, setSelectedCategories] = useState([]); // Changed to array for multi-select
-    const [searchTerm, setSearchTerm] = useState(''); // State for the search input
-    const [debouncedSearchTerm, setDebouncedSearchTerm] = useState(''); // State for debounced search term
-    const [hasMore, setHasMore] = useState(true); // Controls visibility of "Load More" button
+    const [selectedCategories, setSelectedCategories] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
+    const [hasMore, setHasMore] = useState(true);
 
-    // Refs for Locomotive Scroll
-    const scrollRef = useRef(null); // Ref for the main scrollable container
-    const scrollInstanceRef = useRef(null); // Ref to store the Locomotive Scroll instance
+    const scrollRef = useRef(null);
+    const scrollInstanceRef = useRef(null);
 
     // Debounce effect for search term
     useEffect(() => {
         const timerId = setTimeout(() => {
             setDebouncedSearchTerm(searchTerm);
-        }, 500); // 500ms debounce time
+        }, 500);
 
         return () => {
             clearTimeout(timerId);
         };
     }, [searchTerm]);
 
-    // Construct the API URL for posts based on selected category and search term
-    // Now fetching 9 posts per page
     const postsApiUrl = `https://ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=9&page=${page}&_embed${selectedCategories.length > 0 ? `&categories=${selectedCategories.join(',')}` : ''}${debouncedSearchTerm ? `&search=${debouncedSearchTerm}` : ''}`;
 
-    // Fetch posts using SWR
     const { data, error, isLoading, isValidating } = useSWR(postsApiUrl, fetcher);
 
     // Effect to accumulate posts and determine if more are available
     useEffect(() => {
         if (data && data.data) {
             if (page === 1) {
-                // If it's the first page or a new search/filter, replace posts
                 setPosts(data.data);
             } else {
-                // For subsequent "Load More" clicks, append new posts
                 setPosts(prevPosts => [...prevPosts, ...data.data]);
             }
-            // Determine if there are more pages to load
             setHasMore(page < data.totalPages);
 
             // Update Locomotive Scroll instance after content changes
@@ -65,7 +58,7 @@ export default function WpPosts() {
                 console.log("✅ LocomotiveScroll updated after content change");
             }
         }
-    }, [data, page]); // Depend on data and page to re-run when new data arrives or page changes
+    }, [data, page]);
 
     // Fetch tags on component mount
     useEffect(() => {
@@ -97,102 +90,76 @@ export default function WpPosts() {
         fetchCategories();
     }, []);
 
-    // Handler for category click (now supports multi-select)
     const handleCategoryClick = useCallback((categoryId) => {
-        setPosts([]); // Clear existing posts for new filter
-        setPage(1); // Reset to first page
-        setSearchTerm(''); // Clear search term
-        setDebouncedSearchTerm(''); // Clear debounced search term
-        setHasMore(true); // Assume more until proven otherwise by fetch
+        setPosts([]);
+        setPage(1);
+        setSearchTerm('');
+        setDebouncedSearchTerm('');
+        setHasMore(true);
 
         setSelectedCategories(prevSelected => {
             if (prevSelected.includes(categoryId)) {
-                // If already selected, remove it
                 return prevSelected.filter(id => id !== categoryId);
             } else {
-                // If not selected, add it
                 return [...prevSelected, categoryId];
             }
         });
     }, []);
 
-    // Handler for "All Categories" button
     const handleAllCategoriesClick = useCallback(() => {
-        setPosts([]); // Clear existing posts
-        setSelectedCategories([]); // Clear all selected categories
-        setPage(1); // Reset to first page
-        setSearchTerm(''); // Clear search term
-        setDebouncedSearchTerm(''); // Clear debounced search term
-        setHasMore(true); // Assume more until proven otherwise by fetch
+        setPosts([]);
+        setSelectedCategories([]);
+        setPage(1);
+        setSearchTerm('');
+        setDebouncedSearchTerm('');
+        setHasMore(true);
     }, []);
 
-
-    // Handler for search input change
     const handleSearchChange = useCallback((event) => {
-        setPosts([]); // Clear existing posts for new search
+        setPosts([]);
         setSearchTerm(event.target.value);
-        setPage(1); // Reset to first page
-        setSelectedCategories([]); // Clear selected categories when searching
-        setHasMore(true); // Assume more until proven otherwise by fetch
+        setPage(1);
+        setSelectedCategories([]);
+        setHasMore(true);
     }, []);
 
-    // Function to copy post link to clipboard
     const copyToClipboard = async (text) => {
         try {
-            // Using the modern Clipboard API
             await navigator.clipboard.writeText(text);
-            alert('Link copied to clipboard!'); // Using alert for simplicity, consider a custom modal for better UX
+            alert('Link copied to clipboard!');
         } catch (err) {
             console.error('Failed to copy text: ', err);
             alert('Failed to copy link.');
         }
     };
 
-    // --- Locomotive Scroll useEffect ---
+    // Locomotive Scroll setup
     useEffect(() => {
         let scroll;
 
         const initScroll = async () => {
-            // Dynamically import Locomotive Scroll only on the client side
             const LocomotiveScroll = (await import("locomotive-scroll")).default;
-
-            // Ensure scrollRef.current is available
             if (!scrollRef.current) return;
-
             scroll = new LocomotiveScroll({
-                el: scrollRef.current, // The element to apply the scroll effect to
+                el: scrollRef.current,
                 smooth: true,
                 lerp: 0.1,
             });
 
-            // Store the instance in a ref for later access (e.g., for update())
             scrollInstanceRef.current = scroll;
-
-            // Optional: You can uncomment this if you find issues with initial scroll updates
-            // setTimeout(() => {
-            //   if (scrollInstanceRef.current?.update) {
-            //     scrollInstanceRef.current.update();
-            //     console.log("✅ LocomotiveScroll updated on initial load");
-            //   }
-            // }, 500);
         };
 
-        // Only initialize Locomotive Scroll if window is defined (client-side)
         if (typeof window !== "undefined") {
             initScroll();
         }
 
-        // Cleanup function: destroy the scroll instance when the component unmounts
         return () => {
             scrollInstanceRef.current?.destroy();
             scrollInstanceRef.current = null;
         };
-    }, []); // Empty dependency array means this runs once on mount and cleans up on unmount
-    // --- End Locomotive Scroll useEffect ---
-
+    }, []);
 
     if (error) return <div className="alert alert-danger my-5 p-4">Oh no babe, the API broke again 😭</div>;
-    // Initial loading spinner for the first fetch
     if (isLoading && posts.length === 0) return (
         <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '300px' }}>
             <div className="spinner-border text-primary" role="status">
@@ -202,18 +169,22 @@ export default function WpPosts() {
     );
 
     return (
-        // Assign the scrollRef to the main wrapper element
-        <div ref={scrollRef}> {/* This div will be the scrollable element for Locomotive Scroll */}
-            {/* Image with Wrapper - OUTSIDE the container */}
-            <div className="full-width-image-wrapper mb-5">
-                <img
-                    src="/images/blogbanner.jpg"
-                    className="img-fluid"
-                />
-            </div>
-            {/* End Image with Wrapper */}
+        <div ref={scrollRef} data-scroll-container>
+            <section className="ibdpBanner" data-scroll data-scroll-section>
+                {/* Image with Wrapper - OUTSIDE the container */}
+                {/* This is a visual section, so data-scroll-section is appropriate */}
+                <div className="full-width-image-wrapper mb-5" data-scroll-section>
+                    <img
+                        src="/images/blogbanner.jpg"
+                        className="img-fluid"
+                        onLoad={() => scrollInstanceRef.current?.update && scrollInstanceRef.current.update()}
+                    />
+                </div>
+                {/* End Image with Wrapper */}
 
-            <div className="container my-5">
+                {/* Main content area, wrapping search, categories, and posts list */}
+                {/* This whole 'container' section forms another logical scroll section */}
+
                 {/* Blog Search */}
                 <div className="mb-4 p-4 bg-white searchBox rounded shadow-sm">
                     <h2 className="h4 text-secondary mb-3">Search Blog Posts</h2>
@@ -280,6 +251,7 @@ export default function WpPosts() {
                                                 alt={post.title.rendered}
                                                 style={{ height: '224px', objectFit: 'cover', objectPosition: 'center' }}
                                                 onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/600x400/E0F2F7/333333?text=No+Image`; }}
+                                                onLoad={() => scrollInstanceRef.current?.update && scrollInstanceRef.current.update()}
                                             />
                                         )}
                                         <div className="card-body d-flex flex-column p-4">
@@ -288,7 +260,7 @@ export default function WpPosts() {
                                                     {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}
                                                 </p>
                                                 <div className="d-flex gap-2">
-                                                    {/* Facebook Share */}
+                                                    {/* Share buttons as before */}
                                                     <a
                                                         href={`https://www.facebook.com/sharer/sharer.php?u=${postLink}`}
                                                         target="_blank"
@@ -300,7 +272,6 @@ export default function WpPosts() {
                                                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.953H10.5c-.984 0-1.291.739-1.291 1.245V8.05h2.17l-.354 2.326H10.5V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                                                         </svg>
                                                     </a>
-                                                    {/* X (Twitter) Share */}
                                                     <a
                                                         href={`https://twitter.com/intent/tweet?url=${postLink}&text=${postTitle}`}
                                                         target="_blank"
@@ -312,7 +283,6 @@ export default function WpPosts() {
                                                             <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.364l5.478-6.21L0 .75h5.063l3.495 4.633L12.6.75Zm-.86 13.028h1.36L4.323 2.145H2.865l9.075 11.633Z" />
                                                         </svg>
                                                     </a>
-                                                    {/* Email Share */}
                                                     <a
                                                         href={`mailto:?subject=${postTitle}&body=Check out this blog post: ${postLink}`}
                                                         className="text-muted social-icon-hover"
@@ -322,7 +292,6 @@ export default function WpPosts() {
                                                             <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.756Z" />
                                                         </svg>
                                                     </a>
-                                                    {/* Copy Link */}
                                                     <button
                                                         onClick={() => copyToClipboard(postLink)}
                                                         className="btn btn-link p-0 text-muted social-icon-hover"
@@ -387,7 +356,9 @@ export default function WpPosts() {
                         </button>
                     </div>
                 )}
-            </div>
-        </div> // End of the main scrollable div
+            </section> {/* End of the main content section */}
+
+
+        </div>
     );
 }
