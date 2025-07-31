@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import styles from "../styles/ibdp.module.css";
+import styles from "../styles/ibdp.module.css"; 
 import Image from 'next/image';
 
 const IBDP = () => {

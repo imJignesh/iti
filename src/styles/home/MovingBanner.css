@@ -22,7 +22,7 @@
   color: #e6f6ff;
   text-transform: uppercase;
   line-height: 60px;
-  animation: bannerScrollAnim 18s linear infinite;
+  animation: bannerScrollAnim 28s linear infinite;
 }
 @keyframes bannerScrollAnim {
   0% {

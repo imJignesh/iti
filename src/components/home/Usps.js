@@ -65,12 +65,12 @@ const uspData = [
   },
 ];
 
-  const uspDataRows = [];
-  for (let i = 0; i < uspData.length; i += 2) {
-    uspDataRows.push(uspData.slice(i, i + 2));
-  }
+const uspDataRows = [];
+for (let i = 0; i < uspData.length; i += 2) {
+  uspDataRows.push(uspData.slice(i, i + 2));
+}
 
-export default function Usps({}) {
+export default function Usps({ }) {
   return (
     <>
       {" "}
@@ -146,10 +146,10 @@ export default function Usps({}) {
         <div className="uspRight">
           <Swiper
             direction="vertical"
-            slidesPerView="auto"
-            spaceBetween={80}
+            slidesPerView="auto" // Default for desktop
+            spaceBetween={80} // Default for desktop
             speed={800}
-            freeMode={true}
+            freeMode={true} // Default for desktop
             grabCursor={true}
             scrollbar={{
               el: ".uspScrollbar",
@@ -157,6 +157,37 @@ export default function Usps({}) {
             }}
             modules={[Scrollbar, Mousewheel]}
             className="uspSwiper"
+            breakpoints={{
+              0: { // Mobile breakpoint
+                slidesPerView: 'auto', // Keep auto for now
+                spaceBetween: 20,
+                freeMode: {
+                  enabled: false, // Explicitly disable freeMode
+                  // You can set `momentum` to false if you want absolutely no bounce
+                  // momentum: false,
+                },
+                watchOverflow: true,
+                // New additions for better ending behavior:
+                // If you want the *last slide* to snap to the end of the container
+                // you might need to combine these with a non-integer slidesPerView
+                // or adjust CSS.
+                // Let's try `watchSlidesProgress` and `watchSlidesVisibility` to see boundaries
+                watchSlidesProgress: true,
+                watchSlidesVisibility: true,
+                // This is a powerful option for vertical Swipers where the end position is critical.
+                // It makes the last slide stop when its bottom edge reaches the end of the container.
+                // Works well with 'auto' and `freeMode: false`.
+                // However, ensure your slide heights are consistent for best results.
+                lastSlideMessage: 'You have reached the end', // A custom property to check if this works
+                // Set a specific height for each SwiperSlide on mobile if not already
+                // in your CSS, or make sure content within it does not cause height fluctuations.
+              },
+              768: { // Tablet/Desktop breakpoint
+                slidesPerView: 'auto',
+                spaceBetween: 80,
+                freeMode: true,
+              },
+            }}
           >
             {uspDataRows.map((row, index) => (
               <SwiperSlide key={index} className="uspSlide">
@@ -182,7 +213,6 @@ export default function Usps({}) {
           <div className="uspScrollbar" />
         </div>
       </section>
-
     </>
   );
 }
