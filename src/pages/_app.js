@@ -13,13 +13,27 @@ import "@/styles/home/Usps.css";
 import "@/styles/home/Trainers.css";
 import "@/styles/home/Testimonial.css";
 import "@/styles/home/Blog.css";
+import "@/styles/contact/ContactHeadline.css";
 
 //Blog Page Css
 import "@/styles/blog/Blogpg.css";
 
 
+import "@/styles/ib/Acheivements.css";
+import "@/styles/ib/Curriculum.css"; // plain CSS import
+import "@/styles/ib/Subjects.css";
+import "@/styles/ib/Usps.css";
+import "@/styles/ib/Faq.css";
+import "@/styles/ib/Article.css";
+import "@/styles/ib/GallerySlider.css";
 //IBDP page Css
 import "@/styles/ibdp/Ibdp.css";
+import "@/styles/ibdp/Achievement.css";
+import "@/styles/ibdp/Subject.css";
+import "@/styles/ibdp/IbdpCourses.css";
+
+// freeme demo page css
+import "@/styles/freedemo/freedemo.css";
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -30,6 +44,7 @@ import { useRouter } from "next/router";
 import Home from "./Home";
 import IBDP from "./ibdp";
 import Blog from "./blog";
+import IB from "./ib";
 
 export default function App({ Component, pageProps }) {
     const router = useRouter();
@@ -43,6 +58,8 @@ export default function App({ Component, pageProps }) {
     }
     else if (router.pathname === "/blog") {
         RenderedComponent = <Blog />;
+    } else if (router.pathname === "/ib") {
+        RenderedComponent = <IB />;
     } else {
         RenderedComponent = <Component {...pageProps} />;
     }

@@ -1,19 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "swiper/css/scrollbar";
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  EffectCoverflow,
-  Scrollbar,
-  Mousewheel,
-} from "swiper/modules";
 import Hero from "@/components/home/Hero";
 import Course from "@/components/home/Course";
 import MovingBanner from "@/components/home/MovingBanner";

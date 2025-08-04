@@ -1,0 +1,191 @@
+.achievement-container {}
+
+.achievement-section-heading1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 40px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Optional for cross-browser support */
+  background-clip: text;
+  color: transparent;
+}
+
+.achievement-section-sub-heading1 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 45px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Optional for cross-browser support */
+  background-clip: text;
+  color: transparent;
+
+  margin-bottom: 0px;
+}
+.achievement-section-title{
+font-size: 1.2rem;
+font-weight: 700;
+margin-bottom: 0;
+}
+
+.achievement-section-desc{
+font-size: 0.8rem;
+margin-bottom: 0;
+}
+
+.achievement-section-heading2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 40px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+    /* Optional for cross-browser support */
+    background-clip: text;
+    color: transparent;
+
+
+}
+
+.achievement-section-sub-heading2 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 45px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Optional for cross-browser support */
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0px;
+  /* border-right: 2px solid; */
+}
+
+.achievement-section-content{
+font-size: 0.8rem;
+}
+
+.achievement-col {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 10px;
+  padding-right: 100px;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.achievement-col-left{
+background: linear-gradient(235.04deg, #EDFFF4 45.21%, #A6EAC7 95.86%);
+
+}
+.achievement-col-right{
+  background: linear-gradient(237.21deg, #E7F6FF 54.23%, #A3CAF5 103.75%);
+
+}
+
+
+.achievement-left-button {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 30px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1;
+  background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
+  color: #fff;
+
+}
+
+
+.achievement-left-button img {
+  width: 30px;
+  height: auto;
+  /* background: linear-gradient(269.48deg, #E7F6FF 2.74%, #A3CAF5 93.4%); */
+}
+
+
+.achievement-right-button {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 30px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1;
+  background: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  color: #fff;
+
+
+}
+
+.achievement-right-button img {
+  width: 30px;
+  height: auto;
+  /* background: linear-gradient(269.48deg, #E7F6FF 2.74%, #A3CAF5 93.4%); */
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .achievements-score {
+    font-size: 2rem;
+  }
+
+  .achievements-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-slideCard {
+    padding: 15px;
+    min-height: 200px;
+  }
+
+  .achievements-score {
+    font-size: 1.5rem;
+  }
+
+  .achievements-navButton {
+    width: 30px;
+    height: 30px;
+  }
+
+  .achievements-arrow {
+    width: 10px;
+    height: 10px;
+  }
+}
