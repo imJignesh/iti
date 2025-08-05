@@ -6,13 +6,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import Subjects from "@/components/act/Subjects";
-import MovingBanner from "@/components/act/MovingBanner";
-import UspsSecondary from "@/components/act/UspsSecondary";
-import ActCoures from '@/components/act/ActCoures';
-import Faq from "@/components/act/Faqs";
-import Article from "@/components/act/Article";
-import GallerySlider from "@/components/act/GallerySlider";
+import Subjects from "@/components/ap/Subjects";
+import MovingBanner from "@/components/ap/MovingBanner";
+import Whystud from "@/components/ap/Whystud";
+import UspsSecondary from "@/components/ap/UspsSecondary";
+import ApCoures from '@/components/ap/ApCoures';
+import Faq from "@/components/ap/Faqs";
+import Article from "@/components/ap/Article";
+import Testimonial from "@/components/home/Testimonial";
+import GallerySlider from "@/components/ap/GallerySlider";
 
 
 
@@ -149,7 +151,7 @@ const AchievementsCarousel = () => {
     );
 };
 
-const ACT = () => {
+const AP = () => {
     const scrollRef = useRef(null);
     const scrollInstanceRef = useRef(null);
 
@@ -190,11 +192,9 @@ const ACT = () => {
                                 >
                                     <div className={styles.contentInner}>
                                         <h1 className={styles.mainHeading}>
-                                            ACT TUTORS IN<br />
-                                            DUBAI, FOR ASSURED <br />
-                                            HIGH SCORES
+                                            ADVANCED PLACEMENTS<br />TUTORS IN DUBAI
                                         </h1>
-                                        <p className={styles.subHeading}>LOREM IPSUM DOLOR SIT AMET</p>
+                                        <p className={styles.subHeading}>NEW AP BATCHES STARTS<br />FROM 22ND AUGUST, 2025</p>
 
                                         <div className={styles.featureCards}>
                                             <div className={styles.featureCardInner}>
@@ -415,97 +415,12 @@ const ACT = () => {
                         </div>
                     </div>
                 </section >
-                <ActCoures></ActCoures>
-                {/* ACT TEST Overview Section */}
-                <section className="act-exam-overview">
-                    <div className="container">
-                        <div className="actTestHeadings">
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.1s" }}
-                            >
-                                <h4 className="SubHeading">ACT TEST OVERVIEW</h4>
-                            </div>
+                <ApCoures></ApCoures>
+                <Whystud />
+                {/* Testimonial Section */}
+                <Testimonial />
+                <MovingBanner />
 
-                        </div>
-
-                        <div className="act-table-container">
-                            <table className="act-exam-table">
-                                <thead>
-                                    <tr>
-                                        <th>ACT SECTION</th>
-                                        <th>NO. OF QUESTIONS</th>
-                                        <th>TIMES ALLOTED</th>
-                                        <th>SCORE</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>English</td>
-                                        <td>75</td>
-                                        <td>45 Minutes</td>
-                                        <td>0-36</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Maths</td>
-                                        <td>60</td>
-                                        <td>60 Minutes</td>
-                                        <td>0-36</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Reading</td>
-                                        <td>40</td>
-                                        <td>35 Minutes</td>
-                                        <td>0-36</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Science</td>
-                                        <td>40</td>
-                                        <td>35 Minutes</td>
-                                        <td>0-36</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Writing</td>
-                                        <td>1</td>
-                                        <td>40 Minutes</td>
-                                        <td>0-36</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </section> {/* Correctly closed section tag */}
-                < section className="achievementsSection" >
-                    <div className="container">
-                        <div className="achievementsHeadings">
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.1s" }}
-                            >
-                                <h4 className="SubHeading">SUBJECTS</h4>
-                            </div>
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.25s" }}
-                            >
-                                <h1 className="achievementsTitle">
-                                    Lorem ipsum dolor sit amet, <br></br>  <span className="highlight"> consectetur</span> adipiscing{" "}
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
-                </section >
-                {/* Subjects Section */}
-                <Subjects />
                 < section className="achievementsSection" >
                     <div className="container">
                         <div className="achievementsHeadings">
@@ -560,7 +475,7 @@ const ACT = () => {
                 </section >
                 <GallerySlider />
                 <Faq />
-                <MovingBanner />
+
                 < section className="achievementsSection" >
                     <div className="container">
                         <div className="achievementsHeadings">
@@ -610,4 +525,4 @@ const ACT = () => {
     );
 };
 
-export default ACT;
+export default AP;
