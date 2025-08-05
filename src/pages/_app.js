@@ -1,4 +1,5 @@
 // src/pages/_app.js
+// Add all css here.
 
 import "@/styles/globals.css";
 //Home Page Css
