@@ -1,0 +1,194 @@
+.ibdp-faq-container {
+  /* background: linear-gradient(237.21deg, #E7F6FF 54.23%, #A3CAF5 103.75%); */
+
+  padding: 50px;
+  margin-top: 0px;
+  margin-bottom: 60px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+
+}
+.ibdp-faq-container .accordion-item1{
+background: linear-gradient(269.48deg, #E7F6FF 2.74%, #A3CAF5 93.4%) !important;
+
+}
+.ibdp-faq-container .accordion-item2{
+  background: linear-gradient(269.48deg, #E7F6FF 2.74%, #A3CAF5 93.4%) !important;
+}
+.ibdp-faq-container .accordion-item3{
+  background: linear-gradient(269.48deg, #E7F6FF 2.74%, #A3CAF5 93.4%) !important;
+}
+.ibdp-faq-container .accordion-item4{
+  background: linear-gradient(269.48deg, #E7F6FF 2.74%, #A3CAF5 93.4%) !important;
+
+  
+}
+.ibdp-faq-container .accordion-item5{
+background: linear-gradient(302.09deg, #EDFFF4 14.56%, #A6EAC7 98.34%) !important;
+
+}
+.ibdp-faq-container .accordion-item img{
+  width: 100%;
+  border-radius: 10px;
+}
+.ibdp-faq-container .accordion-item h4{
+  text-transform:uppercase;
+font-weight: 700;
+
+}
+.ibdp-faq-left {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+
+.faqTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 40px 0 30px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--blue-color);
+}
+
+.faqTitle .highlight {
+  background: linear-gradient(to right, var(--lightgreen-color), var(--green-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ibdp-faq-desc {
+  color: #233467;
+
+}
+.ibdp-faq-container .accordion{
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: linear-gradient(269.48deg, #E7F6FF 2.74%, #A3CAF5 93.4%);
+
+
+}
+
+.ibdp-faq-container .accordion-item {
+  background: transparent ;
+  border: 0;
+  /* border-bottom: 1px solid; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 0px 20px;
+
+}
+.ibdp-faq-container  .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed{
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0
+}
+
+.ibdp-faq-container .accordion-button {
+  background: transparent !important;
+  border-image-source: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  font-size: 30px;
+}
+
+
+.ibdp-faq-container .accordion-button:not(.collapsed)::after {
+  background-image: url(/images/-.png);
+  background-size: 15px;
+}
+
+.ibdp-faq-container .accordion-button:not(.collapsed){
+box-shadow: none;
+}
+
+
+.ibdp-faq-container .accordion-button::after {
+  background-image: url(/images/+.png);
+  background-size: 15px;
+
+}
+
+.ibdp-faq-container .accordion-button:focus {
+  box-shadow: none;
+}
+
+
+.ibdp-faq-container .accordion-button {
+  font-weight: 700;
+  background: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) !important;
+
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+
+  /* Optional for cross-browser support */
+  background-clip: text;
+  color: transparent;
+  padding: 25px;
+}
+
+.ibdp-faq-container .accordion-body {
+  color: #233467;
+}
+
+
+.ibdp-faq-secondary-container{
+
+}
+
+.ibdp-faq-secondary-container .accordion-item {
+  /* background: transparent !important; */
+  background: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%),
+linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  border: 0;
+  border-bottom: 1px solid;
+
+}
+
+.ibdp-faq-secondary-container .accordion-button {
+  background: transparent !important;
+  border-image-source: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+}
+
+
+.ibdp-faq-secondary-container .accordion-button:not(.collapsed)::after {
+  background-image: url(/images/-.png);
+  background-size: 15px;
+}
+
+
+
+.ibdp-faq-secondary-container .accordion-button::after {
+  background-image: url(/images/+.png);
+  background-size: 15px;
+
+}
+
+.ibdp-faq-secondary-container .accordion-button:focus {
+  box-shadow: none;
+}
+
+
+.ibdp-faq-secondary-container .accordion-button {
+  font-weight: 700;
+  /* background: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) !important;
+
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+
+  background-clip: text;
+  color: transparent; */
+color: #fff !important; 
+  padding: 25px;
+}
+
+.ibdp-faq-secondary-container .accordion-body {
+  color: #fff;
+}
+
