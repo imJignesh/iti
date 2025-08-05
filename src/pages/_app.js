@@ -18,7 +18,16 @@ import "@/styles/contact/ContactHeadline.css";
 //Blog Page Css
 import "@/styles/blog/Blogpg.css";
 
+//ACT page Css
+import "@/styles/act/Acheivements.css";
+import "@/styles/act/Curriculum.css"; // plain CSS import
+import "@/styles/act/Subjects.css";
+import "@/styles/act/Usps.css";
+import "@/styles/act/Faq.css";
+import "@/styles/act/Article.css";
+import "@/styles/act/GallerySlider.css";
 
+//IBDP page Css
 import "@/styles/ib/Acheivements.css";
 import "@/styles/ib/Curriculum.css"; // plain CSS import
 import "@/styles/ib/Subjects.css";
@@ -42,6 +51,7 @@ import Footer from "../components/Footer";
 
 import { useRouter } from "next/router";
 import Home from "./Home";
+import ACT from "./act";
 import IBDP from "./ibdp";
 import Blog from "./blog";
 import IB from "./ib";
@@ -53,6 +63,8 @@ export default function App({ Component, pageProps }) {
 
     if (router.pathname === "/") {
         RenderedComponent = <Home />;
+    } else if (router.pathname === "/act") {
+        RenderedComponent = <ACT />;
     } else if (router.pathname === "/ibdp") {
         RenderedComponent = <IBDP />;
     }
