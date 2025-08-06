@@ -19,10 +19,13 @@ import "@/styles/contact/ContactHeadline.css";
 //Blog Page Css
 import "@/styles/blog/Blogpg.css";
 
+//Blog Detail Page Css
+import "@/styles/slug/slug.css";
+
 //ACT page Css
 import "@/styles/act/Acheivements.css";
 import "@/styles/act/Curriculum.css"; // plain CSS import
-import "@/styles/act/Subjects.css";
+// import "@/styles/act/Subjects.css";
 import "@/styles/act/Usps.css";
 import "@/styles/act/Faq.css";
 import "@/styles/act/Article.css";
@@ -32,7 +35,7 @@ import "@/styles/act/GallerySlider.css";
 //AP page Css
 import "@/styles/ap/Acheivements.css";
 import "@/styles/ap/Curriculum.css"; // plain CSS import
-import "@/styles/ap/Subjects.css";
+// import "@/styles/ap/Subjects.css";
 import "@/styles/ap/Usps.css";
 import "@/styles/ap/Faq.css";
 import "@/styles/ap/Article.css";
@@ -42,7 +45,7 @@ import "@/styles/ap/Whystud.css";
 //IBDP page Css
 import "@/styles/ib/Acheivements.css";
 import "@/styles/ib/Curriculum.css"; // plain CSS import
-import "@/styles/ib/Subjects.css";
+// import "@/styles/ib/Subjects.css";
 import "@/styles/ib/Usps.css";
 import "@/styles/ib/Faq.css";
 import "@/styles/ib/Article.css";
@@ -50,7 +53,7 @@ import "@/styles/ib/GallerySlider.css";
 //IBDP page Css
 import "@/styles/ibdp/Ibdp.css";
 import "@/styles/ibdp/Achievement.css";
-import "@/styles/ibdp/Subject.css";
+// import "@/styles/ibdp/Subject.css";
 import "@/styles/ibdp/IbdpCourses.css";
 
 // freeme demo page css

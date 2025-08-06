@@ -1,16 +1,15 @@
 /* Test Section 1 - New Component */
-
-.testSection1 {
+.home .testSection1 {
   padding: 20px 0;
   background: #fff;
 }
 
-.testSection1 .testHeadings {
+.home .testSection1 .testHeadings {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.testSection1 .testSubheading {
+.home .testSection1 .testSubheading {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -18,7 +17,7 @@
   letter-spacing: 0.15em;
 }
 
-.testSection1 .testTitle {
+.home .testSection1 .testTitle {
   font-size: 2vw;
   font-weight: 800;
   max-width: 60%;
@@ -28,7 +27,7 @@
   text-transform: uppercase;
 }
 
-.testSection1 .highlight {
+.home .testSection1 .highlight {
   background: linear-gradient(to right,
       var(--lightgreen-color),
       var(--green-color));
@@ -38,12 +37,12 @@
   letter-spacing: 0.04em;
 }
 
-.testSection1 .testCardsRow {
+.home .testSection1 .testCardsRow {
   margin-top: 40px;
 }
 
 /* Desktop Card Styles */
-.testSection1 .testCard {
+.home .testSection1 .testCard {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -55,7 +54,7 @@
   padding: 0;
 }
 
-.testSection1 .cardImageArea {
+.home .testSection1 .cardImageArea {
   position: relative;
   width: 100%;
   height: 680px;
@@ -70,17 +69,17 @@
   box-shadow: none;
 }
 
-.testSection1 .activeImageArea {
+.home .testSection1 .activeImageArea {
   height: 440px;
 }
 
-.testSection1 .activeImageArea .cardTitle {
+.home .testSection1 .activeImageArea .cardTitle {
   width: 100px;
   left: 20%;
   transform: translateX(-50%) !important;
 }
 
-.testSection1 .imageOverlay {
+.home .testSection1 .imageOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgb(0 0 0 / 20%) 60%, rgb(0 0 0 / 80%) 100%);
@@ -88,7 +87,7 @@
   pointer-events: none;
 }
 
-.testSection1 .cardNumber {
+.home .testSection1 .cardNumber {
   position: absolute;
   top: 28px;
   left: 28px;
@@ -103,12 +102,12 @@
   transition: 0.3s all;
 }
 
-.testSection1 .activeImageArea .cardNumber {
+.home .testSection1 .activeImageArea .cardNumber {
   font-size: 1.8rem;
   opacity: 1;
 }
 
-.testSection1 .cardTitle {
+.home .testSection1 .cardTitle {
   position: absolute;
   left: 50%;
   bottom: 32px;
@@ -124,7 +123,7 @@
   transition: 0.4s all;
 }
 
-.testSection1 .cardContentArea {
+.home .testSection1 .cardContentArea {
   margin-top: 24px;
   display: flex;
   flex-direction: column;
@@ -140,21 +139,21 @@
   transition: opacity 0.8s, max-height 0.8s, transform 0.8s;
 }
 
-.testSection1 .showContent {
+.home .testSection1 .showContent {
   opacity: 1;
   max-height: 300px;
   pointer-events: auto;
   transform: translateY(0);
 }
 
-.testSection1 .hideContent {
+.home .testSection1 .hideContent {
   opacity: 0;
   max-height: 0;
   pointer-events: none;
   transform: translateY(-150px);
 }
 
-.testSection1 .cardLabel {
+.home .testSection1 .cardLabel {
   font-size: 1.8vw;
   font-weight: 800;
   color: var(--blue-color);
@@ -163,7 +162,7 @@
   text-transform: uppercase;
 }
 
-.testSection1 .cardDetails {
+.home .testSection1 .cardDetails {
   font-size: 1.38rem;
   color: var(--blue-color);
   margin-bottom: 18px;
@@ -171,103 +170,103 @@
   font-weight: 500;
 }
 
-.testSection1 .cardBtn {
+.home .testSection1 .cardBtn {
   font-size: 1.2vw;
   font-weight: 500;
   width: 100%;
   padding: 20px 30px;
 }
 
-.testSection1 .cardBtn img {
+.home .testSection1 .cardBtn img {
   width: 40px;
 }
 
 /* Desktop Media Queries */
 @media (max-width: 1440px) {
-  .testSection1 .cardImageArea {
+  .home .testSection1 .cardImageArea {
     height: 480px;
   }
 
-  .testSection1 .cardLabel {
+  .home .testSection1 .cardLabel {
     font-size: 20px;
   }
 
-  .testSection1 .cardDetails {
+  .home .testSection1 .cardDetails {
     font-size: 1rem;
   }
 
-  .testSection1 .activeImageArea {
+  .home .testSection1 .activeImageArea {
     height: 300px;
   }
 }
 
 @media (max-width: 1280px) {
-  .testSection1 .cardLabel {
+  .home .testSection1 .cardLabel {
     font-size: 20px;
   }
 
-  .testSection1 .cardDetails {
+  .home .testSection1 .cardDetails {
     font-size: 1rem;
   }
 
-  .testSection1 .cardBtn {
+  .home .testSection1 .cardBtn {
     padding: 10px 30px;
   }
 
-  .testSection1 .cardBtn img {
+  .home .testSection1 .cardBtn img {
     width: 30px;
   }
 }
 
 @media (max-width: 1199px) {
-  .testSection1 .cardLabel {
+  .home .testSection1 .cardLabel {
     font-size: 18px;
   }
 
-  .testSection1 .cardTitle {
+  .home .testSection1 .cardTitle {
     left: 25%;
   }
 
-  .testSection1 .testCard {
+  .home .testSection1 .testCard {
     padding: 0 10px !important;
   }
 
-  .testSection1 .cardImageArea {
+  .home .testSection1 .cardImageArea {
     height: 400px;
   }
 
-  .testSection1 .activeImageArea {
+  .home .testSection1 .activeImageArea {
     height: 225px;
   }
 
-  .testSection1 .cardDetails {
+  .home .testSection1 .cardDetails {
     margin-bottom: 15px;
   }
 
-  .testSection1 .cardDetails p {
+  .home .testSection1 .cardDetails p {
     margin: 0;
   }
 }
 
 /* Mobile Specific Styles (Applies when isMobileSwiper is true) */
 @media (max-width: 991px) {
-  .testSection1 {
+  .home .testSection1 {
     padding: 0 0 30px 0;
   }
 
-  .testSection1 .testTitle {
+  .home .testSection1 .testTitle {
     max-width: 600px;
     font-size: 1.5rem;
     margin: 20px auto;
   }
 
   /* Hide Pagination Bullets for Mobile Swiper */
-  .testSection1 .testMobileSwiper .swiper-pagination {
+  .home .testSection1 .testMobileSwiper .swiper-pagination {
     display: none;
   }
 
   /* Make mobile swiper full width and add padding to reveal adjacent slides */
-  .testSection1 .testMobileSwiper {
+  .home .testSection1 .testMobileSwiper {
     width: 100vw;
     /* Use viewport width directly */
     margin-left: calc(50% - 50vw);
@@ -283,7 +282,7 @@
   }
 
   /* Define slide width when slidesPerView is 'auto' and add margin for spacing */
-  .testSection1 .testMobileSwiper .swiper-slide {
+  .home .testSection1 .testMobileSwiper .swiper-slide {
     width: calc(100vw - 40px);
     /* Active slide width (viewport - 20px left adj - 20px right adj) */
     margin-right: 20px;
@@ -296,7 +295,7 @@
   }
 
   /* Opacity for non-active mobile slides */
-  .testSection1 .testMobileSwiper .swiper-slide .testCardMobile {
+  .home .testSection1 .testMobileSwiper .swiper-slide .testCardMobile {
     transition: opacity 0.4s ease-in-out;
     /* Smooth transition for opacity */
     width: 100%;
@@ -307,19 +306,19 @@
     /* Override previous margin */
   }
 
-  .testSection1 .testMobileSwiper .swiper-slide:not(.swiper-slide-active) .testCardMobile {
+  .home .testSection1 .testMobileSwiper .swiper-slide:not(.swiper-slide-active) .testCardMobile {
     opacity: 0.5;
     /* Apply 50% opacity to non-active slides */
   }
 
   /* Ensure active slide has full opacity (it will by default, but good to be explicit) */
-  .testSection1 .testMobileSwiper .swiper-slide-active .testCardMobile {
+  .home .testSection1 .testMobileSwiper .swiper-slide-active .testCardMobile {
     opacity: 1;
   }
 
 
   /* Mobile Card Structure for Swiper Slides */
-  .testSection1 .testCardMobile {
+  .home .testSection1 .testCardMobile {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -329,7 +328,7 @@
     overflow: visible;
   }
 
-  .testSection1 .testCardImageWrap {
+  .home .testSection1 .testCardImageWrap {
     border-radius: 24px;
     position: relative;
     width: 100%;
@@ -346,11 +345,11 @@
   }
 
   /* Active Image Area for Mobile */
-  .testSection1 .mobileActiveImageArea {
+  .home .testSection1 .mobileActiveImageArea {
     height: 180px;
   }
 
-  .testSection1 .testCardImageWrap::before {
+  .home .testSection1 .testCardImageWrap::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -361,7 +360,7 @@
     z-index: 0;
   }
 
-  .testSection1 .testCardNumber {
+  .home .testSection1 .testCardNumber {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -374,14 +373,14 @@
     transition: 0.3s all;
   }
 
-  .testSection1 .mobileActiveNumber {
+  .home .testSection1 .mobileActiveNumber {
     font-size: 2.5rem;
     top: 15px;
     left: 15px;
     opacity: 1;
   }
 
-  .testSection1 .testCardTitle {
+  .home .testSection1 .testCardTitle {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -393,7 +392,7 @@
     transition: 0.4s all;
   }
 
-  .testSection1 .mobileActiveTitle {
+  .home .testSection1 .mobileActiveTitle {
     left: 20%;
     transform: translateX(-50%) !important;
     font-size: 1.8rem;
@@ -401,7 +400,7 @@
   }
 
   /* Mobile Content Area */
-  .testSection1 .testCardDetailsWrap {
+  .home .testSection1 .testCardDetailsWrap {
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -415,21 +414,21 @@
     transform: translateY(-30px);
   }
 
-  .testSection1 .mobileShowContent {
+  .home .testSection1 .mobileShowContent {
     opacity: 1;
     max-height: 500px;
     pointer-events: auto;
     transform: translateY(0);
   }
 
-  .testSection1 .mobileHideContent {
+  .home .testSection1 .mobileHideContent {
     opacity: 0;
     max-height: 0;
     pointer-events: none;
     transform: translateY(-150px);
   }
 
-  .testSection1 .testCardLabel {
+  .home .testSection1 .testCardLabel {
     color: var(--blue-color);
     font-size: 1.1rem;
     font-weight: 700;
@@ -437,7 +436,7 @@
     text-transform: uppercase;
   }
 
-  .testSection1 .testCardDetails {
+  .home .testSection1 .testCardDetails {
     color: var(--blue-color);
     padding: 0;
     font-size: 1rem;
@@ -449,12 +448,12 @@
     margin-bottom: 12px;
   }
 
-  .testSection1 .testCardDetails span:first-child {
+  .home .testSection1 .testCardDetails span:first-child {
     border-right: none;
     padding-right: 0;
   }
 
-  .testSection1 .testCardBtnMobile {
+  .home .testSection1 .testCardBtnMobile {
     width: 100%;
     font-weight: 500;
   }
@@ -464,83 +463,83 @@
 @media (max-width: 900px) {
 
   /* These apply to the desktop static cards when breakpoint is hit */
-  .testSection1 .testCardsRow {
+  .home .testSection1 .testCardsRow {
     flex-direction: column;
     gap: 24px;
     align-items: center;
   }
 
-  .testSection1 .testCard {
+  .home .testSection1 .testCard {
     max-width: 95vw;
     min-width: 220px;
     width: 100%;
   }
 
   /* Desktop card sizing within this breakpoint */
-  .testSection1 .cardImageArea {
+  .home .testSection1 .cardImageArea {
     border-radius: 18px;
     height: 160px;
   }
 
-  .testSection1 .activeImageArea {
+  .home .testSection1 .activeImageArea {
     height: 90px;
   }
 
-  .testSection1 .cardContentArea {
+  .home .testSection1 .cardContentArea {
     padding: 24px 16px 16px 16px;
     border-radius: 18px;
     margin-top: 12px;
   }
 
-  .testSection1 .cardTitle {
+  .home .testSection1 .cardTitle {
     font-size: 1.3rem;
     left: 18px;
     bottom: 18px;
   }
 
-  .testSection1 .cardNumber {
+  .home .testSection1 .cardNumber {
     font-size: 1.5rem;
     top: 14px;
     left: 14px;
   }
 
   /* Mobile Swiper-specific overrides for smaller screens */
-  .testSection1 .testMobileSwiper .swiper-slide {
+  .home .testSection1 .testMobileSwiper .swiper-slide {
     display: flex;
     justify-content: center;
   }
 
-  .testSection1 .testMobileSwiper .testCardMobile {
+  .home .testSection1 .testMobileSwiper .testCardMobile {
     width: 100%;
     max-width: 350px;
     /* Re-apply a max-width for smaller mobile cards if needed */
   }
 
-  .testSection1 .testMobileSwiper .testCardImageWrap {
+  .home .testSection1 .testMobileSwiper .testCardImageWrap {
     height: 490px;
   }
 
-  .testSection1 .testMobileSwiper .mobileActiveImageArea {
+  .home .testSection1 .testMobileSwiper .mobileActiveImageArea {
     height: 300px;
   }
 
 }
 
 @media (max-width: 575px) {
-  .testSection1 .testSubheading {
+  .home .testSection1 .testSubheading {
     font-size: 20px;
   }
 
-  .testSection1 .testCardTitle {
+  .home .testSection1 .testCardTitle {
     font-size: 3rem;
   }
 
-  .testSection1 .mobileActiveTitle {
+  .home .testSection1 .mobileActiveTitle {
     font-size: 1.8rem;
   }
 
-  .buttonBlue,
-  .buttonSkyBlue {
+  .home .buttonBlue,
+  .home .buttonSkyBlue {
     padding: 10px 20px;
   }
 }

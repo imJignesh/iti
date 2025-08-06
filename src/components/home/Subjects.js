@@ -9,7 +9,7 @@ const subjectRows = [
   ["Business Studies"],
 ];
 
-export default function Subjects({}) {
+export default function Subjects({ }) {
   return (
     <section
       data-scroll
@@ -19,7 +19,7 @@ export default function Subjects({}) {
       style={{ animationDelay: "0.2s" }}
     >
       <div className="container">
-        <div className="subjectSectionInner">
+        <div className="subjectSectionInner blue">
           <img
             data-scroll
             data-scroll-class="is-clipped"

@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useRef, useState } from 'react';
 
+// You must add 'import "locomotive-scroll/dist/locomotive-scroll.css";'
+// to your `pages/_app.js` file to avoid a build error.
 
 // Fetcher function for SWR to handle API requests
 const fetcher = async (url) => {
@@ -20,11 +22,11 @@ const fetcher = async (url) => {
 // Helper function to create a URL-friendly slug from a string
 const slugify = (text) => {
     return text.toString().toLowerCase()
-        .replace(/\s+/g, '-')       // Replace spaces with -
-        .replace(/[^\w-]+/g, '')      // Remove all non-word chars
-        .replace(/--+/g, '-')         // Replace multiple - with single -
-        .replace(/^-+/, '')          // Trim - from start of text
-        .replace(/-+$/, '');          // Trim - from end of text
+        .replace(/\s+/g, '-')
+        .replace(/[^\w-]+/g, '')
+        .replace(/--+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
 };
 
 // Component to display the table of contents
@@ -56,7 +58,6 @@ const TableOfContents = ({ toc }) => {
 const TOCPostContent = ({ content, toc }) => {
     if (!content) return null;
 
-    // We'll insert the TOC right before the first h2 tag.
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = content;
 
@@ -68,14 +69,9 @@ const TOCPostContent = ({ content, toc }) => {
     }
 
     const tocElement = <TableOfContents toc={toc} />;
-    
-    // Convert tempDiv's innerHTML back to a string for dangerouslySetInnerHTML
+
     let newContent = tempDiv.innerHTML;
     if (firstH2) {
-        // Find the placeholder and inject the TOC component's HTML
-        // This is a bit of a hacky way to do it since we can't directly inject a React component.
-        // A better long-term solution might be to use a library to process the HTML.
-        // For this example, we'll manually replace the placeholder.
         const tocPlaceholder = `<div id="toc-container"></div>`;
         const tocHtml = `<div class="my-4"><div class="card-body"><h5 class="toc-title">Table of Contents</h5><nav><ul class="list-unstyled mb-0 toc-list">${toc.map(({ text, id }) => `<li class="toc-item py-1"><a href="#${id}" class="text-decoration-none">${text}</a></li>`).join('')}</ul></nav></div></div>`;
         newContent = newContent.replace(tocPlaceholder, tocHtml);
@@ -94,22 +90,18 @@ export default function PostDetail() {
     const router = useRouter();
     const { slug } = router.query;
     const [toc, setToc] = useState([]);
-    
+
     const postApiUrl = slug ? `https://ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed` : null;
     const { data, error, isLoading } = useSWR(postApiUrl, fetcher);
 
-    // Refs for Locomotive Scroll
-    const scrollRef = useRef(null);
     const scrollInstanceRef = useRef(null);
 
-    // useEffect for initializing Locomotive Scroll
     useEffect(() => {
         let scroll;
         const initScroll = async () => {
             const LocomotiveScroll = (await import("locomotive-scroll")).default;
-            if (!scrollRef.current) return;
             scroll = new LocomotiveScroll({
-                el: scrollRef.current,
+                el: document.body,
                 smooth: true,
                 lerp: 0.1,
             });
@@ -126,34 +118,28 @@ export default function PostDetail() {
         };
     }, []);
 
-    // New useEffect to generate the TOC
     useEffect(() => {
         if (data && data[0]?.content?.rendered) {
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = data[0].content.rendered;
-            
+
             const headings = Array.from(tempDiv.querySelectorAll('h2'));
             const generatedToc = headings.map(heading => {
                 const text = heading.textContent;
                 const id = slugify(text);
-                // Add the id attribute to the h2 tag itself for linking
                 heading.id = id;
                 return { text, id };
             });
 
-            // Re-render the content with the updated heading ids
             data[0].content.rendered = tempDiv.innerHTML;
             setToc(generatedToc);
 
-            // Update Locomotive Scroll instance after content changes
             if (scrollInstanceRef.current?.update) {
                 scrollInstanceRef.current.update();
-                console.log("✅ LocomotiveScroll updated after content change (detail page)");
             }
         }
     }, [data]);
 
-    // Handle loading state
     if (router.isFallback || isLoading) {
         return (
             <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '300px' }}>
@@ -164,14 +150,12 @@ export default function PostDetail() {
         );
     }
 
-    // Handle error state
     if (error) {
         return <div className="alert alert-danger my-5 p-4">Failed to load post. Please try again later.</div>;
     }
 
     const post = data?.[0];
 
-    // Handle case where no post is found
     if (!post) {
         return (
             <div className="text-center text-muted h4 py-5">
@@ -185,52 +169,112 @@ export default function PostDetail() {
     }
 
     const featuredImage = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
-
-    // Get the author name
-    const authorName = post._embedded?.author?.[0]?.name || 'N/A';
-    
-    // Get published date
+    const authorName = post._embedded?.author?.[0]?.name || 'Sumit Advani';
     const publishedDate = post.date ? new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'N/A';
-    
-    // Get updated date (if available)
     const updatedDate = post.modified ? new Date(post.modified).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
 
+    const postUrl = typeof window !== 'undefined' ? window.location.href : '';
+    const postTitle = post.title.rendered.replace(/<\/?[^>]+(>|$)/g, "");
+
     return (
-        <div ref={scrollRef} data-scroll-container>
+        <>
             <section className="post-detail-section py-5" data-scroll data-scroll-section>
                 <div className="container">
                     <h1 className="mb-4 display-4 main-title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                    
                     <div className="mb-2 post-date">
-                            <span>Published on {publishedDate} </span>
-                            <span>|</span>
-                            {updatedDate && (
-                                <span>Updated on {updatedDate}</span>
-                            )}
+                        <span>Published on {publishedDate} </span>
+                        <span>|</span>
+                        {updatedDate && (
+                            <span>Updated on {updatedDate}</span>
+                        )}
                     </div>
-
                     <div className="mb-2 post-author">
-                            <span>By Sumit Advani</span>
+                        <span>By {authorName}</span>
                     </div>
 
+                    <div className="post-share-icons mb-4">
+                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(postTitle)}`} target="_blank" rel="noopener noreferrer">X</a>
+                        <a href={`mailto:?subject=${encodeURIComponent(postTitle)}&body=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer">Mail</a>
+                    </div>
 
                     {featuredImage && (
                         <div className="text-center mb-5 image-feature">
                             <img
                                 src={featuredImage}
                                 alt={post.title.rendered}
-                                className="img-fluid    "
+                                className="img-fluid"
                                 style={{ objectFit: 'cover', width: '100%' }}
-                                onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/1200x500/E0F2F7/333333?text=No+Image`; }}
-                                onLoad={() => scrollInstanceRef.current?.update && scrollInstanceRef.current.update()}
                             />
                         </div>
                     )}
-                    
-                    {/* Render the Table of Contents and Post Content */}
-                    <TOCPostContent content={post.content.rendered} toc={toc} />
                 </div>
             </section>
-        </div>
+
+            <section
+                className="post-content-and-sidebar-section py-5"
+                data-scroll
+                data-scroll-section
+            >
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-8">
+                            <TOCPostContent content={post.content.rendered} toc={toc} />
+                        </div>
+
+                        <div className="col-lg-4">
+                            <div className="sticky-sidebar-wrapper">
+                                <div className="sidebar-image mb-4">
+                                    <img
+                                        src="/images/blog-sidebar.png"
+                                        alt="Get a Free Counseling"
+                                        className="img-fluid w-100 rounded"
+                                    />
+                                </div>
+
+                                <div className="form-container">
+                                    <h2>Get a Free Demo Class +<br />Free Study Resources</h2>
+                                    <form>
+                                        <div className="form-row">
+                                            <div className="form-group">
+                                                <label htmlFor="name">Name</label>
+                                                <input type="text" id="name" placeholder="" />
+                                            </div>
+                                            <div className="form-group">
+                                                <label htmlFor="email">Email</label>
+                                                <input type="email" id="email" placeholder="" />
+                                            </div>
+                                        </div>
+
+                                        <div className="form-group">
+                                            <label htmlFor="phone">Phone Number</label>
+                                            <div className="phone-input">
+                                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE Flag" className="flag" />
+                                                <input type="text" id="phone" placeholder="+971" />
+                                            </div>
+                                        </div>
+
+                                        <div className="form-group">
+                                            <label htmlFor="course">Tests/Courses</label>
+                                            <select id="course">
+                                                <option>IB Diploma</option>
+                                                <option>IGCSE</option>
+                                                <option>ACT</option>
+                                                <option>SAT</option>
+                                            </select>
+                                        </div>
+
+                                        <button type="submit" className="submit-btn">
+                                            Submit
+                                            <span className="arrow">→</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
     );
 }

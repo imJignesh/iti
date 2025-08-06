@@ -1,4 +1,4 @@
-h1.main-title{ 
+h1.main-title {
     font-weight: 700 !important;
     line-height: 1;
     text-transform: uppercase;
@@ -10,37 +10,57 @@ h1.main-title{
     display: inline-block;
     text-align: center;
 }
+
 .post-date {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-.post-date span{
-    font-size:22px;
+
+.post-date span {
+    font-size: 22px;
     font-weight: 600;
-    color:#233467;
+    color: #233467;
 }
-.post-author{
+
+.post-author {
     display: flex;
     justify-content: center;
 }
-.post-author span{
-    font-size:20px;
+
+.post-author span {
+    font-size: 20px;
     font-weight: 600;
-    color:rgba(35,52,103,0.51);
+    color: rgba(35, 52, 103, 0.51);
     text-transform: uppercase;
 }
-.image-feature img{
+
+.image-feature img {
     border-radius: 40px;
     overflow: hidden;
     height: 800px;
 }
-.post-content p{
+
+.post-content img {
+    max-width: 100%;
+}
+
+.post-content p {
     color: #161616;
     font-weight: 500;
     font-size: 21px;
 }
-.post-content h2{
+
+/* Sticky sidebar styling using native CSS */
+.sticky-sidebar-wrapper {
+    position: -webkit-sticky;
+    /* For Safari compatibility */
+    /* position: sticky; */
+    top: 30px;
+    /* Adjust this value as needed, e.g., to account for a fixed header */
+}
+
+.post-content h2 {
     font-weight: 500 !important;
     line-height: 1;
     text-transform: uppercase;
@@ -50,21 +70,14 @@ h1.main-title{
     padding: 20px 0px;
     position: relative;
     display: inline-block;
-    text-align: center;
+    text-align: left;
 }
-.post-content p{
-    color: #161616;
-    font-weight: 500;
-    font-size: 21px;
-}
-.post-content a{
-    color: #73CBFB;
-}
-.post-content h2{
+
+.post-content h3 {
     font-weight: 500 !important;
     line-height: 1;
     text-transform: uppercase;
-    background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
+    background: linear-gradient(to left, var(--green-color), var(--lightgreen-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 20px 0px;
@@ -72,19 +85,8 @@ h1.main-title{
     display: inline-block;
     text-align: center;
 }
-.post-content h3{
-    font-weight: 500 !important;
-    line-height: 1;
-    text-transform: uppercase;
-    background: linear-gradient(to left, var(--green-color),var(--lightgreen-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 20px 0px;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-}
-.toc-title{
+
+.toc-title {
     font-size: 32px;
     font-weight: 700 !important;
     line-height: 1;
@@ -97,19 +99,114 @@ h1.main-title{
     display: inline-block;
     text-align: center;
 }
+
 .toc-list li {
-  padding: 15px 20px;
-  background: linear-gradient(to right, #E7F6FF, #A3CAF5);
+    padding: 15px 20px;
+    background: linear-gradient(to right, #E7F6FF, #A3CAF5);
 }
 
 .toc-list li:nth-child(odd) {
-  background: linear-gradient(to right, #A3CAF5, #E7F6FF);
+    background: linear-gradient(to right, #A3CAF5, #E7F6FF);
 }
-.toc-list li a{
-    color:#161616;
+
+.toc-list li a {
+    color: #161616;
     font-size: 20px;
     font-weight: 600;
 }
-.toc-list{
-    width: 60%;
+
+.toc-list {
+    width: 100%;
+}
+
+/* New form styling from your provided code */
+.form-container {
+    background: linear-gradient(145deg, #d2e4f9, #f0f7ff);
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 50, 0.15);
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1f2d61;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.form-group label {
+    font-size: 12px;
+    color: #1f2d61;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 6px 0;
+    background: transparent;
+    font-size: 14px;
+    outline: none;
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.flag {
+    width: 28px;
+    height: 20px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(40deg, rgba(22, 22, 100, 1) 23%, rgba(63, 136, 186, 1) 102%);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+.arrow {
+    background: white;
+    color: #1f2d61;
+    border-radius: 50%;
+    padding: 4px 7px;
+    font-size: 12px;
+    font-weight: bold;
 }
