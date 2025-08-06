@@ -1,5 +1,5 @@
 /* Hero Banner Section */
-.hero {
+.home .hero {
   padding: 100px 0;
   background: url(/images/banner-bg.png);
   background-repeat: no-repeat;
@@ -18,12 +18,12 @@
   }
 }
 
-.hero .heroMain {
+.home .hero .heroMain {
   display: flex;
   align-items: center;
 }
 
-.hero .heroLeft .heroTitle {
+.home .hero .heroLeft .heroTitle {
   font-size: 3.4vw;
   font-weight: 700;
   margin: 40px 0 30px 0;
@@ -32,7 +32,7 @@
   color: var(--blue-color);
 }
 
-.hero .highlight {
+.home .hero .highlight {
   background: linear-gradient(to left,
       var(--green-color),
       var(--lightgreen-color));
@@ -41,7 +41,7 @@
   background-clip: text;
 }
 
-.hero .heroLeft .heroParagraph {
+.home .hero .heroLeft .heroParagraph {
   padding-top: 30px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 1.4vw;
@@ -50,16 +50,16 @@
   line-height: 1.5;
 }
 
-.hero .heroParagraph b,
-.hero .heroParagraph strong {
+.home .hero .heroParagraph b,
+.home .hero .heroParagraph strong {
   font-weight: 400;
 }
 
-.hero .heroParagraph strong {
+.home .hero .heroParagraph strong {
   display: none;
 }
 
-.hero .heroParagraph span {
+.home .hero .heroParagraph span {
   text-transform: uppercase;
   display: block;
   font-size: 1.4vw;
@@ -68,16 +68,16 @@
   margin-bottom: 20px;
 }
 
-.hero .heroRight {
+.home .hero .heroRight {
   display: flex;
   justify-content: center;
 }
 
-.hero .heroRight {
+.home .hero .heroRight {
   position: relative;
 }
 
-.hero .videoContainer {
+.home .hero .videoContainer {
   position: relative;
   width: 100%;
   height: 100%;
@@ -85,7 +85,7 @@
   overflow: hidden;
 }
 
-.hero .heroVideo {
+.home .hero .heroVideo {
   width: 100%;
   height: 600px;
   max-height: 700px;
@@ -98,7 +98,7 @@
   -webkit-mask-size: contain;
 }
 
-.hero .videoMask {
+.home .hero .videoMask {
   position: absolute;
   top: 0;
   left: 0;
@@ -109,7 +109,7 @@
   display: none;
 }
 
-.hero .maskImage {
+.home .hero .maskImage {
   width: 100%;
   height: 100%;
   max-height: 600px;
@@ -119,7 +119,7 @@
   opacity: 0.8;
 }
 
-.hero .heroRight .heroImage {
+.home .hero .heroRight .heroImage {
   width: 100%;
   height: 100%;
   max-height: 600px;
@@ -127,7 +127,7 @@
   object-position: right;
 }
 
-.hero .heroRight .buttonGroup {
+.home .hero .heroRight .buttonGroup {
   position: absolute;
   top: 70%;
   bottom: 0;
@@ -140,38 +140,38 @@
   justify-content: flex-end;
 }
 
-.hero .heroRight .buttonGroup button {
+.home .hero .heroRight .buttonGroup button {
   font-size: 22px;
   font-weight: 400;
   line-height: 16px;
   padding: 25px 30px;
 }
 
-.hero .heroRight .buttonGroup button img {
+.home .hero .heroRight .buttonGroup button img {
   width: 40px;
 }
 
 @media (max-width: 1800px) {
-  .hero {
+  .home .hero {
     background-size: 640px;
     background-position: top left -40px;
   }
 }
 
 @media (max-width: 1500px) {
-  .hero {
+  .home .hero {
     background-position: top 10% left;
   }
 }
 
 @media (max-width: 1280px) {
-  .hero .heroRight .buttonGroup {
+  .home .hero .heroRight .buttonGroup {
     top: 65%;
     left: 37%;
     gap: 10px;
   }
 
-  .hero .heroRight .buttonGroup button {
+  .home .hero .heroRight .buttonGroup button {
     padding: 5px 20px;
     gap: 10px;
     font-size: 16px;
@@ -179,55 +179,55 @@
 }
 
 @media (max-width: 1024px) {
-  .hero .heroLeft .heroTitle {
+  .home .hero .heroLeft .heroTitle {
     font-size: 35px;
   }
 
-  .hero .heroLeft .heroParagraph {
+  .home .hero .heroLeft .heroParagraph {
     font-size: 18px;
   }
 
-  .hero .heroLeft .heroParagraph span {
+  .home .hero .heroLeft .heroParagraph span {
     font-size: 16px;
   }
 }
 
 @media (max-width: 991px) {
-  .hero {
+  .home .hero {
     padding-bottom: 30px;
     animation: revealClipLeftToRight 1.8s 1s ease forwards;
   }
 
-  .hero .heroRight .buttonGroup {
+  .home .hero .heroRight .buttonGroup {
     top: 70%;
     left: 43%;
     right: 24%;
     width: auto;
   }
 
-  .hero .heroLeft div {
+  .home .hero .heroLeft div {
     text-align: center;
   }
 
-  .hero .heroParagraph b {
+  .home .hero .heroParagraph b {
     display: none;
   }
 
-  .hero .heroParagraph strong {
+  .home .hero .heroParagraph strong {
     display: block;
     opacity: 0.6;
     font-weight: 500;
   }
 
-  .hero .heroRight .heroImage,
-  .hero .heroVideo {
+  .home .hero .heroRight .heroImage,
+  .home .hero .heroVideo {
     object-position: center;
     height: 500px;
   }
 }
 
 @media (max-width: 767px) {
-  .hero {
+  .home .hero {
     background: url(/images/banner-bg-mobile.png);
     background-repeat: no-repeat;
     background-size: 85%;
@@ -247,27 +247,27 @@
     }
   }
 
-  .hero .heroRight .buttonGroup {
+  .home .hero .heroRight .buttonGroup {
     left: 40%;
     right: 15%;
   }
 
-  .hero .heroLeft .heroTitle {
+  .home .hero .heroLeft .heroTitle {
     margin: 20px auto;
     max-width: 75%;
     line-height: 1;
   }
 
-  .hero .heroLeft .heroParagraph {
+  .home .hero .heroLeft .heroParagraph {
     padding-top: 10px;
     margin-bottom: 10px;
   }
 
-  .hero .heroLeft .heroParagraph span {
+  .home .hero .heroLeft .heroParagraph span {
     margin-bottom: 5px;
   }
 
-  .hero .heroRight .mobileContent {
+  .home .hero .heroRight .mobileContent {
     font-size: 22px;
     margin: 0;
     line-height: 30px;
@@ -275,33 +275,33 @@
 }
 
 @media (max-width: 700px) {
-  .hero {
+  .home .hero {
     background-position: top -1% right;
     background-size: 460px;
   }
 }
 
 @media (max-width: 575px) {
-  .hero {
+  .home .hero {
     padding: 30px 0 0 0;
   }
 
-  .hero .heroRight .buttonGroup {
+  .home .hero .heroRight .buttonGroup {
     width: max-content;
   }
 
-  .hero .heroVideo {
+  .home .hero .heroVideo {
     height: 400px;
   }
 
-  .hero .heroLeft .heroTitle {
+  .home .hero .heroLeft .heroTitle {
     font-size: 25px;
     margin: 15px auto;
     max-width: 70%;
     line-height: 1.2;
   }
 
-  .hero .heroRight .mobileContent {
+  .home .hero .heroRight .mobileContent {
     left: 38%;
     max-width: 55%;
     font-size: 18px;
@@ -309,84 +309,84 @@
     line-height: 25px;
   }
 
-  .hero .heroLeft .heroParagraph span {
+  .home .hero .heroLeft .heroParagraph span {
     margin-bottom: 25px;
     font-size: 14px;
   }
 
-  .hero .heroParagraph strong {
+  .home .hero .heroParagraph strong {
     font-size: 15px;
     max-width: 75%;
     display: inline-block;
   }
 
-  .hero .heroRight .buttonGroup {
+  .home .hero .heroRight .buttonGroup {
     justify-content: space-evenly;
     top: 68%;
   }
 
-  .hero .heroRight .buttonGroup button {
+  .home .hero .heroRight .buttonGroup button {
     padding: 10px 25px;
   }
 }
 
 @media (max-width: 425px) {
-  .hero {
+  .home .hero {
     padding: 15px 0 0 0;
     background-size: 90%;
   }
 
-  .hero .heroRight .buttonGroup {
+  .home .hero .heroRight .buttonGroup {
     top: 68%;
     left: 35%;
   }
 
-  .hero .heroRight .buttonGroup button {
+  .home .hero .heroRight .buttonGroup button {
     font-size: 14px;
     padding: 8px 12px;
   }
 
-  .hero .heroRight .buttonGroup button img {
+  .home .hero .heroRight .buttonGroup button img {
     width: 25px;
     height: 25px;
   }
 
-  .hero .heroMain h3 {
+  .home .hero .heroMain h3 {
     font-size: 20px;
   }
 
-  .hero .heroVideo {
+  .home .hero .heroVideo {
     height: 400px;
   }
 
-  .hero .heroRight .mobileContent {
+  .home .hero .heroRight .mobileContent {
     font-size: 16px;
     line-height: 18px;
   }
 
-  .hero .heroLeft .heroParagraph span {
+  .home .hero .heroLeft .heroParagraph span {
     margin-bottom: 25px;
     font-size: 14px;
   }
 
-  .hero .heroParagraph strong {
+  .home .hero .heroParagraph strong {
     font-size: 15px;
     max-width: 75%;
     display: inline-block;
   }
 
-  .hero .heroRight .buttonGroup {
+  .home .hero .heroRight .buttonGroup {
     justify-content: space-evenly;
     top: 68%;
   }
 
-  .hero .heroRight .buttonGroup button {
+  .home .hero .heroRight .buttonGroup button {
     padding: 10px 25px;
   }
 }
 
 @media (max-width: 375px) {
-  .hero .heroVideo {
+  .home .hero .heroVideo {
     height: 300px;
   }
 }

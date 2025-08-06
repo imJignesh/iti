@@ -35,6 +35,7 @@
   line-height: 1.4;
 }
 
+/* 
 .SubHeading {
   font-size: 0.9rem;
   font-weight: 600;
@@ -43,7 +44,7 @@
   text-transform: uppercase;
   color: #1e3a8a;
   padding-top: 10px;
-}
+} */
 
 /* Carousel container */
 .achievements-container {

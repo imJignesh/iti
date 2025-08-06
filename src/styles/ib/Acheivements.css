@@ -35,7 +35,7 @@
   line-height: 1.4;
 }
 
-.SubHeading {
+/* .SubHeading {
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -43,7 +43,7 @@
   text-transform: uppercase;
   color: #1e3a8a;
   padding-top: 10px;
-}
+} */
 
 /* Carousel container */
 .achievements-container {
@@ -71,22 +71,22 @@
 
 /* Card */
 .achievements-slideCard {
-    background-image: url('/images/uni-subtract.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    border-radius: 15px;
-    /* position: relative; */
-    /* overflow: hidden; */
-    /* padding: 20px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 350px;
-    /* box-shadow: none; */
-    width: 260px;
+  background-image: url('/images/uni-subtract.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 15px;
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  /* box-shadow: none; */
+  width: 260px;
 }
 
 /* Logo */
@@ -105,15 +105,15 @@
 
 /* Score */
 .achievements-score {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1e3a8a;
-    position: absolute;
-    top: 64%;
-    left: 52%;
-    padding: 10px 20px;
-    /* background: #fff; */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  position: absolute;
+  top: 64%;
+  left: 52%;
+  padding: 10px 20px;
+  /* background: #fff; */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 /* Info below card */
@@ -196,18 +196,22 @@
   stroke-width: 2;
 }
 
-.swiper-button-prev:after, .swiper-button-next:after{
+.swiper-button-prev:after,
+.swiper-button-next:after {
   display: none !important;
 }
-.customNavBtn{
-border: 0;
-background-color: none;
+
+.customNavBtn {
+  border: 0;
+  background-color: none;
 }
+
 /* Responsive tweaks */
 @media (max-width: 1024px) {
   .achievements-score {
     font-size: 2rem;
   }
+
   .achievements-name {
     font-size: 1rem;
   }
@@ -218,20 +222,23 @@ background-color: none;
     padding: 15px;
     min-height: 200px;
   }
+
   .achievements-score {
     font-size: 1.5rem;
   }
+
   .achievements-navButton {
     width: 30px;
     height: 30px;
   }
-  .achievements-arrow {
-  }
+
+  .achievements-arrow {}
+
   .achievementsHeadings p {
-  font-size: 1rem;
-  max-width: 90%;
-  margin: 0 auto;
-  color: rgba(0, 0, 0, 0.5);
-  line-height: 1.4;
-}
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+  }
 }

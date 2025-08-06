@@ -1,6 +1,5 @@
 /* Moving Banner Section  */
-
-.bannerScroll {
+.home .bannerScroll {
   margin: 100px 0;
   width: 100%;
   overflow: hidden;
@@ -10,7 +9,8 @@
   align-items: center;
   position: relative;
 }
-.bannerScroll b {
+
+.home .bannerScroll b {
   display: inline-block;
   margin: 0;
   white-space: nowrap;
@@ -24,16 +24,19 @@
   line-height: 60px;
   animation: bannerScrollAnim 28s linear infinite;
 }
+
 @keyframes bannerScrollAnim {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
+
 @media (max-width: 600px) {
-  .bannerScroll span {
+  .home .bannerScroll span {
     font-size: 1.1rem;
     line-height: 36px;
   }
@@ -46,12 +49,14 @@
     transform: scaleX(0.7) scaleY(0.7) skewX(12deg);
     filter: blur(8px);
   }
+
   60% {
     opacity: 1;
     letter-spacing: 0.2em;
     transform: scaleX(1.05) scaleY(1.05) skewX(-2deg);
     filter: blur(0.5px);
   }
+
   100% {
     opacity: 1;
     letter-spacing: 0.25em;
@@ -60,14 +65,16 @@
   }
 }
 
-.bannerSplitIn {
+.home .bannerSplitIn {
   animation: bannerSplitIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
+
 @media (max-width: 575px) {
-  .bannerScroll {
+  .home .bannerScroll {
     margin: 40px 0;
   }
-  .bannerScroll b {
+
+  .home .bannerScroll b {
     font-size: 1rem;
     line-height: 40px;
   }

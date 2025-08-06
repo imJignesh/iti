@@ -91,41 +91,43 @@ const Home = () => {
 
   return (
     <>
-      {/* Banner Section */}
-      <Hero />
+      <div className="home">
+        {/* Banner Section */}
+        <Hero />
 
-      {/* Course Section  */}
-      <Course />
+        {/* Course Section  */}
+        <Course />
 
-      {/* Moving Banner Section */}
-      <MovingBanner />
+        {/* Moving Banner Section */}
+        <MovingBanner />
 
-      {/* About US Section  */}
-      <About />
-      {/* Test Section  */}
-      <Test
-        setActive={setActive}
-        isMobileSwiper={isMobileSwiper}
-        active={active}
-      />
+        {/* About US Section  */}
+        <About />
+        {/* Test Section  */}
+        <Test
+          setActive={setActive}
+          isMobileSwiper={isMobileSwiper}
+          active={active}
+        />
 
-      {/* Subject Section */}
-      <Subjects />
+        {/* Subject Section */}
+        <Subjects />
 
-      {/* Alumni Section */}
-      <Alumni setActiveIndex={setActiveIndex} />
+        {/* Alumni Section */}
+        <Alumni setActiveIndex={setActiveIndex} />
 
-      {/* Our USPs */}
-      <Usps />
+        {/* Our USPs */}
+        <Usps />
 
-      {/* Trainers Section */}
-      <Trainers />
+        {/* Trainers Section */}
+        <Trainers />
 
-      {/* Testimonial Section */}
-      <Testimonial />
+        {/* Testimonial Section */}
+        <Testimonial />
 
-      {/* Blogs Section  */}
-      <Blog />
+        {/* Blogs Section  */}
+        <Blog />
+      </div>
     </>
   );
 };

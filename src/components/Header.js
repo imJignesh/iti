@@ -33,9 +33,9 @@ const Header = () => {
 
     return (
         <header className={`${styles.header} ${show ? styles.headerAnimated : styles.headerHidden}`}>
-            <div  className={`d-flex w-100 m-0 ${styles.header_left_content}`}>
+            <div className={`d-flex w-100 m-0 ${styles.header_left_content}`}>
                 <div className={`col-auto ${styles.logo}`}>
-                    <Image src="/images/logo.svg" width={200} height={80} quality={100}  />
+                    <Image src="/images/logo.svg" width={200} height={80} quality={100} alt='Ignited Training Institute' />
                 </div>
                 {/* Nav links: hidden on mobile/tablet unless toggled, always visible on lg+ */}
                 <nav
@@ -43,7 +43,7 @@ const Header = () => {
                     style={navOpen ? { left: 0 } : {}}
                 >
                     <div className={styles.megaMenuWrapper}>
-                        <a href="#" className={styles.link} onClick={e => {e.preventDefault();}}>Lorem</a>
+                        <a href="#" className={styles.link} onClick={e => { e.preventDefault(); }}>Lorem</a>
                         <div className={styles.megaMenu}>
                             <div className={styles.megaMenuContent}>
                                 <div className={styles.megaMenuLeft}>
@@ -53,19 +53,19 @@ const Header = () => {
                                 </div>
                                 <div className={styles.megaMenuRight}>
                                     <a href='/ibdp' className={styles.megaMenuBox}>
-                                        <img src="/images/header-menu1.png" alt="Box 1" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
+                                        <img src="/images/header-menu1.png" alt="IBDP" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                         <h4>IBDP</h4>
                                     </a>
                                     <a href='#' className={styles.megaMenuBox}>
-                                        <img src="/images/header-menu2.png" alt="Box 2" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
+                                        <img src="/images/header-menu2.png" alt="MYP" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                         <h4>MYP</h4>
                                     </a>
                                     <a href='#' className={styles.megaMenuBox}>
-                                        <img src="/images/header-menu3.png" alt="Box 3" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
+                                        <img src="/images/header-menu3.png" alt="A-LEVELS" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                         <h4>A LEVELS</h4>
                                     </a>
                                     <a href='#' className={styles.megaMenuBox}>
-                                        <img src="/images/header-menu4.png" alt="Box 4" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
+                                        <img src="/images/header-menu4.png" alt="I/GCSE" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                         <h4>I/GCSE</h4>
                                     </a>
                                 </div>
@@ -80,13 +80,13 @@ const Header = () => {
             <div className={`d-flex justify-content-end w-100 m-0 ${styles.header_right_content}`}>
                 <div className="col-auto p-0  d-sm-block">
                     <button>
-                        <Image src="/images/mobile.png" width={25} height={25} quality={100} />
+                        <Image src="/images/mobile.png" width={25} height={25} quality={100} alt="Call" />
                         Call
                     </button>
                 </div>
                 <div className="col-auto p-0  d-sm-block">
                     <button>
-                        <Image src="/images/whatsapp.png" width={25} height={25} quality={100} />
+                        <Image src="/images/whatsapp.png" width={25} height={25} quality={100} alt='Whatsapp' />
                         Whatsapp
                     </button>
                 </div>
@@ -98,7 +98,7 @@ const Header = () => {
                     onClick={() => setNavOpen((open) => !open)}
                     style={{ border: 'none', background: 'transparent' }}
                 >
-                    <Image src="/images/hamburger.png" width={35} height={35} quality={100} />
+                    <Image src="/images/hamburger.png" width={35} height={35} quality={100} alt='Hamburger' />
                 </button>
             </div>
         </header>

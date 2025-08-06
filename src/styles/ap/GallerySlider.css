@@ -1,5 +1,3 @@
-
-
 .gallery-swiperWrapper {
   position: relative;
   padding-bottom: 60px;
@@ -15,15 +13,17 @@
   text-align: center;
 }
 
-.gallery-swapper  .swiper-button-prev:after, .swiper-button-next:after{
+.gallery-swapper .swiper-button-prev:after,
+.swiper-button-next:after {
   display: none !important;
-border: 0 !important;
-background-color: none !important;
+  border: 0 !important;
+  background-color: none !important;
 
 }
-.gallery-swapper  .customNavBtn{
-border: 0 !important;
-background-color: none !important;
+
+.gallery-swapper .customNavBtn {
+  border: 0 !important;
+  background-color: none !important;
 }
 
 /* Header */
@@ -64,7 +64,7 @@ background-color: none !important;
   line-height: 1.4;
 }
 
-.SubHeading {
+/* .SubHeading {
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -72,7 +72,7 @@ background-color: none !important;
   text-transform: uppercase;
   color: #1e3a8a;
   padding-top: 10px;
-}
+} */
 
 
 .gallerySection .galleryHeadings:before {
@@ -92,35 +92,38 @@ background-color: none !important;
   z-index: -1;
 }
 
-.gallery-slider .swiper-slide-shadow{
-  opacity: 0 !important; 
+.gallery-slider .swiper-slide-shadow {
+  opacity: 0 !important;
 }
-.gallery-swipper .gallery-text{
+
+.gallery-swipper .gallery-text {
   display: none;
 }
-.gallery-swipper .swiper-slide-active  .gallery-text {
-display: table;
+
+.gallery-swipper .swiper-slide-active .gallery-text {
+  display: table;
 }
 
 @media (max-width: 767px) {
 
-.gallery-slider{
-margin: 0;
-margin-right: 0 !important;
-margin-left: 0 !important;
-padding: 0 !important;
-}
+  .gallery-slider {
+    margin: 0;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
 
-.gallery-slider .row{
-margin: 0;
-margin-right: 0 !important;
-margin-left: 0 !important;
-padding: 0 !important;
-}
-.gallery-slider .col-12{
+  .gallery-slider .row {
+    margin: 0;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
 
-margin-right: 0 !important;
-margin-left: 0 !important;
-padding: 0 !important;
-}
+  .gallery-slider .col-12 {
+
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
 }
