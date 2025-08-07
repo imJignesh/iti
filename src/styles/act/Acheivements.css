@@ -35,6 +35,7 @@
   line-height: 1.4;
 }
 
+
 /* 
 .SubHeading {
   font-size: 0.9rem;
@@ -241,118 +242,5 @@
     margin: 0 auto;
     color: rgba(0, 0, 0, 0.5);
     line-height: 1.4;
-  }
-}
-
-
-
-/*Table*/
-.actTestHeadings {
-  text-align: center;
-  padding-bottom: 30px
-}
-
-.act-exam-overview {
-  padding: 60px 0;
-}
-
-.act-table-container {
-  margin-top: 40px;
-  overflow-x: auto;
-}
-
-.act-exam-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 0 auto;
-  /* No background-color here, as rows will handle it */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid #dee2e6;
-  border: 1px solid #161664;
-}
-
-.act-exam-table th,
-.act-exam-table td {
-  padding: 15px 20px;
-  text-align: left;
-
-  color: #495057;
-}
-
-.act-exam-table td {
-  border-right: 1px solid #161664;
-}
-
-/* Header row background with gradient */
-.act-exam-table thead tr {
-  background: linear-gradient(to right, #A3CAF5, #E7F6FF);
-  /* Remove direct color here, as th will handle text color */
-  font-weight: 500;
-}
-
-/* Text color for each heading (th) with "gradient" */
-.act-exam-table thead th {
-  background: linear-gradient(to right, #161F5A, #E7F6FF);
-  /* The requested text "gradient" */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  border-right: 1px solid #161664;
-}
-
-
-/* Even body rows background with gradient */
-.act-exam-table tbody tr:nth-of-type(even) {
-  background: linear-gradient(to right, #E3EFFC, #F8FCFF);
-}
-
-/* Odd body rows (optional, keeps default or can set a single color) */
-.act-exam-table tbody tr:nth-of-type(odd) {
-  background-color: #ffffff;
-  /* Default white background for odd rows */
-}
-
-
-.act-exam-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.act-exam-table th:last-child,
-.act-exam-table td:last-child {
-  border-right: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-
-  .act-exam-table th,
-  .act-exam-table td {
-    padding: 10px 15px;
-    font-size: 0.9em;
-  }
-
-  .achievementsTitle {
-    font-size: 1.8em;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .act-exam-table th,
-  .act-exam-table td {
-    padding: 8px 10px;
-    font-size: 0.8em;
-  }
-
-  .achievementsTitle {
-    font-size: 1.5em;
-  }
-
-  .SubHeading {
-    font-size: 0.9em;
   }
 }

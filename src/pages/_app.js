@@ -23,8 +23,13 @@ import "@/styles/blog/Blogpg.css";
 import "@/styles/slug/slug.css";
 
 //ACT page Css
-import "@/styles/act/Acheivements.css";
-import "@/styles/act/Curriculum.css"; // plain CSS import
+import "@/styles/act/Hero.css";
+// import "@/styles/act/Acheivements.css";
+import "@/styles/act/GallerySlider.css";
+import "@/styles/act/Subjects.css";
+import "@/styles/act/Curriculum.css";
+
+
 // import "@/styles/act/Subjects.css";
 import "@/styles/act/Usps.css";
 import "@/styles/act/Faq.css";
@@ -33,7 +38,7 @@ import "@/styles/act/GallerySlider.css";
 
 
 //AP page Css
-import "@/styles/ap/Acheivements.css";
+import "@/styles/ap/Hero.css";
 import "@/styles/ap/Curriculum.css"; // plain CSS import
 // import "@/styles/ap/Subjects.css";
 import "@/styles/ap/Usps.css";

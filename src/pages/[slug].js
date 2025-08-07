@@ -1,3 +1,5 @@
+//pages/[slug].js
+
 'use client';
 
 import { useRouter } from 'next/router';
@@ -25,34 +27,59 @@ const slugify = (text) => {
         .replace(/\s+/g, '-')
         .replace(/[^\w-]+/g, '')
         .replace(/--+/g, '-')
-        .replace(/^-+/, '')
         .replace(/-+$/, '');
 };
 
-// Component to display the table of contents
-const TableOfContents = ({ toc }) => {
-    if (!toc || toc.length === 0) {
-        return null;
-    }
-    return (
-        <div className="card my-4 shadow-sm">
-            <div className="card-body">
-                <h5 className="card-title text-primary">Table of Contents</h5>
-                <nav>
-                    <ul className="list-unstyled mb-0 toc-list">
-                        {toc.map(({ text, id }) => (
-                            <li key={id} className="toc-item py-1">
-                                <a href={`#${id}`} className="text-decoration-none">
-                                    {text}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+// Function to generate the sidebar's HTML as a string
+const getSidebarHtml = () => {
+    return `
+        <div class="sticky-sidebar-wrapper">
+            <div class="sidebar-image mb-4">
+                <img
+                    src="/images/blog-sidebar.png"
+                    alt="Get a Free Counseling"
+                    class="img-fluid w-100 rounded"
+                />
+            </div>
+            <div class="form-container">
+                <h2>Get a Free Demo Class +<br />Free Study Resources</h2>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label htmlFor="name">Name</label>
+                            <input type="text" id="name" placeholder="" />
+                        </div>
+                        <div class="form-group">
+                            <label htmlFor="email">Email</label>
+                            <input type="email" id="email" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label htmlFor="phone">Phone Number</label>
+                        <div class="phone-input">
+                            <img src="https://flagcdn.com/w40/ae.png" alt="UAE Flag" class="flag" />
+                            <input type="text" id="phone" placeholder="+971" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label htmlFor="course">Tests/Courses</label>
+                        <select id="course">
+                            <option>IB Diploma</option>
+                            <option>IGCSE</option>
+                            <option>ACT</option>
+                            <option>SAT</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Submit
+                        <span class="arrow">→</span>
+                    </button>
+                </form>
             </div>
         </div>
-    );
+    `;
 };
+
 
 // Component to handle rendering the post content with the TOC inserted
 const TOCPostContent = ({ content, toc }) => {
@@ -68,12 +95,25 @@ const TOCPostContent = ({ content, toc }) => {
         firstH2.parentNode.insertBefore(tocWrapper, firstH2);
     }
 
-    const tocElement = <TableOfContents toc={toc} />;
+    const tocHtml = `
+        <div class="my-4 d-lg-none">
+            <div class="card-body">
+                <h5 class="toc-title">Table of Contents</h5>
+                <nav>
+                    <ul class="list-unstyled mb-0 toc-list">
+                        ${toc.map(({ text, id }) => `<li class="toc-item py-1"><a href="#${id}" class="text-decoration-none">${text}</a></li>`).join('')}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="d-lg-none">
+            ${getSidebarHtml()}
+        </div>
+    `;
 
     let newContent = tempDiv.innerHTML;
     if (firstH2) {
         const tocPlaceholder = `<div id="toc-container"></div>`;
-        const tocHtml = `<div class="my-4"><div class="card-body"><h5 class="toc-title">Table of Contents</h5><nav><ul class="list-unstyled mb-0 toc-list">${toc.map(({ text, id }) => `<li class="toc-item py-1"><a href="#${id}" class="text-decoration-none">${text}</a></li>`).join('')}</ul></nav></div></div>`;
         newContent = newContent.replace(tocPlaceholder, tocHtml);
     }
 
@@ -183,7 +223,7 @@ export default function PostDetail() {
                     <h1 className="mb-4 display-4 main-title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                     <div className="mb-2 post-date">
                         <span>Published on {publishedDate} </span>
-                        <span>|</span>
+                        <span className="post-date-separator">|</span>
                         {updatedDate && (
                             <span>Updated on {updatedDate}</span>
                         )}
@@ -221,55 +261,11 @@ export default function PostDetail() {
                         <div className="col-lg-8">
                             <TOCPostContent content={post.content.rendered} toc={toc} />
                         </div>
-
-                        <div className="col-lg-4">
+                        <div className="col-lg-1 d-none d-lg-block">  </div>
+                        <div className="col-lg-3 d-none d-lg-block">
                             <div className="sticky-sidebar-wrapper">
-                                <div className="sidebar-image mb-4">
-                                    <img
-                                        src="/images/blog-sidebar.png"
-                                        alt="Get a Free Counseling"
-                                        className="img-fluid w-100 rounded"
-                                    />
-                                </div>
-
-                                <div className="form-container">
-                                    <h2>Get a Free Demo Class +<br />Free Study Resources</h2>
-                                    <form>
-                                        <div className="form-row">
-                                            <div className="form-group">
-                                                <label htmlFor="name">Name</label>
-                                                <input type="text" id="name" placeholder="" />
-                                            </div>
-                                            <div className="form-group">
-                                                <label htmlFor="email">Email</label>
-                                                <input type="email" id="email" placeholder="" />
-                                            </div>
-                                        </div>
-
-                                        <div className="form-group">
-                                            <label htmlFor="phone">Phone Number</label>
-                                            <div className="phone-input">
-                                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE Flag" className="flag" />
-                                                <input type="text" id="phone" placeholder="+971" />
-                                            </div>
-                                        </div>
-
-                                        <div className="form-group">
-                                            <label htmlFor="course">Tests/Courses</label>
-                                            <select id="course">
-                                                <option>IB Diploma</option>
-                                                <option>IGCSE</option>
-                                                <option>ACT</option>
-                                                <option>SAT</option>
-                                            </select>
-                                        </div>
-
-                                        <button type="submit" className="submit-btn">
-                                            Submit
-                                            <span className="arrow">→</span>
-                                        </button>
-                                    </form>
-                                </div>
+                                {/* This is the desktop sidebar, which is hidden on mobile */}
+                                <div dangerouslySetInnerHTML={{ __html: getSidebarHtml() }} />
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 /* Moving Banner Section  */
-.home .bannerScroll {
+.bannerScroll {
   margin: 100px 0;
   width: 100%;
   overflow: hidden;
@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.home .bannerScroll b {
+.bannerScroll b {
   display: inline-block;
   margin: 0;
   white-space: nowrap;
@@ -36,7 +36,7 @@
 }
 
 @media (max-width: 600px) {
-  .home .bannerScroll span {
+  .bannerScroll span {
     font-size: 1.1rem;
     line-height: 36px;
   }
@@ -65,16 +65,16 @@
   }
 }
 
-.home .bannerSplitIn {
+.bannerSplitIn {
   animation: bannerSplitIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
 @media (max-width: 575px) {
-  .home .bannerScroll {
+  .bannerScroll {
     margin: 40px 0;
   }
 
-  .home .bannerScroll b {
+  .bannerScroll b {
     font-size: 1rem;
     line-height: 40px;
   }
