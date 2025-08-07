@@ -1,3 +1,11 @@
+/* Base styles for all screen sizes */
+:root {
+    --skyblue-color: #A3CAF5;
+    --blue-color: #161664;
+    --green-color: #3f88ba;
+    --lightgreen-color: #e7f6ff;
+}
+
 h1.main-title {
     font-weight: 700 !important;
     line-height: 1;
@@ -9,6 +17,8 @@ h1.main-title {
     padding: 0 40px;
     display: inline-block;
     text-align: center;
+    font-size: 40px;
+    /* Default font size for larger screens */
 }
 
 .post-date {
@@ -45,6 +55,7 @@ h1.main-title {
     max-width: 100%;
 }
 
+.post-content .wp-block-list,
 .post-content p {
     color: #161616;
     font-weight: 500;
@@ -55,7 +66,7 @@ h1.main-title {
 .sticky-sidebar-wrapper {
     position: -webkit-sticky;
     /* For Safari compatibility */
-    /* position: sticky; */
+    position: sticky;
     top: 30px;
     /* Adjust this value as needed, e.g., to account for a fixed header */
 }
@@ -71,6 +82,8 @@ h1.main-title {
     position: relative;
     display: inline-block;
     text-align: left;
+    font-size: 32px;
+    /* Default font size for larger screens */
 }
 
 .post-content h3 {
@@ -83,7 +96,9 @@ h1.main-title {
     padding: 20px 0px;
     position: relative;
     display: inline-block;
-    text-align: center;
+    text-align: left;
+    font-size: 28px;
+    /* Default font size for larger screens */
 }
 
 .toc-title {
@@ -102,11 +117,11 @@ h1.main-title {
 
 .toc-list li {
     padding: 15px 20px;
-    background: linear-gradient(to right, #E7F6FF, #A3CAF5);
+    background: linear-gradient(86deg, rgba(243, 250, 255, 1) 50%, rgba(209, 229, 250, 1) 100%);
 }
 
 .toc-list li:nth-child(odd) {
-    background: linear-gradient(to right, #A3CAF5, #E7F6FF);
+    background: linear-gradient(86deg, rgba(209, 229, 250, 1) 50%, rgba(243, 250, 255, 1) 100%);
 }
 
 .toc-list li a {
@@ -121,7 +136,7 @@ h1.main-title {
 
 /* New form styling from your provided code */
 .form-container {
-    background: linear-gradient(145deg, #d2e4f9, #f0f7ff);
+    background: linear-gradient(115deg, rgba(163, 202, 245, 1) 45%, rgba(231, 246, 255, 1) 100%);
     border-radius: 20px;
     padding: 30px 25px;
     box-shadow: 0 10px 25px rgba(0, 0, 50, 0.15);
@@ -129,7 +144,7 @@ h1.main-title {
 
 .form-container h2 {
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #1f2d61;
     margin-bottom: 25px;
@@ -140,31 +155,33 @@ h1.main-title {
 .form-row {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 25px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 18px;
+    margin-bottom: 30px;
     flex: 1;
 }
 
 .form-group label {
-    font-size: 12px;
+    font-size: 18px;
     color: #1f2d61;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .form-group input,
 .form-group select {
     border: none;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #88A9C4;
     padding: 6px 0;
     background: transparent;
     font-size: 14px;
     outline: none;
+    width: 100%;
 }
 
 .phone-input {
@@ -181,21 +198,20 @@ h1.main-title {
 }
 
 .submit-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(40deg, rgba(22, 22, 100, 1) 23%, rgba(63, 136, 186, 1) 102%);
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 14px;
-    font-weight: bold;
+    display: block;
+    background: transparent;
+    color: #1f2d61;
+    border: 1px solid #1f2d61;
+    padding: 8px;
+    font-size: 25px;
+    font-weight: 500;
     border-radius: 30px;
-    cursor: pointer;
-    width: 100%;
+    text-align: left;
+    width: 70%;
     text-transform: uppercase;
     letter-spacing: 1px;
+    position: relative;
+    padding-left: 20px;
 }
 
 .submit-btn:hover {
@@ -203,10 +219,145 @@ h1.main-title {
 }
 
 .arrow {
-    background: white;
-    color: #1f2d61;
+    color: #FFF;
     border-radius: 50%;
-    padding: 4px 7px;
-    font-size: 12px;
+    padding: 4px 9px;
+    font-size: 20px;
     font-weight: bold;
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, rgba(22, 22, 100, 1) 23%, rgba(63, 136, 186, 1) 102%);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1.main-title {
+        font-size: 32px;
+        padding: 0 10px;
+        text-align: left;
+    }
+
+    .post-date span,
+    .post-author span {
+        font-size: 16px;
+    }
+
+    .image-feature img {
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .post-author {
+        justify-content: flex-start;
+        padding: 0 10px;
+    }
+
+    .post-date {
+        flex-direction: column;
+        align-items: left;
+        gap: 5px;
+        padding: 0 10px;
+    }
+
+    .post-date-separator {
+        display: none;
+    }
+
+    .post-content .wp-block-list,
+    .post-content p {
+        font-size: 18px;
+    }
+
+    .post-content h2,
+    .toc-title {
+        font-size: 24px;
+        padding: 10px 0;
+    }
+
+    .post-content h3 {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .toc-list li a {
+        font-size: 16px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        font-size: 20px;
+        padding-left: 15px;
+    }
+
+    .arrow {
+        right: 15px;
+    }
+
+    .sticky-sidebar-wrapper {
+        position: static;
+        top: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h1.main-title {
+        font-size: 24px;
+    }
+
+    .post-date span,
+    .post-author span {
+        font-size: 14px;
+    }
+
+    .post-content .wp-block-list,
+    .post-content p {
+        font-size: 16px;
+    }
+
+    .post-content h2,
+    .toc-title {
+        font-size: 20px;
+    }
+
+    .post-content h3 {
+        font-size: 18px;
+    }
+
+    .toc-list li {
+        padding: 10px;
+    }
+
+    .toc-list li a {
+        font-size: 14px;
+    }
+
+    .form-container {
+        padding: 20px 15px;
+    }
+
+    .form-container h2 {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        font-size: 18px;
+        padding: 6px 15px;
+    }
 }

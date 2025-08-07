@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "../styles/act.module.css";
 import Image from "next/image";
 
 import "swiper/css";
@@ -179,7 +178,7 @@ const AP = () => {
     return (
         <>
             <div ref={scrollRef} data-scroll-container style={{ padding: 20 }}>
-                <section className={styles.ibBanner} data-scroll-section>
+                <section className="apBanner" data-scroll-section>
                     <div className="">
                         <div className="row align-items-center p-10">
                             <div className="col-lg-7">
@@ -187,62 +186,62 @@ const AP = () => {
                                     data-scroll
                                     data-scroll-class="is-inview"
                                     data-scroll-repeat="true"
-                                    className={`fade-in-section ${styles.leftContent}`}
+                                    className="fade-in-section leftContent"
                                     style={{ animationDelay: "0.1s" }}
                                 >
-                                    <div className={styles.contentInner}>
-                                        <h1 className={styles.mainHeading}>
+                                    <div className="contentInner">
+                                        <h1 className="mainHeading">
                                             ADVANCED PLACEMENTS<br />TUTORS IN DUBAI
                                         </h1>
-                                        <p className={styles.subHeading}>NEW AP BATCHES STARTS<br />FROM 22ND AUGUST, 2025</p>
+                                        <p className="subHeading">NEW AP BATCHES STARTS<br />FROM 22ND AUGUST, 2025</p>
 
-                                        <div className={styles.featureCards}>
-                                            <div className={styles.featureCardInner}>
+                                        <div className="featureCards">
+                                            <div className="featureCardInner">
                                                 <Image
                                                     src="/images/banner-icon1.png"
                                                     width={40}
                                                     height={40}
                                                     quality={100}
-                                                    className={styles.cardImage}
+                                                    className="cardImage"
                                                     alt="Focused ACT Prep"
                                                 />
-                                                <p className={styles.featureText}>Focused ACT<br></br>Prep</p>
+                                                <p className="featureText">Focused ACT<br></br>Prep</p>
                                             </div>
-                                            <div className={styles.featureCardInner}>
+                                            <div className="featureCardInner">
                                                 <Image
                                                     src="/images/banner-icon2.png"
                                                     width={40}
                                                     height={40}
                                                     quality={100}
-                                                    className={styles.cardImage}
+                                                    className="cardImage"
                                                     alt="Online & In-Person"
                                                 />
-                                                <p className={styles.featureText}>Online <br></br>& In-Person</p>
+                                                <p className="featureText">Online <br></br>& In-Person</p>
                                             </div>
-                                            <div className={`${styles.featureCardInner} ${styles.featureCardInnerLast}`}>
+                                            <div className="featureCardInner featureCardInnerLast">
                                                 <Image
                                                     src="/images/ib/location.png"
                                                     width={40}
                                                     height={40}
                                                     quality={100}
-                                                    className={styles.cardImage}
+                                                    className="cardImage"
                                                     alt="Dubai (DIFC, JLT)"
                                                 />
-                                                <p className={styles.featureText}>Dubai<br></br> (DIFC, JLT)</p>
+                                                <p className="featureText">Dubai<br></br> (DIFC, JLT)</p>
                                             </div>
                                         </div>
 
-                                        <p className={styles.descriptionText}>
+                                        <p className="descriptionText">
                                             We provide comprehensive academic support through our customized
                                             IB curriculum courses, giving students access to high-end learning with
                                             experienced and certified IB tutors across various IB subjects.
                                         </p>
                                     </div>
 
-                                    <div className={styles.ctaButtons}>
-                                        <button className={styles.ctaButton}>
+                                    <div className="ctaButtons">
+                                        <button className="ctaButton">
                                             IGCSE TUTORS
-                                            <div className={styles.arrowWrapper}>
+                                            <div className="arrowWrapper">
                                                 <Image
                                                     src="/images/right-arrow.png"
                                                     width={15}
@@ -252,9 +251,9 @@ const AP = () => {
                                                 />
                                             </div>
                                         </button>
-                                        <button className={styles.ctaButton}>
+                                        <button className="ctaButton">
                                             A-LEVELS TUTORS
-                                            <div className={styles.arrowWrapper}>
+                                            <div className="arrowWrapper">
                                                 <Image
                                                     src="/images/right-arrow.png"
                                                     width={15}
@@ -273,28 +272,28 @@ const AP = () => {
                                     data-scroll
                                     data-scroll-class="is-inview"
                                     data-scroll-repeat="true"
-                                    className={`fade-in-section ${styles.formContainer}`}
+                                    className="fade-in-section formContainer"
                                     style={{ animationDelay: "0.3s" }}
                                 >
-                                    <h3 className={styles.formHeading}>
+                                    <h3 className="formHeading">
                                         GET A FREE DEMO CLASS + FREE STUDY RESOURCES
                                     </h3>
 
                                     <form>
-                                        <input type="text" className={styles.formInput} placeholder="NAME" />
+                                        <input type="text" className="formInput" placeholder="NAME" />
 
                                         <div className="row">
                                             <div className="col-md-6">
                                                 <input
                                                     type="email"
-                                                    className={styles.formInput}
+                                                    className="formInput"
                                                     placeholder="EMAIL"
                                                 />
                                             </div>
                                             <div className="col-md-6">
                                                 <input
                                                     type="tel"
-                                                    className={styles.formInput}
+                                                    className="formInput"
                                                     placeholder="PH.NO"
                                                 />
                                             </div>
@@ -302,18 +301,18 @@ const AP = () => {
 
                                         <input
                                             type="text"
-                                            className={styles.formInput}
+                                            className="formInput"
                                             placeholder="SCHOOL"
                                         />
 
                                         <textarea
-                                            className={styles.formTextarea}
+                                            className="formTextarea"
                                             placeholder="DROP A MESSAGE"
                                         ></textarea>
 
-                                        <button type="submit" className={styles.submitButton}>
-                                            <span className={styles.submitText}>SUBMIT</span>
-                                            <div className={styles.submitArrow}>
+                                        <button type="submit" className="submitButton">
+                                            <span className="submitText">SUBMIT</span>
+                                            <div className="submitArrow">
                                                 <Image
                                                     src="/images/right-arrow.png"
                                                     width={18}
@@ -329,7 +328,6 @@ const AP = () => {
                         </div>
                     </div>
                 </section>
-
 
 
                 {/* achievements header */}
@@ -450,7 +448,7 @@ const AP = () => {
                 <UspsSecondary />
                 < section className="alumniSection mb-4" >
                     <div className="container">
-                        <div className="alumniSubSection">
+                        <div className="achievementsHeadings">
                             <h3
                                 data-scroll
                                 data-scroll-class="is-inview"
@@ -472,8 +470,9 @@ const AP = () => {
                             </h2>
                         </div>
                     </div>
+                    <GallerySlider />
                 </section >
-                <GallerySlider />
+
                 <Faq />
 
                 < section className="achievementsSection" >
