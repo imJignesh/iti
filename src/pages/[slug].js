@@ -233,9 +233,43 @@ export default function PostDetail() {
                     </div>
 
                     <div className="post-share-icons mb-4">
-                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer">Facebook</a>
-                        <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(postTitle)}`} target="_blank" rel="noopener noreferrer">X</a>
-                        <a href={`mailto:?subject=${encodeURIComponent(postTitle)}&body=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer">Mail</a>
+                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer">
+
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 1.19995C-4.26814 2.02795 -7.15102 41.6942 20.4192 46.8H24H27.5808C55.1573 41.6894 52.2619 2.02507 24 1.19995Z" fill="#1877F2" />
+                                <path d="M27.5807 30.7699H32.9207L33.9369 24.1392H27.5807V19.836C27.5807 18.0221 28.4687 16.2538 31.3156 16.2538H34.2057V10.6085C28.0166 9.49343 20.5809 9.83279 20.4191 19.0853V24.1392H14.6001V30.7699H20.4191V46.8H23.9999H27.5807V30.7699Z" fill="#F1F1F1" />
+                            </svg>
+
+                        </a>
+                        <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(postTitle)}`} target="_blank" rel="noopener noreferrer">
+
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7_16)">
+                                    <path d="M24 0C10.7456 0 0 10.7456 0 24C0 37.2544 10.7456 48 24 48C37.2544 48 48 37.2544 48 24C48 10.7456 37.2544 0 24 0Z" fill="black" />
+                                    <path d="M26.6257 21.8281L36.8998 9.88525H34.4652L25.5441 20.2551L18.419 9.88525H10.2009L20.9756 25.5662L10.2009 38.0901H12.6357L22.0565 27.1392L29.5812 38.0901H37.7993L26.6251 21.8281H26.6257ZM13.513 11.7181H17.2526L34.4663 36.3406H30.7266L13.513 11.7181Z" fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_7_16">
+                                        <rect width="48" height="48" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </a>
+                        <a href={`mailto:?subject=${encodeURIComponent(postTitle)}&body=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer">
+
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7_13)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.008 0.0078125C37.2627 0.0078125 48.008 10.7503 48.008 24.0111C48.008 37.2652 37.2628 48.0077 24.008 48.0077C10.7531 48.0077 0.00805664 37.2657 0.00805664 24.0111C0.00805664 10.7503 10.7532 0.0078125 24.008 0.0078125ZM38.8883 14.8716L25.7709 25.7709C25.2776 26.1868 24.6531 26.4149 24.0078 26.4149C23.3626 26.4149 22.7381 26.1868 22.2447 25.7709L9.1274 14.8716C9.04812 15.0744 9.00761 15.2904 9.00796 15.5082V32.5071C9.00903 32.9736 9.19478 33.4208 9.52461 33.7507C9.85444 34.0806 10.3015 34.2666 10.768 34.2678H37.2476C37.7142 34.2666 38.1613 34.0808 38.4912 33.7508C38.8211 33.4208 39.0069 32.9737 39.008 32.5071V15.5082C39.0082 15.2904 38.9676 15.0744 38.8883 14.8716ZM9.73687 14.0833L22.8818 25.0052C23.1975 25.2698 23.5962 25.4148 24.008 25.4148C24.4199 25.4148 24.8185 25.2698 25.1342 25.0052L38.2792 14.0833C37.9796 13.8652 37.6185 13.7477 37.2479 13.7478H10.768C10.3974 13.7476 10.0364 13.8651 9.73687 14.0833Z" fill="#4CAF50" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_7_13">
+                                        <rect width="48" height="48" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </a>
                     </div>
 
                     {featuredImage && (
