@@ -1,10 +1,5 @@
 /* Base styles for all screen sizes */
-:root {
-    --skyblue-color: #A3CAF5;
-    --blue-color: #161664;
-    --green-color: #3f88ba;
-    --lightgreen-color: #e7f6ff;
-}
+
 
 h1.main-title {
     font-weight: 700 !important;
