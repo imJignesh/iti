@@ -1,0 +1,392 @@
+/* Hero Banner Section */
+.homeCopy .hero {
+  padding: 100px 0;
+  background: url(/images/banner-bg.png);
+  background-repeat: no-repeat;
+  background-size: 600px;
+  clip-path: inset(0 100% 0 0);
+  animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
+}
+
+@keyframes revealClipLeftToRight {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.homeCopy .hero .heroMain {
+  display: flex;
+  align-items: center;
+}
+
+.homeCopy .hero .heroLeft .heroTitle {
+  font-size: 3.4vw;
+  font-weight: 700;
+  margin: 40px 0 30px 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--blue-color);
+}
+
+.homeCopy .hero .highlight {
+  background: linear-gradient(to left,
+      var(--green-color),
+      var(--lightgreen-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.homeCopy .hero .heroLeft .heroParagraph {
+  padding-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1.4vw;
+  font-weight: 400;
+  color: var(--blue-color);
+  line-height: 1.5;
+}
+
+.homeCopy .hero .heroParagraph b,
+.homeCopy .hero .heroParagraph strong {
+  font-weight: 400;
+}
+
+.homeCopy .hero .heroParagraph strong {
+  display: none;
+}
+
+.homeCopy .hero .heroParagraph span {
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.4vw;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.homeCopy .hero .heroRight {
+  display: flex;
+  justify-content: center;
+}
+
+.homeCopy .hero .heroRight {
+  position: relative;
+}
+
+.homeCopy .hero .videoContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.homeCopy .hero .heroVideo {
+  width: 100%;
+  height: 600px;
+  max-height: 700px;
+  object-fit: cover;
+  object-position: right;
+  border-radius: 10px;
+  mask: url("/images/banner-image-right.png") no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url("/images/banner-image-right.png") no-repeat center;
+  -webkit-mask-size: contain;
+}
+
+.homeCopy .hero .videoMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  display: none;
+}
+
+.homeCopy .hero .maskImage {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  object-position: right;
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+
+.homeCopy .hero .heroRight .heroImage {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  object-position: right;
+}
+
+.homeCopy .hero .heroRight .buttonGroup {
+  position: absolute;
+  top: 70%;
+  bottom: 0;
+  left: 37%;
+  right: 5%;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-end;
+}
+
+.homeCopy .hero .heroRight .buttonGroup button {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 25px 30px;
+}
+
+.homeCopy .hero .heroRight .buttonGroup button img {
+  width: 40px;
+}
+
+@media (max-width: 1800px) {
+  .homeCopy .hero {
+    background-size: 640px;
+    background-position: top left -40px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .homeCopy .hero {
+    background-position: top 10% left;
+  }
+}
+
+@media (max-width: 1280px) {
+  .homeCopy .hero .heroRight .buttonGroup {
+    top: 65%;
+    left: 37%;
+    gap: 10px;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup button {
+    padding: 5px 20px;
+    gap: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .homeCopy .hero .heroLeft .heroTitle {
+    font-size: 35px;
+  }
+
+  .homeCopy .hero .heroLeft .heroParagraph {
+    font-size: 18px;
+  }
+
+  .homeCopy .hero .heroLeft .heroParagraph span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .homeCopy .hero {
+    padding-bottom: 30px;
+    animation: revealClipLeftToRight 1.8s 1s ease forwards;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup {
+    top: 70%;
+    left: 43%;
+    right: 24%;
+    width: auto;
+  }
+
+  .homeCopy .hero .heroLeft div {
+    text-align: center;
+  }
+
+  .homeCopy .hero .heroParagraph b {
+    display: none;
+  }
+
+  .homeCopy .hero .heroParagraph strong {
+    display: block;
+    opacity: 0.6;
+    font-weight: 500;
+  }
+
+  .homeCopy .hero .heroRight .heroImage,
+  .homeCopy .hero .heroVideo {
+    object-position: center;
+    height: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .homeCopy .hero {
+    background: url(/images/banner-bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: top right;
+    padding: 40px 0 0 0;
+    clip-path: inset(0 0 0 100%);
+    animation: revealClipRightToLeft 1.8s 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes revealClipRightToLeft {
+    from {
+      clip-path: inset(0 0 0 100%);
+    }
+
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup {
+    left: 40%;
+    right: 15%;
+  }
+
+  .homeCopy .hero .heroLeft .heroTitle {
+    margin: 20px auto;
+    max-width: 75%;
+    line-height: 1;
+  }
+
+  .homeCopy .hero .heroLeft .heroParagraph {
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .homeCopy .hero .heroLeft .heroParagraph span {
+    margin-bottom: 5px;
+  }
+
+  .homeCopy .hero .heroRight .mobileContent {
+    font-size: 22px;
+    margin: 0;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .homeCopy .hero {
+    background-position: top -1% right;
+    background-size: 460px;
+  }
+}
+
+@media (max-width: 575px) {
+  .homeCopy .hero {
+    padding: 30px 0 0 0;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup {
+    width: max-content;
+  }
+
+  .homeCopy .hero .heroVideo {
+    height: 400px;
+  }
+
+  .homeCopy .hero .heroLeft .heroTitle {
+    font-size: 25px;
+    margin: 15px auto;
+    max-width: 70%;
+    line-height: 1.2;
+  }
+
+  .homeCopy .hero .heroRight .mobileContent {
+    left: 38%;
+    max-width: 55%;
+    font-size: 18px;
+    margin: 0;
+    line-height: 25px;
+  }
+
+  .homeCopy .hero .heroLeft .heroParagraph span {
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+
+  .homeCopy .hero .heroParagraph strong {
+    font-size: 15px;
+    max-width: 75%;
+    display: inline-block;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup {
+    justify-content: space-evenly;
+    top: 68%;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup button {
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 425px) {
+  .homeCopy .hero {
+    padding: 15px 0 0 0;
+    background-size: 90%;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup {
+    top: 68%;
+    left: 35%;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup button img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .homeCopy .hero .heroMain h3 {
+    font-size: 20px;
+  }
+
+  .homeCopy .hero .heroVideo {
+    height: 400px;
+  }
+
+  .homeCopy .hero .heroRight .mobileContent {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .homeCopy .hero .heroLeft .heroParagraph span {
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+
+  .homeCopy .hero .heroParagraph strong {
+    font-size: 15px;
+    max-width: 75%;
+    display: inline-block;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup {
+    justify-content: space-evenly;
+    top: 68%;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup button {
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .homeCopy .hero .heroVideo {
+    height: 300px;
+  }
+}
