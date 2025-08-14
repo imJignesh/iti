@@ -97,7 +97,7 @@ const Home = () => {
 
         {/* Course Section  */}
         <Course />
-
+    
         {/* Moving Banner Section */}
         <MovingBanner />
 

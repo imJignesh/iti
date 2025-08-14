@@ -14,6 +14,21 @@ import "@/styles/home/Usps.css";
 import "@/styles/home/Trainers.css";
 import "@/styles/home/Testimonial.css";
 import "@/styles/home/Blog.css";
+
+//Home Copy Page Css
+import "@/styles/home-copy/Hero.css";
+import "@/styles/home-copy/Course.css";
+import "@/styles/home-copy/About.css";
+import "@/styles/home-copy/Test.css";
+import "@/styles/home-copy/MovingBanner.css";
+import "@/styles/home-copy/Subjects.css";
+import "@/styles/home-copy/Alumni.css";
+import "@/styles/home-copy/Usps.css";
+import "@/styles/home-copy/Trainers.css";
+import "@/styles/home-copy/Testimonial.css";
+import "@/styles/home-copy/Blog.css";
+
+
 import "@/styles/contact/ContactHeadline.css";
 
 //Blog Page Css
