@@ -1,8 +1,6 @@
 /* USPs Section  */
 
-.home .uspSection {
-  display: flex;
-  align-items: center;
+.uspSection {
   background: linear-gradient(to right,
       var(--green-color) 0%,
       var(--lightgreen-color) 100%);
@@ -10,35 +8,34 @@
   padding: 50px 40px;
   color: var(--white-color);
   margin: 20px auto;
-  max-width: 85vw;
+  max-width: 90vw;
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
-  gap: 80px;
 }
 
-.home .uspSection .uspLeft {
-  flex: 1.2;
+.uspSection .uspLeft {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 25px;
+  gap: 20px;
   min-width: 320px;
   max-width: 460px;
+  position: sticky;
+  top: 50px;
 }
 
-.home .uspSection .uspLeft span {
+.uspSection .uspLeft span {
   -webkit-text-fill-color: var(--white-color);
   width: max-content;
   font-size: 25px;
   margin-bottom: 20px;
 }
 
-.home .uspSection .uspLeft span:before,
-.home .uspSection .uspLeft span:after {
+.uspSection .uspLeft span:before,
+.uspSection .uspLeft span:after {
   width: 16px;
   filter: contrast(0) brightness(2);
 }
 
-.home .uspSection .uspTitle {
+.uspSection .uspTitle {
   font-size: 1.6vw;
   font-weight: 700;
   margin-bottom: 18px;
@@ -47,7 +44,7 @@
   color: var(--white-color);
 }
 
-.home .uspSection .uspSubtitle {
+.uspSection .uspSubtitle {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 18px;
@@ -55,7 +52,7 @@
   color: var(--white-color);
 }
 
-.home .uspSection .uspDesc {
+.uspSection .uspDesc {
   font-size: 0.8vw;
   margin-bottom: 32px;
   color: var(--white-color);
@@ -66,19 +63,17 @@
   border-bottom: 1px solid;
 }
 
-.home .uspSection .uspBtn {
+.uspSection .uspBtn {
   width: max-content;
   font-weight: 700;
   font-size: 1.1rem;
 }
 
-.home .uspSection .uspRight {
-  flex: 2;
+.uspSection .uspRight {
   position: relative;
-  user-select: none;
 }
 
-.home .uspSection .uspSwiper {
+.uspSection .uspSwiper {
   width: 100%;
   height: 500px;
   padding: 25px 30px;
@@ -86,16 +81,17 @@
   margin-right: auto;
 }
 
-.home .uspSection .uspSlide {
+.uspSection .uspSlide {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 50px;
   height: auto !important;
   flex-wrap: wrap;
+  margin-bottom: 80px;
 }
 
-.home .uspSection .uspItem {
+.uspSection .uspItem {
   background: transparent;
   border-radius: 18px;
   padding: 0;
@@ -108,10 +104,10 @@
   position: relative;
 }
 
-.home .uspSection .uspNumber {
+.uspSection .uspNumber {
   position: absolute;
-  top: -40px;
-  left: -30px;
+  top: -30px;
+  left: -50px;
   font-size: 3rem;
   font-weight: 700;
   color: #b2e6d4;
@@ -119,7 +115,7 @@
   margin-bottom: 8px;
 }
 
-.home .uspSection .uspIconCircle {
+.uspSection .uspIconCircle {
   background: #baefd4;
   border-radius: 50%;
   width: 100px;
@@ -130,13 +126,13 @@
   margin-bottom: 16px;
 }
 
-.home .uspSection .uspIcon {
+.uspSection .uspIcon {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
 
-.home .uspSection .uspItemTitle {
+.uspSection .uspItemTitle {
   font-size: 1vw;
   font-weight: 700;
   margin-bottom: 6px;
@@ -145,7 +141,7 @@
   letter-spacing: 1px;
 }
 
-.home .uspSection .uspItemDesc {
+.uspSection .uspItemDesc {
   letter-spacing: 1px;
   font-size: 0.98rem;
   color: var(--white-color);
@@ -153,7 +149,7 @@
   line-height: 1.5;
 }
 
-.home .uspSection .uspScrollbar {
+.uspSection .uspScrollbar {
   position: absolute;
   right: -20px;
   top: 0;
@@ -162,25 +158,25 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-.home .uspSection .uspScrollbar :global(.swiper-scrollbar-drag) {
+.uspSection .uspScrollbar :global(.swiper-scrollbar-drag) {
   background: #fff;
 }
 
 @media (max-width: 1280px) {
-  .home .uspSection .uspDesc {
+  .uspSection .uspDesc {
     font-size: 0.8rem;
   }
 }
 
 @media (max-width: 1100px) {
-  .home .uspSection {
+  .uspSection {
     max-width: 90vw;
     flex-direction: column;
     gap: 20px;
     padding: 30px 20px;
   }
 
-  .home .uspSection .uspLeft {
+  .uspSection .uspLeft {
     flex: none;
     max-width: 100%;
     text-align: center;
@@ -189,16 +185,16 @@
     min-width: 100%;
   }
 
-  .home .uspSection .uspTitle {
+  .uspSection .uspTitle {
     font-size: 1.4rem;
   }
 
-  .home .uspSection .uspSubtitle,
-  .home .uspSection .uspNumber {
+  .uspSection .uspSubtitle,
+  .uspSection .uspNumber {
     display: none;
   }
 
-  .home .uspSection .uspDesc {
+  .uspSection .uspDesc {
     font-size: 1rem;
     border: none;
     padding: 0 20px;
@@ -206,11 +202,11 @@
     opacity: 0.8 !important;
   }
 
-  .home .uspSection .uspGrid {
+  .uspSection .uspGrid {
     gap: 30px 40px;
   }
 
-  .home .uspSection .uspItem {
+  .uspSection .uspItem {
     flex-direction: row;
     gap: 20px;
     align-items: center;
@@ -219,78 +215,77 @@
     padding-bottom: 30px;
   }
 
-  .home .uspSection .uspIconCircle {
+  .uspSection .uspIconCircle {
     width: auto;
     height: auto;
     padding: 20px;
   }
 
-  .home .uspSection .uspIcon {
+  .uspSection .uspIcon {
     width: 40px;
     height: 40px;
   }
 
-  .home .uspSection .uspContent {
+  .uspSection .uspContent {
     width: 80%;
   }
 
-  .home .uspSection .uspItemTitle {
+  .uspSection .uspItemTitle {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 767px) {
-  .home .uspSection {
+  .uspSection {
     max-width: 95vw;
   }
 
-  .home .uspSection .uspLeft span:before,
-  .home .uspSection .uspLeft span:after {
+  .uspSection .uspLeft span:before,
+  .uspSection .uspLeft span:after {
     width: 10px;
   }
 
-  .home .uspSection .uspSwiper {
+  .uspSection .uspSwiper {
     padding: 20px;
   }
 
-  .home .uspSection .uspGrid {
+  .uspSection .uspGrid {
     grid-template-columns: 1fr;
   }
 
-  .home .uspSection .uspSlide:last-child .uspItem:last-child {
+  .uspSection .uspSlide:last-child .uspItem:last-child {
     border: none;
   }
 
-  .home .uspSwiper {
+  .uspSwiper {
     height: 400px;
   }
 
-  .home .uspSection .uspSlide {
+  .uspSection .uspSlide {
     margin-bottom: 20px !important;
   }
 
-  .home .uspSection .uspItem {
+  .uspSection .uspItem {
     flex: 0 0 100%;
     max-width: 100%;
   }
 
-  .home .uspSection .uspSlide {
+  .uspSection .uspSlide {
     justify-content: space-between;
     gap: 20px;
   }
 }
 
 @media (max-width: 425px) {
-  .home .uspSection .uspSwiper {
+  .uspSection .uspSwiper {
     padding: 0;
   }
 
-  .home .uspRight {
+  .uspRight {
     padding-top: 30px;
-    ;
   }
 
-  .home .uspSection .uspItem {
+  .uspSection .uspItem {
     flex-direction: row;
     gap: 20px;
     align-items: center;
@@ -300,7 +295,7 @@
   }
 
   /* This is good for the very last item: */
-  .home .uspSection .uspSlide:last-child .uspItem:last-child {
+  .uspSection .uspSlide:last-child .uspItem:last-child {
     border-bottom: none;
     padding-bottom: 0;
     /* Make sure the very last item doesn't have excess padding */
