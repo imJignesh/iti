@@ -220,7 +220,7 @@ const ACT = () => {
                                             </div>
                                             <div className="featureCardInner featureCardInnerLast">
                                                 <Image
-                                                    src="/images/act/location.png"
+                                                    src="/images/location.png"
                                                     width={40}
                                                     height={40}
                                                     quality={100}

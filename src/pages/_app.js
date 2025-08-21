@@ -87,6 +87,7 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import Home from "./Home";
 import ACT from "./act";
+import FREEDEMO from "./freedemo";
 import AP from "./ap";
 import IBDP from "./ibdp";
 import Blog from "./blog";
