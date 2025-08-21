@@ -81,6 +81,7 @@
 
 .freedemo-curriculm .fd-curr.full {
   grid-column: span 2;
+  height: 100px;
 }
 
 
