@@ -79,6 +79,12 @@ import "@/styles/ibdp/IbdpCourses.css";
 // freeme demo page css
 import "@/styles/freedemo/freedemo.css";
 
+// team page css
+import "@/styles/team/team.css";
+
+
+// contact page css
+import "@/styles/contact/contact.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";

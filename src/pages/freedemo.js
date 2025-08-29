@@ -172,7 +172,7 @@ const FreeDemo = () => {
 
     return (
         <>
-            <div ref={scrollRef} data-scroll-container style={{ padding: 20 }}>
+            <div ref={scrollRef} data-scroll-container>
                 <section className="actBanner" data-scroll-section>
                     <div className="">
                         <div className="row align-items-center p-10">
@@ -352,7 +352,7 @@ const FreeDemo = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="freedemo-curriculm">
+                    <div class="container freedemo-curriculm">
 
                         <div class="column">
                             <div class="title">CURRICULUMS</div>
@@ -373,9 +373,6 @@ const FreeDemo = () => {
                     </div>
                 </section >
 
-                <section class="freedemo-curriculm-section">
-
-                </section>
                 {/* subjects header */}
                 < section className="achievementsSection" >
                     <div className="container">

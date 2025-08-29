@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
-
+import ContactBanner from "@/components/contact/Banner";
+import MovingBanner from "@/components/home/MovingBanner";
 const OurTeam = () => {
     const scrollRef = useRef(null);
     const scrollInstanceRef = useRef(null);
@@ -68,53 +68,299 @@ const OurTeam = () => {
 
     return (
         <>
-            {/* Main container for the scrollable content.
-                Locomotive Scroll attaches to the element marked with data-scroll-container. */}
-            <div ref={scrollRef} data-scroll-container style={{ minHeight: 'calc(100vh - 200px)' }}>
-                <section className="ibdpBanner" data-scroll data-scroll-section>
-                    {/* Banner Section: Contains the background image, title, and breadcrumb. */}
-                    <div className="full-width-image-wrapper" data-scroll-section>
-                        {/* Image for the banner. Replace the src with your actual team banner image.
-                            The onLoad handler triggers a scroll update once the image is loaded,
-                            which helps Locomotive Scroll correctly calculate layout. */}
-                        <img
-                            src="/images/ourteambanner.jpg" // Placeholder image path
-                            className="img-fluid" // Bootstrap class for responsive images
-                            onLoad={() => scrollInstanceRef.current?.update && scrollInstanceRef.current.update()}
-                            alt="Our Team Banner" // Alt text for accessibility
-                        />
-                        {/* Page title displayed over the banner image. */}
-                        <h1 className="banner-text">Our Team</h1>
-                        {/* Breadcrumb Navigation: Provides context for the user's location on the site. */}
-                        <nav aria-label="breadcrumb" className="blog-breadcrumb">
-                            <ol className="breadcrumb">
-                                {breadcrumbPath.map((item, index) => (
-                                    <li key={index} className={`breadcrumb-item ${index === breadcrumbPath.length - 1 ? 'active' : ''}`}>
-                                        {/* Renders as a link if not the current page, otherwise as active text. */}
-                                        {index === breadcrumbPath.length - 1 ? (
-                                            item.name
-                                        ) : (
-                                            <a href={item.href}>{item.name}</a>
-                                        )}
-                                    </li>
-                                ))}
-                            </ol>
-                        </nav>
-                    </div>
-                    {/* End Banner Section */}
-
-                    {/* Placeholder for actual team content.
-                        This section can be expanded to include team member cards, descriptions, etc. */}
-                    <div className="container mx-auto py-10">
-                        <h2 className="text-center text-3xl font-bold mb-8">Meet Our Amazing Team!</h2>
-                        <p className="text-center text-lg text-gray-700">
-                            This is where you can showcase your team members.
-                            You can add individual profiles, descriptions, and more here.
-                        </p>
-                    </div>
-
+            <div ref={scrollRef} data-scroll-container>
+                <section data-scroll-section>
+                    <ContactBanner />
                 </section>
-            </div>
+
+                <section class="meet-out-team" data-scroll-section>
+                    <div className="container">
+                        <div className="meet-team-Headings">
+                            <div
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="fade-in-section"
+                                style={{ animationDelay: "0.1s" }}
+                            >
+                                <h3 className="SubHeading">TUTORING COURSES</h3>
+                            </div>
+                            <div
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="fade-in-section"
+                                style={{ animationDelay: "0.25s" }}
+                            >
+                                <h1 className="meetTitle">
+                                    Lorem ipsum dolor sit amet, consectetur <span className="highlight">adipiscing</span>
+                                </h1>
+                            </div>
+
+                            <div
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="fade-in-section"
+                                style={{ animationDelay: "0.25s" }}
+                            >
+                                <h1 className="cofounderTitle">
+                                    CO-FOUNDERS
+                                </h1>
+                            </div>
+                        </div>
+                        <div className="meet-team-cards">
+                            <div className="team-card">
+                                <div className="team-card-image">
+                                    <img src="/images/sumit.png" alt="" />
+                                </div>
+                                <div className="team-card-info">
+                                    <div className="team-card-name">
+                                        <h3>Sumit Advani</h3>
+                                    </div>
+                                    <div className="team-card-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="team-card">
+                                <div className="team-card-image">
+                                    <img src="/images/mohnish.png" alt="" />
+                                </div>
+                                <div className="team-card-info">
+                                    <div className="team-card-name">
+                                        <h3>Mohnish Ahuja</h3>
+                                    </div>
+                                    <div className="team-card-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="admin-staff" data-scroll-section>
+                    <div className="container">
+                        <div className="meet-team-Headings">
+                            <div
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="fade-in-section"
+                                style={{ animationDelay: "0.25s" }}
+                            >
+                                <h1 className="cofounderTitle">
+                                    Admin-staff
+                                </h1>
+                            </div>
+                        </div>
+                        <div className="admin-staff-cards">
+                            <div className="admin-card">
+                                <div className="admin-card-image">
+                                    <img src="/images/prakshi.png" alt="" />
+                                </div>
+                                <div className="admin-card-info">
+                                    <div className="admin-card-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="admin-card">
+                                <div className="admin-card-image">
+                                    <img src="/images/prakshi.png" alt="" />
+                                </div>
+                                <div className="admin-card-info">
+                                    <div className="admin-card-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="moving-container" data-scroll-section>
+                    <MovingBanner />
+                </section>
+                <section className="trainer-section" data-scroll-section>
+                    <div className="container">
+                        <div className="meet-team-Headings">
+                            <div
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="fade-in-section"
+                                style={{ animationDelay: "0.25s" }}
+                            >
+                                <h1 className="cofounderTitle">
+                                    Trainers
+                                </h1>
+                            </div>
+                        </div>
+                        <div className="trainer-cards">
+                            <div className="trainer-card">
+                                <div className="trainer-name">
+                                    <h3>Prakshi Sharma</h3>
+                                </div>
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                </div>
+                            </div>
+                            <div className="trainer-card">
+                                <div className="trainer-name">
+                                    <h3>Nikhil Pawar</h3>
+                                </div>
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                </div>
+                            </div>
+                            <div className="trainer-card">
+                                <div className="trainer-name">
+                                    <h3>Nikhil Pawar</h3>
+                                </div>
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                </div>
+                            </div>
+                            <div className="trainer-card">
+                                <div className="trainer-name">
+                                    <h3>Nikhil Pawar</h3>
+                                </div>
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                </div>
+                            </div>
+
+                            <div className="trainer-card">
+                                <div className="trainer-name">
+                                    <h3>Nikhil Pawar</h3>
+                                </div>
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                </div>
+                            </div>
+                            <div className="trainer-card">
+                                <div className="trainer-name">
+                                    <h3>Nikhil Pawar</h3>
+                                </div>
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                </div>
+                            </div>
+                            <div className="trainer-card">
+                                <div className="trainer-name">
+                                    <h3>Nikhil Pawar</h3>
+                                </div>
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                </div>
+                            </div>
+                            <div className="trainer-card">
+                                <div className="trainer-name">
+                                    <h3>Nikhil Pawar</h3>
+                                </div>
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="moving-container" data-scroll-section>
+                    <MovingBanner />
+                </section>
+                <section className="trainer-message-section" data-scroll-section>
+                    <div className="container">
+                        <div className="meet-team-Headings">
+                            <div
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="fade-in-section"
+                                style={{ animationDelay: "0.25s" }}
+                            >
+                                <h1 className="cofounderTitle">
+                                    Trainers
+                                </h1>
+                            </div>
+                        </div>
+                        <div className="trainer-message-card">
+                            <div className="trainer-card">
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-experience">
+
+                                    <span>10+ Years</span>
+                                </div>
+                            </div>
+                            <div className="trainer-card small">
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-experience">
+
+                                    <span>10+ Years</span>
+                                </div>
+                            </div>
+                            <div className="trainer-card">
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-experience">
+
+                                    <span>10+ Years</span>
+                                </div>
+                            </div>
+                            <div className="trainer-card small">
+                                <div className="trainer-image">
+                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                </div>
+                                <div className="trainer-experience">
+
+                                    <span>10+ Years</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div >
         </>
     );
 };

@@ -1,0 +1,347 @@
+.meet-out-team {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.meet-team-Headings {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.meet-team-Headings .meetTitle {
+    padding: 40px 0;
+    ;
+}
+
+.meet-team-Headings .cofounderTitle {
+    text-decoration: underline;
+}
+
+.meet-team-Headings .meetTitle,
+.meet-team-Headings .cofounderTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--blue-color);
+    max-width: 80%;
+    margin: auto;
+}
+
+.meet-team-Headings .meetTitle .highlight {
+    background: linear-gradient(to right, var(--lightgreen-color), var(--green-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.meet-team-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 80px;
+    flex-direction: row;
+}
+
+.team-card-info {
+    padding-top: 20px;
+}
+
+.team-card {
+    display: flex;
+    max-width: 40rem;
+    flex-direction: column;
+}
+
+.team-card-name h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--blue-color);
+    background: linear-gradient(90deg, rgba(166, 234, 199, 1) 9%, rgba(255, 255, 255, 1) 110%);
+    text-transform: uppercase;
+    width: 350px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.meet-team-cards img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.team-card-content p {
+    font-size: 1rem;
+    line-height: 1.2;
+    color: var(--dark-color);
+    text-align: left;
+    padding-top: 40px;
+    display: inline;
+}
+
+.team-card-content a {
+    color: var(--blue-color);
+    text-decoration: underline !important;
+    font-weight: 600;
+}
+
+.team-card-content {
+    padding: 0 30px;
+}
+
+/* Responsive styles for Meet Our Team & Admin Staff */
+
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+
+    .meet-team-cards,
+    .admin-staff-cards {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .team-card,
+    .admin-card {
+        width: 45%;
+        /* 2 cards per row */
+        max-width: 100%;
+    }
+
+    .team-card-name h3 {
+        font-size: 1.6rem;
+        width: auto;
+        padding: 8px 15px;
+    }
+
+    .team-card-content,
+    .admin-card-info {
+        padding: 0 20px;
+    }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+    .meet-out-team {
+        padding: 60px 0;
+    }
+
+    .meet-team-Headings {
+        margin-bottom: 30px;
+    }
+
+    .meet-team-Headings .meetTitle,
+    .meet-team-Headings .cofounderTitle {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    /* Co-founders: always 1 per row */
+    .meet-team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 32rem;
+    }
+
+    .team-card-name h3 {
+        font-size: 1.4rem;
+    }
+
+    .team-card-content p {
+        font-size: 0.95rem;
+        padding-top: 20px;
+    }
+
+    /* Admin staff: 1 per row */
+    .admin-staff-cards {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .admin-card {
+        width: 100%;
+        max-width: 28rem;
+    }
+
+    .admin-card-info p {
+        padding-left: 20px;
+    }
+}
+
+/* Small Mobile (<= 480px) */
+@media (max-width: 480px) {
+    .meet-out-team {
+        padding: 40px 0;
+    }
+
+    .meet-team-Headings .meetTitle,
+    .meet-team-Headings .cofounderTitle {
+        font-size: 1.6rem;
+    }
+
+    .team-card-name h3 {
+        font-size: 1.2rem;
+    }
+
+    .team-card-content p,
+    .admin-card-info p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/*  Admin Staff Section */
+.admin-staff-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 80px;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+.admin-card {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
+
+.admin-card-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.admin-card-info p {
+    font-size: 1rem;
+    line-height: 1.2;
+    color: var(--dark-color);
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 60px;
+
+}
+
+.admin-card-info a {
+    color: var(--blue-color);
+    text-decoration: underline !important;
+    font-weight: 600;
+}
+
+/*  Trainer Section */
+.trainer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.trainer-card {
+    background: #fff;
+    border-radius: 12px;
+
+    text-align: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Name styling */
+.trainer-name h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    color: #008060;
+    /* green */
+    margin: 15px 0;
+}
+
+.trainer-card:nth-child(even) .trainer-name h3 {
+    color: #1a2a66;
+    /* blue */
+}
+
+/* Image */
+.trainer-image {
+    position: relative;
+}
+
+.trainer-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Existing experience div styled */
+.trainer-exp {
+    position: absolute;
+    bottom: -20px;
+    /* overlap */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.trainer-exp span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #008060;
+}
+
+.trainer-card:nth-child(even) .trainer-exp span {
+    color: #1a2a66;
+}
+
+.trainer-exp p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Info text */
+.trainer-info {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+}
+
+.trainer-info a {
+    color: #1a2a66;
+    font-weight: 600;
+    text-decoration: underline !important;
+}
+
+.trainer-info a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .trainer-cards {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards per row */
+    }
+
+    .trainer-exp {
+        bottom: -15px;
+        padding: 8px 16px;
+    }
+
+    .trainer-exp span {
+        font-size: 20px;
+    }
+}

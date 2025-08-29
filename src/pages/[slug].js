@@ -5,6 +5,7 @@
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useRef, useState } from 'react';
+import Head from 'next/head';
 
 // You must add 'import "locomotive-scroll/dist/locomotive-scroll.css";'
 // to your `pages/_app.js` file to avoid a build error.
@@ -208,6 +209,8 @@ export default function PostDetail() {
         );
     }
 
+    const yoastData = post?.yoast_head_json;
+
     const featuredImage = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
     const authorName = post._embedded?.author?.[0]?.name || 'Sumit Advani';
     const publishedDate = post.date ? new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'N/A';
@@ -218,6 +221,16 @@ export default function PostDetail() {
 
     return (
         <>
+            {yoastData && (
+                <Head>
+                    <title>{yoastData.title}</title>
+                    <meta name="description" content={yoastData.description} key="desc" />
+                    {yoastData.og_image && (
+                        <meta property="og:image" content={yoastData.og_image[0].url} />
+                    )}
+                </Head>
+            )}
+
             <section className="post-detail-section py-5" data-scroll data-scroll-section>
                 <div className="container">
                     <h1 className="mb-4 display-4 main-title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
@@ -260,7 +273,7 @@ export default function PostDetail() {
 
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_7_13)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.008 0.0078125C37.2627 0.0078125 48.008 10.7503 48.008 24.0111C48.008 37.2652 37.2628 48.0077 24.008 48.0077C10.7531 48.0077 0.00805664 37.2657 0.00805664 24.0111C0.00805664 10.7503 10.7532 0.0078125 24.008 0.0078125ZM38.8883 14.8716L25.7709 25.7709C25.2776 26.1868 24.6531 26.4149 24.0078 26.4149C23.3626 26.4149 22.7381 26.1868 22.2447 25.7709L9.1274 14.8716C9.04812 15.0744 9.00761 15.2904 9.00796 15.5082V32.5071C9.00903 32.9736 9.19478 33.4208 9.52461 33.7507C9.85444 34.0806 10.3015 34.2666 10.768 34.2678H37.2476C37.7142 34.2666 38.1613 34.0808 38.4912 33.7508C38.8211 33.4208 39.0069 32.9737 39.008 32.5071V15.5082C39.0082 15.2904 38.9676 15.0744 38.8883 14.8716ZM9.73687 14.0833L22.8818 25.0052C23.1975 25.2698 23.5962 25.4148 24.008 25.4148C24.4199 25.4148 24.8185 25.2698 25.1342 25.0052L38.2792 14.0833C37.9796 13.8652 37.6185 13.7477 37.2479 13.7478H10.768C10.3974 13.7476 10.0364 13.8651 9.73687 14.0833Z" fill="#4CAF50" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.008 0.0078125C37.2627 0.0078125 48.008 10.7503 48.008 24.0111C48.008 37.2652 37.2628 48.0077 24.008 48.0077C10.7531 48.0077 0.00805664 37.2657 0.00805664 24.0111C0.00805664 10.7503 10.7532 0.0078125 24.008 0.0078125ZM38.8883 14.8716L25.7709 25.7709C25.2776 26.1868 24.6531 26.4149 24.0078 26.4149C23.3626 26.4149 22.7381 26.1868 22.2447 25.7709L9.1274 14.8716C9.04812 15.0744 9.00761 15.2904 9.00796 15.5082V32.5071C9.00903 32.9736 9.19478 33.4208 9.52461 33.7507C9.85444 34.0806 10.3015 34.2666 10.768 34.2678H37.2476C37.7142 34.2666 38.1613 34.0808 38.4912 33.7508C38.8211 33.4208 39.0069 32.9737 39.008 32.5071V15.5082C39.0082 15.2904 38.9676 15.0744 38.8883 14.8716Z" fill="#4CAF50" />
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_7_13">
