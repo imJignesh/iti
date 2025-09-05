@@ -129,7 +129,7 @@
   border: 2px solid var(--border-color);
   border-radius: 40px;
   color: var(--green-text);
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   font-weight: 400;
   padding: 10px 55px;
   cursor: pointer;
@@ -273,9 +273,11 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-.homeCopy .subjectSection .subjectRight .subjectBubblesGrid{
-  margin-bottom: 15px;
-}
+
+  .homeCopy .subjectSection .subjectRight .subjectBubblesGrid {
+    margin-bottom: 15px;
+  }
+
   .homeCopy .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
     padding: 10px 40px;
   }

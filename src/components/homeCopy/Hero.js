@@ -41,7 +41,7 @@ const Hero = () => {
                 <div className="container">
                     <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
                         <div className="row heroMain">
-                            <div className="col-12 col-lg-6 col-xl-7 pe-lg-5 heroLeft">
+                            <div className="col-12 col-lg-6 col-xl-6 pe-lg-5 heroLeft">
                                 <div
                                     data-scroll
                                     data-scroll-class="is-inview"
@@ -49,7 +49,7 @@ const Hero = () => {
                                     className="fade-in-section heroMainHeading"
                                     style={{ animationDelay: "0.4s" }}
                                 >
-                                    <h3 className="SubHeading">Welcome to Ignite</h3>
+                                    <h3 className="SubHeading">BEST TUTORS IN UAE</h3>
                                 </div>
                                 <div
                                     data-scroll
@@ -58,8 +58,11 @@ const Hero = () => {
                                     className="fade-in-section"
                                     style={{ animationDelay: "0.6s" }}
                                 >
-                                    <h1 className="heroTitle">
-                                        Lorem ipsum dolor sit amet, <span className="highlight">consectetur</span> adipiscing
+                                    <h1 className="heroTitle-desktop">
+                                        Empower Your Academic Goals With <span className="highlight">Ignite’s</span> Tutors
+                                    </h1>
+                                    <h1 className="heroTitle-mobile">
+                                        Ignite Your Path To Top <span className="highlight">Academic</span> Performance
                                     </h1>
                                 </div>
                                 <div
@@ -70,20 +73,17 @@ const Hero = () => {
                                     style={{ animationDelay: "0.8s" }}
                                 >
                                     <p className="heroParagraph">
-                                        <span>Lorem ipsum dolor sit amet</span>
+                                        <span>Improve Your Grades Today!</span>
                                         <b>
-                                            Achieve academic excellence in IBDP, MYP, I/GCSE, A-Levels & AP
-                                            with Ignite's expert tutors in Dubai. Our curriculum-focused
-                                            programs are designed to boost your grades and confidence!
+                                            We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, & more through our curriculum-specific approach & expert tutors in Dubai, guiding them toward a stronger understanding & lasting growth.
                                         </b>
                                         <strong>
-                                            Achieve academic excellence in IBDP, MYP, I/GCSE, A-Levels & AP
-                                            with Ignite's expert tutors in Dubai.
+                                            Ignite's experienced tutors in Dubai help students thrive in IBDP, IB MYP, IGCSE, A-Levels, AP, & more with personalized support & structured programs, creating a learning environment where you can truly progress.
                                         </strong>
                                     </p>
                                 </div>
                             </div>
-                            <div className="col-12 col-lg-6 col-xl-5 heroRight">
+                            <div className="col-12 col-lg-6 col-xl-6 heroRight">
                                 <div className="videoContainer">
                                     <video
                                         className="heroVideo"
@@ -106,32 +106,34 @@ const Hero = () => {
                                     </video>
                                 </div>
                                 <div className="buttonGroup">
-                                    <button type="button" className="buttonBlue">
+                                    <a href="/join-free-demo-class/" className="buttonBlue">
                                         Get A Free Demo{" "}
                                         <Image
                                             src="/images/right-arrow-skyblue.png"
                                             width={40}
                                             height={40}
                                             quality={100}
+                                            alt="Right arrow"
                                         />
-                                    </button>
-                                    <button type="button" className="buttonSkyBlue">
+                                    </a>
+                                    <a href="/courses/" className="buttonSkyBlue">
                                         Explore Classes{" "}
                                         <Image
                                             src="/images/right-arrow-blue.png"
                                             width={40}
                                             height={40}
                                             quality={100}
+                                            alt="Right arrow"
                                         />
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
-        </div>
+        </div >
     );
 };
 

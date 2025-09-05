@@ -19,49 +19,49 @@ const uspData = [
     number: "01",
     icon: "/images/usp-icon1.png",
     title: "EXPERIENCED TUTORS",
-    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+    desc: "Learn from highly qualified tutors with a proven track record of academic success.",
   },
   {
     number: "02",
     icon: "/images/usp-icon2.png",
     title: "STRUCTURED LEARNING",
-    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+    desc: "A well-organised approach that ensures clarity, consistency, & a strong foundation.",
   },
   {
     number: "03",
     icon: "/images/usp-icon3.png",
-    title: "TAILORED COURSES",
-    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+    title: "TAILORED PROGRAMS",
+    desc: "Customised study plans aligned with each student's needs, pace, & curriculum.",
   },
   {
     number: "04",
     icon: "/images/usp-icon4.png",
     title: "FLEXIBLE SCHEDULING",
-    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+    desc: "Convenient session timings designed to fit around school & lifestyle demands.",
   },
   {
     number: "05",
     icon: "/images/usp-icon5.png",
     title: "INTERACTIVE SESSIONS",
-    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+    desc: "Engaging, discussion-based learning that encourages curiosity & critical thinking.",
   },
   {
     number: "06",
     icon: "/images/usp-icon6.png",
     title: "INDIVIDUAL SUPPORT",
-    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+    desc: "Receive personalised guidance every step of the way to overcome any challenges.",
   },
   {
     number: "07",
     icon: "/images/usp-icon1.png",
-    title: "EXPERIENCED TUTORS",
-    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+    title: "EXTENSIVE EXAM PREP",
+    desc: "Practice with unit tests, past papers, & mock exams under exam-like conditions",
   },
   {
     number: "08",
     icon: "/images/usp-icon2.png",
-    title: "STRUCTURED LEARNING",
-    desc: "One-on-one sessions to achieve personal goals and enhance self-awareness.",
+    title: "EXCELLENT RESOURCES",
+    desc: "Access to curated notes, practice tests, & subject-specific learning material.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function Usps({ }) {
         className="fade-in-sections uspSection"
         style={{ animationDelay: "0.2s" }}
       >
-        <div className="row justify-content-between">
+        <div className="row justify-content-between p-5">
           <div className="col-lg-4">
             <div className="uspLeft">
               <span
@@ -90,7 +90,7 @@ export default function Usps({ }) {
                 className="fade-in-sections SubHeading"
                 style={{ animationDelay: "0.1s" }}
               >
-                OUR USP'S
+                OUR PROMISE
               </span>
 
               <h2
@@ -100,7 +100,7 @@ export default function Usps({ }) {
                 className="fade-in-sections uspTitle"
                 style={{ animationDelay: "0.2s" }}
               >
-                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING
+                Here's Why Ignite Is The UAE's First Choice
               </h2>
 
               <div
@@ -110,7 +110,7 @@ export default function Usps({ }) {
                 className="fade-in-sections uspSubtitle"
                 style={{ animationDelay: "0.3s" }}
               >
-                LOREM IPSUM DOLOR SIT AMET
+                Real Support, Real Progress
               </div>
 
               <p
@@ -120,19 +120,13 @@ export default function Usps({ }) {
                 className="fade-in-section uspDesc"
                 style={{ animationDelay: "0.4s" }}
               >
-                Choosing us means partnering with experienced coaches who are
-                dedicated to unlocking your potential. We offer personalized
-                strategies, proven methods, and unwavering support to help you
-                navigate challenges.
+                We go beyond just tutoring with personalised learning, proven methods, & expert support that deliver real results.
               </p>
 
-              <button
-                // data-scroll
-                // data-scroll-class="is-inview"
-                // data-scroll-repeat="true"
+              <a
+                href="/why-ignite/"
                 className="uspBtn fade-in-sections buttonSkyBlue"
                 style={{ animationDelay: "0.5s" }}
-                type="button"
               >
                 KNOW MORE{" "}
                 <Image
@@ -140,8 +134,9 @@ export default function Usps({ }) {
                   width={40}
                   height={40}
                   quality={100}
+                  alt="right arrow"
                 />
-              </button>
+              </a>
             </div>
           </div>
           <div className="col-lg-6">

@@ -28,9 +28,24 @@ const alumniData = [
     img: "/images/alumni-slider3.png",
     logo: "/images/university_logo.png",
   },
+  {
+    name: "LOREM IPSUM DOLOR",
+    img: "/images/alumni-slider1.png",
+    logo: "/images/university_logo.png",
+  },
+  {
+    name: "LOREM IPSUM DOLOR",
+    img: "/images/alumni-slider2.png",
+    logo: "/images/university_logo.png",
+  },
+  {
+    name: "LOREM IPSUM DOLOR",
+    img: "/images/alumni-slider3.png",
+    logo: "/images/university_logo.png",
+  },
 ];
 
-export default function Alumni({  setActiveIndex }) {
+export default function Alumni({ setActiveIndex }) {
   return (
     <>
       <section className="alumniSection">
@@ -52,8 +67,8 @@ export default function Alumni({  setActiveIndex }) {
               className="fade-in-section alumniTitle"
               style={{ margin: "24px 0 0 0", animationDelay: "0.2s" }}
             >
-              LOREM IPSUM DOLOR SIT AMET, consectetur
-              <span className="alumniHighlight"> ADIPISCING</span>
+              Charting Global Success, One Student At A Time
+              {/* <span className="alumniHighlight"> ADIPISCING</span> */}
             </h2>
           </div>
 
@@ -77,12 +92,12 @@ export default function Alumni({  setActiveIndex }) {
               />
             </button>
 
-            <Swiper
+            {/* <Swiper
               modules={[Navigation, Pagination, EffectCoverflow]}
               effect="coverflow"
               coverflowEffect={{
-                rotate: 0, 
-                stretch: -50,
+                rotate: 0,
+                stretch: 80,
                 depth: 200,
                 modifier: 2,
                 initialSlide: 1,
@@ -91,7 +106,8 @@ export default function Alumni({  setActiveIndex }) {
               initialSlide={1}
               slidesPerView={3}
               centeredSlides={true}
-              spaceBetween={80}
+              spaceBetween={0}
+              loop={true}
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -104,7 +120,27 @@ export default function Alumni({  setActiveIndex }) {
                 767: { slidesPerView: 2 },
                 1100: { slidesPerView: 3 },
               }}
+            > */}
+            <Swiper
+              modules={[Navigation, Pagination]}
+              slidesPerView={3}
+              centeredSlides={true}
+              spaceBetween={-80}
+              loop={true}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
+              pagination={{ clickable: true }}
+              className="alumniSwiper"
+              // REMOVE THIS LINE: onProgress={(swiper) => { ... }}
+              breakpoints={{
+                0: { slidesPerView: 1.5 },
+                767: { slidesPerView: 2 },
+                1100: { slidesPerView: 3 },
+              }}
             >
+
               {alumniData.map((alumni, idx) => (
                 <SwiperSlide key={idx}>
                   {({ isActive }) => (
@@ -115,9 +151,7 @@ export default function Alumni({  setActiveIndex }) {
                       className="fade-in-section alumniCard"
                       style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
                     >
-                      <div
-                        className={`alumniBg ${isActive ? "activeBg" : ""}`}
-                      ></div>
+
 
                       <div className="alumniImageWrap">
                         <img
@@ -128,7 +162,7 @@ export default function Alumni({  setActiveIndex }) {
                           data-scroll-repeat="true"
                           className="alumniImage"
                         />
-                        <div className="alumniLogoBox">
+                        {/* <div className="alumniLogoBox">
                           <img
                             src={alumni.logo}
                             alt="university logo"
@@ -137,7 +171,7 @@ export default function Alumni({  setActiveIndex }) {
                             data-scroll-offset="-10%"
                             className="alumniLogo"
                           />
-                        </div>
+                        </div> */}
                       </div>
 
                       <div className={`alumniName ${isActive ? "activeName" : ""}`}>

@@ -59,6 +59,10 @@
   display: none;
 }
 
+.homeCopy .blogSection .blogLeft h2 {
+  width: 80%;
+}
+
 .homeCopy .blogSection .blogRight {
   display: flex;
   flex-direction: column;
@@ -74,8 +78,8 @@
 }
 
 .homeCopy .blogSection .blogImg {
-  width: 300px;
-  height: 250px;
+  max-width: 300px;
+  max-height: 250px;
   object-fit: cover;
   border-radius: 24px;
 }
@@ -90,11 +94,10 @@
 }
 
 .homeCopy .blogSection .blogCardTitle {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-weight: 700;
   color: var(--blue-color);
   margin-bottom: 4px;
-  letter-spacing: 1px;
 }
 
 .homeCopy .blogSection .blogCardDesc {
@@ -113,6 +116,7 @@
 .homeCopy .blogSection .blogReadMoreBtn {
   font-size: 1rem;
   font-weight: 700;
+  padding: 5px 20px;
 }
 
 .homeCopy .blogSection .blogReadMoreBtn:hover {

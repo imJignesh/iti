@@ -37,23 +37,27 @@ body {
   padding: 0 20px;
   width: 100%;
 }
+
 @media (max-width: 1124px) {
   .container {
     max-width: 90vw !important;
   }
 }
+
 @media (max-width: 991px) {
   .container {
     max-width: 95vw !important;
   }
 }
+
 @media (max-width: 767px) {
   .container {
     max-width: 100% !important;
   }
 }
+
 .SubHeading {
-  font-size: 30px;
+  font-size: 1.7rem;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
@@ -64,6 +68,7 @@ body {
   padding: 0 40px;
   display: inline-block;
 }
+
 .SubHeading:before {
   content: "";
   width: 18px;
@@ -75,6 +80,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .SubHeading:after {
   content: "";
   width: 18px;
@@ -87,28 +93,44 @@ body {
   background-repeat: no-repeat;
 }
 
+.nodecoration {
+  text-decoration: none !important;
+}
+
 @media (max-width: 1024px) {
   .SubHeading {
     font-size: 24px;
   }
+
   .SubHeading:before,
   .SubHeading:after {
     width: 12px;
   }
 }
+
 @media (max-width: 575px) {
   .SubHeading {
     font-size: 22px;
     padding: 0 20px;
   }
+
   .SubHeading:before,
   .SubHeading:after {
     width: 10px;
   }
 }
+
 @media (max-width: 500px) {
   .SubHeading {
     font-size: 4vw !important;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .buttonBlue,
+  .buttonSkyBlue {
+    font-size: 10px;
   }
 }
 
@@ -118,7 +140,7 @@ body {
 .buttonSkyBlue {
   position: relative;
   overflow: hidden;
-  padding: 10px 30px;
+  padding: 15px 30px;
   border-radius: 40px;
   text-transform: uppercase;
   border: 0;
@@ -129,15 +151,19 @@ body {
   cursor: pointer;
   transition: 0.3s ease;
   z-index: 1;
+  text-decoration: none;
 }
+
 .buttonBlue {
   color: var(--white-color);
   background: linear-gradient(to right, var(--blue-color), #3f88ba);
 }
+
 .buttonSkyBlue {
   color: var(--blue-color);
   background: linear-gradient(to right, var(--border-color), #e7f6ff);
 }
+
 .buttonBlue::before,
 .buttonSkyBlue::before {
   content: "";
@@ -147,18 +173,22 @@ body {
   width: 200%;
   height: 100%;
   z-index: -1;
-  transition:  0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
+
 .buttonBlue::before {
-  background: linear-gradient(to right, var(--blue-color), #3f88ba 55%, var(--blue-color) 85% , var(--blue-color));
+  background: linear-gradient(to right, var(--blue-color), #3f88ba 55%, var(--blue-color) 85%, var(--blue-color));
 }
+
 .buttonSkyBlue::before {
-  background: linear-gradient(to right, var(--border-color), #e7f6ff 55%, var(--border-color) 85% , var(--border-color));
+  background: linear-gradient(to right, var(--border-color), #e7f6ff 55%, var(--border-color) 85%, var(--border-color));
 }
+
 .buttonBlue:hover::before,
 .buttonSkyBlue:hover::before {
   transform: translateX(-50%);
 }
+
 .buttonBlue:hover,
 .buttonSkyBlue:hover {
   scale: 1.05;
@@ -179,11 +209,13 @@ body {
 .is-inview {
   animation: fadeInUp 0.8s 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(80px);
   }
+
   to {
     opacity: 1;
     transform: none;
@@ -196,10 +228,12 @@ body {
   clip-path: inset(0 100% 0 0);
   animation: revealImageClip 1.2s 0.6s cubic-bezier(0.4, 0, 0.2, 1.4) forwards;
 }
+
 @keyframes revealImageClip {
   from {
     clip-path: inset(0 100% 0 0);
   }
+
   to {
     clip-path: inset(0 0% 0 0);
   }

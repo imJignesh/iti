@@ -115,7 +115,7 @@
 
 .homeCopy .testimonialSection .testimonialSwiper {
   width: 100%;
-  max-width: 85vw;
+  max-width: 75vw;
 }
 
 .homeCopy .testimonialSection .testimonialSwiper :global(.swiper-wrapper) {
@@ -127,7 +127,7 @@
   border-radius: 32px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 0;
-  height: 100%;
+  height: 400px;
   max-height: 400px;
   display: flex;
   flex-direction: column;
@@ -198,11 +198,11 @@
 }
 
 .homeCopy .testimonialSection .testimonialText {
-  font-size: 1vw;
+  font-size: 0.65vw;
   text-align: start;
   margin-bottom: 24px;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.3;
   letter-spacing: 0.6px;
 }
 
@@ -246,11 +246,11 @@
 }
 
 .homeCopy .testimonialSection .testimonialSliderWrap .swiper-button-prev {
-  left: 3%;
+  left: 10%;
 }
 
 .homeCopy .testimonialSection .testimonialSliderWrap .swiper-button-next {
-  right: 3%;
+  right: 10%;
 }
 
 @media (max-width: 1199px) {

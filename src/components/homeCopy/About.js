@@ -49,7 +49,7 @@ const About = () => {
     <section className="aboutSection">
       <div className="container">
         <div className="aboutHeading">
-          <span className="SubHeading">ABOUT US</span>
+          <span className="SubHeading">ABOUT IGNITE</span>
         </div>
         <div className="row aboutSectionInner">
           <div className="col-12 col-lg-6 aboutLeft">
@@ -105,7 +105,7 @@ const About = () => {
                 data-scroll-offset="-10%"
                 className="statCard statCardYears"
               >
-                <div className="statBig">11 YEARS +</div>
+                <div className="statBig">10 YEARS</div>
                 <div className="statSmall">
                   OF RICH TUTORING EXPERIENCE
                 </div>
@@ -129,7 +129,7 @@ const About = () => {
                 className="verticalLabel fade-in-section"
                 style={{ animationDelay: "0.8s" }}
               >
-                <span>4.9</span> GOOGLE REVIEWS
+                <span>4.9</span> RATED ON GOOGLE
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@ const About = () => {
               style={{ animationDelay: "0.1s" }}
             >
               <div className="aboutHeadingRow">
-                <span className="SubHeading">ABOUT US</span>
+                <span className="SubHeading">ABOUT IGNITE</span>
               </div>
             </div>
 
@@ -154,8 +154,8 @@ const About = () => {
               className="fade-in-section aboutTitle"
               style={{ animationDelay: "0.2s" }}
             >
-              LOREM IPSUM DOLOR SIT AMET, CONSECTETUR{" "}
-              <span className="aboutHighlight">ADIPISCING</span>
+              EXAM-READY SUPPORT WITH TRUSTED CURRICULA{" "}
+              <span className="aboutHighlight">EXPERTS</span>
             </h2>
 
             <p
@@ -165,10 +165,7 @@ const About = () => {
               className="fade-in-section aboutDesc"
               style={{ animationDelay: "0.3s" }}
             >
-              Choosing us means partnering with experienced coaches who are
-              dedicated to unlocking your potential. We offer personalized
-              strategies, proven methods, and unwavering support to help you
-              navigate challenges.
+              At Ignite Training Institute, every student can thrive with the right guidance & support. Our experienced trainers & tailored learning methods help unlock true potential, inside & outside the classroom.
             </p>
 
             <div
@@ -180,14 +177,14 @@ const About = () => {
             >
               <div className="aboutStatsRow">
                 <div className="aboutStatBlock">
-                  <div className="aboutStatBig">{Math.floor(studentCount)}+</div>
+                  <div className="aboutStatBig">2300+</div>
                   <div className="aboutStatLabel">
                     TRULY HAPPY STUDENTS FROM UAE
                   </div>
                 </div>
                 <span className="aboutStatBorder"></span>
                 <div className="aboutStatBlock">
-                  <div className="aboutStatBig">{Math.floor(acceptanceRate)}%</div>
+                  <div className="aboutStatBig">89%</div>
                   <div className="aboutStatLabel">
                     OF STUDENTS ACCEPTED TO TOP UNIVERSITIES
                   </div>
@@ -195,13 +192,13 @@ const About = () => {
               </div>
             </div>
 
-            <button
+            <a
+              href="/join-free-demo-class/"
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="aboutBtn fade-in-section buttonSkyBlue"
               style={{ animationDelay: "0.5s" }}
-              type="button"
             >
               GET A FREE DEMO{" "}
               <Image
@@ -209,8 +206,9 @@ const About = () => {
                 width={40}
                 height={40}
                 quality={100}
+                alt="Right arrow"
               />
-            </button>
+            </a>
           </div>
         </div>
       </div>

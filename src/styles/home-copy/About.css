@@ -1,6 +1,6 @@
 /* About Us Section  */
 .homeCopy .aboutSection {
-  margin: 80px 0;
+  margin: 160px 0;
 }
 
 .homeCopy .aboutSection .aboutSectionInner {
@@ -15,17 +15,22 @@
   align-items: flex-end;
   min-width: 340px;
   position: relative;
+  justify-content: space-evenly;
 }
 
 .homeCopy .aboutSection .aboutImageWrap {
   padding-right: 50px;
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.homeCopy .aboutSection a.aboutBtn {
+  width: 40%;
 }
 
 .homeCopy .aboutSection .aboutImageWrap .rectangleBG {
@@ -69,8 +74,8 @@
   border-radius: 24px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   padding: 30px 20px;
-  width: 47%;
-  height: 32%;
+  width: 46%;
+  height: 33%;
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -143,12 +148,10 @@
   margin-bottom: 8px;
 }
 
-.homeCopy .aboutSection .aboutHeadingRow span {
-  font-size: 25px;
-}
+
 
 .homeCopy .aboutSection .aboutTitle {
-  font-size: 2vw;
+  font-size: 2.1875rem;
   font-weight: 800;
   color: var(--blue-color);
   margin: 0 0 12px 0;
@@ -245,9 +248,10 @@
 }
 
 @media (max-width: 991px) {
-  .homeCopy .aboutSection .aboutSectionInner{
+  .homeCopy .aboutSection .aboutSectionInner {
     gap: 30px;
   }
+
   .homeCopy .aboutSection .aboutImageWrap {
     max-width: 600px;
     margin: 0 auto;
@@ -374,9 +378,10 @@
 }
 
 @media (max-width:425px) {
-  .homeCopy .aboutSection .aboutSectionInner{
+  .homeCopy .aboutSection .aboutSectionInner {
     gap: 20px;
   }
+
   .homeCopy .aboutSection .statCard {
     padding: 22px;
   }

@@ -1,35 +1,69 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Link from 'next/link';
 
+// Accept locoScroll as a prop from the parent component
+const Blog = ({ locoScroll }) => {
+    const [blogs, setBlogs] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-const blogData = [
-    {
-        img: "/images/blogImage1.jpg",
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        desc: "Choosing us means partnering with experienced coaches who are...",
-    },
-    {
-        img: "/images/blogImage2.jpg",
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        desc: "Choosing us means partnering with experienced coaches who are...",
-    },
-    {
-        img: "/images/blogImage3.jpg",
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        desc: "Choosing us means partnering with experienced coaches who are...",
-    },
-];
+    // Effect to fetch data when the component mounts.
+    // This will only run once.
+    useEffect(() => {
+        const fetchBlogs = async () => {
+            try {
+                // Fetch posts from the WordPress API
+                const response = await fetch("https://ignitetraininginstitute.com/wp-json/wp/v2/posts?_embed&per_page=3");
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                const data = await response.json();
 
-const Blog = () => {
+                // Process the data to format it for the component
+                const formattedBlogs = data.map(post => {
+                    const featuredImage = post._embedded['wp:featuredmedia']?.[0]?.source_url || "/images/blog-placeholder.jpg";
+                    const title = post.title.rendered.replace(/<[^>]*>?/gm, '');
+                    const description = post.excerpt.rendered.replace(/<[^>]*>?/gm, '');
+
+                    return {
+                        img: featuredImage,
+                        title: title,
+                        desc: description,
+                        link: post.link
+                    };
+                });
+
+                setBlogs(formattedBlogs);
+                setIsLoading(false);
+
+            } catch (error) {
+                console.error("Failed to fetch blog posts:", error);
+                setIsLoading(false);
+            }
+        };
+
+        fetchBlogs();
+    }, []);
+
+    // NEW EFFECT: This is the critical fix.
+    // It will trigger only after the `blogs` state has been updated,
+    // ensuring the new DOM elements are available for Locomotive Scroll to recognize.
+    useEffect(() => {
+        // Only call update if the scroll instance is ready and we have blog posts
+        if (locoScroll && blogs.length > 0) {
+            locoScroll.update();
+        }
+    }, [locoScroll, blogs]); // Depend on both the scroll instance and the blogs data itself
+
     return (
         <section className="blogSection">
             <div className="container">
                 <div className="row gap-5 gap-lg-0">
                     <div className="col-12 col-lg-4 blogLeft">
                         <div
-                            className="fade-in-section blogHeadingRow"
                             data-scroll
                             data-scroll-class="is-inview"
                             data-scroll-repeat="true"
+                            className="blogHeadingRow fade-in-section"
                             style={{ animationDelay: "0.1s" }}
                         >
                             <span className="SubHeading">BLOGS</span>
@@ -38,76 +72,82 @@ const Blog = () => {
                             data-scroll
                             data-scroll-class="is-inview"
                             data-scroll-repeat="true"
-                            className="fade-in-section blogTitle"
+                            className="blogTitle fade-in-section"
                             style={{ animationDelay: "0.2s" }}
                         >
-                            LOREM IPSUM DOLOR
-                            SIT AMET, CONSECTETUR
-                            <span className="blogHighlight"> ADIPISCING</span>
+                            Explore Expert Insights, Study Tips, & Success Stories
                         </h2>
                         <div
                             data-scroll
                             data-scroll-class="is-inview"
                             data-scroll-repeat="true"
-                            className="fade-in-section blogSubtitle"
+                            className="blogSubtitle fade-in-section"
                             style={{ animationDelay: "0.3s" }}
                         >
-                            LOREM IPSUM DOLOR SIT AMET
+                            Dive Into Our Signature Blogs
                         </div>
-                        <button
-                            data-scroll
-                            data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
-                            className="blogAllBtn buttonBlue fade-in-section"
-                            style={{ animationDelay: "0.4s" }}
-                        >
-                            VIEW ALL BLOGS
-                            <img
-                                src="/images/right-arrow-skyblue.png"
-                                alt="arrow"
-                                width={24}
-                                height={24}
-                            />
-                        </button>
-                    </div>
-
-                    <div className="col-12 col-lg-8 blogRight">
-                        {blogData.map((blog, i) => (
-                            <div
-                                key={i}
+                        <a href="/blogs" className="nodecoration">
+                            <button
                                 data-scroll
                                 data-scroll-class="is-inview"
                                 data-scroll-repeat="true"
-                                className="fade-in-section blogCard"
-                                style={{ animationDelay: "0.2s" }}
+                                className="blogAllBtn buttonBlue fade-in-section"
+                                style={{ animationDelay: "0.4s" }}
                             >
+                                VIEW ALL BLOGS
                                 <img
-                                    src={blog.img}
-                                    alt="blog"
-                                    data-scroll
-                                    data-scroll-class="is-clipped"
-                                    data-scroll-repeat="true"
-                                    data-scroll-offset="-10%"
-                                    className="blogImg"
+                                    src="/images/right-arrow-skyblue.png"
+                                    alt="arrow"
+                                    width={24}
+                                    height={24}
                                 />
-                                <div className="blogCardContent">
-                                    <div className="blogCardTitle">{blog.title}</div>
-                                    <div className="blogCardDesc">{blog.desc}</div>
-                                    <span className="blogCardLine"></span>
-                                    <button className="blogReadMoreBtn buttonSkyBlue">
-                                        READ MORE
-                                        <span className="blogReadMoreArrow">
-                                            <img
-                                                src="/images/right-arrow-blue.png"
-                                                alt="arrow"
-                                                width={20}
-                                                height={20}
-                                            />
-                                        </span>
-                                    </button>
+                            </button>
+                        </a>
+                    </div>
+
+                    <div className="col-12 col-lg-8 blogRight">
+                        {isLoading ? (
+                            <p>Loading blogs...</p>
+                        ) : (
+                            blogs.map((blog, i) => (
+                                <div
+                                    key={i}
+                                    data-scroll
+                                    data-scroll-class="is-inview"
+                                    data-scroll-repeat="true"
+                                    className="blogCard fade-in-section"
+                                    style={{ animationDelay: `${0.2 + i * 0.15}s` }}
+                                >
+                                    <img
+                                        src={blog.img}
+                                        alt="blog"
+                                        data-scroll
+                                        data-scroll-class="is-clipped"
+                                        data-scroll-repeat="true"
+                                        data-scroll-offset="-10%"
+                                        className="blogImg"
+                                    />
+                                    <div className="blogCardContent">
+                                        <div className="blogCardTitle">{blog.title}</div>
+                                        <div className="blogCardDesc">{blog.desc}</div>
+                                        <span className="blogCardLine"></span>
+                                        <a href={blog.link} target="_blank" rel="noopener noreferrer">
+                                            <button className="blogReadMoreBtn buttonSkyBlue">
+                                                READ MORE
+                                                <span className="blogReadMoreArrow">
+                                                    <img
+                                                        src="/images/right-arrow-blue.png"
+                                                        alt="arrow"
+                                                        width={20}
+                                                        height={20}
+                                                    />
+                                                </span>
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))
+                        )}
                     </div>
 
                     <button

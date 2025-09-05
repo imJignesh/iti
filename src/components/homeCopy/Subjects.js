@@ -2,11 +2,28 @@ import React from "react";
 
 
 const subjectRows = [
-  ["English", "French"],
-  ["Spanish", "Computer", "Economics"],
-  ["Biology", "Chemistry"],
-  ["Physics", "Maths", "Accounting"],
-  ["Business Studies"],
+  [
+    { name: "English", link: "/english-tutor-in-dubai/" },
+    { name: "French", link: "/french-tutor-in-dubai/" },
+  ],
+  [
+    { name: "Spanish", link: "/spanish-tutor-in-dubai/" },
+    { name: "Computer Science", link: "/computer-science-tutor-in-dubai/" },
+    { name: "Economics", link: "/economics-tutor-in-dubai/" },
+  ],
+  [
+    { name: "Biology", link: "/biology-tutor-in-dubai/" },
+    { name: "Chemistry", link: "/chemistry-tutor-in-dubai/" },
+  ],
+  [
+    { name: "Physics", link: "/physics-tutor-in-dubai/" },
+    { name: "Maths", link: "/maths-tutor-in-dubai/" },
+    { name: "Accounting", link: "/accounting-tutor-in-dubai/" },
+  ],
+  [
+    { name: "Business Studies", link: "/business-studies-tutor-in-dubai/" },
+    { name: "Psychology", link: "/psychology-tutor-in-dubai/" },
+  ],
 ];
 
 export default function Subjects({ }) {
@@ -63,8 +80,8 @@ export default function Subjects({ }) {
               className="fade-in-section subjectTitle"
               style={{ animationDelay: "0.2s" }}
             >
-              LOREM IPSUM DOLOR SIT AMET, CONSECTETUR{" "}
-              <span className="subjectHighlight">ADIPISCING</span>
+              Expert Guidance For Every Subject In Every{" "}
+              <span className="subjectHighlight">Way</span>
             </h1>
             <p
               data-scroll
@@ -73,11 +90,10 @@ export default function Subjects({ }) {
               className="fade-in-section subjectDesc"
               style={{ animationDelay: "0.3s" }}
             >
-              Choosing us means partnering with experienced coaches who are
-              dedicated to unlocking your potential.
+              We help students strengthen subject knowledge, choose the right curriculum path, & build the academic confidence needed to excel.
             </p>
           </div>
-          <div className="col-8 pe-5 subjectRight">
+          <div className="col-8 subjectRight">
             <div className="subjectBubblesGrid">
               {subjectRows.map((row, rowIdx) => (
                 <div
@@ -89,9 +105,9 @@ export default function Subjects({ }) {
                   style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
                 >
                   {row.map((subj) => (
-                    <div key={subj} className="subjectBubble">
-                      {subj}
-                    </div>
+                    <a key={subj.name} href={subj.link} className="subjectBubble nodecoration">
+                      {subj.name}
+                    </a>
                   ))}
                 </div>
               ))}

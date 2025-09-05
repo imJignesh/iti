@@ -11,9 +11,10 @@ const testData = [
     number: "01.",
     title: "ACT",
     img: "/images/test-section1.jpg",
-    label: "ACT",
-    details: ["Total Courses: 3", "Online & In-Person"],
-    btn: "VIEW TUTORING COURSE",
+    label: "AMERICAN COLLEGE TESTING",
+    details: ["Total Courses: 2", "Online & In-Person"],
+    btn: "VIEW COURSES",
+    link: "/act-tutors-in-dubai/",
   },
   {
     number: "02.",
@@ -21,21 +22,21 @@ const testData = [
     img: "/images/test-section2.jpg",
     label: "ADVANCED PLACEMENTS",
     details: ["Total Courses: 2", "Online & In-Person"],
-    btn: "VIEW TUTORING COURSE",
+    btn: "VIEW COURSES",
+    link: "/advanced-placements-tutors-in-dubai/",
   },
   {
     number: "03.",
     title: "UCAT",
     img: "/images/test-section3.jpg",
-    label: "UCAT",
-    details: ["Total Courses: 1", "Online & In-Person"],
-    btn: "VIEW TUTORING COURSE",
+    label: "UNIVERSITY CLINICAL APTITUDE TEST",
+    details: ["Total Courses: 2", "Online & In-Person"],
+    btn: "VIEW COURSES",
+    link: "#", // Assuming UCAT doesn't have a specific link yet
   },
 ];
 
-
 const Test = ({ isMobileSwiper, active, setActive }) => {
-
   // Set initial active slide for mobile, and initial active card for desktop
   useEffect(() => {
     if (isMobileSwiper && setActive) {
@@ -44,7 +45,6 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
       setActive(1); // Set the second card (index 1) as active initially for desktop
     }
   }, [isMobileSwiper, setActive]);
-
 
   return (
     <section className="testSection1">
@@ -66,12 +66,12 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
-            CONSECTETUR <span className="highlight">ADIPISCING</span>
+            Power Your Academic Goals With Expert Prep{" "}
+            <span className="highlight">Support</span>
           </h2>
         </div>
-      </div> {/* End container for headings */}
-
+      </div>{" "}
+      {/* End container for headings */}
       {/* Conditional Rendering: Swiper for Mobile (outside container), Static Cards for Desktop (inside container) */}
       {isMobileSwiper ? (
         <Swiper
@@ -91,7 +91,6 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             }
           }}
           // navigation={true} // Uncomment if you want navigation arrows
-
           breakpoints={{
             0: {
               slidesPerView: 1.1,
@@ -141,7 +140,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                       {card.details &&
                         card.details.map((d, i) => <span key={i}>{d}</span>)}
                     </div>
-                    <button className="testCardBtnMobile buttonSkyBlue" type="button">
+                    <a href={card.link} className="testCardBtnMobile buttonSkyBlue" type="button">
                       {card.btn}
                       <span className="btnArrow">
                         <Image
@@ -152,7 +151,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                           alt="arrow"
                         />
                       </span>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </SwiperSlide>
@@ -188,7 +187,6 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                     <span className="cardNumber">{card.number}</span>
                     <span className="cardTitle">{card.title}</span>
                   </div>
-
                   <div
                     className={`cardContentArea ${isCardActive ? "showContent" : "hideContent"}`}
                   >
@@ -199,7 +197,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                           <p key={i} className="m-0">{d}</p>
                         ))}
                     </div>
-                    <button className="cardBtn buttonSkyBlue" type="button">
+                    <a href={card.link} className="cardBtn buttonSkyBlue" type="button">
                       {card.btn}{" "}
                       <Image
                         src="/images/right-arrow-blue.png"
@@ -208,7 +206,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                         quality={100}
                         alt="arrow"
                       />
-                    </button>
+                    </a>
                   </div>
                 </div>
               );

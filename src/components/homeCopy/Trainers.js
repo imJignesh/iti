@@ -1,94 +1,153 @@
 import React, { useEffect, useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
-import { Swiper,  SwiperSlide } from "swiper/react";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 
 const trainers = [
   {
-    name: "NIKHIL PAWAR",
+    name: "MASAB",
     img: "/images/trainer1.png",
-    subtitle: "Lorem ipsum dolor sit",
-    experience: "12+ YEARS",
+    subtitle: "Maths & Accounting",
+    experience: "10+ YEARS",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "SADAF",
     img: "/images/trainer2.png",
-    subtitle: "Lorem ipsum dolor sit",
-    experience: "12+ YEARS",
+    subtitle: "Accounting, Economics & Business",
+    experience: "11+ YEARS",
     color: "green",
   },
   {
-    name: "NIKHIL PAWAR",
+    name: "SARANYA",
     img: "/images/trainer1.png",
-    subtitle: "Lorem ipsum dolor sit",
-    experience: "12+ YEARS",
+    subtitle: "Physics",
+    experience: "8+ YEARS",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "ASHWANI",
     img: "/images/trainer2.png",
-    subtitle: "Lorem ipsum dolor sit",
-    experience: "12+ YEARS",
+    subtitle: "Maths",
+    experience: "7+ YEARS",
     color: "green",
   },
   {
-    name: "NIKHIL PAWAR",
+    name: "IRTIQA",
     img: "/images/trainer1.png",
-    subtitle: "Lorem ipsum dolor sit",
-    experience: "12+ YEARS",
+    subtitle: "Computer Science, ICT",
+    experience: "6+ YEARS",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "ABDUL",
     img: "/images/trainer2.png",
-    subtitle: "Lorem ipsum dolor sit",
-    experience: "12+ YEARS",
+    subtitle: "Maths",
+    experience: "13+ YEARS",
     color: "green",
   },
   {
-    name: "NIKHIL PAWAR",
+    name: "HARSHA",
     img: "/images/trainer1.png",
-    subtitle: "Lorem ipsum dolor sit",
-    experience: "12+ YEARS",
+    subtitle: "Economics & Business",
+    experience: "10+ YEARS",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "NAMRATA",
     img: "/images/trainer2.png",
-    subtitle: "Lorem ipsum dolor sit",
-    experience: "12+ YEARS",
+    subtitle: "Maths & Physics",
+    experience: "10+ YEARS",
     color: "green",
   },
   {
-    name: "NIKHIL PAWAR",
+    name: "KRITIKA",
     img: "/images/trainer1.png",
-    subtitle: "Lorem ipsum dolor sit",
-    experience: "12+ YEARS",
+    subtitle: "Maths",
+    experience: "3+ YEARS",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "RUSTHA",
     img: "/images/trainer2.png",
-    subtitle: "Lorem ipsum dolor sit",
-    experience: "12+ YEARS",
+    subtitle: "Chemistry, Biology, & EVM",
+    experience: "3+ YEARS",
+    color: "green",
+  },
+  {
+    name: "IPSITA",
+    img: "/images/trainer1.png",
+    subtitle: "Biology & EVM",
+    experience: "7+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "FREEZY",
+    img: "/images/trainer2.png",
+    subtitle: "Biology, Chemistry",
+    experience: "4+ YEARS",
+    color: "green",
+  },
+  {
+    name: "AASHIMA",
+    img: "/images/trainer1.png",
+    subtitle: "Spanish",
+    experience: "5+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "ANUJA",
+    img: "/images/trainer2.png",
+    subtitle: "English & French",
+    experience: "10+ YEARS",
+    color: "green",
+  },
+  {
+    name: "DR. HAYA",
+    img: "/images/trainer1.png",
+    subtitle: "Chemistry, Physics, Biology",
+    experience: "9+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "DEEPAK",
+    img: "/images/trainer2.png",
+    subtitle: "Physics & Maths",
+    experience: "13+ YEARS",
     color: "green",
   },
 ];
 
+export default function Trainers({ scrollInstance }) {
+  const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+  const trainersGridRef = React.useRef(null);
 
-export default function Trainers({ }) {
+  useEffect(() => {
+    const handleResize = () => {
+      setIsTrainersSwiper(window.innerWidth <= 1199);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
-    useEffect(() => {
-      const handleResize = () => {
-        setIsTrainersSwiper(window.innerWidth <= 1199);
-      };
-      handleResize();
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
-  
+  // UseEffect to update Locomotive Scroll after content changes
+  useEffect(() => {
+    if (scrollInstance) {
+      scrollInstance.update();
+      if (showAll && trainersGridRef.current) {
+        const cards = trainersGridRef.current.querySelectorAll('.trainerCard');
+        cards.forEach(card => {
+          if (!card.classList.contains('is-inview')) {
+            card.classList.add('is-inview');
+          }
+        });
+      }
+    }
+  }, [showAll, scrollInstance]);
+
+  const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 
   return (
     <>
@@ -101,7 +160,7 @@ export default function Trainers({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <span className="SubHeading trainersSubheading">OUR TRAINERS</span>
+            <span className="SubHeading trainersSubheading">OUR TUTORS</span>
           </div>
 
           <h2
@@ -111,8 +170,7 @@ export default function Trainers({ }) {
             className="fade-in-section trainersTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
-            CONSECTETUR <span className="trainersHighlight">ADIPISCING</span>
+            The Best Trainers For Your Success Journey
           </h2>
 
           {isTrainersSwiper ? (
@@ -189,8 +247,8 @@ export default function Trainers({ }) {
             </div>
           ) : (
             <>
-              <div className="trainersGrid">
-                {trainers.map((t, i) => (
+              <div className="trainersGrid" ref={trainersGridRef}>
+                {displayTrainers.map((t, i) => (
                   <div
                     key={i}
                     data-color={t.color}
@@ -210,15 +268,18 @@ export default function Trainers({ }) {
                 ))}
               </div>
 
-              <button
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section trainersSeeMore"
-                style={{ animationDelay: `${0.3 + trainers.length * 0.06}s` }}
-              >
-                SEE MORE
-              </button>
+              {trainers.length > 10 && !showAll && (
+                <button
+                  onClick={() => setShowAll(true)}
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                  className="fade-in-section trainersSeeMore"
+                  style={{ animationDelay: `${0.3 + displayTrainers.length * 0.06}s` }}
+                >
+                  SEE MORE
+                </button>
+              )}
             </>
           )}
         </div>

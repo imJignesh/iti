@@ -13,7 +13,7 @@
 }
 
 .homeCopy .courseSection .courseHeadings .courseTitle {
-  font-size: 2.5rem;
+  font-size: 2.1875rem;
   font-weight: 700;
   margin: 40px 0 30px 0;
   line-height: 1.1;
@@ -22,11 +22,9 @@
 }
 
 .homeCopy .courseSection .courseHeadings .courseTitle .highlight {
-  background: linear-gradient(
-    to right,
-    var(--lightgreen-color),
-    var(--green-color)
-  );
+  background: linear-gradient(to right,
+      var(--lightgreen-color),
+      var(--green-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -43,11 +41,11 @@
 
 .homeCopy .courseSection .courseInner {
   display: flex;
-  gap: 24px;
+  gap: 40px;
   justify-content: center;
   align-items: stretch;
   margin-top: 40px;
-  max-width: 1500px;
+  max-width: 60vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -57,7 +55,7 @@
 .homeCopy .mainCard,
 .homeCopy .activeCard {
   position: relative;
-  border-radius: 40px;
+  border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -67,7 +65,7 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   background: rgba(255, 255, 255, 0.7);
   flex-shrink: 0;
-  height: 600px;
+  height: 500px;
   transition: flex-basis 0.8s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.8s,
     box-shadow 0.8s, background 0.8s;
 }
@@ -81,7 +79,7 @@
 
 .homeCopy .courseSection .mainCard,
 .homeCopy .activeCard {
-  flex-basis: 640px;
+  flex-basis: 450px;
   z-index: 2;
   background: #fff;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -128,11 +126,9 @@
   gap: 18px;
   color: #fff;
   padding: 40px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.01) 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.01) 0%,
+      rgba(0, 0, 0, 0.6) 100%);
   border-radius: 25px;
   transition: 0.4s all;
 }
@@ -144,7 +140,7 @@
   right: 20%;
   text-align: center;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--blue-color);
   z-index: 3;
   padding-bottom: 30px;
@@ -154,7 +150,7 @@
 .homeCopy .courseSection .cardTitle {
   writing-mode: vertical-rl;
   font-size: 2.4rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--blue-color);
   letter-spacing: 2px;
   margin-bottom: 32px;
@@ -181,11 +177,11 @@
 }
 
 .homeCopy .courseSection .sideCard .cardBg::before {
-  background:  #a3cbf583;
+  background: #a3cbf583;
 }
 
 .homeCopy .courseSection .mainCard .cardBg::before {
-  background:  #2f534161;
+  background: #2f534161;
 }
 
 .homeCopy .courseSection .sideCard .cardBg {
@@ -210,7 +206,7 @@
 }
 
 .homeCopy .courseSection .mainCardLabel {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 1;
@@ -218,16 +214,17 @@
 }
 
 .homeCopy .courseSection .mainCardTitle {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
   letter-spacing: 1.5px;
   margin-top: 2px;
   max-width: 500px;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .homeCopy .courseSection .mainCardDetails {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -286,6 +283,7 @@
 }
 
 @media (max-width: 1440px) {
+
   .homeCopy .courseSection .sideCard,
   .homeCopy .courseSection .inactiveCard,
   .homeCopy .courseSection .mainCard,
@@ -299,20 +297,25 @@
     flex-basis: 500px;
   }
 }
+
 @media (max-width: 1280px) {
+
   .homeCopy .courseSection .sideCard,
   .homeCopy .courseSection .inactiveCard,
   .homeCopy .courseSection .mainCard,
   .homeCopy .courseSection .activeCard {
     height: 550px;
   }
-  .homeCopy .courseSection .mainCardLabel{
+
+  .homeCopy .courseSection .mainCardLabel {
     font-size: 3rem;
   }
-  .homeCopy .courseSection .mainCardDetails{
+
+  .homeCopy .courseSection .mainCardDetails {
     font-size: 1.3rem;
   }
 }
+
 @media (max-width: 1124px) {
   .homeCopy .courseSection .courseInner {
     max-width: 100%;
@@ -371,6 +374,7 @@
 }
 
 @media (max-width: 991px) {
+
   .homeCopy .courseSection .mainCard,
   .homeCopy .courseSection .activeCard {
     flex-basis: 380px;
@@ -429,11 +433,9 @@
   .homeCopy .courseSection .sideCardContent {
     padding: 20px;
     border-radius: 18px;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.01) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, 0.01) 0%,
+        rgba(0, 0, 0, 0.5) 100%);
     position: absolute;
     inset: 0;
     z-index: 4;
@@ -449,11 +451,9 @@
     font-size: 0.95em;
     gap: 6px;
     padding: 10px 8px 8px 8px;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.01) 0%,
-      rgba(0, 0, 0, 0.35) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, 0.01) 0%,
+        rgba(0, 0, 0, 0.35) 100%);
   }
 
   .homeCopy .courseSection .mainCard .mainCardLabel,
@@ -493,12 +493,14 @@
 }
 
 @media (max-width: 575px) {
+
   .homeCopy .courseSection .sideCard,
   .homeCopy .courseSection .inactiveCard {
     flex-basis: 80px;
     border-radius: 15px;
   }
-  .homeCopy .courseSection .mainCard{
+
+  .homeCopy .courseSection .mainCard {
     flex-basis: 350px;
   }
 
@@ -558,7 +560,9 @@
   .homeCopy .courseSection .mainCard {
     flex-basis: 360px;
   }
-  .homeCopy .courseSection .mainCard .mainCardDetails, .homeCopy .courseSection .sideCard .mainCardDetails{
+
+  .homeCopy .courseSection .mainCard .mainCardDetails,
+  .homeCopy .courseSection .sideCard .mainCardDetails {
     gap: 10px !important;
   }
 }

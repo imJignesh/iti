@@ -1,9 +1,50 @@
-/* Alumni Section  */
+/* Swiper wrapper alignment to ensure all slides are on the same base line */
+.homeCopy .alumniSection .swiper-wrapper {
+  align-items: flex-end;
+}
+
+/* Base styling for all Swiper slides, with a smooth transition */
+.homeCopy .alumniSection .alumniSwiper .swiper-slide {
+  /* Apply the scale and opacity directly to the slide container */
+  transform: scale(0.65) translateY(-50px);
+  opacity: 0.8;
+  transition: all 0.6s ease;
+
+  /* THIS IS THE NEW RULE */
+  transform-origin: bottom;
+}
+
+/* Styles for the active slide (center slide) */
+.homeCopy .alumniSection .alumniSwiper .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+
+/* Adjust font size for the active slide's name */
+.homeCopy .alumniSection .alumniSwiper .swiper-slide-active .alumniName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a2a49;
+}
+
+/* --- General Section Styles --- */
+
 .homeCopy .alumniSection {
   padding: 50px 0 0 0;
   position: relative;
   z-index: 1;
   overflow: hidden;
+}
+
+.homeCopy .alumniSection .alumniSwiper {
+  max-width: 80vw !important;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 3;
 }
 
 .homeCopy .alumniSection .alumniSubSection {
@@ -43,31 +84,10 @@
 }
 
 .homeCopy .alumniSection .alumniHighlight {
-  background: linear-gradient(to left,
-      var(--green-color),
-      var(--lightgreen-color));
+  background: linear-gradient(to left, var(--green-color), var(--lightgreen-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.homeCopy .alumniSection .alumniSwiper {
-  margin-top: 40px;
-  padding-bottom: 60px;
-  position: relative;
-  z-index: 3;
-}
-
-.homeCopy .alumniSection .alumniSwiper :global(.swiper-slide) {
-  opacity: 0.6;
-}
-
-.homeCopy .alumniSection .alumniSwiper :global(.swiper-slide-active) {
-  opacity: 1;
-}
-
-.homeCopy .alumniSection :global(.swiper-wrapper) {
-  align-items: end;
 }
 
 .homeCopy .alumniSection .alumniSwiper:nth-child(2):before {
@@ -86,51 +106,12 @@
   z-index: -1;
 }
 
-.homeCopy .alumniSection .alumniBg {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%);
-  width: 260px;
-  height: 300px;
-  border-radius: 32px;
-  background: linear-gradient(180deg,
-      var(--green-text) 0%,
-      var(--white-color) 60%);
-  z-index: -1;
-  transition: all 0.4s;
-}
-
-.homeCopy .alumniSection .activeBg.alumniBg {
-  background: linear-gradient(to top, var(--white-color) 0%, #b6d6f6 100%);
-}
-
 .homeCopy .alumniSection .alumniImage {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
-  max-height: 450px;
-}
-
-.homeCopy .alumniSection .alumniLogoBox {
-  position: absolute;
-  top: 50px;
-  left: 75%;
-  transform: translate(-50%);
-  background: #fff;
-  border-radius: 15px;
-  padding: 20px 30px 20px 50px;
-  z-index: -1;
-  border: 1.5px solid #b6d6f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.homeCopy .alumniSection .alumniLogoBox img {
-  width: 80px;
-  height: 100%;
+  max-height: 490px;
 }
 
 .homeCopy .alumniSection .alumniName {
@@ -153,26 +134,9 @@
   transition: all 0.3s;
 }
 
-.homeCopy .alumniSection .activeBg~.alumniName {
-  font-size: 1.5vw;
-  background: linear-gradient(to right,
-      var(--lightgreen-color),
-      var(--green-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .homeCopy .alumniSection .swiper-button-next:after,
 .homeCopy .alumniSection .swiper-button-prev:after {
   display: none !important;
-}
-
-.homeCopy .alumniSection .swiperNavWrap {
-  position: relative;
-  width: 100%;
-  height: 0;
-  z-index: 10;
 }
 
 .homeCopy .alumniSection .customNavBtn {
@@ -200,19 +164,11 @@
   background-color: transparent !important;
 }
 
+/* --- Media Queries --- */
+
 @media (max-width: 1199px) {
   .homeCopy .alumniSection .alumniSubHeading {
     font-size: 1.5rem;
-  }
-
-  .homeCopy .alumniSection .alumniLogoBox {
-    top: 15px;
-    left: 85%;
-    padding: 20px 30px;
-  }
-
-  .homeCopy .alumniSection .alumniLogoBox img {
-    width: 80px;
   }
 
   .homeCopy .alumniSection .alumniTitle {

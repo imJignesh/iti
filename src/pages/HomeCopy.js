@@ -63,7 +63,6 @@ const HomeCopy = () => {
         let scroll;
 
         const initScroll = async () => {
-            // Don't initialize Locomotive Scroll on mobile
             if (isMobile) return;
 
             const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -87,7 +86,7 @@ const HomeCopy = () => {
                 scrollInstanceRef.current = null;
             }
         };
-    }, [isMobile]); // Add isMobile as dependency
+    }, [isMobile]);
 
     return (
         <>
@@ -120,7 +119,7 @@ const HomeCopy = () => {
                 <Usps />
 
                 {/* Trainers Section */}
-                <Trainers />
+                <Trainers scrollInstance={scrollInstanceRef.current} />
 
                 {/* Testimonial Section */}
                 <Testimonial />

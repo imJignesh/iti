@@ -3,9 +3,11 @@
   padding: 100px 0;
   background: url(/images/banner-bg.png);
   background-repeat: no-repeat;
-  background-size: 600px;
+  background-size: 580px;
+  -webkit-clip-path: inset(0 100% 0 0);
   clip-path: inset(0 100% 0 0);
   animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
+  background-position: 0% 4%;
 }
 
 @keyframes revealClipLeftToRight {
@@ -23,10 +25,18 @@
   align-items: center;
 }
 
-.homeCopy .hero .heroLeft .heroTitle {
-  font-size: 3.4vw;
+.homeCopy .hero .heroLeft .heroTitle-desktop {
+  font-size: 2.8vw;
   font-weight: 700;
   margin: 40px 0 30px 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--blue-color);
+}
+
+.homeCopy .hero .heroLeft .heroTitle-mobile {
+  display: none;
+  font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
   color: var(--blue-color);
@@ -43,8 +53,7 @@
 
 .homeCopy .hero .heroLeft .heroParagraph {
   padding-top: 30px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  font-size: 1.4vw;
+  font-size: 1.3rem;
   font-weight: 400;
   color: var(--blue-color);
   line-height: 1.5;
@@ -62,7 +71,7 @@
 .homeCopy .hero .heroParagraph span {
   text-transform: uppercase;
   display: block;
-  font-size: 1.4vw;
+  font-size: 1.3rem;
   font-weight: 500;
   letter-spacing: 1px;
   margin-bottom: 20px;
@@ -131,8 +140,8 @@
   position: absolute;
   top: 70%;
   bottom: 0;
-  left: 37%;
-  right: 5%;
+  left: 39%;
+  right: 15%;
   z-index: 9;
   display: flex;
   flex-direction: column;
@@ -153,8 +162,8 @@
 
 @media (max-width: 1800px) {
   .homeCopy .hero {
-    background-size: 640px;
-    background-position: top left -40px;
+    background-size: 500px;
+    background-position: top 10% left 5px;
   }
 }
 
@@ -252,10 +261,20 @@
     right: 15%;
   }
 
-  .homeCopy .hero .heroLeft .heroTitle {
+  .homeCopy .hero .heroLeft .heroTitle-desktop {
+    display: none;
+  }
+
+  .homeCopy .hero .heroLeft .heroTitle-mobile {
+    display: block;
     margin: 20px auto;
-    max-width: 75%;
+    max-width: 100%;
     line-height: 1;
+    font-size: 1.4rem;
+  }
+
+  .homeCopy .hero .heroLeft .heroTitle-mobile span {
+    display: block;
   }
 
   .homeCopy .hero .heroLeft .heroParagraph {
@@ -332,7 +351,7 @@
 
 @media (max-width: 425px) {
   .homeCopy .hero {
-    padding: 15px 0 0 0;
+    padding: 10px 0 0 0;
     background-size: 90%;
   }
 
@@ -371,7 +390,7 @@
 
   .homeCopy .hero .heroParagraph strong {
     font-size: 15px;
-    max-width: 75%;
+    max-width: 95%;
     display: inline-block;
   }
 
