@@ -78,7 +78,7 @@ import "@/styles/ibdp/IbdpCourses.css";
 
 // freeme demo page css
 import "@/styles/freedemo/freedemo.css";
-import "@/styles/freedemo/subjects.css";
+import "@/styles/freedemo/Subjects.css";
 // team page css
 import "@/styles/team/team.css";
 
