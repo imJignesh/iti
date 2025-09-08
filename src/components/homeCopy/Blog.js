@@ -1,66 +1,66 @@
 import React from "react";
 import he from "he";
 
-// const fetchBlogs = async () => {
-//     const res = await fetch('https://ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=3&_embed');
-//     const data = await res.json();
-//     return data;
-// }
+const fetchBlogs = async () => {
+    const res = await fetch('https://ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=3&_embed');
+    const data = await res.json();
+    return data;
+}
 
-// // create javascript object for blog data
-// const createBlogData = async () => {
-//     const data = await fetchBlogs();
+// create javascript object for blog data
+const createBlogData = async () => {
+    const data = await fetchBlogs();
 
-//     const formattedBlogs = data.map((post) => {
-//         // Strip HTML tags
-//         const rawExcerpt = post.excerpt.rendered.replace(/<[^>]*>?/gm, "");
-//         const rawTitle = post.title.rendered.replace(/<[^>]*>?/gm, "");
+    const formattedBlogs = data.map((post) => {
+        // Strip HTML tags
+        const rawExcerpt = post.excerpt.rendered.replace(/<[^>]*>?/gm, "");
+        const rawTitle = post.title.rendered.replace(/<[^>]*>?/gm, "");
 
-//         // Decode HTML entities (&amp;, &#8217;, etc.)
-//         const decodedExcerpt = he.decode(rawExcerpt);
-//         const decodedTitle = he.decode(rawTitle);
+        // Decode HTML entities (&amp;, &#8217;, etc.)
+        const decodedExcerpt = he.decode(rawExcerpt);
+        const decodedTitle = he.decode(rawTitle);
 
-//         // Trim to ~100 chars without cutting words
-//         const trimmedExcerpt =
-//             decodedExcerpt.length > 100
-//                 ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 100)) + "..."
-//                 : decodedExcerpt;
+        // Trim to ~100 chars without cutting words
+        const trimmedExcerpt =
+            decodedExcerpt.length > 100
+                ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 100)) + "..."
+                : decodedExcerpt;
 
-//         return {
-//             img:
-//                 post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
-//                 "/images/blog-placeholder.jpg",
-//             title: decodedTitle,
-//             desc: trimmedExcerpt,
-//             link: post.link,
-//         };
-//     });
+        return {
+            img:
+                post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
+                "/images/blog-placeholder.jpg",
+            title: decodedTitle,
+            desc: trimmedExcerpt,
+            link: post.link,
+        };
+    });
 
-//     return formattedBlogs;
-// };
+    return formattedBlogs;
+};
 
 // print to console
-// createBlogData().then(data => console.log(data));
+createBlogData().then(data => console.log(data));
 // Store it in a variable
-// const blogData = await createBlogData();
+const blogData = await createBlogData();
 
-const blogData = [
-    {
-        img: "/images/blogImage1.jpg",
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        desc: "Choosing us means partnering with experienced coaches who are...",
-    },
-    {
-        img: "/images/blogImage2.jpg",
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        desc: "Choosing us means partnering with experienced coaches who are...",
-    },
-    {
-        img: "/images/blogImage3.jpg",
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        desc: "Choosing us means partnering with experienced coaches who are...",
-    },
-];
+// const blogData = [
+//     {
+//         img: "/images/blogImage1.jpg",
+//         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+//         desc: "Choosing us means partnering with experienced coaches who are...",
+//     },
+//     {
+//         img: "/images/blogImage2.jpg",
+//         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+//         desc: "Choosing us means partnering with experienced coaches who are...",
+//     },
+//     {
+//         img: "/images/blogImage3.jpg",
+//         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+//         desc: "Choosing us means partnering with experienced coaches who are...",
+//     },
+// ];
 
 const Blog = () => {
     return (
