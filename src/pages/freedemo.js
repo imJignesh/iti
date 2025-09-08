@@ -6,8 +6,8 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
-import Subjects from "@/components/ib/Subjects";
-import MovingBanner from "@/components/ib/MovingBanner";
+import Subjects from "@/components/freedemo/Subjects";
+import MovingBanner from "@/components/freedemo/MovingBanner";
 import Testimonial from "@/components/ib/Testimonial";
 
 
@@ -188,7 +188,7 @@ const FreeDemo = () => {
                                         <h1 className="mainHeading">
                                             IGNITE YOUR PATH TO<br />ACADEMIC EXCELLENCE
                                         </h1>
-                                        <p className="subHeading">LOREM IPSUM DOLOR SIT AMET</p>
+                                        <p className="subHeading">NOW ALSO OPEN IN JLT, DUBAI</p>
 
                                         <div className="featureCards">
                                             <div className="featureCardInner">
@@ -227,9 +227,7 @@ const FreeDemo = () => {
                                         </div>
 
                                         <p className="descriptionText">
-                                            We provide comprehensive academic support through our customized
-                                            IB curriculum courses, giving students access to high-end learning with
-                                            experienced and certified IB tutors across various IB subjects.
+                                            Experience curriculum-aligned tutoring for IBDP, MYP, IGCSE, A-Levels, & AP delivered by expert educators who know the exams inside out, with a focus on clarity, measurable progress, & real academic results.
                                         </p>
                                     </div>
 
@@ -337,7 +335,7 @@ const FreeDemo = () => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.1s" }}
                             >
-                                <h4 className="SubHeading">curriculum & standardized tests we offer?</h4>
+                                <h4 className="SubHeading">CURRICULUMS & STANDARDISED TESTS</h4>
                             </div>
                             <div
                                 data-scroll
@@ -347,7 +345,7 @@ const FreeDemo = () => {
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 <h1 className="achievementsTitle">
-                                    Lorem ipsum dolor sit amet, <br></br> consectetur <span className="highlight"> adipiscing</span> {" "}
+                                    Curriculum-Focused  <br></br> Tutoring & Exam Prep<span className="highlight"> Expertise</span> {" "}
                                 </h1>
                             </div>
                         </div>
@@ -358,8 +356,9 @@ const FreeDemo = () => {
                             <div class="title">CURRICULUMS</div>
                             <div class="cards">
                                 <div class="fd-curr dark-green"><span class="check">✔</span> IB (MYP & IBDP)</div>
-                                <div class="fd-curr light-green"><span class="check">✔</span> A-LEVELS</div>
-                                <div class="fd-curr light-green full"><span class="check">✔</span> IGCSE</div>
+                                <div class="fd-curr light-green"><span class="check">✔</span> IGCSE</div>
+                                <div class="fd-curr light-green full"><span class="check">✔</span> A Levels</div>
+                                <div class="fd-curr light-green full"><span class="check">✔</span> Private Candidate (Homeschooling)</div>
                             </div>
                         </div>
                         <div class="column">
@@ -367,7 +366,7 @@ const FreeDemo = () => {
                             <div class="cards">
                                 <div class="fd-curr dark-blue"><span class="check">✔</span> ACT</div>
                                 <div class="fd-curr light-blue"><span class="check">✔</span> AP</div>
-                                <div class="fd-curr light-blue full"><span class="check">✔</span> ACT</div>
+                                <div class="fd-curr light-blue full"><span class="check">✔</span> UCAT</div>
                             </div>
                         </div>
                     </div>
@@ -384,7 +383,7 @@ const FreeDemo = () => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.1s" }}
                             >
-                                <h4 className="SubHeading">SUBJECTS</h4>
+                                <h4 className="SubHeading">SUBJECTS WE SUPPORT</h4>
                             </div>
                             <div
                                 data-scroll
@@ -394,7 +393,7 @@ const FreeDemo = () => {
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 <h1 className="achievementsTitle">
-                                    Lorem ipsum dolor sit amet, <br></br>  <span className="highlight"> consectetur</span> adipiscing{" "}
+                                    In-Depth Tutoring That Makes Every<br></br>  <span className="highlight"> Subject</span> Clear{" "}
                                 </h1>
                             </div>
                         </div>
@@ -415,7 +414,7 @@ const FreeDemo = () => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.1s" }}
                             >
-                                <h4 className="SubHeading">STUDENT ACHIEVEMENTS</h4>
+                                <h4 className="SubHeading">OUR ALUMNI IN TOP UNIVERSITIES</h4>
                             </div>
                             <div
                                 data-scroll
@@ -425,8 +424,8 @@ const FreeDemo = () => {
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 <h1 className="achievementsTitle">
-                                    Lorem ipsum dolor sit amet, <span className="highlight">consectetur</span>{" "}
-                                    adipiscing
+                                    Preparing Students To Thrive On <span className="highlight">The World</span>{" "}
+                                    Stage
                                 </h1>
                             </div>
                             <div
@@ -469,8 +468,8 @@ const FreeDemo = () => {
                             >
                                 <h1 className="achievementsTitle">
 
-                                    Lorem ipsum dolor sit amet, <span className="highlight">consectetur</span>{" "}
-                                    adipiscing
+                                    Comprehensive Guidance For Every <span className="highlight">Academic</span>{" "}
+                                    Milestone
                                 </h1>
                             </div>
 
@@ -482,7 +481,7 @@ const FreeDemo = () => {
                                 <img src="images/school.png" alt="School Options" />
                             </div>
                             <div class="step-title">SCHOOL OPTIONS</div>
-                            <div class="step-desc">Choosing us means partnering with experienced coaches.</div>
+                            <div class="step-desc">Discover schools that align with your core strengths & goals.</div>
                         </div>
 
                         <div class="step">
@@ -490,7 +489,7 @@ const FreeDemo = () => {
                                 <img src="images/idealcur.png" alt="Ideal Curriculum" />
                             </div>
                             <div class="step-title">IDEAL CURRICULUM</div>
-                            <div class="step-desc">Choosing us means partnering with experienced coaches.</div>
+                            <div class="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
                         </div>
 
                         <div class="step">
@@ -498,7 +497,7 @@ const FreeDemo = () => {
                                 <img src="images/subject.png" alt="Subject Choices" />
                             </div>
                             <div class="step-title">SUBJECT CHOICES</div>
-                            <div class="step-desc">Choosing us means partnering with experienced coaches.</div>
+                            <div class="step-desc">Choose subjects that match your career & higher education goals.</div>
                         </div>
 
                         <div class="step">
@@ -506,7 +505,7 @@ const FreeDemo = () => {
                                 <img src="images/universitypath.png" alt="University Pathways" />
                             </div>
                             <div class="step-title">UNIVERSITY PATHWAYS</div>
-                            <div class="step-desc">Choosing us means partnering with experienced coaches.</div>
+                            <div class="step-desc">Map a clear, strategic path to top international universities.</div>
                         </div>
                     </div>
 

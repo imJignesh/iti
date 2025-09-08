@@ -1,8 +1,53 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import ContactBanner from "@/components/contact/Banner";
+import ContactBanner from "@/components/team/Banner";
 import MovingBanner from "@/components/home/MovingBanner";
+
+// Data array for the trainers
+const trainersData = [
+    {
+        name: "Prakshi Sharma",
+        image: "/images/prakshi-trainer.png",
+        description: "Prakshi is an experienced educator specializing in...",
+    },
+    {
+        name: "Nikhil Pawar",
+        image: "/images/prakshi-trainer.png",
+        description: "Nikhil is a dedicated and passionate trainer...",
+    },
+    {
+        name: "Nikhil Pawar",
+        image: "/images/prakshi-trainer.png",
+        description: "Nikhil is a dedicated and passionate trainer...",
+    },
+    {
+        name: "Nikhil Pawar",
+        image: "/images/prakshi-trainer.png",
+        description: "Nikhil is a dedicated and passionate trainer...",
+    },
+    {
+        name: "Nikhil Pawar",
+        image: "/images/prakshi-trainer.png",
+        description: "Nikhil is a dedicated and passionate trainer...",
+    },
+    {
+        name: "Nikhil Pawar",
+        image: "/images/prakshi-trainer.png",
+        description: "Nikhil is a dedicated and passionate trainer...",
+    },
+    {
+        name: "Nikhil Pawar",
+        image: "/images/prakshi-trainer.png",
+        description: "Nikhil is a dedicated and passionate trainer...",
+    },
+    {
+        name: "Nikhil Pawar",
+        image: "/images/prakshi-trainer.png",
+        description: "Nikhil is a dedicated and passionate trainer...",
+    },
+];
+
 const OurTeam = () => {
     const scrollRef = useRef(null);
     const scrollInstanceRef = useRef(null);
@@ -11,8 +56,6 @@ const OurTeam = () => {
     useEffect(() => {
         const initScroll = async () => {
             try {
-                // Dynamically import LocomotiveScroll to handle potential loading issues.
-                // The .default is used because some modules export their main content under a 'default' property.
                 const LocomotiveScrollModule = await import("locomotive-scroll");
                 const LocomotiveScroll = LocomotiveScrollModule.default || LocomotiveScrollModule;
 
@@ -27,40 +70,31 @@ const OurTeam = () => {
                     lerp: 0.1,
                 });
 
-                // Initial update after scroll is ready to ensure correct scroll dimensions.
                 if (scrollInstanceRef.current && typeof scrollInstanceRef.current.update === 'function') {
                     scrollInstanceRef.current.update();
                     console.log("✅ LocomotiveScroll initialized and updated");
                 }
             } catch (error) {
-                // Log any errors if LocomotiveScroll fails to load or initialize.
-                // This prevents the application from crashing if the module isn't found.
                 console.error("Failed to load or initialize LocomotiveScroll:", error);
-                // Optionally, you could set state here to disable features that rely on scrolling
-                // or display a fallback message to the user.
             }
         };
 
-        // Only attempt to initialize Locomotive Scroll in a client-side environment.
         if (typeof window !== "undefined") {
             initScroll();
         }
 
-        // Cleanup function for the useEffect hook.
-        // Destroys the Locomotive Scroll instance when the component unmounts.
         return () => {
             if (scrollInstanceRef.current) {
                 scrollInstanceRef.current.destroy();
                 scrollInstanceRef.current = null;
             }
         };
-    }, []); // Empty dependency array means this effect runs once on mount and cleans up on unmount.
+    }, []);
 
-    // Function to determine the breadcrumb navigation path for the page.
     const getBreadcrumbPath = () => {
         return [
-            { name: 'Home', href: '/' },       // Link to the home page
-            { name: 'Our Team', href: '/ourteam' } // Current page in the breadcrumb
+            { name: 'Home', href: '/' },
+            { name: 'Our Team', href: '/ourteam' }
         ];
     };
 
@@ -73,7 +107,7 @@ const OurTeam = () => {
                     <ContactBanner />
                 </section>
 
-                <section class="meet-out-team" data-scroll-section>
+                <section className="meet-out-team" data-scroll-section>
                     <div className="container">
                         <div className="meet-team-Headings">
                             <div
@@ -83,7 +117,7 @@ const OurTeam = () => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.1s" }}
                             >
-                                <h3 className="SubHeading">TUTORING COURSES</h3>
+                                <h3 className="SubHeading">MEET OUR TEAM</h3>
                             </div>
                             <div
                                 data-scroll
@@ -93,7 +127,7 @@ const OurTeam = () => {
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 <h1 className="meetTitle">
-                                    Lorem ipsum dolor sit amet, consectetur <span className="highlight">adipiscing</span>
+                                    Dedicated Ignite Trainers Shaping Bright <span className="highlight">Futures</span>
                                 </h1>
                             </div>
 
@@ -112,29 +146,27 @@ const OurTeam = () => {
                         <div className="meet-team-cards">
                             <div className="team-card">
                                 <div className="team-card-image">
-                                    <img src="/images/sumit.png" alt="" />
+                                    <img src="/images/sumit.png" alt="Sumit Advani" />
                                 </div>
                                 <div className="team-card-info">
                                     <div className="team-card-name">
                                         <h3>Sumit Advani</h3>
                                     </div>
                                     <div className="team-card-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
+                                        <p>Sumit, Co-Founder of Ignite Training Institute, holds a B.Sc. in IT along with a Diploma in Advertising & PR. With over 10 years of experience in the UAE’s education industry, he specializes in designing tailored academic programs that align with each student’s unique goals. Beyond academics, Sumit actively oversees the institute’s infrastructure & spearheads marketing initiatives, ensuring Ignite continues to deliver excellence both inside & outside the classroom.</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="team-card">
                                 <div className="team-card-image">
-                                    <img src="/images/mohnish.png" alt="" />
+                                    <img src="/images/mohnish.png" alt="Mohnish Ahuja" />
                                 </div>
                                 <div className="team-card-info">
                                     <div className="team-card-name">
                                         <h3>Mohnish Ahuja</h3>
                                     </div>
                                     <div className="team-card-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
+                                        <p>Mohnish, Co-Founder of Ignite Training Institute, holds a BMS degree & serves as the Head of Academics. With over 12 years of expertise in education, standardized testing, & student profile development, he brings a wealth of knowledge to the classroom. An IB-certified trainer and experienced A-Level educator, Mohnish is passionate about guiding students toward academic excellence. Driven by his vision, he is dedicated to transforming Ignite into a global hub for world-class education.</p>
                                     </div>
                                 </div>
                             </div>
@@ -152,37 +184,35 @@ const OurTeam = () => {
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 <h1 className="cofounderTitle">
-                                    Admin-staff
+                                    STUDENT SUCCESS MANAGERS
                                 </h1>
                             </div>
                         </div>
                         <div className="admin-staff-cards">
                             <div className="admin-card">
                                 <div className="admin-card-image">
-                                    <img src="/images/prakshi.png" alt="" />
+                                    <img src="/images/saif.png" alt="Saif" />
                                 </div>
                                 <div className="admin-card-info">
                                     <div className="admin-card-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
+                                        <p>Saif, an ACCA-qualified professional, serves as the Student Coordinator & manages all student-related matters, from planning academic activities to ensuring smooth daily operations. With over 5 years of experience, Saif is committed to helping students achieve their goals & navigate the academic & admission process. Outside work, he enjoys reading, staying active through fitness routines, & pursuing his passion for house music by DJ’ing & mixing tracks, finding both creativity & relaxation in blending beats.</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="admin-card">
                                 <div className="admin-card-image">
-                                    <img src="/images/prakshi.png" alt="" />
+                                    <img src="/images/ahzeb.png" alt="Ahzeb" />
                                 </div>
                                 <div className="admin-card-info">
                                     <div className="admin-card-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
+                                        <p>Ahzeb plays a key role by combining business development expertise with technical oversight. With over a decade of experience across diverse sales teams & cultures, he excels in crafting unique strategies, enrolling students in the right programs, coordinating schedules, providing tech support, & managing the company’s database. He works closely with teams, fosters partnerships, & contributes to performance reviews & new business initiatives. Outside of work, he’s a stand-up performer & avid writing enthusiast.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="moving-container" data-scroll-section>
+                <section className="moving-container" data-scroll-section>
                     <MovingBanner />
                 </section>
                 <section className="trainer-section" data-scroll-section>
@@ -201,107 +231,23 @@ const OurTeam = () => {
                             </div>
                         </div>
                         <div className="trainer-cards">
-                            <div className="trainer-card">
-                                <div className="trainer-name">
-                                    <h3>Prakshi Sharma</h3>
+                            {trainersData.map((trainer, index) => (
+                                <div className="trainer-card" key={index}>
+                                    <div className="trainer-name">
+                                        <h3>{trainer.name}</h3>
+                                    </div>
+                                    <div className="trainer-image">
+                                        <img src={trainer.image} alt={trainer.name} />
+                                    </div>
+                                    <div className="trainer-info">
+                                        <p>{trainer.description}<a>Read More</a></p>
+                                    </div>
                                 </div>
-                                <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
-                                </div>
-                                <div className="trainer-info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
-                                </div>
-                            </div>
-                            <div className="trainer-card">
-                                <div className="trainer-name">
-                                    <h3>Nikhil Pawar</h3>
-                                </div>
-                                <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
-                                </div>
-                                <div className="trainer-info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
-                                </div>
-                            </div>
-                            <div className="trainer-card">
-                                <div className="trainer-name">
-                                    <h3>Nikhil Pawar</h3>
-                                </div>
-                                <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
-                                </div>
-                                <div className="trainer-info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
-                                </div>
-                            </div>
-                            <div className="trainer-card">
-                                <div className="trainer-name">
-                                    <h3>Nikhil Pawar</h3>
-                                </div>
-                                <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
-                                </div>
-                                <div className="trainer-info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
-                                </div>
-                            </div>
-
-                            <div className="trainer-card">
-                                <div className="trainer-name">
-                                    <h3>Nikhil Pawar</h3>
-                                </div>
-                                <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
-                                </div>
-                                <div className="trainer-info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
-                                </div>
-                            </div>
-                            <div className="trainer-card">
-                                <div className="trainer-name">
-                                    <h3>Nikhil Pawar</h3>
-                                </div>
-                                <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
-                                </div>
-                                <div className="trainer-info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
-                                </div>
-                            </div>
-                            <div className="trainer-card">
-                                <div className="trainer-name">
-                                    <h3>Nikhil Pawar</h3>
-                                </div>
-                                <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
-                                </div>
-                                <div className="trainer-info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
-                                </div>
-                            </div>
-                            <div className="trainer-card">
-                                <div className="trainer-name">
-                                    <h3>Nikhil Pawar</h3>
-                                </div>
-                                <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
-                                </div>
-                                <div className="trainer-info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<a>Read More</a></p>
-
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </section>
-                <section class="moving-container" data-scroll-section>
+                <section className="moving-container" data-scroll-section>
                     <MovingBanner />
                 </section>
                 <section className="trainer-message-section" data-scroll-section>
@@ -325,7 +271,6 @@ const OurTeam = () => {
                                     <img src="/images/prakshi-trainer.png" alt="" />
                                 </div>
                                 <div className="trainer-experience">
-
                                     <span>10+ Years</span>
                                 </div>
                             </div>
@@ -334,7 +279,6 @@ const OurTeam = () => {
                                     <img src="/images/prakshi-trainer.png" alt="" />
                                 </div>
                                 <div className="trainer-experience">
-
                                     <span>10+ Years</span>
                                 </div>
                             </div>
@@ -343,7 +287,6 @@ const OurTeam = () => {
                                     <img src="/images/prakshi-trainer.png" alt="" />
                                 </div>
                                 <div className="trainer-experience">
-
                                     <span>10+ Years</span>
                                 </div>
                             </div>
@@ -352,33 +295,30 @@ const OurTeam = () => {
                                     <img src="/images/prakshi-trainer.png" alt="" />
                                 </div>
                                 <div className="trainer-experience">
-
                                     <span>10+ Years</span>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </section>
 
-                <section class="cta-section" data-scroll-section>
+                <section className="cta-section" data-scroll-section>
                     <div className="container call-to-action">
-                        <div class="cta-container">
-                            <div class="cta-content">
+                        <div className="cta-container">
+                            <div className="cta-content">
                                 <h2>LOREM IPSUM DOLOR SIT AMET,<br /> CONSECTETUR ADIPISCING</h2>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
                                 </p>
-                                <div class="cta-buttons">
-                                    <a href="#" class="btn">Join Our Team <span>→</span></a>
-                                    <a href="#" class="btn">Join a Free Demo <span>→</span></a>
+                                <div className="cta-buttons">
+                                    <a href="#" className="btn">Join Our Team <span>→</span></a>
+                                    <a href="#" className="btn">Join a Free Demo <span>→</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
-            </div >
+            </div>
         </>
     );
 };

@@ -20,7 +20,7 @@ const Footer = () => {
           <span className="SubHeading">CONTACT US</span>
         </div>
         <h2 className={styles.footerTitle}>
-          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR
+          REVOLUTIONIZING THE WAY STUDENTS LEARN
         </h2>
         <div className={styles.footerMainRow}>
           <div
@@ -45,7 +45,7 @@ const Footer = () => {
             style={{ animationDelay: "0.3s" }}
           >
             <div className={styles.footerDesc}>
-              Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.
+              Stay updated with the latest study tips, exam strategies, & academic insights. Join our mailing list & fuel your journey to success.
             </div>
             <div className={styles.footerNewsletterWrap}>
               <div className={styles.footerNewsletterLabel}>SUBSCRIBE TO OUR NEWSLETTER</div>

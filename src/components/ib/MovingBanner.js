@@ -8,7 +8,7 @@ const MovingBanner = () => {
         data-scroll-class="is-inview"
         data-scroll-repeat="true"
         className="fade-in-section bannerScroll"
-        style={{ animationDelay: "0.4s", margin:"30px 0px" }}
+        style={{ animationDelay: "0.4s", margin: "30px 0px" }}
       >
         <b>
           EXPERT GUIDENCE &nbsp;

@@ -67,7 +67,7 @@
 }
 
 .meet-team-cards img {
-    width: 100%;
+    max-width: 40vw;
     height: auto;
     margin-bottom: 20px;
 }
@@ -200,11 +200,12 @@
 /*  Admin Staff Section */
 .admin-staff-cards {
     display: flex;
-    justify-content: center;
+
     flex-wrap: nowrap;
     gap: 80px;
     flex-direction: row;
     margin-top: 80px;
+    justify-content: space-around;
 }
 
 .admin-card {
