@@ -1,6 +1,11 @@
-import React, { createContext, useContext, useEffect, useRef } from 'react';
+import React, {
+    createContext,
+    useContext,
+    useEffect,
+    useRef,
+    useState,
+} from "react";
 
-// Create a context to hold the scroll instance
 const ScrollContext = createContext(null);
 
 export const useScroll = () => {
@@ -8,14 +13,15 @@ export const useScroll = () => {
 };
 
 const LocomotiveScrollProvider = ({ children }) => {
-    const scrollRef = useRef(null);
-    const scrollInstanceRef = useRef(null);
+    const scrollRef = useRef(null); // DOM element
+    const scrollInstanceRef = useRef(null); // Locomotive instance
+    const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
         let scroll;
 
         const initScroll = async () => {
-            const LocomotiveScroll = (await import('locomotive-scroll')).default;
+            const LocomotiveScroll = (await import("locomotive-scroll")).default;
             if (!scrollRef.current) return;
 
             scroll = new LocomotiveScroll({
@@ -25,23 +31,24 @@ const LocomotiveScrollProvider = ({ children }) => {
             });
 
             scrollInstanceRef.current = scroll;
+            setIsReady(true); // trigger re-render so context updates
         };
 
         if (typeof window !== "undefined") {
             initScroll();
         }
 
-        // Cleanup function to destroy the scroll instance when the component unmounts
         return () => {
             scrollInstanceRef.current?.destroy();
             scrollInstanceRef.current = null;
+            setIsReady(false);
         };
     }, []);
 
     return (
         <div ref={scrollRef} data-scroll-container>
             <ScrollContext.Provider value={scrollInstanceRef.current}>
-                {children}
+                {isReady && children}
             </ScrollContext.Provider>
         </div>
     );

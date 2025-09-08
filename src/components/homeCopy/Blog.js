@@ -1,11 +1,15 @@
 import React from "react";
 import he from "he";
+import { useEffect } from "react";
+import { useScroll } from "../LocomotiveScrollProvider";
 
 const fetchBlogs = async () => {
-    const res = await fetch('https://ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=3&_embed');
+    const res = await fetch(
+        "https://ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=3&_embed"
+    );
     const data = await res.json();
     return data;
-}
+};
 
 // create javascript object for blog data
 const createBlogData = async () => {
@@ -23,7 +27,8 @@ const createBlogData = async () => {
         // Trim to ~100 chars without cutting words
         const trimmedExcerpt =
             decodedExcerpt.length > 100
-                ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 100)) + "..."
+                ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 100)) +
+                "..."
                 : decodedExcerpt;
 
         return {
@@ -39,30 +44,45 @@ const createBlogData = async () => {
     return formattedBlogs;
 };
 
-// print to console
-createBlogData().then(data => console.log(data));
-// Store it in a variable
-const blogData = await createBlogData();
-
-// const blogData = [
-//     {
-//         img: "/images/blogImage1.jpg",
-//         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-//         desc: "Choosing us means partnering with experienced coaches who are...",
-//     },
-//     {
-//         img: "/images/blogImage2.jpg",
-//         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-//         desc: "Choosing us means partnering with experienced coaches who are...",
-//     },
-//     {
-//         img: "/images/blogImage3.jpg",
-//         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-//         desc: "Choosing us means partnering with experienced coaches who are...",
-//     },
-// ];
+const staticBlogs = [
+    {
+        img: "/images/blogImage1.jpg",
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        desc: "Choosing us means partnering with experienced coaches who are...",
+        link: "/blogs",
+    },
+    {
+        img: "/images/blogImage2.jpg",
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        desc: "Choosing us means partnering with experienced coaches who are...",
+        link: "/blogs",
+    },
+    {
+        img: "/images/blogImage3.jpg",
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        desc: "Choosing us means partnering with experienced coaches who are...",
+        link: "/blogs",
+    },
+];
 
 const Blog = () => {
+    const [blogData, setBlogData] = React.useState(staticBlogs);
+    const scrollRef = useScroll();
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await createBlogData();
+            setBlogData(data);
+        };
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        if (blogData.length > 0) {
+            scrollRef.current?.update();
+        }
+    }, [blogData]);
+
     return (
         <section className="blogSection">
             <div className="container">
@@ -116,44 +136,45 @@ const Blog = () => {
                     </div>
 
                     <div className="col-12 col-lg-7 blogRight">
-                        {blogData.map((blog, i) => (
-                            <div
-                                key={i}
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section blogCard"
-                                style={{ animationDelay: "0.2s" }}
-                            >
-                                <img
-                                    src={blog.img}
-                                    alt="blog"
+                        {blogData &&
+                            blogData.map((blog, i) => (
+                                <div
+                                    key={i}
                                     data-scroll
-                                    data-scroll-class="is-clipped"
+                                    data-scroll-class="is-inview"
                                     data-scroll-repeat="true"
-                                    data-scroll-offset="-10%"
-                                    className="blogImg"
-                                />
-                                <div className="blogCardContent">
-                                    <div className="blogCardTitle">{blog.title}</div>
-                                    <div className="blogCardDesc">{blog.desc}</div>
-                                    <span className="blogCardLine"></span>
-                                    <a href={blog.link} className="nodecoration">
-                                        <button className="blogReadMoreBtn buttonSkyBlue">
-                                            READ MORE
-                                            <span className="blogReadMoreArrow">
-                                                <img
-                                                    src="/images/right-arrow-blue.png"
-                                                    alt="arrow"
-                                                    width={20}
-                                                    height={20}
-                                                />
-                                            </span>
-                                        </button>
-                                    </a>
+                                    className="fade-in-section blogCard"
+                                    style={{ animationDelay: "0.2s" }}
+                                >
+                                    <img
+                                        src={blog.img}
+                                        alt="blog"
+                                        data-scroll
+                                        data-scroll-class="is-clipped"
+                                        data-scroll-repeat="true"
+                                        data-scroll-offset="-10%"
+                                        className="blogImg"
+                                    />
+                                    <div className="blogCardContent">
+                                        <div className="blogCardTitle">{blog.title}</div>
+                                        <div className="blogCardDesc">{blog.desc}</div>
+                                        <span className="blogCardLine"></span>
+                                        <a href={blog.link} className="nodecoration">
+                                            <button className="blogReadMoreBtn buttonSkyBlue">
+                                                READ MORE
+                                                <span className="blogReadMoreArrow">
+                                                    <img
+                                                        src="/images/right-arrow-blue.png"
+                                                        alt="arrow"
+                                                        width={20}
+                                                        height={20}
+                                                    />
+                                                </span>
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
                     </div>
 
                     <a href="/blogs" className="nodecoration d-lg-none">
@@ -175,8 +196,7 @@ const Blog = () => {
                     </a>
                 </div>
             </div>
-        </section >
-
+        </section>
     );
 };
 
