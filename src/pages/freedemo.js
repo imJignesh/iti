@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import Subjects from "@/components/freedemo/Subjects";
-import MovingBanner from "@/components/freedemo/MovingBanner";
+import MovingBanner from "@/components/ib/MovingBanner";
 import Testimonial from "@/components/ib/Testimonial";
 
 
