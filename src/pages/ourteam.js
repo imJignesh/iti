@@ -315,7 +315,7 @@ const OurTeam = () => {
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 <h1 className="cofounderTitle">
-                                    Trainers
+                                    Trainers Message
                                 </h1>
                             </div>
                         </div>
@@ -360,6 +360,24 @@ const OurTeam = () => {
                         </div>
                     </div>
                 </section>
+
+                <section class="cta-section" data-scroll-section>
+                    <div className="container call-to-action">
+                        <div class="cta-container">
+                            <div class="cta-content">
+                                <h2>LOREM IPSUM DOLOR SIT AMET,<br /> CONSECTETUR ADIPISCING</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                </p>
+                                <div class="cta-buttons">
+                                    <a href="#" class="btn">Join Our Team <span>→</span></a>
+                                    <a href="#" class="btn">Join a Free Demo <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </div >
         </>
     );
