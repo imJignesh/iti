@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import ContactBanner from "@/components/team/Banner";
+import { useEffect, useRef, useState } from 'react';
+import TeamBanner from "@/components/team/Banner";
 import MovingBanner from "@/components/home/MovingBanner";
 
 // Data array for the trainers
@@ -9,48 +9,49 @@ const trainersData = [
     {
         name: "Prakshi Sharma",
         image: "/images/prakshi-trainer.png",
-        description: "Prakshi is an experienced educator specializing in...",
+        description: "Prakshi is an experienced educator specializing in innovative teaching methodologies and student-centered learning.She has a strong background in developing engaging curriculum frameworks and guiding students toward academic excellence. With her passion for holistic education, she fosters critical thinking, creativity, and lifelong learning in every classroom she leads.",
     },
     {
         name: "Nikhil Pawar",
         image: "/images/prakshi-trainer.png",
-        description: "Nikhil is a dedicated and passionate trainer...",
+        description: "Prakshi is an experienced educator specializing in innovative teaching methodologies and student-centered learning.She has a strong background in developing engaging curriculum frameworks and guiding students toward academic excellence. With her passion for holistic education, she fosters critical thinking, creativity, and lifelong learning in every classroom she leads.",
     },
     {
         name: "Nikhil Pawar",
         image: "/images/prakshi-trainer.png",
-        description: "Nikhil is a dedicated and passionate trainer...",
+        description: "Prakshi is an experienced educator specializing in innovative teaching methodologies and student-centered learning.",
     },
     {
         name: "Nikhil Pawar",
         image: "/images/prakshi-trainer.png",
-        description: "Nikhil is a dedicated and passionate trainer...",
+        description: "Prakshi is an experienced educator specializing in innovative teaching methodologies and student-centered learning.",
     },
     {
         name: "Nikhil Pawar",
         image: "/images/prakshi-trainer.png",
-        description: "Nikhil is a dedicated and passionate trainer...",
+        description: "Prakshi is an experienced educator specializing in innovative teaching methodologies and student-centered learning.",
     },
     {
         name: "Nikhil Pawar",
         image: "/images/prakshi-trainer.png",
-        description: "Nikhil is a dedicated and passionate trainer...",
+        description: "Prakshi is an experienced educator specializing in innovative teaching methodologies and student-centered learning.",
     },
     {
         name: "Nikhil Pawar",
         image: "/images/prakshi-trainer.png",
-        description: "Nikhil is a dedicated and passionate trainer...",
+        description: "Prakshi is an experienced educator specializing in innovative teaching methodologies and student-centered learning.",
     },
     {
         name: "Nikhil Pawar",
         image: "/images/prakshi-trainer.png",
-        description: "Nikhil is a dedicated and passionate trainer...",
+        description: "Prakshi is an experienced educator specializing in innovative teaching methodologies and student-centered learning.",
     },
 ];
 
 const OurTeam = () => {
     const scrollRef = useRef(null);
     const scrollInstanceRef = useRef(null);
+    const [expandedTrainers, setExpandedTrainers] = useState({});
 
     // Locomotive Scroll setup - similar to blog.js
     useEffect(() => {
@@ -91,6 +92,13 @@ const OurTeam = () => {
         };
     }, []);
 
+    const toggleReadMore = (index) => {
+        setExpandedTrainers(prevState => ({
+            ...prevState,
+            [index]: !prevState[index]
+        }));
+    };
+
     const getBreadcrumbPath = () => {
         return [
             { name: 'Home', href: '/' },
@@ -104,7 +112,7 @@ const OurTeam = () => {
         <>
             <div ref={scrollRef} data-scroll-container>
                 <section data-scroll-section>
-                    <ContactBanner />
+                    <TeamBanner />
                 </section>
 
                 <section className="meet-out-team" data-scroll-section>
@@ -240,7 +248,24 @@ const OurTeam = () => {
                                         <img src={trainer.image} alt={trainer.name} />
                                     </div>
                                     <div className="trainer-info">
-                                        <p>{trainer.description}<a>Read More</a></p>
+                                        <p className={`description ${expandedTrainers[index] ? "expanded" : ""}`}>
+                                            {expandedTrainers[index]
+                                                ? trainer.description
+                                                : trainer.description.length > 150
+                                                    ? trainer.description.slice(0, 150) + "..."
+                                                    : trainer.description}
+                                        </p>
+                                        {trainer.description.length > 150 && (
+                                            <a
+                                                href="#"
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    toggleReadMore(index);
+                                                }}
+                                            >
+                                                {expandedTrainers[index] ? "Read Less" : "Read More"}
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             ))}
@@ -253,6 +278,16 @@ const OurTeam = () => {
                 <section className="trainer-message-section" data-scroll-section>
                     <div className="container">
                         <div className="meet-team-Headings">
+
+                            <div
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="fade-in-section"
+                                style={{ animationDelay: "0.1s" }}
+                            >
+                                <h3 className="SubHeading">Trainers Message</h3>
+                            </div>
                             <div
                                 data-scroll
                                 data-scroll-class="is-inview"
@@ -260,42 +295,42 @@ const OurTeam = () => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.25s" }}
                             >
-                                <h1 className="cofounderTitle">
-                                    Trainers Message
+                                <h1 className="meetTitle">
+                                    Dedicated Ignite Trainers <br />Shaping Bright <span className="highlight">Futures</span>
                                 </h1>
                             </div>
                         </div>
                         <div className="trainer-message-card">
                             <div className="trainer-card">
                                 <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                    <img src="/images/Trainermessage1.png" alt="" />
                                 </div>
-                                <div className="trainer-experience">
-                                    <span>10+ Years</span>
+                                <div className="trainer-experience grbg">
+                                    <span className="grtx">10+ Years</span>
                                 </div>
                             </div>
                             <div className="trainer-card small">
                                 <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                    <img src="/images/Trainermessage2.png" alt="" />
                                 </div>
-                                <div className="trainer-experience">
-                                    <span>10+ Years</span>
+                                <div className="trainer-experience blbg">
+                                    <span className="bltx">10+ Years</span>
                                 </div>
                             </div>
                             <div className="trainer-card">
                                 <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                    <img src="/images/Trainermessage3.png" alt="" />
                                 </div>
-                                <div className="trainer-experience">
-                                    <span>10+ Years</span>
+                                <div className="trainer-experience grbg">
+                                    <span className="grtx">10+ Years</span>
                                 </div>
                             </div>
                             <div className="trainer-card small">
                                 <div className="trainer-image">
-                                    <img src="/images/prakshi-trainer.png" alt="" />
+                                    <img src="/images/Trainermessage4.png" alt="" />
                                 </div>
-                                <div className="trainer-experience">
-                                    <span>10+ Years</span>
+                                <div className="trainer-experience blbg">
+                                    <span className="bltx">10+ Years</span>
                                 </div>
                             </div>
                         </div>
@@ -303,6 +338,19 @@ const OurTeam = () => {
                 </section>
 
                 <section className="cta-section" data-scroll-section>
+                    <div className="meet-team-Headings">
+
+                        <div
+                            data-scroll
+                            data-scroll-class="is-inview"
+                            data-scroll-repeat="true"
+                            className="fade-in-section"
+                            style={{ animationDelay: "0.1s" }}
+                        >
+                            <h3 className="SubHeading">Coll To action</h3>
+                        </div>
+
+                    </div>
                     <div className="container call-to-action">
                         <div className="cta-container">
                             <div className="cta-content">

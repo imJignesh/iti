@@ -166,6 +166,25 @@ header .megaMenuContent h3 {
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes arrowWiggle {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation on hover */
+header .megaMenuContent h3:hover img {
+  animation: arrowWiggle 1s ease-in-out infinite;
+}
+
 header a.sub1 {
   display: block;
   text-align: center;

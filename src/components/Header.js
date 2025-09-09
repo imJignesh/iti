@@ -62,7 +62,7 @@ const Header = () => {
                         <div className={styles.megaMenu}>
                             <div className={styles.megaMenuContent}>
                                 <div className={styles.megaMenuLeft}>
-                                    <h3><span>01</span> International baccalaureate<div><img src="/images/btn-arrow.png" /></div></h3>
+                                    <h3><span>01</span> <a href='/ibdp'>International baccalaureate<div><img src="/images/btn-arrow.png" /></div></a></h3>
                                     <a href='/ibdp' className={`${styles.megaMenuBox} ${isLinkActive('/ibdp') ? 'active' : ''}`}>
                                         <img src="/images/header-menu1.png" alt="IBDP" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                         <h4>IBDP</h4>
@@ -74,7 +74,7 @@ const Header = () => {
 
                                 </div>
                                 <div className={styles.megaMenuLeft}>
-                                    <h3><span>02</span> British curriculum<div><img src="/images/btn-arrow.png" /></div></h3>
+                                    <h3><span>02</span> <a href='/a-levels'>British curriculum<div><img src="/images/btn-arrow.png" /></div></a></h3>
                                     <a href='/a-levels' className={`${styles.megaMenuBox} ${isLinkActive('/a-levels') ? 'active' : ''}`}>
                                         <img src="/images/header-menu3.png" alt="A-LEVELS" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                         <h4>A LEVELS</h4>
@@ -85,7 +85,7 @@ const Header = () => {
                                     </a>
                                 </div>
                                 <div className={styles.megaMenuLeft}>
-                                    <h3><span>03</span> Homeschooling<div><img src="/images/btn-arrow.png" /></div></h3>
+                                    <h3><span>03</span><a href='/homeschooling'> Homeschooling<div><img src="/images/btn-arrow.png" /></div></a></h3>
                                 </div>
                             </div>
                         </div>
