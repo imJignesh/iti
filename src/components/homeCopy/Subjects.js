@@ -35,7 +35,7 @@ export default function Subjects({ }) {
       className="fade-in-section subjectSection"
       style={{ animationDelay: "0.2s" }}
     >
-      <div className="container">
+      <div className="sp-container">
         <div className="subjectSectionInner blue">
           <img
             data-scroll
@@ -113,6 +113,7 @@ export default function Subjects({ }) {
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="container">
                 <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
                     <div className="row heroMain">
-                        <div className="col-12 col-lg-6 col-xl-6 pe-lg-5 heroLeft">
+                        <div className="col-12 col-lg-7 col-xl-7 pe-5 heroLeft">
                             {/* All your content with data-scroll attributes */}
                             <div
                                 data-scroll
@@ -54,7 +54,7 @@ const Hero = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="col-12 col-lg-6 col-xl-6 heroRight">
+                        <div className="col-12 col-lg-5 col-xl-5 heroRight">
                             <div className="videoContainer">
                                 <video
                                     className="heroVideo"

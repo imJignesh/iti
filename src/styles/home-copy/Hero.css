@@ -1,13 +1,21 @@
 /* Hero Banner Section */
 .homeCopy .hero {
-  padding: 100px 0;
+  /* padding: 100px 0;
   background: url(/images/banner-bg.png);
   background-repeat: no-repeat;
   background-size: 580px;
   -webkit-clip-path: inset(0 100% 0 0);
   clip-path: inset(0 100% 0 0);
   animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
-  background-position: 0% 4%;
+  background-position: 0% 4%; */
+  padding: 3vw 0;
+  background: url(/images/banner-bg.png);
+  background-repeat: no-repeat;
+  background-size: 30vw;
+  -webkit-clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
+  animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
+  background-position: 4vw 0vw;
 }
 
 @keyframes revealClipLeftToRight {
@@ -26,7 +34,7 @@
 }
 
 .homeCopy .hero .heroLeft .heroTitle-desktop {
-  font-size: 2.8vw;
+  font-size: 2vw;
   font-weight: 700;
   margin: 40px 0 30px 0;
   line-height: 1.1;
@@ -53,7 +61,7 @@
 
 .homeCopy .hero .heroLeft .heroParagraph {
   padding-top: 30px;
-  font-size: 1.3rem;
+  font-size: 1.3vw;
   font-weight: 400;
   color: var(--blue-color);
   line-height: 1.5;
@@ -79,7 +87,7 @@
 
 .homeCopy .hero .heroRight {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .homeCopy .hero .heroRight {
@@ -88,15 +96,19 @@
 
 .homeCopy .hero .videoContainer {
   position: relative;
-  width: 100%;
+  /* width: 100%;
   height: 100%;
-  max-height: 600px;
+  max-height: 600px; */
+  width: 25vw;
+  height: 28vw;
   overflow: hidden;
 }
 
 .homeCopy .hero .heroVideo {
-  width: 100%;
-  height: 600px;
+  /* width: 100%;
+  height: 600px; */
+  width: 25vw;
+  height: 28vw;
   max-height: 700px;
   object-fit: cover;
   object-position: right;
@@ -137,7 +149,7 @@
 }
 
 .homeCopy .hero .heroRight .buttonGroup {
-  position: absolute;
+  /* position: absolute;
   top: 70%;
   bottom: 0;
   left: 39%;
@@ -146,7 +158,42 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  justify-content: flex-end; */
+  position: absolute;
+  top: 0vw;
+  bottom: 1vw;
+  right: 0.8vw;
+  z-index: 9;
+  display: flex;
+  gap: 1vw;
   justify-content: flex-end;
+  flex-direction: column;
+  width: 16vw;
+}
+
+.homeCopy .hero .heroRight .buttonGroup img {
+  width: 1.7vw;
+  height: auto;
+}
+
+.homeCopy .hero .heroRight .buttonGroup .buttonBlue,
+.homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
+  position: relative;
+  overflow: hidden;
+  padding: 1vw 1vw;
+  border-radius: 40px;
+  text-transform: uppercase;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 0.9rem;
+
 }
 
 .homeCopy .hero .heroRight .buttonGroup button {
@@ -162,8 +209,10 @@
 
 @media (max-width: 1800px) {
   .homeCopy .hero {
-    background-size: 500px;
-    background-position: top 10% left 5px;
+    /* background-size: 500px;
+    background-position: top 10% left 5px; */
+    background-size: 28vw;
+    background-position: 4.5vw 0vw;
   }
 }
 
@@ -171,13 +220,17 @@
   .homeCopy .hero {
     background-position: top 10% left;
   }
+
+  .homeCopy .hero .heroLeft .heroParagraph {
+    font-size: 1.3vw;
+  }
 }
 
 @media (max-width: 1280px) {
   .homeCopy .hero .heroRight .buttonGroup {
-    top: 65%;
-    left: 37%;
-    gap: 10px;
+    /* top: 65%;
+    left: 37%; */
+    gap: 0.8vw;
   }
 
   .homeCopy .hero .heroRight .buttonGroup button {
@@ -207,11 +260,22 @@
     animation: revealClipLeftToRight 1.8s 1s ease forwards;
   }
 
+  .homeCopy .hero .videoContainer {
+    position: relative;
+    width: 100vw;
+    height: 48vw;
+    overflow: hidden;
+  }
+
+  .homeCopy .hero .heroRight {
+    justify-content: center;
+  }
+
   .homeCopy .hero .heroRight .buttonGroup {
-    top: 70%;
-    left: 43%;
-    right: 24%;
-    width: auto;
+    top: 0vw;
+    bottom: 1vw;
+    right: 19vw;
+    width: 31vw;
   }
 
   .homeCopy .hero .heroLeft div {
@@ -231,12 +295,17 @@
   .homeCopy .hero .heroRight .heroImage,
   .homeCopy .hero .heroVideo {
     object-position: center;
-    height: 500px;
+    width: 100vw;
+    height: 50vw;
   }
 }
 
 @media (max-width: 767px) {
-  .homeCopy .hero {
+  .col-12.col-lg-7.col-xl-7.pe-5.heroLeft {
+    padding: inherit !important;
+  }
+
+  .p .homeCopy .hero {
     background: url(/images/banner-bg-mobile.png);
     background-repeat: no-repeat;
     background-size: 85%;
@@ -266,9 +335,14 @@
   }
 
   .homeCopy .hero .heroLeft .heroTitle-mobile {
-    display: block;
+    /* display: block;
     margin: 20px auto;
     max-width: 100%;
+    line-height: 1;
+    font-size: 1.4rem; */
+    display: block;
+    margin: 20px auto;
+    max-width: 90vw;
     line-height: 1;
     font-size: 1.4rem;
   }
@@ -305,12 +379,27 @@
     padding: 30px 0 0 0;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup {
-    width: max-content;
+  .homeCopy .hero .videoContainer,
+  .homeCopy .hero .heroVideo {
+    height: 75vw;
   }
 
   .homeCopy .hero .heroVideo {
-    height: 400px;
+    width: 95vw;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup {
+
+    top: 0vw;
+    bottom: 0vw;
+    right: 11vw;
+    width: 46vw;
+    gap: 3vw;
+  }
+
+
+  .homeCopy .hero .heroRight .buttonGroup img {
+    width: 7vw;
   }
 
   .homeCopy .hero .heroLeft .heroTitle {
@@ -375,7 +464,7 @@
   }
 
   .homeCopy .hero .heroVideo {
-    height: 400px;
+    /* height: 400px; */
   }
 
   .homeCopy .hero .heroRight .mobileContent {

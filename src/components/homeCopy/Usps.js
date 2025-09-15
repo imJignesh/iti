@@ -73,98 +73,100 @@ for (let i = 0; i < uspData.length; i += 2) {
 export default function Usps({ }) {
   return (
     <>
-      <div
-        // data-scroll
-        // data-scroll-class="is-inview"
-        // data-scroll-repeat="true"
-        className="fade-in-sections uspSection"
-        style={{ animationDelay: "0.2s" }}
-      >
-        <div className="row justify-content-between p-5">
-          <div className="col-lg-4">
-            <div className="uspLeft">
-              <span
-                // data-scroll
-                // data-scroll-class="is-inview"
-                // data-scroll-repeat="true"
-                className="fade-in-sections SubHeading"
-                style={{ animationDelay: "0.1s" }}
-              >
-                OUR PROMISE
-              </span>
+      <section className="usp-section sp-container" data-scroll-section>
+        <div
+          // data-scroll
+          // data-scroll-class="is-inview"
+          // data-scroll-repeat="true"
+          className="fade-in-sections uspSection"
+          style={{ animationDelay: "0.2s" }}
+        >
+          <div className="row justify-content-between">
+            <div className="col-lg-4">
+              <div className="uspLeft">
+                <span
+                  // data-scroll
+                  // data-scroll-class="is-inview"
+                  // data-scroll-repeat="true"
+                  className="fade-in-sections SubHeading"
+                  style={{ animationDelay: "0.1s" }}
+                >
+                  OUR PROMISE
+                </span>
 
-              <h2
-                // data-scroll
-                // data-scroll-class="is-inview"
-                // data-scroll-repeat="true"
-                className="fade-in-sections uspTitle"
-                style={{ animationDelay: "0.2s" }}
-              >
-                Here's Why Ignite Is The UAE's First Choice
-              </h2>
+                <h2
+                  // data-scroll
+                  // data-scroll-class="is-inview"
+                  // data-scroll-repeat="true"
+                  className="fade-in-sections uspTitle"
+                  style={{ animationDelay: "0.2s" }}
+                >
+                  Here's Why Ignite Is The UAE's First Choice
+                </h2>
 
-              <div
-                // data-scroll
-                // data-scroll-class="is-inview"
-                // data-scroll-repeat="true"
-                className="fade-in-sections uspSubtitle"
-                style={{ animationDelay: "0.3s" }}
-              >
-                Real Support, Real Progress
-              </div>
-
-              <p
-                // data-scroll
-                // data-scroll-class="is-inview"
-                // data-scroll-repeat="true"
-                className="fade-in-section uspDesc"
-                style={{ animationDelay: "0.4s" }}
-              >
-                We go beyond just tutoring with personalised learning, proven methods, & expert support that deliver real results.
-              </p>
-
-              <a
-                href="/why-ignite/"
-                className="uspBtn fade-in-sections buttonSkyBlue"
-                style={{ animationDelay: "0.5s" }}
-              >
-                KNOW MORE{" "}
-                <Image
-                  src="/images/right-arrow-blue.png"
-                  width={40}
-                  height={40}
-                  quality={100}
-                  alt="right arrow"
-                />
-              </a>
-            </div>
-          </div>
-          <div className="col-lg-6">
-            <div className="uspRight">
-              {uspDataRows.map((row, index) => (
-                <div key={index} className="uspSlide">
-                  {row.map((usp, i) => (
-                    <div key={i} className="uspItem">
-                      <div className="uspNumber">{usp.number}</div>
-                      <div className="uspIconCircle">
-                        <img
-                          src={usp.icon}
-                          alt={usp.title}
-                          className="uspIcon"
-                        />
-                      </div>
-                      <div className="uspContent">
-                        <div className="uspItemTitle">{usp.title}</div>
-                        <div className="uspItemDesc">{usp.desc}</div>
-                      </div>
-                    </div>
-                  ))}
+                <div
+                  // data-scroll
+                  // data-scroll-class="is-inview"
+                  // data-scroll-repeat="true"
+                  className="fade-in-sections uspSubtitle"
+                  style={{ animationDelay: "0.3s" }}
+                >
+                  Real Support, Real Progress
                 </div>
-              ))}
+
+                <p
+                  // data-scroll
+                  // data-scroll-class="is-inview"
+                  // data-scroll-repeat="true"
+                  className="fade-in-section uspDesc"
+                  style={{ animationDelay: "0.4s" }}
+                >
+                  We go beyond just tutoring with personalised learning, proven methods, & expert support that deliver real results.
+                </p>
+
+                <a
+                  href="/why-ignite/"
+                  className="uspBtn fade-in-sections buttonSkyBlue"
+                  style={{ animationDelay: "0.5s" }}
+                >
+                  KNOW MORE{" "}
+                  <Image
+                    src="/images/right-arrow-blue.png"
+                    width={40}
+                    height={40}
+                    quality={100}
+                    alt="right arrow"
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="uspRight">
+                {uspDataRows.map((row, index) => (
+                  <div key={index} className="uspSlide">
+                    {row.map((usp, i) => (
+                      <div key={i} className="uspItem">
+                        <div className="uspNumber">{usp.number}</div>
+                        <div className="uspIconCircle">
+                          <img
+                            src={usp.icon}
+                            alt={usp.title}
+                            className="uspIcon"
+                          />
+                        </div>
+                        <div className="uspContent">
+                          <div className="uspItemTitle">{usp.title}</div>
+                          <div className="uspItemDesc">{usp.desc}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

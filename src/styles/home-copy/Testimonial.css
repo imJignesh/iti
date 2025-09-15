@@ -62,7 +62,7 @@
 
 .homeCopy .testimonialSection .testimonialTitle {
   color: var(--blue-color);
-  font-size: 2.4vw;
+  font-size: 1.6vw;
   font-weight: 800;
   max-width: 40%;
   text-transform: uppercase;
@@ -115,7 +115,7 @@
 
 .homeCopy .testimonialSection .testimonialSwiper {
   width: 100%;
-  max-width: 75vw;
+  max-width: 70vw;
 }
 
 .homeCopy .testimonialSection .testimonialSwiper :global(.swiper-wrapper) {
@@ -154,7 +154,7 @@
 
 .homeCopy .testimonialSection .testimonialCardText {
   background: #eaf8ff;
-  padding: 30px;
+  padding: 1vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -253,6 +253,17 @@
   right: 10%;
 }
 
+@media (max-width: 1399px) {
+  .homeCopy .testimonialSection .testimonialCard {
+    height: 23vw;
+  }
+
+  .homeCopy .testimonialSection .testimonialText {
+    font-size: 0.7vw;
+    margin-bottom: 0.3rem;
+  }
+}
+
 @media (max-width: 1199px) {
   .homeCopy .testimonialSection .testimonialTitle {
     font-size: 2rem;
@@ -285,6 +296,15 @@
   .homeCopy .testimonialSection .testimonialRect:nth-child(3) {
     top: 80%;
     max-width: 35%;
+  }
+
+  .homeCopy .testimonialSection .testimonialText {
+    font-size: 0.7vw;
+    margin-bottom: 0.3rem;
+  }
+
+  .homeCopy .testimonialSection .testimonialCard {
+    height: 23vw;
   }
 }
 

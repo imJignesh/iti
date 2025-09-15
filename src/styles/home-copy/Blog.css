@@ -5,9 +5,9 @@
   width: 100%;
 }
 
-.homeCopy .blogSection .blogHeadingRow span {
+/* .homeCopy .blogSection .blogHeadingRow span {
   font-size: 22px;
-}
+} */
 
 .homeCopy .blogSection .blogHeadingRow span:before,
 .homeCopy .blogSection .blogHeadingRow span:after {
@@ -23,7 +23,7 @@
 }
 
 .homeCopy .blogSection .blogTitle {
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-weight: 700;
   color: var(--blue-color);
   text-transform: uppercase;

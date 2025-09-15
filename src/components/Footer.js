@@ -7,7 +7,7 @@ const Footer = () => {
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat="true"
-      className={`fade-in-section ${styles.footerWrap}`}
+      className={`fade-in-section sp-container ${styles.footerWrap}`}
       style={{ animationDelay: "0.2s" }}>
       <div
         className={`fade-in-section ${styles.footerTop}`}

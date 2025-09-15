@@ -30,7 +30,7 @@
 }
 
 .homeCopy .aboutSection a.aboutBtn {
-  width: 40%;
+  width: 15vw;
 }
 
 .homeCopy .aboutSection .aboutImageWrap .rectangleBG {
@@ -97,28 +97,28 @@
 }
 
 .homeCopy .aboutSection .statBig {
-  font-size: 2.5vw;
+  font-size: 1.8vw;
   font-weight: 700;
   color: var(--blue-color);
 }
 
 .homeCopy .aboutSection .statSmall {
   color: var(--blue-color);
-  font-size: 1vw;
+  font-size: 0.7vw;
   font-weight: 600;
   line-height: 1.5;
 }
 
 .homeCopy .aboutSection .verticalLabel {
   position: absolute;
-  right: 90%;
-  bottom: 40%;
+  right: 24.2vw;
+  bottom: 10vw;
   color: var(--blue-color);
   writing-mode: sideways-lr;
   transform: rotate(180deg);
-  font-size: 1.2vw;
+  font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: revert-layer;
 }
 
 .homeCopy .aboutSection .verticalLabel span {
@@ -213,7 +213,7 @@
 }
 
 .homeCopy .aboutSection .aboutStatLabel {
-  font-size: 1vw;
+  font-size: 0.9vw;
   color: var(--blue-color);
   font-weight: 600;
   opacity: 0.8;

@@ -109,10 +109,10 @@
 
 .homeCopy .testSection1 .cardTitle {
   position: absolute;
-  left: 50%;
-  bottom: 32px;
+  left: 10vw;
+  bottom: 2vw;
   transform: translateX(-50%);
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #fff;
   z-index: 2;
@@ -154,27 +154,27 @@
 }
 
 .homeCopy .testSection1 .cardLabel {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--blue-color);
-  margin-bottom: 10px;
+  margin-bottom: 2rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .homeCopy .testSection1 .cardDetails {
-  font-size: 1.38rem;
+  font-size: 1.1rem;
   color: var(--blue-color);
-  margin-bottom: 18px;
+  margin-bottom: 2rem;
   opacity: 0.9;
   font-weight: 500;
 }
 
 .homeCopy .testSection1 .cardBtn {
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 500;
   width: 100%;
-  padding: 20px 30px;
+  padding: 0.7vw 1vw;
 }
 
 .homeCopy .testSection1 .cardBtn img {
@@ -198,6 +198,14 @@
   .homeCopy .testSection1 .activeImageArea {
     height: 300px;
   }
+
+  .homeCopy .testSection1 .cardLabel,
+  .homeCopy .testSection1 .cardDetails {
+    margin-bottom: 1rem;
+
+  }
+
+
 }
 
 @media (max-width: 1280px) {

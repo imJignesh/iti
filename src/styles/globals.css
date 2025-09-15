@@ -32,15 +32,21 @@ body {
 
 /* Global Container - Use this in all pages */
 .container {
-  max-width: 85vw !important;
+  max-width: 70vw !important;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
 }
 
+@media (max-width: 1440px) {
+  .container {
+    max-width: 80vw !important;
+  }
+}
+
 @media (max-width: 1124px) {
   .container {
-    max-width: 90vw !important;
+    max-width: 80vw !important;
   }
 }
 
@@ -57,7 +63,7 @@ body {
 }
 
 .SubHeading {
-  font-size: 1.7rem;
+  font-size: 1.2vw;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;

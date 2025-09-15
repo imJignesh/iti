@@ -25,7 +25,7 @@
 .uspSection .uspLeft span {
   -webkit-text-fill-color: var(--white-color);
   width: max-content;
-  font-size: 25px;
+  font-size: 1.3vw;
   margin-bottom: 20px;
 }
 
@@ -71,6 +71,7 @@
 
 .uspSection .uspRight {
   position: relative;
+  padding-top: 1vw;
 }
 
 .uspSection .uspSwiper {
@@ -106,10 +107,10 @@
 
 .uspSection .uspNumber {
   position: absolute;
-  top: -30px;
-  left: -50px;
-  font-size: 3rem;
-  font-weight: 700;
+  top: -2.5vw;
+  left: -1.5vw;
+  font-size: 2.5rem;
+  font-weight: 600;
   color: #b2e6d4;
   opacity: 0.7;
   margin-bottom: 8px;
@@ -118,8 +119,8 @@
 .uspSection .uspIconCircle {
   background: #baefd4;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 5rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,8 +128,8 @@
 }
 
 .uspSection .uspIcon {
-  width: 50px;
-  height: 50px;
+  width: 2.6rem;
+  height: 2.6rem;
   object-fit: contain;
 }
 
@@ -143,7 +144,7 @@
 
 .uspSection .uspItemDesc {
   letter-spacing: 1px;
-  font-size: 0.98rem;
+  font-size: 0.8rem;
   color: var(--white-color);
   opacity: 0.7;
   line-height: 1.5;

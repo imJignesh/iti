@@ -135,21 +135,21 @@
 
 .homeCopy .courseSection .cardNumber {
   position: absolute;
-  top: 30px;
-  left: 20%;
-  right: 20%;
+  top: 2rem;
+  left: 1.5rem;
+  right: 1.5rem;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--blue-color);
   z-index: 3;
-  padding-bottom: 30px;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--grey-text);
 }
 
 .homeCopy .courseSection .cardTitle {
   writing-mode: vertical-rl;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--blue-color);
   letter-spacing: 2px;
@@ -206,7 +206,7 @@
 }
 
 .homeCopy .courseSection .mainCardLabel {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 1;
@@ -288,7 +288,7 @@
   .homeCopy .courseSection .inactiveCard,
   .homeCopy .courseSection .mainCard,
   .homeCopy .courseSection .activeCard {
-    height: 600px;
+    height: 500px;
     border-radius: 30px;
   }
 

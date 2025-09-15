@@ -70,11 +70,11 @@
 }
 
 .homeCopy .alumniSection .alumniSubHeading {
-  font-size: 1.6vw;
+  font-size: 1.3vw;
 }
 
 .homeCopy .alumniSection .alumniTitle {
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-weight: 700;
   max-width: 50%;
   margin: 30px auto 0 !important;
@@ -111,7 +111,7 @@
   height: 100%;
   object-fit: contain;
   object-position: center;
-  max-height: 490px;
+  max-height: 20vw;
 }
 
 .homeCopy .alumniSection .alumniName {
