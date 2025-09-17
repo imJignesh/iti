@@ -11,6 +11,16 @@
   position: relative;
 } */
 
+
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #fff;
+  z-index: 99 !important;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -19,19 +29,9 @@
   padding: 1.5vw 0;
   max-width: 70vw;
   margin: 0 auto;
-  background: #fff;
-  z-index: 99 !important;
-  position: fixed;
-  /* Change from relative to fixed */
-  top: 0;
-  /* Add this line */
-  left: 50%;
-  /* Center the header */
-  transform: translateX(-50%);
-  /* Center the header */
-  width: 100%;
-  /* Make it full width */
 }
+
+/* Rest of your CSS remains the same */
 
 header .header_left_content {
   display: flex;
@@ -99,6 +99,8 @@ header .header_right_content {
   align-items: center;
   gap: 30px;
 }
+
+
 
 header .header_right_content button {
   font-size: 0.8vw;

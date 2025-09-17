@@ -30,6 +30,11 @@ body {
   box-sizing: border-box;
 }
 
+.headerContainer {
+  width: 100%;
+  background: #fff;
+}
+
 /* Global Container - Use this in all pages */
 .container {
   max-width: 70vw !important;
