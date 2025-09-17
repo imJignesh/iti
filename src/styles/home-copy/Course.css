@@ -31,12 +31,12 @@
 }
 
 .homeCopy .courseSection .courseHeadings p {
-  font-size: 1.4rem;
+  font-size: 1.3vw;
   max-width: 60%;
   margin: 0 auto;
   color: var(grey-text);
   opacity: 50%;
-  line-height: 30px;
+  line-height: 1.5vw;
 }
 
 .homeCopy .courseSection .courseInner {
@@ -65,7 +65,7 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   background: rgba(255, 255, 255, 0.7);
   flex-shrink: 0;
-  height: 500px;
+  height: 30vw;
   transition: flex-basis 0.8s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.8s,
     box-shadow 0.8s, background 0.8s;
 }
@@ -79,12 +79,12 @@
 
 .homeCopy .courseSection .mainCard,
 .homeCopy .activeCard {
-  flex-basis: 450px;
+  flex-basis: 26vw;
   z-index: 2;
   background: #fff;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 2vw;
 }
 
 .homeCopy .courseSection .mainCard .cardTitle {
@@ -123,9 +123,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 18px;
+  gap: 1vw;
   color: #fff;
-  padding: 40px;
+  padding: 2vw;
   background: linear-gradient(180deg,
       rgba(0, 0, 0, 0.01) 0%,
       rgba(0, 0, 0, 0.6) 100%);
@@ -139,7 +139,7 @@
   left: 1.5rem;
   right: 1.5rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7vw;
   font-weight: 600;
   color: var(--blue-color);
   z-index: 3;
@@ -149,11 +149,11 @@
 
 .homeCopy .courseSection .cardTitle {
   writing-mode: vertical-rl;
-  font-size: 2rem;
+  font-size: 1.7vw;
   font-weight: 600;
   color: var(--blue-color);
   letter-spacing: 2px;
-  margin-bottom: 32px;
+  margin-bottom: 2vw;
   z-index: 3;
 }
 
@@ -200,31 +200,31 @@
   padding-bottom: 0;
   line-height: 2;
   text-align: start;
-  left: 30px;
-  font-size: 2.4rem;
+  left: 1.5vw;
+  font-size: 1.7vw;
   transition: 0.4s all;
 }
 
 .homeCopy .courseSection .mainCardLabel {
-  font-size: 2.4rem;
+  font-size: 2.3vw;
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 1vw;
 }
 
 .homeCopy .courseSection .mainCardTitle {
-  font-size: 1.5rem;
+  font-size: 1vw;
   font-weight: 600;
   letter-spacing: 1.5px;
   margin-top: 2px;
-  max-width: 500px;
+  max-width: 22vw;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
 .homeCopy .courseSection .mainCardDetails {
-  font-size: 1.3rem;
+  font-size: 0.9vw;
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -236,8 +236,8 @@
 .homeCopy .courseSection .mainCardBtn {
   width: max-content;
   font-weight: 600;
-  font-size: 1.2rem;
-  padding: 15px 20px;
+  font-size: 1vw;
+  /* padding: 15px 20px; */
 }
 
 .homeCopy .courseSection .mainCardBtn img {
@@ -498,6 +498,11 @@
   .homeCopy .courseSection .inactiveCard {
     flex-basis: 80px;
     border-radius: 15px;
+  }
+
+  .homeCopy .courseSection .mainCardContent,
+  .homeCopy .courseSection .sideCardContent {
+    justify-content: center;
   }
 
   .homeCopy .courseSection .mainCard {

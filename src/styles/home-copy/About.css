@@ -31,6 +31,8 @@
 
 .homeCopy .aboutSection a.aboutBtn {
   width: 15vw;
+  padding: 0.8vw 1vw;
+  gap: 1vw;
 }
 
 .homeCopy .aboutSection .aboutImageWrap .rectangleBG {

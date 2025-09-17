@@ -37,7 +37,7 @@ function useInViewAnimation(threshold = 0.3) {
     return [ref, inView];
 }
 
-const HomeCopy = () => {
+const HomeCopy = ({ headerHeight }) => {
     const [active, setActive] = useState(1);
     const [activeIndex, setActiveIndex] = React.useState(1);
     const scrollRef = useRef(null);
@@ -90,7 +90,7 @@ const HomeCopy = () => {
 
     return (
         <>
-            <div className="homeCopy">
+            <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
                 {/* Banner Section */}
                 <Hero />
 

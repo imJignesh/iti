@@ -33,6 +33,10 @@
   align-items: center;
 }
 
+.homeCopy .hero .heroLeft {
+  padding-top: 3vw;
+}
+
 .homeCopy .hero .heroLeft .heroTitle-desktop {
   font-size: 2vw;
   font-weight: 700;
@@ -341,10 +345,13 @@
     line-height: 1;
     font-size: 1.4rem; */
     display: block;
-    margin: 20px auto;
+    margin: 0 auto;
     max-width: 90vw;
-    line-height: 1;
+    line-height: 1.2;
     font-size: 1.4rem;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 20px 0 20px 0;
+
   }
 
   .homeCopy .hero .heroLeft .heroTitle-mobile span {
@@ -376,7 +383,11 @@
 
 @media (max-width: 575px) {
   .homeCopy .hero {
-    padding: 30px 0 0 0;
+    padding: 25px 0 0 0;
+    background: url(/images/banner-bg-mobile.png) no-repeat;
+    background-size: 50vh 16vh;
+    background-position: top 0vh right -2vh;
+
   }
 
   .homeCopy .hero .videoContainer,
@@ -397,6 +408,10 @@
     gap: 3vw;
   }
 
+  .homeCopy .hero .heroRight .buttonGroup .buttonBlue,
+  .homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
+    justify-content: space-around;
+  }
 
   .homeCopy .hero .heroRight .buttonGroup img {
     width: 7vw;
@@ -424,8 +439,10 @@
 
   .homeCopy .hero .heroParagraph strong {
     font-size: 15px;
-    max-width: 75%;
+    max-width: 95vw;
     display: inline-block;
+    padding-bottom: 20px;
+
   }
 
   .homeCopy .hero .heroRight .buttonGroup {

@@ -218,8 +218,8 @@ const Blogpg = () => {
 
     return (
         <>
-            <div ref={scrollRef} data-scroll-container style={{ minHeight: 'calc(100vh - 200px)' }}>
-                <section className="ibdpBanner" data-scroll data-scroll-section>
+            <div ref={scrollRef} data-scroll-container style={{ minHeight: 'calc(100vh - 200px)' }} >
+                <section className="ibdpBanner container" data-scroll data-scroll-section>
                     {/* Image with Wrapper */}
                     <div className="full-width-image-wrapper" data-scroll-section>
                         <img

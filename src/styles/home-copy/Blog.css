@@ -78,8 +78,7 @@
 }
 
 .homeCopy .blogSection .blogImg {
-  max-width: 300px;
-  max-height: 250px;
+  max-width: 15vw;
   object-fit: cover;
   border-radius: 24px;
 }
@@ -94,16 +93,18 @@
 }
 
 .homeCopy .blogSection .blogCardTitle {
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 700;
   color: var(--blue-color);
   margin-bottom: 4px;
+  line-height: 1.2;
 }
 
 .homeCopy .blogSection .blogCardDesc {
-  font-size: 1vw;
+  font-size: 0.8vw;
   color: #7a8ca3;
   opacity: 0.9;
+  line-height: 1.2;
 }
 
 .homeCopy .blogSection .blogCardLine {

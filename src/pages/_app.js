@@ -83,16 +83,18 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 
 import LocomotiveScrollProvider from '../components/LocomotiveScrollProvider';
+import { useState } from "react";
 
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
+    const [headerHeight, setHeaderHeight] = useState(0);
 
     return (
         <>
             <LocomotiveScrollProvider>
-                <Header />
-                <Component {...pageProps} />
+                <Header setHeaderHeight={setHeaderHeight} />
+                <Component {...pageProps} headerHeight={headerHeight} />
                 <Footer />
             </LocomotiveScrollProvider>
         </>

@@ -26,8 +26,8 @@ const createBlogData = async () => {
 
         // Trim to ~100 chars without cutting words
         const trimmedExcerpt =
-            decodedExcerpt.length > 100
-                ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 100)) +
+            decodedExcerpt.length > 80
+                ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 80)) +
                 "..."
                 : decodedExcerpt;
 

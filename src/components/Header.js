@@ -1,31 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/Header.module.css';
 import Image from 'next/image';
 
-const Header = () => {
-    const [show, setShow] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
-    const [navOpen, setNavOpen] = useState(false); // For mobile nav toggle
+const Header = ({ setHeaderHeight }) => {
+    const [navOpen, setNavOpen] = useState(false);
     const router = useRouter();
     const currentPath = router.pathname;
+    const headerRef = useRef(null);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY < 50) {
-                setShow(true);
-            } else if (window.scrollY < lastScrollY) {
-                setShow(true);
-            } else {
-                setShow(false);
-            }
-            setLastScrollY(window.scrollY);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollY]);
-
-    // Close nav on resize to desktop
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 992) setNavOpen(false);
@@ -34,13 +17,20 @@ const Header = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    useEffect(() => {
+        if (headerRef.current) {
+            setHeaderHeight(headerRef.current.offsetHeight);
+        }
+    }, [setHeaderHeight]);
+
+
     const isLinkActive = (href, parentPaths = []) => {
         const pathsToCheck = [href, ...parentPaths];
         return pathsToCheck.some(path => currentPath.startsWith(path));
     };
 
     return (
-        <header className={`${styles.header} ${show ? styles.headerAnimated : styles.headerHidden}`}>
+        <header ref={headerRef} className={`${styles.header}`}>
             <div className={`d-flex w-100 m-0 ${styles.header_left_content}`}>
                 <div className={`col-auto ${styles.logo}`}>
                     <Image src="/images/logo.svg" width={200} height={80} quality={100} alt='Ignited Training Institute' />

@@ -1,4 +1,4 @@
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,6 +9,28 @@
   background: #fff;
   z-index: 99 !important;
   position: relative;
+} */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+  padding: 1.5vw 0;
+  max-width: 70vw;
+  margin: 0 auto;
+  background: #fff;
+  z-index: 99 !important;
+  position: fixed;
+  /* Change from relative to fixed */
+  top: 0;
+  /* Add this line */
+  left: 50%;
+  /* Center the header */
+  transform: translateX(-50%);
+  /* Center the header */
+  width: 100%;
+  /* Make it full width */
 }
 
 header .header_left_content {
@@ -133,7 +155,7 @@ header .megaMenu {
   position: absolute;
   left: 0;
   top: calc(100% + 25px);
-  width: 550px;
+  width: 27vw;
   background-color: var(--white-color);
   background: linear-gradient(white, white) padding-box,
     linear-gradient(to top, var(--green-text), transparent) border-box;
@@ -590,6 +612,7 @@ header .toggleButton img {
 @media (max-width: 575px) {
   header .header_left_content .logo img {
     width: 100px;
+    height: auto;
   }
 
   header .header_right_content button img {
