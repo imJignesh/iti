@@ -108,6 +108,11 @@ body {
   text-decoration: none !important;
 }
 
+.vh-100vh {
+  height: 100vh;
+
+}
+
 @media (max-width: 1024px) {
   .SubHeading {
     font-size: 24px;

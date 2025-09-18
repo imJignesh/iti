@@ -1,26 +1,37 @@
 /* USPs Section  */
 
+/* USPs Section  */
+
 .uspSection {
   background: linear-gradient(to right,
       var(--green-color) 0%,
       var(--lightgreen-color) 100%);
-  border-radius: 32px;
-  padding: 50px 40px;
+  border-radius: 3.2vw;
+  padding: 3.47vw 2.78vw;
   color: var(--white-color);
-  margin: 20px auto;
+  margin: 1.39vw auto;
   max-width: 90vw;
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.28vw 2.22vw rgba(0, 0, 0, 0.08);
 }
 
 .uspSection .uspLeft {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  min-width: 320px;
-  max-width: 460px;
+  gap: 1.39vw;
+  min-width: 22.22vw;
+  max-width: 31.94vw;
   position: sticky;
-  top: 50px;
+  top: 10vw;
 }
+
+.uspSection .uspLeft span {
+  -webkit-text-fill-color: var(--white-color);
+  width: max-content;
+  font-size: 1.3vw;
+  margin-bottom: 1.39vw;
+}
+
+
 
 .uspSection .uspLeft span {
   -webkit-text-fill-color: var(--white-color);

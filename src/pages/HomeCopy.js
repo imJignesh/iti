@@ -92,8 +92,9 @@ const HomeCopy = ({ headerHeight }) => {
         <>
             <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
                 {/* Banner Section */}
-                <Hero />
-
+                <div className="vh-100vh">
+                    <Hero />
+                </div>
                 {/* Course Section  */}
                 <Course />
 
