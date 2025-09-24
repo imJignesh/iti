@@ -15,7 +15,7 @@
   -webkit-clip-path: inset(0 100% 0 0);
   clip-path: inset(0 100% 0 0);
   animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
-  background-position: 4vw 0vw;
+  background-position: 6.5vw 1vw;
 }
 
 @keyframes revealClipLeftToRight {
@@ -34,7 +34,7 @@
 }
 
 .homeCopy .hero .heroLeft {
-  padding-top: 3vw;
+  /* padding-top: 3vw; */
 }
 
 .homeCopy .hero .heroLeft .heroTitle-desktop {
@@ -65,7 +65,7 @@
 
 .homeCopy .hero .heroLeft .heroParagraph {
   padding-top: 30px;
-  font-size: 1.3vw;
+  font-size: 1vw;
   font-weight: 400;
   color: var(--blue-color);
   line-height: 1.5;
@@ -216,7 +216,7 @@
     /* background-size: 500px;
     background-position: top 10% left 5px; */
     background-size: 28vw;
-    background-position: 4.5vw 0vw;
+    background-position: 6.5vw 1vw;
   }
 }
 

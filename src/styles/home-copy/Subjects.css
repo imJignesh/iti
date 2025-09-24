@@ -16,7 +16,7 @@
 }
 
 .homeCopy .subjectSection .subjectSectionInner {
-  padding: 150px 30px;
+  padding: 6vw 2vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,13 +35,13 @@
 }
 
 .homeCopy .subjectSection .bgRect:nth-child(1) {
-  width: 350px;
-  top: 10%;
+  width: 16vw;
+  top: 1vw;
   left: 0;
 }
 
 .homeCopy .subjectSection .bgRect:nth-child(2) {
-  top: 25%;
+  top: 22%;
   left: 20px;
 }
 
@@ -50,7 +50,7 @@
   object-fit: fill;
   object-position: left;
   border-radius: 0 20px 20px 0;
-  bottom: 15%;
+  bottom: 8%;
   left: 20px;
 }
 

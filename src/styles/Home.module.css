@@ -855,19 +855,23 @@
   background: var(--white-bg);
   text-align: center;
 }
+
 .trainersSection .trainersHeader {
   margin-bottom: 32px;
 }
+
 .trainersSection .trainersSubheading {
   font-size: 1.8vw;
 }
+
 .trainersSection .trainersIcon {
   width: 24px;
   height: 24px;
   margin-right: 8px;
 }
+
 .trainersSection .trainersTitle {
-  font-size: 2.2vw;
+  font-size: 2vw;
   font-weight: 700;
   max-width: 60%;
   margin: 40px auto;
@@ -875,16 +879,16 @@
   text-transform: uppercase;
   color: var(--blue-color);
 }
+
 .trainersSection .trainersHighlight {
-  background: linear-gradient(
-    to left,
-    var(--green-color),
-    var(--lightgreen-color)
-  );
+  background: linear-gradient(to left,
+      var(--green-color),
+      var(--lightgreen-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .trainersSection .trainersGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -892,6 +896,7 @@
   justify-items: center;
   margin-bottom: 36px;
 }
+
 .trainersSection .trainerCard {
   padding: 20px 0 30px 0;
   border-radius: 40px;
@@ -904,6 +909,7 @@
   transition: box-shadow 0.2s;
   overflow: hidden;
 }
+
 .trainersSection .trainerCard:nth-child(7),
 .trainersSection .trainerCard:nth-child(9) {
   translate: 0 20px;
@@ -912,9 +918,11 @@
 .trainersSection .trainerCard[data-color="blue"] {
   background: linear-gradient(var(--border-color) 0%, transparent 50%);
 }
+
 .trainersSection .trainerCard[data-color="green"] {
   background: linear-gradient(to top, var(--green-text) 0%, transparent 70%);
 }
+
 .trainersSection .trainerCard[data-color="blue"]:before {
   content: "";
   width: 100%;
@@ -923,6 +931,7 @@
   bottom: 0;
   background: linear-gradient(to top, var(--white-bg) 50%, transparent);
 }
+
 .trainersSection .trainerCard[data-color="green"]:before {
   content: "";
   width: 100%;
@@ -931,6 +940,7 @@
   bottom: 0;
   background: linear-gradient(to top, #d7f6e6 50%, transparent);
 }
+
 .trainersSection .trainerName {
   font-size: 1vw;
   font-weight: 500;
@@ -940,16 +950,19 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
+
 .trainersSection .trainerImgWrap {
   width: 100%;
   height: 100%;
 }
+
 .trainersSection .trainerImg {
   width: 100%;
   height: 100%;
   max-height: 100%;
   object-fit: cover;
 }
+
 .trainersSection .trainerSubtitle {
   font-size: 1vw;
   color: var(--black-color);
@@ -958,12 +971,15 @@
   position: absolute;
   z-index: 9;
 }
+
 .trainersSection .trainerCard:nth-child(odd) .trainerSubtitle {
   bottom: 70px;
 }
+
 .trainersSection .trainerCard:nth-child(even) .trainerSubtitle {
   bottom: 50px;
 }
+
 .trainersSection .trainerExp {
   background: linear-gradient(to left, #3f88ba, var(--blue-color));
   -webkit-background-clip: text;
@@ -977,20 +993,20 @@
   z-index: 9;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
+
 /* .trainersSection .trainerCard:nth-child(odd) .trainerExp {
   transform: translateY(-10px);
 } */
 .trainersSection .trainerCard:nth-child(even) .trainerExp {
   transform: translateY(20px);
-  background: linear-gradient(
-    to left,
-    var(--green-color),
-    var(--lightgreen-color)
-  );
+  background: linear-gradient(to left,
+      var(--green-color),
+      var(--lightgreen-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .trainersSection .trainersSeeMore {
   position: relative;
   overflow: hidden;
@@ -1000,7 +1016,7 @@
   border: 3px solid transparent;
   background-color: var(--white-color);
   background: linear-gradient(white, white) padding-box,
-              linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
+    linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
   color: var(--blue-color);
   font-size: 1vw;
   font-weight: 700;
@@ -1017,7 +1033,7 @@
   left: 0%;
   width: 200%;
   height: 100%;
-  background: linear-gradient(to right, transparent, #e7f6ff 60%, var(--border-color) 85% , var(--border-color));
+  background: linear-gradient(to right, transparent, #e7f6ff 60%, var(--border-color) 85%, var(--border-color));
   z-index: -1;
   transition: transform 0.6s ease-in-out;
 }
@@ -1044,11 +1060,13 @@
   align-items: center;
   min-height: 24px;
 }
+
 .trainersSection .trainersPagination span {
   width: 10px;
   height: 5px;
   border-radius: 4px;
 }
+
 .trainersSection .customNavBtn {
   background: transparent;
   border: none;
@@ -1067,19 +1085,23 @@
   transition: none;
   padding: 0;
 }
+
 .trainersSection .customNavBtn img {
   width: 32px;
   height: 32px;
   object-fit: contain;
   filter: none;
 }
+
 .trainersSection .customNavBtn:after,
 .trainersSection .customNavBtn:after {
   display: none;
 }
+
 .trainersSection .swiper-button-prev.customNavBtn {
   left: -24px;
 }
+
 .trainersSection .swiper-button-next.customNavBtn {
   right: -24px;
 }
@@ -1089,41 +1111,51 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px 12px;
   }
+
   .trainersSection .trainersSubheading {
     font-size: 1.4rem;
   }
+
   .trainersSection .trainersTitle {
     font-size: 2rem;
   }
+
   .trainersSection .trainerName,
   .trainersSection .trainerExp,
   .trainersSection .trainersSeeMore {
     font-size: 1rem;
   }
+
   .trainersSection .trainerSubtitle {
     font-size: 0.9rem;
   }
 }
+
 @media (max-width: 700px) {
   .trainersSection .trainersGrid {
     grid-template-columns: 1fr;
     gap: 18px;
   }
+
   .trainersSection .trainersSubheading {
     font-size: 1.2rem;
   }
+
   .trainersSection .trainersTitle {
     font-size: 1.4rem;
     max-width: 100%;
     margin: 20px 0;
   }
+
   .trainersSection .customNavBtn {
     width: 32px;
     height: 32px;
   }
+
   .trainersSection .swiper-button-prev.customNavBtn {
     left: -10px;
   }
+
   .trainersSection .swiper-button-next.customNavBtn {
     right: -10px;
   }
@@ -1138,11 +1170,13 @@
   z-index: 1;
   overflow: hidden;
 }
+
 .alumniSection .alumniSubSection {
   text-align: center;
   position: relative;
   padding: 30px 0;
 }
+
 .alumniSection .alumniSubSection:before {
   content: "";
   width: 130%;
@@ -1159,9 +1193,11 @@
   border: 2px solid transparent;
   z-index: -1;
 }
+
 .alumniSection .alumniSubHeading {
   font-size: 1.8vw;
 }
+
 .alumniSection .alumniTitle {
   font-size: 2.5vw;
   font-weight: 700;
@@ -1171,16 +1207,16 @@
   text-transform: uppercase;
   color: #1a2a49;
 }
+
 .alumniSection .alumniHighlight {
-  background: linear-gradient(
-    to left,
-    var(--green-color),
-    var(--lightgreen-color)
-  );
+  background: linear-gradient(to left,
+      var(--green-color),
+      var(--lightgreen-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .alumniSection .alumniSwiper {
   margin-top: 40px;
   padding-bottom: 60px;
@@ -1191,9 +1227,11 @@
 .alumniSection .alumniSwiper :global(.swiper-slide) {
   opacity: 0.6;
 }
+
 .alumniSection .alumniSwiper :global(.swiper-slide-active) {
   opacity: 1;
 }
+
 .alumniSection :global(.swiper-wrapper) {
   align-items: end;
 }
@@ -1213,6 +1251,7 @@
   border: 2px solid transparent;
   z-index: -1;
 }
+
 .alumniSection .alumniBg {
   position: absolute;
   top: 10%;
@@ -1221,14 +1260,13 @@
   width: 260px;
   height: 300px;
   border-radius: 32px;
-  background: linear-gradient(
-    180deg,
-    var(--green-text) 0%,
-    var(--white-color) 60%
-  );
+  background: linear-gradient(180deg,
+      var(--green-text) 0%,
+      var(--white-color) 60%);
   z-index: -1;
   transition: all 0.4s;
 }
+
 .alumniSection .activeBg.alumniBg {
   background: linear-gradient(to top, var(--white-color) 0%, #b6d6f6 100%);
 }
@@ -1240,6 +1278,7 @@
   object-position: center;
   max-height: 450px;
 }
+
 .alumniSection .alumniLogoBox {
   position: absolute;
   top: 50px;
@@ -1254,10 +1293,12 @@
   align-items: center;
   justify-content: center;
 }
+
 .alumniSection .alumniLogoBox img {
   width: 80px;
   height: 100%;
 }
+
 .alumniSection .alumniName {
   margin-top: 45px;
   line-height: 0.8;
@@ -1277,27 +1318,29 @@
   position: relative;
   transition: all 0.3s;
 }
-.alumniSection .activeBg ~ .alumniName {
+
+.alumniSection .activeBg~.alumniName {
   font-size: 1.5vw;
-  background: linear-gradient(
-    to right,
-    var(--lightgreen-color),
-    var(--green-color)
-  );
+  background: linear-gradient(to right,
+      var(--lightgreen-color),
+      var(--green-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .alumniSection .swiper-button-next:after,
 .alumniSection .swiper-button-prev:after {
   display: none !important;
 }
+
 .alumniSection .swiperNavWrap {
   position: relative;
   width: 100%;
   height: 0;
   z-index: 10;
 }
+
 .alumniSection .customNavBtn {
   background: transparent;
   border-radius: 50%;
@@ -1313,49 +1356,61 @@
   box-shadow: 0 2px 8px 0 rgba(30, 41, 59, 0.1);
   transition: background 0.2s;
 }
+
 .alumniSection .customNavBtn:after {
   display: none;
 }
+
 .alumniSection .swiper-button-prev,
 .alumniSection .swiper-button-next {
   background-color: transparent !important;
 }
+
 @media (max-width: 1199px) {
   .alumniSection .alumniSubHeading {
     font-size: 1.5rem;
   }
+
   .alumniSection .alumniLogoBox {
     top: 15px;
     left: 85%;
     padding: 20px 30px;
   }
+
   .alumniSection .alumniLogoBox img {
     width: 80px;
   }
+
   .alumniSection .alumniTitle {
     font-size: 1.8rem;
   }
-  .alumniSection .activeBg ~ .alumniName {
+
+  .alumniSection .activeBg~.alumniName {
     font-size: 1.2rem;
   }
 }
+
 @media (max-width: 767px) {
   .alumniSection .alumniSubSection:before {
     right: -30%;
     border-radius: 20px;
   }
+
   .alumniSection .alumniTitle {
     max-width: 100%;
   }
+
   .alumniSection .alumniSwiper:nth-child(2):before {
     right: -15%;
     height: 70px;
   }
 }
+
 @media (max-width: 575px) {
   .alumniSection .alumniSubHeading {
     font-size: 1.2rem;
   }
+
   .alumniSection .alumniTitle {
     font-size: 1.6rem;
   }
@@ -1368,13 +1423,16 @@
   background: #fff;
   width: 100%;
 }
+
 .blogSection .blogHeadingRow span {
   font-size: 22px;
 }
+
 .blogSection .blogHeadingRow span:before,
 .blogSection .blogHeadingRow span:after {
   height: 20px;
 }
+
 .blogSection .blogsLabel {
   font-size: 22px;
   font-weight: 700;
@@ -1382,6 +1440,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
 .blogSection .blogTitle {
   font-size: 1.8vw;
   font-weight: 700;
@@ -1390,6 +1449,7 @@
   margin: 35px 0 18px 0;
   line-height: 1.1;
 }
+
 .blogSection .blogSubtitle {
   font-size: 1vw;
   color: var(--blue-color);
@@ -1397,12 +1457,14 @@
   margin: 25px 0;
   text-transform: uppercase;
 }
+
 .blogSection .blogAllBtn,
 .blogSection .blogAllBtnmobile {
   font-size: 1rem;
   font-weight: 700;
   width: max-content;
 }
+
 .blogSection .blogAllBtnmobile {
   display: none;
 }
@@ -1412,6 +1474,7 @@
   flex-direction: column;
   gap: 36px;
 }
+
 .blogSection .blogCard {
   display: flex;
   align-items: center;
@@ -1419,12 +1482,14 @@
   background: none;
   box-shadow: none;
 }
+
 .blogSection .blogImg {
   width: 300px;
   height: 250px;
   object-fit: cover;
   border-radius: 24px;
 }
+
 .blogSection .blogCardContent {
   display: flex;
   flex-direction: column;
@@ -1433,6 +1498,7 @@
   gap: 12px;
   flex: 1;
 }
+
 .blogSection .blogCardTitle {
   font-size: 1.5vw;
   font-weight: 700;
@@ -1440,28 +1506,34 @@
   margin-bottom: 4px;
   letter-spacing: 1px;
 }
+
 .blogSection .blogCardDesc {
   font-size: 1vw;
   color: #7a8ca3;
   opacity: 0.9;
 }
+
 .blogSection .blogCardLine {
   width: 100%;
   height: 1px;
   background: linear-gradient(to right, var(--border-color), transparent);
   margin: 8px 0;
 }
+
 .blogSection .blogReadMoreBtn {
   font-size: 1rem;
   font-weight: 700;
 }
+
 .blogSection .blogReadMoreBtn:hover {
   transform: scale(1.05);
 }
+
 .blogSection .blogReadMoreArrow {
   width: 25px;
   height: 25px;
 }
+
 .blogSection .blogReadMoreArrow img {
   width: 100%;
   height: 100%;
@@ -1471,64 +1543,81 @@
   .blogSection .blogTitle {
     font-size: 1.4rem;
   }
+
   .blogSection .blogSubtitle {
     font-size: 1rem;
   }
+
   .blogSection .blogAllBtn {
     font-size: 1rem;
   }
+
   .blogSection .blogCardTitle {
     font-size: 1rem;
   }
+
   .blogSection .blogCardDesc {
     font-size: 0.8rem;
   }
 }
+
 @media (max-width: 991px) {
   .blogSection .blogLeft {
     text-align: center;
   }
+
   .blogSection .blogTitle {
     max-width: 500px;
     margin: 20px auto;
   }
+
   .blogSection .blogAllBtn {
     margin: 0 auto;
   }
+
   .blogSection .blogCard {
     padding-bottom: 40px;
     border-bottom: 1px solid #dedede;
   }
+
   .blogSection .blogCardDesc {
     margin-bottom: 10px;
   }
+
   .blogSection .blogCardLine {
     display: none;
   }
 }
+
 @media (max-width: 767px) {
+
   .blogSection .blogSubtitle,
   .blogSection .blogAllBtn {
     display: none;
   }
+
   .blogSection .blogImg {
     width: 200px;
   }
+
   .blogSection .blogAllBtnmobile {
     display: flex;
     margin: 0 auto;
   }
 }
+
 @media (max-width: 575px) {
   .blogSection .blogImg {
     width: 150px;
     height: 200px;
   }
 }
+
 @media (max-width: 440px) {
   .blogSection .blogCard {
     flex-direction: column;
   }
+
   .blogSection .blogImg {
     width: 100%;
     height: 200px;

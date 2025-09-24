@@ -81,7 +81,7 @@ export default function Usps({ }) {
           className="fade-in-sections uspSection"
           style={{ animationDelay: "0.2s" }}
         >
-          <div className="row justify-content-between">
+          <div className="row justify-content-between gx-5">
             <div className="col-lg-4">
               <div className="uspLeft">
                 <span
@@ -140,7 +140,7 @@ export default function Usps({ }) {
                 </a>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-7">
               <div className="uspRight">
                 {uspDataRows.map((row, index) => (
                   <div key={index} className="uspSlide">

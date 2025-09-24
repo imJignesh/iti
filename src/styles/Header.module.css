@@ -41,7 +41,7 @@ header .header_left_content {
 }
 
 header .header_left_content .logo img {
-  width: 8vw;
+  width: 6.5vw;
   object-fit: contain;
 }
 
@@ -52,6 +52,8 @@ header .header_left_content .nav {
   flex-wrap: wrap;
 }
 
+
+
 header .header_left_content .link {
   color: #161664;
   font-size: 1rem;
@@ -61,7 +63,7 @@ header .header_left_content .link {
   text-decoration: none;
   position: relative;
   transition: 0.2s all;
-  letter-spacing: 0;
+  letter-spacing: -0.5px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -111,7 +113,7 @@ header .header_right_content button {
   background-color: var(--white-color);
   background: linear-gradient(white, white) padding-box, linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
   border-radius: 40px;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   display: flex;
   align-items: center;
   gap: 0.7vw;
@@ -157,14 +159,14 @@ header .megaMenu {
   position: absolute;
   left: 0;
   top: calc(100% + 25px);
-  width: 27vw;
+  width: 23vw;
   background-color: var(--white-color);
   background: linear-gradient(white, white) padding-box,
     linear-gradient(to top, var(--green-text), transparent) border-box;
   border-radius: 35px;
   border: 2px solid transparent;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  padding: 32px 24px;
+  padding: 1vw;
   z-index: 100;
   animation: megaMenuFadeIn 0.3s;
 }
@@ -233,7 +235,7 @@ header .megaMenuContent h3 span {
 }
 
 header .megaMenuContent h3 div img {
-  width: 20px;
+  width: 15px;
 
 }
 
@@ -250,7 +252,7 @@ header .megaMenuContent li {
 header .megaMenuContent a {
   color: var(--blue-text);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 0.8vw;
   transition: 0.2s all;
 }
 
@@ -268,7 +270,7 @@ header .megaMenuWrapper:hover .link::after {
 
 header .megaMenuContent {
   display: flex;
-  gap: 30px;
+  gap: 1vw;
   flex-wrap: wrap;
 }
 
@@ -303,7 +305,7 @@ header .megaMenuRight {
 }
 
 header .megaMenuBox {
-  padding: 16px;
+  padding: 0.8vw;
   background: #f8f9fa;
   display: flex;
   flex-direction: column;
@@ -322,14 +324,14 @@ header .megaMenuBox:hover {
 }
 
 header .megaMenuBox img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
   border-radius: 6px;
 }
 
 header .megaMenuBox h4 {
-  font-size: 18px;
+  font-size: 0.8vw;
   font-weight: 600;
   color: var(--blue-color);
   margin: 0;
@@ -393,13 +395,13 @@ header .toggleButton img {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    padding: 20px 10px;
-    max-width: 80vw;
+    padding: 0 10px;
+    max-width: 70vw;
 
   }
 
   header .header_left_content .link {
-    font-size: 1rem;
+    font-size: 0.9vw;
   }
 
   /* Styles for MacBook Pro 16" and larger laptops */
@@ -414,8 +416,8 @@ header .toggleButton img {
   }
 
   header .header_right_content button {
-    font-size: 0.9vw;
-    padding: 5px 10px
+    font-size: 0.7vw;
+    padding: 0.2vw 0.6vw;
   }
 }
 

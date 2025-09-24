@@ -13,7 +13,7 @@
 }
 
 .homeCopy .courseSection .courseHeadings .courseTitle {
-  font-size: 2.1875rem;
+  font-size: 2vw;
   font-weight: 700;
   margin: 40px 0 30px 0;
   line-height: 1.1;
@@ -31,7 +31,7 @@
 }
 
 .homeCopy .courseSection .courseHeadings p {
-  font-size: 1.3vw;
+  font-size: 1vw;
   max-width: 60%;
   margin: 0 auto;
   color: var(grey-text);
@@ -65,7 +65,7 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   background: rgba(255, 255, 255, 0.7);
   flex-shrink: 0;
-  height: 30vw;
+  height: 25vw;
   transition: flex-basis 0.8s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.8s,
     box-shadow 0.8s, background 0.8s;
 }
@@ -79,7 +79,7 @@
 
 .homeCopy .courseSection .mainCard,
 .homeCopy .activeCard {
-  flex-basis: 26vw;
+  flex-basis: 23vw;
   z-index: 2;
   background: #fff;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -135,7 +135,7 @@
 
 .homeCopy .courseSection .cardNumber {
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   left: 1.5rem;
   right: 1.5rem;
   text-align: center;
@@ -206,7 +206,7 @@
 }
 
 .homeCopy .courseSection .mainCardLabel {
-  font-size: 2.3vw;
+  font-size: 2vw;
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 1;
@@ -241,7 +241,7 @@
 }
 
 .homeCopy .courseSection .mainCardBtn img {
-  width: 40px;
+  /* width: 40px; */
 }
 
 .homeCopy .courseSection .arrow {

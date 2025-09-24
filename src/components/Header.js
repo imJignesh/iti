@@ -48,7 +48,7 @@ const Header = ({ setHeaderHeight }) => {
                                 className={`${styles.link} ${isLinkActive('/ibdp') || isLinkActive('/myp') || isLinkActive('/a-levels') || isLinkActive('/igcse') ? 'active' : ''}`}
                                 onClick={e => e.preventDefault()}
                             >
-                                HIGH SCHOOL COURSES
+                                high school courses
                             </a>
                             <div className={styles.megaMenu}>
                                 <div className={styles.megaMenuContent}>
@@ -87,7 +87,8 @@ const Header = ({ setHeaderHeight }) => {
                                 className={`${styles.link} ${isLinkActive('/act') || isLinkActive('/ap') ? 'active' : ''}`}
                                 onClick={e => e.preventDefault()}
                             >
-                                STANDARDISED TESTS
+
+                                standardised tests
                             </a>
                             <div className={styles.megaMenu}>
                                 <div className={styles.megaMenuContent}>
@@ -105,7 +106,8 @@ const Header = ({ setHeaderHeight }) => {
                             </div>
                         </div>
                         <a href="/get-a-free-demo" className={`${styles.link} ${isLinkActive('/get-a-free-demo') ? 'active' : ''}`}>
-                            GET A FREE DEMO
+
+                            get a free demo
                         </a>
                         <div className={styles.megaMenuWrapper}>
                             <a
@@ -113,7 +115,7 @@ const Header = ({ setHeaderHeight }) => {
                                 className={`${styles.link} ${isLinkActive('/about') || isLinkActive('/blog') || isLinkActive('/our-team') || isLinkActive('/contact-us') || isLinkActive('/career') ? 'active' : ''}`}
                                 onClick={e => e.preventDefault()}
                             >
-                                ABOUT
+                                about
                             </a>
                             <div className={styles.megaMenu}>
                                 <div className={styles.megaMenuContent}>
