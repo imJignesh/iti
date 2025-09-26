@@ -20,7 +20,7 @@ const Hero = () => {
                                 className="fade-in-section heroMainHeading"
                                 style={{ animationDelay: "0.4s" }}
                             >
-                                <h3 className="SubHeading">BEST TUTORS IN UAE 1</h3>
+                                <h3 className="SubHeading">BEST TUTORS IN UAE</h3>
                             </div>
                             <div
                                 data-scroll
