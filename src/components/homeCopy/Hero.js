@@ -2,8 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 // No need for useRef or useEffect for scroll here.
-// The data-scroll-container is now handled by the provider.
-
+// The data-scroll-container is now handled by the provider
 const Hero = () => {
     return (
         // The data-scroll-section is still needed here
