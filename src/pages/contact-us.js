@@ -1,36 +1,18 @@
-import { useEffect, useRef, useState } from "react";
-
 import ContactBanner from "@/components/contact/Banner";
 
 
-const Contact = () => {
-    const scrollRef = useRef(null);
-    const scrollInstanceRef = useRef(null);
-
-    useEffect(() => {
-        let scroll;
-        const initScroll = async () => {
-            const LocomotiveScroll = (await import("locomotive-scroll")).default;
-            if (!scrollRef.current) return;
-            scroll = new LocomotiveScroll({
-                el: scrollRef.current,
-                smooth: true,
-                lerp: 0.1,
-            });
-            scrollInstanceRef.current = scroll;
-        };
-        if (typeof window !== "undefined") {
-            initScroll();
-        }
-        return () => {
-            scrollInstanceRef.current?.destroy();
-            scrollInstanceRef.current = null;
-        };
-    }, []);
+// 1. Accept the headerHeight prop
+const Contact = ({ headerHeight }) => {
+    // 2. REMOVED: All local Locomotive Scroll state/initialization:
+    // const scrollRef = useRef(null);
+    // const scrollInstanceRef = useRef(null);
+    // REMOVED: The useEffect hook that initialized Locomotive Scroll.
 
     return (
         <>
-            <div ref={scrollRef} data-scroll-container>
+            {/* 3. Apply the headerHeight as paddingTop to fix the sticky header issue.
+                Removed ref={scrollRef} and data-scroll-container as the global provider manages scrolling. */}
+            <div style={{ paddingTop: `${headerHeight}px` }}>
                 <section data-scroll-section>
                     <ContactBanner />
                 </section>

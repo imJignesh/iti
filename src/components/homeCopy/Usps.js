@@ -73,21 +73,26 @@ for (let i = 0; i < uspData.length; i += 2) {
 export default function Usps({ }) {
   return (
     <>
-      <section className="usp-section sp-container" data-scroll-section>
+      {/* CRITICAL FIX: Removed the outer <section data-scroll-section> wrapper.
+        The host page (e.g., HomeCopy.js, subject-tutoring.js) must now provide the <section data-scroll-section>.
+      */}
+      <div
+        className="usp-section sp-container" // Main container for styling
+      >
         <div
-          // data-scroll
-          // data-scroll-class="is-inview"
-          // data-scroll-repeat="true"
-          className="fade-in-sections uspSection"
+          className="fade-in-sections uspSection" // This is the data-scroll-target container
           style={{ animationDelay: "0.2s" }}
         >
           <div className="row justify-content-between gx-5">
             <div className="col-lg-4">
-              <div className="uspLeft">
+              <div
+                className="uspLeft"
+                // FIX: These attributes enable Locomotive Scroll's custom sticky behavior
+                data-scroll
+                data-scroll-sticky
+                data-scroll-target=".uspSection"
+              >
                 <span
-                  // data-scroll
-                  // data-scroll-class="is-inview"
-                  // data-scroll-repeat="true"
                   className="fade-in-sections SubHeading"
                   style={{ animationDelay: "0.1s" }}
                 >
@@ -95,9 +100,6 @@ export default function Usps({ }) {
                 </span>
 
                 <h2
-                  // data-scroll
-                  // data-scroll-class="is-inview"
-                  // data-scroll-repeat="true"
                   className="fade-in-sections uspTitle"
                   style={{ animationDelay: "0.2s" }}
                 >
@@ -105,9 +107,6 @@ export default function Usps({ }) {
                 </h2>
 
                 <div
-                  // data-scroll
-                  // data-scroll-class="is-inview"
-                  // data-scroll-repeat="true"
                   className="fade-in-sections uspSubtitle"
                   style={{ animationDelay: "0.3s" }}
                 >
@@ -115,9 +114,6 @@ export default function Usps({ }) {
                 </div>
 
                 <p
-                  // data-scroll
-                  // data-scroll-class="is-inview"
-                  // data-scroll-repeat="true"
                   className="fade-in-section uspDesc"
                   style={{ animationDelay: "0.4s" }}
                 >
@@ -166,7 +162,7 @@ export default function Usps({ }) {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

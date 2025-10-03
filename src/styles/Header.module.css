@@ -26,8 +26,8 @@
   justify-content: space-between;
   align-items: center;
   gap: 2vw;
-  padding: 0.5vw 0;
-  max-width: 70vw;
+  padding: 0.5vw 20px;
+  max-width: 90vw;
   margin: 0 auto;
 }
 
@@ -159,7 +159,7 @@ header .megaMenu {
   position: absolute;
   left: 0;
   top: calc(100% + 25px);
-  width: 23vw;
+  width: 25vw;
   background-color: var(--white-color);
   background: linear-gradient(white, white) padding-box,
     linear-gradient(to top, var(--green-text), transparent) border-box;
@@ -252,7 +252,7 @@ header .megaMenuContent li {
 header .megaMenuContent a {
   color: var(--blue-text);
   text-decoration: none;
-  font-size: 0.8vw;
+  font-size: 1vw;
   transition: 0.2s all;
 }
 
@@ -331,7 +331,7 @@ header .megaMenuBox img {
 }
 
 header .megaMenuBox h4 {
-  font-size: 0.8vw;
+  font-size: 1vw;
   font-weight: 600;
   color: var(--blue-color);
   margin: 0;
@@ -396,7 +396,7 @@ header .toggleButton img {
     align-items: center;
     gap: 15px;
     padding: 0 10px;
-    max-width: 70vw;
+    max-width: 90vw;
 
   }
 
@@ -449,7 +449,7 @@ header .toggleButton img {
 
   /* Styles for MacBook Pro 14" and similar screens */
   header .header_left_content .nav {
-    gap: 10px;
+    gap: 20px;
     /* Reduced gap between links */
   }
 

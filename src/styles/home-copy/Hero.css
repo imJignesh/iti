@@ -38,7 +38,7 @@
 }
 
 .homeCopy .hero .heroLeft .heroTitle-desktop {
-  font-size: 2vw;
+  font-size: 2rem;
   font-weight: 700;
   margin: 40px 0 30px 0;
   line-height: 1.1;
@@ -103,7 +103,7 @@
   /* width: 100%;
   height: 100%;
   max-height: 600px; */
-  width: 25vw;
+  width: 30vw;
   height: 28vw;
   overflow: hidden;
 }
@@ -111,7 +111,7 @@
 .homeCopy .hero .heroVideo {
   /* width: 100%;
   height: 600px; */
-  width: 25vw;
+  width: 30vw;
   height: 28vw;
   max-height: 700px;
   object-fit: cover;
@@ -165,14 +165,14 @@
   justify-content: flex-end; */
   position: absolute;
   top: 0vw;
-  bottom: 1vw;
-  right: 0.8vw;
+  bottom: 0vw;
+  right: 2vw;
   z-index: 9;
   display: flex;
   gap: 1vw;
   justify-content: flex-end;
   flex-direction: column;
-  width: 16vw;
+  width: 17.5vw;
 }
 
 .homeCopy .hero .heroRight .buttonGroup img {

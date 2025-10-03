@@ -48,7 +48,8 @@ const trainersData = [
     },
 ];
 
-const OurTeam = () => {
+// 1. ACCEPT headerHeight as a prop
+const OurTeam = ({ headerHeight }) => {
     const scrollRef = useRef(null);
     const scrollInstanceRef = useRef(null);
     const [expandedTrainers, setExpandedTrainers] = useState({});
@@ -92,6 +93,19 @@ const OurTeam = () => {
         };
     }, []);
 
+    // FIX: Update Locomotive Scroll when content height changes (Read More/Less)
+    useEffect(() => {
+        if (scrollInstanceRef.current) {
+            // Use a short delay to ensure the DOM has completed the height change
+            const timeoutId = setTimeout(() => {
+                scrollInstanceRef.current.update();
+            }, 100);
+
+            return () => clearTimeout(timeoutId);
+        }
+    }, [expandedTrainers]);
+
+
     const toggleReadMore = (index) => {
         setExpandedTrainers(prevState => ({
             ...prevState,
@@ -110,7 +124,8 @@ const OurTeam = () => {
 
     return (
         <>
-            <div ref={scrollRef} data-scroll-container>
+            {/* 2. APPLY paddingTop style using the headerHeight prop */}
+            <div ref={scrollRef} data-scroll-container style={{ paddingTop: `${headerHeight}px` }}>
                 <section data-scroll-section>
                     <TeamBanner />
                 </section>
@@ -351,7 +366,7 @@ const OurTeam = () => {
                         </div>
 
                     </div>
-                    <div className="container call-to-action">
+                    <div className="container call-to-action teams">
                         <div className="cta-container">
                             <div className="cta-content">
                                 <h2>LOREM IPSUM DOLOR SIT AMET,<br /> CONSECTETUR ADIPISCING</h2>

@@ -11,10 +11,10 @@
 }
 
 .searchBox .searchbar {
-    height: 70px;
+    height: 3rem;
     color: #161664;
     font-weight: 700;
-    padding-left: 30px;
+    padding-left: 2rem;
     border: 1px solid #233467;
 }
 
@@ -68,20 +68,16 @@
     border-radius: 10px !important;
     background-color: white;
     border: 2px solid transparent;
-    /* Gradient border effect */
     background-image: linear-gradient(white, white), linear-gradient(to right, #161664, #3F88BA);
     background-origin: border-box;
     background-clip: padding-box, border-box;
     transition: all 0.3s ease;
     display: inline-flex;
-    /* Ensures content centers vertically */
     align-items: center;
     justify-content: center;
-    /* Explicit margins for spacing between buttons */
-    font-size: 25px !important;
+    font-size: 1rem !important;
     color: #233467 !important;
-    padding: 10px 30px !important;
-    line-height: 35px !important;
+    padding: 0.5rem 1.2rem !important;
     font-weight: 500 !important;
     margin: 0;
 
@@ -180,12 +176,13 @@
 .card {
     border: 2px solid #dbe5ff;
     border-radius: 30px !important;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
-    padding: 25px 25px 16px;
+    padding: 0;
     background: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
     margin: 0 !important;
+
 }
 
 .col svg {
@@ -197,44 +194,45 @@
 
 .card .card-img-top {
     width: 100%;
-    border-radius: 30px;
-    height: 350px;
+    border-radius: 1rem;
+
 }
 
 .card .card-body-text {
     position: relative;
     flex: 1 1 auto;
-    padding: 1rem 0;
+    padding: 1vw 0 0 0;
     color: var(--bs-card-color);
 }
 
 .card .card-subtitle {
-    margin-top: 12px;
-    font-size: 18px;
+    margin-top: 0;
+    font-size: 0.8rem;
     color: #233467d9;
 }
 
 .card .card-title {
-    font-size: 25px;
+    font-size: 1.3vw;
+    line-height: 1.1;
     font-weight: 700;
-    margin: 8px 0;
+    margin: 0 0 0.8vw 0;
     color: #233467;
-    width: 80%;
+    width: 100%;
 }
 
 .card .card-text {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1vw;
+    line-height: 1.2;
     color: #233467d9;
-    width: 80%;
+    width: 16vw;
 }
 
 .card a.btn-primary {
     position: absolute;
-    bottom: -37px;
-    right: -25px;
-    width: 90px;
-    height: 90px;
+    bottom: -0.5vw;
+    right: 0;
+    width: 3.5vw;
+    height: 3.5vw;
     background: linear-gradient(to left, #E7F6FF, #A3CAF5);
     border-radius: 50%;
     border: 0;
@@ -242,6 +240,7 @@
     align-items: center;
     justify-content: center;
     z-index: 20;
+    margin: 0 !important;
 }
 
 .card a.btn-primary svg {

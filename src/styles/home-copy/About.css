@@ -153,7 +153,7 @@
 
 
 .homeCopy .aboutSection .aboutTitle {
-  font-size: 2vw;
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--blue-color);
   margin: 0 0 12px 0;
@@ -204,7 +204,7 @@
 }
 
 .homeCopy .aboutSection .aboutStatBig {
-  font-size: 2vw;
+  font-size: 1.8rem;
   font-weight: 800;
   background: linear-gradient(to right,
       var(--lightgreen-color),

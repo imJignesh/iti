@@ -10,7 +10,7 @@ import "@/styles/home/Test.css";
 import "@/styles/home/MovingBanner.css";
 import "@/styles/home/Subjects.css";
 import "@/styles/home/Alumni.css";
-import "@/styles/home/Usps.css";
+// import "@/styles/home/Usps.css";
 import "@/styles/home/Trainers.css";
 import "@/styles/home/Testimonial.css";
 import "@/styles/home/Blog.css";
@@ -56,19 +56,22 @@ import "@/styles/ap/GallerySlider.css";
 import "@/styles/ap/Whystud.css";
 
 // IBDP page Css
-import "@/styles/ib/Acheivements.css";
-import "@/styles/ib/Curriculum.css";
-import "@/styles/ib/Usps.css";
-import "@/styles/ib/Faq.css";
-import "@/styles/ib/Article.css";
-import "@/styles/ib/GallerySlider.css";
-// IBDP page Css
 import "@/styles/ibdp/Ibdp.css";
-import "@/styles/ibdp/Achievement.css";
-import "@/styles/ibdp/IbdpCourses.css";
+import "@/styles/bloginnerpage.css";
+// import "@/styles/ib/Acheivements.css";
+// import "@/styles/ib/Curriculum.css";
+// import "@/styles/ib/Usps.css";
+// import "@/styles/ib/Faq.css";
+// import "@/styles/ib/Article.css";
+// import "@/styles/ib/GallerySlider.css";
+// IBDP page Css
+// import "@/styles/ibdp/Ibdp.css";
+// import "@/styles/ibdp/Achievement.css";
+// import "@/styles/ibdp/IbdpCourses.css";
 
 // freeme demo page css
 import "@/styles/freedemo/freedemo.css";
+import "@/styles/freedemo/Acheivements.css";
 import "@/styles/freedemo/Subjects.css";
 // team page css
 import "@/styles/team/team.css";

@@ -10,9 +10,9 @@
   margin-bottom: 32px;
 }
 
-.homeCopy .trainersSection .trainersSubheading {
+/* .homeCopy .trainersSection .trainersSubheading {
   font-size: 1.8vw;
-}
+} */
 
 .homeCopy .trainersSection .trainersIcon {
   width: 24px;
@@ -21,7 +21,7 @@
 }
 
 .homeCopy .trainersSection .trainersTitle {
-  font-size: 2vw;
+  font-size: 1.8rem;
   font-weight: 700;
   max-width: 60%;
   margin: 40px auto;

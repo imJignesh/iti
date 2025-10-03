@@ -100,7 +100,7 @@
 
 .meet-team-Headings .meetTitle,
 .meet-team-Headings .cofounderTitle {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.1;
     text-transform: uppercase;
@@ -154,8 +154,8 @@
 }
 
 .team-card-content p {
-    font-size: 1rem !important;
-    line-height: 1.2;
+    font-size: 1.2rem !important;
+    line-height: 1.4;
     color: var(--dark-color);
     text-align: left;
     padding-top: 30px !important;
@@ -281,12 +281,11 @@
 /*  Admin Staff Section */
 .admin-staff-cards {
     display: flex;
-
     flex-wrap: nowrap;
-    gap: 80px;
+    gap: 10rem;
     flex-direction: row;
     margin-top: 80px;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .admin-card {
@@ -321,7 +320,7 @@
 .trainer-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 3vw;
     padding: 20px;
 }
 
@@ -603,19 +602,19 @@ span.grtx {
 }
 
 /* Left Content */
-.cta-content {
+.teams .cta-content {
     max-width: 40vw;
     padding: 4vw 0 0 4vw;
 }
 
-.cta-content h2 {
+.teams .cta-content h2 {
     font-size: 2vw;
     font-weight: 700;
     margin-bottom: 1vw;
     line-height: 1.4;
 }
 
-.cta-content p {
+.teams .cta-content p {
     font-size: 1.1vw;
     margin-bottom: 2vw;
     color: #d9e3f2;
@@ -676,11 +675,11 @@ span.grtx {
     }
 
 
-    .cta-content {
+    .teams .cta-content {
         padding: 0;
     }
 
-    .cta-content h2 {
+    .teams .cta-content h2 {
         font-size: 5vw !important;
         font-weight: 700 !important;
         margin-bottom: 1vw !important;
@@ -688,7 +687,7 @@ span.grtx {
         text-align: center;
     }
 
-    .cta-content {
+    .teams .cta-content {
         max-width: 95% !important;
         padding-top: 45vw;
     }
@@ -697,7 +696,7 @@ span.grtx {
         justify-content: center;
     }
 
-    .cta-content p {
+    .teams .cta-content p {
         font-size: 3vw !important;
         text-align: center;
         font-weight: normal !important;

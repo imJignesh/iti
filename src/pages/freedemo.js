@@ -5,12 +5,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-
+import InfoCard from '@/components/freedemo/InfoCard';
 import Subjects from "@/components/freedemo/Subjects";
-import MovingBanner from "@/components/ib/MovingBanner";
-import Testimonial from "@/components/ib/Testimonial";
-
-
+import MovingBanner from "@/components/freedemo/MovingBanner";
+import Testimonial from "@/components/freedemo/Testimonial";
+import StudentAchievements from '@/components/freedemo/StudentAchivement';
 
 const achievements = [
     {
@@ -56,18 +55,14 @@ const BookIcon = () => (
 const AchievementsCarousel = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    if (!mounted) return null;
+    // REMOVED: Unnecessary `mounted` state and conditional rendering.
+    // Proper ref attachment and onBeforeInit is a more reliable pattern.
 
     return (
         <section className="achievements-container">
             <div className="achievements-swiperWrapper">
-                <button className="swiper-button-prev customNavBtn">
+                {/* OPTIMIZATION: Added ref={prevRef} to correctly link the external button to Swiper */}
+                <button ref={prevRef} className="swiper-button-prev customNavBtn">
                     <img
                         src="/images/right-arrow-blue.png"
                         alt="Prev"
@@ -76,7 +71,8 @@ const AchievementsCarousel = () => {
                         height={32}
                     />
                 </button>
-                <button className="swiper-button-next customNavBtn">
+                {/* OPTIMIZATION: Added ref={nextRef} to correctly link the external button to Swiper */}
+                <button ref={nextRef} className="swiper-button-next customNavBtn">
                     <img
                         src="/images/right-arrow-blue.png"
                         alt="Next"
@@ -90,13 +86,15 @@ const AchievementsCarousel = () => {
                     spaceBetween={20}
                     slidesPerView={4}
                     onBeforeInit={(swiper) => {
-                        swiper.params.navigation.prevEl = prevRef.current;
-                        swiper.params.navigation.nextEl = nextRef.current;
+                        // This hook now correctly accesses the buttons via the refs
+                        if (swiper.params.navigation) {
+                            swiper.params.navigation.prevEl = prevRef.current;
+                            swiper.params.navigation.nextEl = nextRef.current;
+                        }
                     }}
-                    navigation={{
-                        prevEl: prevRef.current,
-                        nextEl: nextRef.current,
-                    }}
+                    // OPTIMIZATION: Replaced flawed `navigation` prop with boolean.
+                    // The onBeforeInit hook is now the sole source of truth for the elements.
+                    navigation={true}
                     breakpoints={{
                         0: { slidesPerView: 1, spaceBetween: 20 },
                         768: { slidesPerView: 2, spaceBetween: 25 },
@@ -145,13 +143,15 @@ const AchievementsCarousel = () => {
     );
 };
 
-const FreeDemo = () => {
+// 1. Accept the headerHeight prop
+const FreeDemo = ({ headerHeight }) => {
     const scrollRef = useRef(null);
     const scrollInstanceRef = useRef(null);
 
     useEffect(() => {
         let scroll;
         const initScroll = async () => {
+            // Locomotive Scroll initialization is kept with dynamic import and cleanup, which is good practice
             const LocomotiveScroll = (await import("locomotive-scroll")).default;
             if (!scrollRef.current) return;
             scroll = new LocomotiveScroll({
@@ -172,157 +172,16 @@ const FreeDemo = () => {
 
     return (
         <>
-            <div ref={scrollRef} data-scroll-container>
-                <section className="actBanner" data-scroll-section>
-                    <div className="">
-                        <div className="row align-items-center p-10">
-                            <div className="col-lg-7">
-                                <div
-                                    data-scroll
-                                    data-scroll-class="is-inview"
-                                    data-scroll-repeat="true"
-                                    className="fade-in-section leftContent"
-                                    style={{ animationDelay: "0.1s" }}
-                                >
-                                    <div className="contentInner">
-                                        <h1 className="mainHeading">
-                                            IGNITE YOUR PATH TO<br />ACADEMIC EXCELLENCE
-                                        </h1>
-                                        <p className="subHeading">NOW ALSO OPEN IN JLT, DUBAI</p>
+            {/* 2. Apply it as paddingTop to the main scroll container */}
+            <div
+                ref={scrollRef}
+                data-scroll-container
+                style={{ paddingTop: `${headerHeight}px` }}
+            >
 
-                                        <div className="featureCards">
-                                            <div className="featureCardInner">
-                                                <Image
-                                                    src="/images/banner-icon1.png"
-                                                    width={40}
-                                                    height={40}
-                                                    quality={100}
-                                                    className="cardImage"
-                                                    alt="Grade 8 to 12 Support"
-                                                />
-                                                <p className="featureText">Grade 8 to 12<br></br>Support</p>
-                                            </div>
-                                            <div className="featureCardInner">
-                                                <Image
-                                                    src="/images/banner-icon2.png"
-                                                    width={40}
-                                                    height={40}
-                                                    quality={100}
-                                                    className="cardImage"
-                                                    alt="Online & In-Person"
-                                                />
-                                                <p className="featureText">Online <br></br>& In-Person</p>
-                                            </div>
-                                            <div className="featureCardInner featureCardInnerLast">
-                                                <Image
-                                                    src="/images/location.png"
-                                                    width={40}
-                                                    height={40}
-                                                    quality={100}
-                                                    className="cardImage"
-                                                    alt="Dubai (DIFC, JLT)"
-                                                />
-                                                <p className="featureText">Dubai<br></br> (DIFC, JLT)</p>
-                                            </div>
-                                        </div>
-
-                                        <p className="descriptionText">
-                                            Experience curriculum-aligned tutoring for IBDP, MYP, IGCSE, A-Levels, & AP delivered by expert educators who know the exams inside out, with a focus on clarity, measurable progress, & real academic results.
-                                        </p>
-                                    </div>
-
-                                    <div className="ctaButtons">
-                                        <button className="ctaButton">
-                                            IGCSE TUTORS
-                                            <div className="arrowWrapper">
-                                                <Image
-                                                    src="/images/right-arrow.png"
-                                                    width={15}
-                                                    height={15}
-                                                    quality={100}
-                                                    alt="arrow"
-                                                />
-                                            </div>
-                                        </button>
-                                        <button className="ctaButton">
-                                            A-LEVELS TUTORS
-                                            <div className="arrowWrapper">
-                                                <Image
-                                                    src="/images/right-arrow.png"
-                                                    width={15}
-                                                    height={15}
-                                                    quality={100}
-                                                    alt="arrow"
-                                                />
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-5">
-                                <div
-                                    data-scroll
-                                    data-scroll-class="is-inview"
-                                    data-scroll-repeat="true"
-                                    className="fade-in-section formContainer"
-                                    style={{ animationDelay: "0.3s" }}
-                                >
-                                    <h3 className="formHeading">
-                                        GET A FREE DEMO CLASS + FREE STUDY RESOURCES
-                                    </h3>
-
-                                    <form>
-                                        <input type="text" className="formInput" placeholder="NAME" />
-
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <input
-                                                    type="email"
-                                                    className="formInput"
-                                                    placeholder="EMAIL"
-                                                />
-                                            </div>
-                                            <div className="col-md-6">
-                                                <input
-                                                    type="tel"
-                                                    className="formInput"
-                                                    placeholder="PH.NO"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <input
-                                            type="text"
-                                            className="formInput"
-                                            placeholder="SCHOOL"
-                                        />
-
-                                        <textarea
-                                            className="formTextarea"
-                                            placeholder="DROP A MESSAGE"
-                                        ></textarea>
-
-                                        <button type="submit" className="submitButton">
-                                            <span className="submitText">SUBMIT</span>
-                                            <div className="submitArrow">
-                                                <Image
-                                                    src="/images/right-arrow.png"
-                                                    width={18}
-                                                    height={18}
-                                                    quality={100}
-                                                    alt="submit arrow"
-                                                />
-                                            </div>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <section data-scroll-section>
+                    <InfoCard />
                 </section>
-
-
                 {/* curriculum section */}
 
                 < section className="achievementsSection" >
@@ -350,23 +209,24 @@ const FreeDemo = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="container freedemo-curriculm">
+                    {/* OPTIMIZATION: Corrected 'class' to 'className' in the following divs */}
+                    <div className="container freedemo-curriculm">
 
-                        <div class="column">
-                            <div class="title">CURRICULUMS</div>
-                            <div class="cards">
-                                <div class="fd-curr dark-green"><span class="check">✔</span> IB (MYP & IBDP)</div>
-                                <div class="fd-curr light-green"><span class="check">✔</span> IGCSE</div>
-                                <div class="fd-curr light-green full"><span class="check">✔</span> A Levels</div>
-                                <div class="fd-curr light-green full"><span class="check">✔</span> Private Candidate (Homeschooling)</div>
+                        <div className="column">
+                            <div className="title">CURRICULUMS</div>
+                            <div className="cards">
+                                <div className="fd-curr dark-green"><span className="check">✔</span> IB (MYP & IBDP)</div>
+                                <div className="fd-curr light-green"><span className="check">✔</span> IGCSE</div>
+                                <div className="fd-curr light-green full"><span className="check">✔</span> A Levels</div>
+                                <div className="fd-curr light-green full"><span className="check">✔</span> Private Candidate (Homeschooling)</div>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="title tests">STANDARDISED TESTS</div>
-                            <div class="cards">
-                                <div class="fd-curr dark-blue"><span class="check">✔</span> ACT</div>
-                                <div class="fd-curr light-blue"><span class="check">✔</span> AP</div>
-                                <div class="fd-curr light-blue full"><span class="check">✔</span> UCAT</div>
+                        <div className="column">
+                            <div className="title tests">STANDARDISED TESTS</div>
+                            <div className="cards">
+                                <div className="fd-curr dark-blue"><span className="check">✔</span> ACT</div>
+                                <div className="fd-curr light-blue"><span className="check">✔</span> AP</div>
+                                <div className="fd-curr light-blue full"><span className="check">✔</span> UCAT</div>
                             </div>
                         </div>
                     </div>
@@ -403,48 +263,11 @@ const FreeDemo = () => {
                 <Subjects />
 
 
-                {/* achievements header */}
-                <section className="achievementsSection">
-                    <div className="container">
-                        <div className="achievementsHeadings">
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.1s" }}
-                            >
-                                <h4 className="SubHeading">OUR ALUMNI IN TOP UNIVERSITIES</h4>
-                            </div>
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.25s" }}
-                            >
-                                <h1 className="achievementsTitle">
-                                    Preparing Students To Thrive On <span className="highlight">The World</span>{" "}
-                                    Stage
-                                </h1>
-                            </div>
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.4s" }}
-                            >
-                                <p>
-                                    Choosing us means partnering with experienced coaches who are dedicated to
-                                    unlocking your potential.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
                 {/* achievements carousel */}
-                <AchievementsCarousel />
+                <section data-scroll-section>
+                    <StudentAchievements />
+                </section>
 
                 {/* what we offer Start */}
                 <section className="achievementsSection">
@@ -475,37 +298,38 @@ const FreeDemo = () => {
 
                         </div>
                     </div>
-                    <div class="what-we-offer">
-                        <div class="step">
-                            <div class="icon-wrap" data-step="01">
+                    {/* OPTIMIZATION: Corrected 'class' to 'className' in the following div */}
+                    <div className="container what-we-offer">
+                        <div className="step">
+                            <div className="icon-wrap" data-step="01">
                                 <img src="images/school.png" alt="School Options" />
                             </div>
-                            <div class="step-title">SCHOOL OPTIONS</div>
-                            <div class="step-desc">Discover schools that align with your core strengths & goals.</div>
+                            <div className="step-title">SCHOOL OPTIONS</div>
+                            <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
                         </div>
 
-                        <div class="step">
-                            <div class="icon-wrap" data-step="02">
+                        <div className="step">
+                            <div className="icon-wrap" data-step="02">
                                 <img src="images/idealcur.png" alt="Ideal Curriculum" />
                             </div>
-                            <div class="step-title">IDEAL CURRICULUM</div>
-                            <div class="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
+                            <div className="step-title">IDEAL CURRICULUM</div>
+                            <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
                         </div>
 
-                        <div class="step">
-                            <div class="icon-wrap" data-step="03">
+                        <div className="step">
+                            <div className="icon-wrap" data-step="03">
                                 <img src="images/subject.png" alt="Subject Choices" />
                             </div>
-                            <div class="step-title">SUBJECT CHOICES</div>
-                            <div class="step-desc">Choose subjects that match your career & higher education goals.</div>
+                            <div className="step-title">SUBJECT CHOICES</div>
+                            <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
                         </div>
 
-                        <div class="step">
-                            <div class="icon-wrap" data-step="04">
+                        <div className="step">
+                            <div className="icon-wrap" data-step="04">
                                 <img src="images/universitypath.png" alt="University Pathways" />
                             </div>
-                            <div class="step-title">UNIVERSITY PATHWAYS</div>
-                            <div class="step-desc">Map a clear, strategic path to top international universities.</div>
+                            <div className="step-title">UNIVERSITY PATHWAYS</div>
+                            <div className="step-desc">Map a clear, strategic path to top international universities.</div>
                         </div>
                     </div>
 

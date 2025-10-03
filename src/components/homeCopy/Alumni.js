@@ -60,15 +60,16 @@ export default function Alumni({ setActiveIndex }) {
             >
               OUR ALUMNI IN TOP UNIVERSITIES
             </h3>
+
             <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section alumniTitle"
-              style={{ margin: "24px 0 0 0", animationDelay: "0.2s" }}
+              className="fade-in-section testTitle"
+              style={{ animationDelay: "0.2s" }}
             >
-              Charting Global Success, One Student At A Time
-              {/* <span className="alumniHighlight"> ADIPISCING</span> */}
+              Charting Global Success, One<br />Student At
+              <span className="highlight">  At A Time  </span>
             </h2>
           </div>
 

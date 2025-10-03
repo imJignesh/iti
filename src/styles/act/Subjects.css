@@ -61,7 +61,7 @@
 }
 
 .subjectSection .subjectLeft span {
-  font-size: 1.3vw;
+  /* font-size: 1.3vw; */
   -webkit-text-fill-color: white;
   margin-bottom: 30px;
 }

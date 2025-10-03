@@ -30,28 +30,17 @@ body {
   box-sizing: border-box;
 }
 
-.headerContainer {
-  width: 100%;
-  background: #fff;
-}
-
 /* Global Container - Use this in all pages */
 .container {
-  max-width: 70vw !important;
+  max-width: 85vw !important;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
 }
 
-@media (max-width: 1440px) {
-  .container {
-    max-width: 80vw !important;
-  }
-}
-
 @media (max-width: 1124px) {
   .container {
-    max-width: 80vw !important;
+    max-width: 90vw !important;
   }
 }
 
@@ -68,11 +57,12 @@ body {
 }
 
 .SubHeading {
-  font-size: 1.2vw;
+  font-size: 28px;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.2;
   text-transform: uppercase;
-  background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
+  background: linear-gradient(285.71deg, #3f88ba -4.32%, #161664 106.53%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
@@ -80,83 +70,62 @@ body {
   display: inline-block;
 }
 
-.SubHeading:before {
-  content: "";
-  width: 18px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url(/images/heading-icon.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
+.SubHeading:before,
 .SubHeading:after {
   content: "";
   width: 18px;
   height: 100%;
+  /* full height on desktop */
   position: absolute;
   top: 0;
-  right: 0;
-  background: url(/images/heading-icon.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(/images/heading-icon.png) center no-repeat;
   background-size: contain;
-  background-repeat: no-repeat;
 }
 
-.nodecoration {
-  text-decoration: none !important;
+.SubHeading:before {
+  left: 0;
 }
 
-.vh-100vh {
-  height: 100vh;
-
+.SubHeading:after {
+  right: 0;
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
   .SubHeading {
     font-size: 24px;
   }
-
-  .SubHeading:before,
-  .SubHeading:after {
-    width: 12px;
-  }
 }
 
+/* Mobile */
 @media (max-width: 575px) {
   .SubHeading {
-    font-size: 22px;
-    padding: 0 20px;
+    font-size: 15px;
+    padding: 0 24px;
   }
 
   .SubHeading:before,
   .SubHeading:after {
-    width: 10px;
-  }
-}
-
-@media (max-width: 500px) {
-  .SubHeading {
-    font-size: 4vw !important;
-  }
-}
-
-@media (max-width: 425px) {
-
-  .buttonBlue,
-  .buttonSkyBlue {
-    font-size: 10px;
+    width: 18px;
+    /* fixed size on mobile */
+    height: 24px;
+    /* instead of 100% */
+    top: 50%;
+    transform: translateY(-50%);
+    /* center vertically */
   }
 }
 
 /* Buttons  */
 
-/* .buttonBlue,
+.buttonBlue,
 .buttonSkyBlue {
   position: relative;
   overflow: hidden;
-  padding: 15px 30px;
+  padding: 10px 10px 10px 15px;
   border-radius: 40px;
   text-transform: uppercase;
   border: 0;
@@ -167,7 +136,6 @@ body {
   cursor: pointer;
   transition: 0.3s ease;
   z-index: 1;
-  text-decoration: none;
 }
 
 .buttonBlue {
@@ -186,18 +154,26 @@ body {
   position: absolute;
   top: 0;
   left: 0%;
-  width: 40vw;
-  height: 3.5vw;
+  width: 200%;
+  height: 100%;
   z-index: -1;
   transition: 0.4s ease-in-out;
 }
 
 .buttonBlue::before {
-  background: linear-gradient(to right, var(--blue-color), #3f88ba 55%, var(--blue-color) 85%, var(--blue-color));
+  background: linear-gradient(to right,
+      var(--blue-color),
+      #3f88ba 55%,
+      var(--blue-color) 85%,
+      var(--blue-color));
 }
 
 .buttonSkyBlue::before {
-  background: linear-gradient(to right, var(--border-color), #e7f6ff 55%, var(--border-color) 85%, var(--border-color));
+  background: linear-gradient(to right,
+      var(--border-color),
+      #e7f6ff 55%,
+      var(--border-color) 85%,
+      var(--border-color));
 }
 
 .buttonBlue:hover::before,
@@ -208,79 +184,6 @@ body {
 .buttonBlue:hover,
 .buttonSkyBlue:hover {
   scale: 1.05;
-} */
-
-.buttonBlue,
-.buttonSkyBlue {
-  position: relative;
-  overflow: hidden;
-  padding: 0.7vw 1.5vw;
-  border-radius: 2vw;
-  text-transform: uppercase;
-  border: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2vw;
-  cursor: pointer;
-  transition: 0.3s ease;
-  z-index: 1;
-  text-decoration: none;
-  font-size: 1vw;
-  font-weight: 500;
-}
-
-.buttonBlue {
-  color: var(--white-color);
-  background: linear-gradient(to right, var(--blue-color), #3f88ba);
-}
-
-.buttonSkyBlue {
-  color: var(--blue-color);
-  background: linear-gradient(to right, var(--border-color), #e7f6ff);
-}
-
-.buttonBlue::before,
-.buttonSkyBlue::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  /* ensures smooth sliding regardless of button width */
-  height: 100%;
-  z-index: -1;
-  transition: transform 0.6s ease;
-  transform: translateX(0);
-}
-
-.buttonBlue::before {
-  background: linear-gradient(to right,
-      var(--blue-color),
-      #3f88ba 55%,
-      var(--blue-color) 85%);
-}
-
-.buttonSkyBlue::before {
-  background: linear-gradient(to right,
-      var(--border-color),
-      #e7f6ff 55%,
-      var(--border-color) 85%);
-}
-
-.buttonBlue:hover::before,
-.buttonSkyBlue:hover::before {
-  transform: translateX(50%);
-}
-
-.buttonBlue:hover,
-.buttonSkyBlue:hover {
-  scale: 1.05;
-}
-
-.buttonBlue img,
-.buttonSkyBlue img {
-  width: 2vw;
 }
 
 .buttonBlue img,
@@ -288,7 +191,6 @@ body {
   width: 30px;
   height: auto;
 }
-
 
 /* Fade-In Animation */
 .fade-in-section {

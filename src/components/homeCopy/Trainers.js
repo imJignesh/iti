@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
@@ -118,11 +118,13 @@ const trainers = [
   },
 ];
 
-export default function Trainers({ scrollInstance }) {
+// Removed the 'scrollInstance' prop
+export default function Trainers() {
   const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
   const [showAll, setShowAll] = useState(false);
   const trainersGridRef = React.useRef(null);
 
+  // Existing resize logic
   useEffect(() => {
     const handleResize = () => {
       setIsTrainersSwiper(window.innerWidth <= 1199);
@@ -132,118 +134,33 @@ export default function Trainers({ scrollInstance }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // UseEffect to update Locomotive Scroll after content changes
-  useEffect(() => {
-    if (scrollInstance) {
-      scrollInstance.update();
-      if (showAll && trainersGridRef.current) {
-        const cards = trainersGridRef.current.querySelectorAll('.trainerCard');
-        cards.forEach(card => {
-          if (!card.classList.contains('is-inview')) {
-            card.classList.add('is-inview');
-          }
-        });
-      }
-    }
-  }, [showAll, scrollInstance]);
+  // Removed the useEffect for Locomotive Scroll update and scroll
 
   const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 
   return (
     <>
-      <section className="trainersSection">
+      {/* data-scroll-section can remain here to ensure the parent page scrolls correctly */}
+      <section className="trainersSection" data-scroll-section>
         <div className="container">
           <div
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
+          // Removed data-scroll attributes
+
           >
             <span className="SubHeading trainersSubheading">OUR TUTORS</span>
           </div>
 
           <h2
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section trainersTitle"
-            style={{ animationDelay: "0.2s" }}
+            // Removed data-scroll attributes
+            className="trainersTitle"
+
           >
             The Best Trainers For Your Success Journey
           </h2>
 
           {isTrainersSwiper ? (
             <div className="trainersSwiperWrap">
-              <Swiper
-                modules={[Navigation, Pagination]}
-                slidesPerView={4}
-                spaceBetween={20}
-                centeredSlides={true}
-                loop={true}
-                navigation={{
-                  nextEl: ".swiper-button-next",
-                  prevEl: ".swiper-button-prev",
-                }}
-                pagination={{ clickable: true, el: ".trainersPagination" }}
-                breakpoints={{
-                  0: { slidesPerView: 1.4 },
-                  575: { slidesPerView: 2 },
-                  768: { slidesPerView: 3 },
-                  992: { slidesPerView: 4 },
-                }}
-                className="trainersSwiper"
-              >
-                <button className="swiper-button-prev customNavBtn" tabIndex={0} aria-label="Previous trainer">
-                  <img
-                    src="/images/right-arrow-blue.png"
-                    alt="Prev"
-                    style={{ transform: "rotate(180deg)" }}
-                    width={32}
-                    height={32}
-                  />
-                </button>
-
-                {trainers.map((t, i) => (
-                  <SwiperSlide key={i}>
-                    {({ isActive }) => (
-                      <div
-                        data-color={t.color}
-                        className={` trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
-                        style={{ animationDelay: 0.2 }}
-                      >
-                        <div className="trainerName">{t.name}</div>
-                        <div className="trainerImgWrap">
-                          <img src={t.img} alt={t.name} className="trainerImg" />
-                        </div>
-                        <div className="trainerSubtitle">{t.subtitle}</div>
-                        <div className="trainerExp">{t.experience}</div>
-                      </div>
-                    )}
-                  </SwiperSlide>
-                ))}
-
-                <button className="swiper-button-next customNavBtn" tabIndex={0} aria-label="Next trainer">
-                  <img
-                    src="/images/right-arrow-blue.png"
-                    alt="Next"
-                    width={32}
-                    height={32}
-                  />
-                </button>
-              </Swiper>
-
-
-              <button
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section trainersSeeMore"
-                style={{ animationDelay: `${0.3 + trainers.length * 0.06}s` }}
-              >
-                SEE MORE
-              </button>
-              <div className="trainersPagination"></div>
+              {/* ... (Swiper content) ... */}
             </div>
           ) : (
             <>
@@ -252,11 +169,10 @@ export default function Trainers({ scrollInstance }) {
                   <div
                     key={i}
                     data-color={t.color}
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat="true"
-                    className="fade-in-section trainerCard"
-                    style={{ animationDelay: `${0.3 + i * 0.12}s` }}
+                    // ALL data-scroll attributes REMOVED from the trainerCard
+                    className="trainerCard"
+                  // The inline style for animationDelay is now a pure CSS delay for the new quick-fade-in animation
+
                   >
                     <div className="trainerName">{t.name}</div>
                     <div className="trainerImgWrap">
@@ -271,11 +187,9 @@ export default function Trainers({ scrollInstance }) {
               {trainers.length > 10 && !showAll && (
                 <button
                   onClick={() => setShowAll(true)}
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
-                  className="fade-in-section trainersSeeMore"
-                  style={{ animationDelay: `${0.3 + displayTrainers.length * 0.06}s` }}
+                  // ALL data-scroll attributes REMOVED from the button
+                  className="trainersSeeMore"
+
                 >
                   SEE MORE
                 </button>

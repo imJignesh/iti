@@ -34,14 +34,14 @@ const Header = ({ setHeaderHeight }) => {
             <header ref={headerRef} className={`${styles.header}`}>
                 <div className={`d-flex w-100 m-0 ${styles.header_left_content}`}>
                     <div className={`col-auto ${styles.logo}`}>
-                        <Image src="/images/logo.svg" width={200} height={80} quality={100} alt='Ignited Training Institute' />
+                        <a href='/'><Image src="/images/logo.svg" width={200} height={80} quality={100} alt='Ignited Training Institute' /></a>
                     </div>
                     {/* Nav links: hidden on mobile/tablet unless toggled, always visible on lg+ */}
                     <nav
                         className={`col ${styles.nav} ${navOpen ? 'd-flex flex-column position-absolute top-100 start-0 w-100 bg-white  p-4 px-5 z-3' : 'd-none'} d-lg-flex flex-lg-row position-lg-static w-lg-auto bg-lg-none shadow-lg-none p-lg-0 z-lg-auto`}
                         style={navOpen ? { left: 0 } : {}}
                     >
-                        <a className={`${styles.link} ${isLinkActive('/') ? styles.activeLink : ''}`}>Home</a>
+                        <a className={`${styles.link} ${isLinkActive('/') ? styles.activeLink : ''}`} href="/">Home</a>
                         <div className={styles.megaMenuWrapper}>
                             <a
                                 href="#"

@@ -13,12 +13,12 @@
 
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 16px;
+
   letter-spacing: 0.15em;
 }
 
 .homeCopy .testSection1 .testTitle {
-  font-size: 2vw;
+  font-size: 1.8rem;
   font-weight: 800;
   max-width: 60%;
   color: var(--blue-color);
@@ -112,7 +112,7 @@
   left: 10vw;
   bottom: 2vw;
   transform: translateX(-50%);
-  font-size: 2vw;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #fff;
   z-index: 2;
