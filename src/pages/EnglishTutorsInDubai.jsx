@@ -15,6 +15,7 @@ import EnglishTutorsLifeAtIgniteCarousel from '@/components/english-tutoring/Lif
 import EnglishTutorsFAQSection from '@/components/english-tutoring/FaqSection';
 import EnglishTutorsStudentAchievements from '@/components/english-tutoring/StudentAchivement';
 
+//comment
 // Renamed main component: SubjectTutoring -> EnglishTutorsInDubai
 const EnglishTutorsInDubai = ({ headerHeight }) => {
     const scrollRef = useRef(null);
