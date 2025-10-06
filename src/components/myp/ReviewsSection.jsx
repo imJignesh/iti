@@ -332,8 +332,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "We had a great experience with the instructor at Ignite. My child progressed amazingly under their guidance and achieved good grade in Chemistry. Thank you so much to Ahzeb and the Ignite team for supporting us in this!",
-    name: "Nidhi Choudhury",
+    text: "A great tutor for economics as the IB course is covered in great detail with units taught thoroughly. My economics grade has progressed superbly.",
+    name: "Omar Bilal",
     subtitle: "",
   },
   {
@@ -345,8 +345,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "I wanted to share my incredible experience with Ignite Training Institute! They have been absolutely amazing in coaching my son. The team there took a personal interest in his progress, helping him overcome challenges and building his confidence along the way. I highly recommend Ignite Training Institute to anyone looking for exceptional coaching. The teachers are outstanding and go the extra mile to provide individualized attention. Their dedication and support have made a remarkable difference in my son's educational journey. Keep up the great stuff, Ignite Training Institute! Your commitment to students' growth is truly commendable.",
-    name: "Genesis Tech",
+    text: "Amazing classes with highly qualified teachers. I have learnt a lot in only 2 classes.",
+    name: "Arjun Thawrani",
     subtitle: "",
   },
   {
@@ -358,8 +358,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "One of the best Business and Economics teachers for the IB. The syllabus is covered thoroughly, and difficult concepts are explained within seconds, making them easy to understand. I have been working with this tutor for the best part of my DP course so far, and my grades have gone right up. I am now on track for a great DP score all thanks to this support.",
-    name: "Kabir Kochhar",
+    text: "Ignite institute has been a great experience. Especially with the mentors level of experience being very knowledgeable across IB.",
+    name: "Mahad Waheed",
     subtitle: "",
   },
   {
@@ -371,8 +371,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "I’m an IB student and had a great experience with my Math tutoring at Ignite. The sessions explained and covered topics really well online. I used to think that face-to-face was more effective than online tutoring, but I was able to learn just as effectively online. I highly recommend Ignite Institute for Math tutoring.",
-    name: "Maya Alrawi",
+    text: "I am doing IB Physics. The instructor is truly an angel and a role model to me. Their in-depth knowledge of physics is incredible, and their passion for the subject shines through in everything they do in class. As a slow student, I really appreciate the effort they put into making sure that I understand the concepts we are studying. They have a remarkable talent for explaining complex ideas in a way that is easy to understand, and they always take the time to answer my questions and provide examples that clarify the material. I also value the way they challenge me to think critically and to develop my own understanding of the subject. Their question-and-answer skills are second to none, and I always feel supported and encouraged when I ask for help. I feel incredibly fortunate to have the opportunity to learn from them.I am doing IB English. The instructor’s passion for the subject shines through in every lesson, and their dedication to my learning is truly inspiring. I appreciate that they always challenge me to go beyond surface-level analysis of literature and encourage me to dive deeper into the text. Their feedback on my work is invaluable and has helped me improve my writing and critical thinking skills tremendously. I also love the variety of materials and resources provided in class, and the way different English language techniques are introduced. I am doing IB Economics. As a first-time economics student, I was initially intimidated by the subject, but the instructor has made it so much easier to understand. Their method of starting the first class by asking questions about the economy was such a brilliant way to engage me in the subject. I know I ended up asking a silly question, but it was handled so gracefully, and I appreciate their patience with me in class. I have to say, I look forward to every class because of how interesting they make the discussions. Their ability to make the subject matter relatable and engaging is commendable. The notes are also amazing!",
+    name: "Shakira Jahan",
     subtitle: "",
   },
   {
@@ -384,8 +384,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "Sumit from Ignite went out of his way to arrange a tutor for my daughter on very short notice. The tutor was kind and competent and managed to quickly solve my daughter's doubt. Thank you! Highly recommend!",
-    name: "Nicole Morgan",
+    text: "Ignite training institute is an adequate facility, the work ethic of which is worthy of its name. With hardworking qualified individuals, who are able to explain and teach complex topics in very simple and logical ways making it easy to understand. The managing and coordinating team is also very understanding and flexible according to the student's needs.",
+    name: "Insiya Hamid",
     subtitle: "",
   },
   {
@@ -397,8 +397,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "My teacher at Ignite is a fantastic economic teacher, making sure the syllabus was covered and has gone through all the 15 past exam papers I did.",
-    name: "Kovidh Verma",
+    text: "really good tutoring sessions conducted. I'm a student going there myself and I really enjoy my Economics sessions with my tutor who really gives good resources and explains/condenses concepts really well. Lots of past paper practice and she's very good at essay planning as well. Overall, I really enjoy the sessions I've been receiving here.",
+    name: "Sara Kerr",
     subtitle: "",
   },
 ];

@@ -332,8 +332,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "We had a great experience with the instructor at Ignite. My child progressed amazingly under their guidance and achieved good grade in Chemistry. Thank you so much to Ahzeb and the Ignite team for supporting us in this!",
-    name: "Nidhi Choudhury",
+    text: "I have been taking lessons at Ignite Training Institute for around three years. I have taken lessons for IGCSE science and math which has helped me achieve top grades. I have also taken lessons for IB math, biology, and Spanish. With the help of my trainers, I was able to achieve a good predicted and final exam grade which allowed me get offers from top universities in the UK such as UCL and University of Edinburgh.",
+    name: "Zeynep Inan",
     subtitle: "",
   },
   {
@@ -345,8 +345,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "I wanted to share my incredible experience with Ignite Training Institute! They have been absolutely amazing in coaching my son. The team there took a personal interest in his progress, helping him overcome challenges and building his confidence along the way. I highly recommend Ignite Training Institute to anyone looking for exceptional coaching. The teachers are outstanding and go the extra mile to provide individualized attention. Their dedication and support have made a remarkable difference in my son's educational journey. Keep up the great stuff, Ignite Training Institute! Your commitment to students' growth is truly commendable.",
-    name: "Genesis Tech",
+    text: "This is the best tuition center in Dubai. Went from getting 5-6s in the start of my Gcses to getting 8-9s in my actual gcse exams. This place helped me a lot and has very good tutors aswell.",
+    name: "Hassan Ali",
     subtitle: "",
   },
   {
@@ -358,8 +358,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "One of the best Business and Economics teachers for the IB. The syllabus is covered thoroughly, and difficult concepts are explained within seconds, making them easy to understand. I have been working with this tutor for the best part of my DP course so far, and my grades have gone right up. I am now on track for a great DP score all thanks to this support.",
-    name: "Kabir Kochhar",
+    text: "I was referred to Ignite by a family member who had previously used their services and was highly satisfied. From the start, the coordinator, Mr. Ahzeb, demonstrated exceptional professionalism in his interactions with both parents and students.My daughter was initially struggling with economics, but under the guidance of Miss Harsha, the subject became much more approachable and understandable. Her teaching style made a significant difference in my daughter’s confidence and performance.I would highly recommend this institute to anyone seeking additional academic support. Their dedication and quality of tutoring truly stand out, and I’m confident others will have a similarly positive experience.I would like to wish the team the very best of luck and I hope they will offer their services to many more countries within the Middle East in the future .",
+    name: "Sushma Menon",
     subtitle: "",
   },
   {
@@ -371,8 +371,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "I’m an IB student and had a great experience with my Math tutoring at Ignite. The sessions explained and covered topics really well online. I used to think that face-to-face was more effective than online tutoring, but I was able to learn just as effectively online. I highly recommend Ignite Institute for Math tutoring.",
-    name: "Maya Alrawi",
+    text: "Great tutoring service! Perfect for struggling GCSE students.",
+    name: "Ben Dunatov",
     subtitle: "",
   },
   {
@@ -384,8 +384,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "Sumit from Ignite went out of his way to arrange a tutor for my daughter on very short notice. The tutor was kind and competent and managed to quickly solve my daughter's doubt. Thank you! Highly recommend!",
-    name: "Nicole Morgan",
+    text: "The trainers were flexible and were able to help in difficult subjects like Physics. My son scored a 100/100 on one of his maths papers after working with the tutors. Great work",
+    name: "Rosie Seldon",
     subtitle: "",
   },
   {
@@ -397,8 +397,8 @@ const testimonialData = [
   },
   {
     type: "text",
-    text: "My teacher at Ignite is a fantastic economic teacher, making sure the syllabus was covered and has gone through all the 15 past exam papers I did.",
-    name: "Kovidh Verma",
+    text: "The business teacher deserves special recognition for outstanding instruction and genuine concern for my success. The sessions imparted comprehensive knowledge and equipped me with essential skills for my exams. Without such exceptional teaching, the overall value of the institute would have been compromised. While the management and other aspects of the institute are satisfactory, it is the teaching that truly made a significant impact on my learning experience.",
+    name: "Riyad Bouarissa",
     subtitle: "",
   },
 ];

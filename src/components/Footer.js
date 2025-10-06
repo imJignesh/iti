@@ -60,28 +60,95 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.footerLinksRow}>
-        {[0, 1, 2].map((colIdx) => (
-          <div
-            key={colIdx}
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
+        {/* Menu 1 */}
+        <div
+          key={0}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
 
-            className={`fade-in-section ${styles.footerTop}`}
-            style={{ animationDelay: `${0.4 + colIdx * 0.1}s` }}
-          >
-            <div className={styles.footerLinksCol}>
-              <div className={styles.footerLinksTitle}>LOREM</div>
+          className={`fade-in-section ${styles.footerTop}`}
+          style={{ animationDelay: `${0.4 + 0 * 0.1}s` }}
+        >
+          <div className={styles.footerLinksCol}>
+            <div className={styles.footerLinksTitle}>COURSES</div>
+            <ul>
+              <a href="/">IB Tutors</a>
               <ul>
-                <li>Lorem Ipsum Dolor</li>
-                <li>Lorem Ipsum Dolor Sit</li>
-                <li>Lorem Ipsum Dolor</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum Dolor Sit</li>
+                <li><a href="/ibdp">IBDP Tutors In Dubai</a></li>
+                <li><a href="/myp">MYP Tutors In Dubai</a></li>
               </ul>
-            </div>
+              <a href="/ib">British Curriculum Tutors</a>
+              <ul>
+                <li><a href="/a-level">A Levels Tutors In Dubai</a></li>
+                <li><a href="/igcse">IGCSE Tutors In Dubai</a></li>
+              </ul>
+              <li><a href="/home-schooling">Private Candidacy</a></li>
+              <li><a href="/tutors">Tutors In Dubai</a></li>
+              <li><a href="/tutors">Tutors In JLT Dubai</a></li>
+              <li><a href="/tutors">Private Tutors In Dubai</a></li>
+            </ul>
+            <br />
+            <div className={styles.footerLinksTitle}>TESTS</div>
+            <ul>
+              <li>ACT Prep</li>
+              <li>Advanced Placements</li>
+            </ul>
           </div>
-        ))}
+        </div>
+
+        {/* Menu 2 */}
+        <div
+          key={1}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+
+          className={`fade-in-section ${styles.footerTop}`}
+          style={{ animationDelay: `${0.4 + 1 * 0.1}s` }}
+        >
+          <div className={styles.footerLinksCol}>
+            <div className={styles.footerLinksTitle}>SUBJECTS</div>
+            <ul>
+              <li><a href="/EnglishTutorsInDubai">English Tutors In Dubai</a></li>
+              <li><a href="/FrenchTutorsInDubai">French Tutors In Dubai</a></li>
+              <li><a href="/SpanishTutorsInDubai">Spanish Tutors In Dubai</a></li>
+              <li><a href="/ComputerTutorsInDubai">Computer Science Tutors In Dubai</a></li>
+              <li><a href="/EconomicsTutorsInDubai">Economics Tutors In Dubai</a></li>
+              <li><a href="/BiologyTutorsInDubai">Biology Tutors In Dubai</a></li>
+              <li><a href="/ChemistryTutorsInDubai">Chemistry Tutors In Dubai</a></li>
+              <li><a href="/PhysicsTutorsInDubai">Physics Tutors In Dubai</a></li>
+              <li><a href="/MathsTutorsInDubai">Maths Tutors In Dubai</a></li>
+              <li><a href="/BusinessTutorsInDubai">Business Studies Tutors In Dubai</a></li>
+              <li><a href="/AccountingTutorsInDubai">Accounting Tutors In Dubai</a></li>
+              <li><a href="/PsychologyTutorsInDubai">Psychology Tutors In Dubai</a></li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Menu 3 */}
+        <div
+          key={2}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+
+          className={`fade-in-section ${styles.footerTop}`}
+          style={{ animationDelay: `${0.4 + 2 * 0.1}s` }}
+        >
+          <div className={styles.footerLinksCol}>
+            <div className={styles.footerLinksTitle}>ABOUT IGNITE</div>
+            <ul>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/ourteam">Our Team</a></li>
+              <li><a href="/maincourse">Our Courses</a></li>
+              <li><a href="/freedemo">Free Demo Class</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/contact-us">Contact Us</a></li>
+              <li><a href="/career">Career</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div className={styles.footerBottomRow}>
         <div
