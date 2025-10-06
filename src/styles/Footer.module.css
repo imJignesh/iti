@@ -159,7 +159,8 @@
   margin: 0;
 }
 
-.footerWrap .footerLinksCol li {
+.footerWrap .footerLinksCol li,
+.footerWrap .footerLinksCol li a {
   font-size: 1rem;
   color: var(--white-color);
   margin-bottom: 8px;

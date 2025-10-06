@@ -73,12 +73,12 @@ const Footer = () => {
           <div className={styles.footerLinksCol}>
             <div className={styles.footerLinksTitle}>COURSES</div>
             <ul>
-              <a href="/">IB Tutors</a>
+              <li><a href="/">IB Tutors</a></li>
               <ul>
                 <li><a href="/ibdp">IBDP Tutors In Dubai</a></li>
                 <li><a href="/myp">MYP Tutors In Dubai</a></li>
               </ul>
-              <a href="/ib">British Curriculum Tutors</a>
+              <li><a href="/ib">British Curriculum Tutors</a></li>
               <ul>
                 <li><a href="/a-level">A Levels Tutors In Dubai</a></li>
                 <li><a href="/igcse">IGCSE Tutors In Dubai</a></li>
@@ -91,8 +91,8 @@ const Footer = () => {
             <br />
             <div className={styles.footerLinksTitle}>TESTS</div>
             <ul>
-              <li>ACT Prep</li>
-              <li>Advanced Placements</li>
+              <li><a>ACT Prep</a></li>
+              <li><a>Advanced Placements</a></li>
             </ul>
           </div>
         </div>
