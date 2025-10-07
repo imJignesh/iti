@@ -12,6 +12,7 @@ import ReviewsSection from '@/components/igcse/ReviewsSection';
 import StudentAchievements from '@/components/igcse/StudentAchivement';
 import SubjectsCard from '@/components/igcse/SubjectCard';
 import UspsSection from '@/components/igcse/UspsSection';
+import UniImagesCard from '@/components/igcse/universityCrad';
 import { useEffect, useRef } from 'react';
 
 // 1. ACCEPT the headerHeight prop
@@ -59,6 +60,10 @@ const IGCSE = ({ headerHeight }) => {
     >
       <section data-scroll-section>
         <InfoCard />
+      </section>
+
+      <section data-scroll-section>
+        <UniImagesCard />
       </section>
 
       <section data-scroll-section>

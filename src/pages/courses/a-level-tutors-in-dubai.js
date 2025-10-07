@@ -12,6 +12,7 @@ import ReviewsSection from '@/components/a-level/ReviewsSection';
 import StudentAchievements from '@/components/a-level/StudentAchivement';
 import SubjectsCard from '@/components/a-level/SubjectCard';
 import UspsSection from '@/components/a-level/UspsSection';
+import UniImagesCard from '@/components/a-level/universityCrad';
 import { useEffect, useRef } from 'react';
 
 // 1. ACCEPT the headerHeight prop
@@ -59,6 +60,10 @@ const ALEVEL = ({ headerHeight }) => {
     >
       <section data-scroll-section>
         <InfoCard />
+      </section>
+
+      <section data-scroll-section>
+        <UniImagesCard />
       </section>
 
       <section data-scroll-section>

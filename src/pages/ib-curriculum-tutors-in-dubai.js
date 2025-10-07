@@ -64,9 +64,7 @@ const IBC = ({ headerHeight }) => {
       <section data-scroll-section>
         <InfoCard />
       </section>
-      <section data-scroll-section>
-        <UniImagesCard />
-      </section>
+
 
       <section data-scroll-section>
         <StudentAchievements />
