@@ -45,7 +45,7 @@ const Header = ({ setHeaderHeight }) => {
                         <div className={styles.megaMenuWrapper}>
                             <a
                                 href="#"
-                                className={`${styles.link} ${isLinkActive('/ibdp') || isLinkActive('/myp') || isLinkActive('/a-levels') || isLinkActive('/igcse') ? 'active' : ''}`}
+                                className={`${styles.link} ${isLinkActive('/ib-curriculum-tutors-in-dubai') || isLinkActive('/courses/ibdp-tutors-in-dubai') || isLinkActive('/courses/myp-tutors-in-dubai') || isLinkActive('/british-curriculum-tutors-in-dubai') || isLinkActive('/courses/a-level-tutors-in-dubai') || isLinkActive('/courses/igcse-tutors-in-dubai') || isLinkActive('/courses/homeschooling-tutors-in-dubai') ? styles.activeLink : ''}`}
                                 onClick={e => e.preventDefault()}
                             >
                                 high school courses
@@ -53,30 +53,31 @@ const Header = ({ setHeaderHeight }) => {
                             <div className={styles.megaMenu}>
                                 <div className={styles.megaMenuContent}>
                                     <div className={styles.megaMenuLeft}>
-                                        <h3><span>01</span> <a href='/ibdp'>International baccalaureate<div><img src="/images/btn-arrow.png" /></div></a></h3>
-                                        <a href='/ibdp' className={`${styles.megaMenuBox} ${isLinkActive('/ibdp') ? 'active' : ''}`}>
+                                        {/* Updated to /courses/ as per 'Our Courses' link and general category */}
+                                        <h3><span>01</span> <a href='/courses'>International baccalaureate<div><img src="/images/btn-arrow.png" /></div></a></h3>
+                                        <a href='/courses/ibdp-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/ibdp-tutors-in-dubai') ? styles.activeLink : ''}`}>
                                             <img src="/images/header-menu1.png" alt="IBDP" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>IBDP</h4>
                                         </a>
-                                        <a href='/myp' className={`${styles.megaMenuBox} ${isLinkActive('/myp') ? 'active' : ''}`}>
+                                        <a href='/courses/myp-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/myp-tutors-in-dubai') ? styles.activeLink : ''}`}>
                                             <img src="/images/header-menu2.png" alt="MYP" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>MYP</h4>
                                         </a>
 
                                     </div>
                                     <div className={styles.megaMenuLeft}>
-                                        <h3><span>02</span> <a href='/a-levels'>British curriculum<div><img src="/images/btn-arrow.png" /></div></a></h3>
-                                        <a href='/a-levels' className={`${styles.megaMenuBox} ${isLinkActive('/a-levels') ? 'active' : ''}`}>
+                                        <h3><span>02</span> <a href='/british-curriculum-tutors-in-dubai'>British curriculum<div><img src="/images/btn-arrow.png" /></div></a></h3>
+                                        <a href='/courses/a-level-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/a-level-tutors-in-dubai') ? styles.activeLink : ''}`}>
                                             <img src="/images/header-menu3.png" alt="A-LEVELS" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>A LEVELS</h4>
                                         </a>
-                                        <a href='/igcse' className={`${styles.megaMenuBox} ${isLinkActive('/igcse') ? 'active' : ''}`}>
+                                        <a href='/courses/igcse-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/igcse-tutors-in-dubai') ? styles.activeLink : ''}`}>
                                             <img src="/images/header-menu4.png" alt="I/GCSE" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>I/GCSE</h4>
                                         </a>
                                     </div>
                                     <div className={styles.megaMenuLeft}>
-                                        <h3><span>03</span><a href='/homeschooling'> Homeschooling<div><img src="/images/btn-arrow.png" /></div></a></h3>
+                                        <h3><span>03</span><a href='/courses/homeschooling-tutors-in-dubai'> Homeschooling<div><img src="/images/btn-arrow.png" /></div></a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +85,7 @@ const Header = ({ setHeaderHeight }) => {
                         <div className={styles.megaMenuWrapper}>
                             <a
                                 href="#"
-                                className={`${styles.link} ${isLinkActive('/act') || isLinkActive('/ap') ? 'active' : ''}`}
+                                className={`${styles.link} ${isLinkActive('/act-tutors-in-dubai') || isLinkActive('/advanced-placements-tutors-in-dubai') ? styles.activeLink : ''}`}
                                 onClick={e => e.preventDefault()}
                             >
 
@@ -93,11 +94,11 @@ const Header = ({ setHeaderHeight }) => {
                             <div className={styles.megaMenu}>
                                 <div className={styles.megaMenuContent}>
                                     <div className={styles.megaMenuRight}>
-                                        <a href='/act' className={`${styles.megaMenuBox} ${isLinkActive('/act') ? 'active' : ''}`}>
+                                        <a href='/act-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/act-tutors-in-dubai') ? styles.activeLink : ''}`}>
                                             <img src="/images/menu-act.png" alt="ACT" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>ACT</h4>
                                         </a>
-                                        <a href='/ap' className={`${styles.megaMenuBox} ${isLinkActive('/ap') ? 'active' : ''}`}>
+                                        <a href='/advanced-placements-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/advanced-placements-tutors-in-dubai') ? styles.activeLink : ''}`}>
                                             <img src="/images/menu-ap.png" alt="AP" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>AP</h4>
                                         </a>
@@ -105,14 +106,14 @@ const Header = ({ setHeaderHeight }) => {
                                 </div>
                             </div>
                         </div>
-                        <a href="/get-a-free-demo" className={`${styles.link} ${isLinkActive('/get-a-free-demo') ? 'active' : ''}`}>
+                        <a href="/join-free-demo-class" className={`${styles.link} ${isLinkActive('/join-free-demo-class') ? styles.activeLink : ''}`}>
 
                             get a free demo
                         </a>
                         <div className={styles.megaMenuWrapper}>
                             <a
                                 href="#"
-                                className={`${styles.link} ${isLinkActive('/about') || isLinkActive('/blog') || isLinkActive('/our-team') || isLinkActive('/contact-us') || isLinkActive('/career') ? 'active' : ''}`}
+                                className={`${styles.link} ${isLinkActive('/about-us') || isLinkActive('/blog') || isLinkActive('/our-team') || isLinkActive('/contact-us') || isLinkActive('/career') ? styles.activeLink : ''}`}
                                 onClick={e => e.preventDefault()}
                             >
                                 about
@@ -120,23 +121,23 @@ const Header = ({ setHeaderHeight }) => {
                             <div className={styles.megaMenu}>
                                 <div className={styles.megaMenuContent}>
                                     <div className={styles.megaMenuRight}>
-                                        <a href='/blog' className={`${styles.megaMenuBox} ${isLinkActive('/blog') ? 'active' : ''}`}>
+                                        <a href='/blog' className={`${styles.megaMenuBox} ${isLinkActive('/blog') ? styles.activeLink : ''}`}>
                                             <img src="/images/menu-blog.png" alt="Blog" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>Blog</h4>
                                         </a>
-                                        <a href='/our-team' className={`${styles.megaMenuBox} ${isLinkActive('/our-team') ? 'active' : ''}`}>
+                                        <a href='/our-team' className={`${styles.megaMenuBox} ${isLinkActive('/our-team') ? styles.activeLink : ''}`}>
                                             <img src="/images/menu-team.png" alt="Our Team" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>Our Team</h4>
                                         </a>
-                                        <a href='/about' className={`${styles.megaMenuBox} ${isLinkActive('/about') ? 'active' : ''}`}>
+                                        <a href='/about-us' className={`${styles.megaMenuBox} ${isLinkActive('/about-us') ? styles.activeLink : ''}`}>
                                             <img src="/images/menu-about.png" alt="About Us" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>About Us</h4>
                                         </a>
-                                        <a href='/contact-us' className={`${styles.megaMenuBox} ${isLinkActive('/contact-us') ? 'active' : ''}`}>
+                                        <a href='/contact-us' className={`${styles.megaMenuBox} ${isLinkActive('/contact-us') ? styles.activeLink : ''}`}>
                                             <img src="/images/menu-contact.png" alt="Contact Us" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>Contact Us</h4>
                                         </a>
-                                        <a href='/career' className={`${styles.megaMenuBox} ${isLinkActive('/career') ? 'active' : ''}`}>
+                                        <a href='/career' className={`${styles.megaMenuBox} ${isLinkActive('/career') ? styles.activeLink : ''}`}>
                                             <img src="/images/menu-career.png" alt="Career" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>Career</h4>
                                         </a>

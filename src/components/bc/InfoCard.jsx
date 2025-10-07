@@ -70,11 +70,11 @@ export default function InfoCard() {
               >
                 {isMobile ? (
                   <>
-                    IB Tutors In Dubai,<br /> UAE For Academic Excellence
+                    Be College-Ready With British <br /> Curriculum Tutors In UAE
                   </>
                 ) : (
                   <>
-                    IB Tutors In Dubai,UAE<br /> For Student Success
+                    Succeed With Expert British <br /> Curriculum Tutors In UAE
                   </>
                 )}
               </h1>
@@ -93,7 +93,7 @@ export default function InfoCard() {
                   marginTop: "19px"
                 }}
               >
-                Expert Help At Every IB Milestone
+                Boost Your University Prospects
               </p>
 
               <div
@@ -129,7 +129,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Focused <br />ACT Prep
+                  Year 8 To Year <br />13 Support
                 </div>
 
                 <div
@@ -178,12 +178,12 @@ export default function InfoCard() {
                   marginTop: isMobile ? "0" : "20px!important",
                 }}
               >
-                We provide comprehensive academic support through our customized IB curriculum courses, giving students access to high-end learning with experienced & certified IB tutors across various IB subjects.
+                At Ignite, we offer the best-suited support with British curriculum tutors for IGCSE & A-Levels. Our expert trainers are dedicated to guiding students towards exam success with a focused learning approach.
               </p>
 
               <div className="buttonf">
                 <a
-                  href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai/"
+                  href="/courses/igcse-tutors-in-dubai/"
                   style={{ textDecoration: "none" }}
                 >
                   <button
@@ -199,7 +199,7 @@ export default function InfoCard() {
                       marginTop: isMobile ? "auto" : "20px",
                     }}
                   >
-                    <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>IBDP TUTORS</span>
+                    <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>IGCSE Tutors</span>
                     <img
                       src="/assets/rar.png"
                       alt="right"
@@ -211,7 +211,7 @@ export default function InfoCard() {
                 </a>
 
                 <a
-                  href="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai/"
+                  href="/courses/a-level-tutors-in-dubai/"
                   style={{ textDecoration: "none" }}
                 >
                   <button
@@ -227,7 +227,7 @@ export default function InfoCard() {
                       marginTop: isMobile ? "auto" : "20px",
                     }}
                   >
-                    <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>IB MYP TUTORS</span>
+                    <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>A Level Tutors</span>
                     <img
                       src="/assets/rar.png"
                       alt="right"

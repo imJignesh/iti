@@ -98,8 +98,8 @@ function UpsSection() {
     {
       number: "01",
       icon: <img src="/assets/01.png" alt="Icon 01" />,
-      title: "ACT-Specific Tutors",
-      desc: "Highly qualified ACT-specific tutors delivering all-around support.",
+      title: "IB-Specific Tutors",
+      desc: "Highly qualified IB-specific tutors delivering all-around support.",
     },
     {
       number: "02",
@@ -111,13 +111,13 @@ function UpsSection() {
       number: "03",
       icon: <img src="/assets/03.png" alt="Icon 03" />,
       title: "Grade Improvement",
-      desc: "Better results assurance with critical testing & review methods.",
+      desc: "Better results assured with critical testing & review methodology.",
     },
     {
       number: "04",
       icon: <img src="/assets/04.png" alt="Icon 04" />,
       title: "Examination Prep",
-      desc: "Full ACT exam prep with tutoring, resources, testing, & review.",
+      desc: "Full IB exam prep with tutoring, resources, testing, & review.",
     },
     {
       number: "05",
@@ -135,13 +135,13 @@ function UpsSection() {
       number: "07",
       icon: <img src="/assets/07.png" alt="Icon 07" />,
       title: "Structured Learning",
-      desc: "Comprehensive learning support for all the major ACT sections.",
+      desc: "Problem-based learning covering practical aspects of all units.",
     },
     {
       number: "08",
       icon: <img src="/assets/08.png" alt="Icon 08" />,
       title: "Progress Tracking",
-      desc: "Practice with unit tests & mock papers under exam-like conditions.",
+      desc: "Train with unit tests & mock papers under exam-like conditions.",
     },
   ];
 

@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 
 const subjectRows = [
-  ["Maths"],
-  ["Physics", "Chemistry"],
-  ["Biology", "Computer", "French"],
-  ["Economics", "English", "Spanish"],
-  ["Accounting", "Business Studies"],
-  ["Psychology"],
+  ["Math (Core & Extended)"],
+  ["Further Math", "Statistics"],
+  ["Physics", "Chemistry", "Biology"],
+  ["Computer Science & ICT", "IGCSE/GCSE Double Award Science"],
+  ["Combined Science", "Environmental Management (EVM)"],
+  ["Business Studies", "Economics", "Accounting"],
+  ["English Language", "English Literature"],
+  ["French", "Spanish"],
 ];
+
+
 
 
 export default function SubjectsCard1({ }) {

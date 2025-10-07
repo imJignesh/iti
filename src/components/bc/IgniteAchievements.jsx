@@ -43,8 +43,8 @@ export default function IgniteAchievements() {
             className="fade-in-section testTitle text-uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            Powering Progress Through<br /> <span className="highlight"> Results{" "}</span>
-            That Matter
+            Milestones That Reflect  <br /> <span className="highlight"> Our Journey{" "}</span>
+            Of Mentoring
           </h2>
 
           {/* Subtitle */}
@@ -60,7 +60,7 @@ export default function IgniteAchievements() {
               fontSize: "0.9rem",
               lineHeight: isMobile ? "1.3" : "1.2",
             }}>
-          We’ve built every achievement through the progress, effort, & dedication of our IBDP students over the years.
+            Each accomplishment highlights the dedication & success our students have achieved through the years.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export default function IgniteAchievements() {
                     margin: 0, // ✅ removes the margin
                   }}
                 >
-                  Powering Progress Through
+                  Milestones That Reflect
                 </h2>
 
                 <h2
@@ -114,7 +114,7 @@ export default function IgniteAchievements() {
                     margin: 0, // ✅ removes the margin
                   }}
                 >
-                  Results{" "}
+                  Our Journey{" "}
                   <span
                     style={{
                       background: "#19245E",
@@ -125,7 +125,7 @@ export default function IgniteAchievements() {
                       margin: 0, // ✅ removes margin inside span (not needed, but safe)
                     }}
                   >
-                     That Matter
+                    Of Mentoring
                   </span>
                 </h2>
 
@@ -143,7 +143,7 @@ export default function IgniteAchievements() {
                     fontSize: "1.2rem",
                     marginTop: "16px",
                   }}>
-                  We’ve built every achievement through the progress, effort, <br /> & dedication of our IBDP students over the years.
+                  Each accomplishment highlights the dedication & success our students have achieved through the years.
                 </p>
               </div>
 
@@ -193,7 +193,7 @@ export default function IgniteAchievements() {
                   <div className="stat-divider"></div>
                   <div className="stat-content">
                     <h4 className="stat-title teal-text">Years Of Experience</h4>
-                    <p className="stat-description">Proven expertise in guiding students toward excellence</p>
+                    <p className="stat-description">Proven expertise in guiding students toward success</p>
                   </div>
                 </div>
 
@@ -203,7 +203,7 @@ export default function IgniteAchievements() {
                   <div className="stat-divider"></div>
                   <div className="stat-content">
                     <h4 className="stat-title blue-text">Exam Prep Resources</h4>
-                    <p className="stat-description">Extensive IB-specific guides to master every subject</p>
+                    <p className="stat-description">Extensive curricula guides to master every subject</p>
                   </div>
                 </div>
               </div>
@@ -212,11 +212,11 @@ export default function IgniteAchievements() {
               <div className="stats-row">
                 {/* Stat 3 */}
                 <div className="stat-card-desktop">
-                  <div className="stat-number blue-text">7/7</div>
+                  <div className="stat-number blue-text">A<sup>*</sup></div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title blue-text">Scores Across Subjects</h4>
-                    <p className="stat-description">Strategic IB tutoring that helps you aim for perfection</p>
+                    <h4 className="stat-title blue-text">Grades Across Subjects</h4>
+                    <p className="stat-description">Strategic tutoring that helps aim for steady progress</p>
                   </div>
                 </div>
 
@@ -226,7 +226,7 @@ export default function IgniteAchievements() {
                   <div className="stat-divider"></div>
                   <div className="stat-content">
                     <h4 className="stat-title teal-text">Student Success Stories</h4>
-                    <p className="stat-description">Proven results through focused IB student journeys</p>
+                    <p className="stat-description">Consistent results through focused student journeys</p>
                   </div>
                 </div>
               </div>
@@ -243,33 +243,35 @@ export default function IgniteAchievements() {
 
           {/* Mobile CTA Button */}
           <div className="text-center mb-4">
-            <button
-              className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
-              style={{
-                background: "linear-gradient(90deg,#161664, #3F88BA)",
-                color: 'white',
-                padding: '12px 14px 12px 20px',
-                border: 'none',
-                transition: 'opacity 0.3s ease',
-                letterSpacing: "3px",
-                fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
-              }}
-              onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-              onMouseLeave={(e) => e.target.style.opacity = "1"}
-            >
-              GET FREE DEMO
-              <div
-                className="custom-height rounded-circle d-flex align-items-center justify-content-center"
+            <a href="/join-free-demo-class/" >
+              <button
+                className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
                 style={{
-                  width: "2.5rem",
-                  height: "2.5rem",
-                  background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                  marginLeft: "2.1rem"
+                  background: "linear-gradient(90deg,#161664, #3F88BA)",
+                  color: 'white',
+                  padding: '12px 14px 12px 20px',
+                  border: 'none',
+                  transition: 'opacity 0.3s ease',
+                  letterSpacing: "3px",
+                  fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
                 }}
+                onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+                onMouseLeave={(e) => e.target.style.opacity = "1"}
               >
-                <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
-              </div>
-            </button>
+                GET FREE DEMO
+                <div
+                  className="custom-height rounded-circle d-flex align-items-center justify-content-center"
+                  style={{
+                    width: "2.5rem",
+                    height: "2.5rem",
+                    background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                    marginLeft: "2.1rem"
+                  }}
+                >
+                  <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                </div>
+              </button>
+            </a>
           </div>
 
           {/* Mobile Stats - 2x2 Grid */}
@@ -278,14 +280,14 @@ export default function IgniteAchievements() {
             <div className="row g-3 mb-3">
               <div className="col-6">
                 <div className="stat-card-mobile">
-                  <div className="stat-number blue-text">60%</div>
-                  <h4 className="stat-title-mobile blue-text">OF RICH TUTORING EXPERIENCE</h4>
+                  <div className="stat-number blue-text">10+</div>
+                  <h4 className="stat-title-mobile blue-text">Years Of Experience</h4>
                 </div>
               </div>
               <div className="col-6">
                 <div className="stat-card-mobile">
-                  <div className="stat-number teal-text">30+</div>
-                  <h4 className="stat-title-mobile teal-text">TRULY HAPPY STUDENTS FROM UAE</h4>
+                  <div className="stat-number teal-text">1K+</div>
+                  <h4 className="stat-title-mobile teal-text">Exam Prep Resources</h4>
                 </div>
               </div>
             </div>
@@ -294,14 +296,14 @@ export default function IgniteAchievements() {
             <div className="row g-3">
               <div className="col-6">
                 <div className="stat-card-mobile">
-                  <div className="stat-number blue-text">60%</div>
-                  <h4 className="stat-title-mobile blue-text">OF RICH TUTORING EXPERIENCE</h4>
+                  <div className="stat-number blue-text">A<sup>*</sup></div>
+                  <h4 className="stat-title-mobile blue-text">Grades Across Subjects</h4>
                 </div>
               </div>
               <div className="col-6">
                 <div className="stat-card-mobile">
-                  <div className="stat-number teal-text">30+</div>
-                  <h4 className="stat-title-mobile teal-text">TRULY HAPPY STUDENTS FROM UAE</h4>
+                  <div className="stat-number teal-text">2K+</div>
+                  <h4 className="stat-title-mobile teal-text">Student Success Stories</h4>
                 </div>
               </div>
             </div>
@@ -333,6 +335,23 @@ export default function IgniteAchievements() {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+        }
+        .blue-text sup {
+          background: linear-gradient(90deg, #161664, #3F88BA);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        /* then style the sup visually (can translate or top) */
+        .teal-text sup,
+        .blue-text sup {
+          font-size: 0.55em;
+          display: inline-block;
+          transform: translateY(-0.30em); /* allowed because sup has its own background */
+          line-height: 1;
+          vertical-align: baseline;
+          background-size: 100% 100%;
         }
 
         /* Desktop Layout */

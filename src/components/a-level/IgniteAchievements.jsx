@@ -293,38 +293,40 @@ export default function IgniteAchievements() {
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.7s" }}>
-          <button
-            className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
-            style={{
-              background: "linear-gradient(90deg,#161664, #3F88BA)",
-              color: 'white',
-              padding: '12px 14px 12px 20px',
-              border: 'none',
-              transition: 'opacity 0.3s ease',
-              letterSpacing: "3px",
-              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
-              marginTop: isMobile ? "auto" : "61px !important"
-            }}
-            onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-            onMouseLeave={(e) => e.target.style.opacity = "1"}
-          >
-            GET A FREE DEMO
-            <div
-              className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
+          <a href="/join-free-demo/">
+            <button
+              className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
               style={{
-                width: "2.5rem",
-                height: "2.5rem",
-                background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                animationDelay: "0.75s",
-                marginLeft: "2.1rem "
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
+                color: 'white',
+                padding: '12px 14px 12px 20px',
+                border: 'none',
+                transition: 'opacity 0.3s ease',
+                letterSpacing: "3px",
+                fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
+                marginTop: isMobile ? "auto" : "61px !important"
               }}
+              onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+              onMouseLeave={(e) => e.target.style.opacity = "1"}
             >
-              <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
-            </div>
-          </button>
+              GET A FREE DEMO
+              <div
+                className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                style={{
+                  width: "2.5rem",
+                  height: "2.5rem",
+                  background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                  animationDelay: "0.75s",
+                  marginLeft: "2.1rem "
+                }}
+              >
+                <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+              </div>
+            </button>
+          </a>
         </div>
       </div>
       <style jsx>{`
@@ -342,7 +344,24 @@ export default function IgniteAchievements() {
           --bs-gutter-x: 5rem; /* horizontal gap */
           --bs-gutter-y: 3rem; /* vertical gap */
         }
+        .blue-text,
+        .blue-text sup {
+          background: linear-gradient(90deg, #161664, #3F88BA);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
 
+        /* then style the sup visually (can translate or top) */
+        .teal-text sup,
+        .blue-text sup {
+          font-size: 0.55em;
+          display: inline-block;
+          transform: translateY(-0.30em); /* allowed because sup has its own background */
+          line-height: 1;
+          vertical-align: baseline;
+          background-size: 100% 100%;
+        }
         /* Media query for 125% zoom detection and compensation */
         @media screen and (min-width: 1536px) and (max-width: 2399px) {
           .subtitle-text {

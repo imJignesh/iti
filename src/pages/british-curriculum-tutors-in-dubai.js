@@ -1,25 +1,25 @@
 import MovingBanner from '@/components/home/MovingBanner';
 import Testimonial from '@/components/home/Testimonial';
-import Accordion from '@/components/ib/accordian';
+import Accordion from '@/components/bc/accordian';
 import Blog from "@/components/homeCopy/Blog";
-import CourseCard from '@/components/ib/CourseCard';
-import IBCurriculumStages from '@/components/ib/Curriculum.jsx';
-import FAQSection from '@/components/ib/FaqSection';
-import IgniteAchievements from '@/components/ib/IgniteAchievements';
-import InfoCard from '@/components/ib/InfoCard';
-import LifeAtIgniteCarousel from '@/components/ib/LifeAtIgniteCarousel';
-import MarqueeBanner from '@/components/ib/MarqueeBanner';
-import ReviewsSection from '@/components/ib/ReviewsSection';
-import StudentAchievements from '@/components/ib/StudentAchivement';
-import SubjectsCard from '@/components/ib/SubjectCard';
-import UniImagesCard from '@/components/ib/universityCrad';
-import UspsSection from '@/components/ib/UspsSection';
+import CourseCard from '@/components/bc/CourseCard';
+import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
+import FAQSection from '@/components/bc/FaqSection';
+import IgniteAchievements from '@/components/bc/IgniteAchievements';
+import InfoCard from '@/components/bc/InfoCard';
+import LifeAtIgniteCarousel from '@/components/bc/LifeAtIgniteCarousel';
+import MarqueeBanner from '@/components/bc/MarqueeBanner';
+import ReviewsSection from '@/components/bc/ReviewsSection';
+import StudentAchievements from '@/components/bc/StudentAchivement';
+import SubjectsCard from '@/components/bc/SubjectCard';
+import UniImagesCard from '@/components/bc/universityCrad';
+import UspsSection from '@/components/bc/UspsSection';
 import { University } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
 
 // 1. ACCEPT the headerHeight prop
-const Ib = ({ headerHeight }) => {
+const BC = ({ headerHeight }) => {
   const scrollRef = useRef(null);
   const scrollInstanceRef = useRef(null);
 
@@ -113,4 +113,4 @@ const Ib = ({ headerHeight }) => {
   );
 };
 
-export default Ib;
+export default BC;

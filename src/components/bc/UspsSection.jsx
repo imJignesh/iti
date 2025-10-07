@@ -98,52 +98,53 @@ function UpsSection() {
     {
       number: "01",
       icon: <img src="/assets/01.png" alt="Icon 01" />,
-      title: "IB-SPECIFIC TUTORS",
-      desc: "Highly qualified IB-specific tutors delivering all-around support.",
+      title: "Experienced Tutors",
+      desc: "Highly qualified tutors delivering expert all-around support.",
     },
     {
       number: "02",
       icon: <img src="/assets/02.png" alt="Icon 02" />,
-      title: "INDIVIDUAL ATTENTION",
+      title: "Individual Attention",
       desc: "Small group training (SGT) to focus individually on every student.",
     },
     {
       number: "03",
       icon: <img src="/assets/03.png" alt="Icon 03" />,
-      title: "GRADE ASSURANCE",
-      desc: "Better grade assurance with critical testing & review methodology.",
+      title: "Grade Improvement",
+      desc: "Better results assured with critical testing & review methodology.",
     },
     {
       number: "04",
       icon: <img src="/assets/04.png" alt="Icon 04" />,
-      title: "EXAMINATION PREP",
-      desc: "Full IB exam prep with tutoring, resources, testing, & review.",
+      title: "Examination Prep",
+      desc: "Thorough exam prep with tutoring, resources, testing, & review.",
     },
     {
       number: "05",
       icon: <img src="/assets/05.png" alt="Icon 05" />,
-      title: "STRONG FOUNDATION",
+      title: "Strong Foundation",
       desc: "Focus on fundamentals for an exceptionally strong foundation.",
     },
     {
       number: "06",
       icon: <img src="/assets/06.png" alt="Icon 06" />,
-      title: "STIMULATING ENVIRONMENT",
+      title: "Stimulating Environment",
       desc: "Result-oriented culture ensuring a fun & stimulating environment.",
     },
     {
       number: "07",
       icon: <img src="/assets/07.png" alt="Icon 07" />,
-      title: "STRUCTURED LEARNING",
+      title: "Structured Learning",
       desc: "Problem-based learning covering practical aspects of all units.",
     },
     {
       number: "08",
       icon: <img src="/assets/08.png" alt="Icon 08" />,
-      title: "PROGRESS TRACKING",
-      desc: "Practice with unit tests & mock exams under exam-like conditions.",
+      title: "Progress Tracking",
+      desc: "Prepare with unit tests & mock papers under exam-like conditions.",
     },
   ];
+
 
 
   return (
@@ -180,7 +181,7 @@ function UpsSection() {
               className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
             >
-              What Do Students Get From<br /><span className="highlight"> Ignite's</span> ACT Support?
+              What Do Students Get From<br /><span className="highlight"> Ignite's</span> Support?
 
             </h2>
           </div>

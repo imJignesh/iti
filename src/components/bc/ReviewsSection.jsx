@@ -12,6 +12,7 @@ import {
 
 
 const testimonialData = [
+  // Placeholder Video 1
   {
     type: "video",
     img: "/images/testimonial1.jpg",
@@ -19,12 +20,16 @@ const testimonialData = [
     name: "LOREM IPSUM",
     subtitle: "Lorem ipsum dolor sit",
   },
+
+  // Text Testimonial 1: Zeynep Inan
   {
     type: "text",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "",
-    subtitle: "",
+    text: "I have taken lessons for IGCSE science and math which has helped me achieve top grades. With the help of my trainers, I was able to get offers from top universities in the UK such as UCL and University of Edinburgh.",
+    name: "Zeynep Inan",
+    subtitle: "IB & IGCSE Student",
   },
+
+  // Placeholder Video 2
   {
     type: "video",
     img: "/images/testimonial2.jpg",
@@ -32,12 +37,16 @@ const testimonialData = [
     name: "LOREM IPSUM",
     subtitle: "Lorem ipsum dolor sit",
   },
+
+  // Text Testimonial 2: Hassan Ali
   {
     type: "text",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "",
-    subtitle: "",
+    text: "This is the best tuition center in Dubai. Went from getting 5-6s in the start of my GCSEs to getting 8-9s in my actual GCSE exams. This place helped me a lot and has very good tutors as well.",
+    name: "Hassan Ali",
+    subtitle: "GCSE Student",
   },
+
+  // Placeholder Video 3
   {
     type: "video",
     img: "/images/testimonial2.jpg",
@@ -45,11 +54,64 @@ const testimonialData = [
     name: "LOREM IPSUM",
     subtitle: "Lorem ipsum dolor sit",
   },
+
+  // Text Testimonial 3: Sushma Menon (Parent)
   {
     type: "text",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "",
-    subtitle: "",
+    text: "My daughter was initially struggling with economics, but under the guidance of Miss Harsha, the subject became much more approachable and understandable. Their dedication and quality of tutoring truly stand out.",
+    name: "Sushma Menon",
+    subtitle: "Parent",
+  },
+
+  // Placeholder Video 4
+  {
+    type: "video",
+    img: "/images/testimonial1.jpg",
+    video: true,
+    name: "LOREM IPSUM",
+    subtitle: "Lorem ipsum dolor sit",
+  },
+
+  // Text Testimonial 4: Ben Dunatov
+  {
+    type: "text",
+    text: "Great tutoring service! Perfect for struggling GCSE students.",
+    name: "Ben Dunatov",
+    subtitle: "GCSE Student",
+  },
+
+  // Placeholder Video 5
+  {
+    type: "video",
+    img: "/images/testimonial2.jpg",
+    video: true,
+    name: "LOREM IPSUM",
+    subtitle: "Lorem ipsum dolor sit",
+  },
+
+  // Text Testimonial 5: Rosie Seldon (Parent)
+  {
+    type: "text",
+    text: "The trainers were flexible and were able to help in difficult subjects like Physics. My son scored a 100/100 on one of his maths papers after working with the tutors. Great work.",
+    name: "Rosie Seldon",
+    subtitle: "Parent",
+  },
+
+  // Placeholder Video 6
+  {
+    type: "video",
+    img: "/images/testimonial1.jpg",
+    video: true,
+    name: "LOREM IPSUM",
+    subtitle: "Lorem ipsum dolor sit",
+  },
+
+  // Text Testimonial 6: Riyad Bouarissa
+  {
+    type: "text",
+    text: "The business teacher deserves special recognition for outstanding instruction and genuine concern for my success. The sessions imparted comprehensive knowledge and equipped me with essential skills for my exams.",
+    name: "Riyad Bouarissa",
+    subtitle: "Student",
   },
 ];
 

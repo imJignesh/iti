@@ -73,26 +73,26 @@ const Footer = () => {
           <div className={styles.footerLinksCol}>
             <div className={styles.footerLinksTitle}>COURSES</div>
             <ul>
-              <li><a href="/">IB Tutors</a></li>
+              <li><a href="/ib-curriculum-tutors-in-dubai">IB Tutors</a></li>
               <ul>
-                <li><a href="/ibdp">IBDP Tutors In Dubai</a></li>
-                <li><a href="/myp">MYP Tutors In Dubai</a></li>
+                <li><a href="/courses/ibdp-tutors-in-dubai">IBDP Tutors In Dubai</a></li>
+                <li><a href="/courses/myp-tutors-in-dubai">MYP Tutors In Dubai</a></li>
               </ul>
-              <li><a href="/ib">British Curriculum Tutors</a></li>
+              <li><a href="/british-curriculum-tutors-in-dubai">British Curriculum Tutors</a></li>
               <ul>
-                <li><a href="/a-level">A Levels Tutors In Dubai</a></li>
-                <li><a href="/igcse">IGCSE Tutors In Dubai</a></li>
+                <li><a href="/courses/a-level-tutors-in-dubai">A Levels Tutors In Dubai</a></li>
+                <li><a href="/courses/igcse-tutors-in-dubai">IGCSE Tutors In Dubai</a></li>
               </ul>
-              <li><a href="/home-schooling">Private Candidacy</a></li>
-              <li><a href="/tutors">Tutors In Dubai</a></li>
-              <li><a href="/tutors">Tutors In JLT Dubai</a></li>
-              <li><a href="/tutors">Private Tutors In Dubai</a></li>
+              <li><a href="/courses/homeschooling-tutors-in-dubai">Private Candidacy</a></li>
+              <li><a href="/tutors-in-dubai">Tutors In Dubai</a></li>
+              <li><a href="/tutors-in-jlt-dubai">Tutors In JLT Dubai</a></li>
+              <li><a href="/private-tutors-in-dubai">Private Tutors In Dubai</a></li>
             </ul>
             <br />
             <div className={styles.footerLinksTitle}>TESTS</div>
             <ul>
-              <li><a>ACT Prep</a></li>
-              <li><a>Advanced Placements</a></li>
+              <li><a href="/act-tutors-in-dubai">ACT Prep</a></li>
+              <li><a href="/advanced-placements-tutors-in-dubai">Advanced Placements</a></li>
             </ul>
           </div>
         </div>
@@ -110,18 +110,18 @@ const Footer = () => {
           <div className={styles.footerLinksCol}>
             <div className={styles.footerLinksTitle}>SUBJECTS</div>
             <ul>
-              <li><a href="/EnglishTutorsInDubai">English Tutors In Dubai</a></li>
-              <li><a href="/FrenchTutorsInDubai">French Tutors In Dubai</a></li>
-              <li><a href="/SpanishTutorsInDubai">Spanish Tutors In Dubai</a></li>
-              <li><a href="/ComputerTutorsInDubai">Computer Science Tutors In Dubai</a></li>
-              <li><a href="/EconomicsTutorsInDubai">Economics Tutors In Dubai</a></li>
-              <li><a href="/BiologyTutorsInDubai">Biology Tutors In Dubai</a></li>
-              <li><a href="/ChemistryTutorsInDubai">Chemistry Tutors In Dubai</a></li>
-              <li><a href="/PhysicsTutorsInDubai">Physics Tutors In Dubai</a></li>
-              <li><a href="/MathsTutorsInDubai">Maths Tutors In Dubai</a></li>
-              <li><a href="/BusinessTutorsInDubai">Business Studies Tutors In Dubai</a></li>
-              <li><a href="/AccountingTutorsInDubai">Accounting Tutors In Dubai</a></li>
-              <li><a href="/PsychologyTutorsInDubai">Psychology Tutors In Dubai</a></li>
+              <li><a href="/english-tutor-in-dubai">English Tutors In Dubai</a></li>
+              <li><a href="/french-tutor-in-dubai">French Tutors In Dubai</a></li>
+              <li><a href="/spanish-tutor-in-dubai">Spanish Tutors In Dubai</a></li>
+              <li><a href="/computer-science-tutor-in-dubai">Computer Science Tutors In Dubai</a></li>
+              <li><a href="/economics-tutor-in-dubai">Economics Tutors In Dubai</a></li>
+              <li><a href="/biology-tutor-in-dubai">Biology Tutors In Dubai</a></li>
+              <li><a href="/chemistry-tutor-in-dubai">Chemistry Tutors In Dubai</a></li>
+              <li><a href="/physics-tutor-in-dubai">Physics Tutors In Dubai</a></li>
+              <li><a href="/maths-tutor-in-dubai">Maths Tutors In Dubai</a></li>
+              <li><a href="/business-studies-tutor-in-dubai">Business Studies Tutors In Dubai</a></li>
+              <li><a href="/accounting-tutor-in-dubai">Accounting Tutors In Dubai</a></li>
+              <li><a href="/psychology-tutor-in-dubai">Psychology Tutors In Dubai</a></li>
             </ul>
           </div>
         </div>
@@ -139,10 +139,10 @@ const Footer = () => {
           <div className={styles.footerLinksCol}>
             <div className={styles.footerLinksTitle}>ABOUT IGNITE</div>
             <ul>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/ourteam">Our Team</a></li>
-              <li><a href="/maincourse">Our Courses</a></li>
-              <li><a href="/freedemo">Free Demo Class</a></li>
+              <li><a href="/about-us">About Us</a></li>
+              <li><a href="/our-team">Our Team</a></li>
+              <li><a href="/courses">Our Courses</a></li>
+              <li><a href="/join-free-demo-class">Free Demo Class</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/contact-us">Contact Us</a></li>
               <li><a href="/career">Career</a></li>
@@ -177,4 +177,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
