@@ -61,9 +61,9 @@ const FrenchTutorsInDubai = ({ headerHeight }) => {
                 <FrenchTutorsInfoCard />
             </section>
 
-            <section data-scroll-section>
+            {/* <section data-scroll-section>
                 <FrenchTutorsStudentAchievements />
-            </section>
+            </section> */}
 
             <section data-scroll-section>
                 <MarqueeBanner />
@@ -89,16 +89,16 @@ const FrenchTutorsInDubai = ({ headerHeight }) => {
                 <FrenchTutorsUsps />
             </section>
 
-            <section data-scroll-section>
+            {/* <section data-scroll-section>
                 <FrenchTutorsLifeAtIgniteCarousel />
-            </section>
+            </section> */}
 
             <section data-scroll-section>
                 <FrenchTutorsFAQSection />
             </section>
 
             <section data-scroll-section>
-                    <Accordion />
+                <Accordion />
             </section>
         </div>
     );

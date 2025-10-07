@@ -61,9 +61,9 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
                 <EconomicsTutorsInfoCard />
             </section>
 
-            <section data-scroll-section>
+            {/* <section data-scroll-section>
                 <EconomicsTutorsStudentAchievements />
-            </section>
+            </section> */}
 
             <section data-scroll-section>
                 <MarqueeBanner />
@@ -89,16 +89,16 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
                 <EconomicsTutorsUsps />
             </section>
 
-            <section data-scroll-section>
+            {/* <section data-scroll-section>
                 <EconomicsTutorsLifeAtIgniteCarousel />
-            </section>
+            </section> */}
 
             <section data-scroll-section>
                 <EconomicsTutorsFAQSection />
             </section>
 
             <section data-scroll-section>
-                    <Accordion />
+                <Accordion />
             </section>
         </div>
     );

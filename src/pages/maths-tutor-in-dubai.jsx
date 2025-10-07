@@ -61,9 +61,9 @@ const MathsTutorsInDubai = ({ headerHeight }) => {
                 <MathsTutorsInfoCard />
             </section>
 
-            <section data-scroll-section>
+            {/* <section data-scroll-section>
                 <MathsTutorsStudentAchievements />
-            </section>
+            </section> */}
 
             <section data-scroll-section>
                 <MarqueeBanner />
@@ -89,16 +89,16 @@ const MathsTutorsInDubai = ({ headerHeight }) => {
                 <MathsTutorsUsps />
             </section>
 
-            <section data-scroll-section>
+            {/* <section data-scroll-section>
                 <MathsTutorsLifeAtIgniteCarousel />
-            </section>
+            </section> */}
 
             <section data-scroll-section>
                 <MathsTutorsFAQSection />
             </section>
 
             <section data-scroll-section>
-                    <Accordion />
+                <Accordion />
             </section>
         </div>
     );

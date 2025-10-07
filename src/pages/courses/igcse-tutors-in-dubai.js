@@ -66,9 +66,9 @@ const IGCSE = ({ headerHeight }) => {
         <UniImagesCard />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <StudentAchievements />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <CourseCard />
@@ -94,9 +94,9 @@ const IGCSE = ({ headerHeight }) => {
         <UspsSection />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <LifeAtIgniteCarousel />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <FAQSection />

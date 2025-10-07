@@ -1,20 +1,20 @@
-import StudentAchievements from '@/components/tutors-jlt-dubai/StudentAchivement';
+import StudentAchievements from '@/components/private-tutors-dubai/StudentAchivement';
 import { useEffect, useRef } from 'react';
-import CurriculumTestsComponent from '@/components/tutors-jlt-dubai/curriculum';
-import InfoCard from '@/components/tutors-jlt-dubai/infoCard';
-import OurTrainers from '@/components/tutors-jlt-dubai/ourTrainers';
-import SubjectsCard1 from '@/components/tutors-jlt-dubai/SubjectCard1';
-import IgniteAchievements from '@/components/tutors-jlt-dubai/igniteAchivement';
+import CurriculumTestsComponent from '@/components/private-tutors-dubai/curriculum';
+import InfoCard from '@/components/private-tutors-dubai/infoCard';
+import OurTrainers from '@/components/private-tutors-dubai/ourTrainers';
+import SubjectsCard1 from '@/components/private-tutors-dubai/SubjectCard1';
+import IgniteAchievements from '@/components/private-tutors-dubai/igniteAchivement';
 import Blog from "@/components/homeCopy/Blog";
-import UpsSection from '@/components/tutors-jlt-dubai/UspsSection';
-import Accordion from '@/components/tutors-jlt-dubai/accordian';
-import FAQSection from '@/components/tutors-jlt-dubai/FaqSection';
-import MarqueeBanner from '@/components/tutors-jlt-dubai/MarqueeBanner';
-import LifeAtIgniteCarousel from '@/components/tutors-jlt-dubai/LifeAtIgniteCarousel';
-import ReviewsSection from '@/components/tutors-jlt-dubai/ReviewsSection';
+import UpsSection from '@/components/private-tutors-dubai/UspsSection';
+import Accordion from '@/components/private-tutors-dubai/accordian';
+import FAQSection from '@/components/private-tutors-dubai/FaqSection';
+import MarqueeBanner from '@/components/private-tutors-dubai/MarqueeBanner';
+import LifeAtIgniteCarousel from '@/components/private-tutors-dubai/LifeAtIgniteCarousel';
+import ReviewsSection from '@/components/private-tutors-dubai/ReviewsSection';
 
 // 1. ACCEPT the headerHeight prop
-const Tutors = ({ headerHeight }) => {
+const PrivateTutorsDubai = ({ headerHeight }) => {
   const scrollRef = useRef(null);
   const scrollInstanceRef = useRef(null);
 
@@ -60,9 +60,9 @@ const Tutors = ({ headerHeight }) => {
         <InfoCard />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <StudentAchievements />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <CurriculumTestsComponent />
@@ -91,9 +91,9 @@ const Tutors = ({ headerHeight }) => {
         <UpsSection />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <LifeAtIgniteCarousel />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <FAQSection />
@@ -109,4 +109,4 @@ const Tutors = ({ headerHeight }) => {
   );
 };
 
-export default Tutors;
+export default PrivateTutorsDubai;

@@ -60,9 +60,9 @@ const Tutors = ({ headerHeight }) => {
         <InfoCard />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <StudentAchievements />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <CurriculumTestsComponent />
@@ -83,6 +83,7 @@ const Tutors = ({ headerHeight }) => {
       <section data-scroll-section>
         <OurTrainers />
       </section>
+
       <section data-scroll-section>
         <IgniteAchievements />
       </section>
@@ -91,9 +92,9 @@ const Tutors = ({ headerHeight }) => {
         <UpsSection />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <LifeAtIgniteCarousel />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <FAQSection />

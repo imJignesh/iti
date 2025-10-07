@@ -58,9 +58,9 @@ const HomeSchooling = ({ headerHeight }) => {
         <InfoCard />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <StudentAchievements />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <Curriculum />
@@ -78,9 +78,9 @@ const HomeSchooling = ({ headerHeight }) => {
       <section data-scroll-section>
         <ReviewsSection />
       </section>
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <LifeAtIgniteCarousel />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <FAQSection />

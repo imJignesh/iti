@@ -61,9 +61,9 @@ const IBDP = ({ headerHeight }) => {
         <InfoCard />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <StudentAchievements />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <CourseCard />
@@ -89,9 +89,9 @@ const IBDP = ({ headerHeight }) => {
         <UspsSection />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <LifeAtIgniteCarousel />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <FAQSection />

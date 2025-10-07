@@ -60,9 +60,9 @@ const SubjectTutoring = ({ headerHeight }) => {
         <InfoCard />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <StudentAchievements />
-      </section>
+      </section> */}
 
 
       <section data-scroll-section>
@@ -89,9 +89,9 @@ const SubjectTutoring = ({ headerHeight }) => {
         <Usps />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <LifeAtIgniteCarousel />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <FAQSection />

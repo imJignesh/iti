@@ -66,9 +66,9 @@ const IBC = ({ headerHeight }) => {
       </section>
 
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <StudentAchievements />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <IBCurriculumStages />
@@ -93,9 +93,9 @@ const IBC = ({ headerHeight }) => {
         <UspsSection />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <LifeAtIgniteCarousel />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <FAQSection />

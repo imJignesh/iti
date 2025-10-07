@@ -61,9 +61,9 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
                 <BiologyTutorsInfoCard />
             </section>
 
-            <section data-scroll-section>
+            {/* <section data-scroll-section>
                 <BiologyTutorsStudentAchievements />
-            </section>
+            </section> */}
 
             <section data-scroll-section>
                 <MarqueeBanner />
@@ -81,9 +81,9 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
                 <ReviewsSection />
             </section>
 
-            <section data-scroll-section>
+            {/* <section data-scroll-section>
                 <BiologyTutorsIgniteAchievements />
-            </section>
+            </section> */}
 
             <section data-scroll-section>
                 <BiologyTutorsUsps />
@@ -98,7 +98,7 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
             </section>
 
             <section data-scroll-section>
-                    <Accordion />
+                <Accordion />
             </section>
         </div>
     );

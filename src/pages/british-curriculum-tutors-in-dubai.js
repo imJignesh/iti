@@ -64,13 +64,14 @@ const BC = ({ headerHeight }) => {
       <section data-scroll-section>
         <InfoCard />
       </section>
+
       <section data-scroll-section>
         <UniImagesCard />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <StudentAchievements />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <IBCurriculumStages />
@@ -95,9 +96,9 @@ const BC = ({ headerHeight }) => {
         <UspsSection />
       </section>
 
-      <section data-scroll-section>
+      {/* <section data-scroll-section>
         <LifeAtIgniteCarousel />
-      </section>
+      </section> */}
 
       <section data-scroll-section>
         <FAQSection />

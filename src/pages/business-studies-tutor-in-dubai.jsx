@@ -61,9 +61,9 @@ const BusinessTutorsInDubai = ({ headerHeight }) => {
                 <BusinessTutorsInfoCard />
             </section>
 
-            <section data-scroll-section>
+            {/* <section data-scroll-section>
                 <BusinessTutorsStudentAchievements />
-            </section>
+            </section> */}
 
             <section data-scroll-section>
                 <MarqueeBanner />
@@ -88,17 +88,17 @@ const BusinessTutorsInDubai = ({ headerHeight }) => {
             <section data-scroll-section>
                 <BusinessTutorsUsps />
             </section>
-
+            {/* 
             <section data-scroll-section>
                 <BusinessTutorsLifeAtIgniteCarousel />
-            </section>
+            </section> */}
 
             <section data-scroll-section>
                 <BusinessTutorsFAQSection />
             </section>
 
             <section data-scroll-section>
-                    <Accordion />
+                <Accordion />
             </section>
         </div>
     );
