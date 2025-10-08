@@ -32,7 +32,6 @@
 }
 
 
-
 .uspSection .uspLeft span {
   -webkit-text-fill-color: var(--white-color);
   width: max-content;
@@ -285,6 +284,34 @@
   .uspSection .uspSlide {
     justify-content: space-between;
     gap: 20px;
+  }
+
+  .uspSection .uspLeft span,
+  .uspSection .uspTitle {
+    font-size: 16px !important;
+    margin-bottom: 0;
+    ;
+  }
+
+  .uspSection .uspBtn {
+    margin: 5vw 0;
+
+  }
+
+  .uspSection .uspIcon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .uspSection .uspTitle,
+  .uspSection .uspItemTitle {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+
+  .uspSection .uspDesc {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
   }
 }
 

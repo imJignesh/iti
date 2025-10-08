@@ -30,9 +30,10 @@
 }
 
 .homeCopy .aboutSection a.aboutBtn {
-  width: 15vw;
+  width: 16vw;
   padding: 0.8vw 1vw;
   gap: 1vw;
+  font-size: 1vw;
 }
 
 .homeCopy .aboutSection .aboutImageWrap .rectangleBG {
@@ -113,8 +114,8 @@
 
 .homeCopy .aboutSection .verticalLabel {
   position: absolute;
-  right: 24.2vw;
-  bottom: 10vw;
+  right: 30vw;
+  bottom: 12vw;
   color: var(--blue-color);
   writing-mode: sideways-lr;
   transform: rotate(180deg);
@@ -229,7 +230,7 @@
 
 @media (max-width: 1199px) {
   .homeCopy .aboutSection .statSmall {
-    font-size: 1rem;
+    /* font-size: 1rem; */
   }
 
   .homeCopy .aboutSection .aboutTitle {
@@ -339,9 +340,9 @@
   }
 
   .homeCopy .aboutSection .verticalLabel {
-    font-size: 14px;
+    font-size: 0.8rem;
     top: 0;
-    bottom: 40%;
+    bottom: 42%;
   }
 
   .homeCopy .aboutSection .aboutRight {
@@ -366,8 +367,12 @@
 }
 
 @media (max-width:500px) {
+  .homeCopy .aboutSection .verticalLabel {
+    right: 66vw;
+  }
+
   .homeCopy .aboutSection .statCard {
-    padding: 25px;
+    padding: 1.2vw 4vw;
   }
 
   .homeCopy .aboutSection .statBig {
@@ -377,6 +382,14 @@
   .homeCopy .aboutSection .statSmall {
     font-size: 0.7rem;
   }
+
+  .homeCopy .aboutSection a.aboutBtn {
+    width: fit-content;
+    padding: inherit;
+    gap: inherit;
+    font-size: inherit;
+    padding: 1vw 2vw;
+  }
 }
 
 @media (max-width:425px) {
@@ -385,7 +398,7 @@
   }
 
   .homeCopy .aboutSection .statCard {
-    padding: 22px;
+    padding: 1.2vw 4vw;
   }
 
   .homeCopy .aboutSection .statBig {
@@ -399,7 +412,7 @@
   }
 
   .homeCopy .aboutSection .statCard {
-    padding: 10px;
+    padding: 1.2vw 4vw;
   }
 
   .homeCopy .aboutSection .statBig {

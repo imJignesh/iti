@@ -50,17 +50,27 @@ export default function Alumni({ setActiveIndex }) {
     <>
       <section className="alumniSection">
         <div className="container">
-          <div className="alumniSubSection">
-            <h3
+
+          <div
+            className="text-center mb-5 fade-in-section alumniSubSection"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat
+            style={{ animationDelay: "0.15s" }}
+          >
+            {/* Gradient subtitle with lines */}
+            <div
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section SubHeading alumniSubHeading"
+              className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              OUR ALUMNI IN TOP UNIVERSITIES
-            </h3>
+              <div className="SubHeading testSubheading">OUR ALUMNI IN TOP UNIVERSITIES
+              </div>
+            </div>
 
+            {/* Main title */}
             <h2
               data-scroll
               data-scroll-class="is-inview"
@@ -68,10 +78,12 @@ export default function Alumni({ setActiveIndex }) {
               className="fade-in-section testTitle"
               style={{ animationDelay: "0.2s" }}
             >
-              Charting Global Success, One<br />Student At
-              <span className="highlight">  At A Time  </span>
+              Charting Global Success, One Student At
+              <span className="highlight"> At A Time  </span>
             </h2>
           </div>
+
+
 
           <div className="alumniSwiper">
             {/* Swiper Nav Buttons */}

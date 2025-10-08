@@ -281,6 +281,19 @@
     rotate: 180deg;
   }
 
+  .homeCopy .subjectSection .subjectLeft span {
+    font-size: 15px;
+  }
+
+  .homeCopy .subjectSection .subjectTitle,
+  .homeCopy .subjectSection .subjectTitle .subjectHighlight {
+    font-size: 16px;
+  }
+
+  .homeCopy .subjectSection .subjectDesc {
+    font-size: 14px;
+  }
+
   .homeCopy .subjectSection .subjectLeft {
     min-width: auto;
   }

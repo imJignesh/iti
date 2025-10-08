@@ -20,7 +20,7 @@
 
 .footerWrap .footerContactRow span {
   -webkit-text-fill-color: var(--white-color);
-  font-size: 1.3vw;
+
 }
 
 .footerWrap .footerContactRow span:before,
@@ -30,7 +30,7 @@
 }
 
 .footerWrap .footerTitle {
-  font-size: 1.7vw;
+  /* font-size: 1.7vw; */
   font-weight: 800;
   text-transform: uppercase;
   margin: 0 0 28px 0;
@@ -199,7 +199,7 @@
   }
 
   .footerWrap .footerTitle {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
   }
 }
 
@@ -259,7 +259,7 @@
   }
 
   .footerWrap .footerTitle {
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
   }
 
   .footerWrap .footerDesc {

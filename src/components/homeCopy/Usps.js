@@ -71,6 +71,10 @@ for (let i = 0; i < uspData.length; i += 2) {
 }
 
 export default function Usps({ }) {
+  // Define the text for both desktop and mobile
+  const desktopText = "We go beyond just tutoring with personalised learning, proven methods, & expert support that deliver real results.";
+  const mobileText = "Beyond just tutoring: personalised learning, proven methods, & expert support deliver real results.";
+
   return (
     <>
       {/* CRITICAL FIX: Removed the outer <section data-scroll-section> wrapper.
@@ -106,6 +110,7 @@ export default function Usps({ }) {
                   Here's Why Ignite Is The UAE's First Choice
                 </h2>
 
+
                 <div
                   className="fade-in-sections uspSubtitle"
                   style={{ animationDelay: "0.3s" }}
@@ -113,8 +118,17 @@ export default function Usps({ }) {
                   Real Support, Real Progress
                 </div>
 
+                {/* 1. DESKTOP TEXT (Visible on large screens and up) */}
                 <p
-                  className="fade-in-section uspDesc"
+                  className="fade-in-section uspDesc d-none d-lg-block"
+                  style={{ animationDelay: "0.4s" }}
+                >
+                  We go beyond just tutoring & focus on personalised learning, proven methods, & expert guidance that drive real results. Discover what makes us the trusted choice for students & parents alike.
+                </p>
+
+                {/* 2. MOBILE TEXT (Visible on small/medium screens only) */}
+                <p
+                  className="fade-in-section uspDesc d-lg-none"
                   style={{ animationDelay: "0.4s" }}
                 >
                   We go beyond just tutoring with personalised learning, proven methods, & expert support that deliver real results.

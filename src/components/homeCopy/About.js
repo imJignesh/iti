@@ -192,22 +192,17 @@ const About = () => {
               </div>
             </div>
 
-            <a
-              href="/join-free-demo-class/"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className="aboutBtn fade-in-section buttonSkyBlue"
-              style={{ animationDelay: "0.5s" }}
-            >
-              GET A FREE DEMO{" "}
-              <Image
-                src="/images/right-arrow-blue.png"
-                width={40}
-                height={40}
-                quality={100}
-                alt="Right arrow"
-              />
+
+            <a href="/join-free-demo-class/" className="nodecoration">
+              <button className="buttonSkyBlue mainCardBtn">
+                GET A FREE DEMO{" "}
+                <Image
+                  src="/images/right-arrow-blue.png"
+                  width={40}
+                  height={40}
+                  quality={100}
+                />
+              </button>
             </a>
           </div>
         </div>

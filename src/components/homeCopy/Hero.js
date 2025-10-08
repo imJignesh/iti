@@ -29,10 +29,11 @@ const Hero = () => {
                                 style={{ animationDelay: "0.6s" }}
                             >
                                 <h1 className="heroTitle-desktop">
-                                    Empower Your Academic Goals With <span className="highlight">Ignite’s</span> Tutors
+                                    Ignite Your Path To Top <span className="highlight">Academic</span> Performance
                                 </h1>
                                 <h1 className="heroTitle-mobile">
-                                    Ignite Your Path To Top <span className="highlight">Academic</span> Performance
+                                    Empower Your Academic Goals With <span className="highlight">Ignite’s</span> Tutors
+
                                 </h1>
                             </div>
                             <div

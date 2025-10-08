@@ -191,8 +191,20 @@
   }
 
   .homeCopy .alumniSection .alumniSwiper:nth-child(2):before {
-    right: -15%;
-    height: 70px;
+    right: 0;
+    height: 50px;
+    bottom: 18vw;
+  }
+
+  .homeCopy .alumniSection .alumniSwiper {
+
+    padding-bottom: 11vw;
+
+  }
+
+  .homeCopy .alumniSection .alumniSwiper .swiper-slide-active .alumniName {
+    margin-top: 5vw;
+    font-size: 1rem;
   }
 }
 
@@ -203,5 +215,19 @@
 
   .homeCopy .alumniSection .alumniTitle {
     font-size: 1.6rem;
+  }
+
+  .homeCopy .alumniSection .alumniSwiper .swiper-slide-active .alumniName {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  .homeCopy .alumniSection .alumniSwiper .swiper-slide-next,
+  .homeCopy .alumniSection .alumniSwiper .swiper-slide-prev {
+    opacity: 0;
+  }
+
+  .homeCopy .alumniSection .alumniImage {
+    max-height: 60vw;
   }
 }

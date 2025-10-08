@@ -64,13 +64,13 @@
         /* square card on mobile */
     }
 
-    h2 {
+    .careers-banner h2 {
         font-size: 6.33vw !important;
         font-weight: 800 !important;
         line-height: 36px !important;
     }
 
-    p {
+    .careers-banner p {
         /* margin: 0 !important;
         font-size: 4.08vw !important;
         font-weight: 800 !important;

@@ -236,7 +236,7 @@
 .homeCopy .courseSection .mainCardBtn {
   width: max-content;
   font-weight: 600;
-  font-size: 1vw;
+  font-size: 1rem;
   /* padding: 15px 20px; */
 }
 
@@ -510,11 +510,11 @@
   }
 
   .homeCopy .courseSection .courseHeadings .courseTitle {
-    font-size: 25px;
+    font-size: 16px;
   }
 
   .homeCopy .courseSection .courseHeadings p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
   }
 
@@ -530,7 +530,7 @@
 
   .homeCopy .courseSection .mainCard .mainCardLabel,
   .homeCopy .courseSection .sideCard .mainCardLabel {
-    font-size: 2rem;
+    font-size: 1.3rem;
     line-height: 30px;
   }
 
@@ -564,6 +564,16 @@
 @media (max-width: 440px) {
   .homeCopy .courseSection .mainCard {
     flex-basis: 360px;
+  }
+
+  .homeCopy .courseSection .sideCard .cardNumber {
+    font-size: 1.2rem;
+    padding: 0 10px 0 0;
+  }
+
+  .homeCopy .courseSection .sideCard .cardTitle {
+    font-size: 1.2rem;
+    margin-left: 20px;
   }
 
   .homeCopy .courseSection .mainCard .mainCardDetails,
