@@ -6,6 +6,8 @@ import CourseCard from '@/components/igcse/CourseCard';
 import FAQSection from '@/components/igcse/FaqSection';
 import IgniteAchievements from '@/components/igcse/IgniteAchievements';
 import InfoCard from '@/components/igcse/InfoCard';
+import IgniteAboutCard from "@/components/igcse/IgniteAboutCard";
+import Trainers from "@/components/igcse/Trainers";
 import LifeAtIgniteCarousel from '@/components/igcse/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/igcse/MarqueeBanner';
 import ReviewsSection from '@/components/igcse/ReviewsSection';
@@ -63,6 +65,10 @@ const IGCSE = ({ headerHeight }) => {
       </section>
 
       <section data-scroll-section>
+        <IgniteAboutCard />
+      </section>
+
+      <section data-scroll-section>
         <UniImagesCard />
       </section>
 
@@ -81,6 +87,10 @@ const IGCSE = ({ headerHeight }) => {
       <section data-scroll-section>
         <ReviewsSection />
       </section>
+
+      <section data-scroll-section>
+         <Trainers />
+      </section> 
 
       <section data-scroll-section>
         <IgniteAchievements />

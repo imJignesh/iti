@@ -13,7 +13,7 @@ const testData = [
     img: "/images/test-section1.jpg",
     label: "ACT",
     details: ["Score higher on the ACT with personalized, proven preparation"],
-    btn: "VIEW TUTORING COURSE",
+    btn: "LEARN MORE",
   },
   {
     number: "02.",
@@ -21,7 +21,7 @@ const testData = [
     img: "/images/test-section2.jpg",
     label: "ADVANCED PLACEMENTS",
     details: ["Targeted AP tutoring to strengthen concepts & exam readiness"],
-    btn: "VIEW TUTORING COURSE",
+    btn: "LEARN MORE",
   },
   {
     number: "03.",
@@ -29,7 +29,7 @@ const testData = [
     img: "/images/test-section3.jpg",
     label: "UCAT",
     details: ["Master UCAT strategies with expert guidance & focused test prep"],
-    btn: "VIEW TUTORING COURSE",
+    btn: "LEARN MORE",
   },
 ];
 

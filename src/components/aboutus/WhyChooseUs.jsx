@@ -47,8 +47,8 @@ export default function WhyChooseUs() {
                       className="fade-in-section testTitle"
                       style={{ animationDelay: "0.2s" }}
                     >
-                      LOREM IPSUM DOLOR SIT AMET,
-                      CONSECTETUR <span className="highlight">ADIPISCING</span>
+                      A Legacy Of Success Built On Trust & 
+                      <span className="highlight"> Learning</span>
                     </h2>
                   </div>
 

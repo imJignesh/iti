@@ -40,7 +40,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial3.jpg",
+    img: "/images/testimonial1.jpg",
     video: true,
     name: "NICOLE MORGAN",
     subtitle: "Parent",
@@ -53,7 +53,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial4.jpg",
+    img: "/images/testimonial2.jpg",
     video: true,
     name: "SARA KERR",
     subtitle: "Student",
@@ -66,7 +66,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial5.jpg",
+    img: "/images/testimonial1.jpg",
     video: true,
     name: "SHIVAM BAKHDA",
     subtitle: "A-Level Student",
@@ -79,7 +79,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial6.jpg",
+    img: "/images/testimonial2.jpg",
     video: true,
     name: "PRIYA NAIR",
     subtitle: "A-Level Student",
@@ -92,7 +92,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial7.jpg",
+    img: "/images/testimonial1.jpg",
     video: true,
     name: "TAMANNA IYYANI",
     subtitle: "A-Level Graduate",
@@ -105,7 +105,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial8.jpg",
+    img: "/images/testimonial2.jpg",
     video: true,
     name: "SARASWATHY RAMACHANDRAN",
     subtitle: "Parent",
@@ -118,7 +118,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial9.jpg",
+    img: "/images/testimonial1.jpg",
     video: true,
     name: "ZEYNEP INAN",
     subtitle: "IB & IGCSE Student",
@@ -131,7 +131,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial10.jpg",
+    img: "/images/testimonial2.jpg",
     video: true,
     name: "MAHAD WAHEED",
     subtitle: "IB Student",
@@ -144,7 +144,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial11.jpg",
+    img: "/images/testimonial1.jpg",
     video: true,
     name: "NIMIT DEDHIA",
     subtitle: "Student",
@@ -157,7 +157,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial12.jpg",
+    img: "/images/testimonial2.jpg",
     video: true,
     name: "BEN DUNATOV",
     subtitle: "GCSE Student",

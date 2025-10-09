@@ -4,6 +4,7 @@ import CourseCard from '@/components/act/CourseCard';
 import FAQSection from '@/components/act/FaqSection';
 import IgniteAchievements from '@/components/act/IgniteAchievements';
 import InfoCard from '@/components/act/InfoCard';
+import IgniteAboutCard from "@/components/act/IgniteAboutCard";
 import LifeAtIgniteCarousel from '@/components/act/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/act/MarqueeBanner';
 import ReviewsSection from '@/components/act/ReviewsSection';
@@ -60,6 +61,9 @@ const act = ({ headerHeight }) => {
         <InfoCard />
       </section>
 
+      <section data-scroll-section>
+        <IgniteAboutCard />
+      </section>
       {/* <section data-scroll-section>
         <StudentAchievements />
       </section> */}
@@ -82,6 +86,10 @@ const act = ({ headerHeight }) => {
       {/* <section data-scroll-section>
         <LifeAtIgniteCarousel />
       </section> */}
+
+      <section data-scroll-section>
+        <ReviewsSection />
+      </section>
 
       <section data-scroll-section>
         <FAQSection />

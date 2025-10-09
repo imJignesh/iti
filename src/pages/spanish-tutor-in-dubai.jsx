@@ -10,6 +10,7 @@ import SpanishTutorsInfoCard from '@/components/spanish-tutoring/infoCard';
 import SpanishTutorsChooseApp from '@/components/spanish-tutoring/choose-app';
 import SpanishTutorsACT from '@/components/spanish-tutoring/ACT';
 import SpanishTutorsUsps from "@/components/spanish-tutoring/Usps";
+import Trainers from "@/components/spanish-tutoring/Trainers";
 import SpanishTutorsIgniteAchievements from '@/components/spanish-tutoring/IgniteAchievements';
 import SpanishTutorsLifeAtIgniteCarousel from '@/components/spanish-tutoring/LifeAtIgniteCarousel';
 import SpanishTutorsFAQSection from '@/components/spanish-tutoring/FaqSection';
@@ -80,6 +81,10 @@ const SpanishTutorsInDubai = ({ headerHeight }) => {
             <section data-scroll-section>
                 <ReviewsSection />
             </section>
+
+            <section data-scroll-section>
+                <Trainers />
+            </section> 
 
             <section data-scroll-section>
                 <SpanishTutorsIgniteAchievements />

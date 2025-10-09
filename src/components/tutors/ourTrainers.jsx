@@ -7,60 +7,116 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const trainers = [
   {
-    name: "NIKHIL PAWAR",
+    name: "MASAB",
     img: "/images/trainer1.png",
-    subtitle: "Chemistry & Environmental Management",
-    experience: "4+ YEARS",
+    subtitle: "Maths & Accounting",
+    experience: "10+ Years",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "SADAF",
     img: "/images/trainer2.png",
-    subtitle: "Biology, Chemistry & Physics",
-    experience: "4+ YEARS",
+    subtitle: "Accounting, Economics & Business",
+    experience: "11+ Years",
     color: "green",
   },
   {
-    name: "NIKHIL PAWAR",
+    name: "SARANYA",
     img: "/images/trainer1.png",
-    subtitle: "Chemistry & Environmental Management",
-    experience: "4+ YEARS",
+    subtitle: "Physics",
+    experience: "8+ Years",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "ASHWANI",
     img: "/images/trainer2.png",
-    subtitle: "Biology, Chemistry & Physics",
-    experience: "4+ YEARS",
+    subtitle: "Maths",
+    experience: "7+ Years",
     color: "green",
   },
   {
-    name: "NIKHIL PAWAR",
+    name: "IRTIQA",
     img: "/images/trainer1.png",
-    subtitle: "Chemistry & Environmental Management",
-    experience: "4+ YEARS",
+    subtitle: "Computer Science, ICT",
+    experience: "6+ Years",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "ABDUL",
     img: "/images/trainer2.png",
-    subtitle: "Biology, Chemistry & Physics",
-    experience: "4+ YEARS",
+    subtitle: "Maths",
+    experience: "13+ Years",
     color: "green",
   },
   {
-    name: "NIKHIL PAWAR",
+    name: "HARSHA",
     img: "/images/trainer1.png",
-    subtitle: "Chemistry & Environmental Management",
-    experience: "4+ YEARS",
+    subtitle: "Economics & Business",
+    experience: "10+ Years",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "NAMRATA",
     img: "/images/trainer2.png",
-    subtitle: "Biology, Chemistry & Physics",
-    experience: "4+ YEARS",
+    subtitle: "Maths & Physics",
+    experience: "10+ Years",
     color: "green",
+  },
+  {
+    name: "KRITIKA",
+    img: "/images/trainer1.png",
+    subtitle: "Economics & Business",
+    experience: "10+ Years",
+    color: "blue",
+  },
+  {
+    name: "RUSTHA",
+    img: "/images/trainer1.png",
+    subtitle: "Chemistry, Biology, & EVM",
+    experience: "3+ Years",
+    color: "green",
+  },
+  {
+    name: "IPSITA",
+    img: "/images/trainer2.png",
+    subtitle: "Biology & EVM",
+    experience: "7+ Years",
+    color: "blue",
+  },
+  {
+    name: "FREEZY",
+    img: "/images/trainer1.png",
+    subtitle: "Biology, Chemistry",
+    experience: "4+ Years",
+    color: "green",
+  },
+  {
+    name: "AASHIMA",
+    img: "/images/trainer2.png",
+    subtitle: "Spanish",
+    experience: "5+ Years",
+    color: "blue",
+  },
+  {
+    name: "ANUJA",
+    img: "/images/trainer1.png",
+    subtitle: "English & French",
+    experience: "10+ Years",
+    color: "green",
+  },
+  {
+    name: "DR. HAYA",
+    img: "/images/trainer2.png",
+    subtitle: "Chemistry, Physics, Biology",
+    experience: "9+ Years",
+    color: "blue",
+  },
+  {
+    name: "DEEPAK",
+    img: "/images/trainer2.png",
+    subtitle: "Chemistry, Physics, Biology",
+    experience: "9+ Years",
+    color: "blue",
   },
 
 ];
@@ -102,7 +158,7 @@ export default function Trainers({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <span className="SubHeading trainersSubheading">OUR TRAINERS</span>
+            <span className="SubHeading trainersSubheading">OUR TUTORS</span>
           </div>
 
           <h2
@@ -112,8 +168,7 @@ export default function Trainers({ }) {
             className="fade-in-section trainersTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
-            CONSECTETUR <span className="trainersHighlight">ADIPISCING</span>
+            Individual Learning Backed By <span className="trainersHighlight">Experience & Trust</span>
           </h2>
 
           {isTrainersSwiper ? (
@@ -180,7 +235,7 @@ export default function Trainers({ }) {
 
               {!isMobile && <div className="trainersPagination"></div>}
 
-              <button
+              {/* <button
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
@@ -188,7 +243,7 @@ export default function Trainers({ }) {
                 style={{ animationDelay: `${0.3 + trainers.length * 0.06}s` }}
               >
                 SEE MORE
-              </button>
+              </button> */}
               {isMobile && <div className="trainersPagination"></div>}
             </div>
           ) : (

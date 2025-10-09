@@ -40,7 +40,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial3.jpg",
+    img: "/images/testimonial1.jpg",
     video: true,
     name: "Nicole Morgan",
     subtitle: "Highly recommended for quick tutoring",
@@ -53,7 +53,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial4.jpg",
+    img: "/images/testimonial2.jpg",
     video: true,
     name: "Sara Kerr",
     subtitle: "Excellent Economics tutoring",
@@ -66,7 +66,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial5.jpg",
+    img: "/images/testimonial1.jpg",
     video: true,
     name: "Shivam Bakhda",
     subtitle: "A-level Economics success",
@@ -79,7 +79,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial6.jpg",
+    img: "/images/testimonial2.jpg",
     video: true,
     name: "Priya Nair",
     subtitle: "Structured and effective A-Level support",
@@ -92,7 +92,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial7.jpg",
+    img: "/images/testimonial1.jpg",
     video: true,
     name: "Tamanna Iyyani",
     subtitle: "Supportive environment for academic growth",
@@ -105,7 +105,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial8.jpg",
+    img: "/images/testimonial2.jpg",
     video: true,
     name: "Saraswathy Ramachandran",
     subtitle: "A-level Further Math support",
@@ -118,7 +118,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial9.jpg",
+    img: "/images/testimonial1.jpg",
     video: true,
     name: "Zeynep Inan",
     subtitle: "Top grades in IGCSE and IB",
@@ -131,7 +131,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial10.jpg",
+    img: "/images/testimonial2.jpg",
     video: true,
     name: "Mahad Waheed",
     subtitle: "Knowledgeable mentors for IB",
@@ -144,7 +144,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial11.jpg",
+    img: "/images/testimonial1.jpg",
     video: true,
     name: "Nimit Dedhia",
     subtitle: "Personalized approach to learning",
@@ -157,7 +157,7 @@ const testimonialData = [
   },
   {
     type: "video",
-    img: "/images/testimonial12.jpg",
+    img: "/images/testimonial2.jpg",
     video: true,
     name: "Ben Dunatov",
     subtitle: "Perfect for struggling GCSE students",

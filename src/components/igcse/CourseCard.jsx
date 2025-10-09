@@ -52,20 +52,6 @@ function CourseCard() {
         "A year-round IGCSE program built around individual learning objectives. Starting with a diagnostic test to assess current strengths and learning gaps, the course helps students progress at their own pace with flexible schedules and subject-specific mastery."
     },
     {
-      title: "Pre IBDP Summer Bridge Course",
-      bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.7) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
-      mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
-      highlights: [
-        "Introduction to IBDP-style questions, grading, and expectations",
-        "Concept-focused training on essential topics across subjects",
-        "Complete first-term syllabus coverage with expert mentors",
-        "Small group sessions (3–6 students) starting IBDP in September",
-        "Guidance on Internal Assessments (IA) and Extended Essay (EE)",
-        "End-of-summer assessments to track progress and readiness"
-      ],
-      description: "A 6-week head-start program in July and August designed to build a strong foundation in key IBDP concepts. With 24 hours of subject-wise training, this course is ideal for students transitioning into the IBDP, especially those coming from other curricula, preparing them for this demanding phase."
-    },
-    {
       title: "IGCSE / GCSE Year 10 Groups",
       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 1) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
       highlights: [

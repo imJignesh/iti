@@ -115,7 +115,7 @@ const Contact = ({ headerHeight }) => {
                             <img src="/images/call.png" alt="Phone Icon" />
                             <h3>CALL US</h3>
                             <p>Call us today for personalised tutoring and transformative growth.</p>
-                            <a href="tel:+9718080584756">+971 80805 84756</a>
+                            <a href="tel:+971568357374">+971 56835 7374</a>
                         </div>
                     </div>
 

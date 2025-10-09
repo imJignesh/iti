@@ -10,6 +10,7 @@ import AccountingTutorsInfoCard from '@/components/accounting-tutoring/infoCard'
 import AccountingTutorsChooseApp from '@/components/accounting-tutoring/choose-app';
 import AccountingTutorsACT from '@/components/accounting-tutoring/ACT';
 import AccountingTutorsUsps from "@/components/accounting-tutoring/Usps";
+import Trainers from "@/components/accounting-tutoring/Trainers";
 import AccountingTutorsIgniteAchievements from '@/components/accounting-tutoring/IgniteAchievements';
 import AccountingTutorsLifeAtIgniteCarousel from '@/components/accounting-tutoring/LifeAtIgniteCarousel';
 import AccountingTutorsFAQSection from '@/components/accounting-tutoring/FaqSection';
@@ -79,6 +80,10 @@ const AccountingTutorsInDubai = ({ headerHeight }) => {
 
             <section data-scroll-section>
                 <ReviewsSection />
+            </section>
+
+            <section data-scroll-section>
+                <Trainers />
             </section>
 
             <section data-scroll-section>

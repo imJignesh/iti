@@ -120,7 +120,9 @@ const HomeCopy = ({ headerHeight }) => {
                 <Usps />
 
                 {/* Trainers Section */}
-                <Trainers scrollInstance={scrollInstanceRef.current} />
+                <section data-scroll-section>
+                    <Trainers />
+                </section> 
 
                 {/* Testimonial Section */}
                 <Testimonial />

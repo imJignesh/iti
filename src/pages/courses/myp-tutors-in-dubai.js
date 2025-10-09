@@ -6,6 +6,8 @@ import CourseCard from '@/components/myp/CourseCard';
 import FAQSection from '@/components/myp/FaqSection';
 import IgniteAchievements from '@/components/myp/IgniteAchievements';
 import InfoCard from '@/components/myp/InfoCard';
+import IgniteAboutCard from "@/components/myp/IgniteAboutCard";
+import Trainers from "@/components/myp/Trainers";
 import LifeAtIgniteCarousel from '@/components/myp/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/myp/MarqueeBanner';
 import ReviewsSection from '@/components/myp/ReviewsSection';
@@ -61,6 +63,10 @@ const IBDP = ({ headerHeight }) => {
         <InfoCard />
       </section>
 
+      <section data-scroll-section>
+        <IgniteAboutCard />
+      </section>
+
       {/* <section data-scroll-section>
         <StudentAchievements />
       </section> */}
@@ -78,13 +84,17 @@ const IBDP = ({ headerHeight }) => {
       </section>
 
       <section data-scroll-section>
+        <Trainers />
+      </section> 
+
+      <section data-scroll-section>
         <IgniteAchievements />
       </section>
 
       <section data-scroll-section>
         <MarqueeBanner />
       </section>
-
+      
       <section data-scroll-section>
         <UspsSection />
       </section>

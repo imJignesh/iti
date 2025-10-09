@@ -70,11 +70,11 @@ export default function InfoCard() {
               >
                 {isMobile ? (
                   <>
-                    ACT Tutors In Dubai, UAE <br /> For Assured High Scores
+                    Ignite Your Path To <br /> Academic Excellence
                   </>
                 ) : (
                   <>
-                    ACT Tutors In Dubai, UAE <br /> For Strategic Exam Prep
+                    Ignite Your Path To <br /> Academic Excellence
                   </>
                 )}
               </h1>
@@ -93,7 +93,7 @@ export default function InfoCard() {
                   marginTop: "19px"
                 }}
               >
-                Your Path To Test Success
+                Now Also Open In JLT, Dubai
               </p>
 
               <div
@@ -133,7 +133,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Focused <br />ACT Prep
+                  Grade 8 <br />to 12 Support
                 </div>
 
                 <div
@@ -190,7 +190,7 @@ export default function InfoCard() {
                   marginTop: isMobile ? "0" : "20px!important",
                 }}
               >
-                We offer personalized ACT tutoring tailored to each student's unique learning style. Our expert-led programs deliver targeted guidance & proven strategies to help students excel confidently in the ACT.
+                Experience curriculum-aligned tutoring for IBDP, MYP, IGCSE, A-Levels, & AP delivered by expert educators who know the exams inside out, with a focus on clarity, measurable progress, & real academic results.
               </p>
 
               <div className="d-flex gap-3">

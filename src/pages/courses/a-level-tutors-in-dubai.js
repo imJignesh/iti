@@ -6,6 +6,8 @@ import CourseCard from '@/components/a-level/CourseCard';
 import FAQSection from '@/components/a-level/FaqSection';
 import IgniteAchievements from '@/components/a-level/IgniteAchievements';
 import InfoCard from '@/components/a-level/InfoCard';
+import IgniteAboutCard from "@/components/a-level/IgniteAboutCard";
+import Trainers from "@/components/a-level/Trainers";
 import LifeAtIgniteCarousel from '@/components/a-level/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/a-level/MarqueeBanner';
 import ReviewsSection from '@/components/a-level/ReviewsSection';
@@ -63,6 +65,10 @@ const ALEVEL = ({ headerHeight }) => {
       </section>
 
       <section data-scroll-section>
+        <IgniteAboutCard />
+      </section>
+
+      <section data-scroll-section>
         <UniImagesCard />
       </section>
 
@@ -81,6 +87,10 @@ const ALEVEL = ({ headerHeight }) => {
       <section data-scroll-section>
         <ReviewsSection />
       </section>
+
+      <section data-scroll-section>
+        <Trainers />
+      </section> 
 
       <section data-scroll-section>
         <IgniteAchievements />

@@ -3,9 +3,12 @@ import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/ibdp/accordian';
 import Blog from "@/components/homeCopy/Blog";
 import CourseCard from '@/components/ibdp/CourseCard';
+import OurTrainers from '@/components/tutors-jlt-dubai/ourTrainers';
 import FAQSection from '@/components/ibdp/FaqSection';
 import IgniteAchievements from '@/components/ibdp/IgniteAchievements';
 import InfoCard from '@/components/ibdp/InfoCard';
+import IgniteAboutCard from "@/components/ibdp/IgniteAboutCard";
+import Trainers from "@/components/ibdp/Trainers";
 import LifeAtIgniteCarousel from '@/components/ibdp/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
 import ReviewsSection from '@/components/ibdp/ReviewsSection';
@@ -61,6 +64,10 @@ const IBDP = ({ headerHeight }) => {
         <InfoCard />
       </section>
 
+      <section data-scroll-section>
+        <IgniteAboutCard />
+      </section>
+
       {/* <section data-scroll-section>
         <StudentAchievements />
       </section> */}
@@ -78,13 +85,17 @@ const IBDP = ({ headerHeight }) => {
       </section>
 
       <section data-scroll-section>
+        <Trainers />
+      </section> 
+      
+      <section data-scroll-section>
         <IgniteAchievements />
       </section>
 
       <section data-scroll-section>
         <MarqueeBanner />
       </section>
-
+      
       <section data-scroll-section>
         <UspsSection />
       </section>

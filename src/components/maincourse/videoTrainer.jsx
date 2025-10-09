@@ -97,7 +97,7 @@ const TrainersMessage = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
+            What Our Trainers Want
           </span>{" "}
           <span
             style={{
@@ -106,7 +106,7 @@ const TrainersMessage = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            CONSECTETUR
+            Every Student
           </span>{" "}
           <span
             style={{
@@ -115,7 +115,7 @@ const TrainersMessage = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            ADIPISCING
+            To Know
           </span>
         </h2>
       </div>

@@ -7,6 +7,8 @@ import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
 import FAQSection from '@/components/bc/FaqSection';
 import IgniteAchievements from '@/components/bc/IgniteAchievements';
 import InfoCard from '@/components/bc/InfoCard';
+import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
+import Trainers from "@/components/bc/Trainers";
 import LifeAtIgniteCarousel from '@/components/bc/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/bc/MarqueeBanner';
 import ReviewsSection from '@/components/bc/ReviewsSection';
@@ -66,6 +68,10 @@ const BC = ({ headerHeight }) => {
       </section>
 
       <section data-scroll-section>
+        <IgniteAboutCard />
+      </section>
+
+      <section data-scroll-section>
         <UniImagesCard />
       </section>
 
@@ -87,6 +93,10 @@ const BC = ({ headerHeight }) => {
       <section data-scroll-section>
         <ReviewsSection />
       </section>
+
+      <section data-scroll-section>
+        <Trainers />
+      </section> 
 
       <section data-scroll-section>
         <IgniteAchievements />

@@ -195,7 +195,7 @@ export default function IgniteAchievements() {
                 <div className="stat-number fw-bold" style={{
                   background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  WebkitTextFillColor: "#161664",
                   borderRadius: "40px",
                   fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",

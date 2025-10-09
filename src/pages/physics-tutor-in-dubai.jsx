@@ -10,6 +10,7 @@ import PhysicsTutorsInfoCard from '@/components/physics-tutoring/infoCard';
 import PhysicsTutorsChooseApp from '@/components/physics-tutoring/choose-app';
 import PhysicsTutorsACT from '@/components/physics-tutoring/ACT';
 import PhysicsTutorsUsps from "@/components/physics-tutoring/Usps";
+import Trainers from "@/components/physics-tutoring/Trainers";
 import PhysicsTutorsIgniteAchievements from '@/components/physics-tutoring/IgniteAchievements';
 import PhysicsTutorsLifeAtIgniteCarousel from '@/components/physics-tutoring/LifeAtIgniteCarousel';
 import PhysicsTutorsFAQSection from '@/components/physics-tutoring/FaqSection';
@@ -80,6 +81,10 @@ const PhysicsTutorsInDubai = ({ headerHeight }) => {
             <section data-scroll-section>
                 <ReviewsSection />
             </section>
+
+            <section data-scroll-section>
+                <Trainers />
+            </section> 
 
             <section data-scroll-section>
                 <PhysicsTutorsIgniteAchievements />

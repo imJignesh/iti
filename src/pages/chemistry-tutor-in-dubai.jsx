@@ -10,6 +10,7 @@ import ChemistryTutorsInfoCard from '@/components/chemistry-tutoring/infoCard';
 import ChemistryTutorsChooseApp from '@/components/chemistry-tutoring/choose-app';
 import ChemistryTutorsACT from '@/components/chemistry-tutoring/ACT';
 import ChemistryTutorsUsps from "@/components/chemistry-tutoring/Usps";
+import Trainers from "@/components/chemistry-tutoring/Trainers";
 import ChemistryTutorsIgniteAchievements from '@/components/chemistry-tutoring/IgniteAchievements';
 import ChemistryTutorsLifeAtIgniteCarousel from '@/components/chemistry-tutoring/LifeAtIgniteCarousel';
 import ChemistryTutorsFAQSection from '@/components/chemistry-tutoring/FaqSection';
@@ -80,6 +81,10 @@ const ChemistryTutorsInDubai = ({ headerHeight }) => {
             <section data-scroll-section>
                 <ReviewsSection />
             </section>
+
+            <section data-scroll-section>
+                <Trainers />
+            </section> 
 
             <section data-scroll-section>
                 <ChemistryTutorsIgniteAchievements />

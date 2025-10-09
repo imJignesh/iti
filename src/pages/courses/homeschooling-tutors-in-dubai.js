@@ -1,13 +1,14 @@
 import Advantages from '@/components/homeSchooling/Advantages';
 import Curriculum from '@/components/homeSchooling/Curriculum';
+import CourseCard from '@/components/homeSchooling/CourseCard';
 import FAQSection from '@/components/homeSchooling/FaqSection';
 import InfoCard from '@/components/homeSchooling/InfoCard';
 import LifeAtIgniteCarousel from '@/components/homeSchooling/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/homeSchooling/MarqueeBanner';
 import HomeschoolingMindset from '@/components/homeSchooling/mindset';
-import Accordion from '@/components/ibdp/accordian';
+import Accordion from '@/components/homeSchooling/accrodian';
 import Blog from "@/components/homeCopy/Blog";
-import ReviewsSection from '@/components/ibdp/ReviewsSection';
+import ReviewsSection from '@/components/homeSchooling/ReviewsSection';
 import StudentAchievements from '@/components/ibdp/StudentAchivement';
 import { useEffect, useRef } from 'react';
 
@@ -62,6 +63,10 @@ const HomeSchooling = ({ headerHeight }) => {
         <StudentAchievements />
       </section> */}
 
+      <section data-scroll-section>
+        <CourseCard />
+      </section>
+      
       <section data-scroll-section>
         <Curriculum />
       </section>

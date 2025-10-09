@@ -10,6 +10,7 @@ import ComputerTutorsInfoCard from '@/components/computer-tutoring/infoCard';
 import ComputerTutorsChooseApp from '@/components/computer-tutoring/choose-app';
 import ComputerTutorsACT from '@/components/computer-tutoring/ACT';
 import ComputerTutorsUsps from "@/components/computer-tutoring/Usps";
+import Trainers from "@/components/computer-tutoring/Trainers";
 import ComputerTutorsIgniteAchievements from '@/components/computer-tutoring/IgniteAchievements';
 import ComputerTutorsLifeAtIgniteCarousel from '@/components/computer-tutoring/LifeAtIgniteCarousel';
 import ComputerTutorsFAQSection from '@/components/computer-tutoring/FaqSection';
@@ -80,6 +81,10 @@ const ComputerTutorsInDubai = ({ headerHeight }) => {
             <section data-scroll-section>
                 <ReviewsSection />
             </section>
+
+            <section data-scroll-section>
+                <Trainers />
+            </section> 
 
             <section data-scroll-section>
                 <ComputerTutorsIgniteAchievements />

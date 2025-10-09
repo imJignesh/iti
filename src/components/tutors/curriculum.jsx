@@ -181,7 +181,7 @@ const IBCurriculumStages = () => {
                   }}
                 />
                 <div className="curriculum-content">
-                  <div className="curriculum-info">
+                  {/* <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
                       width={isMobile ? 20 : 30}
@@ -190,7 +190,7 @@ const IBCurriculumStages = () => {
                       alt="Check icon"
                     />{" "}
                     <h1>EmSAT</h1>
-                  </div>
+                  </div> */}
 
                   <div className="curriculum-info">
                     <Image

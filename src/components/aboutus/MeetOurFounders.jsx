@@ -43,8 +43,8 @@ export default function MeetOurFounders() {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
-            CONSECTETUR <span className="highlight">ADIPISCING</span>
+            The Visionaries Behind The Ignite's 
+            <span className="highlight"> Purpose</span>
           </h2>
         </div>
 

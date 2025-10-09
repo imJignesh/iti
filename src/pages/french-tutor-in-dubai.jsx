@@ -10,6 +10,7 @@ import FrenchTutorsInfoCard from '@/components/french-tutoring/infoCard';
 import FrenchTutorsChooseApp from '@/components/french-tutoring/choose-app';
 import FrenchTutorsACT from '@/components/french-tutoring/ACT';
 import FrenchTutorsUsps from "@/components/french-tutoring/Usps";
+import Trainers from "@/components/french-tutoring/Trainers";
 import FrenchTutorsIgniteAchievements from '@/components/french-tutoring/IgniteAchievements';
 import FrenchTutorsLifeAtIgniteCarousel from '@/components/french-tutoring/LifeAtIgniteCarousel';
 import FrenchTutorsFAQSection from '@/components/french-tutoring/FaqSection';
@@ -79,6 +80,10 @@ const FrenchTutorsInDubai = ({ headerHeight }) => {
 
             <section data-scroll-section>
                 <ReviewsSection />
+            </section>
+            
+            <section data-scroll-section>
+                <Trainers />
             </section>
 
             <section data-scroll-section>

@@ -10,6 +10,7 @@ import BiologyTutorsInfoCard from '@/components/biology-tutoring/infoCard';
 import BiologyTutorsChooseApp from '@/components/biology-tutoring/choose-app';
 import BiologyTutorsACT from '@/components/biology-tutoring/ACT';
 import BiologyTutorsUsps from "@/components/biology-tutoring/Usps";
+import Trainers from "@/components/biology-tutoring/Trainers";
 import BiologyTutorsIgniteAchievements from '@/components/biology-tutoring/IgniteAchievements';
 import BiologyTutorsLifeAtIgniteCarousel from '@/components/biology-tutoring/LifeAtIgniteCarousel';
 import BiologyTutorsFAQSection from '@/components/biology-tutoring/FaqSection';
@@ -80,6 +81,10 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
             <section data-scroll-section>
                 <ReviewsSection />
             </section>
+
+            <section data-scroll-section>
+                <Trainers />
+            </section> 
 
             {/* <section data-scroll-section>
                 <BiologyTutorsIgniteAchievements />

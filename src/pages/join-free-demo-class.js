@@ -8,7 +8,10 @@ import { Navigation } from "swiper/modules";
 import InfoCard from '@/components/freedemo/InfoCard';
 import Subjects from "@/components/freedemo/Subjects";
 import MovingBanner from "@/components/freedemo/MovingBanner";
+import MarqueeBanner from '@/components/freedemo/MarqueeBanner';
 import Testimonial from "@/components/freedemo/Testimonial";
+import TrainersMessage from "@/components/maincourse/videoTrainer";
+import CallToAction from "@/components/maincourse/CallToAction";
 import StudentAchievements from '@/components/freedemo/StudentAchivement';
 
 const achievements = [
@@ -337,8 +340,21 @@ const FreeDemo = ({ headerHeight }) => {
                 </section>
 
                 {/* What We Offer End */}
-                <MovingBanner />
+                {/* <MovingBanner /> */}
+
+                <section data-scroll-section>
+                    <MarqueeBanner />
+                </section> 
+
                 <Testimonial />
+
+                <section data-scroll-section>
+                    <TrainersMessage />
+                </section>
+
+                <section data-scroll-section>
+                    <CallToAction />
+                </section>
             </div >
         </>
     );

@@ -10,6 +10,7 @@ import BusinessTutorsInfoCard from '@/components/business-tutoring/infoCard';
 import BusinessTutorsChooseApp from '@/components/business-tutoring/choose-app';
 import BusinessTutorsACT from '@/components/business-tutoring/ACT';
 import BusinessTutorsUsps from "@/components/business-tutoring/Usps";
+import Trainers from "@/components/business-tutoring/Trainers";
 import BusinessTutorsIgniteAchievements from '@/components/business-tutoring/IgniteAchievements';
 import BusinessTutorsLifeAtIgniteCarousel from '@/components/business-tutoring/LifeAtIgniteCarousel';
 import BusinessTutorsFAQSection from '@/components/business-tutoring/FaqSection';
@@ -79,6 +80,10 @@ const BusinessTutorsInDubai = ({ headerHeight }) => {
 
             <section data-scroll-section>
                 <ReviewsSection />
+            </section>
+
+            <section data-scroll-section>
+                <Trainers />
             </section>
 
             <section data-scroll-section>

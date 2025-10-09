@@ -10,6 +10,7 @@ import EconomicsTutorsInfoCard from '@/components/economics-tutoring/infoCard';
 import EconomicsTutorsChooseApp from '@/components/economics-tutoring/choose-app';
 import EconomicsTutorsACT from '@/components/economics-tutoring/ACT';
 import EconomicsTutorsUsps from "@/components/economics-tutoring/Usps";
+import Trainers from "@/components/economics-tutoring/Trainers";
 import EconomicsTutorsIgniteAchievements from '@/components/economics-tutoring/IgniteAchievements';
 import EconomicsTutorsLifeAtIgniteCarousel from '@/components/economics-tutoring/LifeAtIgniteCarousel';
 import EconomicsTutorsFAQSection from '@/components/economics-tutoring/FaqSection';
@@ -80,6 +81,10 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
             <section data-scroll-section>
                 <ReviewsSection />
             </section>
+
+            <section data-scroll-section>
+                <Trainers />
+            </section> 
 
             <section data-scroll-section>
                 <EconomicsTutorsIgniteAchievements />

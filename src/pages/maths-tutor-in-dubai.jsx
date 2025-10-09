@@ -10,6 +10,7 @@ import MathsTutorsInfoCard from '@/components/maths-tutoring/infoCard';
 import MathsTutorsChooseApp from '@/components/maths-tutoring/choose-app';
 import MathsTutorsACT from '@/components/maths-tutoring/ACT';
 import MathsTutorsUsps from "@/components/maths-tutoring/Usps";
+import Trainers from "@/components/maths-tutoring/Trainers";
 import MathsTutorsIgniteAchievements from '@/components/maths-tutoring/IgniteAchievements';
 import MathsTutorsLifeAtIgniteCarousel from '@/components/maths-tutoring/LifeAtIgniteCarousel';
 import MathsTutorsFAQSection from '@/components/maths-tutoring/FaqSection';
@@ -80,6 +81,10 @@ const MathsTutorsInDubai = ({ headerHeight }) => {
             <section data-scroll-section>
                 <ReviewsSection />
             </section>
+
+            <section data-scroll-section>
+                <Trainers />
+            </section> 
 
             <section data-scroll-section>
                 <MathsTutorsIgniteAchievements />

@@ -236,7 +236,7 @@ export default function Trainers({ }) {
 
               {!isMobile && <div className="trainersPagination"></div>}
 
-              <button
+              {/* <button
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
@@ -244,7 +244,7 @@ export default function Trainers({ }) {
                 style={{ animationDelay: `${0.3 + trainers.length * 0.06}s` }}
               >
                 SEE MORE
-              </button>
+              </button> */}
               {isMobile && <div className="trainersPagination"></div>}
             </div>
           ) : (

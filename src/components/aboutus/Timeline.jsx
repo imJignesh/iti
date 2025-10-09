@@ -88,8 +88,8 @@ export default function Timeline() {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
-            CONSECTETUR <span className="highlight">ADIPISCING</span>
+            With Every Step Forward, We've Grown With 
+            <span className="highlight"> Our Students</span>
           </h2>
         </div>
 

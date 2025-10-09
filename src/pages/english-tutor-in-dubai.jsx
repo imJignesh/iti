@@ -10,6 +10,7 @@ import EnglishTutorsInfoCard from '@/components/english-tutoring/infoCard';
 import EnglishTutorsChooseApp from '@/components/english-tutoring/choose-app';
 import EnglishTutorsACT from '@/components/english-tutoring/ACT';
 import EnglishTutorsUsps from "@/components/english-tutoring/Usps";
+import Trainers from "@/components/english-tutoring/Trainers";
 import EnglishTutorsIgniteAchievements from '@/components/english-tutoring/IgniteAchievements';
 import EnglishTutorsLifeAtIgniteCarousel from '@/components/english-tutoring/LifeAtIgniteCarousel';
 import EnglishTutorsFAQSection from '@/components/english-tutoring/FaqSection';
@@ -80,6 +81,10 @@ const EnglishTutorsInDubai = ({ headerHeight }) => {
             <section data-scroll-section>
                 <ReviewsSection />
             </section>
+
+            <section data-scroll-section>
+                <Trainers />
+            </section> 
 
             <section data-scroll-section>
                 <EnglishTutorsIgniteAchievements />
