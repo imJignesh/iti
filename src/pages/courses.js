@@ -101,9 +101,9 @@ const About = ({ headerHeight }) => {
             <section data-scroll-section>
                 <Testimonial />
             </section>
-            <section data-scroll-section>
+            {/* <section data-scroll-section>
                 <LifeAtIgniteCarousel />
-            </section>
+            </section> */}
             <section data-scroll-section>
                 <CallToAction />
             </section>

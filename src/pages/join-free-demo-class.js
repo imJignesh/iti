@@ -268,9 +268,9 @@ const FreeDemo = ({ headerHeight }) => {
 
 
                 {/* achievements carousel */}
-                <section data-scroll-section>
+                {/* <section data-scroll-section>
                     <StudentAchievements />
-                </section>
+                </section> */}
 
                 {/* what we offer Start */}
                 <section className="achievementsSection">
