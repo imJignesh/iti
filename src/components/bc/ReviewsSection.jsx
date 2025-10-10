@@ -13,13 +13,13 @@ import {
 
 const testimonialData = [
   // Placeholder Video 1
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 1: Zeynep Inan
   {
@@ -30,13 +30,13 @@ const testimonialData = [
   },
 
   // Placeholder Video 2
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 2: Hassan Ali
   {
@@ -47,13 +47,13 @@ const testimonialData = [
   },
 
   // Placeholder Video 3
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 3: Sushma Menon (Parent)
   {
@@ -64,13 +64,13 @@ const testimonialData = [
   },
 
   // Placeholder Video 4
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 4: Ben Dunatov
   {
@@ -81,13 +81,13 @@ const testimonialData = [
   },
 
   // Placeholder Video 5
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 5: Rosie Seldon (Parent)
   {
@@ -98,13 +98,13 @@ const testimonialData = [
   },
 
   // Placeholder Video 6
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 6: Riyad Bouarissa
   {
@@ -115,13 +115,13 @@ const testimonialData = [
   },
 
    // Placeholder Video 7
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 7: Shivam Bakhda
   {
@@ -132,13 +132,13 @@ const testimonialData = [
   },
 
    // Placeholder Video 8
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 8: Priya Nair
   {
@@ -149,13 +149,13 @@ const testimonialData = [
   },
 
    // Placeholder Video 9
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 9: Nishchaya Dheer
   {
@@ -166,13 +166,13 @@ const testimonialData = [
   },
 
    // Placeholder Video 10
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 10: Palanivel Guruswamy
   {
@@ -183,13 +183,13 @@ const testimonialData = [
   },
 
    // Placeholder Video 11
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 11: Tamanna Iyyani
   {
@@ -200,13 +200,13 @@ const testimonialData = [
   },
 
    // Placeholder Video 12
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
 
   // Text Testimonial 12: Saraswathy Ramachandran
   {

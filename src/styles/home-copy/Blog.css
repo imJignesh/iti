@@ -205,7 +205,7 @@
 
   .homeCopy .blogSection .blogSubtitle,
   .homeCopy .blogSection .blogAllBtn {
-    display: none;
+    display: block;
   }
 
   .homeCopy .blogSection .blogImg {

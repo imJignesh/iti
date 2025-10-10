@@ -1,6 +1,8 @@
 /* Base styles for all screen sizes */
 
-
+.blog-detail-container{
+    margin-top: 4vw;
+}
 h1.main-title {
     font-weight: 700 !important;
     line-height: 1;
@@ -69,7 +71,7 @@ h1.main-title {
     position: -webkit-sticky;
     /* For Safari compatibility */
     position: sticky;
-    top: 30px;
+    top: 4vw;
     /* Adjust this value as needed, e.g., to account for a fixed header */
 }
 
@@ -140,16 +142,16 @@ h1.main-title {
 .form-container {
     background: linear-gradient(115deg, rgba(163, 202, 245, 1) 45%, rgba(231, 246, 255, 1) 100%);
     border-radius: 20px;
-    padding: 30px 25px;
+    padding: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 50, 0.15);
 }
 
 .form-container h2 {
     text-align: center;
-    font-size: 18px;
+    font-size: 1vw;
     font-weight: bold;
     color: #1f2d61;
-    margin-bottom: 25px;
+    margin-bottom: 1.2vw;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -160,15 +162,14 @@ h1.main-title {
     gap: 25px;
 }
 
-.form-group {
+.blog-container .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 1.2vw;
     flex: 1;
 }
-
 .form-group label {
-    font-size: 18px;
+    font-size: 0.8vw;
     color: #1f2d61;
     font-weight: 500;
     margin-bottom: 5px;
@@ -179,9 +180,9 @@ h1.main-title {
 .form-group select {
     border: none;
     border-bottom: 1px solid #88A9C4;
-    padding: 6px 0;
+    padding: 3px 0;
     background: transparent;
-    font-size: 14px;
+    font-size: 0.8vw;
     outline: none;
     width: 100%;
 }
@@ -205,7 +206,7 @@ h1.main-title {
     color: #1f2d61;
     border: 1px solid #1f2d61;
     padding: 8px;
-    font-size: 25px;
+    font-size: 1vw;
     font-weight: 500;
     border-radius: 30px;
     text-align: left;
@@ -213,7 +214,26 @@ h1.main-title {
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
-    padding-left: 20px;
+    padding: 0.5vw 1.2vw;
+}
+
+.submit-btn.blog-submit-btn{
+    display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 8px;
+     background: linear-gradient(90deg, #0d1b6a, #4c84d3);
+     color: #fff;
+     font-weight: bold;
+     font-size: 1vw;
+     padding: 0.5vw 1.2vw;
+     border-radius: 50px;
+     border: none;
+     cursor: pointer;
+     transition: 0.3s ease;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     max-width: 270px;
 }
 
 .submit-btn:hover {
@@ -295,7 +315,7 @@ h1.main-title {
     }
 
     .form-group {
-        margin-bottom: 20px;
+        margin-bottom: 1.2vw;
     }
 
     .form-group label {

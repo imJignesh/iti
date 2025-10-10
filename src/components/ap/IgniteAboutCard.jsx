@@ -81,7 +81,7 @@ export default function IgniteAboutCard() {
         </div>
 
         {/* Right Content */}
-        <div className="ignite-right">
+        {/* <div className="ignite-right">
           <img
             src="/assets/arect.png"
             alt="bg-shape"
@@ -113,7 +113,7 @@ export default function IgniteAboutCard() {
               className="main-image"
             />
           </div>
-        </div>
+        </div> */}
         {/* Separate Check items boxes */}
       </div>
 
@@ -256,7 +256,7 @@ export default function IgniteAboutCard() {
           max-width: 90vw;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr;
           gap: 80px;
           align-items: flex-start;
         }
@@ -285,7 +285,7 @@ export default function IgniteAboutCard() {
         .subtitle-wrapper {
           display: flex;
           align-items: center;
-          justify-content: flex-start;
+          justify-content: centert;
           gap: 15px;
           margin-bottom: 25px;
                     margin-top:30px;
@@ -331,7 +331,8 @@ export default function IgniteAboutCard() {
           color: #233467;
           line-height: 1.2;
           margin: 0 0 12px 0;
-                    margin-bottom: 25px;
+          margin-bottom: 25px;
+          text-align: center;
 
         }
 

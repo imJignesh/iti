@@ -205,20 +205,22 @@ export default function Trainers({ }) {
                 {trainers.map((t, i) => (
                   <SwiperSlide key={i}>
                     {({ isActive }) => (
-                      <div
-                        data-color={t.color}
-                        className={` trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
-                        style={{ animationDelay: 0.2 }}
-                      >
-                        <div className="trainerName">{t.name}</div>
-                        <div className="trainerImgWrap">
-                          <img src={t.img} alt={t.name} className="trainerImg" />
+                      <a href="/our-team">
+                        <div
+                          data-color={t.color}
+                          className={` trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
+                          style={{ animationDelay: 0.2 }}
+                        >
+                          <div className="trainerName">{t.name}</div>
+                          <div className="trainerImgWrap">
+                            <img src={t.img} alt={t.name} className="trainerImg" />
+                          </div>
+                          <div className="trainerSubtitle subtitleBox">
+                            {t.subtitle}
+                          </div>
+                          <div className="trainerExp">{t.experience}</div>
                         </div>
-                        <div className="trainerSubtitle subtitleBox">
-                          {t.subtitle}
-                        </div>
-                        <div className="trainerExp">{t.experience}</div>
-                      </div>
+                      </a>
                     )}
                   </SwiperSlide>
                 ))}

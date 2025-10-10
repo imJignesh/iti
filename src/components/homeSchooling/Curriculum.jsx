@@ -3,7 +3,27 @@ import React from "react";
 export default function Curriculum() {
   return (
     <section className="curriculum-section">
-      <div className="SubHeading testSubheading" style={{ marginBottom: "30px" }}>Curriculum Offerings For Private Candidates
+      <div className="testHeadings">
+          <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <div className="SubHeading testSubheading">Curriculum Offerings For Private Candidates
+            </div>
+          </div>
+          <h2
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section testTitle"
+            style={{ animationDelay: "0.2s" }}
+          >
+            
+            <span className="highlight">  Curriculum Offerings </span>- Lorem ipsum dolor sit amet, consectetur adipiscing
+          </h2>
       </div>
 
       <div className="curriculum-container">

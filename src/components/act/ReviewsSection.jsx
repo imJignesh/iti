@@ -15,39 +15,39 @@ import {
 
 
 const testimonialData = [
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "We had a great experience with the instructor Flavy at Ignite. My child progressed amazingly under her guidance and achieved good grade in Chemistry. Thank you so much to her and Ahzeb and ignite team for supporting us in this!",
     name: "Nidhi Choudhury",
     subtitle: "",
   },
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "Sumit from Ignite went out of his way to arrange a tutor for my daughter on very short notice. The tutor was kind and competent and managed to quickly solve my daughter's doubt. Thank you! Highly recommend!",
     name: "Nicole Morgan",
     subtitle: "",
   },
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "really good tutoring sessions conducted. I'm a student going there myself and I really enjoy my Economics sessions with my tutor (Nidhi) who really gives good resources and explains/condenses concepts really well. Lots of past paper practice and she's very good at essay planning as well. Overall, I really enjoy the sessions I've been receiving here.",
@@ -55,13 +55,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "I was referred to Ignite by a family member who had previously used their services and was highly satisfied. From the start, the coordinator, Mr. Ahzeb, demonstrated exceptional professionalism in his interactions with both parents and students.My daughter was initially struggling with economics, but under the guidance of Miss Harsha, the subject became much more approachable and understandable. Her teaching style made a significant difference in my daughter’s confidence and performance.I would highly recommend this institute to anyone seeking additional academic support. Their dedication and quality of tutoring truly stand out, and I’m confident others will have a similarly positive experience.I would like to wish the team the very best of luck and I hope they will offer their services to many more countries within the Middle East in the future .",
@@ -69,13 +69,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "The trainers were flexible and were able to help in difficult subjects like Physics. My son scored a 100/100 on one of his maths papers after working with the tutors. Great work",
@@ -83,13 +83,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "Ignite provides high quality tutoring with knowledgeable tutors and provide beneficial resources",
@@ -97,13 +97,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "They were happy to help regardless of my location. They also promptly responded to my request and set up a meeting on a short notice. It speaks a lot about their work ethics and I found them to be a credible institute.",
@@ -111,13 +111,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "Been here for 3 years it was an amazing journey to be on academically and socially.Amazing vibe with the teachers.",

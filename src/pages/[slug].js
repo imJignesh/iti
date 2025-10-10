@@ -35,14 +35,14 @@ const slugify = (text) => {
 const getSidebarHtml = () => {
     return `
         <div class="sticky-sidebar-wrapper">
-            <div class="sidebar-image mb-4">
+            <div class="sidebar-image mb-3">
                 <img
                     src="/images/blog-sidebar.png"
                     alt="Get a Free Counseling"
                     class="img-fluid w-100 rounded"
                 />
             </div>
-            <div class="form-container">
+            <div class="form-container blog-container">
                 <h2>Get a Free Demo Class +<br />Free Study Resources</h2>
                 <form>
                     <div class="form-row">
@@ -71,7 +71,7 @@ const getSidebarHtml = () => {
                             <option>SAT</option>
                         </select>
                     </div>
-                    <button type="submit" class="submit-btn">
+                    <button type="submit" class="submit-btn blog-submit-btn">
                         Submit
                         <span class="arrow">→</span>
                     </button>
@@ -232,7 +232,7 @@ export default function PostDetail() {
             )}
 
             <section className="post-detail-section py-5" data-scroll data-scroll-section>
-                <div className="container">
+                <div className="container blog-detail-container" >
                     <h1 className="mb-4 display-4 main-title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                     <div className="mb-2 post-date">
                         <span>Published on {publishedDate} </span>

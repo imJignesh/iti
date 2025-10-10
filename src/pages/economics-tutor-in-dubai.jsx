@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 // Assuming shared components are kept in their original path
 import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
-import ReviewsSection from '@/components/ibdp/ReviewsSection';
+import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 import Hero from '@/components/home/Hero';
 
 // Updated imports to new duplicated components (assuming a new folder for components)

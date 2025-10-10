@@ -69,6 +69,18 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             Power Your Academic Goals With Expert Prep{" "}
             <span className="highlight">Support</span>
           </h2>
+
+          <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.4s" }}
+          >
+              <p>
+                  Whether you're aiming for top scores or a strong foundation, Ignite’s courses give you the edge to succeed.
+              </p>
+          </div>
         </div>
       </div>{" "}
       {/* End container for headings */}

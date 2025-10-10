@@ -12,39 +12,39 @@ import {
 
 
 const testimonialData = [
-  {
-    type: "video",
-    img: "/images/testimonial1.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial1.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "I wanted to share my incredible experience with Ignite Training Institute! They have been absolutely amazing in coaching my son. The team there took a personal interest in his progress, helping him overcome challenges and building his confidence along the way. I highly recommend Ignite Training Institute to anyone looking for exceptional coaching. The teachers are outstanding and go the extra mile to provide individualized attention. Their dedication and support have made a remarkable difference in my son's educational journey.Keep up the great stuff, Ignite Training Institute! Your commitment to students' growth is truly commendable.",
     name: "Genesis Tech",
     subtitle: "",
   },
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "Sumit from Ignite went out of his way to arrange a tutor for my daughter on very short notice. The tutor was kind and competent and managed to quickly solve my daughter's doubt. Thank you! Highly recommend!",
     name: "Nicole Morgan",
     subtitle: "",
   },
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "Ms. Nidhi Arora is one of the best Business and Economics teachers for the IB. She knows exactly what is coming on the syllabus and does an amazing job at helping her students. I have been working with ehr for the best part of my DP course so far, and I can say that whatever was hard to understand in school, Ms. Nidhi explained it to me within seconds. My grades have gone right up and I am on track for a great DP score all thanks to her.",
@@ -52,13 +52,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "really good tutoring sessions conducted. I'm a student going there myself and I really enjoy my Economics sessions with my tutor (Nidhi) who really gives good resources and explains/condenses concepts really well. Lots of past paper practice and she's very good at essay planning as well. Overall, I really enjoy the sessions I've been receiving here.",
@@ -66,13 +66,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "The institute has always been extremely helpful and thanks all to the help of Ms Sadaf I am able to take A level Economics outside of school and still excel by already achieving 2 A’s in the first two AS papers and now am aiming for A*’s in P3 and P4. Additionally, I am also able to improve my Business Studies skills.",
@@ -80,13 +80,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "I highly recommend the services offered by Ignite. Sadaf was friendly and extremely helpful for A-Level Economics and Business. Thanks to her, I achieved a newfound sense of confidence for my exams and was able to study in a structured and effective way. The rest of the staff was great too, from Ahzeb to Saif.",
@@ -94,13 +94,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "As a student that has completed my A-levels with Ignite, I can say that my experience with the teachers and faculty has been amazing. Ignite provided me with a supportive environment where I really benefitted learning from kind and passionate teachers. Overall, it was a place I could fully explore and excel in my academic pursuits and I believe has set me up well for university and my life ahead.",
@@ -108,13 +108,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "We had a wonderful experience with Ignite training institute. My daughter got very good support from her teacher Mr Abdul for her A level Further Math course. He taught all concepts clearly and cleared her doubts",
@@ -122,13 +122,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "I have been taking lessons at Ignite Training Institute for around three years. I have taken lessons for IGCSE science and math which has helped me achieve top grades. I have also taken lessons for IB math, biology, and Spanish. With the help of my trainers, I was able to achieve a good predicted and final exam grade which allowed me get offers from top universities in the UK such as UCL and University of Edinburgh.",
@@ -136,13 +136,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "Ignite institute has been a great experience. Especially with the mentors level of experience being very knowledgeable across IB.",
@@ -150,13 +150,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "Highly recommend Ignite! My academic success is certainty a testament to their aim for excellence. The teaching provided was exceptional. The expertise and dedication made learning enjoyable and effective. The personalised approach tailored to my learning style was invaluable.",
@@ -164,13 +164,13 @@ const testimonialData = [
     subtitle: "",
   },
 
-  {
-    type: "video",
-    img: "/images/testimonial2.jpg",
-    video: true,
-    name: "LOREM IPSUM",
-    subtitle: "Lorem ipsum dolor sit",
-  },
+  // {
+  //   type: "video",
+  //   img: "/images/testimonial2.jpg",
+  //   video: true,
+  //   name: "LOREM IPSUM",
+  //   subtitle: "Lorem ipsum dolor sit",
+  // },
   {
     type: "text",
     text: "Great tutoring service! Perfect for struggling GCSE students.",

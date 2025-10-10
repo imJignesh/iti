@@ -24,6 +24,7 @@ const trainers = [
 // ----------------------------------------------------------------------
 
 const TrainerCard = ({ trainer }) => (
+  <a href="/our-team">
     <div data-color={trainer.color} className="trainerCard">
         <div className="trainerName">{trainer.name}</div>
         <div className="trainerImgWrap">
@@ -32,6 +33,7 @@ const TrainerCard = ({ trainer }) => (
         <div className="trainerSubtitle">{trainer.subtitle}</div>
         <div className="trainerExp">{trainer.experience}</div>
     </div>
+  </a>
 );
 
 // ----------------------------------------------------------------------

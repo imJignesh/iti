@@ -65,16 +65,30 @@ export default function HomeschoolingMindset() {
 
   return (
     <section className="mindset-section">
-      <div
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat="true"
-        className="fade-in-section"
-        style={{ animationDelay: "0.1s" }}
-      >
-        <div className="SubHeading testSubheading" style={{ marginBottom: "30px" }}>MINDSET FOR PURSUING PRIVATE SCHOOLING
-        </div>
+      <div className="testHeadings">
+          <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <div className="SubHeading testSubheading">MINDSET FOR PURSUING PRIVATE SCHOOLING
+            </div>
+          </div>
+          <h2
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section testTitle"
+            style={{ animationDelay: "0.2s" }}
+          >
+            
+            <span className="highlight">  Mindset </span>- Lorem ipsum dolor sit amet, consectetur adipiscing
+          </h2>
       </div>
+      
+      
       <div className="cards-container">
         {cards.map((card, index) => (
           <div

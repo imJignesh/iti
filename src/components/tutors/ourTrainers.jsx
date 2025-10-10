@@ -205,6 +205,7 @@ export default function Trainers({ }) {
                 {trainers.map((t, i) => (
                   <SwiperSlide key={i}>
                     {({ isActive }) => (
+                      <a href="/our-team">
                       <div
                         data-color={t.color}
                         className={` trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
@@ -219,6 +220,7 @@ export default function Trainers({ }) {
                         </div>
                         <div className="trainerExp">{t.experience}</div>
                       </div>
+                      </a>
                     )}
                   </SwiperSlide>
                 ))}
