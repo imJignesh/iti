@@ -54,7 +54,7 @@ const Header = ({ setHeaderHeight }) => {
                                 <div className={styles.megaMenuContent}>
                                     <div className={styles.megaMenuLeft}>
                                         {/* Updated to /courses/ as per 'Our Courses' link and general category */}
-                                        <h3><span>01</span> <a href='/courses'>International baccalaureate<div><img src="/images/btn-arrow.png" /></div></a></h3>
+                                        <h3><span>01</span> <a href='/ib-curriculum-tutors-in-dubai'>International baccalaureate<div><img src="/images/btn-arrow.png" /></div></a></h3>
                                         <a href='/courses/ibdp-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/ibdp-tutors-in-dubai') ? styles.activeLink : ''}`}>
                                             <img src="/images/header-menu1.png" alt="IBDP" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>IBDP</h4>

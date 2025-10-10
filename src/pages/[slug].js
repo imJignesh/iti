@@ -97,7 +97,7 @@ const TOCPostContent = ({ content, toc }) => {
     }
 
     const tocHtml = `
-        <div class="my-4 d-lg-none">
+        <div class="my-4">
             <div class="card-body">
                 <h5 class="toc-title">Table of Contents</h5>
                 <nav>
@@ -291,7 +291,7 @@ export default function PostDetail() {
                                 src={featuredImage}
                                 alt={post.title.rendered}
                                 className="img-fluid"
-                                style={{ objectFit: 'cover', width: '100%' }}
+                                style={{ objectFit: 'cover' }}
                             />
                         </div>
                     )}

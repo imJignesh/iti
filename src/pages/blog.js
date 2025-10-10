@@ -434,6 +434,50 @@ const Blogpg = ({ headerHeight }) => {
                         </>
                     )}
                 </section>
+                {/* <section
+                    className="blog-newsletter-section py-5"
+                    data-scroll
+                    data-scroll-section
+                >
+                    <div className="container">
+                        <div className="card newsletter-card text-center p-4 p-md-5">
+                            <div className="card-body">
+                                <h2
+                                    data-scroll
+                                    data-scroll-class="is-inview"
+                                    data-scroll-repeat="true"
+                                    className="fade-in-section aboutTitle"
+                                    style={{ animationDelay: "0.2s" }}
+                                >
+                                    SUBSCRIBE TO OUR NEWSLETTER
+
+                                </h2>
+
+                                <p className="newsletter-text mx-auto mb-4">
+                                    Stay connected with the latest academic content, curated resources, & student-focused advice. Ignite your inbox with purposeful learning updates every week.
+                                </p>
+                                <form className="newsletter-form mx-auto">
+                                    <div className="input-group">
+                                        <input
+                                            type="email"
+                                            className="form-control newsletter-input"
+                                            placeholder="Email"
+                                            aria-label="Email"
+                                            required
+                                        />
+                                        <button
+                                            className="btn newsletter-submit-btn"
+                                            type="submit"
+                                            aria-label="Subscribe"
+                                        >
+                                            <span className="arrow">→</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section> */}
             </div>
         </>
     );
