@@ -270,7 +270,6 @@ export default function IgniteAboutCard() {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
-
         .fade-in-section {
           opacity: 0;
           transform: translateY(20px);
