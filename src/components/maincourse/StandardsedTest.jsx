@@ -66,7 +66,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             className="fade-in-section testTitle font-sizet1"
             style={{ animationDelay: "0.2s" }}
           >
-            Score Higher With Test Prep <br/> Methods That Truly <span className="highlight">Work</span>
+            Score Higher With Test Prep <br /> Methods That Truly <span className="highlight">Work</span>
           </h2>
         </div>
       </div> {/* End container for headings */}
@@ -220,7 +220,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
   font-size: 30px !important;
 }
   .font-sizet1 {
-  font-size: 40px !important;
+  font-size: 2rem !important;
 }
 
 
