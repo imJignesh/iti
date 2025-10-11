@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function IBCurriculumStages() {
   return (
     <div
-      className="overflow-hidden fade-in-section container1"
+      className="overflow-hidden fade-in-section container1 ibcurriculum"
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
@@ -32,7 +32,7 @@ export default function IBCurriculumStages() {
               className="fade-in-section testTitle"
               style={{ animationDelay: "0.2s" }}
             >
-              Step-By-Step Guidance Through The <br/>{" "}
+              Step-By-Step Guidance Through The <br />{" "}
               <span className="highlight">IB Curriculum</span>
             </h2>
           </div>
@@ -185,6 +185,8 @@ export default function IBCurriculumStages() {
   max-width:90vw !important;
   margin:0 auto !important;
   }
+  .ibcurriculum{
+  padding:60px 20px;}
         .fade-in-section {
           opacity: 0;
           transform: translateY(20px);

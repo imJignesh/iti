@@ -12,7 +12,7 @@ const FAQSection = () => {
     const handleResize = () => {
       const width = window.innerWidth;
       setIsMobile(width < 768);
-      
+
       // Check for 1920px at 125% zoom (effective width = 1536px)
       setIsHighDpi(width >= 1536 && width <= 1919);
     };
@@ -21,38 +21,38 @@ const FAQSection = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   const toggleItem = (index) => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-     const faqData = [
-        {
-            question: "What curricula does Ignite offer Accounting tutoring for?",
-            answer:
-                "Ignite provides Accounting tutoring for IGCSE, AS & A-Levels (Cambridge & Edexcel), and introductory university-level courses.",
-        },
-        {
-            question: "What topics are covered in Accounting tutoring sessions?",
-            answer:
-                "Tutoring includes financial statements, double-entry bookkeeping, ratios, adjustments, ledgers, trial balance, and accounting principles.",
-        },
-        {
-            question: "Is support available for both theory and numerical questions?",
-            answer:
-                "Yes, sessions focus on building both conceptual understanding and calculation accuracy to handle structured and application-based questions.",
-        },
-        {
-            question: "Do you offer past paper practice and exam preparation?",
-            answer:
-                "Absolutely. Students work on past papers, mock tests, and receive feedback on time management, presentation, and examiner expectations.",
-        },
-        {
-            question: "Can I book a free demo class before joining?",
-            answer:
-                "Yes, Ignite offers a free demo session so students can assess the teaching approach and get paired with the right Accounting tutor.",
-        },
-    ];
+  const faqData = [
+    {
+      question: "What curricula does Ignite offer Accounting tutoring for?",
+      answer:
+        "Ignite provides Accounting tutoring for IGCSE, AS & A-Levels (Cambridge & Edexcel), and introductory university-level courses.",
+    },
+    {
+      question: "What topics are covered in Accounting tutoring sessions?",
+      answer:
+        "Tutoring includes financial statements, double-entry bookkeeping, ratios, adjustments, ledgers, trial balance, and accounting principles.",
+    },
+    {
+      question: "Is support available for both theory and numerical questions?",
+      answer:
+        "Yes, sessions focus on building both conceptual understanding and calculation accuracy to handle structured and application-based questions.",
+    },
+    {
+      question: "Do you offer past paper practice and exam preparation?",
+      answer:
+        "Absolutely. Students work on past papers, mock tests, and receive feedback on time management, presentation, and examiner expectations.",
+    },
+    {
+      question: "Can I book a free demo class before joining?",
+      answer:
+        "Yes, Ignite offers a free demo session so students can assess the teaching approach and get paired with the right Accounting tutor.",
+    },
+  ];
 
   return (
     <div
@@ -88,7 +88,7 @@ const FAQSection = () => {
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
-              <span className="SubHeading" style={{ fontSize: isHighDpi ? "22px" : isMobile ? "" : "28px" }}>FAQS
+              <span className="SubHeading" style={{ fontSize: isHighDpi ? "28px" : isMobile ? "" : "28px" }}>FAQS
               </span>
             </div>
 
@@ -98,27 +98,27 @@ const FAQSection = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section text-uppercase"
-              style={{ 
-                animationDelay: "0.2s", 
-                color: "#19245E", 
-                fontWeight: 800, 
-                marginBottom: "20px", 
-                fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem" 
+              style={{
+                animationDelay: "0.2s",
+                color: "#19245E",
+                fontWeight: 800,
+                marginBottom: "20px",
+                fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem"
               }}
             >
               Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
             </h2>
 
             <p
-              style={{ 
-                color: "#64748b", 
-                maxWidth: isMobile ? "100%" : "28rem", 
-                fontSize: isHighDpi ? "16px" : isMobile ? "16px" : "20px", 
-                lineHeight: isMobile ? "1.5" : "1.2", 
-                margin: isMobile ? "0 auto" : "0", 
-                paddingLeft: isMobile ? "0.5rem" : "0", 
-                paddingRight: isMobile ? "0.5rem" : "0", 
-                marginBottom: isMobile ? "15px" : "20px" 
+              style={{
+                color: "#64748b",
+                maxWidth: isMobile ? "100%" : "28rem",
+                fontSize: isHighDpi ? "16px" : isMobile ? "16px" : "20px",
+                lineHeight: isMobile ? "1.5" : "1.2",
+                margin: isMobile ? "0 auto" : "0",
+                paddingLeft: isMobile ? "0.5rem" : "0",
+                paddingRight: isMobile ? "0.5rem" : "0",
+                marginBottom: isMobile ? "15px" : "20px"
               }}
             >
               Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
@@ -144,12 +144,12 @@ const FAQSection = () => {
                 >
                   <span
                     className="fw-bold h5 lh-sm mb-0"
-                    style={{ 
-                      color: "#1e3a8a", 
-                      fontSize: isHighDpi ? "20px" : isMobile ? "1.1rem" : "25px", 
-                      lineHeight: "100%", 
-                      letterSpacing: "1%", 
-                      width: "90%" 
+                    style={{
+                      color: "#1e3a8a",
+                      fontSize: isHighDpi ? "20px" : isMobile ? "1.1rem" : "25px",
+                      lineHeight: "100%",
+                      letterSpacing: "1%",
+                      width: "90%"
                     }}
                   >
                     {faq.question}

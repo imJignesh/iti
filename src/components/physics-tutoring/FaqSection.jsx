@@ -12,7 +12,7 @@ const FAQSection = () => {
     const handleResize = () => {
       const width = window.innerWidth;
       setIsMobile(width < 768);
-      
+
       // Check for 1920px at 125% zoom (effective width = 1536px)
       setIsHighDpi(width >= 1536 && width <= 1919);
     };
@@ -21,38 +21,38 @@ const FAQSection = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   const toggleItem = (index) => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-     const faqData = [
-        {
-            question: "Which Physics curricula does Ignite offer tutoring for?",
-            answer:
-                "Our English tutors at Ignite are seasoned professionals with advanced degrees in English and extensive teaching experience across IGCSE, A-Level, IB, AP, ACT, and university preparation programs",
-        },
-        {
-            question: "Do tutors help with both theoretical concepts and numerical problems?",
-            answer:
-                "Yes, sessions include in-depth concept explanation along with regular practice on formulas, calculations, and application-based questions.",
-        },
-        {
-            question: "Can I get help with IB Internal Assessments or lab report guidance?",
-            answer:
-                "Absolutely. Tutors guide students through their IB Physics IAs, lab design, data analysis, and evaluation, ensuring alignment with IB criteria.",
-        },
-        {
-            question: "How does Ignite help students prepare for Physics exams?",
-            answer:
-                "Tutoring includes past paper practice, time-bound mock tests, problem-solving strategies, and feedback on commonly tested topics and errors.",
-        },
-        {
-            question: "Is a Physics demo class available before enrolling?",
-            answer:
-                "Yes, students can schedule a free demo session to meet a tutor, review their learning needs, and experience the teaching approach first-hand.",
-        },
-    ];
+  const faqData = [
+    {
+      question: "Which Physics curricula does Ignite offer tutoring for?",
+      answer:
+        "Our English tutors at Ignite are seasoned professionals with advanced degrees in English and extensive teaching experience across IGCSE, A-Level, IB, AP, ACT, and university preparation programs",
+    },
+    {
+      question: "Do tutors help with both theoretical concepts and numerical problems?",
+      answer:
+        "Yes, sessions include in-depth concept explanation along with regular practice on formulas, calculations, and application-based questions.",
+    },
+    {
+      question: "Can I get help with IB Internal Assessments or lab report guidance?",
+      answer:
+        "Absolutely. Tutors guide students through their IB Physics IAs, lab design, data analysis, and evaluation, ensuring alignment with IB criteria.",
+    },
+    {
+      question: "How does Ignite help students prepare for Physics exams?",
+      answer:
+        "Tutoring includes past paper practice, time-bound mock tests, problem-solving strategies, and feedback on commonly tested topics and errors.",
+    },
+    {
+      question: "Is a Physics demo class available before enrolling?",
+      answer:
+        "Yes, students can schedule a free demo session to meet a tutor, review their learning needs, and experience the teaching approach first-hand.",
+    },
+  ];
 
   return (
     <div
@@ -88,7 +88,7 @@ const FAQSection = () => {
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
-              <span className="SubHeading" style={{ fontSize: isHighDpi ? "22px" : isMobile ? "" : "28px" }}>FAQS
+              <span className="SubHeading" style={{ fontSize: isHighDpi ? "28px" : isMobile ? "" : "28px" }}>FAQS
               </span>
             </div>
 
@@ -98,27 +98,27 @@ const FAQSection = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section text-uppercase"
-              style={{ 
-                animationDelay: "0.2s", 
-                color: "#19245E", 
-                fontWeight: 800, 
-                marginBottom: "20px", 
-                fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem" 
+              style={{
+                animationDelay: "0.2s",
+                color: "#19245E",
+                fontWeight: 800,
+                marginBottom: "20px",
+                fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem"
               }}
             >
               Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
             </h2>
 
             <p
-              style={{ 
-                color: "#64748b", 
-                maxWidth: isMobile ? "100%" : "28rem", 
-                fontSize: isHighDpi ? "16px" : isMobile ? "16px" : "20px", 
-                lineHeight: isMobile ? "1.5" : "1.2", 
-                margin: isMobile ? "0 auto" : "0", 
-                paddingLeft: isMobile ? "0.5rem" : "0", 
-                paddingRight: isMobile ? "0.5rem" : "0", 
-                marginBottom: isMobile ? "15px" : "20px" 
+              style={{
+                color: "#64748b",
+                maxWidth: isMobile ? "100%" : "28rem",
+                fontSize: isHighDpi ? "16px" : isMobile ? "16px" : "20px",
+                lineHeight: isMobile ? "1.5" : "1.2",
+                margin: isMobile ? "0 auto" : "0",
+                paddingLeft: isMobile ? "0.5rem" : "0",
+                paddingRight: isMobile ? "0.5rem" : "0",
+                marginBottom: isMobile ? "15px" : "20px"
               }}
             >
               Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
@@ -144,12 +144,12 @@ const FAQSection = () => {
                 >
                   <span
                     className="fw-bold h5 lh-sm mb-0"
-                    style={{ 
-                      color: "#1e3a8a", 
-                      fontSize: isHighDpi ? "20px" : isMobile ? "1.1rem" : "25px", 
-                      lineHeight: "100%", 
-                      letterSpacing: "1%", 
-                      width: "90%" 
+                    style={{
+                      color: "#1e3a8a",
+                      fontSize: isHighDpi ? "20px" : isMobile ? "1.1rem" : "25px",
+                      lineHeight: "100%",
+                      letterSpacing: "1%",
+                      width: "90%"
                     }}
                   >
                     {faq.question}

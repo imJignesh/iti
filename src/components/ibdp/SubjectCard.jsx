@@ -153,7 +153,7 @@ export default function SubjectsCard() {
         {/* LEFT COLUMN */}
         <div className="subjectLeft">
           <span className="subjectHeader">
-            <span className="SubHeading">SUBJECTS</span>
+            <span className="SubHeading">SUBJECTS WE SUPPORT</span>
           </span>
           <h2 className="subjectTitle">
             Tutoring That Makes Every IBDP Subject Clear (HL & SL)
@@ -291,7 +291,7 @@ export default function SubjectsCard() {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          width: 200px;
+          width: 480px;
         }
 
         .subjectTitle {

@@ -138,7 +138,7 @@ export default function IgniteAboutCard() {
           <div className="d-flex flex-column align-items-center gap-2 mb-4 mb-md-0">
             <h3 className="heading-title gradient-text">RESOURCES</h3>
             <p className="heading-subtitle">
-              Comprehensive study guides to 
+              Comprehensive study guides to
               <br className="d-none d-md-block" />
               support independent learning.
             </p>

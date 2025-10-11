@@ -1,7 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 export default function WhyChooseUs() {
   const [isMobile, setIsMobile] = useState(false);
+
+  // State for the two counters
+  const [count1, setCount1] = useState(0);
+  const [count2, setCount2] = useState(0);
+
+  // Ref to observe for intersection
+  const sectionRef = useRef(null);
+  // State to prevent re-animation on re-scroll
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -14,10 +23,71 @@ export default function WhyChooseUs() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const currentRef = sectionRef.current;
+
+    // Check if the section ref exists and if animation has not run yet
+    if (!currentRef || hasAnimated) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            // Start the counter animation when the section is visible
+            startCounterAnimation();
+            setHasAnimated(true); // Set state to true to prevent re-animation
+            observer.unobserve(currentRef); // Stop observing after animation starts
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the section is visible
+      }
+    );
+
+    observer.observe(currentRef);
+
+    // Cleanup function
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [hasAnimated]); // Re-run effect only if hasAnimated state changes
+
+  const startCounterAnimation = () => {
+    const target1 = 93;
+    const target2 = 90;
+    const duration = 1500; // 1.5 seconds for animation
+    const stepTime = 10; // milliseconds
+
+    // Calculate the increment for each step
+    const increment1 = target1 / (duration / stepTime);
+    const increment2 = target2 / (duration / stepTime);
+
+    let currentCount1 = 0;
+    let currentCount2 = 0;
+
+    const interval = setInterval(() => {
+      currentCount1 = Math.min(currentCount1 + increment1, target1);
+      currentCount2 = Math.min(currentCount2 + increment2, target2);
+
+      // Update state
+      setCount1(Math.round(currentCount1));
+      setCount2(Math.round(currentCount2));
+
+      // Stop the interval once both counters reach their targets
+      if (currentCount1 >= target1 && currentCount2 >= target2) {
+        clearInterval(interval);
+      }
+    }, stepTime);
+  };
+
   return (
     <>
+      {/* Attach ref to the main section */}
       {!isMobile ? (
-        <section className="why-choose-section py-5">
+        <section ref={sectionRef} className="why-choose-section py-5">
           <div className="container">
             <div className="row align-items-center">
               {/* Left side - Image */}
@@ -47,7 +117,7 @@ export default function WhyChooseUs() {
                       className="fade-in-section testTitle"
                       style={{ animationDelay: "0.2s" }}
                     >
-                      A Legacy Of Success Built On Trust & 
+                      A Legacy Of Success Built On Trust &
                       <span className="highlight"> Learning</span>
                     </h2>
                   </div>
@@ -104,7 +174,8 @@ export default function WhyChooseUs() {
                           </svg>
 
                           <div className="progress-text">
-                            <span className="percentage">93%</span>
+                            {/* Display the animated counter value */}
+                            <span className="percentage">{count1}%</span>
                           </div>
                         </div>
                         <div className="stat-label">
@@ -162,7 +233,8 @@ export default function WhyChooseUs() {
                           </svg>
 
                           <div className="progress-text">
-                            <span className="percentage1">90%</span>
+                            {/* Display the animated counter value */}
+                            <span className="percentage1">{count2}%</span>
                           </div>
                         </div>
                         <div className="stat-label text-uppercase">
@@ -177,7 +249,7 @@ export default function WhyChooseUs() {
               </div>
             </div>
           </div>
-
+          {/* ... all your existing style blocks ... */}
           <style jsx>{`
             .image-container {
               position: relative;
@@ -348,7 +420,7 @@ export default function WhyChooseUs() {
           `}</style>
         </section>
       ) : (
-        <section className="why-choose-section py-5">
+        <section ref={sectionRef} className="why-choose-section py-5">
           <div className="container">
             <div className="row align-items-center">
               {/* Left side - Image */}
@@ -430,7 +502,8 @@ export default function WhyChooseUs() {
                               />
                             </svg>
                             <div className="progress-text">
-                              <span className="percentage">90%</span>
+                              {/* Display the animated counter value */}
+                              <span className="percentage">{count1}%</span>
                             </div>
                           </div>
                           <div className="stat-label">
@@ -472,7 +545,8 @@ export default function WhyChooseUs() {
                               />
                             </svg>
                             <div className="progress-text">
-                              <span className="percentage">65%</span>
+                              {/* Display the animated counter value */}
+                              <span className="percentage">{count2}%</span>
                             </div>
                           </div>
                           <div className="stat-label">
@@ -488,7 +562,7 @@ export default function WhyChooseUs() {
               </div>
             </div>
           </div>
-
+          {/* ... all your existing style blocks ... */}
           <style jsx>{`
             .image-container {
               position: relative;

@@ -49,7 +49,7 @@ export default function IgniteAboutCard() {
               animationDelay: "0.3s",
             }}
           >
-            How We Make IGCSE Learning Truly 
+            How We Make IGCSE Learning Truly
             <span className="green-text"> Effective</span>
           </h1>
 
@@ -138,7 +138,7 @@ export default function IgniteAboutCard() {
           <div className="d-flex flex-column align-items-center gap-2 mb-4 mb-md-0">
             <h3 className="heading-title gradient-text">RESOURCES</h3>
             <p className="heading-subtitle">
-              In-depth guides tailored for     
+              In-depth guides tailored for
               <br className="d-none d-md-block" />
               effective learning & revision.
             </p>

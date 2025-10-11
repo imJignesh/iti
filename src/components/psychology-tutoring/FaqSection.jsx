@@ -12,7 +12,7 @@ const FAQSection = () => {
     const handleResize = () => {
       const width = window.innerWidth;
       setIsMobile(width < 768);
-      
+
       // Check for 1920px at 125% zoom (effective width = 1536px)
       setIsHighDpi(width >= 1536 && width <= 1919);
     };
@@ -21,38 +21,38 @@ const FAQSection = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   const toggleItem = (index) => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-     const faqData = [
-        {
-            question: "Which curricula does Ignite support for Psychology tutoring?",
-            answer:
-                "Ignite provides Psychology tutoring for IGCSE, A-Levels, & AP Psychology, with lessons customized to fit each curriculum’s syllabus and exam requirements.",
-        },
-        {
-            question: "What key topics are covered in Psychology sessions?",
-            answer:
-                "Tutoring includes cognitive, biological, & sociocultural approaches to psychology, research methods, abnormal psychology, developmental psychology, & exam-specific application of theories & studies.",
-        },
-        {
-            question: "Do tutors help with essay writing & structured answers?",
-            answer:
-                "Yes, students receive guidance on planning & writing essays, applying psychological theories and studies effectively, and developing well-structured analytical responses for exams such as IB Paper 1/2 & A-Level essays.",
-        },
-        {
-            question: "Is exam preparation part of the tutoring program?",
-            answer:
-                "Absolutely. Students practice with past papers, timed writing, & strategy sessions focused on clarity, evaluation, & critical analysis to strengthen exam performance.",
-        },
-        {
-            question: "Can I attend a demo session before enrolling?",
-            answer:
-                "Yes, Ignite offers a free demo class where students can experience our teaching approach and connect with a tutor who best matches their academic needs.",
-        },
-    ];
+  const faqData = [
+    {
+      question: "Which curricula does Ignite support for Psychology tutoring?",
+      answer:
+        "Ignite provides Psychology tutoring for IGCSE, A-Levels, & AP Psychology, with lessons customized to fit each curriculum’s syllabus and exam requirements.",
+    },
+    {
+      question: "What key topics are covered in Psychology sessions?",
+      answer:
+        "Tutoring includes cognitive, biological, & sociocultural approaches to psychology, research methods, abnormal psychology, developmental psychology, & exam-specific application of theories & studies.",
+    },
+    {
+      question: "Do tutors help with essay writing & structured answers?",
+      answer:
+        "Yes, students receive guidance on planning & writing essays, applying psychological theories and studies effectively, and developing well-structured analytical responses for exams such as IB Paper 1/2 & A-Level essays.",
+    },
+    {
+      question: "Is exam preparation part of the tutoring program?",
+      answer:
+        "Absolutely. Students practice with past papers, timed writing, & strategy sessions focused on clarity, evaluation, & critical analysis to strengthen exam performance.",
+    },
+    {
+      question: "Can I attend a demo session before enrolling?",
+      answer:
+        "Yes, Ignite offers a free demo class where students can experience our teaching approach and connect with a tutor who best matches their academic needs.",
+    },
+  ];
 
   return (
     <div
@@ -88,7 +88,7 @@ const FAQSection = () => {
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
-              <span className="SubHeading" style={{ fontSize: isHighDpi ? "22px" : isMobile ? "" : "28px" }}>FAQS
+              <span className="SubHeading" style={{ fontSize: isHighDpi ? "28px" : isMobile ? "" : "28px" }}>FAQS
               </span>
             </div>
 
@@ -98,27 +98,27 @@ const FAQSection = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section text-uppercase"
-              style={{ 
-                animationDelay: "0.2s", 
-                color: "#19245E", 
-                fontWeight: 800, 
-                marginBottom: "20px", 
-                fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem" 
+              style={{
+                animationDelay: "0.2s",
+                color: "#19245E",
+                fontWeight: 800,
+                marginBottom: "20px",
+                fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem"
               }}
             >
               Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
             </h2>
 
             <p
-              style={{ 
-                color: "#64748b", 
-                maxWidth: isMobile ? "100%" : "28rem", 
-                fontSize: isHighDpi ? "16px" : isMobile ? "16px" : "20px", 
-                lineHeight: isMobile ? "1.5" : "1.2", 
-                margin: isMobile ? "0 auto" : "0", 
-                paddingLeft: isMobile ? "0.5rem" : "0", 
-                paddingRight: isMobile ? "0.5rem" : "0", 
-                marginBottom: isMobile ? "15px" : "20px" 
+              style={{
+                color: "#64748b",
+                maxWidth: isMobile ? "100%" : "28rem",
+                fontSize: isHighDpi ? "16px" : isMobile ? "16px" : "20px",
+                lineHeight: isMobile ? "1.5" : "1.2",
+                margin: isMobile ? "0 auto" : "0",
+                paddingLeft: isMobile ? "0.5rem" : "0",
+                paddingRight: isMobile ? "0.5rem" : "0",
+                marginBottom: isMobile ? "15px" : "20px"
               }}
             >
               Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
@@ -144,12 +144,12 @@ const FAQSection = () => {
                 >
                   <span
                     className="fw-bold h5 lh-sm mb-0"
-                    style={{ 
-                      color: "#1e3a8a", 
-                      fontSize: isHighDpi ? "20px" : isMobile ? "1.1rem" : "25px", 
-                      lineHeight: "100%", 
-                      letterSpacing: "1%", 
-                      width: "90%" 
+                    style={{
+                      color: "#1e3a8a",
+                      fontSize: isHighDpi ? "20px" : isMobile ? "1.1rem" : "25px",
+                      lineHeight: "100%",
+                      letterSpacing: "1%",
+                      width: "90%"
                     }}
                   >
                     {faq.question}

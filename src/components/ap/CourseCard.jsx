@@ -68,7 +68,7 @@ function CourseCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="SubHeading testSubheading">course
+                <div className="SubHeading testSubheading">courses
                 </div>
               </div>
               <h2
@@ -163,7 +163,7 @@ function CourseCard() {
                           animation: 'fadeIn 0.6s ease-out',
                         }}
                       >
-                        <p className="desc" style={{ lineHeight: "1.3", marginLeft: "25px", paddingLeft: "0",color: "rgba(0, 0, 0, 0.6)" }}>
+                        <p className="desc" style={{ lineHeight: "1.3", marginLeft: "25px", paddingLeft: "0", color: "rgba(0, 0, 0, 0.6)" }}>
                           {item.description}
                         </p>
                         <h5 className="fw-bold fontSizeK mb-3" style={{
@@ -268,7 +268,7 @@ function CourseCard() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">course
+              <div className="SubHeading testSubheading">courses
               </div>
             </div>
 

@@ -148,7 +148,7 @@ export default function IgniteAchievements() {
                   fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
-                }}>1k+</div>
+                }}>1K+</div>
               </div>
               <div
                 className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2"
@@ -255,7 +255,7 @@ export default function IgniteAchievements() {
                   fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
-                }}>2k+</div>
+                }}>2K+</div>
               </div>
               <div
                 className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2"

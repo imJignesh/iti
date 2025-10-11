@@ -138,7 +138,7 @@ export default function IgniteAboutCard() {
           <div className="d-flex flex-column align-items-center gap-2 mb-4 mb-md-0">
             <h3 className="heading-title gradient-text">RESOURCES</h3>
             <p className="heading-subtitle">
-              Detailed study materials designed to 
+              Detailed study materials designed to
               <br className="d-none d-md-block" />
               support self-paced learning.
             </p>
@@ -149,7 +149,7 @@ export default function IgniteAboutCard() {
             <h3 className="heading-title gradient-text">TESTING</h3>
             <p className="heading-subtitle">
               Assessments & mocks to track progress                <br className="d-none d-md-block" />
-               & refine exam strategies.
+              & refine exam strategies.
             </p>
           </div>
         </div>

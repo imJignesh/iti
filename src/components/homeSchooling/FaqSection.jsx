@@ -12,7 +12,7 @@ const FAQSection = () => {
     const handleResize = () => {
       const width = window.innerWidth;
       setIsMobile(width < 768);
-      
+
       // Check for 1920px at 125% zoom (effective width = 1536px)
       setIsHighDpi(width >= 1536 && width <= 1919);
     };
@@ -21,44 +21,44 @@ const FAQSection = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   const toggleItem = (index) => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-  
-    const faqData = [
-        {
-            question: "What levels & curricula does Ignite support for homeschooling students?",
-            answer:
-                "Ignite offers homeschooling support for British Curriculum (IGCSE, A-Levels) & AP courses from primary to pre-university levels.",
-        },
-        {
-            question: "Is the homeschooling program fully flexible with individual schedules?",
-            answer:
-                "Yes, sessions are designed to match the student’s pace, academic goals, & daily schedule, offering full flexibility in subject selection & timing.",
-        },
-        {
-            question: "Do homeschooled students receive exam & assessment support?",
-            answer:
-                "Absolutely. Students receive targeted prep for board exams, past paper practice, & support with assessments required by their chosen curriculum or exam board.",
-        },
-        {
-            question: "Can Ignite help with selecting & planning a complete homeschool curriculum?",
-            answer:
-                "Yes, our academic advisors assist with curriculum planning, subject selection, exam registration guidance, & personalized learning roadmaps.",
-        },
-        {
-            question: "Is a free demo class available for homeschooling tutoring?",
-            answer:
-                "Yes, Ignite Training Institute offers a free demo session so parents & students can experience the teaching style & approach before enrolling.",
-        },
-        {
-            question: "Is private candidacy accepted by private universities in the UAE?",
-            answer:
-                "Yes, private candidacy is generally accepted by private universities in the UAE, as long as students meet the required curriculum standards and hold recognized qualifications.",
-        },
-    ];
+
+  const faqData = [
+    {
+      question: "What levels & curricula does Ignite support for homeschooling students?",
+      answer:
+        "Ignite offers homeschooling support for British Curriculum (IGCSE, A-Levels) & AP courses from primary to pre-university levels.",
+    },
+    {
+      question: "Is the homeschooling program fully flexible with individual schedules?",
+      answer:
+        "Yes, sessions are designed to match the student’s pace, academic goals, & daily schedule, offering full flexibility in subject selection & timing.",
+    },
+    {
+      question: "Do homeschooled students receive exam & assessment support?",
+      answer:
+        "Absolutely. Students receive targeted prep for board exams, past paper practice, & support with assessments required by their chosen curriculum or exam board.",
+    },
+    {
+      question: "Can Ignite help with selecting & planning a complete homeschool curriculum?",
+      answer:
+        "Yes, our academic advisors assist with curriculum planning, subject selection, exam registration guidance, & personalized learning roadmaps.",
+    },
+    {
+      question: "Is a free demo class available for homeschooling tutoring?",
+      answer:
+        "Yes, Ignite Training Institute offers a free demo session so parents & students can experience the teaching style & approach before enrolling.",
+    },
+    {
+      question: "Is private candidacy accepted by private universities in the UAE?",
+      answer:
+        "Yes, private candidacy is generally accepted by private universities in the UAE, as long as students meet the required curriculum standards and hold recognized qualifications.",
+    },
+  ];
 
   return (
     <div
@@ -94,7 +94,7 @@ const FAQSection = () => {
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
-              <span className="SubHeading" style={{ fontSize: isHighDpi ? "22px" : isMobile ? "" : "28px" }}>FAQS
+              <span className="SubHeading" style={{ fontSize: isHighDpi ? "28px" : isMobile ? "" : "28px" }}>FAQS
               </span>
             </div>
 
@@ -104,27 +104,27 @@ const FAQSection = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section text-uppercase"
-              style={{ 
-                animationDelay: "0.2s", 
-                color: "#19245E", 
-                fontWeight: 800, 
-                marginBottom: "20px", 
-                fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem" 
+              style={{
+                animationDelay: "0.2s",
+                color: "#19245E",
+                fontWeight: 800,
+                marginBottom: "20px",
+                fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem"
               }}
             >
               Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
             </h2>
 
             <p
-              style={{ 
-                color: "#64748b", 
-                maxWidth: isMobile ? "100%" : "28rem", 
-                fontSize: isHighDpi ? "16px" : isMobile ? "16px" : "20px", 
-                lineHeight: isMobile ? "1.5" : "1.2", 
-                margin: isMobile ? "0 auto" : "0", 
-                paddingLeft: isMobile ? "0.5rem" : "0", 
-                paddingRight: isMobile ? "0.5rem" : "0", 
-                marginBottom: isMobile ? "15px" : "20px" 
+              style={{
+                color: "#64748b",
+                maxWidth: isMobile ? "100%" : "28rem",
+                fontSize: isHighDpi ? "16px" : isMobile ? "16px" : "20px",
+                lineHeight: isMobile ? "1.5" : "1.2",
+                margin: isMobile ? "0 auto" : "0",
+                paddingLeft: isMobile ? "0.5rem" : "0",
+                paddingRight: isMobile ? "0.5rem" : "0",
+                marginBottom: isMobile ? "15px" : "20px"
               }}
             >
               Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
@@ -150,12 +150,12 @@ const FAQSection = () => {
                 >
                   <span
                     className="fw-bold h5 lh-sm mb-0"
-                    style={{ 
-                      color: "#1e3a8a", 
-                      fontSize: isHighDpi ? "20px" : isMobile ? "1.1rem" : "25px", 
-                      lineHeight: "100%", 
-                      letterSpacing: "1%", 
-                      width: "90%" 
+                    style={{
+                      color: "#1e3a8a",
+                      fontSize: isHighDpi ? "20px" : isMobile ? "1.1rem" : "25px",
+                      lineHeight: "100%",
+                      letterSpacing: "1%",
+                      width: "90%"
                     }}
                   >
                     {faq.question}

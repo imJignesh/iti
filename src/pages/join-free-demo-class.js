@@ -146,6 +146,37 @@ const AchievementsCarousel = () => {
     );
 };
 
+
+/**
+ * NEW COMPONENT: Handles the hover state for the curriculum cards.
+ * It replaces 'light' with 'dark' in the class name on hover.
+ */
+const CurriculumCard = ({ defaultClass, full, children }) => {
+    // State to track if the card is being hovered
+    const [isHovered, setIsHovered] = useState(false);
+
+    // Determine the class name
+    let colorClass = defaultClass; // e.g., 'light-green'
+    if (isHovered) {
+        // If hovered, replace 'light' with 'dark' (e.g., 'dark-green')
+        colorClass = defaultClass.replace('light', 'dark');
+    }
+
+    // Combine base class, dynamic color class, and 'full' class if present
+    const classes = `fd-curr ${colorClass} ${full ? 'full' : ''}`;
+
+    return (
+        <div
+            className={classes}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            {children}
+        </div>
+    );
+};
+
+
 // 1. Accept the headerHeight prop
 const FreeDemo = ({ headerHeight }) => {
     const scrollRef = useRef(null);
@@ -218,18 +249,34 @@ const FreeDemo = ({ headerHeight }) => {
                         <div className="column">
                             <div className="title">CURRICULUMS</div>
                             <div className="cards">
-                                <div className="fd-curr dark-green"><span className="check">✔</span> IB (MYP & IBDP)</div>
-                                <div className="fd-curr light-green"><span className="check">✔</span> IGCSE</div>
-                                <div className="fd-curr light-green full"><span className="check">✔</span> A Levels</div>
-                                <div className="fd-curr light-green full"><span className="check">✔</span> Private Candidate (Homeschooling)</div>
+                                {/* REPLACED div with CurriculumCard component */}
+                                <CurriculumCard defaultClass="light-green">
+                                    <span className="check">✔</span> IB (MYP & IBDP)
+                                </CurriculumCard>
+                                <CurriculumCard defaultClass="light-green">
+                                    <span className="check">✔</span> IGCSE
+                                </CurriculumCard>
+                                <CurriculumCard defaultClass="light-green" full>
+                                    <span className="check">✔</span> A Levels
+                                </CurriculumCard>
+                                <CurriculumCard defaultClass="light-green" full>
+                                    <span className="check">✔</span> Private Candidate (Homeschooling)
+                                </CurriculumCard>
                             </div>
                         </div>
                         <div className="column">
                             <div className="title tests">STANDARDISED TESTS</div>
                             <div className="cards">
-                                <div className="fd-curr dark-blue"><span className="check">✔</span> ACT</div>
-                                <div className="fd-curr light-blue"><span className="check">✔</span> AP</div>
-                                <div className="fd-curr light-blue full"><span className="check">✔</span> UCAT</div>
+                                {/* REPLACED div with CurriculumCard component */}
+                                <CurriculumCard defaultClass="light-blue">
+                                    <span className="check">✔</span> ACT
+                                </CurriculumCard>
+                                <CurriculumCard defaultClass="light-blue">
+                                    <span className="check">✔</span> AP
+                                </CurriculumCard>
+                                <CurriculumCard defaultClass="light-blue" full>
+                                    <span className="check">✔</span> UCAT
+                                </CurriculumCard>
                             </div>
                         </div>
                     </div>
@@ -344,7 +391,7 @@ const FreeDemo = ({ headerHeight }) => {
 
                 <section data-scroll-section>
                     <MarqueeBanner />
-                </section> 
+                </section>
 
                 <Testimonial />
 

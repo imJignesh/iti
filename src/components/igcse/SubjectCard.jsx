@@ -297,7 +297,7 @@ export default function SubjectsCard() {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          width: 200px;
+          width: 480px;
         }
 
         .subjectTitle {
