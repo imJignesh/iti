@@ -80,15 +80,17 @@ export default function TutoringCourses() {
                   <p className="card-description">
                     Maximize to 7/7 with subject-specific mentors who will help you.
                   </p>
-                  <button className="card-button">
-                    LEARN MORE
-                    <img
-                      src="/assets/leftarr.png"
-                      alt="leftarr"
-                      width={32}
-                      height={32}
-                    />
-                  </button>
+                  <a href="/courses/ibdp-tutors-in-dubai">
+                    <button className="card-button">
+                      LEARN MORE
+                      <img
+                        src="/assets/leftarr.png"
+                        alt="leftarr"
+                        width={32}
+                        height={32}
+                      />
+                    </button>
+                  </a>
                 </article>
 
                 {/* IBDP Card */}
@@ -107,15 +109,17 @@ export default function TutoringCourses() {
                   <p className="card-description dark-text">
                     Kick-start your MYP learning with the best-suited tutor-led courses.
                   </p>
-                  <button className="card-button">
-                    LEARN MORE
-                    <img
-                      src="/assets/leftarr.png"
-                      alt="leftarr"
-                      width={32}
-                      height={32}
-                    />
-                  </button>
+                  <a href="/courses/myp-tutors-in-dubai" >
+                    <button className="card-button">
+                      LEARN MORE
+                      <img
+                        src="/assets/leftarr.png"
+                        alt="leftarr"
+                        width={32}
+                        height={32}
+                      />
+                    </button>
+                  </a>
                 </article>
 
                 {/* MYP Card */}
@@ -134,15 +138,17 @@ export default function TutoringCourses() {
                   <p className="card-description">
                     Master your IGCSE subjects with focused, expert-led tutoring support.
                   </p>
-                  <button className="card-button">
-                    LEARN MORE
-                    <img
-                      src="/assets/leftarr.png"
-                      alt="leftarr"
-                      width={32}
-                      height={32}
-                    />
-                  </button>
+                  <a href="/courses/igcse-tutors-in-dubai" >
+                    <button className="card-button">
+                      LEARN MORE
+                      <img
+                        src="/assets/leftarr.png"
+                        alt="leftarr"
+                        width={32}
+                        height={32}
+                      />
+                    </button>
+                  </a>
                 </article>
               </div>
 
@@ -163,15 +169,17 @@ export default function TutoringCourses() {
                   <p className="card-description">
                     Achieve clarity & confidence with structured A-Level learning methods
                   </p>
-                  <button className="card-button">
-                    LEARN MORE
-                    <img
-                      src="/assets/leftarr.png"
-                      alt="leftarr"
-                      width={32}
-                      height={32}
-                    />
-                  </button>
+                  <a href="/courses/a-level-tutors-in-dubai">
+                    <button className="card-button">
+                      LEARN MORE
+                      <img
+                        src="/assets/leftarr.png"
+                        alt="leftarr"
+                        width={32}
+                        height={32}
+                      />
+                    </button>
+                  </a>
                 </article>
 
                 {/* A-Levels Card */}
@@ -190,15 +198,17 @@ export default function TutoringCourses() {
                   <p className="card-description">
                     Academic structure & mentoring for self-paced, private exam journeys
                   </p>
-                  <button className="card-button">
-                    LEARN MORE
-                    <img
-                      src="/assets/leftarr.png"
-                      alt="leftarr"
-                      width={32}
-                      height={32}
-                    />
-                  </button>
+                  <a href="/courses/homeschooling-tutors-in-dubai">
+                    <button className="card-button">
+                      LEARN MORE
+                      <img
+                        src="/assets/leftarr.png"
+                        alt="leftarr"
+                        width={32}
+                        height={32}
+                      />
+                    </button>
+                  </a>
                 </article>
               </div>
             </>
@@ -219,15 +229,17 @@ export default function TutoringCourses() {
                 <p className="card-description">
                   Maximize to 7/7 with subject-specific mentors who will help you.
                 </p>
-                <button className="card-button">
-                  LEARN MORE
-                  <img
-                    src="/assets/leftarr.png"
-                    alt="leftarr"
-                    width={16}
-                    height={16}
-                  />
-                </button>
+                <a href="/courses/ibdp-tutors-in-dubai">
+                  <button className="card-button">
+                    LEARN MORE
+                    <img
+                      src="/assets/leftarr.png"
+                      alt="leftarr"
+                      width={16}
+                      height={16}
+                    />
+                  </button>
+                </a>
               </article>
 
               {/* IBDP Card */}
@@ -246,15 +258,17 @@ export default function TutoringCourses() {
                 <p className="card-description dark-text">
                   Kick-start your MYP learning with the best-suited tutor-led courses.
                 </p>
-                <button className="card-button">
-                  LEARN MORE
-                  <img
-                    src="/assets/leftarr.png"
-                    alt="leftarr"
-                    width={16}
-                    height={16}
-                  />
-                </button>
+                <a href="/courses/myp-tutors-in-dubai" >
+                  <button className="card-button">
+                    LEARN MORE
+                    <img
+                      src="/assets/leftarr.png"
+                      alt="leftarr"
+                      width={16}
+                      height={16}
+                    />
+                  </button>
+                </a>
               </article>
 
               {/* MYP Card */}
@@ -273,15 +287,18 @@ export default function TutoringCourses() {
                 <p className="card-description">
                   Master your IGCSE subjects with focused, expert-led tutoring support.
                 </p>
-                <button className="card-button">
-                  LEARN MORE
-                  <img
-                    src="/assets/leftarr.png"
-                    alt="leftarr"
-                    width={16}
-                    height={16}
-                  />
-                </button>
+                <a href="/courses/igcse-tutors-in-dubai" >
+                  <button className="card-button">
+                    LEARN MORE
+                    <img
+                      src="/assets/leftarr.png"
+                      alt="leftarr"
+                      width={16}
+                      height={16}
+                    />
+                  </button>
+                </a>
+
               </article>
 
               {/* IGCSE Card */}
@@ -300,15 +317,17 @@ export default function TutoringCourses() {
                 <p className="card-description">
                   Achieve clarity & confidence with structured A-Level learning methods
                 </p>
-                <button className="card-button">
-                  LEARN MORE
-                  <img
-                    src="/assets/leftarr.png"
-                    alt="leftarr"
-                    width={16}
-                    height={16}
-                  />
-                </button>
+                <a href="/courses/a-level-tutors-in-dubai">
+                  <button className="card-button">
+                    LEARN MORE
+                    <img
+                      src="/assets/leftarr.png"
+                      alt="leftarr"
+                      width={16}
+                      height={16}
+                    />
+                  </button>
+                </a>
               </article>
 
               {/* A-Levels Card */}
@@ -327,15 +346,17 @@ export default function TutoringCourses() {
                 <p className="card-description">
                   Academic structure & mentoring for self-paced, private exam journeys
                 </p>
-                <button className="card-button">
-                  LEARN MORE
-                  <img
-                    src="/assets/leftarr.png"
-                    alt="leftarr"
-                    width={16}
-                    height={16}
-                  />
-                </button>
+                <a href="/courses/homeschooling-tutors-in-dubai">
+                  <button className="card-button">
+                    LEARN MORE
+                    <img
+                      src="/assets/leftarr.png"
+                      alt="leftarr"
+                      width={16}
+                      height={16}
+                    />
+                  </button>
+                </a>
               </article>
             </>
           )}
