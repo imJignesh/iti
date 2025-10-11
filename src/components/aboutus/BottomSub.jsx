@@ -2,80 +2,84 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 
 export default function CallToAction() {
-    return (
-        <div className="cta-wrapper">
-            <div className="cta-container">
-                <div className="cta-background" />
+  return (
+    <div className="cta-wrapper">
+      <div className="cta-container">
+        <div className="cta-background" />
 
-                <div className="cta-content">
-                    {/* Desktop Layout */}
-                    <div className="desktop-only desktopLayout text-uppercase">
-                        <div className="textSection">
-                            <h1 className="heading">
-                                Discover Courses That Support Every Step Of Learning
-                            </h1>
+        <div className="cta-content">
+          {/* Desktop Layout */}
+          <div className="desktop-only desktopLayout text-uppercase">
+            <div className="textSection">
+              <h1 className="heading">
+                Discover Courses That Support Every Step Of Learning
+              </h1>
 
-                            <p className="paragraph">
-                                Explore our wide range of tutoring programs, each designed to
-                                meet students where they are & guide them forward.
-                            </p>
+              <p className="paragraph">
+                Explore our wide range of tutoring programs, each designed to
+                meet students where they are & guide them forward.
+              </p>
+              <a href="/courses">
+                <button className="cta-button">
+                  <span className="text-uppercase">
+                    explore our tutoring course
+                  </span>
+                  <div className="buttonIcon">
+                    <ArrowRight size={20} />
+                  </div>
 
-                            <button className="cta-button">
-                                <span className="text-uppercase">
-                                    explore our tutoring course
-                                </span>
-                                <div className="buttonIcon">
-                                    <ArrowRight size={20} />
-                                </div>
-                            </button>
-                        </div>
-
-                        <div className="imageSection">
-                            <img
-                                src="/assets/tutbg.jpg"
-                                alt="Tutoring team working together"
-                                className="image"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Mobile Layout */}
-                    <div className="mobile-only mobileLayout text-uppercase">
-                        <div className="mobileTextSection">
-                            <h1 className="mobileHeading">
-                                Discover Courses That Support Every Step Of Learning
-                            </h1>
-
-                            <p className="mobileParagraph">
-                                Explore our wide range of tutoring programs, each designed to
-                                meet students where they are & guide them forward.
-                            </p>
-
-                            <div className="mobileButtonContainer">
-                                <button className="mobileButton">
-                                    <span className="text-uppercase mobileButtonText">
-                                        EXPLORE OUR TUTORING COURSES
-                                    </span>
-                                    <div className="mobileButtonIcon">
-                                        <ArrowRight size={18} />
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </button>
+              </a>
             </div>
 
-            {/* Mobile Image overlay */}
-            <div className="mobile-only mobileImageContainer">
-                <img
-                    src="/assets/tutbg.jpg"
-                    alt="Tutoring team working together"
-                    className="mobileImage"
-                />
+            <div className="imageSection">
+              <img
+                src="/assets/tutbg.jpg"
+                alt="Tutoring team working together"
+                className="image"
+              />
             </div>
+          </div>
 
-            <style jsx>{`
+          {/* Mobile Layout */}
+          <div className="mobile-only mobileLayout text-uppercase">
+            <div className="mobileTextSection">
+              <h1 className="mobileHeading">
+                Discover Courses That Support Every Step Of Learning
+              </h1>
+
+              <p className="mobileParagraph">
+                Explore our wide range of tutoring programs, each designed to
+                meet students where they are & guide them forward.
+              </p>
+
+              <div className="mobileButtonContainer">
+                <a href="/courses">
+                  <button className="mobileButton">
+                    <span className="text-uppercase mobileButtonText">
+                      EXPLORE OUR TUTORING COURSES
+                    </span>
+                    <div className="mobileButtonIcon">
+                      <ArrowRight size={18} />
+                    </div>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Image overlay */}
+      <div className="mobile-only mobileImageContainer">
+        <img
+          src="/assets/tutbg.jpg"
+          alt="Tutoring team working together"
+          className="mobileImage"
+        />
+      </div>
+
+      <style jsx>{`
         .cta-wrapper {
           position: relative;
         }
@@ -328,6 +332,6 @@ export default function CallToAction() {
             }
 
       `}</style>
-        </div>
-    );
+    </div>
+  );
 }
