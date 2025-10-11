@@ -27,7 +27,7 @@
 .uspSection .uspLeft span {
   -webkit-text-fill-color: var(--white-color);
   width: max-content;
-  font-size: 1.3vw;
+  /* font-size: 1.3vw; */
   margin-bottom: 1.39vw;
 }
 
@@ -35,7 +35,7 @@
 .uspSection .uspLeft span {
   -webkit-text-fill-color: var(--white-color);
   width: max-content;
-  font-size: 1.3vw;
+  /* font-size: 1.3vw; */
   margin-bottom: 20px;
 }
 
