@@ -49,7 +49,7 @@ export default function IgniteAboutCard() {
               animationDelay: "0.3s",
             }}
           >
-            How We Make AP Learning Truly 
+            How We Make AP Learning Truly
             <span className="green-text"> Effective</span>
           </h1>
 
@@ -138,7 +138,7 @@ export default function IgniteAboutCard() {
           <div className="d-flex flex-column align-items-center gap-2 mb-4 mb-md-0">
             <h3 className="heading-title gradient-text">RESOURCES</h3>
             <p className="heading-subtitle">
-              Comprehensive guides that aid  
+              Comprehensive guides that aid
               <br className="d-none d-md-block" />
               effective self-study & revision.
             </p>
@@ -285,7 +285,7 @@ export default function IgniteAboutCard() {
         .subtitle-wrapper {
           display: flex;
           align-items: center;
-          justify-content: centert;
+          justify-content: center;
           gap: 15px;
           margin-bottom: 25px;
                     margin-top:30px;

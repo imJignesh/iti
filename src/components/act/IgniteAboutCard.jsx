@@ -49,7 +49,7 @@ export default function IgniteAboutCard() {
               animationDelay: "0.3s",
             }}
           >
-            How We Make ACT Prep Truly 
+            How We Make ACT Prep Truly
             <span className="green-text"> Effective</span>
           </h1>
 
@@ -138,7 +138,7 @@ export default function IgniteAboutCard() {
           <div className="d-flex flex-column align-items-center gap-2 mb-4 mb-md-0">
             <h3 className="heading-title gradient-text">RESOURCES</h3>
             <p className="heading-subtitle">
-              Targeted ACT study guides &   
+              Targeted ACT study guides &
               <br className="d-none d-md-block" />
               practice materials for self-prep.
             </p>
@@ -331,7 +331,8 @@ export default function IgniteAboutCard() {
           color: #233467;
           line-height: 1.2;
           margin: 0 0 12px 0;
-                    margin-bottom: 25px;
+          margin-bottom: 25px;
+          text-align: center;
 
         }
 

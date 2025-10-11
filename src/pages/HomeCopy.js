@@ -114,7 +114,7 @@ const HomeCopy = ({ headerHeight }) => {
                 <Subjects />
 
                 {/* Alumni Section */}
-                <Alumni setActiveIndex={setActiveIndex} />
+                {/* <Alumni setActiveIndex={setActiveIndex} /> */}
 
                 {/* Our USPs */}
                 <Usps />
@@ -122,7 +122,7 @@ const HomeCopy = ({ headerHeight }) => {
                 {/* Trainers Section */}
                 <section data-scroll-section>
                     <Trainers />
-                </section> 
+                </section>
 
                 {/* Testimonial Section */}
                 <Testimonial />
