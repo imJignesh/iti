@@ -152,12 +152,12 @@ export default function SubjectsCard() {
 
         {/* LEFT COLUMN */}
         <div className="subjectLeft">
-          <span className="subjectHeader">
+          <h2 className="subjectHeader">
             <span className="SubHeading">SUBJECTS WE SUPPORT</span>
-          </span>
-          <h2 className="subjectTitle">
-            Tutoring That Makes Every IBDP Subject Clear (HL & SL)
           </h2>
+          <h3 className="subjectTitle">
+            Tutoring That Makes Every IBDP Subject Clear (HL & SL)
+          </h3>
         </div>
 
         {/* RIGHT COLUMN - Fixed Container */}
@@ -193,9 +193,9 @@ export default function SubjectsCard() {
                     zIndex: isCenter ? 10 : Math.max(1, 5 - Math.abs(position))
                   }}
                 >
-                  <div className={`subjectBubble ${isCenter ? 'highlighted' : ''}`}>
+                  <h3 className={`subjectBubble ${isCenter ? 'highlighted' : ''}`}>
                     {subject}
-                  </div>
+                  </h3>
                 </div>
               ))}
             </div>

@@ -94,10 +94,10 @@ function CourseCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="SubHeading testSubheading">courses
-                </div>
+                <h2 className="SubHeading testSubheading">courses
+                </h2>
               </div>
-              <h2
+              <h3
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
@@ -105,7 +105,7 @@ function CourseCard() {
                 style={{ animationDelay: "0.2s" }}
               >
                 Learning Starts Here With <br /><span className="highlight"> Tailored </span> IBDP Courses
-              </h2>
+              </h3>
             </div>
           </div>
 
@@ -148,7 +148,7 @@ function CourseCard() {
                   }}
                   onClick={() => toggleAccordion(index)}
                 >
-                  <span
+                  <h3
                     className="gradient-text py-3 text-uppercase"
                     style={{
                       transform: hoveredIndex === index ? 'translateX(10px)' : 'translateX(0)',
@@ -156,7 +156,7 @@ function CourseCard() {
                     }}
                   >
                     {item.title}
-                  </span>
+                  </h3>
                   <span
                     style={{
                       color: "#3F88BA",
@@ -234,7 +234,7 @@ function CourseCard() {
                               ></span>
 
                               {/* Gradient Text */}
-                              <span
+                              <h3
                                 style={{
                                   letterSpacing: "1px",
                                   background: "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
@@ -245,7 +245,7 @@ function CourseCard() {
                                 }}
                               >
                                 {point}
-                              </span>
+                              </h3>
                             </li>
                           ))}
                         </ul>
@@ -293,11 +293,11 @@ function CourseCard() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">courses
-              </div>
+              <h2 className="SubHeading testSubheading">courses
+              </h2>
             </div>
 
-            <h2
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -305,7 +305,7 @@ function CourseCard() {
               style={{ animationDelay: "0.2s" }}
             >
               Learning Starts Here With <span className="highlight"> Tailored </span> AP Courses
-            </h2>
+            </h3>
           </div>
 
           {/* Mobile Cards */}
@@ -355,7 +355,7 @@ function CourseCard() {
                         {String(index + 1).padStart(2, "0")}.
                       </span>
 
-                      <span
+                      <h3
                         style={{
                           fontSize: "1rem",
                           letterSpacing: "1px",
@@ -368,7 +368,7 @@ function CourseCard() {
                         }}
                       >
                         {item.title}
-                      </span>
+                      </h3>
                     </div>
 
                     {/* Right side: Chevron always sticks to right */}
@@ -524,14 +524,14 @@ function CourseCard() {
                                   flexShrink: 0,
                                 }}
                               ></span>
-                              <span style={{
+                              <h3 style={{
                                 background: "linear-gradient(135deg, #161664,#3F88BA)",
                                 fontWeight: "600",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
                               }}>
                                 {point}
-                              </span>
+                              </h3>
                             </li>
                           ))}
                         </ul>

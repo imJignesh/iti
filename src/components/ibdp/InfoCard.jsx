@@ -80,7 +80,7 @@ export default function InfoCard() {
               </h1>
               <div className="divider"></div>
 
-              <p
+              <h2
                 className="text-white mb-4 fade-in-section fs-8 fs-md-10"
                 data-scroll
                 data-scroll-class="is-inview"
@@ -89,12 +89,13 @@ export default function InfoCard() {
                   letterSpacing: "0.2em",
                   fontWeight: "600",
                   opacity: "1",
+                  fontSize: isMobile ? "0.9rem" : "1.1rem",
                   animationDelay: "0.25s",
                   marginTop: "19px"
                 }}
               >
                 Max Out To 45 Scores In IBDP
-              </p>
+              </h2>
 
               <div
                 className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold fade-in-section info-row"
@@ -133,7 +134,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Grade 11<br />& 12 Support
+                  <h3 className="fontd">Grade 11<br />& 12 Support</h3>
                 </div>
 
                 <div
@@ -156,7 +157,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Online <br /> & In-Person
+                  <h3 className="fontd">Online <br /> & In-Person</h3>
                 </div>
 
                 <div
@@ -175,7 +176,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  <span className="fontd"> Dubai <br /> (DIFC, JLT)</span>
+                  <h3 className="fontd"> Dubai <br /> (DIFC, JLT)</h3>
                 </div>
               </div>
 
@@ -904,7 +905,9 @@ margin-block: 30px !important;
             height: 20px !important;
           }
         }
-
+        .fontd{
+        font-size:0.8rem !important;
+        }
         /* Mobile form styling */
         @media (max-width: 991.98px) {
           .position-relative.overflow-hidden {

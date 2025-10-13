@@ -104,7 +104,7 @@ const IBDP = ({ headerHeight }) => {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <h4 className="SubHeading">WHAT MORE DO WE OFFER?</h4>
+                <h2 className="SubHeading">WHAT MORE DO WE OFFER?</h2>
               </div>
               <div
                 data-scroll
@@ -113,11 +113,11 @@ const IBDP = ({ headerHeight }) => {
                 className="fade-in-section"
                 style={{ animationDelay: "0.25s" }}
               >
-                <h1 className="achievementsTitle">
+                <h3 className="achievementsTitle">
 
                   Comprehensive Guidance For Every <span className="highlight">Academic</span>{" "}
                   Milestone
-                </h1>
+                </h3>
               </div>
 
             </div>
