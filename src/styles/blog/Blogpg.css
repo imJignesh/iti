@@ -113,7 +113,9 @@
        You can add more specific styles here if needed. */
 }
 
-
+.col svg {
+    pointer-events: none;
+}
 
 .featured-image-style {
     height: 224px;

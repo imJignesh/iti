@@ -348,13 +348,15 @@ const Blogpg = ({ headerHeight }) => {
                                                     <div className="p-3 position-relative">
 
                                                         {featuredImage && (
-                                                            <img
-                                                                src={featuredImage}
-                                                                className="card-img-top"
-                                                                alt={post.title.rendered}
-                                                                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                                                                onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/600x400/E0F2F7/333333?text=No+Image`; }}
-                                                            />
+                                                            <a href={post.link} target="_blank" rel="noopener noreferrer">
+                                                                <img
+                                                                    src={featuredImage}
+                                                                    className="card-img-top"
+                                                                    alt={post.title.rendered}
+                                                                    style={{ objectFit: 'cover', objectPosition: 'center' }}
+                                                                    onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/600x400/E0F2F7/333333?text=No+Image`; }}
+                                                                />
+                                                            </a>
                                                         )}
                                                         <div className="card-body-text d-flex flex-column">
 
@@ -395,10 +397,12 @@ const Blogpg = ({ headerHeight }) => {
 
                                                                 </div>
                                                             </div>
-                                                            <h5
-                                                                className="card-title"
-                                                                dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-                                                            />
+                                                            <a href={post.link} target="_blank" rel="noopener noreferrer">
+                                                                <h5
+                                                                    className="card-title"
+                                                                    dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                                                                />
+                                                            </a>
                                                             <div
                                                                 className="card-text"
                                                                 dangerouslySetInnerHTML={{
