@@ -589,12 +589,12 @@ export default function Trainers() {
                 <section className="trainersSection" data-scroll-section>
                     <div className="container">
                         <div>
-                            <span className="SubHeading trainersSubheading">OUR TUTORS</span>
+                            <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
                         </div>
 
-                        <h2 className="trainersTitle">
+                        <h3 className="trainersTitle">
                             The Best AP Trainers For Your Success Journey
-                        </h2>
+                        </h3>
 
                         {isTrainersSwiper ? (
                             <div className="trainersSwiperWrap">

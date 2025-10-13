@@ -57,8 +57,8 @@ const APBenefits = () => {
     return (
         <div className='mx-auto' style={{ maxWidth: "90vw", border: "none !important", overflow: "hidden !important", marginBlock: "70px" }}>
             <div className="d-flex align-items-center justify-content-center mb-md-4 mb-3">
-                <div className="SubHeading testSubheading" style={{ fontSize: isMobile ? "17.5px" : "30px", marginBottom: isMobile ? "20px" : "20px" }}>WHY DO STUDENTS CHOOSE APS?
-                </div>
+                <h2 className="SubHeading testSubheading" style={{ fontSize: isMobile ? "17.5px" : "30px", marginBottom: isMobile ? "20px" : "20px" }}>WHY DO STUDENTS CHOOSE APS?
+                </h2>
             </div>
             <div className="cards">
                 {benefits.map((item, index) => (

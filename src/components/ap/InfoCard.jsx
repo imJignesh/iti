@@ -80,7 +80,7 @@ export default function InfoCard() {
               </h1>
               <div className="divider"></div>
 
-              <p
+              <h2
                 className="text-white mb-4 fade-in-section responsive-title"
                 data-scroll
                 data-scroll-class="is-inview"
@@ -91,7 +91,7 @@ export default function InfoCard() {
               >
                 NEW AP BATCHES STARTS FROM{" "}
                 <span style={{ color: "#A6EAC7" }}>22ND AUGUST, 2025</span>
-              </p>
+              </h2>
 
               <div
                 className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold fade-in-section info-row"
@@ -130,7 +130,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Grade 11 to 12 <br /> Support
+                  <h3 className="fontd"> Grade 11 to 12 <br /> Support</h3>
                 </div>
 
                 <div
@@ -153,7 +153,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Online <br /> & In-Person
+                  <h3 className="fontd">Online <br /> & In-Person</h3>
                 </div>
 
                 <div
@@ -172,7 +172,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  <span className="fontd"> Dubai <br /> (DIFC, JLT)</span>
+                  <h3 className="fontd"> Dubai <br /> (DIFC, JLT)</h3>
                 </div>
               </div>
 
@@ -402,6 +402,9 @@ export default function InfoCard() {
           color: #ffffff !important;
           opacity: 0.5;
           font-weight: 600;
+        }
+                  .fontd{
+        font-size:0.8rem !important;
         }
         .info-row {
           -webkit-mask-image: linear-gradient(
