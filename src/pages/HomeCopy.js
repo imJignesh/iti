@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-// Import the reusable schema component
-import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -18,7 +17,6 @@ import Trainers from "@/components/homeCopy/Trainers";
 import Testimonial from "@/components/homeCopy/Testimonial";
 import Blog from "@/components/homeCopy/Blog";
 
-// Custom hook for checking if an element is in view
 function useInViewAnimation(threshold = 0.3) {
     const [inView, setInView] = useState(false);
     const ref = useRef(null);
@@ -41,40 +39,6 @@ function useInViewAnimation(threshold = 0.3) {
 }
 
 const HomeCopy = ({ headerHeight }) => {
-
-    // ----------------------------------------------------
-    // 👇 JSON-LD SCHEMA DEFINITION FOR THIS PAGE
-    // ----------------------------------------------------
-    const educationalOrganizationSchema = {
-        "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Ignite Training Institute",
-        "url": "https://ignitetraininginstitute.com/",
-        "logo": "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
-        "description": "Ignite Training Institute offers expert tutoring in Dubai for IB, IGCSE, A-Levels, AP, SAT, ACT, MYP, and homeschooling programs. With qualified tutors and personalized learning, Ignite supports students in achieving academic success.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Al Moosa Tower 1 - 1503 - Sheikh Zayed Rd - near Emirates Towers Metro (Sea Side - Trade Centre - Trade Centre 1",
-            "addressLocality": "Dubai",
-            "addressCountry": "United Arab Emirates"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+971588589958",
-            "contactType": "customer service",
-            "areaServed": "AE",
-            "availableLanguage": ["English", "Arabic"]
-        },
-        "sameAs": [
-            "https://www.instagram.com/ignitetraininginstitute/",
-            "https://ae.linkedin.com/company/ignite-training-institute",
-            "https://www.facebook.com/ignitetraininginstitute"
-        ]
-    };
-
-    // ----------------------------------------------------
-    // 👇 EXISTING COMPONENT LOGIC
-    // ----------------------------------------------------
     const [active, setActive] = useState(1);
     const [activeIndex, setActiveIndex] = React.useState(1);
     const scrollRef = useRef(null);
@@ -127,9 +91,10 @@ const HomeCopy = ({ headerHeight }) => {
 
     return (
         <>
-            {/* 👇 SCHEMA INJECTION: Use the reusable component here */}
-            <JsonLd schema={educationalOrganizationSchema} />
-
+            <SEO
+                title="Ignite Training Institute - Tutors In UAE For Exam Success"
+                description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
+            />
             <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
                 {/* Banner Section */}
                 <div className="vh-100vh">

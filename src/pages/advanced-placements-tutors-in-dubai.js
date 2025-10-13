@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 import Accordion from '@/components/ap/accrodian';
 import Blog from "@/components/homeCopy/Blog";
 import APBenefits from '@/components/ap/chooseApp';
@@ -172,6 +173,10 @@ const ap = ({ headerHeight }) => {
 
   return (
     <>
+      <SEO
+        title="AP Tutors In Dubai, UAE | Advanced Placement Coaching"
+        description="Excel in your Advanced Placement exams with AP tutors in Dubai. Our personalized coaching programs cover all subjects and ensure a 5-score goal."
+      />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={apSchema} />
 

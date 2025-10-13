@@ -13,6 +13,7 @@ import Testimonial from "@/components/freedemo/Testimonial";
 import TrainersMessage from "@/components/maincourse/videoTrainer";
 import CallToAction from "@/components/maincourse/CallToAction";
 import StudentAchievements from '@/components/freedemo/StudentAchivement';
+import SEO from "@/components/SEO";
 
 const achievements = [
     {
@@ -62,6 +63,7 @@ const AchievementsCarousel = () => {
     // Proper ref attachment and onBeforeInit is a more reliable pattern.
 
     return (
+
         <section className="achievements-container">
             <div className="achievements-swiperWrapper">
                 {/* OPTIMIZATION: Added ref={prevRef} to correctly link the external button to Swiper */}
@@ -206,6 +208,10 @@ const FreeDemo = ({ headerHeight }) => {
 
     return (
         <>
+            <SEO
+                title="Free Demo Class | Ignite Training Institute In UAE"
+                description="Book a free demo class with Ignite Training Institute in Dubai, UAE. Experience our personalized tutoring for IB, IGCSE, A-Levels, & AP before enrolling."
+            />
             {/* 2. Apply it as paddingTop to the main scroll container */}
             <div
                 ref={scrollRef}

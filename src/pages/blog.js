@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import useSWR from 'swr';
+import SEO from "@/components/SEO";
 import Image from 'next/image';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
@@ -235,6 +236,8 @@ const Blogpg = ({ headerHeight }) => {
 
     return (
         <>
+            <SEO title="Academic Blog - IB, IGCSE, A-Level, AP & Test Prep Tips"
+                description="Explore the latest academic tips, study guides, and subject insights for IB, IGCSE, A-Levels, AP, and entrance exams from Ignite Training Institute experts." />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the data as a prop */}
             <JsonLd schema={blogSchema} />
 

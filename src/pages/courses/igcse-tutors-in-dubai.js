@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 import MovingBanner from '@/components/home/MovingBanner';
 import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/igcse/accordian';
@@ -175,6 +176,10 @@ const IGCSE = ({ headerHeight }) => {
 
   return (
     <>
+      <SEO
+        title="IGCSE Tutors In Dubai, UAE | Expert Coaching & Guidance"
+        description="Achieve success with top IGCSE tutors in UAE. Get full prep support for IGCSE with syllabus coverage, past paper practice & exam strategies"
+      />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={igcseSchema} />
 

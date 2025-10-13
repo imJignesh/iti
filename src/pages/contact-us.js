@@ -1,5 +1,6 @@
 import React from "react";
 // Import the reusable schema component
+import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 import ContactBanner from "@/components/contact/Banner";
 
@@ -42,6 +43,8 @@ const Contact = ({ headerHeight }) => {
 
     return (
         <>
+            <SEO title="Contact Ignite Training Institute In Dubai, UAE"
+                description="Contact Ignite Training Institute in Dubai, UAE, for expert tutoring in IB, IGCSE, A-Levels, AP, & test prep. Get personalized academic counseling today." />
             {/* 👇 SCHEMA INJECTION: Use the reusable component here */}
             <JsonLd schema={educationalOrganizationSchema} />
 

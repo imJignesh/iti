@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import SEO from "@/components/SEO";
 import TeamBanner from "@/components/team/Banner";
 import MovingBanner from "@/components/home/MovingBanner";
 
@@ -198,6 +199,9 @@ const OurTeam = ({ headerHeight }) => {
 
     return (
         <>
+            <SEO title="Meet Our Expert Trainers | Know Our Team Better"
+                description="Get to know Ignite Training Institute’s expert mentors in the UAE, shaping bright futures with 2000+ trained students & remarkable academic results" />
+            {/* 👇 SCHEMA INJECTION: Use the reusable component here */}
             {/* 2. APPLY paddingTop style using the headerHeight prop */}
             <div ref={scrollRef} data-scroll-container style={{ paddingTop: `${headerHeight}px` }}>
                 <section data-scroll-section>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 import MovingBanner from '@/components/home/MovingBanner';
 import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/a-level/accordian';
@@ -174,6 +175,10 @@ const ALEVEL = ({ headerHeight }) => {
 
   return (
     <>
+      <SEO
+        title="UAE's Leading A-Level, AS-Level Tutors For All Subjects"
+        description="Learn from the best A-Level tutors In UAE with assured grade improvement. Choose a personalized tutoring plan with subjects of your choice."
+      />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={aLevelSchema} />
 

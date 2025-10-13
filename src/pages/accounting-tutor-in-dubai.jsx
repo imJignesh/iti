@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 // Assuming shared components are kept in their original path
 import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
 import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
@@ -151,6 +152,10 @@ const AccountingTutorsInDubai = ({ headerHeight }) => {
 
     return (
         <>
+            <SEO
+                title="Accounting Tutors In Dubai - IGCSE & A-Level Support"
+                description="Learn with accounting tutors in Dubai, specializing in IGCSE & A-Level. Benefit from personalized support, structured learning plans, & study resources"
+            />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
             <JsonLd schema={accountingTutorsSchema} />
 

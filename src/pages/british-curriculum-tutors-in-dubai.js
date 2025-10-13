@@ -20,6 +20,7 @@ import SubjectsCard from '@/components/bc/SubjectCard';
 import UniImagesCard from '@/components/bc/universityCrad';
 import UspsSection from '@/components/bc/UspsSection';
 import { University } from 'lucide-react';
+import SEO from "@/components/SEO";
 
 
 // 1. ACCEPT the headerHeight prop
@@ -177,6 +178,10 @@ const BC = ({ headerHeight }) => {
 
   return (
     <>
+      <SEO
+        title="British Curriculum Tutors For IGCSE/GCSE & AS & A-Levels"
+        description="Seek full academic guidance for IGCSE/GCSE, AS & A-Levels from certified tutors. Our programs ensure better grades and effective exam preparation in the UAE."
+      />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={bcSchema} />
 

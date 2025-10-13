@@ -14,6 +14,7 @@ import Testimonial from "@/components/ibdp/ReviewsSection";
 import Learning from "@/components/maincourse/Learning";
 import MainBanner from "@/components/maincourse/MainBanner";
 import LifeAtIgniteCarousel from "@/components/maincourse/LifeAtIgniteCarousel";
+import SEO from "@/components/SEO";
 
 // 1. ACCEPT the headerHeight prop
 const About = ({ headerHeight }) => {
@@ -67,47 +68,52 @@ const About = ({ headerHeight }) => {
     }, []);
 
     return (
-        // 2. APPLY the style for paddingTop to the scroll container
-        <div
-            ref={scrollRef}
-            className="overflow-hidden innerpage"
-            data-scroll-container
-            style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
-        >
-            <section data-scroll-section>
-                <MainBanner />
-            </section>
-            <section data-scroll-section>
-                <TutoringCourses />
-            </section>
-            <section data-scroll-section>
-                <Test
-                    setActive={setActive}
-                    isMobileSwiper={isMobileSwiper}
-                    active={active}
-                />
-            </section>
-            <section data-scroll-section>
-                <Learning
-                />
-            </section>
-            {/* <section data-scroll-section>
+        <>
+            <SEO
+                title="Top Courses In UAE For IB, IGCSE, A Levels, & AP Tutoring"
+                description="Learn with certified tutors for IB, IGCSE, A-Levels, AP, ACT & UCAT. Get expert coaching with personalized support & proven strategies. Enroll today"
+            />
+            <div
+                ref={scrollRef}
+                className="overflow-hidden innerpage"
+                data-scroll-container
+                style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
+            >
+                <section data-scroll-section>
+                    <MainBanner />
+                </section>
+                <section data-scroll-section>
+                    <TutoringCourses />
+                </section>
+                <section data-scroll-section>
+                    <Test
+                        setActive={setActive}
+                        isMobileSwiper={isMobileSwiper}
+                        active={active}
+                    />
+                </section>
+                <section data-scroll-section>
+                    <Learning
+                    />
+                </section>
+                {/* <section data-scroll-section>
                 <MarqueeBanner />
             </section> */}
-            {/* <section data-scroll-section>
+                {/* <section data-scroll-section>
                 <TrainersMessage />
             </section> */}
 
-            <section data-scroll-section>
-                <Testimonial />
-            </section>
-            {/* <section data-scroll-section>
+                <section data-scroll-section>
+                    <Testimonial />
+                </section>
+                {/* <section data-scroll-section>
                 <LifeAtIgniteCarousel />
             </section> */}
-            <section data-scroll-section>
-                <CallToAction />
-            </section>
-        </div>
+                <section data-scroll-section>
+                    <CallToAction />
+                </section>
+            </div>
+        </>
     );
 };
 

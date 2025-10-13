@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 // 1. Import the reusable schema component
+import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
 import MarqueeBanner from '@/components/private-tutors-dubai/MarqueeBanner';
@@ -144,6 +145,10 @@ const PrivateTutorsDubai = ({ headerHeight }) => {
 
   return (
     <>
+      <SEO
+        title="Best Private Tutors In Dubai, UAE - IB, IGCSE, A-Levels, & AP"
+        description="Achieve academic excellence with Ignite’s private tutors in Dubai, UAE, offering support for IB, IGCSE, A-Level, AP, & Homeschooling (private candidates)"
+      />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={privateTutorsSchema} />
 

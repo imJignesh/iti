@@ -2,7 +2,7 @@ import CareersBanner from '@/components/career/Banner';
 import CareerForm from '@/components/career/CareerForm';
 import IgniteCareerCard from '@/components/career/IgniteCareerCard';
 import { useEffect, useRef } from 'react';
-
+import SEO from "@/components/SEO";
 // 1. ACCEPT the headerHeight prop
 const act = ({ headerHeight }) => {
   const scrollRef = useRef(null);
@@ -39,23 +39,28 @@ const act = ({ headerHeight }) => {
   }, []);
 
   return (
+    <>
+      <SEO title="Career - Ignite Training Institute l Tutor Jobs In Dubai, UAE"
+        description="Join Ignite’s team of expert tutors in Dubai. Explore tutoring jobs, growth opportunities & benefits while helping students achieve academic success" />
+      {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
     // 2. APPLY the style for paddingTop to the scroll container
-    <div
-      ref={scrollRef}
-      className='overflow-hidden'
-      data-scroll-container
-      style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
-    >
-      <section data-scroll-section>
-        <CareersBanner />
-      </section>
-      <section data-scroll-section>
-        <IgniteCareerCard />
-      </section>
-      <section data-scroll-section>
-        <CareerForm />
-      </section>
-    </div>
+      <div
+        ref={scrollRef}
+        className='overflow-hidden'
+        data-scroll-container
+        style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
+      >
+        <section data-scroll-section>
+          <CareersBanner />
+        </section>
+        <section data-scroll-section>
+          <IgniteCareerCard />
+        </section>
+        <section data-scroll-section>
+          <CareerForm />
+        </section>
+      </div>
+    </>
   );
 };
 

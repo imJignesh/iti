@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 // 1. Import the reusable JsonLd component
+import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 import AboutBanner from "@/components/aboutus/Banner";
 import IgniteAboutCard from "@/components/aboutus/IgniteAboutCard";
@@ -82,6 +83,8 @@ const About = ({ headerHeight }) => {
 
   return (
     <>
+      <SEO title="About Ignite Training Institute: Expert Tutors In Dubai"
+        description="Learn about Ignite Training Institute, Dubai's leading tutoring center for IB, IGCSE, A-Levels, & AP. Our experienced tutors and proven methodology ensure academic success." />
       {/* 2. RENDER the JsonLd component and pass the schema data */}
       <JsonLd schema={educationalOrganizationSchema} />
 

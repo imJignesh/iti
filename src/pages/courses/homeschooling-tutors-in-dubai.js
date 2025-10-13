@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 import Advantages from '@/components/homeSchooling/Advantages';
 import Curriculum from '@/components/homeSchooling/Curriculum';
 import CourseCard from '@/components/homeSchooling/CourseCard';
@@ -178,6 +179,10 @@ const HomeSchooling = ({ headerHeight }) => {
 
   return (
     <>
+      <SEO
+        title="Homeschooling Support In Dubai | Private Candidate Tutors"
+        description="Ignite provides full homeschooling support in Dubai for private candidates taking IB, IGCSE, A-Levels, & AP exams. Get tailored tutoring and curriculum guidance."
+      />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={homeschoolingSchema} />
 

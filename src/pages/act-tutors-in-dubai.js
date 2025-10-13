@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 import Accordion from '@/components/act/accrodian';
 import Blog from "@/components/homeCopy/Blog";
 import CourseCard from '@/components/act/CourseCard';
@@ -179,6 +180,10 @@ const act = ({ headerHeight }) => {
 
   return (
     <>
+      <SEO
+        title="ACT Tutors In Dubai | ACT Exam Preparation Classes In UAE"
+        description="Score high on the ACT with expert ACT tutors in Dubai. Our comprehensive ACT exam preparation classes offer strategies, practice tests, and personalized support."
+      />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={actSchema} />
 

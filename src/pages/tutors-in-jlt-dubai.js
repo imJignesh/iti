@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 // 1. Import the reusable schema component
+import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
 import MarqueeBanner from '@/components/tutors-jlt-dubai/MarqueeBanner';
@@ -143,6 +144,10 @@ const Tutors = ({ headerHeight }) => {
 
   return (
     <>
+      <SEO
+        title="Best Tutors In JLT, Dubai - IB, IGCSE, A-Levels, AP Support"
+        description="Enhance your learning with expert tutors in JLT Dubai for IB, IGCSE, A-Levels, AP, & more. Get personalized study plans, test prep, & one-on-one sessions."
+      />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={jltTutorsSchema} />
 

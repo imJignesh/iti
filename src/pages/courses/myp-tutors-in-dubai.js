@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-// 1. Import the reusable schema component
+import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 import MovingBanner from '@/components/home/MovingBanner';
 import Testimonial from '@/components/home/Testimonial';
@@ -174,10 +174,12 @@ const IBDP = ({ headerHeight }) => {
 
   return (
     <>
-      {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
-      {/* The JsonLd component will correctly stringify and inject this valid JSON-LD array */}
-      <JsonLd schema={mypSchema} />
 
+      <JsonLd schema={mypSchema} />
+      <SEO
+        title="One-On-One Interactive Tutoring Classes For IB MYP In UAE"
+        description="Improve grades with top IB MYP tutors in the UAE. Get subject-specific support, interactive lessons & tailored study plans from certified MYP trainers"
+      />
       {/* 3. APPLY the style for paddingTop */}
       <div
         ref={scrollRef}
