@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/Footer.module.css';
+import Image from '@/components/CustomImageWrapper';
 
 const Footer = () => {
   return (
@@ -26,7 +27,7 @@ const Footer = () => {
           <div
             className={styles.footerTop}
           >
-            <img
+            <Image
               src="/images/footerImage.jpg"
               data-scroll
               data-scroll-class="is-clipped"
@@ -34,6 +35,8 @@ const Footer = () => {
               data-scroll-offset="-10%"
               alt="Footer"
               className={`${styles.footerMainImg}`}
+              width={452}
+              height={250}
             />
           </div>
           <div

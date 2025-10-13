@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Image from '@/components/CustomImageWrapper';
 
 const advantages = [
   {
@@ -124,7 +125,7 @@ const Learning = () => {
                 lineHeight: "1.1",
                 textTransform: "uppercase",
                 marginTop: "3vh",
-                marginLeft:"8px",
+                marginLeft: "8px",
               }}
             >
               <span
@@ -177,7 +178,7 @@ const Learning = () => {
                   }`}
               >
                 <div className="mobile-card-icon">
-                  <img src={item.icon} alt="icon" className="mobile-icon" />
+                  <Image height={90} width={90} src={item.icon} alt="icon" className="mobile-icon" />
                 </div>
                 <div className="mobile-card-content">
                   <h3 className="mobile-card-title">{item.title}</h3>
@@ -190,7 +191,7 @@ const Learning = () => {
 
         <div className="mobile-carousel-controls">
           <button className="mobile-carousel-btn prev" onClick={prevSlide}>
-            <img
+            <Image
               src="/assets/rigtarr2.png"
               alt="previous"
               width={isMobile ? 25 : 50}
@@ -198,7 +199,7 @@ const Learning = () => {
             />
           </button>
           <button className="mobile-carousel-btn next" onClick={nextSlide}>
-            <img src="/assets/leftarr2.png" alt="next" width={isMobile ? 25 : 50} height={isMobile ? 25 : 50} />
+            <Image src="/assets/leftarr2.png" alt="next" width={isMobile ? 25 : 50} height={isMobile ? 25 : 50} />
           </button>
         </div>
 
@@ -269,10 +270,10 @@ const Learning = () => {
               </p>
               <div className="carousel-controls">
                 <button className="carousel-btn prev" onClick={prevSlide}>
-                  <img src="/assets/rigtarr2.png" alt="previous" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
+                  <Image src="/assets/rigtarr2.png" alt="previous" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                 </button>
                 <button className="carousel-btn next" onClick={nextSlide}>
-                  <img src="/assets/leftarr2.png" alt="next" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
+                  <Image src="/assets/leftarr2.png" alt="next" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                 </button>
               </div>
             </div>
@@ -292,7 +293,7 @@ const Learning = () => {
                         }`}
                     >
                       <div className="desktop-card-icon">
-                        <img src={item.icon} alt="icon" />
+                        <img src={item.icon} alt="ignite's tutoring courses" />
                       </div>
                       <h3 className="desktop-card-title">{item.title}</h3>
                       <p className="desktop-card-text">{item.text}</p>

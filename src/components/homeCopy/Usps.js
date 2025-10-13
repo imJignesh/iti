@@ -12,7 +12,8 @@ import {
   Scrollbar,
   Mousewheel,
 } from "swiper/modules";
-import Image from "next/image";
+// import Image from "next/image";
+import Image from '@/components/CustomImageWrapper';
 
 const uspData = [
   {
@@ -158,10 +159,12 @@ export default function Usps({ }) {
                       <div key={i} className="uspItem">
                         <div className="uspNumber">{usp.number}</div>
                         <div className="uspIconCircle">
-                          <img
+                          <Image
                             src={usp.icon}
                             alt={usp.title}
                             className="uspIcon"
+                            width={64}
+                            height={64}
                           />
                         </div>
                         <div className="uspContent">

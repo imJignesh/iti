@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-
+import Image from '@/components/CustomImageWrapper';
 export default function CallToAction() {
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
@@ -244,10 +244,12 @@ export default function CallToAction() {
                         </div>
 
                         <div style={styles.imageSection}>
-                            <img
+                            <Image
                                 src="/assets/callto.jpg"
                                 alt="Tutoring team working together"
                                 style={styles.image}
+                                height={370}
+                                width={550}
                             />
                         </div>
                     </div>
@@ -283,10 +285,12 @@ export default function CallToAction() {
 
             {/* Mobile Image - Outside container to overlay */}
             <div style={styles.mobileImageContainer} className="mobile-only">
-                <img
+                <Image
                     src="/assets/callto.jpg"
                     alt="Tutoring team working together"
                     style={styles.mobileImage}
+                    height={370}
+                    width={550}
                 />
             </div>
 

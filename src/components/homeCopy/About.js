@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+// import Image from "next/image";
+import Image from '@/components/CustomImageWrapper';
 
 const About = () => {
   const [studentCount, setStudentCount] = useState(0);

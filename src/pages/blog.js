@@ -348,7 +348,7 @@ const Blogpg = ({ headerHeight }) => {
                                                     <div className="p-3 position-relative">
 
                                                         {featuredImage && (
-                                                            <a href={post.link} rel="noopener noreferrer">
+                                                            <a href={postSlug} rel="noopener noreferrer">
                                                                 <img
                                                                     src={featuredImage}
                                                                     className="card-img-top"
@@ -397,7 +397,7 @@ const Blogpg = ({ headerHeight }) => {
 
                                                                 </div>
                                                             </div>
-                                                            <a href={post.link} rel="noopener noreferrer">
+                                                            <a href={postSlug} rel="noopener noreferrer">
                                                                 <h5
                                                                     className="card-title"
                                                                     dangerouslySetInnerHTML={{ __html: post.title.rendered }}

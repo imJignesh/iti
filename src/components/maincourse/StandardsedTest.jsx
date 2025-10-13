@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
+// import Image from "next/image";
+import Image from '@/components/CustomImageWrapper';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";

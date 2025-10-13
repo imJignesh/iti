@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from '@/components/CustomImageWrapper';
 
 export default function IBCurriculumStages() {
   return (
@@ -101,7 +102,7 @@ export default function IBCurriculumStages() {
                       marginLeft: "2.1rem",
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                    <Image src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
                   </div>
                 </button>
               </a>
@@ -171,7 +172,7 @@ export default function IBCurriculumStages() {
                       marginLeft: "2.1rem",
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                    <Image src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
                   </div>
                 </button>
               </a>
