@@ -1,5 +1,6 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
+import Image from '@/components/CustomImageWrapper';
 
 // No need for useRef or useEffect for scroll here.
 // The data-scroll-container is now handled by the provider

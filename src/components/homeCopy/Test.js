@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Image from '@/components/CustomImageWrapper';
 
 const testData = [
   {
@@ -71,15 +72,15 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
           </h2>
 
           <div
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className="fade-in-section"
-              style={{ animationDelay: "0.4s" }}
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
+            style={{ animationDelay: "0.4s" }}
           >
-              <p>
-                  Whether you're aiming for top scores or a strong foundation, Ignite’s courses give you the edge to succeed.
-              </p>
+            <p>
+              Whether you're aiming for top scores or a strong foundation, Ignite’s courses give you the edge to succeed.
+            </p>
           </div>
         </div>
       </div>{" "}

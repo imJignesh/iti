@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
+import Image from '@/components/CustomImageWrapper';
 import { useEffect, useState } from "react";
 
 export default function TutoringCourses() {
@@ -83,7 +84,7 @@ export default function TutoringCourses() {
                   <a href="/courses/ibdp-tutors-in-dubai">
                     <button className="card-button">
                       LEARN MORE
-                      <img
+                      <Image
                         src="/assets/leftarr.png"
                         alt="leftarr"
                         width={32}
@@ -112,7 +113,7 @@ export default function TutoringCourses() {
                   <a href="/courses/myp-tutors-in-dubai" >
                     <button className="card-button">
                       LEARN MORE
-                      <img
+                      <Image
                         src="/assets/leftarr.png"
                         alt="leftarr"
                         width={32}
@@ -141,7 +142,7 @@ export default function TutoringCourses() {
                   <a href="/courses/igcse-tutors-in-dubai" >
                     <button className="card-button">
                       LEARN MORE
-                      <img
+                      <Image
                         src="/assets/leftarr.png"
                         alt="leftarr"
                         width={32}
@@ -172,7 +173,7 @@ export default function TutoringCourses() {
                   <a href="/courses/a-level-tutors-in-dubai">
                     <button className="card-button">
                       LEARN MORE
-                      <img
+                      <Image
                         src="/assets/leftarr.png"
                         alt="leftarr"
                         width={32}
@@ -201,7 +202,7 @@ export default function TutoringCourses() {
                   <a href="/courses/homeschooling-tutors-in-dubai">
                     <button className="card-button">
                       LEARN MORE
-                      <img
+                      <Image
                         src="/assets/leftarr.png"
                         alt="leftarr"
                         width={32}
@@ -232,7 +233,7 @@ export default function TutoringCourses() {
                 <a href="/courses/ibdp-tutors-in-dubai">
                   <button className="card-button">
                     LEARN MORE
-                    <img
+                    <Image
                       src="/assets/leftarr.png"
                       alt="leftarr"
                       width={16}
@@ -261,7 +262,7 @@ export default function TutoringCourses() {
                 <a href="/courses/myp-tutors-in-dubai" >
                   <button className="card-button">
                     LEARN MORE
-                    <img
+                    <Image
                       src="/assets/leftarr.png"
                       alt="leftarr"
                       width={16}
@@ -290,7 +291,7 @@ export default function TutoringCourses() {
                 <a href="/courses/igcse-tutors-in-dubai" >
                   <button className="card-button">
                     LEARN MORE
-                    <img
+                    <Image
                       src="/assets/leftarr.png"
                       alt="leftarr"
                       width={16}
@@ -320,7 +321,7 @@ export default function TutoringCourses() {
                 <a href="/courses/a-level-tutors-in-dubai">
                   <button className="card-button">
                     LEARN MORE
-                    <img
+                    <Image
                       src="/assets/leftarr.png"
                       alt="leftarr"
                       width={16}
@@ -349,7 +350,7 @@ export default function TutoringCourses() {
                 <a href="/courses/homeschooling-tutors-in-dubai">
                   <button className="card-button">
                     LEARN MORE
-                    <img
+                    <Image
                       src="/assets/leftarr.png"
                       alt="leftarr"
                       width={16}
