@@ -114,6 +114,7 @@
 }
 
 .col svg {
+    /**/
     pointer-events: none;
 }
 
