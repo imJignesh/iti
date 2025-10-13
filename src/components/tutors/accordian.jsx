@@ -19,7 +19,7 @@ export default function Accordion() {
                 </div>
                 <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
             </div>
- 
+
             {/* Expanded Content */}
             {open && (
                 <div className="expanded">
