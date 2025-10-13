@@ -41,10 +41,10 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">SUBJECTS WE SUPPORT
-            </div>
+            <h2 className="SubHeading testSubheading">SUBJECTS WE SUPPORT
+            </h2>
           </div>
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -53,7 +53,7 @@ export default function SubjectsCard1({ }) {
           >
             Tutoring That Makes Every <br /> ACT  <span className="highlight"> Subject </span>
             Clear
-          </h2>
+          </h3>
         </div>
       </div>
       <div className="container">
@@ -92,9 +92,9 @@ export default function SubjectsCard1({ }) {
                   style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
                 >
                   {row.map((subj) => (
-                    <div key={subj} className="subjects-card1-bubble">
+                    <h3 key={subj} className="subjects-card1-bubble">
                       {subj}
-                    </div>
+                    </h3>
                   ))}
                 </div>
               ))}

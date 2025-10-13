@@ -32,9 +32,9 @@ const Blog = () => {
                             data-scroll-repeat="true"
                             style={{ animationDelay: "0.1s" }}
                         >
-                            <span className="SubHeading">BLOGS</span>
+                            <h2 className="SubHeading">BLOGS</h2>
                         </div>
-                        <h2
+                        <h3
                             data-scroll
                             data-scroll-class="is-inview"
                             data-scroll-repeat="true"
@@ -44,7 +44,7 @@ const Blog = () => {
                             LOREM IPSUM DOLOR
                             SIT AMET, CONSECTETUR
                             <span className="blogHighlight"> ADIPISCING</span>
-                        </h2>
+                        </h3>
                         <div
                             data-scroll
                             data-scroll-class="is-inview"
