@@ -114,6 +114,10 @@
 }
 
 
+.col svg {
+
+    pointer-events: none;
+}
 
 .featured-image-style {
     height: 224px;
