@@ -1,3 +1,6 @@
+import React, { useEffect, useRef } from 'react';
+// 1. Import the reusable schema component
+import JsonLd from "@/components/JsonLd";
 import Accordion from '@/components/ap/accrodian';
 import Blog from "@/components/homeCopy/Blog";
 import APBenefits from '@/components/ap/chooseApp';
@@ -13,10 +16,127 @@ import ReviewsSection from '@/components/ap/ReviewsSection';
 import StudentAchievements from '@/components/ap/StudentAchivement';
 import SubjectsCard1 from '@/components/ap/SubjectCard1';
 import UspsSection from '@/components/ap/UspsSection';
-import { useEffect, useRef } from 'react';
 
 // 1. ACCEPT the headerHeight prop
 const ap = ({ headerHeight }) => {
+
+  // ----------------------------------------------------
+  // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
+  // ----------------------------------------------------
+  const apSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which AP subjects does Ignite offer tutoring for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ignite provides expert tutoring support for a wide range of AP subjects, including Calculus (AB & BC), Biology, Chemistry, Physics, English Literature, and more, all taught by experienced AP-certified educators."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is tutoring tailored for each AP subject?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each AP tutoring program is customized with subject-specific content, practice exams, past paper solving, and tailored strategies to match the AP curriculum and exam structure for that subject."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is online AP tutoring available in addition to in-person classes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Ignite offers flexible AP tutoring options both online and in person, so students can choose the format that best fits their schedule and learning preferences within the UAE."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Ignite prepare students for AP exams?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tutoring includes regular past paper practice, timed mock exams, detailed feedback, and targeted strategies, helping students master multiple-choice and free-response questions to boost their AP scores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I try the tutoring program before enrolling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Ignite offers a free demo class so students and parents can assess tutor compatibility, teaching methods, and academic fit before committing to the full program."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ignitetraininginstitute.com/"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Courses",
+        "item": "https://ignitetraininginstitute.com/courses/"
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AP Tutors",
+        "item": "https://ignitetraininginstitute.com/advanced-placements-tutors/"
+      }]
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Ignite Training Institute",
+          "url": "https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai/",
+          "logo": "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
+          "telephone": "+971588589958",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Al Moosa Tower 1 - 1503 - Sheikh Zayed Rd - near Emirates Towers Metro (Sea Side - Trade Centre - Trade Centre 1)",
+            "addressLocality": "Dubai",
+            "addressCountry": "United Arab Emirates"
+          },
+          "sameAs": [
+            "https://www.facebook.com/ignitetraininginstitute",
+            "https://www.instagram.com/ignitetraininginstitute/",
+            "https://ae.linkedin.com/company/ignite-training-institute"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "79",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Advanced Placement Tutoring",
+          "name": "AP Tutors in Dubai - Ignite Training Institute",
+          "description": "Ignite Training Institute offers expert Advanced Placement (AP) tutoring in Dubai. Our tutors provide personalized guidance, exam strategies, and subject-specific coaching to help students achieve top AP scores.",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Ignite Training Institute",
+            "url": "https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai/"
+          }
+        }
+      ]
+    }
+  ];
+  // ----------------------------------------------------
+  // 👆 END OF SCHEMA DEFINITION
+  // ----------------------------------------------------
+
+
   const scrollRef = useRef(null);
   const scrollInstanceRef = useRef(null);
 
@@ -51,139 +171,144 @@ const ap = ({ headerHeight }) => {
   }, []);
 
   return (
-    // 2. APPLY the style for paddingTop to the scroll container
-    <div
-      ref={scrollRef}
-      className='overflow-hidden innerpage'
-      data-scroll-container
-      style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
-    >
-      <section data-scroll-section>
-        <InfoCard />
-      </section>
+    <>
+      {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
+      <JsonLd schema={apSchema} />
 
-      <section data-scroll-section>
-        <IgniteAboutCard />
-      </section>
+      {/* 3. APPLY the style for paddingTop to the scroll container */}
+      <div
+        ref={scrollRef}
+        className='overflow-hidden innerpage'
+        data-scroll-container
+        style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
+      >
+        <section data-scroll-section>
+          <InfoCard />
+        </section>
 
-      {/* <section data-scroll-section>
-        <StudentAchievements />
-      </section> */}
+        <section data-scroll-section>
+          <IgniteAboutCard />
+        </section>
 
-      <section data-scroll-section>
-        <CourseCard />
-      </section>
+        {/* <section data-scroll-section>
+            <StudentAchievements />
+          </section> */}
 
-      {/* <section data-scroll-section>
-        <SubjectsCard />
-      </section> */}
-      <section data-scroll-section>
-        <SubjectsCard1 />
-      </section>
-      <section data-scroll-section>
-        <APBenefits />
-      </section>
+        <section data-scroll-section>
+          <CourseCard />
+        </section>
 
-      <section data-scroll-section>
-        <ReviewsSection />
-      </section>
+        {/* <section data-scroll-section>
+            <SubjectsCard />
+          </section> */}
+        <section data-scroll-section>
+          <SubjectsCard1 />
+        </section>
+        <section data-scroll-section>
+          <APBenefits />
+        </section>
 
-      <section data-scroll-section>
-        <Trainers />
-      </section> 
+        <section data-scroll-section>
+          <ReviewsSection />
+        </section>
 
-      {/* what we offer Start */}
-      <section className="achievementsSection">
+        <section data-scroll-section>
+          <Trainers />
+        </section>
+
+        {/* what we offer Start */}
+        <section className="achievementsSection">
           <div className="container">
-              <div className="achievementsHeadings">
-                  <div
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat="true"
-                      className="fade-in-section"
-                      style={{ animationDelay: "0.1s" }}
-                  >
-                      <h4 className="SubHeading">WHAT MORE DO WE OFFER?</h4>
-                  </div>
-                  <div
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat="true"
-                      className="fade-in-section"
-                      style={{ animationDelay: "0.25s" }}
-                  >
-                      <h1 className="achievementsTitle">
-
-                          Comprehensive Guidance For Every <span className="highlight">Academic</span>{" "}
-                          Milestone
-                      </h1>
-                  </div>
-
+            <div className="achievementsHeadings">
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section"
+                style={{ animationDelay: "0.1s" }}
+              >
+                <h4 className="SubHeading">WHAT MORE DO WE OFFER?</h4>
               </div>
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section"
+                style={{ animationDelay: "0.25s" }}
+              >
+                <h1 className="achievementsTitle">
+
+                  Comprehensive Guidance For Every <span className="highlight">Academic</span>{" "}
+                  Milestone
+                </h1>
+              </div>
+
+            </div>
           </div>
           {/* OPTIMIZATION: Corrected 'class' to 'className' in the following div */}
           <div className="container what-we-offer">
-              <div className="step">
-                  <div className="icon-wrap" data-step="01">
-                      <img src="/images/school.png" alt="School Options" />
-                  </div>
-                  <div className="step-title">SCHOOL OPTIONS</div>
-                  <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="01">
+                <img src="/images/school.png" alt="School Options" />
               </div>
+              <div className="step-title">SCHOOL OPTIONS</div>
+              <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
+            </div>
 
-              <div className="step">
-                  <div className="icon-wrap" data-step="02">
-                      <img src="/images/idealcur.png" alt="Ideal Curriculum" />
-                  </div>
-                  <div className="step-title">IDEAL CURRICULUM</div>
-                  <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="02">
+                <img src="/images/idealcur.png" alt="Ideal Curriculum" />
               </div>
+              <div className="step-title">IDEAL CURRICULUM</div>
+              <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
+            </div>
 
-              <div className="step">
-                  <div className="icon-wrap" data-step="03">
-                      <img src="/images/subject.png" alt="Subject Choices" />
-                  </div>
-                  <div className="step-title">SUBJECT CHOICES</div>
-                  <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="03">
+                <img src="/images/subject.png" alt="Subject Choices" />
               </div>
+              <div className="step-title">SUBJECT CHOICES</div>
+              <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
+            </div>
 
-              <div className="step">
-                  <div className="icon-wrap" data-step="04">
-                      <img src="/images/universitypath.png" alt="University Pathways" />
-                  </div>
-                  <div className="step-title">UNIVERSITY PATHWAYS</div>
-                  <div className="step-desc">Map a clear, strategic path to top international universities.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="04">
+                <img src="/images/universitypath.png" alt="University Pathways" />
               </div>
+              <div className="step-title">UNIVERSITY PATHWAYS</div>
+              <div className="step-desc">Map a clear, strategic path to top international universities.</div>
+            </div>
           </div>
 
 
-      </section>
+        </section>
 
-      {/* What We Offer End */}
+        {/* What We Offer End */}
 
-      <section data-scroll-section>
-        <MarqueeBanner />
-      </section>
+        <section data-scroll-section>
+          <MarqueeBanner />
+        </section>
 
-      <section data-scroll-section>
-        <UspsSection />
-      </section>
+        <section data-scroll-section>
+          <UspsSection />
+        </section>
 
-      {/* <section data-scroll-section>
-        <LifeAtIgniteCarousel />
-      </section> */}
+        {/* <section data-scroll-section>
+            <LifeAtIgniteCarousel />
+          </section> */}
 
-      <section data-scroll-section>
-        <FAQSection />
-      </section>
+        <section data-scroll-section>
+          <FAQSection />
+        </section>
 
-      <section data-scroll-section>
-        <Blog />
-      </section>
-      <section data-scroll-section>
-        <Accordion />
-      </section>
-    </div>
+        <section data-scroll-section>
+          <Blog />
+        </section>
+        <section data-scroll-section>
+          <Accordion />
+        </section>
+      </div>
+    </>
   );
 };
 

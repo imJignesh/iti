@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+// 1. Import the reusable schema component
+import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
 import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
 import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
@@ -19,6 +21,101 @@ import FrenchTutorsStudentAchievements from '@/components/french-tutoring/Studen
 //comment
 // Renamed main component: SubjectTutoring -> FrenchTutorsInDubai
 const FrenchTutorsInDubai = ({ headerHeight }) => {
+
+    // ----------------------------------------------------
+    // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
+    // ----------------------------------------------------
+    const frenchTutorsSchema = [
+        {
+            "@context": "https://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ignitetraininginstitute.com/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Courses",
+                "item": "https://ignitetraininginstitute.com/courses/"
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "French Tutors In Dubai",
+                "item": "https://ignitetraininginstitute.com/french-tutor-in-dubai/"
+            }]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Does Ignite offer French tutoring for different curricula?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, Ignite provides French tutoring tailored to major international curricula, including IB (SL/HL), IGCSE, A-Levels, and AP French. Tutors are well-versed with each board’s requirements, ensuring focused academic support."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What areas of the French language are covered in tutoring sessions?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Tutoring sessions cover all key skills like reading, writing, listening, and speaking. Emphasis is placed on grammar, vocabulary, comprehension, and cultural context based on each curriculum’s exam format."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is support available for internal assessments & oral exams in IB French?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely. Ignite’s IB French tutors provide guidance for internal assessments (IA), oral presentations, and writing tasks, helping students meet the IB language criteria with clarity and confidence."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can students get help with past papers & exam strategies?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, students practice with past papers and receive targeted coaching on exam strategies, timed responses, and common question types for IGCSE, A-Levels, and AP French exams."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I start French tutoring at Ignite?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can begin by booking a free demo class. This allows you to assess our teaching style and get paired with a French tutor suited to your academic needs and curriculum."
+                    }
+                }
+            ]
+        },
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Ignite Training Institute - French Tutors In Dubai",
+            "url": "https://ignitetraininginstitute.com/french-tutor-in-dubai/",
+            "logo": "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "79",
+                "bestRating": "5",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Google",
+                    "sameAs": "https://www.google.com/"
+                },
+                "url": "https://www.google.com/maps/place/Ignite+Training+Institute/@25.2166721,55.2777655,15z/data=!4m6!3m5!1s0x3e5f43b8f8e29eb3:0x44b31b9a92cc00dc!8m2!3d25.2166721!4d55.2777655!16s%2Fg%2F11gng101r0"
+            }
+        }
+    ];
+    // ----------------------------------------------------
+    // 👆 END OF SCHEMA DEFINITION
+    // ----------------------------------------------------
+
     const scrollRef = useRef(null);
     const scrollInstanceRef = useRef(null);
 
@@ -53,59 +150,64 @@ const FrenchTutorsInDubai = ({ headerHeight }) => {
     }, []);
 
     return (
-        <div
-            ref={scrollRef}
-            data-scroll-container
-            style={{ paddingTop: `${headerHeight}px` }}
-        >
-            <section data-scroll-section>
-                <FrenchTutorsInfoCard />
-            </section>
+        <>
+            {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
+            <JsonLd schema={frenchTutorsSchema} />
 
-            {/* <section data-scroll-section>
-                <FrenchTutorsStudentAchievements />
-            </section> */}
+            <div
+                ref={scrollRef}
+                data-scroll-container
+                style={{ paddingTop: `${headerHeight}px` }}
+            >
+                <section data-scroll-section>
+                    <FrenchTutorsInfoCard />
+                </section>
 
-            <section data-scroll-section>
-                <MarqueeBanner />
-            </section>
+                {/* <section data-scroll-section>
+                    <FrenchTutorsStudentAchievements />
+                </section> */}
 
-            <section data-scroll-section>
-                <FrenchTutorsChooseApp />
-            </section>
+                <section data-scroll-section>
+                    <MarqueeBanner />
+                </section>
 
-            <section data-scroll-section>
-                <FrenchTutorsACT />
-            </section>
+                <section data-scroll-section>
+                    <FrenchTutorsChooseApp />
+                </section>
 
-            <section data-scroll-section>
-                <ReviewsSection />
-            </section>
-            
-            <section data-scroll-section>
-                <Trainers />
-            </section>
+                <section data-scroll-section>
+                    <FrenchTutorsACT />
+                </section>
 
-            <section data-scroll-section>
-                <FrenchTutorsIgniteAchievements />
-            </section>
+                <section data-scroll-section>
+                    <ReviewsSection />
+                </section>
 
-            <section data-scroll-section>
-                <FrenchTutorsUsps />
-            </section>
+                <section data-scroll-section>
+                    <Trainers />
+                </section>
 
-            {/* <section data-scroll-section>
-                <FrenchTutorsLifeAtIgniteCarousel />
-            </section> */}
+                <section data-scroll-section>
+                    <FrenchTutorsIgniteAchievements />
+                </section>
 
-            <section data-scroll-section>
-                <FrenchTutorsFAQSection />
-            </section>
+                <section data-scroll-section>
+                    <FrenchTutorsUsps />
+                </section>
 
-            <section data-scroll-section>
-                <Accordion />
-            </section>
-        </div>
+                {/* <section data-scroll-section>
+                    <FrenchTutorsLifeAtIgniteCarousel />
+                </section> */}
+
+                <section data-scroll-section>
+                    <FrenchTutorsFAQSection />
+                </section>
+
+                <section data-scroll-section>
+                    <Accordion />
+                </section>
+            </div>
+        </>
     );
 };
 

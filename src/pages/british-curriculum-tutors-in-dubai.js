@@ -1,3 +1,6 @@
+import React, { useEffect, useRef } from 'react';
+// 1. Import the reusable schema component
+import JsonLd from "@/components/JsonLd";
 import MovingBanner from '@/components/home/MovingBanner';
 import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/bc/accordian';
@@ -17,11 +20,128 @@ import SubjectsCard from '@/components/bc/SubjectCard';
 import UniImagesCard from '@/components/bc/universityCrad';
 import UspsSection from '@/components/bc/UspsSection';
 import { University } from 'lucide-react';
-import { useEffect, useRef } from 'react';
 
 
 // 1. ACCEPT the headerHeight prop
 const BC = ({ headerHeight }) => {
+
+  // ----------------------------------------------------
+  // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
+  // ----------------------------------------------------
+  const bcSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What levels of the British curriculum does Ignite support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ignite offers tutoring for IGCSE, GCSE, AS, and A Levels across a wide range of subjects, supporting students from early secondary years through final board exams."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which exam boards does Ignite’s British curriculum tutoring cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tutoring is available for major British curriculum boards, including Edexcel, Cambridge (CAIE), and Oxford International AQA, with teaching aligned to each board's requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are subjects like Math, Science, and English included in the tutoring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Ignite provides expert tutoring in all core and elective subjects including, Math, Physics, Chemistry, Biology, English Language and Literature, Business Studies, Economics, and more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the tutoring offered online, in person, or both?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ignite offers flexible tutoring options with both in-person and online classes available, allowing students to choose what suits their schedule and learning style best."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can students take a demo class before enrolling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Ignite offers a free demo class so students and parents can experience the teaching style and personalized support before committing to a full course."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ignitetraininginstitute.com/"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Courses",
+        "item": "https://ignitetraininginstitute.com/courses/"
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "British Curriculum Tutors",
+        "item": "https://ignitetraininginstitute.com/british-curriculum-tutors/"
+      }]
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Ignite Training Institute",
+          "url": "https://ignitetraininginstitute.com/british-curriculum-tutors-in-dubai/",
+          "logo": "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
+          "telephone": "+971588589958",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Al Moosa Tower 1 - 1503 - Sheikh Zayed Rd - near Emirates Towers Metro (Sea Side - Trade Centre - Trade Centre 1)",
+            "addressLocality": "Dubai",
+            "addressCountry": "United Arab Emirates"
+          },
+          "sameAs": [
+            "https://www.facebook.com/ignitetraininginstitute",
+            "https://www.instagram.com/ignitetraininginstitute/",
+            "https://ae.linkedin.com/company/ignite-training-institute"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "79",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "Service",
+          "serviceType": "British Curriculum Tutoring",
+          "name": "British Curriculum Tutors in Dubai - Ignite Training Institute",
+          "description": "Ignite Training Institute offers expert tutoring support for British Curriculum students in Dubai. Our tutors specialize in IGCSE and A-Level programs, helping students excel in subjects such as Mathematics, Sciences, English, Economics, and more with personalized learning strategies.",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Ignite Training Institute",
+            "url": "https://ignitetraininginstitute.com/british-curriculum-tutors-in-dubai/"
+          }
+        }
+      ]
+    }
+  ];
+  // ----------------------------------------------------
+  // 👆 END OF SCHEMA DEFINITION
+  // ----------------------------------------------------
+
+
   const scrollRef = useRef(null);
   const scrollInstanceRef = useRef(null);
 
@@ -56,140 +176,145 @@ const BC = ({ headerHeight }) => {
   }, []);
 
   return (
-    // 2. APPLY the style for paddingTop to the scroll container
-    <div
-      ref={scrollRef}
-      className='overflow-hidden innerpage'
-      data-scroll-container
-      style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
-    >
-      <section data-scroll-section>
-        <InfoCard />
-      </section>
+    <>
+      {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
+      <JsonLd schema={bcSchema} />
 
-      <section data-scroll-section>
-        <IgniteAboutCard />
-      </section>
+      {/* 3. APPLY the style for paddingTop to the scroll container */}
+      <div
+        ref={scrollRef}
+        className='overflow-hidden innerpage'
+        data-scroll-container
+        style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
+      >
+        <section data-scroll-section>
+          <InfoCard />
+        </section>
 
-      <section data-scroll-section>
-        <UniImagesCard />
-      </section>
+        <section data-scroll-section>
+          <IgniteAboutCard />
+        </section>
 
-      {/* <section data-scroll-section>
-        <StudentAchievements />
-      </section> */}
+        <section data-scroll-section>
+          <UniImagesCard />
+        </section>
 
-      <section data-scroll-section>
-        <IBCurriculumStages />
-      </section>
+        {/* <section data-scroll-section>
+            <StudentAchievements />
+          </section> */}
 
-      <section data-scroll-section>
-        <SubjectsCard />
-      </section>
-      <section data-scroll-section>
-        <MarqueeBanner />
-      </section>
+        <section data-scroll-section>
+          <IBCurriculumStages />
+        </section>
 
-      <section data-scroll-section>
-        <ReviewsSection />
-      </section>
+        <section data-scroll-section>
+          <SubjectsCard />
+        </section>
+        <section data-scroll-section>
+          <MarqueeBanner />
+        </section>
 
-      <section data-scroll-section>
-        <Trainers />
-      </section> 
+        <section data-scroll-section>
+          <ReviewsSection />
+        </section>
 
-      {/* what we offer Start */}
-      <section className="achievementsSection">
+        <section data-scroll-section>
+          <Trainers />
+        </section>
+
+        {/* what we offer Start */}
+        <section className="achievementsSection">
           <div className="container">
-              <div className="achievementsHeadings">
-                  <div
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat="true"
-                      className="fade-in-section"
-                      style={{ animationDelay: "0.1s" }}
-                  >
-                      <h4 className="SubHeading">WHAT MORE DO WE OFFER?</h4>
-                  </div>
-                  <div
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat="true"
-                      className="fade-in-section"
-                      style={{ animationDelay: "0.25s" }}
-                  >
-                      <h1 className="achievementsTitle">
-
-                          Comprehensive Guidance For Every <span className="highlight">Academic</span>{" "}
-                          Milestone
-                      </h1>
-                  </div>
-
+            <div className="achievementsHeadings">
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section"
+                style={{ animationDelay: "0.1s" }}
+              >
+                <h4 className="SubHeading">WHAT MORE DO WE OFFER?</h4>
               </div>
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section"
+                style={{ animationDelay: "0.25s" }}
+              >
+                <h1 className="achievementsTitle">
+
+                  Comprehensive Guidance For Every <span className="highlight">Academic</span>{" "}
+                  Milestone
+                </h1>
+              </div>
+
+            </div>
           </div>
           {/* OPTIMIZATION: Corrected 'class' to 'className' in the following div */}
           <div className="container what-we-offer">
-              <div className="step">
-                  <div className="icon-wrap" data-step="01">
-                      <img src="/images/school.png" alt="School Options" />
-                  </div>
-                  <div className="step-title">SCHOOL OPTIONS</div>
-                  <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="01">
+                <img src="/images/school.png" alt="School Options" />
               </div>
+              <div className="step-title">SCHOOL OPTIONS</div>
+              <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
+            </div>
 
-              <div className="step">
-                  <div className="icon-wrap" data-step="02">
-                      <img src="/images/idealcur.png" alt="Ideal Curriculum" />
-                  </div>
-                  <div className="step-title">IDEAL CURRICULUM</div>
-                  <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="02">
+                <img src="/images/idealcur.png" alt="Ideal Curriculum" />
               </div>
+              <div className="step-title">IDEAL CURRICULUM</div>
+              <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
+            </div>
 
-              <div className="step">
-                  <div className="icon-wrap" data-step="03">
-                      <img src="/images/subject.png" alt="Subject Choices" />
-                  </div>
-                  <div className="step-title">SUBJECT CHOICES</div>
-                  <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="03">
+                <img src="/images/subject.png" alt="Subject Choices" />
               </div>
+              <div className="step-title">SUBJECT CHOICES</div>
+              <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
+            </div>
 
-              <div className="step">
-                  <div className="icon-wrap" data-step="04">
-                      <img src="/images/universitypath.png" alt="University Pathways" />
-                  </div>
-                  <div className="step-title">UNIVERSITY PATHWAYS</div>
-                  <div className="step-desc">Map a clear, strategic path to top international universities.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="04">
+                <img src="/images/universitypath.png" alt="University Pathways" />
               </div>
+              <div className="step-title">UNIVERSITY PATHWAYS</div>
+              <div className="step-desc">Map a clear, strategic path to top international universities.</div>
+            </div>
           </div>
 
 
-      </section>
+        </section>
 
-      {/* What We Offer End */}
+        {/* What We Offer End */}
 
-      <section data-scroll-section>
-        <IgniteAchievements />
-      </section>
+        <section data-scroll-section>
+          <IgniteAchievements />
+        </section>
 
-      <section data-scroll-section>
-        <UspsSection />
-      </section>
+        <section data-scroll-section>
+          <UspsSection />
+        </section>
 
-      {/* <section data-scroll-section>
-        <LifeAtIgniteCarousel />
-      </section> */}
+        {/* <section data-scroll-section>
+            <LifeAtIgniteCarousel />
+          </section> */}
 
-      <section data-scroll-section>
-        <FAQSection />
-      </section>
+        <section data-scroll-section>
+          <FAQSection />
+        </section>
 
-      <section data-scroll-section>
-        <Blog />
-      </section>
-      <section data-scroll-section>
-        <Accordion />
-      </section>
-    </div>
+        <section data-scroll-section>
+          <Blog />
+        </section>
+        <section data-scroll-section>
+          <Accordion />
+        </section>
+      </div>
+    </>
   );
 };
 

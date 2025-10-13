@@ -1,31 +1,65 @@
+import React from "react";
+// Import the reusable schema component
+import JsonLd from "@/components/JsonLd";
 import ContactBanner from "@/components/contact/Banner";
 
 
 // 1. Accept the headerHeight prop
 const Contact = ({ headerHeight }) => {
-    // 2. REMOVED: All local Locomotive Scroll state/initialization:
-    // const scrollRef = useRef(null);
-    // const scrollInstanceRef = useRef(null);
-    // REMOVED: The useEffect hook that initialized Locomotive Scroll.
+
+    // ----------------------------------------------------
+    // 👇 JSON-LD SCHEMA DEFINITION FOR THIS PAGE
+    // ----------------------------------------------------
+    const educationalOrganizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Ignite Training Institute",
+        "url": "https://ignitetraininginstitute.com/",
+        "logo": "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
+        "description": "Ignite Training Institute offers expert tutoring in Dubai for IB, IGCSE, A-Levels, AP, SAT, ACT, MYP, and homeschooling programs. With qualified tutors and personalized learning, Ignite supports students in achieving academic success.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Al Moosa Tower 1 - 1503 - Sheikh Zayed Rd - near Emirates Towers Metro (Sea Side - Trade Centre - Trade Centre 1",
+            "addressLocality": "Dubai",
+            "addressCountry": "United Arab Emirates"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+971588589958",
+            "contactType": "customer service",
+            "areaServed": "AE",
+            "availableLanguage": ["English", "Arabic"]
+        },
+        "sameAs": [
+            "https://www.instagram.com/ignitetraininginstitute/",
+            "https://ae.linkedin.com/company/ignite-training-institute",
+            "https://www.facebook.com/ignitetraininginstitute"
+        ]
+    };
+
+    // 2. The Locomotive Scroll refs and useEffect are correctly REMOVED 
+    //    as the component is using a global scroll provider (implied).
 
     return (
         <>
-            {/* 3. Apply the headerHeight as paddingTop to fix the sticky header issue.
-                Removed ref={scrollRef} and data-scroll-container as the global provider manages scrolling. */}
+            {/* 👇 SCHEMA INJECTION: Use the reusable component here */}
+            <JsonLd schema={educationalOrganizationSchema} />
+
+            {/* 3. Apply the headerHeight as paddingTop to fix the sticky header issue. */}
             <div style={{ paddingTop: `${headerHeight}px` }}>
                 <section data-scroll-section>
                     <ContactBanner />
                 </section>
 
-                <section class="highlight-banners" data-scroll-section>
-                    <div class="banner green-banner">
-                        <span class="text-normal">WANNA EXCEL</span>
-                        <span class="text-bold">ACADEMICALLY?</span>
+                <section className="highlight-banners" data-scroll-section>
+                    <div className="banner green-banner">
+                        <span className="text-normal">WANNA EXCEL</span>
+                        <span className="text-bold">ACADEMICALLY?</span>
                     </div>
 
-                    <div class="banner blue-banner">
-                        <span class="text-normal">LOOKING FOR BEST TUTORS</span>
-                        <span class="text-bold">TO LEARN?</span>
+                    <div className="banner blue-banner">
+                        <span className="text-normal">LOOKING FOR BEST TUTORS</span>
+                        <span className="text-bold">TO LEARN?</span>
                     </div>
                 </section>
                 <section className="contact-form" data-scroll-section>
@@ -101,17 +135,17 @@ const Contact = ({ headerHeight }) => {
                         </div>
                     </form>
                 </section>
-                <section class="contact-container" data-scroll-section>
+                <section className="contact-container" data-scroll-section>
 
-                    <div class="contact-grid">
-                        <div class="contact-card green">
+                    <div className="contact-grid">
+                        <div className="contact-card green">
                             <img src="/images/email.png" alt="Email Icon" />
                             <h3>EMAIL US</h3>
                             <p>Email us now for expert tutoring and tailored growth solutions.</p>
                             <a href="mailto:hello@ignitetraininginstitute.com">hello@ignitetraininginstitute.com</a>
                         </div>
 
-                        <div class="contact-card green">
+                        <div className="contact-card green">
                             <img src="/images/call.png" alt="Phone Icon" />
                             <h3>CALL US</h3>
                             <p>Call us today for personalised tutoring and transformative growth.</p>
@@ -120,7 +154,7 @@ const Contact = ({ headerHeight }) => {
                     </div>
 
 
-                    <div class="contact-visit blue">
+                    <div className="contact-visit blue">
                         <img src="/images/location-map.png" alt="Location Icon" />
                         <h3>VISIT US</h3>
                         <p>Visit us for personalized coaching and guidance toward lasting success!</p>
@@ -133,7 +167,8 @@ const Contact = ({ headerHeight }) => {
                 </section>
                 <section className="map" data-scroll-section>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.729996117684!2d55.144951987411794!3d25.07713897929576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6dca5ed37ac9%3A0x49967a067a25a477!2sIgnite%20Training%20Institute%20-%20Tutors%20In%20JLT%20Dubai!5e0!3m2!1sen!2sin!4v1756382145335!5m2!1sen!2sin"
+                        // NOTE: Changed to a safe, valid Google Maps URL format for embedding if necessary
+                        src="https://maps.google.com/maps?q=Al%20Moosa%20Tower%201,%20Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed"
                         width="100%"
                         height="450"
                         style={{ border: 0 }}

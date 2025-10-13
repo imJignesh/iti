@@ -1,3 +1,6 @@
+import React, { useEffect, useRef } from 'react';
+// 1. Import the reusable schema component
+import JsonLd from "@/components/JsonLd";
 import Advantages from '@/components/homeSchooling/Advantages';
 import Curriculum from '@/components/homeSchooling/Curriculum';
 import CourseCard from '@/components/homeSchooling/CourseCard';
@@ -10,10 +13,136 @@ import Accordion from '@/components/homeSchooling/accrodian';
 import Blog from "@/components/homeCopy/Blog";
 import ReviewsSection from '@/components/homeSchooling/ReviewsSection';
 import StudentAchievements from '@/components/ibdp/StudentAchivement';
-import { useEffect, useRef } from 'react';
+
 
 // 1. ACCEPT the headerHeight prop
 const HomeSchooling = ({ headerHeight }) => {
+
+  // ----------------------------------------------------
+  // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
+  // ----------------------------------------------------
+  const homeschoolingSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What levels & curricula does Ignite support for homeschooling students?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ignite offers homeschooling support for British Curriculum (IGCSE, A-Levels) & AP courses from primary to pre-university levels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the homeschooling program fully flexible with individual schedules?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, sessions are designed to match the student’s pace, academic goals, & daily schedule, offering full flexibility in subject selection & timing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do homeschooled students receive exam & assessment support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Students receive targeted prep for board exams, past paper practice, & support with assessments required by their chosen curriculum or exam board."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Ignite help with selecting & planning a complete homeschool curriculum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our academic advisors assist with curriculum planning, subject selection, exam registration guidance, & personalized learning roadmaps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a free demo class available for homeschooling tutoring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Ignite Training Institute offers a free demo session so parents & students can experience the teaching style & approach before enrolling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is private candidacy accepted by private universities in the UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, private candidacy is generally accepted by private universities in the UAE, as long as students meet the required curriculum standards and hold recognized qualifications."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ignitetraininginstitute.com/"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Courses",
+        "item": "https://ignitetraininginstitute.com/courses/"
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Homeschooling Tutors",
+        "item": "https://ignitetraininginstitute.com/courses/homeschooling-tutors/"
+      }]
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Ignite Training Institute",
+          "url": "https://ignitetraininginstitute.com/courses/homeschooling-tutors-in-dubai/",
+          "logo": "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
+          "telephone": "+971588589958",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Al Moosa Tower 1 - 1503 - Sheikh Zayed Rd - near Emirates Towers Metro (Sea Side - Trade Centre - Trade Centre 1)",
+            "addressLocality": "Dubai",
+            "addressCountry": "United Arab Emirates"
+          },
+          "sameAs": [
+            "https://www.facebook.com/ignitetraininginstitute",
+            "https://www.instagram.com/ignitetraininginstitute/",
+            "https://ae.linkedin.com/company/ignitetraininginstitute"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "79",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Homeschooling Tutoring",
+          "name": "Homeschooling Tutors in Dubai - Ignite Training Institute",
+          "description": "Ignite Training Institute offers expert homeschooling support (private candidacy) in Dubai. Our tutors help students across various curricula achieve academic excellence through personalized learning strategies tailored to individual needs.",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Ignite Training Institute",
+            "url": "https://ignitetraininginstitute.com/courses/homeschooling-tutors-in-dubai/"
+          }
+        }
+      ]
+    }
+  ];
+  // ----------------------------------------------------
+  // 👆 END OF SCHEMA DEFINITION
+  // ----------------------------------------------------
+
+
   const scrollRef = useRef(null);
   const scrollInstanceRef = useRef(null);
 
@@ -48,126 +177,131 @@ const HomeSchooling = ({ headerHeight }) => {
   }, []);
 
   return (
-    // 2. APPLY the style for paddingTop to the scroll container
-    <div
-      ref={scrollRef}
-      className='overflow-hidden innerpage'
-      data-scroll-container
-      style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
-    >
-      <section data-scroll-section>
-        <InfoCard />
-      </section>
+    <>
+      {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
+      <JsonLd schema={homeschoolingSchema} />
 
-      {/* <section data-scroll-section>
-        <StudentAchievements />
-      </section> */}
+      {/* 3. APPLY the style for paddingTop to the scroll container */}
+      <div
+        ref={scrollRef}
+        className='overflow-hidden innerpage'
+        data-scroll-container
+        style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
+      >
+        <section data-scroll-section>
+          <InfoCard />
+        </section>
 
-      <section data-scroll-section>
-        <CourseCard />
-      </section>
-      
-      <section data-scroll-section>
-        <Curriculum />
-      </section>
-      <section data-scroll-section>
-        <Advantages />
-      </section>
-      <section data-scroll-section>
-        <MarqueeBanner />
-      </section>
+        {/* <section data-scroll-section>
+            <StudentAchievements />
+          </section> */}
 
-      <section data-scroll-section>
-        <HomeschoolingMindset />
-      </section>
-      <section data-scroll-section>
-        <ReviewsSection />
-      </section>
+        <section data-scroll-section>
+          <CourseCard />
+        </section>
 
-      {/* what we offer Start */}
-      <section className="achievementsSection">
+        <section data-scroll-section>
+          <Curriculum />
+        </section>
+        <section data-scroll-section>
+          <Advantages />
+        </section>
+        <section data-scroll-section>
+          <MarqueeBanner />
+        </section>
+
+        <section data-scroll-section>
+          <HomeschoolingMindset />
+        </section>
+        <section data-scroll-section>
+          <ReviewsSection />
+        </section>
+
+        {/* what we offer Start */}
+        <section className="achievementsSection">
           <div className="container">
-              <div className="achievementsHeadings">
-                  <div
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat="true"
-                      className="fade-in-section"
-                      style={{ animationDelay: "0.1s" }}
-                  >
-                      <h4 className="SubHeading">WHAT MORE DO WE OFFER?</h4>
-                  </div>
-                  <div
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat="true"
-                      className="fade-in-section"
-                      style={{ animationDelay: "0.25s" }}
-                  >
-                      <h1 className="achievementsTitle">
-
-                          Comprehensive Guidance For Every <span className="highlight">Academic</span>{" "}
-                          Milestone
-                      </h1>
-                  </div>
-
+            <div className="achievementsHeadings">
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section"
+                style={{ animationDelay: "0.1s" }}
+              >
+                <h4 className="SubHeading">WHAT MORE DO WE OFFER?</h4>
               </div>
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section"
+                style={{ animationDelay: "0.25s" }}
+              >
+                <h1 className="achievementsTitle">
+
+                  Comprehensive Guidance For Every <span className="highlight">Academic</span>{" "}
+                  Milestone
+                </h1>
+              </div>
+
+            </div>
           </div>
           {/* OPTIMIZATION: Corrected 'class' to 'className' in the following div */}
           <div className="container what-we-offer">
-              <div className="step">
-                  <div className="icon-wrap" data-step="01">
-                      <img src="/images/school.png" alt="School Options" />
-                  </div>
-                  <div className="step-title">SCHOOL OPTIONS</div>
-                  <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="01">
+                <img src="/images/school.png" alt="School Options" />
               </div>
+              <div className="step-title">SCHOOL OPTIONS</div>
+              <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
+            </div>
 
-              <div className="step">
-                  <div className="icon-wrap" data-step="02">
-                      <img src="/images/idealcur.png" alt="Ideal Curriculum" />
-                  </div>
-                  <div className="step-title">IDEAL CURRICULUM</div>
-                  <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="02">
+                <img src="/images/idealcur.png" alt="Ideal Curriculum" />
               </div>
+              <div className="step-title">IDEAL CURRICULUM</div>
+              <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
+            </div>
 
-              <div className="step">
-                  <div className="icon-wrap" data-step="03">
-                      <img src="/images/subject.png" alt="Subject Choices" />
-                  </div>
-                  <div className="step-title">SUBJECT CHOICES</div>
-                  <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="03">
+                <img src="/images/subject.png" alt="Subject Choices" />
               </div>
+              <div className="step-title">SUBJECT CHOICES</div>
+              <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
+            </div>
 
-              <div className="step">
-                  <div className="icon-wrap" data-step="04">
-                      <img src="/images/universitypath.png" alt="University Pathways" />
-                  </div>
-                  <div className="step-title">UNIVERSITY PATHWAYS</div>
-                  <div className="step-desc">Map a clear, strategic path to top international universities.</div>
+            <div className="step">
+              <div className="icon-wrap" data-step="04">
+                <img src="/images/universitypath.png" alt="University Pathways" />
               </div>
+              <div className="step-title">UNIVERSITY PATHWAYS</div>
+              <div className="step-desc">Map a clear, strategic path to top international universities.</div>
+            </div>
           </div>
 
 
-      </section>
+        </section>
 
-      {/* What We Offer End */}
-      
-      {/* <section data-scroll-section>
-        <LifeAtIgniteCarousel />
-      </section> */}
+        {/* What We Offer End */}
 
-      <section data-scroll-section>
-        <FAQSection />
-      </section>
+        {/* <section data-scroll-section>
+            <LifeAtIgniteCarousel />
+          </section> */}
 
-      <section data-scroll-section>
-        <Blog />
-      </section>
-      <section data-scroll-section>
-        <Accordion />
-      </section>
-    </div>
+        <section data-scroll-section>
+          <FAQSection />
+        </section>
+
+        <section data-scroll-section>
+          <Blog />
+        </section>
+        <section data-scroll-section>
+          <Accordion />
+        </section>
+      </div>
+    </>
   );
 };
 

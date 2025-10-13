@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+// 1. Import the reusable schema component
+import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
 import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
 import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
@@ -19,6 +21,102 @@ import BiologyTutorsStudentAchievements from '@/components/biology-tutoring/Stud
 //comment
 // Renamed main component: SubjectTutoring -> BiologyTutorsInDubai
 const BiologyTutorsInDubai = ({ headerHeight }) => {
+
+    // ----------------------------------------------------
+    // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
+    // ----------------------------------------------------
+    const biologyTutorsSchema = [
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Ignite Training Institute - Biology Tutors In Dubai",
+            "url": "https://ignitetraininginstitute.com/biology-tutor-in-dubai/",
+            "logo": "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "63",
+                "bestRating": "5",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Google",
+                    "sameAs": "https://www.google.com/"
+                },
+                "url": "https://www.google.com/maps/place/Ignite+Training+Institute/@25.2166721,55.2777655,15z/data=!4m6!3m5!1s0x3e5f43b8f8e29eb3:0x44b31b9a92cc00dc!8m2!3d25.2166721!4d55.2777655!16s%2Fg%2F11gng101r0"
+            }
+        },
+        {
+            "@context": "https://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ignitetraininginstitute.com/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Courses",
+                "item": "https://ignitetraininginstitute.com/courses/"
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Biology",
+                "item": "https://ignitetraininginstitute.com/biology-tutor-in-dubai/"
+            }]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Which curricula does Ignite support for Biology tutoring?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ignite offers Biology tutoring for IB (SL/HL), IGCSE, A-Levels, and AP, aligned with the requirements of major exam boards."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What topics are covered in Biology tutoring sessions?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Tutoring includes cell biology, genetics, ecology, human physiology, molecular biology, and other core and optional topics based on the syllabus."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do tutors help with lab work & internal assessments?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, Ignite supports students with IB IAs, lab report guidance, and scientific writing, helping them meet curriculum-specific criteria."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Are past papers & exam techniques part of the program?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely. Sessions include past paper practice, command term training, and exam strategy development to improve accuracy and timing."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I attend a Biology demo class before enrolling?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, Ignite offers a free demo session so students can experience the teaching style and meet the tutor before committing."
+                    }
+                }
+            ]
+        }
+    ];
+    // ----------------------------------------------------
+    // 👆 END OF SCHEMA DEFINITION
+    // ----------------------------------------------------
+
+
     const scrollRef = useRef(null);
     const scrollInstanceRef = useRef(null);
 
@@ -53,59 +151,64 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
     }, []);
 
     return (
-        <div
-            ref={scrollRef}
-            data-scroll-container
-            style={{ paddingTop: `${headerHeight}px` }}
-        >
-            <section data-scroll-section>
-                <BiologyTutorsInfoCard />
-            </section>
+        <>
+            {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
+            <JsonLd schema={biologyTutorsSchema} />
 
-            {/* <section data-scroll-section>
-                <BiologyTutorsStudentAchievements />
-            </section> */}
+            <div
+                ref={scrollRef}
+                data-scroll-container
+                style={{ paddingTop: `${headerHeight}px` }}
+            >
+                <section data-scroll-section>
+                    <BiologyTutorsInfoCard />
+                </section>
 
-            <section data-scroll-section>
-                <MarqueeBanner />
-            </section>
+                {/* <section data-scroll-section>
+                    <BiologyTutorsStudentAchievements />
+                </section> */}
 
-            <section data-scroll-section>
-                <BiologyTutorsChooseApp />
-            </section>
+                <section data-scroll-section>
+                    <MarqueeBanner />
+                </section>
 
-            <section data-scroll-section>
-                <BiologyTutorsACT />
-            </section>
+                <section data-scroll-section>
+                    <BiologyTutorsChooseApp />
+                </section>
 
-            <section data-scroll-section>
-                <ReviewsSection />
-            </section>
+                <section data-scroll-section>
+                    <BiologyTutorsACT />
+                </section>
 
-            <section data-scroll-section>
-                <Trainers />
-            </section> 
+                <section data-scroll-section>
+                    <ReviewsSection />
+                </section>
 
-            {/* <section data-scroll-section>
-                <BiologyTutorsIgniteAchievements />
-            </section> */}
+                <section data-scroll-section>
+                    <Trainers />
+                </section>
 
-            <section data-scroll-section>
-                <BiologyTutorsUsps />
-            </section>
+                {/* <section data-scroll-section>
+                    <BiologyTutorsIgniteAchievements />
+                </section> */}
 
-            <section data-scroll-section>
-                <BiologyTutorsLifeAtIgniteCarousel />
-            </section>
+                <section data-scroll-section>
+                    <BiologyTutorsUsps />
+                </section>
 
-            <section data-scroll-section>
-                <BiologyTutorsFAQSection />
-            </section>
+                <section data-scroll-section>
+                    <BiologyTutorsLifeAtIgniteCarousel />
+                </section>
 
-            <section data-scroll-section>
-                <Accordion />
-            </section>
-        </div>
+                <section data-scroll-section>
+                    <BiologyTutorsFAQSection />
+                </section>
+
+                <section data-scroll-section>
+                    <Accordion />
+                </section>
+            </div>
+        </>
     );
 };
 

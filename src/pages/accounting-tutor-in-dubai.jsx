@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+// 1. Import the reusable schema component
+import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
 import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
 import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
@@ -19,6 +21,101 @@ import AccountingTutorsStudentAchievements from '@/components/accounting-tutorin
 //comment
 // Renamed main component: SubjectTutoring -> AccountingTutorsInDubai
 const AccountingTutorsInDubai = ({ headerHeight }) => {
+
+    // ----------------------------------------------------
+    // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
+    // ----------------------------------------------------
+    const accountingTutorsSchema = [
+        {
+            "@context": "https://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ignitetraininginstitute.com/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Courses",
+                "item": "https://ignitetraininginstitute.com/courses/"
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Accounting Tutors In Dubai",
+                "item": "https://ignitetraininginstitute.com/accounting-tutor-in-dubai/"
+            }]
+        },
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Ignite Training Institute - Accounting Tutors In Dubai",
+            "url": "https://ignitetraininginstitute.com/accounting-tutor-in-dubai/",
+            "logo": "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "63",
+                "bestRating": "5",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Google",
+                    "sameAs": "https://www.google.com/"
+                },
+                "url": "https://www.google.com/maps/place/Ignite+Training+Institute/@25.2166721,55.2777655,15z/data=!4m6!3m5!1s0x3e5f43b8f8e29eb3:0x44b31b9a92cc00dc!8m2!3d25.2166721!4d55.2777655!16s%2Fg%2F11gng101r0"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What curricula does Ignite offer Accounting tutoring for?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ignite provides Accounting tutoring for IGCSE, AS & A-Levels (Cambridge & Edexcel), and introductory university-level courses."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What topics are covered in Accounting tutoring sessions?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Tutoring includes financial statements, double-entry bookkeeping, ratios, adjustments, ledgers, trial balance, and accounting principles."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is support available for both theory and numerical questions?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, sessions focus on building both conceptual understanding and calculation accuracy to handle structured and application-based questions."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer past paper practice and exam preparation?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely. Students work on past papers, mock tests, and receive feedback on time management, presentation, and examiner expectations."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I book a free demo class before joining?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, Ignite offers a free demo session so students can assess the teaching approach and get paired with the right Accounting tutor."
+                    }
+                }
+            ]
+        }
+    ];
+    // ----------------------------------------------------
+    // 👆 END OF SCHEMA DEFINITION
+    // ----------------------------------------------------
+
     const scrollRef = useRef(null);
     const scrollInstanceRef = useRef(null);
 
@@ -53,59 +150,64 @@ const AccountingTutorsInDubai = ({ headerHeight }) => {
     }, []);
 
     return (
-        <div
-            ref={scrollRef}
-            data-scroll-container
-            style={{ paddingTop: `${headerHeight}px` }}
-        >
-            <section data-scroll-section>
-                <AccountingTutorsInfoCard />
-            </section>
+        <>
+            {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
+            <JsonLd schema={accountingTutorsSchema} />
 
-            {/* <section data-scroll-section>
-                <AccountingTutorsStudentAchievements />
-            </section> */}
+            <div
+                ref={scrollRef}
+                data-scroll-container
+                style={{ paddingTop: `${headerHeight}px` }}
+            >
+                <section data-scroll-section>
+                    <AccountingTutorsInfoCard />
+                </section>
 
-            <section data-scroll-section>
-                <MarqueeBanner />
-            </section>
+                {/* <section data-scroll-section>
+                    <AccountingTutorsStudentAchievements />
+                </section> */}
 
-            <section data-scroll-section>
-                <AccountingTutorsChooseApp />
-            </section>
+                <section data-scroll-section>
+                    <MarqueeBanner />
+                </section>
 
-            <section data-scroll-section>
-                <AccountingTutorsACT />
-            </section>
+                <section data-scroll-section>
+                    <AccountingTutorsChooseApp />
+                </section>
 
-            <section data-scroll-section>
-                <ReviewsSection />
-            </section>
+                <section data-scroll-section>
+                    <AccountingTutorsACT />
+                </section>
 
-            <section data-scroll-section>
-                <Trainers />
-            </section>
+                <section data-scroll-section>
+                    <ReviewsSection />
+                </section>
 
-            <section data-scroll-section>
-                <AccountingTutorsIgniteAchievements />
-            </section>
+                <section data-scroll-section>
+                    <Trainers />
+                </section>
 
-            <section data-scroll-section>
-                <AccountingTutorsUsps />
-            </section>
+                <section data-scroll-section>
+                    <AccountingTutorsIgniteAchievements />
+                </section>
 
-            {/* <section data-scroll-section>
-                <AccountingTutorsLifeAtIgniteCarousel />
-            </section> */}
+                <section data-scroll-section>
+                    <AccountingTutorsUsps />
+                </section>
 
-            <section data-scroll-section>
-                <AccountingTutorsFAQSection />
-            </section>
+                {/* <section data-scroll-section>
+                    <AccountingTutorsLifeAtIgniteCarousel />
+                </section> */}
 
-            <section data-scroll-section>
-                <Accordion />
-            </section>
-        </div>
+                <section data-scroll-section>
+                    <AccountingTutorsFAQSection />
+                </section>
+
+                <section data-scroll-section>
+                    <Accordion />
+                </section>
+            </div>
+        </>
     );
 };
 
