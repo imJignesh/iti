@@ -28,7 +28,7 @@ export default function IgniteAboutCard() {
               data-scroll-repeat
               style={{ animationDelay: "0.25s" }}
             >
-              <div
+              <h2
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
@@ -36,11 +36,11 @@ export default function IgniteAboutCard() {
                 style={{ animationDelay: "0.1s" }}
               >
                 <div className="SubHeading testSubheading">OUR APPROACH</div>
-              </div>
+              </h2>
             </div>
           </div>
 
-          <h1
+          <h3
             className="ignite-main-title fade-in-section text-uppercase"
             data-scroll
             data-scroll-class="is-inview"
@@ -51,7 +51,7 @@ export default function IgniteAboutCard() {
           >
             How We Make IB Learning Truly
             <span className="green-text"> Effective</span>
-          </h1>
+          </h3>
 
           {/* <p
             className="ignite-description  fade-in-section"

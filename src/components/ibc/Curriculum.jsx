@@ -21,11 +21,11 @@ export default function IBCurriculumStages() {
         <div
           className="curriculumSubSection"
         >
-          <div className="SubHeading testSubheading">
+          <h2 className="SubHeading testSubheading">
             STAGES OF THE CURRICULUM
-          </div>
+          </h2>
           <div className="testHeadings">
-            <h2
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -34,7 +34,7 @@ export default function IBCurriculumStages() {
             >
               Step-By-Step Guidance Through The <br />{" "}
               <span className="highlight">IB Curriculum</span>
-            </h2>
+            </h3>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ export default function IBCurriculumStages() {
             style={{ animationDelay: "0.45s" }}
           >
             <div>
-              <div className="card-title card-title-ibdp">
+              <h3 className="card-title card-title-ibdp">
                 INTERNATIONAL
                 <br />
                 BACCALAUREATE
@@ -64,7 +64,7 @@ export default function IBCurriculumStages() {
                 TUTORS FOR
                 <br />
                 <span className="program">IBDP</span>
-              </div>
+              </h3>
               <div className="divider"></div>
               <div className="card-description">
                 Ignite’s expert IBDP tutors provide tailored guidance, curated resources, & exam-focused strategies to help students master all 6 subject groups. With focused support, we empower learners to excel academically.
@@ -114,7 +114,7 @@ export default function IBCurriculumStages() {
             className="card1 card-myp"
           >
             <div>
-              <div className="card-title2 card-title-myp">
+              <h3 className="card-title2 card-title-myp">
                 INTERNATIONAL
                 <br />
                 BACCALAUREATE
@@ -134,7 +134,7 @@ export default function IBCurriculumStages() {
                 >
                   MYP
                 </span>
-              </div>
+              </h3>
               <div className="divider"></div>
               <div className="card-description">
                 MYP tutors at Ignite help students build a strong foundation in their subjects & apply concepts to real-world contexts. With focused exam prep & strategic support, we guide learners to excel in e-assessments & beyond.
