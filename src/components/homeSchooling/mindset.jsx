@@ -73,10 +73,10 @@ export default function HomeschoolingMindset() {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">MINDSET FOR PURSUING PRIVATE SCHOOLING
-            </div>
+            <h2 className="SubHeading testSubheading">MINDSET FOR PURSUING PRIVATE SCHOOLING
+            </h2>
           </div>
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -85,7 +85,7 @@ export default function HomeschoolingMindset() {
           >
             
             <span className="highlight">  Mindset </span>- Lorem ipsum dolor sit amet, consectetur adipiscing
-          </h2>
+          </h3>
       </div>
       
       

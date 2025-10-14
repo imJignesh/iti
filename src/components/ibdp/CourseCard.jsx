@@ -234,7 +234,7 @@ function CourseCard() {
                               ></span>
 
                               {/* Gradient Text */}
-                              <h3
+                              <span
                                 style={{
                                   letterSpacing: "1px",
                                   background: "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
@@ -245,7 +245,7 @@ function CourseCard() {
                                 }}
                               >
                                 {point}
-                              </h3>
+                              </span>
                             </li>
                           ))}
                         </ul>
@@ -524,14 +524,14 @@ function CourseCard() {
                                   flexShrink: 0,
                                 }}
                               ></span>
-                              <h3 style={{
+                              <span style={{
                                 background: "linear-gradient(135deg, #161664,#3F88BA)",
                                 fontWeight: "600",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
                               }}>
                                 {point}
-                              </h3>
+                              </span>
                             </li>
                           ))}
                         </ul>

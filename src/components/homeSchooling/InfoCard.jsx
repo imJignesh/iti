@@ -78,7 +78,7 @@ export default function InfoCard() {
                 )}              </h1>
               <div className="divider"></div>
 
-              <p
+              <h2
                 className="text-white mb-4 fade-in-section fs-8 fs-md-10"
                 data-scroll
                 data-scroll-class="is-inview"
@@ -87,12 +87,13 @@ export default function InfoCard() {
                   letterSpacing: "0.2em",
                   fontWeight: "600",
                   opacity: "1",
+                  fontSize: isMobile ? "0.9rem" : "1rem",
                   animationDelay: "0.25s",
                   marginTop: "19px"
                 }}
               >
                 IGCSE, A Levels, & AP Supported
-              </p>
+              </h2>
 
               <div
                 className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold fade-in-section info-row"
@@ -127,7 +128,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Online <br /> & In-Person
+                  <h3 className="fontd">Online <br /> & In-Person</h3>
                 </div>
 
                 <div
@@ -146,7 +147,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Dubai <br /> (DIFC, JLT)
+                  <h3 className="fontd">Dubai <br /> (DIFC, JLT)</h3>
                 </div>
 
                 <div
@@ -162,7 +163,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Fits Learning <br /> Into Life
+                  <h3 className="fontd">Fits Learning <br /> Into Life</h3>
                 </div>
               </div>
 
@@ -408,7 +409,9 @@ export default function InfoCard() {
           mask-repeat: no-repeat;
           mask-size: "100% 100%";
         }
-
+             .fontd{
+        font-size:0.8rem !important;
+        }
         /* 🔹 Mobile fix */
         @media (max-width: 768px) {
           .info-row {

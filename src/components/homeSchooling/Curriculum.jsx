@@ -11,10 +11,10 @@ export default function Curriculum() {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">Curriculum Offerings For Private Candidates
-            </div>
+            <h2 className="SubHeading testSubheading">Curriculum Offerings For Private Candidates
+            </h2>
           </div>
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -23,7 +23,7 @@ export default function Curriculum() {
           >
             
             <span className="highlight">  Curriculum Offerings </span>- Lorem ipsum dolor sit amet, consectetur adipiscing
-          </h2>
+          </h3>
       </div>
 
       <div className="curriculum-container">

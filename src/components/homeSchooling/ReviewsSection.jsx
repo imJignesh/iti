@@ -416,7 +416,7 @@ export default function Testimonial({ }) {
           style={{ animationDelay: "0.1s" }}
         >
           <div className="testimonialHeader">
-            <span className="SubHeading">REVIEWS & TESTIMONIALS</span>
+            <h2 className="SubHeading">REVIEWS & TESTIMONIALS</h2>
           </div>
         </div>
 
@@ -445,7 +445,7 @@ export default function Testimonial({ }) {
             height={80}
           />
 
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -453,7 +453,7 @@ export default function Testimonial({ }) {
             style={{ animationDelay: "0.3s" }}
           >
             IGNITE TRAINING INSTITUTE - TUTORS IN DUBAI
-          </h2>
+          </h3>
 
           <p
             data-scroll

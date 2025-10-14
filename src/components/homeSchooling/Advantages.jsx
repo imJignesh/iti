@@ -89,12 +89,12 @@ const AdvantagesCarousel = () => {
                             className="fade-in-section"
                             style={{ animationDelay: "0.1s" }}
                         >
-                            <div className="SubHeading testSubheading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?
-                            </div>
+                            <h2 className="SubHeading testSubheading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?
+                            </h2>
                         </div>
 
                         {/* Main title */}
-                        <h2
+                        <h3
                             className="fw-bold mb-0 fade-in-section"
                             data-scroll
                             data-scroll-class="is-inview"
@@ -134,7 +134,7 @@ const AdvantagesCarousel = () => {
                             >
                                 Model
                             </span>
-                        </h2>
+                        </h3>
                     </div>
                 </div>
 
@@ -159,9 +159,9 @@ const AdvantagesCarousel = () => {
                     <div className="desktop-content">
                         <div className="desktop-left">
                             <div className="testimonialHeader" style={{ marginTop: "15%" }}>
-                                <span className="SubHeading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?</span>
+                                <h2 className="SubHeading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?</h2>
                             </div>
-                            <h2
+                            <h3
                                 className="fw-bold mb-0 fade-in-section"
                                 data-scroll
                                 data-scroll-class="is-inview"
@@ -201,7 +201,7 @@ const AdvantagesCarousel = () => {
                                 >
                                     Model
                                 </span>
-                            </h2>
+                            </h3>
                             <p className="desktop-subtitle">
                                 Empowering students with personalized learning pathways, flexible pacing, & tailored support to nurture individual aspirations.
                             </p>
