@@ -11,7 +11,7 @@ export default function CareersBanner() {
       <div className="dark-overlay"></div>
 
       <div className="overlay">
-        <h2 className="heading"
+        <h1 className="heading"
           style={{
             background: "linear-gradient(90deg, #EDFFF4, #A6EAC7)",
             WebkitBackgroundClip: "text",
@@ -20,8 +20,8 @@ export default function CareersBanner() {
           }}
         >
           CAREERS
-        </h2>
-        <p className="subHeading">HOME // CAREERS</p>
+        </h1>
+        <h3 className="subHeading">HOME // CAREERS</h3>
       </div>
 
       <style jsx>{`

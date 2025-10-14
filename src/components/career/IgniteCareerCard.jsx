@@ -20,20 +20,20 @@ export default function IgniteCareerCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="SubHeading testSubheading">Work With Ignite
-                </div>
+                <h2 className="SubHeading testSubheading">Work With Ignite
+                </h2>
               </div>
             </div>
           </div>
 
-          <h1 className="ignite-main-title fade-in-section" data-scroll
+          <h3 className="ignite-main-title fade-in-section" data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat style={{
               animationDelay: "0.3s",
             }}>
             Educate With Passion, <br />
             Lead <span className="green-text"> With Purpose</span>
-          </h1>
+          </h3>
 
           <p className="ignite-description fade-in-section" data-scroll
             data-scroll-class="is-inview"
@@ -43,13 +43,13 @@ export default function IgniteCareerCard() {
             At Ignite, tutoring goes beyond the classroom - it's a journey of personal growth, flexibility, & purpose. We’re always seeking passionate educators who believe in the power of teaching & learning. Join our team & grow with us as we inspire students every day.
           </p>
 
-          <h2 className="ignite-secondary-title fade-in-section" data-scroll
+          <h3 className="ignite-secondary-title fade-in-section" data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat style={{
               animationDelay: "0.3s",
             }}>
             We Shape Bright Futures <br /> With Care & Commitment
-          </h2>
+          </h3>
 
           <p className="ignite-short-description">
             We empower passionate trainers to shape student journeys while growing through purpose-driven initiatives & a flexible teaching environment.

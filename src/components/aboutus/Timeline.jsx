@@ -77,11 +77,11 @@ export default function Timeline() {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">Our Timeline
-            </div>
+            <h2 className="SubHeading testSubheading">Our Timeline
+            </h2>
           </div>
 
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -90,7 +90,7 @@ export default function Timeline() {
           >
             With Every Step Forward, We've Grown With 
             <span className="highlight"> Our Students</span>
-          </h2>
+          </h3>
         </div>
 
         {/* Timeline Content */}

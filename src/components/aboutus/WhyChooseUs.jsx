@@ -107,10 +107,10 @@ export default function WhyChooseUs() {
               <div className="col-lg-6 col-md-6 order-1 order-md-2">
                 <div className="content-section">
                   <div className=" mb-3">
-                    <div className="SubHeading testSubheading">
+                    <h2 className="SubHeading testSubheading">
                       WHY CHOOSE US?
-                    </div>
-                    <h2
+                    </h2>
+                    <h3
                       data-scroll
                       data-scroll-class="is-inview"
                       data-scroll-repeat="true"
@@ -119,7 +119,7 @@ export default function WhyChooseUs() {
                     >
                       A Legacy Of Success Built On Trust &
                       <span className="highlight"> Learning</span>
-                    </h2>
+                    </h3>
                   </div>
 
                   <p className="description text-center text-md-start">
