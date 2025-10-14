@@ -601,6 +601,19 @@ header .toggleButton img {
     flex: 1;
   }
 
+  header .megaMenu {
+    width: 95vw;
+  }
+
+  header .megaMenuContent a {
+    padding: 2vw;
+  }
+
+  header .megaMenuContent a,
+  header .megaMenuContent h4 {
+    font-size: 14px;
+  }
+
   header .header_right_content button {
     font-size: 14px;
     border: 2px solid transparent;
@@ -673,11 +686,11 @@ header .toggleButton img {
   }
 
   header .megaMenuLeft h3 {
-    font-size: 10px;
+    font-size: 130px;
   }
 
   header .megaMenuBox h4 {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   header .megaMenuBox img {
