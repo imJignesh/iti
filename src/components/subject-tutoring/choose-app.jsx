@@ -14,9 +14,9 @@ const IBCurriculumStages = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <h4 className="SubHeading">
+              <h2 className="SubHeading">
                 WHAT CURRICULUM & STANDARDISED TESTS WE OFFER?
-              </h4>
+              </h2>
             </div>
             <div
               data-scroll
@@ -25,7 +25,7 @@ const IBCurriculumStages = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.25s" }}
             >
-             <h2
+             <h3
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
@@ -34,7 +34,7 @@ const IBCurriculumStages = () => {
               >
                 LOREM IPSUM DOLOR SIT AMET,
                <span className="highlight"> CONSECTETUR </span>ADIPISCING
-              </h2>
+              </h3>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ const IBCurriculumStages = () => {
                 className="curriculum-col curriculum-col-left"
                 style={{ borderRadius: 20 }}
               >
-                <p
+                <h3
                   className="curriculum-section-heading1 text-center"
                   style={{
                     fontSize: "2rem",
@@ -56,7 +56,7 @@ const IBCurriculumStages = () => {
                   }}
                 >
                   CURRICULUMS
-                </p>
+                </h3>
                 <div
                   style={{
                     border: "1px solid rgba(35, 52, 103, 1)",
@@ -74,7 +74,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>IB Chemistry Tutors (MYP)</h1>
+                      <h3>IB Chemistry Tutors (MYP)</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -85,7 +85,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>IB Chemistry Tutors (IBDP)</h1>
+                      <h3>IB Chemistry Tutors (IBDP)</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -96,7 +96,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>IGCSE/GCSE Chemistry Tutors</h1>
+                      <h3>IGCSE/GCSE Chemistry Tutors</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -107,7 +107,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>A-Level Chemistry Tutors</h1>
+                      <h3>A-Level Chemistry Tutors</h3>
                     </div>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const IBCurriculumStages = () => {
                 className="curriculum-col curriculum-col-right"
                 style={{ borderRadius: 20 }}
               >
-                <p
+                <h3
                   className="curriculum-section-heading2 text-center"
                   style={{
                     fontSize: "2rem",
@@ -127,8 +127,8 @@ const IBCurriculumStages = () => {
                     borderRadius: 0,
                   }}
                 >
-                  STANDARDISED TESTS
-                </p>{" "}
+                  STANDARDIZED TESTS
+                </h3>{" "}
                 <div
                   style={{
                     border: "1px solid rgba(35, 52, 103, 1)",
@@ -146,7 +146,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>IB Chemistry Tutors (MYP)</h1>
+                      <h3>IB Chemistry Tutors (MYP)</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -157,7 +157,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>IB Chemistry Tutors (IBDP)</h1>
+                      <h3>IB Chemistry Tutors (IBDP)</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -168,7 +168,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>IGCSE/GCSE Chemistry Tutors</h1>
+                      <h3>IGCSE/GCSE Chemistry Tutors</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -179,7 +179,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>A-Level Chemistry Tutors</h1>
+                      <h3>A-Level Chemistry Tutors</h3>
                     </div>
                   </div>
                 </div>
