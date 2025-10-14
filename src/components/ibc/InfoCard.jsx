@@ -202,7 +202,7 @@ export default function InfoCard() {
                     <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>IBDP TUTORS</span>
                     <img
                       src="/assets/rar.png"
-                      alt="right"
+                      alt="ib tutor in dubai"
                       className="custom-height"
                       width={35}
                       height={35}
@@ -230,7 +230,7 @@ export default function InfoCard() {
                     <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>IB MYP TUTORS</span>
                     <img
                       src="/assets/rar.png"
-                      alt="right"
+                      alt="ib tutor in dubai"
                       className="custom-height"
                       width={35}
                       height={35}
@@ -252,17 +252,17 @@ export default function InfoCard() {
               {/* Rectangle background images positioned within form section */}
               <img
                 src="/assets/rect1.png"
-                alt="bg-shape"
+                alt="ib tutor in dubai"
                 className="testimonialRect rect-1"
               />
               <img
                 src="/assets/rect2.png"
-                alt="bg-shape"
+                alt="ib tutor in dubai"
                 className="testimonialRect rect-2"
               />
               <img
                 src="/assets/rect3.png"
-                alt="bg-shape"
+                alt="ib tutor in dubai"
                 className="testimonialRect rect-3"
               />
 
@@ -403,7 +403,7 @@ export default function InfoCard() {
                   SUBMIT
                   <img
                     src={isMobile ? "/assets/mobilebutton.png" : "/assets/rwb.png"}
-                    alt="right"
+                    alt="ib tutor in dubai"
                     width={isMobile ? 35 : 40}
                     height={isMobile ? 35 : 40}
                   />

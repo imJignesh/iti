@@ -142,7 +142,7 @@ const AdvantagesCarousel = () => {
                     {advantages.map((item, index) => (
                         <div key={index} className="mobile-card">
                             <div className="mobile-icon-container">
-                                <img src={item.icon} alt="icon" className="mobile-icon" />
+                                <img src={item.icon} alt="homeschooling & private candidates" className="mobile-icon" />
                             </div>
                             <div className='divider'></div>
                             <div className="mobile-content">
@@ -207,10 +207,10 @@ const AdvantagesCarousel = () => {
                             </p>
                             <div className="carousel-controls">
                                 <button className="carousel-btn prev" onClick={prevSlide}>
-                                    <img src="/assets/rigtarr2.png" alt="previous" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
+                                    <img src="/assets/rigtarr2.png" alt="homeschooling & private candidates" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                                 </button>
                                 <button className="carousel-btn next" onClick={nextSlide}>
-                                    <img src="/assets/leftarr2.png" alt="next" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
+                                    <img src="/assets/leftarr2.png" alt="homeschooling & private candidates" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                                 </button>
                             </div>
                         </div>
@@ -226,7 +226,7 @@ const AdvantagesCarousel = () => {
                                             className={`desktop-card ${index % 2 === 1 ? 'greenBg' : 'blueBg'}`}
                                         >
                                             <div className="desktop-card-icon">
-                                                <img src={item.icon} alt="icon" />
+                                                <img src={item.icon} alt="homeschooling & private candidates" />
                                             </div>
                                             <h3 className="desktop-card-title">{item.title}</h3>
                                             <p className="desktop-card-text">{item.text}</p>

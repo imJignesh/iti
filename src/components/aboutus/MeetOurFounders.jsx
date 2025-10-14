@@ -43,7 +43,7 @@ export default function MeetOurFounders() {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            The Visionaries Behind The Ignite's 
+            The Visionaries Behind The Ignite's
             <span className="highlight"> Purpose</span>
           </h2>
         </div>
@@ -56,7 +56,7 @@ export default function MeetOurFounders() {
               <div className="founder-image">
                 <img
                   src="/assets/founder1.png"
-                  alt="Sumit Advani - Co-Founder"
+                  alt="about ignite"
                   className="founder-cutout"
                   width={508}
                   height={666}
@@ -99,7 +99,7 @@ export default function MeetOurFounders() {
               <div className="founder-image2">
                 <img
                   src="/assets/founder2.png"
-                  alt="Mohnish Ahuja - Co-Founder"
+                  alt="about ignite"
                   className="founder-cutout2"
                   width={508}
                   height={666}

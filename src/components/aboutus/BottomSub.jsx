@@ -35,7 +35,7 @@ export default function CallToAction() {
             <div className="imageSection">
               <img
                 src="/assets/tutbg.jpg"
-                alt="Tutoring team working together"
+                alt="about ignite"
                 className="image"
               />
             </div>
@@ -74,7 +74,7 @@ export default function CallToAction() {
       <div className="mobile-only mobileImageContainer">
         <img
           src="/assets/tutbg.jpg"
-          alt="Tutoring team working together"
+          alt="about ignite"
           className="mobileImage"
         />
       </div>

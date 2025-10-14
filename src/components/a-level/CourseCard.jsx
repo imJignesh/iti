@@ -249,7 +249,7 @@ function CourseCard() {
                       >
                         <img
                           src="/assets/corsebg.jpg"
-                          alt="Students studying together"
+                          alt="a level tutors in dubai"
                           className="img-fluid image1"
                           style={{
                             height: "400px",

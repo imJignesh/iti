@@ -14,14 +14,14 @@ export default function CareerForm() {
         alert("File size exceeds 1MB limit");
         return;
       }
-      
+
       // Check file type
       const validTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
       if (!validTypes.includes(selectedFile.type)) {
         alert("Only PDF and DOC files are supported");
         return;
       }
-      
+
       setFile(selectedFile);
       setFileName(selectedFile.name);
     }
@@ -77,11 +77,11 @@ export default function CareerForm() {
 
         <label>CONTACT NO.*</label>
         <div className="phone-input">
-          <img src="/assets/uae.png" alt="flag" width={25} height={35} />
+          <img src="/assets/uae.png" alt="career at ignite" width={25} height={35} />
           <select>
             <option>+971</option>
           </select>
-          <img src="/assets/dropdown-arrow.png" alt="dropdown" className="dropdown-arrow" />
+          <img src="/assets/dropdown-arrow.png" alt="career at ignite" className="dropdown-arrow" />
           <input type="tel" required />
         </div>
 
@@ -123,7 +123,7 @@ export default function CareerForm() {
             style={{ animationDelay: "0.4s" }}
           >
             <label className="subject">SUBJECTS*</label>
-                     <input type="text" required />
+            <input type="text" required />
 
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function CareerForm() {
         </div>
 
         {/* File upload */}
-   <div className="file-section fade-in-section"
+        <div className="file-section fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
@@ -170,7 +170,7 @@ export default function CareerForm() {
           <p className="file-note">
             Max Size: 1MB Support: PDF, DOC
           </p>
-          <div 
+          <div
             className="file-upload"
             onClick={triggerFileInput}
             onDrop={handleDrop}
@@ -211,7 +211,7 @@ export default function CareerForm() {
             onMouseEnter={(e) => e.target.style.opacity = "0.9"}
             onMouseLeave={(e) => e.target.style.opacity = "1"}
           >
-SUBMIT            <div
+            SUBMIT            <div
               className="custom-height rounded-circle d-flex align-items-center justify-content-center"
               style={{
                 width: "2.5rem",
@@ -220,7 +220,7 @@ SUBMIT            <div
                 marginLeft: "2.5rem"
               }}
             >
-              <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+              <img src="/assets/arrowright.png" alt="career at ignite" width={16} height={16} />
             </div>
           </button>
         </div>

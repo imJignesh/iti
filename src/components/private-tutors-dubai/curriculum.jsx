@@ -43,8 +43,8 @@ const IBCurriculumStages = () => {
             </div>
           </div>
         </div>
-        <img src="/assets/bgrect25.png" alt="bg-shape" className="testimonialRect rect-1" />
-        <img src="/assets/bgrect26.png" alt="bg-shape" className="testimonialRect rect-2" />
+        <img src="/assets/bgrect25.png" alt="private tutors in dubai" className="testimonialRect rect-1" />
+        <img src="/assets/bgrect26.png" alt="private tutors in dubai" className="testimonialRect rect-2" />
         <img
           src={isMobile ? "/assets/bgrect45.png" : "/assets/bgrect27.png"}
           alt="bg-shape"

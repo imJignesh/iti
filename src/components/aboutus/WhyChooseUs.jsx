@@ -96,7 +96,7 @@ export default function WhyChooseUs() {
                   <div className="cutout-wrapper">
                     <img
                       src="/assets/Artboard.png"
-                      alt="Why Choose Us"
+                      alt="about ignite"
                       className="cutout-img"
                     />
                   </div>
@@ -433,7 +433,7 @@ export default function WhyChooseUs() {
                           ? "/assets/moabroad.png"
                           : "/assets/Artboard.png"
                       }
-                      alt="Why Choose Us"
+                      alt="about ignite"
                       className="cutout-img"
                     />
                   </div>

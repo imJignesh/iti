@@ -174,7 +174,7 @@ export default function SubjectsCard() {
             onClick={handlePrevious}
             aria-label="Previous subject"
           >
-            <img src="/assets/up.png" alt="up" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
+            <img src="/assets/up.png" alt="igcse tutor in dubai" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
           </button>
 
           <button
@@ -182,7 +182,7 @@ export default function SubjectsCard() {
             onClick={handleNext}
             aria-label="Next subject"
           >
-            <img src="/assets/down.png" alt="down" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
+            <img src="/assets/down.png" alt="igcse tutor in dubai" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
           </button>
 
           {/* Fixed Container for Infinite Scroll */}

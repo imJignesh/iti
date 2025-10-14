@@ -189,7 +189,7 @@ export default function StudentAchievements() {
           >
             <img
               src="/assets/lar.png"
-              alt="rightarr"
+              alt="a level tutors in dubai"
               width={isMobile ? 32 : 40}
               height={isMobile ? 32 : 40}
               className="arrow-img"
@@ -256,7 +256,7 @@ export default function StudentAchievements() {
                   >
                     <img
                       src={achievement.logo}
-                      alt="University Logo"
+                      alt="a level tutors in dubai"
                       className="logo-img"
                       style={{
                         width: isMobile ? "90%" : "100%",
@@ -360,7 +360,7 @@ export default function StudentAchievements() {
           >
             <img
               src="/assets/rar.png"
-              alt="rightarr"
+              alt="a level tutors in dubai"
               width={isMobile ? 32 : 40}
               height={isMobile ? 32 : 40}
               className="arrow-img"

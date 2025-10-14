@@ -97,49 +97,49 @@ function UpsSection() {
   const uspItems = [
     {
       number: "01",
-      icon: <img src="/assets/01.png" alt="Icon 01" />,
+      icon: <img src="/assets/01.png" alt="british curriculum tutors in dubai" />,
       title: "Experienced Tutors",
       desc: "Highly qualified tutors delivering expert all-around support.",
     },
     {
       number: "02",
-      icon: <img src="/assets/02.png" alt="Icon 02" />,
+      icon: <img src="/assets/02.png" alt="british curriculum tutors in dubai" />,
       title: "Individual Attention",
       desc: "Small group training (SGT) to focus individually on every student.",
     },
     {
       number: "03",
-      icon: <img src="/assets/03.png" alt="Icon 03" />,
+      icon: <img src="/assets/03.png" alt="british curriculum tutors in dubai" />,
       title: "Grade Improvement",
       desc: "Better results assured with critical testing & review methodology.",
     },
     {
       number: "04",
-      icon: <img src="/assets/04.png" alt="Icon 04" />,
+      icon: <img src="/assets/04.png" alt="british curriculum tutors in dubai" />,
       title: "Examination Prep",
       desc: "Thorough exam prep with tutoring, resources, testing, & review.",
     },
     {
       number: "05",
-      icon: <img src="/assets/05.png" alt="Icon 05" />,
+      icon: <img src="/assets/05.png" alt="british curriculum tutors in dubai" />,
       title: "Strong Foundation",
       desc: "Focus on fundamentals for an exceptionally strong foundation.",
     },
     {
       number: "06",
-      icon: <img src="/assets/06.png" alt="Icon 06" />,
+      icon: <img src="/assets/06.png" alt="british curriculum tutors in dubai" />,
       title: "Stimulating Environment",
       desc: "Result-oriented culture ensuring a fun & stimulating environment.",
     },
     {
       number: "07",
-      icon: <img src="/assets/07.png" alt="Icon 07" />,
+      icon: <img src="/assets/07.png" alt="british curriculum tutors in dubai" />,
       title: "Structured Learning",
       desc: "Problem-based learning covering practical aspects of all units.",
     },
     {
       number: "08",
-      icon: <img src="/assets/08.png" alt="Icon 08" />,
+      icon: <img src="/assets/08.png" alt="british curriculum tutors in dubai" />,
       title: "Progress Tracking",
       desc: "Prepare with unit tests & mock papers under exam-like conditions.",
     },
@@ -237,7 +237,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="arrright" width={16} height={14} />
+                <img src="/assets/arrowright.png" alt="british curriculum tutors in dubai" width={16} height={14} />
               </div>
             </button>
           </a>

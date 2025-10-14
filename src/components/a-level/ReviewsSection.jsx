@@ -428,13 +428,13 @@ export default function Testimonial({ }) {
           style={{ animationDelay: "0.2s" }}
         >
           {/* Decorative rectangles */}
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.png" alt="a level tutors in dubai" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.png" alt="a level tutors in dubai" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.png" alt="a level tutors in dubai" className="testimonialRect" />
 
           <img
             src="/images/google-logo.png"
-            alt="google logo"
+            alt="a level tutors in dubai"
             data-scroll
             data-scroll-class="is-clipped"
             data-scroll-repeat="true"
@@ -468,7 +468,7 @@ export default function Testimonial({ }) {
 
           <img
             src="/images/star-review.png"
-            alt="star review"
+            alt="a level tutors in dubai"
             data-scroll
             data-scroll-class="is-clipped"
             data-scroll-repeat="true"
@@ -508,6 +508,7 @@ export default function Testimonial({ }) {
                 {item.type === "video" ? (
                   <div className="testimonialCard testimonialCardVideo">
                     <img
+                      alt="a level tutors in dubai"
                       src={item.img}
                       alt={item.name}
                       className="testimonialImg"
@@ -551,7 +552,7 @@ export default function Testimonial({ }) {
           </Swiper>  <button className="swiper-button-prev" tabIndex={0} aria-label="Previous testimonial">
             <img
               src="/images/right-arrow-blue.png"
-              alt="Prev"
+              alt="a level tutors in dubai"
               className="btntest"
               style={{ transform: "rotate(180deg)" }}
               width={32}
@@ -561,7 +562,7 @@ export default function Testimonial({ }) {
           <button className="swiper-button-next" tabIndex={0} aria-label="Next testimonial">
             <img
               src="/images/right-arrow-blue.png"
-              alt="Next"
+              alt="a level tutors in dubai"
               className="btntest"
               width={32}
               height={32}

@@ -114,7 +114,7 @@ const testimonialData = [
     subtitle: "Student",
   },
 
-   // Placeholder Video 7
+  // Placeholder Video 7
   // {
   //   type: "video",
   //   img: "/images/testimonial1.jpg",
@@ -131,7 +131,7 @@ const testimonialData = [
     subtitle: "Student",
   },
 
-   // Placeholder Video 8
+  // Placeholder Video 8
   // {
   //   type: "video",
   //   img: "/images/testimonial1.jpg",
@@ -148,7 +148,7 @@ const testimonialData = [
     subtitle: "Student",
   },
 
-   // Placeholder Video 9
+  // Placeholder Video 9
   // {
   //   type: "video",
   //   img: "/images/testimonial1.jpg",
@@ -165,7 +165,7 @@ const testimonialData = [
     subtitle: "Student",
   },
 
-   // Placeholder Video 10
+  // Placeholder Video 10
   // {
   //   type: "video",
   //   img: "/images/testimonial1.jpg",
@@ -182,7 +182,7 @@ const testimonialData = [
     subtitle: "Student",
   },
 
-   // Placeholder Video 11
+  // Placeholder Video 11
   // {
   //   type: "video",
   //   img: "/images/testimonial1.jpg",
@@ -199,7 +199,7 @@ const testimonialData = [
     subtitle: "Student",
   },
 
-   // Placeholder Video 12
+  // Placeholder Video 12
   // {
   //   type: "video",
   //   img: "/images/testimonial1.jpg",
@@ -242,9 +242,9 @@ export default function Testimonial({ }) {
           style={{ animationDelay: "0.2s" }}
         >
           {/* Decorative rectangles */}
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.png" alt="british curriculum tutors in dubai" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.png" alt="british curriculum tutors in dubai" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.png" alt="british curriculum tutors in dubai" className="testimonialRect" />
 
           <img
             src="/images/google-logo.png"

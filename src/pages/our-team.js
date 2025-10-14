@@ -247,7 +247,7 @@ const OurTeam = ({ headerHeight }) => {
                         <div className="meet-team-cards">
                             <div className="team-card">
                                 <div className="team-card-image">
-                                    <img src="/images/sumit.png" alt="Sumit Advani" />
+                                    <img src="/images/sumit.png" alt="ignite training institute's trainers" />
                                 </div>
                                 <div className="team-card-info">
                                     <div className="team-card-name">
@@ -260,7 +260,7 @@ const OurTeam = ({ headerHeight }) => {
                             </div>
                             <div className="team-card">
                                 <div className="team-card-image">
-                                    <img src="/images/mohnish.png" alt="Mohnish Ahuja" />
+                                    <img src="/images/mohnish.png" alt="ignite training institute's trainers" />
                                 </div>
                                 <div className="team-card-info">
                                     <div className="team-card-name">
@@ -292,7 +292,7 @@ const OurTeam = ({ headerHeight }) => {
                         <div className="admin-staff-cards">
                             <div className="admin-card">
                                 <div className="admin-card-image">
-                                    <img src="/images/saif.png" alt="Saif" />
+                                    <img src="/images/saif.png" alt="ignite training institute's trainers" />
                                 </div>
                                 <div className="admin-card-info">
                                     <div className="admin-card-content">
@@ -302,7 +302,7 @@ const OurTeam = ({ headerHeight }) => {
                             </div>
                             <div className="admin-card">
                                 <div className="admin-card-image">
-                                    <img src="/images/ahzeb.png" alt="Ahzeb" />
+                                    <img src="/images/ahzeb.png" alt="ignite training institute's trainers" />
                                 </div>
                                 <div className="admin-card-info">
                                     <div className="admin-card-content">
@@ -396,7 +396,7 @@ const OurTeam = ({ headerHeight }) => {
                         <div className="trainer-message-card">
                             <div className="trainer-card">
                                 <div className="trainer-image">
-                                    <img src="/images/Trainermessage1.png" alt="" />
+                                    <img src="/images/Trainermessage1.png" alt="ignite training institute's trainers" />
                                 </div>
                                 <div className="trainer-experience grbg">
                                     <span className="grtx">10+ Years</span>
@@ -404,7 +404,7 @@ const OurTeam = ({ headerHeight }) => {
                             </div>
                             <div className="trainer-card small">
                                 <div className="trainer-image">
-                                    <img src="/images/Trainermessage2.png" alt="" />
+                                    <img src="/images/Trainermessage2.png" alt="ignite training institute's trainers" />
                                 </div>
                                 <div className="trainer-experience blbg">
                                     <span className="bltx">10+ Years</span>
@@ -412,7 +412,7 @@ const OurTeam = ({ headerHeight }) => {
                             </div>
                             <div className="trainer-card">
                                 <div className="trainer-image">
-                                    <img src="/images/Trainermessage3.png" alt="" />
+                                    <img src="/images/Trainermessage3.png" alt="ignite training institute's trainers" />
                                 </div>
                                 <div className="trainer-experience grbg">
                                     <span className="grtx">10+ Years</span>
@@ -420,7 +420,7 @@ const OurTeam = ({ headerHeight }) => {
                             </div>
                             <div className="trainer-card small">
                                 <div className="trainer-image">
-                                    <img src="/images/Trainermessage4.png" alt="" />
+                                    <img src="/images/Trainermessage4.png" alt="ignite training institute's trainers" />
                                 </div>
                                 <div className="trainer-experience blbg">
                                     <span className="bltx">10+ Years</span>

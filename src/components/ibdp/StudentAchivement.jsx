@@ -34,29 +34,29 @@ export default function StudentAchievements() {
   const sliderRef = useRef(null);
   const [visibleCards, setVisibleCards] = useState(3);
   const [isMobile, setIsMobile] = useState(false);
-useEffect(() => {
-  const handleResize = () => {
-    const width = window.innerWidth;
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
 
-    if (width < 768) {
-      setIsMobile(true);
-      setVisibleCards(1);
-    } else if (width < 1367) {
-      setIsMobile(false);
-      setVisibleCards(2);
-    } else if (width < 1368) {
-      setIsMobile(false);
-      setVisibleCards(3);
-    } else {
-      setIsMobile(false);
-      setVisibleCards(3);
-    }
-  };
+      if (width < 768) {
+        setIsMobile(true);
+        setVisibleCards(1);
+      } else if (width < 1367) {
+        setIsMobile(false);
+        setVisibleCards(2);
+      } else if (width < 1368) {
+        setIsMobile(false);
+        setVisibleCards(3);
+      } else {
+        setIsMobile(false);
+        setVisibleCards(3);
+      }
+    };
 
-  handleResize(); // initial check
-  window.addEventListener('resize', handleResize);
-  return () => window.removeEventListener('resize', handleResize);
-}, []);
+    handleResize(); // initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
 
   const handlePrev = () => {
@@ -149,16 +149,16 @@ useEffect(() => {
           </div>
 
           {/* Main title */}
-                 <h2
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s" }}
-              >
-                LOREM IPSUM DOLOR SIT AMET,
-               <span className="highlight"> CONSECTETUR </span>ADIPISCING
-              </h2>
+          <h2
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section testTitle"
+            style={{ animationDelay: "0.2s" }}
+          >
+            LOREM IPSUM DOLOR SIT AMET,
+            <span className="highlight"> CONSECTETUR </span>ADIPISCING
+          </h2>
         </div>
 
         {/* Slider Section */}
@@ -189,7 +189,7 @@ useEffect(() => {
           >
             <img
               src="/assets/lar.png"
-              alt="rightarr"
+              alt="ibdp tutor in dubai"
               width={isMobile ? 32 : 40}
               height={isMobile ? 32 : 40}
               className="arrow-img"
@@ -256,7 +256,7 @@ useEffect(() => {
                   >
                     <img
                       src={achievement.logo}
-                      alt="University Logo"
+                      alt="ibdp tutor in dubai"
                       className="logo-img"
                       style={{
                         width: isMobile ? "90%" : "100%",
@@ -360,7 +360,7 @@ useEffect(() => {
           >
             <img
               src="/assets/rar.png"
-              alt="rightarr"
+              alt="ibdp tutor in dubai"
               width={isMobile ? 32 : 40}
               height={isMobile ? 32 : 40}
               className="arrow-img"
