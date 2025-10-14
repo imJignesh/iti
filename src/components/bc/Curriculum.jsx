@@ -101,7 +101,7 @@ export default function IBCurriculumStages() {
                       marginLeft: "2.1rem",
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                    <img src="/assets/arrowright.png" alt="british curriculum tutors in dubai" width={16} height={16} />
                   </div>
                 </button>
               </a>
@@ -171,7 +171,7 @@ export default function IBCurriculumStages() {
                       marginLeft: "2.1rem",
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                    <img src="/assets/arrowright.png" alt="british curriculum tutors in dubai" width={16} height={16} />
                   </div>
                 </button>
               </a>

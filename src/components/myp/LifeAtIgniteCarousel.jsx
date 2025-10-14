@@ -106,7 +106,7 @@ export default function LifeAtIgniteCarousel() {
               animationDelay: "0.45s"
             }}
           >
-            <img src="/assets/lar.png" alt="leftarr" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
+            <img src="/assets/lar.png" alt="ib myp tutor in dubai" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
           </button>
 
           {/* Stacked Images */}
@@ -153,7 +153,7 @@ export default function LifeAtIgniteCarousel() {
               animationDelay: "0.65s"
             }}
           >
-            <img src="/assets/rar.png" alt="rightarr" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
+            <img src="/assets/rar.png" alt="ib myp tutor in dubai" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
           </button>
         </div>
 

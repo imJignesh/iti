@@ -83,13 +83,13 @@ export default function IgniteCareerCard() {
 
               {/* First item */}
               <div className="d-flex align-items-center gap-3">
-                <img src="/assets/check.png" alt="check" className="icon-height" />
+                <img src="/assets/check.png" alt="career at ignite" className="icon-height" />
                 <span>Empowering students & educators alike</span>
               </div>
 
               {/* Second item */}
               <div className="d-flex align-items-center gap-3">
-                <img src="/assets/check.png" alt="check" className="icon-height" />
+                <img src="/assets/check.png" alt="career at ignite" className="icon-height" />
                 <span className="spanText">Igniting great teaching & deeper learning</span>
               </div>
 

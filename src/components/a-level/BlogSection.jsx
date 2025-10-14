@@ -64,7 +64,7 @@ const BlogSection = () => {
                             VIEW ALL BLOGS
                             <img
                                 src="/images/right-arrow-skyblue.png"
-                                alt="arrow"
+                                alt="a level tutors in dubai"
                                 width={24}
                                 height={24}
                             />
@@ -83,7 +83,7 @@ const BlogSection = () => {
                             >
                                 <img
                                     src={blog.img}
-                                    alt="blog"
+                                    alt="a level tutors in dubai"
                                     data-scroll
                                     data-scroll-class="is-clipped"
                                     data-scroll-repeat="true"
@@ -99,7 +99,7 @@ const BlogSection = () => {
                                         <span className="blogReadMoreArrow">
                                             <img
                                                 src="/images/right-arrow-blue.png"
-                                                alt="arrow"
+                                                alt="a level tutors in dubai"
                                                 width={20}
                                                 height={20}
                                             />
@@ -120,7 +120,7 @@ const BlogSection = () => {
                         VIEW ALL BLOGS
                         <img
                             src="/images/right-arrow-skyblue.png"
-                            alt="arrow"
+                            alt="a level tutors in dubai"
                             width={24}
                             height={24}
                         />

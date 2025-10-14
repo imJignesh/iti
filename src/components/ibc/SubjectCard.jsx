@@ -68,12 +68,12 @@ export default function SubjectsCard1({ }) {
             data-scroll-repeat="true"
             data-scroll-offset="-10%"
             src="/images/rectangle-bg4.png"
-            alt="bg-shape"
+            alt="ib tutor in dubai"
             className="subjects-card1-bg-rect"
           />
           <img
             src="/assets/lb.png"
-            alt="bg-shape"
+            alt="ib tutor in dubai"
             className="subjects-card1-bg-rect"
           />
           <img
@@ -81,7 +81,7 @@ export default function SubjectsCard1({ }) {
             data-scroll-class="is-clipped"
             data-scroll-offset="-10%"
             src={isMobile ? "/assets/lb.png" : "/assets/rm.png"}
-            alt="bg-shape"
+            alt="ib tutor in dubai"
             className="subjects-card1-bg-rect"
           />
           <div className="subjects-card1-right">

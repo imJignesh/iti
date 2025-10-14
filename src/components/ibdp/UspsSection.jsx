@@ -236,7 +236,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="arrright" width={16} height={14} />
+                <img src="/assets/arrowright.png" alt="ibdp tutor in dubai" width={16} height={14} />
               </div>
             </button>
           </a>

@@ -195,9 +195,9 @@ export default function Testimonial({ }) {
           style={{ animationDelay: "0.2s" }}
         >
           {/* Decorative rectangles */}
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.png" alt="english tutor in dubai" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.png" alt="english tutor in dubai" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.png" alt="english tutor in dubai" className="testimonialRect" />
 
           <img
             src="/images/google-logo.png"

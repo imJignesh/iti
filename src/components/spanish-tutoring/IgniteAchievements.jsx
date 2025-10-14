@@ -20,12 +20,12 @@ export default function IgniteAchievements() {
     <div className="mobileign fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s",marginBlock:isMobile?"20px!important":"80px!important" }}>
+      style={{ animationDelay: "0.1s", marginBlock: isMobile ? "20px!important" : "80px!important" }}>
       <div className="container fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: '90vw', animationDelay: "0.15s",marginBlock:isMobile?"20px":"40px" }}>
+        style={{ maxWidth: '90vw', animationDelay: "0.15s", marginBlock: isMobile ? "20px" : "40px" }}>
 
         {/* Mobile Header Section - Only show on mobile */}
         <div className="d-md-none text-center mb-4 fade-in-section"
@@ -84,16 +84,16 @@ export default function IgniteAchievements() {
                 </div>
 
                 {/* Main Title */}
-             <h2
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s" }}
-              >
-                Milestones That Clearly
-               <span className="highlight"> Reflect </span>Our Impact
-              </h2>
+                <h2
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                  className="fade-in-section testTitle"
+                  style={{ animationDelay: "0.2s" }}
+                >
+                  Milestones That Clearly
+                  <span className="highlight"> Reflect </span>Our Impact
+                </h2>
 
 
                 {/* Subtitle */}
@@ -143,7 +143,7 @@ export default function IgniteAchievements() {
                       marginLeft: "2.1rem"
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                    <img src="/assets/arrowright.png" alt="spanish tutor in dubai" width={16} height={16} />
                   </div>
                 </button>
               </div>
@@ -233,7 +233,7 @@ export default function IgniteAchievements() {
                   marginLeft: "2.1rem"
                 }}
               >
-                <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                <img src="/assets/arrowright.png" alt="spanish tutor in dubai" width={16} height={16} />
               </div>
             </button>
           </div>

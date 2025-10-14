@@ -133,7 +133,7 @@ const Contact = ({ headerHeight }) => {
                         </div>
                         <div className="form-actions">
                             <button type="submit" className="submit-btn">
-                                SUBMIT <span className="arrow"><img src="/images/right-arrow-skyblue.png" alt="arrow" /></span>
+                                SUBMIT <span className="arrow"><img src="/images/right-arrow-skyblue.png" alt="contact ignite training institute" /></span>
                             </button>
                         </div>
                     </form>
@@ -142,14 +142,14 @@ const Contact = ({ headerHeight }) => {
 
                     <div className="contact-grid">
                         <div className="contact-card green">
-                            <img src="/images/email.png" alt="Email Icon" />
+                            <img src="/images/email.png" alt="contact ignite training institute" />
                             <h3>EMAIL US</h3>
                             <p>Email us now for expert tutoring and tailored growth solutions.</p>
                             <a href="mailto:hello@ignitetraininginstitute.com">hello@ignitetraininginstitute.com</a>
                         </div>
 
                         <div className="contact-card green">
-                            <img src="/images/call.png" alt="Phone Icon" />
+                            <img src="/images/call.png" alt="contact ignite training institute" />
                             <h3>CALL US</h3>
                             <p>Call us today for personalised tutoring and transformative growth.</p>
                             <a href="tel:+971568357374">+971 56835 7374</a>
@@ -158,7 +158,7 @@ const Contact = ({ headerHeight }) => {
 
 
                     <div className="contact-visit blue">
-                        <img src="/images/location-map.png" alt="Location Icon" />
+                        <img src="/images/location-map.png" alt="contact ignite training institute" />
                         <h3>VISIT US</h3>
                         <p>Visit us for personalized coaching and guidance toward lasting success!</p>
                         <address>

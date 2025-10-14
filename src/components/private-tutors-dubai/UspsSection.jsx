@@ -97,56 +97,56 @@ function UpsSection() {
   const uspItems = [
     {
       number: "01",
-      icon: <img src="/assets/01.png" alt="Icon 01" />,
+      icon: <img src="/assets/01.png" alt="private tutors in dubai" />,
       title: "Experienced Tutors",
       desc: "Curricula-specialist tutors offering end-to-end academic guidance.",
       color: "blue",
     },
     {
       number: "02",
-      icon: <img src="/assets/02.png" alt="Icon 02" />,
+      icon: <img src="/assets/02.png" alt="private tutors in dubai" />,
       title: "Individual Attention",
       desc: "Small group training (SGT) tailored to each student’s unique needs.",
       color: "green",
     },
     {
       number: "03",
-      icon: <img src="/assets/01.png" alt="Icon 03" />,
+      icon: <img src="/assets/01.png" alt="private tutors in dubai" />,
       title: "Grade Improvement",
       desc: "Boost academic results with review-focused testing strategies.",
       color: "blue",
     },
     {
       number: "04",
-      icon: <img src="/assets/02.png" alt="Icon 04" />,
+      icon: <img src="/assets/02.png" alt="private tutors in dubai" />,
       title: "Examination Prep",
       desc: "Comprehensive preparation for all key international curricula.",
       color: "green",
     },
     {
       number: "05",
-      icon: <img src="/assets/01.png" alt="Icon 05" />,
+      icon: <img src="/assets/01.png" alt="private tutors in dubai" />,
       title: "Strong Foundation",
       desc: "Conceptual clarity to master all subject fundamentals with ease.",
       color: "blue",
     },
     {
       number: "06",
-      icon: <img src="/assets/02.png" alt="Icon 06" />,
+      icon: <img src="/assets/02.png" alt="private tutors in dubai" />,
       title: "Stimulating Environment",
       desc: "Goal-driven teaching in an engaging, supportive setting.",
       color: "green",
     },
     {
       number: "07",
-      icon: <img src="/assets/01.png" alt="Icon 07" />,
+      icon: <img src="/assets/01.png" alt="private tutors in dubai" />,
       title: "Structured Learning",
       desc: "Problem-led lessons that connect academic learning to real life.",
       color: "blue",
     },
     {
       number: "08",
-      icon: <img src="/assets/02.png" alt="Icon 08" />,
+      icon: <img src="/assets/02.png" alt="private tutors in dubai" />,
       title: "Progress Tracking",
       desc: "Monitor improvement through regular mocks & assessments.",
       color: "green",
@@ -243,7 +243,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="arrright" width={16} height={14} />
+                <img src="/assets/arrowright.png" alt="private tutors in dubai" width={16} height={14} />
               </div>
             </button>
           </a>

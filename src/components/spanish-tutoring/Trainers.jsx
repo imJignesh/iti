@@ -10,14 +10,14 @@ import "swiper/css/pagination";
 // ----------------------------------------------------------------------
 
 const trainers = [
-    {
-        name: "AASHIMA",
-        img: "/images/trainer1.png",
-        subtitle: "Spanish",
-        experience: "5+ YEARS",
-        color: "blue",
-    },
-    
+  {
+    name: "AASHIMA",
+    img: "/images/trainer1.png",
+    subtitle: "Spanish",
+    experience: "5+ YEARS",
+    color: "blue",
+  },
+
 ];
 
 // ----------------------------------------------------------------------
@@ -27,12 +27,12 @@ const trainers = [
 const TrainerCard = ({ trainer }) => (
   <a href="/our-team">
     <div data-color={trainer.color} className="trainerCard">
-        <div className="trainerName">{trainer.name}</div>
-        <div className="trainerImgWrap">
-            <img src={trainer.img} alt={trainer.name} className="trainerImg" />
-        </div>
-        <div className="trainerSubtitle">{trainer.subtitle}</div>
-        <div className="trainerExp">{trainer.experience}</div>
+      <div className="trainerName">{trainer.name}</div>
+      <div className="trainerImgWrap">
+        <img src={trainer.img} alt={trainer.name} className="trainerImg" />
+      </div>
+      <div className="trainerSubtitle">{trainer.subtitle}</div>
+      <div className="trainerExp">{trainer.experience}</div>
     </div>
   </a>
 );
@@ -42,31 +42,31 @@ const TrainerCard = ({ trainer }) => (
 // ----------------------------------------------------------------------
 
 export default function Trainers() {
-    const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
-    const [showAll, setShowAll] = useState(false);
-    const trainersGridRef = useRef(null);
-    const navPrevRef = useRef(null);
-    const navNextRef = useRef(null);
+  const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+  const trainersGridRef = useRef(null);
+  const navPrevRef = useRef(null);
+  const navNextRef = useRef(null);
 
-    useEffect(() => {
-        const handleResize = () => {
-            // Swiper active below 1199px
-            setIsTrainersSwiper(window.innerWidth <= 1199);
-        };
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      // Swiper active below 1199px
+      setIsTrainersSwiper(window.innerWidth <= 1199);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
+  const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 
-    // The new global container class is 'trainers-global-container'
-    const containerClass = 'trainers-global-container';
+  // The new global container class is 'trainers-global-container'
+  const containerClass = 'trainers-global-container';
 
-    return (
-        <>
-            <style jsx global>
-                {`
+  return (
+    <>
+      <style jsx global>
+        {`
           /* Trainer Section - Refactored for global use with .trainers-global-container */
 
           .${containerClass} .trainersSection {
@@ -478,91 +478,91 @@ export default function Trainers() {
             }
           }
         `}
-            </style>
+      </style>
 
-            {/* Wrapping div with the new global class to scope the CSS */}
-            <div className={containerClass}>
-                <section className="trainersSection" data-scroll-section>
-                    <div className="container">
-                        <div>
-                            <span className="SubHeading trainersSubheading">OUR TUTORS</span>
-                        </div>
-
-                        <h2 className="trainersTitle">
-                            The Best Trainers For Your Success Journey
-                        </h2>
-
-                        {isTrainersSwiper ? (
-                            <div className="trainersSwiperWrap">
-                                <Swiper
-                                    modules={[Navigation, Pagination]}
-                                    spaceBetween={24}
-                                    slidesPerView={1}
-                                    breakpoints={{
-                                        700: {
-                                            slidesPerView: 2,
-                                            spaceBetween: 24,
-                                        },
-                                        991: {
-                                            slidesPerView: 3,
-                                            spaceBetween: 24,
-                                        },
-                                    }}
-                                    navigation={{
-                                        prevEl: navPrevRef.current,
-                                        nextEl: navNextRef.current,
-                                    }}
-                                    pagination={{
-                                        clickable: true,
-                                        el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
-                                    }}
-                                    onBeforeInit={(swiper) => {
-                                        if (swiper.params.navigation) {
-                                            swiper.params.navigation.prevEl = navPrevRef.current;
-                                            swiper.params.navigation.nextEl = navNextRef.current;
-                                        }
-                                    }}
-                                >
-                                    {trainers.map((t, i) => (
-                                        <SwiperSlide key={i}>
-                                            <TrainerCard trainer={t} />
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                                {/* Custom Navigation Buttons */}
-                                <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
-                                    {/* Placeholder for actual image/icon */}
-                                    <img src="/images/left-arrow-blue.png" alt="Previous" />
-                                </button>
-                                <button ref={navNextRef} className="customNavBtn swiper-button-next">
-                                    {/* Placeholder for actual image/icon */}
-                                    <img src="/images/right-arrow-blue.png" alt="Next" />
-                                </button>
-                                {/* Custom Pagination Container */}
-                                <div className="trainersPagination"></div>
-                            </div>
-                        ) : (
-                            <>
-                                {/* Grid view for large screens */}
-                                <div className="trainersGrid" ref={trainersGridRef}>
-                                    {displayTrainers.map((t, i) => (
-                                        <TrainerCard key={i} trainer={t} />
-                                    ))}
-                                </div>
-
-                                {trainers.length > 10 && !showAll && (
-                                    <button
-                                        onClick={() => setShowAll(true)}
-                                        className="trainersSeeMore"
-                                    >
-                                        SEE MORE
-                                    </button>
-                                )}
-                            </>
-                        )}
-                    </div>
-                </section>
+      {/* Wrapping div with the new global class to scope the CSS */}
+      <div className={containerClass}>
+        <section className="trainersSection" data-scroll-section>
+          <div className="container">
+            <div>
+              <span className="SubHeading trainersSubheading">OUR TUTORS</span>
             </div>
-        </>
-    );
+
+            <h2 className="trainersTitle">
+              The Best Trainers For Your Success Journey
+            </h2>
+
+            {isTrainersSwiper ? (
+              <div className="trainersSwiperWrap">
+                <Swiper
+                  modules={[Navigation, Pagination]}
+                  spaceBetween={24}
+                  slidesPerView={1}
+                  breakpoints={{
+                    700: {
+                      slidesPerView: 2,
+                      spaceBetween: 24,
+                    },
+                    991: {
+                      slidesPerView: 3,
+                      spaceBetween: 24,
+                    },
+                  }}
+                  navigation={{
+                    prevEl: navPrevRef.current,
+                    nextEl: navNextRef.current,
+                  }}
+                  pagination={{
+                    clickable: true,
+                    el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
+                  }}
+                  onBeforeInit={(swiper) => {
+                    if (swiper.params.navigation) {
+                      swiper.params.navigation.prevEl = navPrevRef.current;
+                      swiper.params.navigation.nextEl = navNextRef.current;
+                    }
+                  }}
+                >
+                  {trainers.map((t, i) => (
+                    <SwiperSlide key={i}>
+                      <TrainerCard trainer={t} />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                {/* Custom Navigation Buttons */}
+                <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
+                  {/* Placeholder for actual image/icon */}
+                  <img src="/images/left-arrow-blue.png" alt="spanish tutor in dubai" />
+                </button>
+                <button ref={navNextRef} className="customNavBtn swiper-button-next">
+                  {/* Placeholder for actual image/icon */}
+                  <img src="/images/right-arrow-blue.png" alt="spanish tutor in dubai" />
+                </button>
+                {/* Custom Pagination Container */}
+                <div className="trainersPagination"></div>
+              </div>
+            ) : (
+              <>
+                {/* Grid view for large screens */}
+                <div className="trainersGrid" ref={trainersGridRef}>
+                  {displayTrainers.map((t, i) => (
+                    <TrainerCard key={i} trainer={t} />
+                  ))}
+                </div>
+
+                {trainers.length > 10 && !showAll && (
+                  <button
+                    onClick={() => setShowAll(true)}
+                    className="trainersSeeMore"
+                  >
+                    SEE MORE
+                  </button>
+                )}
+              </>
+            )}
+          </div>
+        </section>
+      </div>
+    </>
+  );
 }

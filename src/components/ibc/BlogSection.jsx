@@ -67,7 +67,7 @@ const Blog = () => {
                                 VIEW ALL BLOGS
                                 <img
                                     src="/images/right-arrow-skyblue.png"
-                                    alt="arrow"
+                                    alt="ib tutor in dubai"
                                     width={24}
                                     height={24}
                                 />
@@ -88,7 +88,7 @@ const Blog = () => {
                             >
                                 <img
                                     src={blog.img}
-                                    alt="blog"
+                                    alt="ib tutor in dubai"
                                     data-scroll
                                     data-scroll-class="is-clipped"
                                     data-scroll-repeat="true"
@@ -104,7 +104,7 @@ const Blog = () => {
                                         <span className="blogReadMoreArrow">
                                             <img
                                                 src="/images/right-arrow-blue.png"
-                                                alt="arrow"
+                                                alt="ib tutor in dubai"
                                                 width={20}
                                                 height={20}
                                             />
@@ -125,7 +125,7 @@ const Blog = () => {
                         VIEW ALL BLOGS
                         <img
                             src="/images/right-arrow-skyblue.png"
-                            alt="arrow"
+                            alt="ib tutor in dubai"
                             width={24}
                             height={24}
                         />

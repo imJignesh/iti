@@ -97,49 +97,49 @@ function UpsSection() {
   const uspItems = [
     {
       number: "01",
-      icon: <img src="/assets/01.png" alt="Icon 01" />,
+      icon: <img src="/assets/01.png" alt="ib myp tutor in dubai" />,
       title: "MYP-SPECIFIC TUTORS",
       desc: "Highly qualified IB-specific tutors delivering all-around support.",
     },
     {
       number: "02",
-      icon: <img src="/assets/02.png" alt="Icon 02" />,
+      icon: <img src="/assets/02.png" alt="ib myp tutor in dubai" />,
       title: "INDIVIDUAL ATTENTION",
       desc: "Small group training (SGT) to focus individually on every student.",
     },
     {
       number: "03",
-      icon: <img src="/assets/03.png" alt="Icon 03" />,
+      icon: <img src="/assets/03.png" alt="ib myp tutor in dubai" />,
       title: "GRADE IMPROVEMENT",
       desc: "Better results assurance with rigorous testing and review methods.",
     },
     {
       number: "04",
-      icon: <img src="/assets/04.png" alt="Icon 04" />,
+      icon: <img src="/assets/04.png" alt="ib myp tutor in dubai" />,
       title: "EXAMINATION PREP",
       desc: "Full IB MYP exam prep with tutoring, resources, testing, and review.",
     },
     {
       number: "05",
-      icon: <img src="/assets/05.png" alt="Icon 05" />,
+      icon: <img src="/assets/05.png" alt="ib myp tutor in dubai" />,
       title: "STRONG FOUNDATION",
       desc: "Emphasis on fundamentals for an exceptionally strong foundation.",
     },
     {
       number: "06",
-      icon: <img src="/assets/06.png" alt="Icon 06" />,
+      icon: <img src="/assets/06.png" alt="ib myp tutor in dubai" />,
       title: "STIMULATING ENVIRONMENT",
       desc: "Result-oriented culture ensuring a fun and stimulating environment.",
     },
     {
       number: "07",
-      icon: <img src="/assets/07.png" alt="Icon 07" />,
+      icon: <img src="/assets/07.png" alt="ib myp tutor in dubai" />,
       title: "STRUCTURED LEARNING",
       desc: "Problem-based learning incorporates practical aspects of all units.",
     },
     {
       number: "08",
-      icon: <img src="/assets/08.png" alt="Icon 08" />,
+      icon: <img src="/assets/08.png" alt="ib myp tutor in dubai" />,
       title: "PROGRESS TRACKING",
       desc: "Prepare with unit tests and mock papers under exam-like conditions.",
     },
@@ -237,7 +237,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="arrright" width={16} height={14} />
+                <img src="/assets/arrowright.png" alt="ib myp tutor in dubai" width={16} height={14} />
               </div>
             </button>
           </a>

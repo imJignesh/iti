@@ -84,17 +84,17 @@ export default function IgniteAboutCard() {
         {/* <div className="ignite-right">
           <img
             src="/assets/arect.png"
-            alt="bg-shape"
+            alt="ibdp tutor in dubai"
             className="testimonialRect rect-1"
           />
           <img
             src="/assets/arect1.png"
-            alt="bg-shape"
+            alt="ibdp tutor in dubai"
             className="testimonialRect rect-2"
           />
           <img
             src="/assets/arect2.png"
-            alt="bg-shape"
+            alt="ibdp tutor in dubai"
             className="testimonialRect rect-3"
           />
 
@@ -109,7 +109,7 @@ export default function IgniteAboutCard() {
           >
             <img
               src="/assets/aboutbg.jpg"
-              alt="Two professionals working together on laptop"
+              alt="ibdp tutor in dubai"
               className="main-image"
             />
           </div>
@@ -193,7 +193,7 @@ export default function IgniteAboutCard() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="arrright" width={16} height={14} />
+                <img src="/assets/arrowright.png" alt="ibdp tutor in dubai" width={16} height={14} />
               </div>
             </button>
           </a>

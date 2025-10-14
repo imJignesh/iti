@@ -127,7 +127,7 @@ export default function InfoCard() {
                   <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
                       src="/assets/medal.png"
-                      alt="Grade Support"
+                      alt="a level tutors in dubai"
                       width={isMobile ? 20 : 32}
                       height={isMobile ? 30 : 45}
                       className="icon-img"
@@ -151,7 +151,7 @@ export default function InfoCard() {
                   <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
                       src="/assets/person.png"
-                      alt="Learning Mode"
+                      alt="a level tutors in dubai"
                       width={isMobile ? 20 : 30}
                       height={isMobile ? 30 : 45}
                       className="icon-img"
@@ -170,7 +170,7 @@ export default function InfoCard() {
                   <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
                       src="/assets/location.png"
-                      alt="Location"
+                      alt="a level tutors in dubai"
                       width={isMobile ? 22 : 32}
                       height={isMobile ? 28 : 40}
                       className="icon-img"
@@ -217,7 +217,7 @@ export default function InfoCard() {
                     </span>
                     <img
                       src="/assets/rar.png"
-                      alt="right"
+                      alt="a level tutors in dubai"
                       className="custom-height"
                       width={35}
                       height={35}
@@ -239,17 +239,17 @@ export default function InfoCard() {
               {/* Rectangle background images positioned within form section */}
               <img
                 src="/assets/rect1.png"
-                alt="bg-shape"
+                alt="a level tutors in dubai"
                 className="testimonialRect rect-1"
               />
               <img
                 src="/assets/rect2.png"
-                alt="bg-shape"
+                alt="a level tutors in dubai"
                 className="testimonialRect rect-2"
               />
               <img
                 src="/assets/rect3.png"
-                alt="bg-shape"
+                alt="a level tutors in dubai"
                 className="testimonialRect rect-3"
               />
 
@@ -390,7 +390,7 @@ export default function InfoCard() {
                   SUBMIT
                   <img
                     src={isMobile ? "/assets/mobilebutton.png" : "/assets/rwb.png"}
-                    alt="right"
+                    alt="a level tutors in dubai"
                     width={isMobile ? 35 : 40}
                     height={isMobile ? 35 : 40}
                   />
