@@ -510,7 +510,7 @@ export default function Testimonial({ }) {
                     <img
                       alt="a level tutors in dubai"
                       src={item.img}
-                      alt={item.name}
+
                       className="testimonialImg"
                     />
                     <div className="testimonialVideoOverlay"></div>
