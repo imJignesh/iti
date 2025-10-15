@@ -78,11 +78,12 @@ import "@/styles/team/team.css";
 
 // contact page css
 import "@/styles/contact/contact.css";
+import "@/styles/DelayedPopup.module.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
+import DelayedPopup from "../components/DelayedPopup";
 import { useRouter } from "next/router";
 
 import LocomotiveScrollProvider from '../components/LocomotiveScrollProvider';
@@ -99,7 +100,9 @@ export default function MyApp({ Component, pageProps }) {
                 <Header setHeaderHeight={setHeaderHeight} />
                 <Component {...pageProps} headerHeight={headerHeight} />
                 <Footer />
+                {/* <DelayedPopup /> */}
             </LocomotiveScrollProvider>
         </>
     );
 }
+

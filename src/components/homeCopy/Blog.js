@@ -37,7 +37,7 @@ const createBlogData = async () => {
                 "/images/blog-placeholder.jpg",
             title: decodedTitle,
             desc: trimmedExcerpt,
-            link: post.link,
+            link: post.slug,
         };
     });
 
