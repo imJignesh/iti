@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
+import SidebarForm from '@/components/SidebarForm';
 
 // You must add 'import "locomotive-scroll/dist/locomotive-scroll.css";'
 // to your `pages/_app.js` file to avoid a build error.
@@ -31,17 +32,22 @@ const slugify = (text) => {
         .replace(/-+$/, '');
 };
 
-// Function to generate the sidebar's HTML as a string
-const getSidebarHtml = () => {
+const getSidebarHtmlImage = () => {
+    return `
+        <div class="sidebar-image mb-3">
+            <img
+                src="/images/blog-sidebar.png"
+                alt="Get a Free Counseling"
+                class="img-fluid w-100 rounded"
+            />
+        </div>
+    `;
+};
+
+const getSidebarHtmlStaticMobile = () => {
     return `
         <div class="sticky-sidebar-wrapper">
-            <div class="sidebar-image mb-3">
-                <img
-                    src="/images/blog-sidebar.png"
-                    alt="Get a Free Counseling"
-                    class="img-fluid w-100 rounded"
-                />
-            </div>
+            ${getSidebarHtmlImage()}
             <div class="form-container blog-container">
                 <h2>Get a Free Demo Class +<br />Free Study Resources</h2>
                 <form>
@@ -82,6 +88,7 @@ const getSidebarHtml = () => {
 };
 
 
+
 // Component to handle rendering the post content with the TOC inserted
 const TOCPostContent = ({ content, toc }) => {
     if (!content) return null;
@@ -108,7 +115,7 @@ const TOCPostContent = ({ content, toc }) => {
             </div>
         </div>
         <div class="d-lg-none">
-            ${getSidebarHtml()}
+            ${getSidebarHtmlStaticMobile()}
         </div>
     `;
 
@@ -129,8 +136,10 @@ const TOCPostContent = ({ content, toc }) => {
 
 export default function PostDetail() {
     const router = useRouter();
+    const [pageInfo, setPageInfo] = useState('');
     const { slug } = router.query;
     const [toc, setToc] = useState([]);
+
 
     const postApiUrl = slug ? `https://ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed` : null;
     const { data, error, isLoading } = useSWR(postApiUrl, fetcher);
@@ -180,6 +189,22 @@ export default function PostDetail() {
             }
         }
     }, [data]);
+    const post = data?.[0];
+    useEffect(() => {
+        // This runs only when the 'post' data is available and defined
+        if (post) {
+            // Check for client-side environment (important for Next.js SSR/SSG)
+            if (typeof window !== 'undefined') {
+                const url = window.location.href;
+
+                // Use the fetched post title, cleaned of any HTML tags
+                const title = post.title.rendered.replace(/<\/?[^>]+(>|$)/g, "");
+
+                // Set the pageInfo state
+                setPageInfo(`URL: ${url} | Title: ${title}`);
+            }
+        }
+    }, [post]); // ✅ CORRECTED: Changed [[post]] to [post]
 
     if (router.isFallback || isLoading) {
         return (
@@ -195,7 +220,7 @@ export default function PostDetail() {
         return <div className="alert alert-danger my-5 p-4">Failed to load post. Please try again later.</div>;
     }
 
-    const post = data?.[0];
+    // const post = data?.[0];
 
     if (!post) {
         return (
@@ -311,8 +336,15 @@ export default function PostDetail() {
                         <div className="col-lg-1 d-none d-lg-block">  </div>
                         <div className="col-lg-3 d-none d-lg-block">
                             <div className="sticky-sidebar-wrapper">
-                                {/* This is the desktop sidebar, which is hidden on mobile */}
-                                <div dangerouslySetInnerHTML={{ __html: getSidebarHtml() }} />
+
+                                {/* 1. RENDER STATIC IMAGE PART */}
+                                <div dangerouslySetInnerHTML={{ __html: getSidebarHtmlImage() }} />
+
+                                {/* 2. RENDER FUNCTIONAL REACT FORM (replaces the old static form HTML) */}
+                                <SidebarForm
+                                    pageInfo={pageInfo}
+                                    formType="BLOG_SIDEBAR"
+                                />
                             </div>
                         </div>
                     </div>

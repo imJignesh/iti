@@ -8,6 +8,9 @@
 /* .innerpage .blogSection .blogHeadingRow span {
   font-size: 22px;
 } */
+section.post-detail-section {
+    padding-top: 5rem !important;
+}
 
 .innerpage .blogSection .blogHeadingRow span:before,
 .innerpage .blogSection .blogHeadingRow span:after {

@@ -56,10 +56,8 @@ const CategoriesIndexPage = ({ headerHeight }) => {
             <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }}>
                 {/* Banner Section (Use a consistent design from your blog/category pages) */}
                 <section
-                    className="careers-banner fade-in-section"
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat
+                    className="careers-banner fade-in-section is-inview"
+
                     style={{ animationDelay: "0.3s" }}
                 >
                     <div className="dark-overlay"></div>

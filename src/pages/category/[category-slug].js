@@ -46,6 +46,79 @@ const categoryFetcher = async (url) => {
     return data;
 }
 
+// --- SEO LOOKUP TABLE ---
+const categorySeoMap = {
+
+
+    'a-levels': {
+        title: "A Levels Blogs - Curriculum Insights & Student Resources",
+        description: "Browse in-depth A Level blogs covering subject choices, study strategies, & exam success tips. Ideal for students & parents navigating A Levels",
+    },
+    'advanced-placements': {
+        title: "AP (Advanced Placements) Blogs - Insights & Prep Tips",
+        description: "Explore extensive AP blogs covering course choices, exam preparation, & scoring insights. A helpful guide for anybody confidently navigating AP",
+    },
+    'american-curriculum': {
+        title: "American Curriculum Blogs - Grading System & Key Features",
+        description: "Learn about the American Curriculum through Ignite blogs. Get to know the framework, grading, AP options, global schools, & college preparation",
+    },
+    'british-curriculum': {
+        title: "British Curriculum Blogs - Pathways & Key Insights",
+        description: "These blogs cover the British Curriculum & offer a clear look at academic stages, subject focus, progression routes, & student learning outcomes",
+    },
+    'gcse': {
+        title: "GCSE Blogs - Curriculum Insights & Exam Prep Tips",
+        description: "Stay informed with insightful blogs on GCSE subjects, grading systems, & exam formats, perfect for students & parents navigating their GCSE journey",
+    },
+    'homeschooling': {
+        title: "Homeschooling Blogs - Guidance & Student Resources",
+        description: "Homeschooling blogs offer structured guidance and subject planning tips, making them an essential resource for navigating the homeschooling journey",
+    },
+    'ibdp': {
+        title: "IB Diploma Programme Blogs - Curriculum Insights & Tips",
+        description: "Navigate the IBDP journey with blogs covering core components, subject groups, CAS, EE, TOK, & exam prep, making it a go-to guide for students",
+    },
+    'igcse': {
+        title: "IGCSE Blogs - Curriculum Insights & Study Resources",
+        description: "Explore the IGCSE structure, key subjects, grading system, & expert prep tips through our blogs, designed for navigating IGCSE in Dubai & beyond",
+    },
+    'international-baccalaureate': {
+        title: "IB Blogs - Curriculum Insights & Exam Prep Strategies",
+        description: "Navigate the International Baccalaureate (IB) with expert blogs on subjects, assessments, & learning pathways, trusted by students & parents worldwide",
+    },
+    'myp': {
+        title: "IB MYP Programme Blogs - Curriculum Insights & Tips",
+        description: "Understand the IB MYP better with blogs on subjects, skills, & projects, your complete go-to guide to the curriculum & IB MYP learning journey",
+    },
+    'schools': {
+        title: "Top Schools In The UAE: Insightful Blogs & Reviews",
+        description: "Explore insightful blogs on top UAE schools covering quality of education, reviews, & more to help parents & students make informed decisions",
+    },
+    'standardized-tests': {
+        title: "Standardized Tests Blogs - Prep Guidance & Key Insights",
+        description: "Navigate the landscape of standardized testing with blogs offering expert prep tips, grading insights & exam formats for students & learners worldwide",
+    },
+    'study-tips': {
+        title: "Study Tips – Proven Strategies & Insights For Students",
+        description: "Master your learning journey with study tips blogs packed with focus techniques, revision strategies & smart learning hacks for strong academic growth.",
+    },
+    'subject-choices': {
+        title: "Subject Choices Blogs - Expert Guidance & Real Insights",
+        description: "Gain clear guidance on subject choices through insightful blogs covering academic pathways, stream selection, & comprehensive curricula advice",
+    },
+    'tutoring': {
+        title: "Tutoring Insights - Get Academic Support With Ignite",
+        description: "Discover tutoring blogs filled with subject-specific strategies & academic growth tips, ideal for students in Dubai & parents seeking trusted support",
+    },
+    'universities': {
+        title: "University Insights - Blogs On Admissions & Career Pathway",
+        description: "Browse expert university blogs packed with insights on admissions & global rankings acting as an essential guide for those navigating global pathways",
+    }
+
+
+};
+// ------------------------
+
 const CategoryPage = ({ headerHeight }) => {
     const router = useRouter();
     const { 'category-slug': categorySlug } = router.query;
@@ -221,20 +294,40 @@ const CategoryPage = ({ headerHeight }) => {
 
     const currentCategoryName = currentCategory?.name || 'Category';
 
+    // --- START: NEW SEO IMPLEMENTATION LOGIC ---
+    const currentSlug = categorySlug;
+
+    // 1. Look up the custom SEO data using the slug
+    const customSeoData = categorySeoMap[currentSlug];
+
+    // 2. Set the final Meta Title, falling back to the generic title if not found
+    const metaTitle = customSeoData?.title
+        || `${currentCategoryName} Posts - Ignite Blog`;
+
+    // 3. Set the final Meta Description, falling back to WP description or generic string
+    const metaDescription = customSeoData?.description
+        || currentCategory?.description
+        || `All blog posts in the ${currentCategoryName} category. Explore expert insights, study guides, and tips from Ignite Training Institute.`;
+
+    // 4. Clean up any residual HTML and truncate the description (max 160 chars)
+    const cleanMetaDescription = metaDescription.replace(/<[^>]*>/g, '').substring(0, 160);
+    // --- END: NEW SEO IMPLEMENTATION LOGIC ---
+
+
     return (
         <>
             <SEO
-                title={`${currentCategoryName} Posts - Ignite Blog`}
-                description={`All blog posts in the ${currentCategoryName} category. Explore expert insights, study guides, and tips from Ignite Training Institute.`}
+                // Use the dynamically determined metaTitle
+                title={metaTitle}
+                // Use the dynamically determined and cleaned description
+                description={cleanMetaDescription}
             />
             <JsonLd schema={categorySchema} />
 
             <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }} >
                 <section
-                    className="careers-banner fade-in-section"
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat
+                    className="careers-banner fade-in-section is-inview"
+
                     style={{
                         animationDelay: "0.3s",
                     }}
@@ -329,7 +422,7 @@ const CategoryPage = ({ headerHeight }) => {
                                         const featuredImage = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
                                         const postTags = post.tags.map(tagId => tagsMap[tagId]).filter(Boolean);
                                         const postLink = post.link;
-                                        const postSlug = `/post-detail/${post.slug}`; // Assuming your post detail page is at /post-detail/[slug] or similar based on [slug].js
+                                        const postSlug = `/${post.slug}`; // Assuming your post detail page is at /post-detail/[slug] or similar based on [slug].js
                                         const postTitle = encodeURIComponent(post.title.rendered);
 
                                         return (
