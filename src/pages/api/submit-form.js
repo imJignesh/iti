@@ -38,9 +38,18 @@ export default async function handler(req, res) {
             }
         },
         {
-            // --- FORM 2: ACT Tutors Form (Falls back to slug match) ---
-            type: 'ACT_PAGES', // Optional type for completeness
-            slugs: ['/act-tutors-in-dubai', '/act-prep-courses', '/act-online-tutor'],
+            type: 'Organic_Curriculum', // Optional type for completeness
+            slugs: [
+                "/ib-curriculum-tutors-in-dubai",
+                "/courses/ibdp-tutors-in-dubai",
+                "/courses/myp-tutors-in-dubai",
+                "/british-curriculum-tutors-in-dubai",
+                "/courses/a-level-tutors-in-dubai",
+                "/courses/igcse-tutors-in-dubai",
+                "/courses/homeschooling-tutors-in-dubai",
+                "/act-tutors-in-dubai",
+                "/advanced-placements-tutors-in-dubai"
+            ],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/IgniteCourses/formperma/58L0c_DIb7n5At6RTaPaWpu0ymjyqTDe2O7brKyZl2c/htmlRecords/submit',
             fieldMap: {
                 name: 'SingleLine',
@@ -51,7 +60,33 @@ export default async function handler(req, res) {
                 pageinfo: 'SingleLine2',
             }
         },
-        // IMPORTANT: Add all your other FORM_CONFIGS (IGCSE, IBDP, General) here
+        {
+            type: 'Organic_Subject', // Optional type for completeness
+            slugs: [
+                "/english-tutor-in-dubai",
+                "/french-tutor-in-dubai",
+                "/spanish-tutor-in-dubai",
+                "/computer-science-tutor-in-dubai",
+                "/economics-tutor-in-dubai",
+                "/biology-tutor-in-dubai",
+                "/chemistry-tutor-in-dubai",
+                "/physics-tutor-in-dubai",
+                "/maths-tutor-in-dubai",
+                "/business-studies-tutor-in-dubai",
+                "/accounting-tutor-in-dubai",
+                "/psychology-tutor-in-dubai"
+            ],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/OrganicSubjectForm/formperma/KvWSFWr1Am7ISNcB-oG4RhgjmaIFGp0LOV4RgxPxFcw/htmlRecords/submit',
+            fieldMap: {
+                name: 'SingleLine',
+                email: 'Email',
+                phone: 'PhoneNumber_countrycode',
+                school: 'SingleLine1',
+                message: 'MultiLine',
+                pageinfo: 'SingleLine2',
+            }
+        },
+
     ];
     // -----------------------------------------------------------------
 
