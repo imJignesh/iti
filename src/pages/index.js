@@ -15,6 +15,7 @@ import Alumni from "@/components/homeCopy/Alumni";
 import Usps from "@/components/homeCopy/Usps";
 import Trainers from "@/components/homeCopy/Trainers";
 import Testimonial from "@/components/homeCopy/Testimonial";
+
 import Blog from "@/components/homeCopy/Blog";
 
 function useInViewAnimation(threshold = 0.3) {
@@ -131,6 +132,7 @@ const HomeCopy = ({ headerHeight }) => {
 
                 {/* Testimonial Section */}
                 <Testimonial />
+
 
                 {/* Blogs Section  */}
                 <Blog />

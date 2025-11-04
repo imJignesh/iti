@@ -118,7 +118,7 @@ const Blog = ({ locoScroll }) => {
                                     className="blogCard fade-in-section"
                                     style={{ animationDelay: `${0.2 + i * 0.15}s` }}
                                 >
-                                    <img
+                                    <a href={`/${blog.link}`} className="nodecoration"><img
                                         src={blog.img}
                                         alt="blog"
                                         data-scroll
@@ -126,7 +126,7 @@ const Blog = ({ locoScroll }) => {
                                         data-scroll-repeat="true"
                                         data-scroll-offset="-10%"
                                         className="blogImg"
-                                    />
+                                    /></a>
                                     <div className="blogCardContent">
                                         <div className="blogCardTitle">{blog.title}</div>
                                         <div className="blogCardDesc">{blog.desc}</div>

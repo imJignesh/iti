@@ -104,7 +104,7 @@ const Blog = () => {
                             className="fade-in-section blogTitle"
                             style={{ animationDelay: "0.2s" }}
                         >
-                            Explore Expert Insights, Study Tips, & Success Stories
+                            Smarter Learning Starts With The Right Insights
                             {/* <span className="blogHighlight"> ADIPISCING</span> */}
                         </h2>
                         <div

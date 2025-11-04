@@ -11,7 +11,7 @@ import InfoCard from '@/components/private-tutors-dubai/infoCard';
 import OurTrainers from '@/components/private-tutors-dubai/ourTrainers';
 import SubjectsCard1 from '@/components/private-tutors-dubai/SubjectCard1';
 import IgniteAchievements from '@/components/private-tutors-dubai/igniteAchivement';
-import Blog from "@/components/homeCopy/Blog";
+import Blog from "@/components/private-tutors-dubai/Blog";
 import UpsSection from '@/components/private-tutors-dubai/UspsSection';
 import Accordion from '@/components/private-tutors-dubai/accordian';
 import FAQSection from '@/components/private-tutors-dubai/FaqSection';

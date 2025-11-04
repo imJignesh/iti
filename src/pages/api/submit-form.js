@@ -5,8 +5,8 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: 'Method Not Allowed' });
     }
 
-    // 💡 NEW: Destructure the 'formType' field from the request body
-    const { name, email, phone, school, message, pageinfo, formType } = req.body;
+    // 💡 NEW: Destructure the 'formType' and 'curriculum' fields from the request body
+    const { name, email, phone, school, message, pageinfo, formType, curriculum } = req.body;
 
     // --- 1. DETERMINE THE CURRENT PAGE PATH/SLUG ---
     const urlMatch = pageinfo ? pageinfo.split(' | ')[0].replace('URL: ', '').toLowerCase() : '';
@@ -19,13 +19,24 @@ export default async function handler(req, res) {
         path = '';
     }
 
-    // --- 2. CONFIGURATION: DEFINE ALL 5 FORMS BY THEIR SLUGS/TYPE AND ALIASES ---
+    // --- 2. CONFIGURATION: DEFINE ALL 5 FORMS BY THEIR SLUGS/TYPE, ALIASES, AND REDIRECT URLS ---
     const FORM_CONFIGS = [
         {
+            type: 'POPUP_FORM', // Unique identifier passed from the frontend
+            slugs: [],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/popupform/formperma/cGgm_RXPoyqKpSDvZhp5unQZcl05haUEI_sVxSNGcXA/htmlRecords/submit',
+            fieldMap: {
+                // Map API fields (from request body) to Zoho field names
+                name: 'SingleLine',
+                email: 'Email',
+                phone: 'PhoneNumber_countrycode',
+                curriculum: 'Dropdown',
+            },
+            redirectUrl: '/thank-you-popup', // <-- Unique thank-you page for popup
+        },
+        {
             // --- FORM 1: BLOG SIDEBAR FORM (Uses explicit type match) ---
-            // Set the 'type' to match the value passed from the front end.
             type: 'BLOG_SIDEBAR',
-            // The 'slugs' array is not used for this config, but kept for structure.
             slugs: [],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/BlogDetailPage/formperma/mgvhc7pg0i_9ypjsyAhQqnD4vnIuZusObkrMNZ5f6yk/htmlRecords/submit',
             fieldMap: {
@@ -35,7 +46,8 @@ export default async function handler(req, res) {
                 school: 'SingleLine1',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
-            }
+            },
+            redirectUrl: '/thank-you-blog', // <-- Unique thank-you page for blog sidebar
         },
         {
             type: 'Organic_Curriculum', // Optional type for completeness
@@ -58,7 +70,8 @@ export default async function handler(req, res) {
                 school: 'SingleLine1',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
-            }
+            },
+            redirectUrl: '/thank-you-curriculum', // <-- Unique thank-you page for curriculum pages
         },
         {
             type: 'Organic_Subject', // Optional type for completeness
@@ -84,9 +97,10 @@ export default async function handler(req, res) {
                 school: 'SingleLine1',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
-            }
+            },
+            redirectUrl: '/thank-you-subject', // <-- Unique thank-you page for subject pages
         },
-
+        // You would add other forms here...
     ];
     // -----------------------------------------------------------------
 
@@ -95,7 +109,7 @@ export default async function handler(req, res) {
     let submittedFormConfig;
 
     if (formType) {
-        // 1. Prioritize explicit type matching (e.g., for pages without a unique URL prefix)
+        // 1. Prioritize explicit type matching
         submittedFormConfig = FORM_CONFIGS.find(config => config.type === formType);
     }
 
@@ -111,17 +125,26 @@ export default async function handler(req, res) {
         return res.status(400).json({ success: false, message: `Invalid form source. Type '${formType}' or Path '${path}' not mapped to any configuration.` });
     }
 
-    const { zohoUrl, fieldMap } = submittedFormConfig;
+    // Destructure redirectUrl from the matched configuration
+    const { zohoUrl, fieldMap, redirectUrl } = submittedFormConfig;
 
     // --- 4. BUILD THE DYNAMIC ZOHO PAYLOAD ---
     const zohoPayload = new URLSearchParams();
 
-    // ... (rest of the payload building logic is unchanged)
     // Map the received data fields to Zoho's required field names (aliases)
     zohoPayload.append(fieldMap.name, name || '');
     zohoPayload.append(fieldMap.email, email || '');
     zohoPayload.append(fieldMap.phone, phone || '');
-    zohoPayload.append(fieldMap.school, school || '');
+
+    // The school field is only defined for BLOG_SIDEBAR, Organic_Curriculum, and Organic_Subject
+    if (fieldMap.school) {
+        zohoPayload.append(fieldMap.school, school || '');
+    }
+
+    // The curriculum field is only defined for POPUP_FORM
+    if (curriculum && fieldMap.curriculum) {
+        zohoPayload.append(fieldMap.curriculum, curriculum);
+    }
 
     // Check if the form configuration has a message field before appending
     if (fieldMap.message) {
@@ -144,7 +167,12 @@ export default async function handler(req, res) {
         });
 
         if (zohoResponse.status === 200 || zohoResponse.status === 302) {
-            return res.status(200).json({ success: true, message: 'Form submitted successfully to Zoho.' });
+            // Return the dynamically determined redirect URL
+            return res.status(200).json({
+                success: true,
+                message: 'Form submitted successfully to Zoho.',
+                redirectUrl: redirectUrl // <-- This is the dynamic URL
+            });
         } else {
             const zohoErrorText = await zohoResponse.text();
             console.error('Zoho submission failed.', { status: zohoResponse.status, response: zohoErrorText });

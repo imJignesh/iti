@@ -164,6 +164,20 @@ export default function Trainers() {
 
   const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 
+  // Handlers for SEE MORE and SEE LESS
+  const handleSeeMore = () => {
+    setShowAll(true);
+  };
+
+  const handleSeeLess = () => {
+    setShowAll(false);
+    // Optional: Scroll to the top of the grid when seeing less
+    if (trainersGridRef.current) {
+      trainersGridRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   // The new global container class is 'trainers-global-container'
   const containerClass = 'trainers-global-container';
 
@@ -356,6 +370,9 @@ export default function Trainers() {
             cursor: pointer;
             transition: transform 0.3s ease, color 0.3s ease;
             z-index: 1;
+            /* Added for spacing the button */
+            margin-top: 20px;
+            margin-bottom: 50px;
           }
 
           .${containerClass} .trainersSection .trainersSeeMore::before {
@@ -389,6 +406,56 @@ export default function Trainers() {
             color: var(--black-color);
             transform: scale(1.05);
           }
+
+          /* Style for SEE LESS to use the same look */
+          .${containerClass} .trainersSection .trainersSeeLess {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 5px 40px;
+            border-radius: 40px;
+            border: 3px solid transparent;
+            background-color: var(--white-color);
+            background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, #e7f6ff, var(--border-color)) border-box; /* Slight gradient variation for visual difference */
+            color: var(--blue-color);
+            font-size: 1vw;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+            z-index: 1;
+            margin-top: 20px;
+            margin-bottom: 50px;
+          }
+          
+          .${containerClass} .trainersSection .trainersSeeLess::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(
+              to right,
+              transparent,
+              #e7f6ff 60%,
+              var(--border-color) 85%,
+              var(--border-color)
+            );
+            z-index: -1;
+            transition: transform 0.6s ease-in-out;
+          }
+
+          .${containerClass} .trainersSection .trainersSeeLess:hover::before {
+            transform: translateX(-50%);
+          }
+          
+          .${containerClass} .trainersSection .trainersSeeLess:hover {
+            color: var(--black-color);
+            transform: scale(1.05);
+          }
+
 
           .${containerClass} .trainersSection .trainersPagination {
             margin-top: 32px;
@@ -534,7 +601,8 @@ export default function Trainers() {
 
             .${containerClass} .trainersSection .trainerName,
             .${containerClass} .trainersSection .trainerExp,
-            .${containerClass} .trainersSection .trainersSeeMore {
+            .${containerClass} .trainersSection .trainersSeeMore,
+            .${containerClass} .trainersSection .trainersSeeLess { /* Added trainersSeeLess */
               font-size: 1rem;
             }
 
@@ -654,13 +722,23 @@ export default function Trainers() {
                   ))}
                 </div>
 
-                {trainers.length > 10 && !showAll && (
-                  <button
-                    onClick={() => setShowAll(true)}
-                    className="trainersSeeMore"
-                  >
-                    SEE MORE
-                  </button>
+                {/* Conditional rendering for SEE MORE/SEE LESS */}
+                {trainers.length > 10 && (
+                  !showAll ? (
+                    <button
+                      onClick={handleSeeMore}
+                      className="trainersSeeMore"
+                    >
+                      SEE MORE
+                    </button>
+                  ) : (
+                    <button
+                      onClick={handleSeeLess}
+                      className="trainersSeeLess"
+                    >
+                      SEE LESS
+                    </button>
+                  )
                 )}
               </>
             )}

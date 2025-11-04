@@ -11,6 +11,7 @@ import {
   EffectCoverflow,
   Scrollbar,
   Mousewheel,
+  Autoplay,
 } from "swiper/modules";
 
 
@@ -205,7 +206,7 @@ export default function Testimonial({ }) {
 
         <div className="testimonialSliderWrap">
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             loop={true}
             spaceBetween={20}
             navigation={{
@@ -215,6 +216,10 @@ export default function Testimonial({ }) {
             pagination={{
               clickable: true,
               el: ".testimonialPagination",
+            }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
             }}
             breakpoints={{
               0: { slidesPerView: 2, slidesPerGroup: 2 },

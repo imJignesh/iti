@@ -1,8 +1,9 @@
 /* Base styles for all screen sizes */
 
-.blog-detail-container{
+.blog-detail-container {
     margin-top: 4vw;
 }
+
 h1.main-title {
     font-weight: 700 !important;
     line-height: 1;
@@ -63,7 +64,7 @@ h1.main-title {
 .post-content p {
     color: #161616;
     font-weight: 500;
-    font-size: 21px;
+    font-size: 16px;
 }
 
 /* Sticky sidebar styling using native CSS */
@@ -168,6 +169,7 @@ h1.main-title {
     margin-bottom: 1.2vw;
     flex: 1;
 }
+
 .form-group label {
     font-size: 0.8vw;
     color: #1f2d61;
@@ -217,23 +219,23 @@ h1.main-title {
     padding: 0.5vw 1.2vw;
 }
 
-.submit-btn.blog-submit-btn{
+.submit-btn.blog-submit-btn {
     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     gap: 8px;
-     background: linear-gradient(90deg, #0d1b6a, #4c84d3);
-     color: #fff;
-     font-weight: bold;
-     font-size: 1vw;
-     padding: 0.5vw 1.2vw;
-     border-radius: 50px;
-     border: none;
-     cursor: pointer;
-     transition: 0.3s ease;
-     flex-direction: row;
-     flex-wrap: nowrap;
-     max-width: 270px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: linear-gradient(90deg, #0d1b6a, #4c84d3);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1vw;
+    padding: 0.5vw 1.2vw;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 270px;
 }
 
 .submit-btn:hover {
@@ -254,6 +256,95 @@ h1.main-title {
     transform: translateY(-50%);
     background: linear-gradient(40deg, rgba(22, 22, 100, 1) 23%, rgba(63, 136, 186, 1) 102%);
 }
+
+.helpful-block {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.helpful-block span {
+    display: flex;
+    line-height: 3rem;
+    background: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+button.like,
+button.dislike {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+}
+
+.author-bio-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5vw;
+    /* 40px → vw */
+    max-width: 62.5vw;
+    /* 1200px → vw */
+    margin: 2vw auto;
+    font-family: Arial, sans-serif;
+}
+
+.author-bio-image img {
+    width: 10vw;
+    /* 350px → vw */
+    border-radius: 0.6vw;
+    object-fit: cover;
+}
+
+.author-bio-heading {
+    font-size: 1.4vw;
+    /* 32px */
+    font-weight: 700;
+    color: #7c819c;
+    margin-bottom: 1vw;
+}
+
+.author-bio-text {
+    line-height: 1.5;
+
+}
+
+.author-bio-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2vw;
+    padding: 1vw 1.2vw;
+    background: linear-gradient(90deg, #12235d, #1e5fb2);
+    border-radius: 3.5vw;
+    font-size: 1vw;
+    /* 28px */
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.author-bio-btn .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.4vw;
+    /* 65px */
+    height: 3.4vw;
+    background: #c7dbf9;
+    border-radius: 50%;
+    font-size: 2vw;
+    /* arrow size */
+    color: #0f2d75;
+}
+
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {

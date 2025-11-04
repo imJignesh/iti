@@ -4,7 +4,7 @@ import JsonLd from "@/components/JsonLd";
 import MovingBanner from '@/components/home/MovingBanner';
 import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/myp/accordian';
-import Blog from "@/components/homeCopy/Blog";
+import Blog from "@/components/myp/Blog";
 import CourseCard from '@/components/myp/CourseCard';
 import FAQSection from '@/components/myp/FaqSection';
 import IgniteAchievements from '@/components/myp/IgniteAchievements';

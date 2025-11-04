@@ -78,7 +78,7 @@ import "@/styles/team/team.css";
 
 // contact page css
 import "@/styles/contact/contact.css";
-import "@/styles/DelayedPopup.module.css";
+import "@/styles/DelayedPopup.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
@@ -100,7 +100,7 @@ export default function MyApp({ Component, pageProps }) {
                 <Header setHeaderHeight={setHeaderHeight} />
                 <Component {...pageProps} headerHeight={headerHeight} />
                 <Footer />
-                {/* <DelayedPopup /> */}
+                <DelayedPopup />
             </LocomotiveScrollProvider>
         </>
     );

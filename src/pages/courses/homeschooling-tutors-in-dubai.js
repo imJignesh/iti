@@ -11,7 +11,7 @@ import LifeAtIgniteCarousel from '@/components/homeSchooling/LifeAtIgniteCarouse
 import MarqueeBanner from '@/components/homeSchooling/MarqueeBanner';
 import HomeschoolingMindset from '@/components/homeSchooling/mindset';
 import Accordion from '@/components/homeSchooling/accrodian';
-import Blog from "@/components/homeCopy/Blog";
+import Blog from "@/components/homeSchooling/Blog";
 import ReviewsSection from '@/components/homeSchooling/ReviewsSection';
 import StudentAchievements from '@/components/ibdp/StudentAchivement';
 

@@ -17,9 +17,9 @@ const Footer = () => {
         data-scroll-repeat="true"
         style={{ animationDelay: "0.1s" }}
       >
-        <div className={styles.footerContactRow}>
+        {/* <div className={styles.footerContactRow}>
           <span className="SubHeading">CONTACT US</span>
-        </div>
+        </div> */}
         <h2 className={styles.footerTitle}>
           REVOLUTIONIZING THE WAY STUDENTS LEARN
         </h2>
@@ -49,6 +49,18 @@ const Footer = () => {
           >
             <div className={styles.footerDesc}>
               Stay updated with the latest study tips, exam strategies, & academic insights. Join our mailing list & fuel your journey to success.
+            </div>
+            <div className={styles.socialmediafooter}>
+              <a href="https://www.facebook.com/ignitetraininginstitute" target="_blank" rel="noopener noreferrer">
+                <img src="/images/fb-footer.png" alt="Facebook" width={36} height={36} />
+              </a>
+              <a href="https://www.instagram.com/ignitetraininginstitute/?hl=en" target="_blank" rel="noopener noreferrer">
+                <img src="/images/insta-footer.png" alt="Instagram" width={36} height={36} />
+              </a>
+              <a href="https://www.linkedin.com/company/ignite-training-institute" target="_blank" rel="noopener noreferrer">
+                <img src="/images/linkedin-footer.png" alt="LinkedIn" width={36} height={36} />
+              </a>
+
             </div>
             <div className={styles.footerNewsletterWrap}>
               <div className={styles.footerNewsletterLabel}>SUBSCRIBE TO OUR NEWSLETTER</div>

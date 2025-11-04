@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import MovingBanner from '@/components/home/MovingBanner';
 import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/igcse/accordian';
-import Blog from "@/components/homeCopy/Blog";
+import Blog from "@/components/igcse/Blog";
 import CourseCard from '@/components/igcse/CourseCard';
 import FAQSection from '@/components/igcse/FaqSection';
 import IgniteAchievements from '@/components/igcse/IgniteAchievements';

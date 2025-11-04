@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 import Accordion from '@/components/act/accrodian';
-import Blog from "@/components/homeCopy/Blog";
+import Blog from "@/components/act/Blog";
 import CourseCard from '@/components/act/CourseCard';
 import FAQSection from '@/components/act/FaqSection';
 import IgniteAchievements from '@/components/act/IgniteAchievements';

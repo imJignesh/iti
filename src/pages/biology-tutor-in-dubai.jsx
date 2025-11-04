@@ -201,9 +201,9 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
                     <BiologyTutorsUsps />
                 </section>
 
-                <section data-scroll-section>
+                {/* <section data-scroll-section>
                     <BiologyTutorsLifeAtIgniteCarousel />
-                </section>
+                </section> */}
 
                 <section data-scroll-section>
                     <BiologyTutorsFAQSection />

@@ -4,7 +4,7 @@ import JsonLd from "@/components/JsonLd";
 import MovingBanner from '@/components/home/MovingBanner';
 import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/bc/accordian';
-import Blog from "@/components/homeCopy/Blog";
+import Blog from "@/components/bc/Blog";
 import CourseCard from '@/components/bc/CourseCard';
 import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
 import FAQSection from '@/components/bc/FaqSection';

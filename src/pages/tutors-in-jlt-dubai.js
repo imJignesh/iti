@@ -11,7 +11,7 @@ import InfoCard from '@/components/tutors-jlt-dubai/infoCard';
 import OurTrainers from '@/components/tutors-jlt-dubai/ourTrainers';
 import SubjectsCard1 from '@/components/tutors-jlt-dubai/SubjectCard1';
 import IgniteAchievements from '@/components/tutors-jlt-dubai/igniteAchivement';
-import Blog from "@/components/homeCopy/Blog";
+import Blog from "@/components/tutors-jlt-dubai/Blog";
 import UpsSection from '@/components/tutors-jlt-dubai/UspsSection';
 import Accordion from '@/components/tutors-jlt-dubai/accordian';
 import FAQSection from '@/components/tutors-jlt-dubai/FaqSection';

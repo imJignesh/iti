@@ -11,7 +11,7 @@ import InfoCard from '@/components/tutors/infoCard';
 import OurTrainers from '@/components/tutors/ourTrainers';
 import SubjectsCard1 from '@/components/tutors/SubjectCard1';
 import IgniteAchievements from '@/components/tutors/igniteAchivement';
-import Blog from "@/components/homeCopy/Blog";
+import Blog from "@/components/tutors/Blog";
 import UpsSection from '@/components/tutors/UspsSection';
 import Accordion from '@/components/tutors/accordian';
 import FAQSection from '@/components/tutors/FaqSection';

@@ -114,15 +114,21 @@ export default function InfoCard() {
         },
         body: JSON.stringify(dataToSend), // ✅ CORRECT: Sending the object that includes pageinfo
       });
-      if (response.ok) {
-        setSubmissionStatus('success');
-        setFormData({ name: "", email: "", phone: "", school: "", message: "" });
+      const result = await response.json();
+      if (response.ok && result.success && result.redirectUrl) {
+
+        window.location.href = result.redirectUrl;
+
       } else {
+        // Fallback for API success: false or missing redirectUrl
+        console.error('Submission failed via API:', result.message || 'Unknown error');
         setSubmissionStatus('error');
       }
     } catch (error) {
+      console.error('API call failed:', error);
       setSubmissionStatus('error');
     } finally {
+      // Note: setLoading(false) only runs if the redirection fails
       setLoading(false);
     }
   };
