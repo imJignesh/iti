@@ -469,7 +469,7 @@ export default function SubjectsCard() {
             flex-direction: column;
             align-items: center;
             gap: 32px;
-            padding: 41px 20px 85px 20px;
+            padding: 41px 0px 85px 0px;
           }
           
           .subjectLeft {
@@ -522,7 +522,7 @@ export default function SubjectsCard() {
         @media (max-width: 767px) {
           .subjectBubble {
             padding: 8px 15px 12px 15px !important;
-            font-size: 13px !important;
+            font-size: 15px !important;
           }
           
           .fixedScrollContainer {
@@ -572,26 +572,27 @@ export default function SubjectsCard() {
 
         @media (max-width: 575px) {
           .subjectLeft {
-            min-width: auto;
+            min-width: 100%;
           }
 
           .subjectBubble {
             padding: 10px 20px !important;
             white-space: normal;
             text-align: center;
-            font-size: 12px !important;
+            font-size: 14px !important;
           }
         }
 
         @media (max-width: 420px) {
           .subjectBubble {
-            padding: 8px 20px !important;
-            font-size: 10px !important;
+            padding: 8px 5px !important;
+            font-size: 12px !important;
           }
-                 .subjectTitle {
-            width: 349px;
-            font-size: 1.2rem !important;
-            line-height: 1.4;
+          .subjectTitle {
+            width: auto;
+            font-size: 19.4px !important;
+            line-height: 23px;
+            padding:0px 10px;
           }
         }
       `}</style>
