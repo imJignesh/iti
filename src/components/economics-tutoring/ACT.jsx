@@ -30,40 +30,40 @@ const AchievementsCarousel = () => {
       scrollInstanceRef.current = null;
     };
   }, []);
-const SUBJECTLIST = [
-  {
-    counts: "01.",
-    subjectsName: "Demand & Supply",
-  },
-  {
-    counts: "02.",
-    subjectsName: "Government Intervention",
-  },
-  {
-    counts: "03.",
-    subjectsName: "Market Structure",
-  },
-  {
-    counts: "04.",
-    subjectsName: "Aggregate Demand & Aggregate Supply",
-  },
-  {
-    counts: "05.",
-    subjectsName: "Macro Economics",
-  },
-  {
-    counts: "06.",
-    subjectsName: "Demand & Supply Side Policies",
-  },
-  {
-    counts: "07.",
-    subjectsName: "Market Failure",
-  },
-  {
-    counts: "08.",
-    subjectsName: "Exchange Rate & Balance Of Payment",
-  },
-];
+  const SUBJECTLIST = [
+    {
+      counts: "01.",
+      subjectsName: "Demand & Supply",
+    },
+    {
+      counts: "02.",
+      subjectsName: "Government Intervention",
+    },
+    {
+      counts: "03.",
+      subjectsName: "Market Structure",
+    },
+    {
+      counts: "04.",
+      subjectsName: "Aggregate Demand & Aggregate Supply",
+    },
+    {
+      counts: "05.",
+      subjectsName: "Macro Economics",
+    },
+    {
+      counts: "06.",
+      subjectsName: "Demand & Supply Side Policies",
+    },
+    {
+      counts: "07.",
+      subjectsName: "Market Failure",
+    },
+    {
+      counts: "08.",
+      subjectsName: "Exchange Rate & Balance Of Payment",
+    },
+  ];
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -91,7 +91,7 @@ const SUBJECTLIST = [
             style={{ animationDelay: "0.25s" }}
           >
             <h1 className="achievementsTitle text-uppercase">
-             Explore Key Areas In The <br></br>{" "}
+              Explore Key Areas In The <br></br>{" "}
               <span className="highlight"> Economics</span> Syllabus{" "}
             </h1>
           </div>
@@ -130,7 +130,7 @@ const SUBJECTLIST = [
 
 .achievementsTitle {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 40px 0 30px;
   line-height: 1.1;
   text-transform: uppercase;

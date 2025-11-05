@@ -30,40 +30,40 @@ const AchievementsCarousel = () => {
       scrollInstanceRef.current = null;
     };
   }, []);
-const SUBJECTLIST = [
-  {
-    counts: "01.",
-    subjectsName: "Comprehension Skills",
-  },
-  {
-    counts: "02.",
-    subjectsName: "Analytical & Critical Thinking",
-  },
-  {
-    counts: "03.",
-    subjectsName: "Analytical Writing",
-  },
-  {
-    counts: "04.",
-    subjectsName: "Creative Writing",
-  },
-  {
-    counts: "05.",
-    subjectsName: "Persuasive & Logical Writing",
-  },
-  {
-    counts: "06.",
-    subjectsName: "Advance Vocabulary",
-  },
-  {
-    counts: "07.",
-    subjectsName: "Communication Skills",
-  },
-  {
-    counts: "08.",
-    subjectsName: "Advance Grammar",
-  },
-];
+  const SUBJECTLIST = [
+    {
+      counts: "01.",
+      subjectsName: "Comprehension Skills",
+    },
+    {
+      counts: "02.",
+      subjectsName: "Analytical & Critical Thinking",
+    },
+    {
+      counts: "03.",
+      subjectsName: "Analytical Writing",
+    },
+    {
+      counts: "04.",
+      subjectsName: "Creative Writing",
+    },
+    {
+      counts: "05.",
+      subjectsName: "Persuasive & Logical Writing",
+    },
+    {
+      counts: "06.",
+      subjectsName: "Advance Vocabulary",
+    },
+    {
+      counts: "07.",
+      subjectsName: "Communication Skills",
+    },
+    {
+      counts: "08.",
+      subjectsName: "Advance Grammar",
+    },
+  ];
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -91,7 +91,7 @@ const SUBJECTLIST = [
             style={{ animationDelay: "0.25s" }}
           >
             <h1 className="achievementsTitle text-uppercase">
-             Explore Key Areas In The <br></br>{" "}
+              Explore Key Areas In The <br></br>{" "}
               <span className="highlight"> English</span> Syllabus{" "}
             </h1>
           </div>
@@ -130,7 +130,7 @@ const SUBJECTLIST = [
 
 .achievementsTitle {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 40px 0 30px;
   line-height: 1.1;
   text-transform: uppercase;

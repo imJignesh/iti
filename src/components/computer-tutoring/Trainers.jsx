@@ -86,7 +86,7 @@ export default function Trainers() {
 
           .${containerClass} .trainersSection .trainersTitle {
             font-size: 1.8rem;
-            font-weight: 700;
+            font-weight: 800;
             max-width: 60%;
             margin: 40px auto;
             line-height: 1.1;
@@ -488,7 +488,7 @@ export default function Trainers() {
             </div>
 
             <h2 className="trainersTitle">
-              The Best Trainers For Your Success Journey
+              The Best <span className="highlight">Trainers</span> For Your<br />Success Journey
             </h2>
 
             {isTrainersSwiper ? (

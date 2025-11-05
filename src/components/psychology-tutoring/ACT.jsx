@@ -30,40 +30,40 @@ const AchievementsCarousel = () => {
       scrollInstanceRef.current = null;
     };
   }, []);
-const SUBJECTLIST = [
-  {
-    counts: "01.",
-    subjectsName: "Research Methods & Ethics",
-  },
-  {
-    counts: "02.",
-    subjectsName: "Biological Bases Of Behavior",
-  },
-  {
-    counts: "03.",
-    subjectsName: "Cognitive Processes",
-  },
-  {
-    counts: "04.",
-    subjectsName: "Learning & Conditioning",
-  },
-  {
-    counts: "05.",
-    subjectsName: "Developmental Psychology",
-  },
-  {
-    counts: "06.",
-    subjectsName: "Social Influence & Behaviour",
-  },
-  {
-    counts: "07.",
-    subjectsName: "Individual Differences & Abnormal Psychology",
-  },
-  {
-    counts: "08.",
-    subjectsName: "Application Of Psychology",
-  },
-];
+  const SUBJECTLIST = [
+    {
+      counts: "01.",
+      subjectsName: "Research Methods & Ethics",
+    },
+    {
+      counts: "02.",
+      subjectsName: "Biological Bases Of Behavior",
+    },
+    {
+      counts: "03.",
+      subjectsName: "Cognitive Processes",
+    },
+    {
+      counts: "04.",
+      subjectsName: "Learning & Conditioning",
+    },
+    {
+      counts: "05.",
+      subjectsName: "Developmental Psychology",
+    },
+    {
+      counts: "06.",
+      subjectsName: "Social Influence & Behaviour",
+    },
+    {
+      counts: "07.",
+      subjectsName: "Individual Differences & Abnormal Psychology",
+    },
+    {
+      counts: "08.",
+      subjectsName: "Application Of Psychology",
+    },
+  ];
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -91,7 +91,7 @@ const SUBJECTLIST = [
             style={{ animationDelay: "0.25s" }}
           >
             <h1 className="achievementsTitle text-uppercase">
-             Explore Key Areas In The <br></br>{" "}
+              Explore Key Areas In The <br></br>{" "}
               <span className="highlight"> Psychology</span> Syllabus{" "}
             </h1>
           </div>
@@ -130,7 +130,7 @@ const SUBJECTLIST = [
 
 .achievementsTitle {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 40px 0 30px;
   line-height: 1.1;
   text-transform: uppercase;

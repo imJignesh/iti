@@ -190,13 +190,7 @@ export default function Trainers() {
     <>
       <style jsx global>
         {`
-          .highlight {
-              background: linear-gradient(to right, var(--lightgreen-color), var(--green-color));
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              font-weight: 900;
-              letter-spacing: 0.04em;
-          }
+          
           /* Trainer Section - Refactored for global use with .trainers-global-container */
 
           .${containerClass} .trainersSection {
@@ -217,7 +211,7 @@ export default function Trainers() {
 
           .${containerClass} .trainersSection .trainersTitle {
             font-size: 1.8rem;
-            font-weight: 700;
+            font-weight: 800;
             max-width: 60%;
             margin: 40px auto;
             line-height: 1.1;
@@ -673,7 +667,7 @@ export default function Trainers() {
             </div>
 
             <h2 className="trainersTitle">
-              The Best <span class="highlight">Trainers</span> For Your<br />Success Journey
+              The Best <span className="highlight">Trainers</span> For Your<br />Success Journey
             </h2>
 
             {isTrainersSwiper ? (
