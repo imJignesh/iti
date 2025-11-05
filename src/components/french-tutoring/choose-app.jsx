@@ -25,15 +25,15 @@ const IBCurriculumStages = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.25s" }}
             >
-             <h2
+              <h2
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
                 style={{ animationDelay: "0.2s" }}
               >
-                Curriculum-Aligned Coaching &    
-               <span className="highlight"> Exam Prep </span>Support
+                Curriculum-Aligned Coaching &
+                <span className="highlight"> Exam Prep </span>Support
               </h2>
             </div>
           </div>
@@ -204,7 +204,7 @@ const IBCurriculumStages = () => {
 
 .achievementsTitle {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 40px 0 30px;
   line-height: 1.1;
   text-transform: uppercase;

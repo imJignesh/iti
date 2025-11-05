@@ -30,40 +30,40 @@ const AchievementsCarousel = () => {
       scrollInstanceRef.current = null;
     };
   }, []);
-const SUBJECTLIST = [
-  {
-    counts: "01.",
-    subjectsName: "Physical Chemistry",
-  },
-  {
-    counts: "02.",
-    subjectsName: "Inorganic Chemistry",
-  },
-  {
-    counts: "03.",
-    subjectsName: "Organic Chemistry",
-  },
-  {
-    counts: "04.",
-    subjectsName: "Electrochemistry",
-  },
-  {
-    counts: "05.",
-    subjectsName: "Metals & Extraction",
-  },
-  {
-    counts: "06.",
-    subjectsName: "Stoichiometry (Moles)",
-  },
-  {
-    counts: "07.",
-    subjectsName: "Polymer Chemistry",
-  },
-  {
-    counts: "08.",
-    subjectsName: "Thermochemistry",
-  },
-];
+  const SUBJECTLIST = [
+    {
+      counts: "01.",
+      subjectsName: "Physical Chemistry",
+    },
+    {
+      counts: "02.",
+      subjectsName: "Inorganic Chemistry",
+    },
+    {
+      counts: "03.",
+      subjectsName: "Organic Chemistry",
+    },
+    {
+      counts: "04.",
+      subjectsName: "Electrochemistry",
+    },
+    {
+      counts: "05.",
+      subjectsName: "Metals & Extraction",
+    },
+    {
+      counts: "06.",
+      subjectsName: "Stoichiometry (Moles)",
+    },
+    {
+      counts: "07.",
+      subjectsName: "Polymer Chemistry",
+    },
+    {
+      counts: "08.",
+      subjectsName: "Thermochemistry",
+    },
+  ];
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -91,7 +91,7 @@ const SUBJECTLIST = [
             style={{ animationDelay: "0.25s" }}
           >
             <h1 className="achievementsTitle text-uppercase">
-             Explore Key Areas In The <br></br>{" "}
+              Explore Key Areas In The <br></br>{" "}
               <span className="highlight"> English</span> Syllabus{" "}
             </h1>
           </div>
@@ -130,7 +130,7 @@ const SUBJECTLIST = [
 
 .achievementsTitle {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 40px 0 30px;
   line-height: 1.1;
   text-transform: uppercase;

@@ -115,8 +115,7 @@ const IBDP = ({ headerHeight }) => {
               >
                 <h1 className="achievementsTitle">
 
-                  Comprehensive Guidance For Every <span className="highlight">Academic</span>{" "}
-                  Milestone
+                  Comprehensive Guidance For Every Academic <span className="highlight">Milestone</span>
                 </h1>
               </div>
 

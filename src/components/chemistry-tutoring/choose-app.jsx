@@ -25,15 +25,15 @@ const IBCurriculumStages = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.25s" }}
             >
-             <h2
+              <h2
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
                 style={{ animationDelay: "0.2s" }}
               >
-                Curriculum-Aligned Coaching &  
-               <span className="highlight"> Test Prep </span>Programs
+                Curriculum-Aligned Coaching &
+                <span className="highlight"> Test Prep </span>Programs
               </h2>
             </div>
           </div>
@@ -146,7 +146,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>ACT Chemistry <br/>Tutors</h1>
+                      <h1>ACT Chemistry <br />Tutors</h1>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -157,7 +157,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>AP Chemistry <br/>Tutors</h1>
+                      <h1>AP Chemistry <br />Tutors</h1>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -204,7 +204,7 @@ const IBCurriculumStages = () => {
 
 .achievementsTitle {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 40px 0 30px;
   line-height: 1.1;
   text-transform: uppercase;

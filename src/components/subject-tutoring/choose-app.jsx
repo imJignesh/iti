@@ -25,7 +25,7 @@ const IBCurriculumStages = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.25s" }}
             >
-             <h2
+              <h2
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
@@ -33,7 +33,7 @@ const IBCurriculumStages = () => {
                 style={{ animationDelay: "0.2s" }}
               >
                 LOREM IPSUM DOLOR SIT AMET,
-               <span className="highlight"> CONSECTETUR </span>ADIPISCING
+                <span className="highlight"> CONSECTETUR </span>ADIPISCING
               </h2>
             </div>
           </div>
@@ -204,7 +204,7 @@ const IBCurriculumStages = () => {
 
 .achievementsTitle {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 40px 0 30px;
   line-height: 1.1;
   text-transform: uppercase;

@@ -84,55 +84,21 @@ export default function IgniteAchievements() {
                 </div>
 
                 {/* Main Title */}
-                <h2
-                  className="fw-bold fade-in-section text-uppercase"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
-                  style={{
-                    background: "#19245E",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    animationDelay: "0.35s",
-                    fontSize: "2rem",
-                    margin: 0, // ✅ removes the margin
-                  }}
-                >
-                  Milestones That Showcase Our
-                </h2>
 
                 <h2
-                  className="fw-bold fade-in-section text-uppercase"
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat
-                  style={{
-                    background: "linear-gradient(90deg, #00A491, #003E37)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    animationDelay: "0.4s",
-                    fontSize: "2rem",
-                    margin: 0, // ✅ removes the margin
-                  }}
+                  data-scroll-repeat="true"
+                  className="fade-in-section testTitle text-uppercase margin-0"
+                  style={{ animationDelay: "0.2s" }}
                 >
-                  Legacy{" "}
-                  <span
-                    style={{
-                      background: "#19245E",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      animationDelay: "0.4s",
-                      fontSize: "2rem",
-                      margin: 0, // ✅ removes margin inside span (not needed, but safe)
-                    }}
-                  >
-                    Of Learning
-                  </span>
+                  Milestones That Showcase Our<span className="highlight"> Legacy </span>
+                  Of Learning
                 </h2>
 
 
                 {/* Subtitle */}
-                <p className="lh-sm mb-4 fade-in-section"
+                <p className="lh-sm mb-4 fade-in-section w-80"
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat
@@ -322,7 +288,11 @@ export default function IgniteAchievements() {
           opacity: 1;
           transform: translateY(0);
         }
-
+        .margin-0 {
+          margin: 0;
+        }
+          .testTitle,.w-80{
+          max-width: 80%;}
         /* Color Classes */
         .teal-text {
           background: linear-gradient(90deg, #00A491, #003E37);
@@ -496,6 +466,10 @@ export default function IgniteAchievements() {
     margin-left: 1rem !important;
   }
 }
+  @media screen and (min-width: 980px) and (max-width: 1366px) {
+   .testTitle,.w-80{
+          max-width: 100%;}
+  }
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
    .desktop-stats-container {
           display: flex;

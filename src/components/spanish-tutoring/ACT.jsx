@@ -30,40 +30,40 @@ const AchievementsCarousel = () => {
       scrollInstanceRef.current = null;
     };
   }, []);
-const SUBJECTLIST = [
-  {
-    counts: "01.",
-    subjectsName: "Listening & Speaking",
-  },
-  {
-    counts: "02.",
-    subjectsName: "Reading & Writing",
-  },
-  {
-    counts: "03.",
-    subjectsName: "Everyday Vocabulary",
-  },
-  {
-    counts: "04.",
-    subjectsName: "Grammar Fundamentals",
-  },
-  {
-    counts: "05.",
-    subjectsName: "Extensive Learning Material",
-  },
-  {
-    counts: "06.",
-    subjectsName: "Everyday Spanish",
-  },
-  {
-    counts: "07.",
-    subjectsName: "Culture & Experiences",
-  },
-  {
-    counts: "08.",
-    subjectsName: "Global Issues",
-  },
-];
+  const SUBJECTLIST = [
+    {
+      counts: "01.",
+      subjectsName: "Listening & Speaking",
+    },
+    {
+      counts: "02.",
+      subjectsName: "Reading & Writing",
+    },
+    {
+      counts: "03.",
+      subjectsName: "Everyday Vocabulary",
+    },
+    {
+      counts: "04.",
+      subjectsName: "Grammar Fundamentals",
+    },
+    {
+      counts: "05.",
+      subjectsName: "Extensive Learning Material",
+    },
+    {
+      counts: "06.",
+      subjectsName: "Everyday Spanish",
+    },
+    {
+      counts: "07.",
+      subjectsName: "Culture & Experiences",
+    },
+    {
+      counts: "08.",
+      subjectsName: "Global Issues",
+    },
+  ];
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -91,7 +91,7 @@ const SUBJECTLIST = [
             style={{ animationDelay: "0.25s" }}
           >
             <h1 className="achievementsTitle text-uppercase">
-             Explore Key Areas In The <br></br>{" "}
+              Explore Key Areas In The <br></br>{" "}
               <span className="highlight"> Spanish</span> Syllabus{" "}
             </h1>
           </div>
@@ -130,7 +130,7 @@ const SUBJECTLIST = [
 
 .achievementsTitle {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 40px 0 30px;
   line-height: 1.1;
   text-transform: uppercase;

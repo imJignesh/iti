@@ -147,6 +147,7 @@ const TrainerCard = ({ trainer }) => (
 
 export default function Trainers() {
   const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
+  // Replaced static setShowAll(true) with setShowAll(!showAll) for toggling
   const [showAll, setShowAll] = useState(false);
   const trainersGridRef = useRef(null);
   const navPrevRef = useRef(null);
@@ -162,6 +163,7 @@ export default function Trainers() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Controls which trainers are displayed: all or the first 10
   const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 
   // The new global container class is 'trainers-global-container'
@@ -191,7 +193,7 @@ export default function Trainers() {
 
           .${containerClass} .trainersSection .trainersTitle {
             font-size: 1.8rem;
-            font-weight: 700;
+            font-weight: 800;
             max-width: 60%;
             margin: 40px auto;
             line-height: 1.1;
@@ -593,7 +595,7 @@ export default function Trainers() {
             </div>
 
             <h2 className="trainersTitle">
-              The Best IGCSE Trainers For Your Success Journey
+              The Best IGCSE <span className="highlight">Trainers</span> For Your<br />Success Journey
             </h2>
 
             {isTrainersSwiper ? (
@@ -654,12 +656,13 @@ export default function Trainers() {
                   ))}
                 </div>
 
-                {trainers.length > 10 && !showAll && (
+                {/* Combined SEE MORE / SEE LESS button logic */}
+                {trainers.length > 10 && (
                   <button
-                    onClick={() => setShowAll(true)}
+                    onClick={() => setShowAll(!showAll)}
                     className="trainersSeeMore"
                   >
-                    SEE MORE
+                    {showAll ? "SEE LESS" : "SEE MORE"}
                   </button>
                 )}
               </>
