@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
 export default function Accordion() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); 
 
   return (
     <div className="card mx-auto">
