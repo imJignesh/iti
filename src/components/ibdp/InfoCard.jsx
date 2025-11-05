@@ -1244,7 +1244,7 @@ margin-block: 30px !important;
          }
         @media (max-width: 575px) {
   .cust-text {
-    padding: 8px 8px 8px 8px !important;
+    padding: 8px 15px 8px 15px !important;
     border: none !important;
     -webkit-transition: opacity .3s ease !important;
     -moz-transition: opacity.3s ease!important;
