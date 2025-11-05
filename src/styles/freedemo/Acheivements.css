@@ -348,10 +348,12 @@
   }
 
   .achievementsTitle {
-    font-size: 1.5em;
+    font-size: 20.4px;
+    line-height: 23px;
+    margin: 20px 0;
   }
 
   .SubHeading {
-    font-size: 15px
+    font-size: 15px;
   }
 }

@@ -165,7 +165,7 @@ section.post-detail-section {
 
 @media (max-width: 1100px) {
     .innerpage .blogSection .blogTitle {
-        font-size: 1.4rem;
+        font-size: 20.4px;
     }
 
     .innerpage .blogSection .blogSubtitle {
@@ -259,6 +259,7 @@ section.post-detail-section {
 
     .innerpage .blogSection .blogImg {
         width: 100%;
-        height: 200px;
+        max-width: 100%;
+        height: auto;
     }
 }

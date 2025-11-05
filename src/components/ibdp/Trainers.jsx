@@ -550,11 +550,12 @@ export default function Trainers() {
             }
 
             .${containerClass} .trainersSection .trainersSubheading {
-              font-size: 16px;
+              font-size: 15px;
             }
 
             .${containerClass} .trainersSection .trainersTitle {
-              font-size: 15px;
+              font-size: 20.4px;
+              line-height: 23px;
               max-width: 100%;
               margin: 20px 0;
             }

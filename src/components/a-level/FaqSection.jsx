@@ -105,7 +105,7 @@ const FAQSection = () => {
                 color: "#19245E",
                 fontWeight: 800,
                 marginBottom: "20px",
-                fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem"
+                fontSize: isHighDpi ? "1.75rem" : isMobile ? "1.2rem" : "1.8rem"
               }}
             >
               Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
@@ -254,7 +254,7 @@ const FAQSection = () => {
 }
 @media (max-width: 575px) {
   .SubHeading {
-    font-size: 20px;
+    font-size: 0.9rem;
     padding: 0 22px; /* keep icons same size */
   }
     p{

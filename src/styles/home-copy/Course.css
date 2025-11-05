@@ -510,7 +510,9 @@
   }
 
   .homeCopy .courseSection .courseHeadings .courseTitle {
-    font-size: 16px;
+    font-size: 20.4px;
+    line-height: 23px;
+    margin: 20px 0px;
   }
 
   .homeCopy .courseSection .courseHeadings p {

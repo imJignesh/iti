@@ -542,7 +542,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
           }
 
           .ignite-main-title {
-            font-size: 20.4px;
+            font-size: 1.2rem;
             font-weight: 800;
             color: #233467;
             margin: 0 0 25px 0;

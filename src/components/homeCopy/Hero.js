@@ -1,10 +1,70 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import Image from "next/image";
 import Image from '@/components/CustomImageWrapper';
+
+// --- 1. Custom Hook for Device Detection ---
+/**
+ * Detects if the current device is considered 'mobile' based on a breakpoint.
+ * Uses client-side window object check to avoid hydration issues during SSR.
+ * @param {number} breakpoint - The max width (in pixels) for a device to be considered mobile (default: 992px).
+ * @returns {boolean | undefined} - true if mobile, false if desktop/tablet, undefined during initial SSR.
+ */
+const useDeviceCheck = (breakpoint = 992) => {
+    // Start as undefined to avoid hydration mismatch with Next.js SSR
+    const [isMobile, setIsMobile] = useState(undefined);
+
+    useEffect(() => {
+        // Function to determine if the screen width is less than the breakpoint
+        const checkDevice = () => {
+            // Only run if 'window' is defined (i.e., running on the client)
+            if (typeof window !== 'undefined') {
+                setIsMobile(window.innerWidth < breakpoint);
+            }
+        };
+
+        // Run check initially
+        checkDevice();
+
+        // Add event listener for window resizing
+        window.addEventListener('resize', checkDevice);
+
+        // Cleanup the event listener
+        return () => window.removeEventListener('resize', checkDevice);
+    }, [breakpoint]);
+
+    return isMobile;
+};
+// --- End of useDeviceCheck Hook ---
 
 // No need for useRef or useEffect for scroll here.
 // The data-scroll-container is now handled by the provider
 const Hero = () => {
+    // Use the custom hook to determine the device
+    const isMobile = useDeviceCheck();
+    
+    // Function to handle the conditional title rendering
+    const renderTitle = () => {
+        // If isMobile is undefined (during initial SSR/load), render the desktop title as the default.
+        if (isMobile === undefined) {
+            return (
+                <h1 className="heroTitle-desktop">
+                    Ignite Your Path To Top <span className="highlight">Academic</span> Performance
+                </h1>
+            );
+        }
+
+        // Client-side conditional rendering: render only the appropriate title
+        return isMobile ? (
+            <h1 className="heroTitle-mobile">
+                Empower Your Academic Goals With <span className="highlight">Ignite’s</span> Tutors
+            </h1>
+        ) : (
+            <h1 className="heroTitle-desktop">
+                Ignite Your Path To Top <span className="highlight">Academic</span> Performance
+            </h1>
+        );
+    };
+
     return (
         // The data-scroll-section is still needed here
         <section className="hero revealClipRightToLeft" data-scroll-section>
@@ -22,6 +82,8 @@ const Hero = () => {
                             >
                                 <h3 className="SubHeading">BEST TUTORS IN UAE</h3>
                             </div>
+                            
+                            {/* --- Conditionally Rendered Hero Title --- */}
                             <div
                                 data-scroll
                                 data-scroll-class="is-inview"
@@ -29,14 +91,10 @@ const Hero = () => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.6s" }}
                             >
-                                <h1 className="heroTitle-desktop">
-                                    Ignite Your Path To Top <span className="highlight">Academic</span> Performance
-                                </h1>
-                                <h1 className="heroTitle-mobile">
-                                    Empower Your Academic Goals With <span className="highlight">Ignite’s</span> Tutors
-
-                                </h1>
+                                {renderTitle()}
                             </div>
+                            {/* ---------------------------------------- */}
+                            
                             <div
                                 data-scroll
                                 data-scroll-class="is-inview"

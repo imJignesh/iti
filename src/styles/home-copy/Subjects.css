@@ -287,7 +287,8 @@
 
   .homeCopy .subjectSection .subjectTitle,
   .homeCopy .subjectSection .subjectTitle .subjectHighlight {
-    font-size: 16px;
+    font-size: 20.4px;
+    line-height: 23px;
   }
 
   .homeCopy .subjectSection .subjectDesc {

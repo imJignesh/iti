@@ -33,7 +33,7 @@ export default function IBCurriculumStages() {
               className="fade-in-section testTitle"
               style={{ animationDelay: "0.2s" }}
             >
-              Step-By-Step Guidance Through The <br />{" "}
+              Step-By-Step Guidance Through The{" "}
               <span className="highlight">IB Curriculum</span>
             </h2>
           </div>

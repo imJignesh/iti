@@ -140,7 +140,7 @@
   }
 
   .homeCopy .blogSection .blogSubtitle {
-    font-size: 1rem;
+    font-size: 14px;
   }
 
   .homeCopy .blogSection .blogAllBtn {
@@ -164,8 +164,8 @@
   .homeCopy .blogSection .blogTitle {
     max-width: 500px;
     margin: 20px auto;
-    font-size: 18px !important;
-    line-height: 1.4 !important;
+    font-size: 20.4px !important;
+    line-height: 23px !important;
   }
 
   .homeCopy .blogSection .blogAllBtn {

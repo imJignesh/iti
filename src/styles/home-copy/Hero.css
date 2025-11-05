@@ -347,15 +347,15 @@
     display: block;
     margin: 0 auto;
     max-width: 90vw;
-    line-height: 1.2;
-    font-size: 1.4rem;
+    line-height: 23px;
+    font-size: 20.4px;
     border-bottom: 1px solid #CCCCCC;
     padding: 20px 0 20px 0;
 
   }
 
   .homeCopy .hero .heroLeft .heroTitle-mobile span {
-    display: block;
+    display: inline-block;
   }
 
   .homeCopy .hero .heroLeft .heroParagraph {
@@ -477,11 +477,11 @@
   }
 
   .homeCopy .hero .heroMain h3 {
-    font-size: 15px;
+    font-size: 0.9rem;
   }
 
   .homeCopy .hero .heroLeft .heroTitle-mobile {
-    font-size: 16px;
+    font-size: 1.2rem;
   }
 
   .homeCopy .hero .heroLeft .heroTitle-mobile span {

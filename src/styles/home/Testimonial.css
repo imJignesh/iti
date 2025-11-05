@@ -334,7 +334,8 @@
   }
 
   .testimonialSection .testimonialTitle {
-    font-size: 1.4rem;
+    font-size: 20.4px;
+    line-height: 23px;
   }
 
   .testimonialSection .googlelogo,
@@ -389,7 +390,10 @@
   .testimonialSection .testimonialCardText {
     padding: 15px;
   }
-
+  .testimonialSection .testimonialCard{
+    min-height: 70vw;
+    max-width: 70vw;
+  }
   .testimonialSection .testimonialText {
     font-size: 0.8rem;
     line-height: 1.6;

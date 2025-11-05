@@ -437,12 +437,12 @@ export default function SubjectsCard() {
 
         @media (max-width: 1199px) {
           .subjectLeft span {
-            font-size: 18px !important;
+            font-size: 15px !important;
           }
 
           .subjectTitle {
             width: 358px;
-            font-size: 18px !important;
+            font-size: 20.4px !important;
             line-height: 1.4;
           }
 
@@ -590,7 +590,7 @@ export default function SubjectsCard() {
           }
                  .subjectTitle {
             width: 349px;
-            font-size: 18px !important;
+            font-size: 1.2rem !important;
             line-height: 1.4;
           }
         }

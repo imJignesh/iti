@@ -44,7 +44,7 @@ export default function IgniteAchievements() {
             style={{ animationDelay: "0.2s" }}
           >
 
-            Milestones That Showcase Our  <br /> <span className="highlight"> Legacy{" "}</span>
+            Milestones That Showcase Our <span className="highlight"> Legacy{" "} </span>
             Of Learning
           </h2>
 
