@@ -60,6 +60,11 @@ body a {
   }
 }
 
+.fade-in-section {
+  opacity: 1 !important;
+  transform: translatey(0px) !important;
+}
+
 .SubHeading {
   font-size: 28px;
   font-weight: 600;

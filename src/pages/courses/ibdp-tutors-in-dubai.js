@@ -15,43 +15,11 @@ import ReviewsSection from '@/components/ibdp/ReviewsSection';
 import StudentAchievements from '@/components/ibdp/StudentAchivement';
 import SubjectsCard from '@/components/ibdp/SubjectCard';
 import UspsSection from '@/components/ibdp/UspsSection';
-import { useEffect, useRef } from 'react';
+// Removed: { useEffect, useRef }
 import SEO from "@/components/SEO";
 
-// 1. ACCEPT the headerHeight prop
+// The local Locomotive Scroll initialization logic has been entirely removed.
 const IBDP = ({ headerHeight }) => {
-  const scrollRef = useRef(null);
-  const scrollInstanceRef = useRef(null);
-
-  useEffect(() => {
-    let scroll;
-
-    const initScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      if (!scrollRef.current) return;
-
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1,
-        // optional:
-        getDirection: true,
-        getSpeed: true,
-        multiplier: 1,
-      });
-
-      scrollInstanceRef.current = scroll;
-    };
-
-    if (typeof window !== "undefined") {
-      initScroll();
-    }
-
-    return () => {
-      scrollInstanceRef.current?.destroy();
-      scrollInstanceRef.current = null;
-    };
-  }, []);
 
   return (
     <>
@@ -60,10 +28,10 @@ const IBDP = ({ headerHeight }) => {
         description="Ace your training & exam preparation with IBDP tutors in Dubai. Our specialized IB Diploma trainers help you achieve top scores with the right guidance"
       />
       <div
-        ref={scrollRef}
+        // Removed: ref={scrollRef}
         className='overflow-hidden innerpage'
-        data-scroll-container
-        style={{ paddingTop: `${headerHeight}px` }} // <--- THE FIX
+        // Removed: data-scroll-container
+        style={{ paddingTop: `${headerHeight}px` }}
       >
         <section data-scroll-section>
           <InfoCard />
