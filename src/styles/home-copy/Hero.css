@@ -12,8 +12,11 @@
   background: url(/images/banner-bg.png);
   background-repeat: no-repeat;
   background-size: 30vw;
-  -webkit-clip-path: inset(0 100% 0 0);
-  clip-path: inset(0 100% 0 0);
+  /* -webkit-clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0); */
+  -webkit-clip-path: none;
+  clip-path: none;
+  animation: none;
   animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
   background-position: 6.5vw 1vw;
 
@@ -262,7 +265,7 @@
 @media (max-width: 991px) {
   .homeCopy .hero {
     padding-bottom: 30px;
-    animation: revealClipLeftToRight 1.8s 1s ease forwards;
+    /* animation: revealClipLeftToRight 1.8s 1s ease forwards; */
   }
 
   .homeCopy .hero .videoContainer {
