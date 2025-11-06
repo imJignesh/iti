@@ -153,7 +153,7 @@ export default function SubjectsCard() {
         {/* LEFT COLUMN */}
         <div className="subjectLeft">
           <span className="subjectHeader">
-            <span className="SubHeading">SUBJECTS WE SUPPORT</span>
+            <span className="SubHeading" style={{ marginBottom: '0px' }}>SUBJECTS WE SUPPORT</span>
           </span>
           <h2 className="subjectTitle">
             Tutoring That Makes Every IBDP Subject Clear (HL & SL)
@@ -296,7 +296,7 @@ export default function SubjectsCard() {
 
         .subjectTitle {
           color: white;
-          font-size: 29px;
+          font-size: 1.6rem;
           font-weight: 800;
           line-height: 1.2;
           text-transform: uppercase;

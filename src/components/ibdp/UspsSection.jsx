@@ -111,19 +111,19 @@ function UpsSection() {
       number: "03",
       icon: <img src="/assets/03.png" alt="Icon 03" />,
       title: "GRADE ASSURANCE",
-      desc: "Better grade assurance with critical testing & review methodology.",
+      desc: "Better results assurance with rigorous testing & review methods.",
     },
     {
       number: "04",
       icon: <img src="/assets/04.png" alt="Icon 04" />,
       title: "EXAMINATION PREP",
-      desc: "Full IB exam prep with tutoring, resources, testing, & review.",
+      desc: "Full-scale IBDP exam prep with tutoring, resources, testing, & review.",
     },
     {
       number: "05",
       icon: <img src="/assets/05.png" alt="Icon 05" />,
       title: "STRONG FOUNDATION",
-      desc: "Focus on fundamentals for an exceptionally strong foundation.",
+      desc: "Emphasis on fundamentals for an exceptionally strong foundation.",
     },
     {
       number: "06",
@@ -135,13 +135,13 @@ function UpsSection() {
       number: "07",
       icon: <img src="/assets/07.png" alt="Icon 07" />,
       title: "STRUCTURED LEARNING",
-      desc: "Problem-based learning covering practical aspects of all units.",
+      desc: "Problem-based learning incorporates practical aspects of all units.",
     },
     {
       number: "08",
       icon: <img src="/assets/08.png" alt="Icon 08" />,
       title: "PROGRESS TRACKING",
-      desc: "Practice with unit tests & mock exams under exam-like conditions.",
+      desc: "Practice with unit tests & mock papers under exam-like conditions.",
     },
   ];
 
@@ -180,7 +180,7 @@ function UpsSection() {
               className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
             >
-              What Do Students Get From<br /><span className="highlight"> Ignite's</span> ACT Support?
+              Highlight the word<span className="highlight"> IBDP Support</span> <br />in green instead of Ignite’s.
 
             </h2>
           </div>

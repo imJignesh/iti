@@ -58,8 +58,7 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            Tutoring That Makes Every <br /> ACT  <span className="highlight"> Subject </span>
-            Clear
+            Tutoring That Makes Every <br /> <span className="highlight"> Subject </span>Clear
           </h2>
         </div>
       </div>

@@ -115,7 +115,7 @@ const IBDP = ({ headerHeight }) => {
               >
                 <h1 className="achievementsTitle">
 
-                  Comprehensive Guidance For Every Academic <span className="highlight">Milestone</span>
+                  Comprehensive Guidance For Every IBDP <span className="highlight">Milestone</span>
                 </h1>
               </div>
 
@@ -128,7 +128,7 @@ const IBDP = ({ headerHeight }) => {
                 <img src="/images/school.png" alt="School Options" />
               </div>
               <div className="step-title">SCHOOL OPTIONS</div>
-              <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
+              <div className="step-desc">Find schools that fit your core strengths & career aspirations.</div>
             </div>
 
             <div className="step">
@@ -136,7 +136,7 @@ const IBDP = ({ headerHeight }) => {
                 <img src="/images/idealcur.png" alt="Ideal Curriculum" />
               </div>
               <div className="step-title">IDEAL CURRICULUM</div>
-              <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
+              <div className="step-desc">Select a curriculum that supports your long-lasting success.</div>
             </div>
 
             <div className="step">
@@ -144,7 +144,7 @@ const IBDP = ({ headerHeight }) => {
                 <img src="/images/subject.png" alt="Subject Choices" />
               </div>
               <div className="step-title">SUBJECT CHOICES</div>
-              <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
+              <div className="step-desc">Select subjects that shape your university & career direction.</div>
             </div>
 
             <div className="step">
@@ -152,7 +152,7 @@ const IBDP = ({ headerHeight }) => {
                 <img src="/images/universitypath.png" alt="University Pathways" />
               </div>
               <div className="step-title">UNIVERSITY PATHWAYS</div>
-              <div className="step-desc">Map a clear, strategic path to top international universities.</div>
+              <div className="step-desc">Plan a strategic route to leading international universities.</div>
             </div>
           </div>
 

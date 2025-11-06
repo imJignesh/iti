@@ -67,7 +67,7 @@ export default function IgniteAchievements() {
             }}>
 
             Every achievement at Ignite reflects the dedication<br className="d-none d-md-block" />
-            & steady progress of our IBDP students over the years.
+            & steady progress of our MYP students over the years.
           </p>
         </div>
 
@@ -278,9 +278,9 @@ export default function IgniteAchievements() {
                     lineHeight: '1.4'
                   }}
                 >
-                  Consistent results through
+                  Proven results through 
                   <br />
-                  guided student journeys
+                  tailored student journeys
                 </p>
 
               </div>

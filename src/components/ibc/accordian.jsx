@@ -60,6 +60,7 @@ export default function Accordion() {
           <h2 className="title">Best IB Coaching Guidance In Dubai To Excel Academically</h2>
           <p className="subtitle">Receive the best IB coaching guidance in Dubai through our expert-led, result-focused programs. From subject-wise clarity to smart study planning, we offer academic support that goes beyond the classroom. Our experienced IB tutors provide students with guidance tailored to their learning pace and academic goals.
             <br />We help students excel in both internal assessments and external exams through regular reviews, feedback, and strategic preparation. With access to IB-style questions and carefully curated resources, students gain the skills needed to perform with confidence. Ignite is your trusted partner in academic excellence across the IB curriculum.</p>
+          <br />
 
           <h2 className="title">How Ignite’s IB Classes Guide Students To Success</h2>
           <p className="subtitle">Our exceptional IB courses are built on years of experience and expertise, designed to bring out the best in every student. <br />
@@ -80,7 +81,7 @@ export default function Accordion() {
           <p className="subtitle">At Ignite Training Institute, we specialize in delivering high-quality IB tutoring that leads to measurable academic progress and exam success. Our experienced tutors understand the demands of the IB curriculum and provide personalized support tailored to each learner’s needs. <br />
             With structured classes, exam-focused training, and consistent mentorship, we help students build confidence, master subjects, and achieve top scores. Whether you need help with IAs, EE, TOK, or final exams, Ignite offers the complete support system to navigate your IB journey with success.</p>
           <br />
-          <br />
+          
           <h2 className="title">Exclusive IB Resources</h2>
           <br />
           <div class="schemalinks">
