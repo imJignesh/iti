@@ -15,6 +15,7 @@ import Alumni from "@/components/homeCopy/Alumni";
 import Usps from "@/components/homeCopy/Usps";
 import Trainers from "@/components/homeCopy/Trainers";
 import Testimonial from "@/components/homeCopy/Testimonial";
+import MarqueeBanner from '@/components/ibc/MarqueeBanner';
 
 import Blog from "@/components/homeCopy/Blog";
 
@@ -105,7 +106,10 @@ const HomeCopy = ({ headerHeight }) => {
                 <Course />
 
                 {/* Moving Banner Section */}
-                <MovingBanner />
+                {/* <MovingBanner /> */}
+                <section data-scroll-section>
+                          <MarqueeBanner />
+                        </section>
 
                 {/* About US Section  */}
                 <About />
