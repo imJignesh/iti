@@ -67,6 +67,7 @@ const staticBlogs = [
 
 const Blog = () => {
     const [blogData, setBlogData] = React.useState(staticBlogs);
+    // scrollRef holds the instance (or null) directly.
     const scrollRef = useScroll();
 
     useEffect(() => {
@@ -79,9 +80,12 @@ const Blog = () => {
 
     useEffect(() => {
         if (blogData.length > 0) {
-            scrollRef.current?.update();
+            // FIX APPLIED HERE: Remove .current.
+            // scrollRef is the instance, or null if Locomotive Scroll is disabled/not ready.
+            // The optional chaining (?.) handles the null case safely.
+            scrollRef?.update();
         }
-    }, [blogData]);
+    }, [blogData, scrollRef]); // Added scrollRef to dependencies
 
     return (
         <section className="blogSection">
