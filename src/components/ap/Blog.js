@@ -79,7 +79,7 @@ const Blog = () => {
 
     useEffect(() => {
         if (blogData.length > 0) {
-            scrollRef.current?.update();
+            scrollRef?.update();
         }
     }, [blogData]);
 
