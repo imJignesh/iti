@@ -17,7 +17,7 @@
   -webkit-clip-path: none;
   clip-path: none;
   animation: none;
-  animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
+  /* animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards; */
   background-position: 6.5vw 1vw;
 
 }
