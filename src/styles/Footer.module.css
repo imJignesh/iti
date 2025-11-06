@@ -297,3 +297,25 @@
 
   .footerWrap .footerLinksCol {}
 }
+
+@media (max-width:600px) {
+  .footerWrap {
+    padding: 30px 10px;
+  }
+
+  .footerWrap .footerMainRow {
+    width: 100%;
+  }
+
+  .footerWrap .footerTop {
+    padding: 0;
+  }
+
+  .socialmediafooter {
+    justify-content: center;
+  }
+
+  .footerWrap .footerLinksRow .footerTop {
+    width: 100%;
+  }
+}
