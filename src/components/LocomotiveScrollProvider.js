@@ -9,6 +9,7 @@ import React, {
 const ScrollContext = createContext(null);
 
 export const useScroll = () => {
+    // This hook returns the instance (or null) directly.
     return useContext(ScrollContext);
 };
 
@@ -16,15 +17,15 @@ const LocomotiveScrollProvider = ({ children }) => {
     const scrollRef = useRef(null); // DOM element
     const scrollInstanceRef = useRef(null); // Locomotive instance
     const [isReady, setIsReady] = useState(false);
-    // NEW: State to track if scroll should be enabled (default to true)
-    const [isScrollEnabled, setIsScrollEnabled] = useState(true);
+    // State to track if scroll should be enabled (default to false initially)
+    const [isScrollEnabled, setIsScrollEnabled] = useState(false);
 
-    // 1. Effect to handle width check and resize
+    // 1. Effect to handle width check and resize (sets isScrollEnabled)
     useEffect(() => {
         if (typeof window === "undefined") return;
 
         const checkWidth = () => {
-            // Disable if width is less than 3000px
+            // Only enable if width is >= 3000px
             const shouldEnable = window.innerWidth >= 3000;
             setIsScrollEnabled(shouldEnable);
         };
@@ -38,22 +39,22 @@ const LocomotiveScrollProvider = ({ children }) => {
     }, []);
 
 
-    // 2. Effect to initialize/destroy Locomotive Scroll based on width
+    // 2. Effect to initialize/destroy Locomotive Scroll based on isScrollEnabled
     useEffect(() => {
         let scroll;
 
         const initScroll = async () => {
-            // If scroll is disabled, ensure the context value is null and mark as ready
+            // Case 1: Scroll is disabled (width < 3000px)
             if (!isScrollEnabled) {
-                // If an instance exists but shouldn't, destroy it
+                // Ensure any existing instance is destroyed
                 scrollInstanceRef.current?.destroy();
                 scrollInstanceRef.current = null;
-                setIsReady(true);
+                setIsReady(true); // Ready to render children with normal scroll
                 return;
             }
 
-            // If scroll is enabled but an instance already exists, do nothing (wait for destroy on width change)
-            if (scrollInstanceRef.current) return;
+            // Case 2: Scroll is enabled (width >= 3000px)
+            if (scrollInstanceRef.current) return; // Already initialized
 
             const LocomotiveScroll = (await import("locomotive-scroll")).default;
             if (!scrollRef.current) return;
@@ -65,7 +66,7 @@ const LocomotiveScrollProvider = ({ children }) => {
             });
 
             scrollInstanceRef.current = scroll;
-            setIsReady(true); // trigger re-render so context updates
+            setIsReady(true); // Ready to render children with Locomotive Scroll
         };
 
         if (typeof window !== "undefined") {
@@ -78,13 +79,13 @@ const LocomotiveScrollProvider = ({ children }) => {
             scrollInstanceRef.current = null;
             setIsReady(false);
         };
-    }, [isScrollEnabled]); // Re-run effect when isScrollEnabled changes
+    }, [isScrollEnabled]); // Re-run effect when width crosses 3000px boundary
 
     return (
-        // Conditionally set data-scroll-container attribute
+        // Conditionally set data-scroll-container only when scroll is enabled
         <div ref={scrollRef} data-scroll-container={isScrollEnabled ? true : undefined}>
             <ScrollContext.Provider value={scrollInstanceRef.current}>
-                {/* Only render children if the component is ready (Loco Scroll initialized OR correctly disabled) */}
+                {/* Critical: Only render children AFTER scroll is initialized OR disabled */}
                 {isReady && children}
             </ScrollContext.Provider>
         </div>
