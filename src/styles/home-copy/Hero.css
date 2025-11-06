@@ -553,7 +553,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 360px) {
   .homeCopy .hero .heroVideo {
     height: 300px;
   }
@@ -566,4 +566,21 @@
   .homeCopy .hero .heroRight .buttonGroup {
     width: 55vw;
   }
+  .homeCopy .hero .heroLeft div {
+        padding-top: 0px;
+    }
+        .homeCopy .hero .heroRight .buttonGroup .buttonBlue, .homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
+        font-size: 0.8rem;
+                padding: 8px 10px;
+    }
+    .homeCopy .hero .heroVideo {
+        mask: url(/images/banner-image-right-m.png) no-repeat center top;
+        -webkit-mask: url(/images/banner-image-right-m.png) no-repeat center top;
+        -webkit-mask-size: 90%;
+        mask-size: 95%;
+    }
+        .homeCopy .hero .heroRight .buttonGroup {
+        justify-content: flex-start;
+        top: 40%;
+    }
 }
