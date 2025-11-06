@@ -244,6 +244,9 @@
     width: 150px;
     height: 200px;
   } */
+  .mobile-hide {
+    display: none;
+  }
 }
 
 @media (max-width: 440px) {

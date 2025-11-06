@@ -120,7 +120,7 @@ const Blog = () => {
                         >
                             Dive Into Our Signature Blogs
                         </div>
-                        <a href="/blogs" className="nodecoration">
+                        <a href="/blogs" className="nodecoration mobile-hide">
                             <button
                                 data-scroll
                                 data-scroll-class="is-inview"
@@ -137,6 +137,7 @@ const Blog = () => {
                                 />
                             </button>
                         </a>
+
                     </div>
 
                     <div className="col-12 col-lg-7 blogRight">

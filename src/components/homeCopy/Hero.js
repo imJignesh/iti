@@ -41,7 +41,7 @@ const useDeviceCheck = (breakpoint = 992) => {
 const Hero = () => {
     // Use the custom hook to determine the device
     const isMobile = useDeviceCheck();
-    
+
     // Function to handle the conditional title rendering
     const renderTitle = () => {
         // If isMobile is undefined (during initial SSR/load), render the desktop title as the default.
@@ -82,7 +82,7 @@ const Hero = () => {
                             >
                                 <h3 className="SubHeading">BEST TUTORS IN UAE</h3>
                             </div>
-                            
+
                             {/* --- Conditionally Rendered Hero Title --- */}
                             <div
                                 data-scroll
@@ -94,7 +94,7 @@ const Hero = () => {
                                 {renderTitle()}
                             </div>
                             {/* ---------------------------------------- */}
-                            
+
                             <div
                                 data-scroll
                                 data-scroll-class="is-inview"
@@ -108,7 +108,7 @@ const Hero = () => {
                                         We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, & more through our curriculum-specific approach & expert tutors in Dubai, guiding them toward a stronger understanding & lasting growth.
                                     </b>
                                     <strong>
-                                        Ignite's experienced tutors in Dubai help students thrive in IBDP, IB MYP, IGCSE, A-Levels, AP, & more with personalized support & structured programs, creating a learning environment where you can truly progress.
+                                        Ignite's experienced tutors in Dubai help students thrive in IBDP, IB MYP, IGCSE, A-Levels, AP, & more with personalized support & structured programs.
                                     </strong>
                                 </p>
                             </div>
