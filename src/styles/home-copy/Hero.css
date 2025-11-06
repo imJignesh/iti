@@ -539,9 +539,9 @@
     padding: 10px 25px;
   }
 
-  .homeCopy .hero .heroLeft div {
-    padding-top: 10px;
-  }
+.homeCopy .hero .heroLeft div {
+        padding-top: 0px;
+    }
 
   .homeCopy .courseSection .mainCard .mainCardTitle {
     max-width: 100%;
@@ -549,7 +549,7 @@
 
   .homeCopy .hero .heroRight .buttonGroup .buttonBlue,
   .homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
