@@ -54,7 +54,21 @@ const FAQSection = () => {
     },
   ];
 
+  // --- NEW: Define the titles ---
+  const desktopTitle = (
+    <>
+      Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
+    </>
+  );
 
+  const mobileTitle = (
+    <>
+      Which ACT subjects does<span className="highlight"> Ignite</span> offer tutoring for?
+    </>
+  );
+
+  // --- NEW: Choose the title based on the mobile state ---
+  const currentTitle = isMobile ? mobileTitle : desktopTitle;
 
   return (
     <div
@@ -89,7 +103,7 @@ const FAQSection = () => {
           {/* Left Section */}
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
-            <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
+            <div className="testimonialHeader" style={{ marginBottom: isMobile ? "0px" : "20px" }}>
               <span className="SubHeading" style={{ fontSize: isHighDpi ? "28px" : isMobile ? "" : "28px" }}>FAQS
               </span>
             </div>
@@ -104,18 +118,19 @@ const FAQSection = () => {
                 animationDelay: "0.2s",
                 color: "#19245E",
                 fontWeight: 800,
-                marginBottom: "20px",
+                margin: "20px",
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "1.2rem" : "1.8rem"
               }}
             >
-              Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
+              {currentTitle}
+
             </h2>
 
             <p
               style={{
                 color: "#64748b",
                 maxWidth: isMobile ? "100%" : "28rem",
-                fontSize: isHighDpi ? "16px" : isMobile ? "16px" : "20px",
+                fontSize: isHighDpi ? "16px" : isMobile ? "14px" : "20px",
                 lineHeight: isMobile ? "1.5" : "1.2",
                 margin: isMobile ? "0 auto" : "0",
                 paddingLeft: isMobile ? "0.5rem" : "0",

@@ -145,14 +145,40 @@ function UpsSection() {
     },
   ];
 
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      // Use the same 1100px breakpoint as in your USPItem component for consistency
+      setIsMobile(window.innerWidth <= 1100);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  const desktopTitle = (
+    <>
+      What Do Students Get From<br /><span className="highlight"> Ignite's</span> IB MYP Support?
+    </>
+  );
+
+  const mobileTitle = (
+    <>
+      What Do Students Get From<span className="highlight"> Ignite's</span> IB MYP Support?
+    </>
+  );
+
+  // --- NEW: Select the title based on the mobile check ---
+  const currentTitle = isMobile ? mobileTitle : desktopTitle;
 
   return (
     <div
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      className="py-5 px-2 fade-in-section"
+      className="usps px-2 fade-in-section"
       style={{ animationDelay: "0.1s" }}
     >
       <div className="container">
@@ -181,7 +207,8 @@ function UpsSection() {
               className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
             >
-              What Do Students Get From<br /><span className="highlight"> Ignite's</span> IB MYP Support?
+              {currentTitle}
+
 
             </h2>
           </div>
@@ -245,6 +272,9 @@ function UpsSection() {
       </div>
 
       <style jsx>{`
+      .usps{
+      padding: 0 0 80px 0 ;
+      }
         .fade-in-section {
           opacity: 0;
           transform: translateY(20px);

@@ -22,7 +22,7 @@ export default function IgniteAboutCard() {
         <div className="ignite-left">
           <div className="subtitle-wrapper">
             <div
-              className="d-flex align-items-center justify-content-center mb-md-4 mb-3 fade-in-section"
+              className="d-flex align-items-center justify-content-center mb-md-4 fade-in-section"
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
@@ -481,7 +481,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
 
           .heading-subtitle {
             font-size: 14px;
-            max-width:70%;
+            max-width:90%;
             margin:0 auto;
           }
 
@@ -545,7 +545,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
             font-size: 1.2rem;
             font-weight: 700;
             color: #233467;
-            margin: 0 0 25px 0;
+            margin: 0 0 0 0;
             text-align: center;
           }
 
@@ -773,6 +773,10 @@ bottom: 5%;
           .custom-grid {
   gap: .5rem;
 }
+  .ignite-section {
+        padding: 60px 0px;
+        max-width: 100%;
+    }
   .cust-text {
     background: linear-gradient(90deg, #161664, #3F88BA) !important;
     color: white !important;

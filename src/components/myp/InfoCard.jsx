@@ -181,7 +181,7 @@ export default function InfoCard() {
                 {isMobile ? (
                   <>
 
-                    Start Your Academic Journey With<br /> IB MYP Tutors In UAE
+                    Start Your Academic Journey With IB MYP Tutors In UAE
                   </>
                 ) : (
                   <>
@@ -390,7 +390,7 @@ export default function InfoCard() {
                     data-scroll-repeat
                     style={{ animationDelay: "0.65s" }}
                   >
-                    GET A FREE DEMO CLASS + FREE STUDY RESOURCES
+                    GET A FREE DEMO CLASS+ FREE STUDY RESOURCES
                   </h2>
                   {submissionStatus === 'success' && (
                     <div className="alert alert-success text-center">
@@ -1129,7 +1129,7 @@ margin-block: 30px !important;
           .col-lg-4 {
             order: 2 !important;
             margin-top: 0 !important;
-            padding: 0 1.5rem 2rem !important;
+            padding: 0 0.5rem 2rem !important;
           }
 
           h1 {
@@ -1246,14 +1246,14 @@ margin-block: 30px !important;
          }
         @media (max-width: 575px) {
   .cust-text {
-    padding: 8px 8px 8px 8px !important;
+   padding: 8px 15px 8px 15px !important;
     border: none !important;
     -webkit-transition: opacity .3s ease !important;
     -moz-transition: opacity.3s ease!important;
     -o-transition: opacity.3s ease!important;
     transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
-    font-size: clamp(.7rem, 1.1vw, 1.1rem) !important;
+    font-size: 1rem !important;
     margin-top:6px!important;
     min-width: auto !important;
 }

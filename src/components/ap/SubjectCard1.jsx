@@ -475,7 +475,7 @@ export default function SubjectsCard() {
             flex-direction: column;
             align-items: center;
             gap: 32px;
-            padding: 41px 20px 85px 20px;
+            padding: 41px 0px 85px 0px;
           }
           
           .subjectLeft {
@@ -578,7 +578,7 @@ export default function SubjectsCard() {
 
         @media (max-width: 575px) {
           .subjectLeft {
-            min-width: auto;
+            min-width: 100%;
           }
 
           .subjectBubble {

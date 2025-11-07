@@ -482,7 +482,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
 
           .heading-subtitle {
             font-size: 14px;
-            max-width:70%;
+            max-width:90%;
             margin:0 auto;
           }
 
@@ -546,7 +546,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
             font-size: 20.4px;
             font-weight: 700;
             color: #233467;
-            margin: 0 0 25px 0;
+            margin: 0 0 0 0;
             text-align: center;
           }
 

@@ -1127,7 +1127,7 @@ margin-block: 30px !important;
           .col-lg-4 {
             order: 2 !important;
             margin-top: 0 !important;
-            padding: 0 1.5rem 2rem !important;
+            padding: 0 0.5rem 2rem !important;
           }
 
           h1 {

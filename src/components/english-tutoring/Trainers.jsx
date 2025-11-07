@@ -486,9 +486,16 @@ export default function Trainers() {
           }
 
           @media (max-width: 575px) {
+          .trainers-global-container .trainersSection{
+            padding: 80px 0 80px 0;
+            }
             .${containerClass} .trainersSection .trainerImg {
               object-fit: contain;
             }
+              .trainers-global-container .trainersSection .trainersPagination{
+              margin-top: 0;}
+              .trainers-global-container .trainersSection .trainersSwiperWrap{
+              margin-bottom: 0px;}
           }
         `}
       </style>

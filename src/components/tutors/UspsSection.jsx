@@ -94,62 +94,62 @@ function USPItem({ number, icon, title, desc }) {
 }
 
 function UpsSection() {
-const uspItems = [
-  {
-    number: "01",
-    icon: <img src="/assets/01.png" alt="tutors in dubai" />,
-    title: "Experienced Tutors",
-    desc: "Curriculum-specific expert tutors delivering complete support",
-  },
-  {
-    number: "02",
-    icon: <img src="/assets/02.png" alt="tutors in dubai" />,
-    title: "Individual Attention",
-    desc: "Small group training (SGT) to focus on each student’s unique needs",
-  },
-  {
-    number: "03",
-    icon: <img src="/assets/03.png" alt="tutors in dubai" />,
-    title: "Grade Improvement",
-    desc: "Achieve better grades with testing & targeted review methods",
-  },
-  {
-    number: "04",
-    icon: <img src="/assets/04.png" alt="tutors in dubai" />,
-    title: "Examination Prep",
-    desc: "Thorough test prep across all major international curricula",
-  },
-  {
-    number: "05",
-    icon: <img src="/assets/05.png" alt="tutors in dubai" />,
-    title: "Strong Foundation",
-    desc: "Focused conceptual learning to build a strong subject base",
-  },
-  {
-    number: "06",
-    icon: <img src="/assets/06.png" alt="tutors in dubai" />,
-    title: "Stimulating Environment",
-    desc: "Goal-driven learning with an engaging & dynamic atmosphere",
-  },
-  {
-    number: "07",
-    icon: <img src="/assets/07.png" alt="tutors in dubai" />,
-    title: "Structured Learning",
-    desc: "Real-world learning through problem-based academic modules",
-  },
-  {
-    number: "08",
-    icon: <img src="/assets/08.png" alt="tutors in dubai" />,
-    title: "Progress Tracking",
-    desc: "Track academic growth via mock exams & real-time assessments",
-  },
-];
+  const uspItems = [
+    {
+      number: "01",
+      icon: <img src="/assets/01.png" alt="tutors in dubai" />,
+      title: "Experienced Tutors",
+      desc: "Curriculum-specific expert tutors delivering complete support",
+    },
+    {
+      number: "02",
+      icon: <img src="/assets/02.png" alt="tutors in dubai" />,
+      title: "Individual Attention",
+      desc: "Small group training (SGT) to focus on each student’s unique needs",
+    },
+    {
+      number: "03",
+      icon: <img src="/assets/03.png" alt="tutors in dubai" />,
+      title: "Grade Improvement",
+      desc: "Achieve better grades with testing & targeted review methods",
+    },
+    {
+      number: "04",
+      icon: <img src="/assets/04.png" alt="tutors in dubai" />,
+      title: "Examination Prep",
+      desc: "Thorough test prep across all major international curricula",
+    },
+    {
+      number: "05",
+      icon: <img src="/assets/05.png" alt="tutors in dubai" />,
+      title: "Strong Foundation",
+      desc: "Focused conceptual learning to build a strong subject base",
+    },
+    {
+      number: "06",
+      icon: <img src="/assets/06.png" alt="tutors in dubai" />,
+      title: "Stimulating Environment",
+      desc: "Goal-driven learning with an engaging & dynamic atmosphere",
+    },
+    {
+      number: "07",
+      icon: <img src="/assets/07.png" alt="tutors in dubai" />,
+      title: "Structured Learning",
+      desc: "Real-world learning through problem-based academic modules",
+    },
+    {
+      number: "08",
+      icon: <img src="/assets/08.png" alt="tutors in dubai" />,
+      title: "Progress Tracking",
+      desc: "Track academic growth via mock exams & real-time assessments",
+    },
+  ];
   return (
     <div
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      className="py-5 px-2 fade-in-section"
+      className="usps px-2 fade-in-section"
       style={{ animationDelay: "0.1s" }}
     >
       <div className="container">
@@ -242,6 +242,9 @@ const uspItems = [
       </div>
 
       <style jsx>{`
+      .usps{
+      padding: 0 0 80px 0 ;
+      }
         .fade-in-section {
           opacity: 0;
           transform: translateY(20px);

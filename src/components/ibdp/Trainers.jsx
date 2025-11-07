@@ -599,9 +599,10 @@ export default function Trainers() {
             }
               .trainers-global-container .trainersSection .trainersPagination{
               margin-top: 0;}
-          }
               .trainers-global-container .trainersSection .trainersSwiperWrap{
               margin-bottom: 0px;}
+          }
+              
         `}
       </style>
 

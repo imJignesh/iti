@@ -24,7 +24,7 @@ export default function IgniteAchievements() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: isMobile ? "95vw" : '70vw', animationDelay: "0.15s", margin: "0 auto", padding: isMobile ? "40px 0px 5px 0px" : "28px 0px 48px 0px", }}>
+        style={{ maxWidth: isMobile ? "95vw" : '70vw', animationDelay: "0.15s", margin: "0 auto", padding: isMobile ? "80px 0px 5px 0px" : "28px 0px 48px 0px", }}>
 
         {/* Header Section */}
         <div className="text-center mb-md-5 mb-4 fade-in-section"
@@ -92,7 +92,7 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "40px" : "80px",
+                  fontSize: isMobile ? "30px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
                 }}>10+</div>
@@ -144,7 +144,7 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "40px" : "80px",
+                  fontSize: isMobile ? "30px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
                 }}>1K+</div>
@@ -197,7 +197,7 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "#161664",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "40px" : "80px",
+                  fontSize: isMobile ? "30px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
                 }}>A<sup>*</sup></div>
@@ -251,7 +251,7 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "40px" : "80px",
+                  fontSize: isMobile ? "30px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
                 }}>2K+</div>
@@ -466,7 +466,7 @@ export default function IgniteAchievements() {
             -o-transition: opacity.3s ease!important;
             transition: opacity .3s ease !important;
             letter-spacing: 1px !important;
-            font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+            font-size:1rem;
             margin-top: 45px !important;
             font-weight:600 !important;
           }

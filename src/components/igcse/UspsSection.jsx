@@ -152,7 +152,7 @@ function UpsSection() {
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      className="py-5 px-2 fade-in-section"
+      className="usps px-2 fade-in-section"
       style={{ animationDelay: "0.1s" }}
     >
       <div className="container">
@@ -245,6 +245,9 @@ function UpsSection() {
       </div>
 
       <style jsx>{`
+      .usps{
+      padding: 0 0 80px 0 ;
+      }
         .fade-in-section {
           opacity: 0;
           transform: translateY(20px);

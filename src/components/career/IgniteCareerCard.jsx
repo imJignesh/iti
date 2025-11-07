@@ -329,7 +329,7 @@ height: 30px;
           font-size: 21.4px;
           font-weight: 700;
           color: #233467;
-          margin: 0 0 25px 0;
+          margin: 0 0 0 0;
           line-height:1.2;
             text-align: center;
         }
