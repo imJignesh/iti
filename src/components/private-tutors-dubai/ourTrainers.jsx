@@ -454,7 +454,7 @@ export default function Trainers({ }) {
   background: linear-gradient(to left, #3f88ba, var(--blue-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 800;
+  font-weight: 700;
   width: 80%;
   font-size: 1.2vw;
   padding-top: 5px;

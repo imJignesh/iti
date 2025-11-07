@@ -258,7 +258,7 @@ export default function WhyChooseUs() {
             }
  .testTitle {
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 700;
   max-width: 100%;
   color: var(--blue-color);
   margin: 40px auto;
@@ -398,7 +398,7 @@ export default function WhyChooseUs() {
           }
      .testTitle {
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 700;
   max-width: 100%;
   color: var(--blue-color);
   margin: 40px auto;

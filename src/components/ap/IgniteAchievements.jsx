@@ -28,7 +28,7 @@ export default function IgniteAchievements() {
               data-scroll-class="is-inview"
               data-scroll-repeat
               style={{
-                 background: "linear-gradient(90deg,#161664, #3F88BA)",
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 letterSpacing: '0.1em',
@@ -174,7 +174,7 @@ export default function IgniteAchievements() {
                 <button
                   className="btn fw-bold d-flex align-items-center rounded-pill"
                   style={{
-                     background: "linear-gradient(90deg,#161664, #3F88BA)",
+                    background: "linear-gradient(90deg,#161664, #3F88BA)",
                     color: 'white',
                     padding: '1rem 2rem',
                     border: 'none',
@@ -256,7 +256,7 @@ export default function IgniteAchievements() {
             <button
               className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
               style={{
-                 background: "linear-gradient(90deg,#161664, #3F88BA)",
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
                 color: 'white',
                 padding: '0.8rem 1.8rem',
                 border: 'none',
@@ -380,7 +380,7 @@ export default function IgniteAchievements() {
         
         .stat-number {
           font-size: 4rem;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1;
         }
         
@@ -419,7 +419,7 @@ export default function IgniteAchievements() {
         
         .stat-card-mobile .stat-number {
           font-size: 2.5rem;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1;
           margin-bottom: 1rem;
         }

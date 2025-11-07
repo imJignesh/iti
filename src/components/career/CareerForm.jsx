@@ -244,7 +244,7 @@ export default function CareerForm() {
 
         .title {
 font-size: 2.5rem;
-          font-weight: 800;
+          font-weight: 700;
           color: #161664;
           margin-bottom: 40px;
           line-height: 1.2;
@@ -324,7 +324,7 @@ font-size: 2.5rem;
           appearance: none;
           -webkit-appearance: none;
           -moz-appearance: none;
-          font-weight: 800;
+          font-weight: 700;
         }
 
         .dropdown-arrow {
@@ -412,7 +412,7 @@ font-size: 2.5rem;
           border-radius: 20px;
           text-align: center;
           cursor: pointer;
-          font-weight: 800;
+          font-weight: 700;
           font-size: 22px;
           background: rgba(255, 255, 255, 0.6);
           transition: all 0.3s ease;
@@ -606,7 +606,7 @@ font-size: 2.5rem;
           appearance: none;
           -webkit-appearance: none;
           -moz-appearance: none;
-          font-weight: 800;
+          font-weight: 700;
         }
   .custom-height {
     width: 30px !important;

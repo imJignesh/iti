@@ -303,7 +303,7 @@ export default function SubjectsCard() {
         .subjectTitle {
           color: white;
           font-size: 29px;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1.2;
           text-transform: uppercase;
           max-width: 500px;

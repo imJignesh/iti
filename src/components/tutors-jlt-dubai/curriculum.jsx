@@ -297,7 +297,7 @@ top: -53px;
 
 .achievementsTitle {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
   margin: 40px 0 30px;
   line-height: 1.1;
   text-transform: uppercase;

@@ -207,21 +207,21 @@ export default function Trainers({ }) {
                   <SwiperSlide key={i}>
                     {({ isActive }) => (
                       <a href="/our-team">
-                      <div
-                        data-color={t.color}
-                        className={` trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
-                        style={{ animationDelay: 0.2 }}
-                      >
-                        <div className="trainerName">{t.name}</div>
-                        <div className="trainerImgWrap">
-                          <img src={t.img} alt={t.name} className="trainerImg" />
+                        <div
+                          data-color={t.color}
+                          className={` trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
+                          style={{ animationDelay: 0.2 }}
+                        >
+                          <div className="trainerName">{t.name}</div>
+                          <div className="trainerImgWrap">
+                            <img src={t.img} alt={t.name} className="trainerImg" />
+                          </div>
+                          <div className="trainerSubtitle subtitleBox">
+                            {t.subtitle}
+                          </div>
+                          <div className="trainerExp">{t.experience}</div>
                         </div>
-                        <div className="trainerSubtitle subtitleBox">
-                          {t.subtitle}
-                        </div>
-                        <div className="trainerExp">{t.experience}</div>
-                      </div>
-                    </a>
+                      </a>
                     )}
                   </SwiperSlide>
                 ))}
@@ -455,7 +455,7 @@ export default function Trainers({ }) {
   background: linear-gradient(to left, #3f88ba, var(--blue-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 800;
+  font-weight: 700;
   width: 80%;
   font-size: 1.2vw;
   padding-top: 5px;

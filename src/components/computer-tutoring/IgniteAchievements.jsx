@@ -278,7 +278,7 @@ export default function IgniteAchievements() {
       <style jsx>{`
        .testTitle {
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 700;
   max-width: 100%;
   color: var(--blue-color);
   margin: 40px 0;
@@ -349,7 +349,7 @@ export default function IgniteAchievements() {
         
         .stat-number {
           font-size: 3.3rem;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1;
           margin-bottom: 0.5rem;
         }
@@ -403,7 +403,7 @@ export default function IgniteAchievements() {
         
         .stat-card-mobile .stat-number {
           font-size: 2.5rem;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1;
           margin-bottom: 1rem;
         }
@@ -507,7 +507,7 @@ export default function IgniteAchievements() {
         
         .stat-number {
           font-size: 3rem;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1;
           margin-bottom: 0.5rem;
         }

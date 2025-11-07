@@ -467,7 +467,7 @@ export default function TutoringCourses() {
 
         .card-title {
           color: #233467;
-          font-weight: 800;
+          font-weight: 700;
           font-size: ${isMobile ? "0.875rem" : "1.5rem"};
           margin-bottom: 0.25rem;
         }
@@ -523,7 +523,7 @@ export default function TutoringCourses() {
         @media (min-width: 768px) {
           .card-button {
             letter-spacing: 0.1em;
-            font-weight: 800;
+            font-weight: 700;
             gap: 0.75rem;
           }
         }
@@ -883,7 +883,7 @@ export default function TutoringCourses() {
 
 //         .card-title {
 //           color: #233467;
-//           font-weight: 800;
+//           font-weight: 700;
 //           font-size: ${isMobile ? "0.875rem" : "1.5rem"};
 //           margin-bottom: 0.25rem;
 //         }
@@ -937,7 +937,7 @@ export default function TutoringCourses() {
 //         @media (min-width: 768px) {
 //           .card-button {
 //             letter-spacing: 0.1em;
-//             font-weight: 800;
+//             font-weight: 700;
 //             gap: 0.75rem;
 //           }
 //         }

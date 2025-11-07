@@ -160,7 +160,7 @@ export default function Trainers() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Swiper active below 1199px
+      // Swiper active below 1199px (your mobile check)
       setIsTrainersSwiper(window.innerWidth <= 1199);
     };
     handleResize();
@@ -185,6 +185,19 @@ export default function Trainers() {
 
   // The new global container class is 'trainers-global-container'
   const containerClass = 'trainers-global-container';
+
+  const desktopTitle = (
+    <>
+      The Best <span className="highlight">Trainers</span> For Your<br />Success Journey
+    </>
+  );
+
+  const mobileTitle = (
+    <>
+      The Best <span className="highlight">Trainers</span> For Your Success Journey
+    </>
+  );
+  const currentTitle = isTrainersSwiper ? mobileTitle : desktopTitle;
 
   return (
     <>
@@ -211,7 +224,7 @@ export default function Trainers() {
 
           .${containerClass} .trainersSection .trainersTitle {
             font-size: 1.8rem;
-            font-weight: 800;
+            font-weight: 700;
             max-width: 60%;
             margin: 40px auto;
             line-height: 1.1;
@@ -655,7 +668,7 @@ export default function Trainers() {
             .${containerClass} .trainersSection .trainerImg {
               object-fit: contain;
             }
-              .trainers-global-container .trainersSection .trainersSubheading{
+              .trainers-global-container .trainersSection .container>div{
               padding-bottom: 10px;}
           }
               .trainers-global-container .trainersSection .trainersPagination{
@@ -673,7 +686,8 @@ export default function Trainers() {
             </div>
 
             <h2 className="trainersTitle">
-              The Best <span className="highlight">Trainers</span> For Your<br />Success Journey
+              {/* --- NEW: Use the conditionally chosen title here --- */}
+              {currentTitle}
             </h2>
 
             {isTrainersSwiper ? (

@@ -55,7 +55,7 @@
 
 .headlineBottom {
   font-size: clamp(1.8rem, 2.5vw, 2.6rem);
-  font-weight: 800;
+  font-weight: 700;
   background: linear-gradient(90deg, #00A491 50%, #003E37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -78,12 +78,12 @@
 
 .headlineBottom2 {
   font-size: clamp(1.8rem, 2.5vw, 2.6rem);
-  font-weight: 800;
+  font-weight: 700;
   background: linear-gradient(90deg, #00A491 50%, #003E37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing:  0.075em;
+  letter-spacing: 0.075em;
   line-height: 1.1;
   margin: 0;
   text-transform: uppercase;
@@ -101,9 +101,11 @@
   .headlineBox {
     padding: 14px 12px;
   }
+
   .headlineTop {
     font-size: 1rem;
   }
+
   .headlineBottom {
     font-size: 1.2rem;
   }

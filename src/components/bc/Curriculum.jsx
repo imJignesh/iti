@@ -227,7 +227,7 @@ export default function IBCurriculumStages() {
         }
         .curriculumTitle {
           font-size: 2vw;
-          font-weight: 800;
+          font-weight: 700;
           max-width: 80%;
           margin: 30px auto 0 !important;
           line-height: 1.2;
@@ -236,7 +236,7 @@ export default function IBCurriculumStages() {
         }
         .curriculumSubtitle {
           font-size: 2vw;
-          font-weight: 800;
+          font-weight: 700;
           max-width: 80%;
           margin: 8px auto 0 !important;
           line-height: 1.2;
@@ -282,7 +282,7 @@ export default function IBCurriculumStages() {
 
         .card-title {
           font-size: 45px;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1.1;
           margin-bottom: 30px;
           background: linear-gradient(to right, #00a491, #003e37);
@@ -293,7 +293,7 @@ export default function IBCurriculumStages() {
 
         .card-title2 {
           font-size: 45px;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1.1;
           margin-bottom: 30px;
           background: linear-gradient(to right, #3f88ba, #161664);

@@ -572,7 +572,7 @@ export default function InfoCard() {
           line-height: 45px;
           opacity: 0.8;
           max-width: 600px !important;
-          font-weight: 800;
+          font-weight: 700;
           max-width: 50rem;
           font-size: 35px; /* default for desktop */
           animation-delay: 0.25s;
@@ -962,7 +962,7 @@ export default function InfoCard() {
           line-height: 45px;
           opacity: 0.8;
           max-width: 600px !important;
-          font-weight: 800;
+          font-weight: 700;
           max-width: 50rem;
           font-size: 35px; /* default for desktop */
           animation-delay: 0.25s;
@@ -998,7 +998,7 @@ export default function InfoCard() {
           line-height: 40px;
           opacity: 0.8;
           max-width: 600px !important;
-          font-weight: 800;
+          font-weight: 700;
           max-width: 50rem;
           font-size: 35px; /* default for desktop */
           animation-delay: 0.25s;

@@ -191,7 +191,7 @@ height: 30px;
 
         .ignite-main-title {
           font-size: 2.5rem;
-          font-weight: 800;
+          font-weight: 700;
           color: #233467;
           line-height: 1.2;
           margin: 0;
@@ -215,7 +215,7 @@ height: 30px;
 
         .ignite-secondary-title {
           font-size: 1.5vw;
-          font-weight: 800;
+          font-weight: 700;
           background: linear-gradient(90deg, #00A491, #003E37);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;          
@@ -293,7 +293,7 @@ height: 30px;
 
          .ignite-main-title {
           font-size: 2.5rem;
-          font-weight: 800;
+          font-weight: 700;
           color: #233467;
           line-height: 1;
           margin: 0 0 25px 0;
@@ -327,7 +327,7 @@ height: 30px;
 
            .ignite-main-title {
           font-size: 21.4px;
-          font-weight: 800;
+          font-weight: 700;
           color: #233467;
           margin: 0 0 25px 0;
           line-height:1.2;
@@ -479,7 +479,7 @@ height: 20px;
 
         .ignite-main-title {
           font-size: 2rem !important;
-          font-weight: 800;
+          font-weight: 700;
           color: #233467;
           line-height: 1.2;
         }
@@ -502,7 +502,7 @@ height: 20px;
 
         .ignite-secondary-title {
           font-size: 1.2vw;
-          font-weight: 800;
+          font-weight: 700;
           background: linear-gradient(90deg, #00A491, #003E37);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;          
@@ -648,7 +648,7 @@ height: 20px;
 
         .ignite-main-title {
           font-size: 1.5rem !important;
-          font-weight: 800;
+          font-weight: 700;
           color: #233467;
           line-height: 1.2;
         }
@@ -671,7 +671,7 @@ height: 20px;
 
         .ignite-secondary-title {
           font-size: 1.2vw;
-          font-weight: 800;
+          font-weight: 700;
           background: linear-gradient(90deg, #00A491, #003E37);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;          

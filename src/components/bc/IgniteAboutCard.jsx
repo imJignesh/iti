@@ -327,7 +327,7 @@ export default function IgniteAboutCard() {
 
         .ignite-main-title {
           font-size: 2.5rem;
-          font-weight: 800;
+          font-weight: 700;
           color: #233467;
           line-height: 1.2;
           margin: 0 0 12px 0;
@@ -353,7 +353,7 @@ export default function IgniteAboutCard() {
 
         .ignite-secondary-title {
           font-size: 1.5vw;
-          font-weight: 800;
+          font-weight: 700;
           background: linear-gradient(90deg, #00a491, #003e37);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -504,7 +504,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
 
           .ignite-main-title {
             font-size: 2.5rem;
-            font-weight: 800;
+            font-weight: 700;
             color: #233467;
             line-height: 1;
             margin: 0 0 25px 0;
@@ -544,7 +544,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
 
           .ignite-main-title {
             font-size: 1.2rem;
-            font-weight: 800;
+            font-weight: 700;
             color: #233467;
             margin: 0 0 25px 0;
             text-align: center;
@@ -620,7 +620,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
   @media (min-width: 1536px) and (max-width: 1919px) {
   .ignite-main-title {
     font-size: 1.8rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #233467;
     line-height: 1.2;
     margin: 0 0 12px 0;
@@ -727,7 +727,7 @@ justify-content:space-between;
 }
     .ignite-main-title {
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #233467;
     line-height: 1.2;
     margin: 0 0 12px 0;

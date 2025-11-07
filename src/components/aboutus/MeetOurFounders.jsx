@@ -359,7 +359,7 @@ export default function MeetOurFounders() {
       }
            .testTitle {
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 700;
   max-width: 50%;
   color: var(--blue-color);
   margin: 40px auto;

@@ -87,7 +87,7 @@ const TrainersMessage = () => {
             textTransform: "uppercase",
             marginTop: "3vh",
             maxWidth: isMobile ? "100%" : "57%",
-            marginInline:"auto",
+            marginInline: "auto",
           }}
         >
           <span
@@ -165,7 +165,7 @@ const TrainersMessage = () => {
 
         h2 {
           color: #1b2e5b;
-          font-weight: 800;
+          font-weight: 700;
           font-size: 1.125rem;
           margin-bottom: 1.5rem;
           user-select: none;
@@ -174,7 +174,7 @@ const TrainersMessage = () => {
 
         h1 {
           color: #1b2e5b;
-          font-weight: 800;
+          font-weight: 700;
           font-size: 2.25rem;
           text-align: center;
           max-width: 48rem;
@@ -256,7 +256,7 @@ const TrainersMessage = () => {
           bottom: 20px;
           left: 86px;
           color: white;
-          font-weight: 800;
+          font-weight: 700;
           font-size: 1.5rem;
           line-height: 1.2;
           text-align: left;
@@ -271,7 +271,7 @@ const TrainersMessage = () => {
           margin-top: 1rem;
           padding: 0.75rem 2rem;
           border-radius: 25px;
-          font-weight: 800;
+          font-weight: 700;
           font-size: 1rem;
           letter-spacing: 0.1em;
           user-select: none;

@@ -155,7 +155,7 @@
 
 .homeCopy .aboutSection .aboutTitle {
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--blue-color);
   margin: 0 0 12px 0;
   line-height: 1.2;
@@ -168,7 +168,7 @@
       var(--green-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.04em;
 }
 
@@ -206,7 +206,7 @@
 
 .homeCopy .aboutSection .aboutStatBig {
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 700;
   background: linear-gradient(to right,
       var(--lightgreen-color),
       var(--green-color));
