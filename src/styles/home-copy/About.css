@@ -365,6 +365,10 @@
   .homeCopy .aboutSection .aboutStatLabel {
     font-size: 0.8rem;
   }
+
+  .mobile-mt-2 {
+    margin-top: 3rem !important;
+  }
 }
 
 @media (max-width:500px) {

@@ -313,11 +313,41 @@
     font-size: 14px !important;
     line-height: 1.4 !important;
   }
+
+  .uspSection .uspBtn {
+
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .uspSection .uspTitle,
+  .uspSection .uspItemTitle {
+    font-size: 16px !important;
+    line-height: 18px !important;
+  }
+
+  .uspSection .uspIconCircle {
+    padding: 12px;
+  }
 }
 
 @media (max-width: 425px) {
-  .uspSection .uspSwiper {
+
+  .uspSection .uspSwiper,
+  .uspSection .uspDesc {
     padding: 0;
+  }
+
+  .uspSection .uspRight {
+
+    padding-top: 3rem;
+  }
+
+  .uspSection .uspBtn {
+    margin: 0 0 5vw 0;
   }
 
   .uspRight {

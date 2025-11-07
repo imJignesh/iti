@@ -299,6 +299,10 @@
 }
 
 @media (max-width:600px) {
+  .footerWrap .footerDesc {
+    font-size: 15px;
+  }
+
   .footerWrap {
     padding: 30px 10px;
   }

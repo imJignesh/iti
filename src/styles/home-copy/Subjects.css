@@ -263,6 +263,10 @@
 }
 
 @media (max-width: 575px) {
+  .homeCopy .subjectSection {
+    padding: 80px 0 80px 0;
+  }
+
   .homeCopy .subjectSection .bgRect:nth-child(2) {
     top: 35%;
     left: 0;
@@ -315,7 +319,7 @@
 
 @media (max-width: 420px) {
   .homeCopy .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
-    padding: 10px 35px;
+    padding: 5px 15px;
   }
 
   .homeCopy .subjectSection .bgRect:nth-child(2) {

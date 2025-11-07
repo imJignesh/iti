@@ -357,17 +357,23 @@
   }
 
   .testimonialSection .testimonialPagination {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 
   .testimonialSection .testimonialSliderWrap .swiper-button-prev {
-    top: 90%;
+    bottom: 5%;
     left: 44%;
+    top: auto;
   }
 
   .testimonialSection .testimonialSliderWrap .swiper-button-next {
-    top: 90%;
+    top: auto;
     right: 44%;
+    bottom: 5%;
+  }
+
+  .testimonialSection .testimonialHeader {
+    margin: 0;
   }
 }
 
@@ -390,10 +396,12 @@
   .testimonialSection .testimonialCardText {
     padding: 15px;
   }
-  .testimonialSection .testimonialCard{
+
+  .testimonialSection .testimonialCard {
     min-height: 70vw;
     max-width: 70vw;
   }
+
   .testimonialSection .testimonialText {
     font-size: 0.8rem;
     line-height: 1.6;

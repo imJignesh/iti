@@ -536,15 +536,22 @@
 @media (max-width: 575px) {
   .homeCopy .testSection1 .testSubheading {
     font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .homeCopy .testSection1 {
+    padding: 0;
   }
 
   .homeCopy .testSection1 .testTitle {
     font-size: 20.4px !important;
     line-height: 23px;
   }
-  .homeCopy .testSection1 p{
-    font-size: 14px ;
+
+  .homeCopy .testSection1 p {
+    font-size: 14px;
   }
+
   .homeCopy .testSection1 .testCardTitle {
     font-size: 3rem;
   }

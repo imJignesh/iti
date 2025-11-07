@@ -387,7 +387,7 @@
 
 @media (max-width: 575px) {
   .homeCopy .hero {
-    padding: 25px 0 0 0;
+    padding: 15px 0 0 0;
     background: url(/images/banner-bg-mobile.png) no-repeat;
     background-size: 50vh 16vh;
     background-position: top 0vh right -2vh;
@@ -539,9 +539,9 @@
     padding: 10px 25px;
   }
 
-.homeCopy .hero .heroLeft div {
-        padding-top: 0px;
-    }
+  .homeCopy .hero .heroLeft div {
+    padding-top: 0px;
+  }
 
   .homeCopy .courseSection .mainCard .mainCardTitle {
     max-width: 100%;
@@ -560,27 +560,32 @@
 
   .homeCopy .hero .videoContainer,
   .homeCopy .hero .heroVideo {
-    height: 94vw;
+    height: 65vw;
   }
 
   .homeCopy .hero .heroRight .buttonGroup {
     width: 55vw;
   }
+
   .homeCopy .hero .heroLeft div {
-        padding-top: 0px;
-    }
-        .homeCopy .hero .heroRight .buttonGroup .buttonBlue, .homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
-        font-size: 0.8rem;
-                padding: 8px 10px;
-    }
-    .homeCopy .hero .heroVideo {
-        mask: url(/images/banner-image-right-m.png) no-repeat center top;
-        -webkit-mask: url(/images/banner-image-right-m.png) no-repeat center top;
-        -webkit-mask-size: 90%;
-        mask-size: 95%;
-    }
-        .homeCopy .hero .heroRight .buttonGroup {
-        justify-content: flex-start;
-        top: 40%;
-    }
+    padding-top: 0px;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup .buttonBlue,
+  .homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .homeCopy .hero .heroVideo {
+    mask: url(/images/banner-image-right-m.png) no-repeat center top;
+    -webkit-mask: url(/images/banner-image-right-m.png) no-repeat center top;
+    -webkit-mask-size: 90%;
+    mask-size: 100%;
+  }
+
+  .homeCopy .hero .heroRight .buttonGroup {
+    top: 63%;
+    bottom: auto;
+  }
 }

@@ -194,7 +194,7 @@ const About = () => {
             </div>
 
 
-            <a href="/join-free-demo-class/" className="nodecoration">
+            <a href="/join-free-demo-class/" className="nodecoration mobile-mt-2">
               <button className="buttonSkyBlue mainCardBtn">
                 GET A FREE DEMO{" "}
                 <Image

@@ -193,11 +193,11 @@ export default function Trainers() {
           
           /* Trainer Section - Refactored for global use with .trainers-global-container */
 
-          .${containerClass} .trainersSection {
-            padding: 100px 0 40px 0;
-            background: var(--white-bg);
-            text-align: center;
-          }
+          // .${containerClass} .trainersSection {
+          //   padding: 100px 0 40px 0;
+          //   background: var(--white-bg);
+          //   text-align: center;
+          // }
 
           .${containerClass} .trainersSection .trainersHeader {
             margin-bottom: 32px;
@@ -655,7 +655,12 @@ export default function Trainers() {
             .${containerClass} .trainersSection .trainerImg {
               object-fit: contain;
             }
+              .trainers-global-container .trainersSection .trainersSubheading{
+              padding-bottom: 10px;}
           }
+              .trainers-global-container .trainersSection .trainersPagination{
+              margin-top: 0;}
+              
         `}
       </style>
 

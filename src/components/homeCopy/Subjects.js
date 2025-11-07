@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
+const useIsMobile = (breakpoint = 768) => {
+  const [isMobile, setIsMobile] = useState(false);
 
-const subjectRows = [
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < breakpoint);
+    };
+
+    checkMobile();
+
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, [breakpoint]);
+
+  return isMobile;
+};
+
+const desktopSubjectRows = [
   [
     { name: "English", link: "/english-tutor-in-dubai/" },
     { name: "French", link: "/french-tutor-in-dubai/" },
@@ -26,7 +43,40 @@ const subjectRows = [
   ],
 ];
 
+const mobileSubjectRows = [
+  [
+    { name: "English", link: "/english-tutor-in-dubai/" },
+    { name: "French", link: "/french-tutor-in-dubai/" },
+  ],
+  [
+
+    { name: "Computer Science", link: "/computer-science-tutor-in-dubai/" },
+    { name: "Maths", link: "/maths-tutor-in-dubai/" },
+
+  ],
+  [
+    { name: "Economics", link: "/economics-tutor-in-dubai/" },
+    { name: "Accounting", link: "/accounting-tutor-in-dubai/" },
+
+
+  ],
+  [
+    { name: "Chemistry", link: "/chemistry-tutor-in-dubai/" },
+    { name: "Physics", link: "/physics-tutor-in-dubai/" },
+    { name: "Business Studies", link: "/business-studies-tutor-in-dubai/" },
+    { name: "Spanish", link: "/spanish-tutor-in-dubai/" },
+  ],
+  [
+    { name: "Psychology", link: "/psychology-tutor-in-dubai/" },
+    { name: "Biology", link: "/biology-tutor-in-dubai/" },
+
+  ],
+];
+
 export default function Subjects({ }) {
+  const isMobile = useIsMobile();
+  const subjectRows = isMobile ? mobileSubjectRows : desktopSubjectRows;
+  const bubbleClass = isMobile ? 'subjectBubblesSingleColumn' : 'subjectBubblesGrid';
   return (
     <section
       data-scroll
