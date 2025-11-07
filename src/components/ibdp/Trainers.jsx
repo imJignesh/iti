@@ -167,6 +167,19 @@ export default function Trainers() {
   // The new global container class is 'trainers-global-container'
   const containerClass = 'trainers-global-container';
 
+  const desktopTitle = (
+    <>
+      The Best IBDP <span className="highlight">Trainers</span> For Your<br />Success Journey
+    </>
+  );
+
+  const mobileTitle = (
+    <>
+      The Best IBDP <span className="highlight">Trainers</span> For Your Success Journey
+    </>
+  );
+
+  const currentTitle = isTrainersSwiper ? mobileTitle : desktopTitle;
   return (
     <>
       <style jsx global>
@@ -174,7 +187,7 @@ export default function Trainers() {
           /* Trainer Section - Refactored for global use with .trainers-global-container */
 
           .${containerClass} .trainersSection {
-            padding: 100px 0 40px 0;
+            padding: 100px 0 100px 0;
             background: var(--white-bg);
             text-align: center;
           }
@@ -578,10 +591,17 @@ export default function Trainers() {
           }
 
           @media (max-width: 575px) {
+          .trainers-global-container .trainersSection{
+            padding: 80px 0 80px 0;
+            }
             .${containerClass} .trainersSection .trainerImg {
               object-fit: contain;
             }
+              .trainers-global-container .trainersSection .trainersPagination{
+              margin-top: 0;}
           }
+              .trainers-global-container .trainersSection .trainersSwiperWrap{
+              margin-bottom: 0px;}
         `}
       </style>
 
@@ -592,10 +612,11 @@ export default function Trainers() {
             <div>
               <span className="SubHeading trainersSubheading">OUR TUTORS</span>
             </div>
-
             <h2 className="trainersTitle">
-              The Best IBDP <span className="highlight">Trainers</span> For Your<br />Success Journey
+              {/* --- NEW: Use the conditionally chosen title here --- */}
+              {currentTitle}
             </h2>
+
 
             {isTrainersSwiper ? (
               <div className="trainersSwiperWrap">

@@ -151,7 +151,7 @@ function UpsSection() {
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      className="py-5 px-2 fade-in-section"
+      className="usps px-2 fade-in-section"
       style={{ animationDelay: "0.1s" }}
     >
       <div className="container">
@@ -180,7 +180,7 @@ function UpsSection() {
               className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
             >
-              Highlight the word<span className="highlight"> IBDP Support</span> <br />in green instead of Ignite’s.
+              What Do Students Get From Ignite's <span className="highlight">IBDP Support?</span>
 
             </h2>
           </div>
@@ -244,6 +244,9 @@ function UpsSection() {
       </div>
 
       <style jsx>{`
+      .usps{
+      padding: 0 0 100px 0 ;
+      }
         .fade-in-section {
           opacity: 0;
           transform: translateY(20px);
@@ -282,6 +285,9 @@ function UpsSection() {
           }
         }
 @media (max-width: 575px) {
+.usps{
+      padding: 0 0 80px 0 ;
+      }
           .custom-grid {
   gap: .5rem;
 }

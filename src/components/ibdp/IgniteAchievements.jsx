@@ -16,11 +16,11 @@ export default function IgniteAchievements() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <div className=" pt-md-5 fade-in-section" data-scroll
+    <div className=" pt-md-5 fade-in-section ignite-achievements" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{ animationDelay: "0.1s" }}>
-      <div className="fade-in-section"
+      <div className="fade-in-section "
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
@@ -92,7 +92,7 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "40px" : "80px",
+                  fontSize: isMobile ? "30px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
                 }}>10+</div>
@@ -144,7 +144,7 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "40px" : "80px",
+                  fontSize: isMobile ? "30px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
                 }}>1K+</div>
@@ -197,7 +197,7 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "40px" : "80px",
+                  fontSize: isMobile ? "30px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
                 }}>7/7</div>
@@ -251,7 +251,7 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "40px" : "80px",
+                  fontSize: isMobile ? "30px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
                 }}>2K+</div>
@@ -458,6 +458,9 @@ export default function IgniteAchievements() {
         }
 
         @media (max-width: 575px) {
+          .ignite-achievements{
+          padding-top:80px;
+          }
           .cust-text {
             background: linear-gradient(90deg, #161664, #3F88BA) !important;
             color: white !important;

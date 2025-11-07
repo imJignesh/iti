@@ -668,8 +668,7 @@ export default function Trainers() {
             .${containerClass} .trainersSection .trainerImg {
               object-fit: contain;
             }
-              .trainers-global-container .trainersSection .container>div{
-              padding-bottom: 10px;}
+              
           }
               .trainers-global-container .trainersSection .trainersPagination{
               margin-top: 0;}

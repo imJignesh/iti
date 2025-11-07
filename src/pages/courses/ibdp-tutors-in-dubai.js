@@ -62,7 +62,7 @@ const IBDP = ({ headerHeight }) => {
         </section>
 
         {/* what we offer Start */}
-        <section className="achievementsSection">
+        <section className="what-we-offer-section" data-scroll-section>
           <div className="container">
             <div className="achievementsHeadings">
               <div

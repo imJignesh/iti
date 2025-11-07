@@ -357,11 +357,11 @@
   }
 
   .testimonialSection .testimonialPagination {
-    margin-top: 40px;
+    margin-top: 0;
   }
 
   .testimonialSection .testimonialSliderWrap .swiper-button-prev {
-    bottom: 5%;
+    bottom: -15%;
     left: 44%;
     top: auto;
   }
@@ -369,7 +369,7 @@
   .testimonialSection .testimonialSliderWrap .swiper-button-next {
     top: auto;
     right: 44%;
-    bottom: 5%;
+    bottom: -15%;
   }
 
   .testimonialSection .testimonialHeader {

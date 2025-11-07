@@ -207,7 +207,7 @@ section.post-detail-section {
     .innerpage .blogSection .blogCardTitle {
         font-size: 1.2rem;
         line-height: 1.2;
-        text-transform: uppercase;
+
     }
 
     .innerpage .blogSection .blogCardContent {
@@ -249,6 +249,21 @@ section.post-detail-section {
     .innerpage .blogSection .blogImg {
         width: 150px;
         height: 200px;
+
+    }
+
+    .innerpage .blogSection .blogCardDesc {
+        font-size: 0.8rem;
+    }
+
+    .innerpage .blogSection .blogLeft h2 {
+        width: 100%;
+    }
+
+    .innerpage .blogSection .blogCardTitle {
+        font-size: 1.rem;
+        line-height: 1;
+
     }
 }
 

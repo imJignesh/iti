@@ -180,7 +180,7 @@ export default function InfoCard() {
               >
                 {isMobile ? (
                   <>
-                    IBDP Tutors In Dubai, UAE For<br /> Curriculum Excellence
+                    IBDP Tutors In Dubai, UAE For Curriculum Excellence
                   </>
                 ) : (
                   <>
@@ -388,7 +388,7 @@ export default function InfoCard() {
                     data-scroll-repeat
                     style={{ animationDelay: "0.65s" }}
                   >
-                    GET A FREE DEMO CLASS + FREE STUDY RESOURCES
+                    GET A FREE DEMO CLASS+ FREE STUDY RESOURCES
                   </h2>
                   {submissionStatus === 'success' && (
                     <div className="alert alert-success text-center">
@@ -1243,6 +1243,7 @@ margin-block: 30px !important;
         }
          }
         @media (max-width: 575px) {
+        
   .cust-text {
     padding: 8px 15px 8px 15px !important;
     border: none !important;
@@ -1251,7 +1252,7 @@ margin-block: 30px !important;
     -o-transition: opacity.3s ease!important;
     transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
-    font-size: clamp(.7rem, 1.1vw, 1.1rem) !important;
+    font-size: 1rem !important;
     margin-top:6px!important;
     min-width: auto !important;
 }
@@ -1264,6 +1265,9 @@ margin-block: 30px !important;
   }
 }
         @media (min-width: 768px) {
+        .form-container {
+        padding:0;
+        }
   .cust-text {
     padding:  10px 14px 10px 20px !important;
     transition: opacity 0.3s ease !important;

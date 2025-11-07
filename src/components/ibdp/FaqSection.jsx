@@ -54,6 +54,21 @@ const FAQSection = () => {
     },
   ];
 
+  // --- NEW: Define the titles ---
+  const desktopTitle = (
+    <>
+      Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
+    </>
+  );
+
+  const mobileTitle = (
+    <>
+      Which ACT subjects does <span className="highlight"> Ignite</span> offer tutoring for?
+    </>
+  );
+
+  // --- NEW: Choose the title based on the mobile state ---
+  const currentTitle = isMobile ? mobileTitle : desktopTitle;
 
   return (
     <div
@@ -62,7 +77,7 @@ const FAQSection = () => {
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{
-        marginBottom: isMobile ? "40px" : "96px",
+        marginBottom: isMobile ? "0" : "96px",
         maxWidth: isMobile ? "95vw" : "90vw",
         backgroundImage: 'url("/assets/faqbg.png")',
         backgroundSize: "cover",
@@ -107,7 +122,8 @@ const FAQSection = () => {
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "20.4px" : "1.8rem"
               }}
             >
-              Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
+              {currentTitle}
+
             </h2>
 
             <p
@@ -117,8 +133,8 @@ const FAQSection = () => {
                 fontSize: isHighDpi ? "16px" : isMobile ? "14px" : "20px",
                 lineHeight: isMobile ? "1.5" : "1.2",
                 margin: isMobile ? "0 auto" : "0",
-                paddingLeft: isMobile ? "0.5rem" : "0",
-                paddingRight: isMobile ? "0.5rem" : "0",
+                paddingLeft: isMobile ? "0" : "0",
+                paddingRight: isMobile ? "0" : "0",
                 marginBottom: isMobile ? "15px" : "20px"
               }}
             >

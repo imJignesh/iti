@@ -250,4 +250,25 @@
   .what-we-offer {
     grid-template-columns: 1fr;
   }
+
+  .what-we-offer .icon-wrap img {
+    max-width: 60px;
+  }
+
+  .what-we-offer .step {
+    padding: 0;
+  }
+
+  .what-we-offer .icon-wrap::after {
+    bottom: 10px;
+    right: -10px;
+    font-size: 40px;
+  }
+
+  .what-we-offer .step-desc {
+    margin-top: 0;
+    font-size: 15px;
+
+    line-height: 1.2;
+  }
 }
