@@ -165,7 +165,7 @@ export default function InfoCard() {
         <div className="position-relative h-100" style={{ zIndex: 1 }}>
           <div className="row g-0 h-100">
             {/* Left Section - Now taking 8 columns (2/3) */}
-            <div className="col-lg-8 d-flex flex-column justify-content-center pe-lg-4 p-4 left-content">
+            <div className="col-lg-8 d-flex flex-column justify-content-center pe-lg-4 p-4 left-content v100">
               <h1
                 className="fw-bold text-white text-uppercase mb-3 fade-in-section"
                 data-scroll
@@ -1243,7 +1243,8 @@ margin-block: 30px !important;
         }
          }
         @media (max-width: 575px) {
-        
+        .v100{
+        padding-bottom:100px;}
   .cust-text {
     padding: 8px 15px 8px 15px !important;
     border: none !important;

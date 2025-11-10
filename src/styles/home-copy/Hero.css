@@ -476,9 +476,9 @@
     padding: 20px 15px;
   }
 
-  /* .v100 {
-    height: 100vh;
-  } */
+  .v100 {
+    padding-bottom: 100px;
+  }
 }
 
 @media (max-width: 425px) {
