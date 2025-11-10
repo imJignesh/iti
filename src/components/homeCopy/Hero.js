@@ -67,7 +67,7 @@ const Hero = () => {
 
     return (
         // The data-scroll-section is still needed here
-        <section className="hero revealClipRightToLeft v100" data-scroll-section>
+        <section className="hero revealClipRightToLeft " data-scroll-section>
             <div className="container">
                 <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
                     <div className="row heroMain">
@@ -77,7 +77,7 @@ const Hero = () => {
                                 data-scroll
                                 data-scroll-class="is-inview"
                                 data-scroll-repeat="true"
-                                className="fade-in-section heroMainHeading"
+                                className="fade-in-section heroMainHeading pt-3 pb-3"
                                 style={{ animationDelay: "0.4s" }}
                             >
                                 <h3 className="SubHeading">BEST TUTORS IN UAE</h3>
@@ -102,7 +102,7 @@ const Hero = () => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.8s" }}
                             >
-                                <p className="heroParagraph">
+                                <p className="heroParagraph pt-3 pb-3">
                                     <span>Improve Your Grades Today!</span>
                                     <b>
                                         We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, & more through our curriculum-specific approach & expert tutors in Dubai, guiding them toward a stronger understanding & lasting growth.

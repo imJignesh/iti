@@ -476,9 +476,7 @@
     padding: 20px 15px;
   }
 
-  .v100 {
-    padding-bottom: 100px !important;
-  }
+
 }
 
 @media (max-width: 425px) {

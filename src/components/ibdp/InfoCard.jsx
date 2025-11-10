@@ -1243,9 +1243,7 @@ margin-block: 30px !important;
         }
          }
         @media (max-width: 575px) {
-        .v100{
-        padding-bottom:100px; !important;
-        }
+        
   .cust-text {
     padding: 8px 15px 8px 15px !important;
     border: none !important;
