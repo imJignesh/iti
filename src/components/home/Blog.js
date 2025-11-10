@@ -86,7 +86,7 @@ const Blog = ({ locoScroll }) => {
                         >
                             Dive Into Our Signature Blogs
                         </div>
-                        <a href="/blogs" className="nodecoration">
+                        <a href="/blog" className="nodecoration">
                             <button
                                 data-scroll
                                 data-scroll-class="is-inview"
@@ -118,7 +118,7 @@ const Blog = ({ locoScroll }) => {
                                     className="blogCard fade-in-section"
                                     style={{ animationDelay: `${0.2 + i * 0.15}s` }}
                                 >
-                                    <a href={`/${blog.link}`} className="nodecoration"><img
+                                    <a href={`/blog/${blog.link}`} className="nodecoration"><img
                                         src={blog.img}
                                         alt="blog"
                                         data-scroll
@@ -131,7 +131,7 @@ const Blog = ({ locoScroll }) => {
                                         <div className="blogCardTitle">{blog.title}</div>
                                         <div className="blogCardDesc">{blog.desc}</div>
                                         <span className="blogCardLine"></span>
-                                        <a href={blog.link} target="_blank" rel="noopener noreferrer">
+                                        <a href={`/blog/${blog.link}`} target="_blank" rel="noopener noreferrer">
                                             <button className="blogReadMoreBtn buttonSkyBlue">
                                                 READ MORE
                                                 <span className="blogReadMoreArrow">

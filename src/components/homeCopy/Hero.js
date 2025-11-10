@@ -67,7 +67,7 @@ const Hero = () => {
 
     return (
         // The data-scroll-section is still needed here
-        <section className="hero revealClipRightToLeft" data-scroll-section>
+        <section className="hero revealClipRightToLeft v100" data-scroll-section>
             <div className="container">
                 <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
                     <div className="row heroMain">

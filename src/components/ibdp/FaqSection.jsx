@@ -57,13 +57,14 @@ const FAQSection = () => {
   // --- NEW: Define the titles ---
   const desktopTitle = (
     <>
-      Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
+
+      Everything You Need To Know About <span className="highlight"> IBDP</span> Tutoring
     </>
   );
 
   const mobileTitle = (
     <>
-      Which ACT subjects does <span className="highlight"> Ignite</span> offer tutoring for?
+      Everything You Need To Know About <span className="highlight"> IBDP</span> Tutoring
     </>
   );
 
@@ -118,7 +119,7 @@ const FAQSection = () => {
                 animationDelay: "0.2s",
                 color: "#19245E",
                 fontWeight: 800,
-                margin: "20px",
+                marginBottom: "20px",
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "20.4px" : "1.8rem"
               }}
             >
@@ -138,7 +139,8 @@ const FAQSection = () => {
                 marginBottom: isMobile ? "15px" : "20px"
               }}
             >
-              Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
+              Get answers on personalized IBDP study plans, exam prep, & subject support.
+            </p>
           </div>
 
           {/* Right Section */}

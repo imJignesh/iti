@@ -475,6 +475,10 @@
     font-weight: 600;
     padding: 20px 15px;
   }
+
+  .v100 {
+    height: 100vh;
+  }
 }
 
 @media (max-width: 425px) {

@@ -57,13 +57,13 @@ const FAQSection = () => {
   // --- NEW: Define the titles ---
   const desktopTitle = (
     <>
-      Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
+      Common Questions About Our<span className="highlight"> Ignite</span> Tutoring Programs
     </>
   );
 
   const mobileTitle = (
     <>
-      Which ACT subjects does<span className="highlight"> Ignite</span> offer tutoring for?
+      Common Questions About Our<span className="highlight"> Ignite</span> Tutoring Programs
     </>
   );
 
@@ -118,7 +118,7 @@ const FAQSection = () => {
                 animationDelay: "0.2s",
                 color: "#19245E",
                 fontWeight: 800,
-                margin: "20px",
+                marginBottom: "20px",
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "1.2rem" : "1.8rem"
               }}
             >
@@ -138,7 +138,8 @@ const FAQSection = () => {
                 marginBottom: isMobile ? "15px" : "20px"
               }}
             >
-              Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
+              Learn how Ignite helps MYP students strengthen skills & confidence for future grades.
+            </p>
           </div>
 
           {/* Right Section */}

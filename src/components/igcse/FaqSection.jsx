@@ -108,7 +108,8 @@ const FAQSection = () => {
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem"
               }}
             >
-              Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
+
+              Frequently Asked Questions About<span className="highlight"> IGCSE</span> Tutoring Support
             </h2>
 
             <p
@@ -123,7 +124,8 @@ const FAQSection = () => {
                 marginBottom: isMobile ? "15px" : "20px"
               }}
             >
-              Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
+              Discover how Ignite’s expert tutors guide you toward better grades & deeper understanding.
+            </p>
           </div>
 
           {/* Right Section */}

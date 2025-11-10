@@ -662,7 +662,7 @@ export default function PostDetail() {
                                                         <div className="p-3 position-relative">
 
                                                             {featuredImage && (
-                                                                <a href={`/${postSlug}`} rel="noopener noreferrer">
+                                                                <a href={`/blog/${postSlug}`} rel="noopener noreferrer">
                                                                     <img
                                                                         src={featuredImage}
                                                                         className="card-img-top"
@@ -715,7 +715,7 @@ export default function PostDetail() {
                                                                     </div>
                                                                 </div>
 
-                                                                <a href={`/${postSlug}`} rel="noopener noreferrer">
+                                                                <a href={`/blog/${postSlug}`} rel="noopener noreferrer">
                                                                     <h5
                                                                         className="card-title"
                                                                         dangerouslySetInnerHTML={{ __html: post.title.rendered }}
@@ -730,7 +730,7 @@ export default function PostDetail() {
                                                                 />
 
                                                                 <a
-                                                                    href={`/${postSlug}`}
+                                                                    href={`/blog/${postSlug}`}
                                                                     className="btn btn-primary rounded-circle position-absolute m-4 d-flex align-items-center justify-content-center"
                                                                     aria-label="Read More"
                                                                 >

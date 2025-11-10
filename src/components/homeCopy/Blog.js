@@ -120,7 +120,7 @@ const Blog = () => {
                         >
                             Dive Into Our Signature Blogs
                         </div>
-                        <a href="/blogs" className="nodecoration mobile-hide">
+                        <a href="/blog" className="nodecoration mobile-hide">
                             <button
                                 data-scroll
                                 data-scroll-class="is-inview"
@@ -151,7 +151,7 @@ const Blog = () => {
                                     className="fade-in-section blogCard"
                                     style={{ animationDelay: "0.2s" }}
                                 >
-                                    <a href={`/${blog.link}`} className="nodecoration"><img
+                                    <a href={`/blog/${blog.link}`} className="nodecoration"><img
                                         src={blog.img}
                                         alt="blog"
                                         data-scroll
@@ -164,7 +164,7 @@ const Blog = () => {
                                         <div className="blogCardTitle">{blog.title}</div>
                                         <div className="blogCardDesc">{blog.desc}</div>
                                         <span className="blogCardLine"></span>
-                                        <a href={blog.link} className="nodecoration">
+                                        <a href={`/blog/${blog.link}`} className="nodecoration">
                                             <button className="blogReadMoreBtn buttonSkyBlue">
                                                 READ MORE
                                                 <span className="blogReadMoreArrow">
@@ -182,7 +182,7 @@ const Blog = () => {
                             ))}
                     </div>
 
-                    <a href="/blogs" className="nodecoration d-lg-none">
+                    <a href="/blog" className="nodecoration d-lg-none">
                         <button
                             data-scroll
                             data-scroll-class="is-inview"
