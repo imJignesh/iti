@@ -771,6 +771,16 @@ bottom: 5%;
 }
   }
 @media (max-width: 575px) {
+.ignite-section {
+        padding: 80px 0px;
+}
+        .subtitle-wrapper{
+         margin-top:0;
+         
+        }
+          .subtitle-wrapper >div{
+          margin-bottom:0 !important;
+            }
           .custom-grid {
   gap: .5rem;
 }

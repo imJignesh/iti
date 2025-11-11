@@ -608,6 +608,10 @@ function CourseCard() {
 
         /* Responsive adjustments */
         @media (max-width: 576px) {
+        .mobile-version {
+            padding-top:0 !important;
+            padding-bottom:0 !important;
+          }
           .mobile-card-header {
             padding: 1rem !important;
             min-height: 70px !important;

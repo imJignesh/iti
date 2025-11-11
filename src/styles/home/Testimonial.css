@@ -378,6 +378,10 @@
 }
 
 @media (max-width: 500px) {
+  .testimonialSection {
+    padding-bottom: 44px;
+  }
+
   .testimonialSection .testimonialText {
     font-size: 0.9rem;
     line-height: 1.45;

@@ -568,6 +568,22 @@ export default function SubjectsCard() {
         }
 
         @media (max-width: 575px) {
+        .subjectSection {
+          padding: 80px 0 ;
+margin:0 !important;
+        }
+        .subjectLeft {
+            min-width: 100%;
+            gap: 0;
+          }
+           
+            .subjectSection .subjectLeft span{
+            line-height: 1.6;
+            margin-bottom: 0;
+            }
+            .subjectTitle{
+            padding-top:20px;
+            }
           .subjectLeft {
             min-width: 100%;
           }
