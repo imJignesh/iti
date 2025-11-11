@@ -246,10 +246,29 @@ section.post-detail-section {
 }
 
 @media (max-width: 575px) {
+    .innerpage .blogSection {
+        padding: 50px 0 40px 0;
+
+    }
+
     .innerpage .blogSection .blogImg {
         width: 150px;
         height: 200px;
 
+    }
+
+    .innerpage .blogSection .blogCard {
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .innerpage .blogSection .blogRight {
+        gap: 5px;
+    }
+
+    .innerpage .blogSection .container>div {
+        gap: 0 !important;
     }
 
     .innerpage .blogSection .blogCardDesc {

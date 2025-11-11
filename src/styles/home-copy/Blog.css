@@ -240,10 +240,16 @@
 
   .homeCopy .blogSection .blogCard {
     flex-direction: column;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .homeCopy .blogSection .blogLeft h2 {
     width: 100%;
+  }
+
+  .homeCopy .blogSection .blogRight {
+    gap: 5px;
   }
 
   /* .homeCopy .blogSection .blogImg {
@@ -252,6 +258,10 @@
   } */
   .mobile-hide {
     display: none;
+  }
+
+  .homeCopy .blogSection .container>div {
+    gap: 0 !important;
   }
 }
 

@@ -289,6 +289,7 @@ function UpsSection() {
       padding: 0 0 80px 0 ;
       }
           .custom-grid {
+          margin-bottom:2rem;
   gap: .5rem;
 }
   .cust-text {

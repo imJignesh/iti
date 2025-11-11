@@ -216,6 +216,10 @@
     width: 150px;
     height: 200px;
   }
+
+  .homeCopy .blogSection .container>div {
+    gap: 0 !important;
+  }
 }
 
 @media (max-width: 440px) {

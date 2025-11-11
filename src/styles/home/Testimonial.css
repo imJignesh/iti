@@ -292,7 +292,7 @@
 
 @media (max-width: 991px) {
   .testimonialSection {
-    padding: 0;
+    padding-top: 0;
   }
 }
 

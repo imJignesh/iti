@@ -103,7 +103,7 @@ const FAQSection = () => {
                 animationDelay: "0.2s",
                 color: "#19245E",
                 fontWeight: 800,
-                marginBottom: "20px",
+                margin: isMobile ? "20px auto" : "0 0 20px 0",
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "1.8rem"
               }}
             >
