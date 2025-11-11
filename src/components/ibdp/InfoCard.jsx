@@ -290,7 +290,7 @@ export default function InfoCard() {
               </div>
 
               <p
-                className="text-white mb-4"
+                className={`text-white mb-4 ${isMobile ? 'pt-3' : ''}`}
                 style={{
                   maxWidth: "750px",
                   fontSize: "1.2rem",
@@ -303,7 +303,7 @@ export default function InfoCard() {
                 We specialize in expert tutoring support for the IB Diploma Programme across all subject groups. Our structured approach combines in-depth resources, focused training, & rigorous testing for consistent results.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 btnwraper">
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}
@@ -1243,7 +1243,13 @@ margin-block: 30px !important;
         }
          }
         @media (max-width: 575px) {
-        
+        .text-white.mb-4:last-of-type {
+          padding: 1rem !important;
+          line-height: 1.6 !important;
+        }
+          .info-row{
+            margin-top:1rem !important;
+          }
   .cust-text {
     padding: 8px 15px 8px 15px !important;
     border: none !important;
@@ -1253,7 +1259,7 @@ margin-block: 30px !important;
     transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
     font-size: 1rem !important;
-    margin-top:6px!important;
+    margin:10px auto!important;
     min-width: auto !important;
 }
 

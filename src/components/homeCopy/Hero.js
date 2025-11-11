@@ -13,6 +13,7 @@ const useDeviceCheck = (breakpoint = 992) => {
     // Start as undefined to avoid hydration mismatch with Next.js SSR
     const [isMobile, setIsMobile] = useState(undefined);
 
+
     useEffect(() => {
         // Function to determine if the screen width is less than the breakpoint
         const checkDevice = () => {
@@ -64,6 +65,11 @@ const Hero = () => {
             </h1>
         );
     };
+    let mobileClass = '';
+    if (isMobile) {
+        mobileClass = 'pt-3 pb-3';
+    }
+
 
     return (
         // The data-scroll-section is still needed here
@@ -77,7 +83,7 @@ const Hero = () => {
                                 data-scroll
                                 data-scroll-class="is-inview"
                                 data-scroll-repeat="true"
-                                className="fade-in-section heroMainHeading pt-3 pb-3"
+                                className={`fade-in-section heroMainHeading ${mobileClass}`}
                                 style={{ animationDelay: "0.4s" }}
                             >
                                 <h3 className="SubHeading">BEST TUTORS IN UAE</h3>
