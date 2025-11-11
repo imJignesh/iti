@@ -133,7 +133,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Grade 8 <br />to 12 Support
+                  Grade 8 <br />to 12Support
                 </div>
 
                 <div
@@ -1098,6 +1098,13 @@ margin-block: 30px !important;
         }
          }
         @media (max-width: 575px) {
+        .text-white.mb-4:last-of-type {
+          padding: 1rem !important;
+          line-height: 1.6 !important;
+        }
+          .info-row{
+            margin-top:1rem !important;
+          }
   .cust-text {
    padding: 8px 15px 8px 15px !important;
     border: none !important;
@@ -1107,7 +1114,7 @@ margin-block: 30px !important;
     transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
     font-size: 1rem !important;
-    margin-top:6px!important;
+    margin:10px auto!important;
     min-width: auto !important;
 }
 

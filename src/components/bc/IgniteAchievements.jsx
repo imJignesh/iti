@@ -489,6 +489,7 @@ export default function IgniteAchievements() {
           .custom-grid {
   gap: .5rem;
 }
+  
   .cust-text {
     background: linear-gradient(90deg, #161664, #3F88BA) !important;
     color: white !important;
