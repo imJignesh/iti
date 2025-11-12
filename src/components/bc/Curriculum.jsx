@@ -1,7 +1,33 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Add useEffect for the hook
+
+// 1. Define the useDeviceCheck hook locally for this example, or
+//    import it if it's in a separate file (e.g., import useDeviceCheck from './hooks/useDeviceCheck';)
+
+const useDeviceCheck = (breakpoint = 992) => {
+  const [isMobile, setIsMobile] = useState(undefined);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth < breakpoint);
+      }
+    };
+
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+
+    return () => window.removeEventListener('resize', checkDevice);
+  }, [breakpoint]);
+
+  // Ensure it returns false/true after client-side rendering
+  return isMobile === undefined ? false : isMobile;
+};
 
 export default function IBCurriculumStages() {
+  // 2. Call the hook to define the isMobile variable
+  const isMobile = useDeviceCheck(768); // Using 768px for a standard mobile breakpoint, adjust as needed
+
   return (
     <div
       className="overflow-hidden fade-in-section container1 ibcurriculum"
@@ -16,11 +42,9 @@ export default function IBCurriculumStages() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: "1140px", animationDelay: "0.15s" }}
+        style={{ maxWidth: "1140px", animationDelay: "0.15s", padding: isMobile ? "0" : undefined }}
       >
-        <div
-          className="curriculumSubSection"
-        >
+        <div className="curriculumSubSection">
           <div className="SubHeading testSubheading">
             STAGES OF THE CURRICULUM
           </div>
@@ -32,14 +56,21 @@ export default function IBCurriculumStages() {
               className="fade-in-section testTitle"
               style={{ animationDelay: "0.2s" }}
             >
-              Step-By-Step Guidance Through The <br />{" "}
-              <span className="highlight">British Curriculum</span>
+              Step-By-Step Guidance Through The
+              {/* 3. Conditional rendering of <br /> and space */}
+              {!isMobile ? (
+                <>
+                  <br />
+                  {' '}
+                </>
+              ) : null}
+              <span className="highlight"> British Curriculum</span>
             </h2>
           </div>
         </div>
       </div>
 
-      {/* Cards Section */}
+      {/* Cards Section - Rest of your code remains the same */}
       <div
         className="mx-auto fade-in-section"
         data-scroll
@@ -67,12 +98,13 @@ export default function IBCurriculumStages() {
               </div>
               <div className="divider"></div>
               <div className="card-description">
-                Ignite’s expert British Curriculum tutors offer tailored support, curated resources, & exam-focused strategies to help IGCSE students excel across subjects & boards like CAIE, Edexcel, & Oxford AQA.
+                Ignite’s expert British Curriculum tutors offer tailored support,
+                curated resources, & exam-focused strategies to help IGCSE
+                students excel across subjects & boards like CAIE, Edexcel, &
+                Oxford AQA.
               </div>
             </div>
-            <div
-              className="text-center"
-            >
+            <div className="text-center">
               <a
                 href="/courses/igcse-tutors-in-dubai/"
                 style={{ textDecoration: "none" }}
@@ -80,7 +112,8 @@ export default function IBCurriculumStages() {
                 <button
                   className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                   style={{
-                    background: "linear-gradient(90deg, #00A491, #003E37)",
+                    background:
+                      "linear-gradient(90deg, #00A491, #003E37)",
                     color: "white",
                     padding: "12px 14px 12px 20px",
                     border: "none",
@@ -97,22 +130,25 @@ export default function IBCurriculumStages() {
                     style={{
                       width: "2.5rem",
                       height: "2.5rem",
-                      background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                      background:
+                        "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
                       marginLeft: "2.1rem",
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="british curriculum tutors in dubai" width={16} height={16} />
+                    <img
+                      src="/assets/arrowright.png"
+                      alt="british curriculum tutors in dubai"
+                      width={16}
+                      height={16}
+                    />
                   </div>
                 </button>
               </a>
-
             </div>
           </div>
 
           {/* MYP Card */}
-          <div
-            className="card1 card-myp"
-          >
+          <div className="card1 card-myp">
             <div>
               <div className="card-title2 card-title-myp">
                 BRITISH
@@ -137,12 +173,13 @@ export default function IBCurriculumStages() {
               </div>
               <div className="divider"></div>
               <div className="card-description">
-                At Ignite, our subject-specialist A-Level tutors offer expert guidance, personalised strategies, & rigorous academic support to help students boost grades, build confidence, & secure top university placements.
+                At Ignite, our subject-specialist A-Level tutors offer expert
+                guidance, personalised strategies, & rigorous academic support to
+                help students boost grades, build confidence, & secure top
+                university placements.
               </div>
             </div>
-            <div
-              className="text-center"
-            >
+            <div className="text-center">
               <a
                 href="/courses/a-level-tutors-in-dubai/"
                 style={{ textDecoration: "none" }}
@@ -150,7 +187,8 @@ export default function IBCurriculumStages() {
                 <button
                   className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                   style={{
-                    background: "linear-gradient(90deg,#161664, #3F88BA)",
+                    background:
+                      "linear-gradient(90deg,#161664, #3F88BA)",
                     color: "white",
                     padding: "12px 14px 12px 20px",
                     border: "none",
@@ -167,11 +205,17 @@ export default function IBCurriculumStages() {
                     style={{
                       width: "2.5rem",
                       height: "2.5rem",
-                      background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                      background:
+                        "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
                       marginLeft: "2.1rem",
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="british curriculum tutors in dubai" width={16} height={16} />
+                    <img
+                      src="/assets/arrowright.png"
+                      alt="british curriculum tutors in dubai"
+                      width={16}
+                      height={16}
+                    />
                   </div>
                 </button>
               </a>
@@ -181,12 +225,14 @@ export default function IBCurriculumStages() {
       </div>
 
       <style jsx>{`
-        .container1{
-  max-width:90vw !important;
-  margin:0 auto !important;
-  }
-    .ibcurriculum{
-  padding:60px 20px;}
+        // ... (Your existing styles)
+        .container1 {
+          max-width: 90vw !important;
+          margin: 0 auto !important;
+        }
+        .ibcurriculum {
+          padding: 60px 20px;
+        }
         .fade-in-section {
           opacity: 0;
           transform: translateY(20px);
@@ -377,19 +423,19 @@ export default function IBCurriculumStages() {
             grid-template-columns: 1fr;
             gap: 1.5rem;
           }
-            .card1{
-            padding:30px 40px;
-                min-height: auto;        /* remove forced height */
-    justify-content: flex-start; 
-            }
-      .card-description {
-    margin-bottom: 20px; /* keep some spacing before button */
-  }
+          .card1 {
+            padding: 30px 40px;
+            min-height: auto; /* remove forced height */
+            justify-content: flex-start;
+          }
+          .card-description {
+            margin-bottom: 20px; /* keep some spacing before button */
+          }
           .program {
-            font-size: 35px!important
+            font-size: 35px !important;
           }
           .program1 {
-            font-size: 35px!important
+            font-size: 35px !important;
           }
           .curriculumSubHeading {
             font-size: 1.2rem;
@@ -443,93 +489,95 @@ export default function IBCurriculumStages() {
             font-size: 14px;
           }
         }
-          @media (max-width: 575px) {
+        @media (max-width: 575px) {
+          .ibcurriculum {
+            padding: 0 20px;
+          }
           .custom-grid {
-  gap: .5rem;
-}
-  .container1{
-  max-width:90vw !important;
-  margin:0 auto !important;
-  }
-  .cust-text {
-                  background: linear-gradient(90deg, #00A491, #003E37),
-    color: white !important;
-    padding: 8px 8px 8px 13px !important;
-    border: none !important;
-    -webkit-transition: opacity .3s ease !important;
-    -moz-transition: opacity.3s ease!important;
-    -o-transition: opacity.3s ease!important;
-    transition: opacity .3s ease !important;
-    letter-spacing: 1px !important;
-    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
-    margin-top: 45px !important;
-    font-weight:600 !important;
-  }
+            gap: 0.5rem;
+          }
+          .container1 {
+            max-width: 100vw !important;
+            margin: 0 auto !important;
+          }
+          .cust-text {
+            background: linear-gradient(90deg, #00a491, #003e37);
+            color: white !important;
+            padding: 8px 8px 8px 13px !important;
+            border: none !important;
+            -webkit-transition: opacity 0.3s ease !important;
+            -moz-transition: opacity 0.3s ease !important;
+            -o-transition: opacity 0.3s ease !important;
+            transition: opacity 0.3s ease !important;
+            letter-spacing: 1px !important;
+            font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+            margin-top: 45px !important;
+            font-weight: 600 !important;
+          }
 
-  .custom-height {
-    width: 30px !important;
-    height: 30px !important;
-    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
-    animation-delay: 0.75s !important;
-    margin-left: 1rem !important;
-  }
-}
-  @media (min-width: 1536px) and (max-width: 1919px) {
-  .curriculumSubHeading {
-    font-size: calc(1.6vw - 5px);
-  }
-  
-  .curriculumTitle,
-  .curriculumSubtitle {
-    font-size: calc(2vw - 5px);
-  }
-  
-  .card-title,
-  .card-title2 {
-    font-size: 40px; /* 45px - 5px */
-  }
-  
-  .card-title .program,
-  .card-title-myp .program1 {
-    font-size: 80px; /* 85px - 5px */
-  }
-  
-  .card-description {
-    font-size: 15px; /* 20px - 5px */
-  }
-  
-  .explore-button {
-    font-size: 11px; /* 16px - 5px */
-    padding: 13px 30px; /* Reduced padding proportionally */
-  }
-  
-  .custom-grid {
-    gap: .5rem;
-    margin-bottom:3.5rem;
-  }
+          .custom-height {
+            width: 30px !important;
+            height: 30px !important;
+            background: linear-gradient(90deg, #e7f6ff, #a3caf5) !important;
+            animation-delay: 0.75s !important;
+            margin-left: 1rem !important;
+          }
+        }
+        @media (min-width: 1536px) and (max-width: 1919px) {
+          .curriculumSubHeading {
+            font-size: calc(1.6vw - 5px);
+          }
 
-  .cust-text {
-    color: white !important;
-padding: 10px 8px 10px 15px !important;
-    border: none !important;
-    -webkit-transition: opacity .3s ease !important;
-    -moz-transition: opacity .3s ease !important;
-    -o-transition: opacity .3s ease !important;
-    transition: opacity .3s ease !important;
-    letter-spacing: 1px !important;
-    font-size: clamp(0.7rem, 0.9rem, 1.1rem) !important;
-    margin-top: -17px !important;
-    font-weight: 600 !important;
-  }
+          .curriculumTitle,
+          .curriculumSubtitle {
+            font-size: calc(2vw - 5px);
+          }
 
-  .custom-height {
-        width: 30px !important;
-        height: 30px !important;
-    animation-delay: 0.75s !important;
-    margin-left: 1rem !important;
-  }
+          .card-title,
+          .card-title2 {
+            font-size: 40px; /* 45px - 5px */
+          }
 
-}
+          .card-title .program,
+          .card-title-myp .program1 {
+            font-size: 80px; /* 85px - 5px */
+          }
+
+          .card-description {
+            font-size: 15px; /* 20px - 5px */
+          }
+
+          .explore-button {
+            font-size: 11px; /* 16px - 5px */
+            padding: 13px 30px; /* Reduced padding proportionally */
+          }
+
+          .custom-grid {
+            gap: 0.5rem;
+            margin-bottom: 3.5rem;
+          }
+
+          .cust-text {
+            color: white !important;
+            padding: 10px 8px 10px 15px !important;
+            border: none !important;
+            -webkit-transition: opacity 0.3s ease !important;
+            -moz-transition: opacity 0.3s ease !important;
+            -o-transition: opacity 0.3s ease !important;
+            transition: opacity 0.3s ease !important;
+            letter-spacing: 1px !important;
+            font-size: clamp(0.7rem, 0.9rem, 1.1rem) !important;
+            margin-top: -17px !important;
+            font-weight: 600 !important;
+          }
+
+          .custom-height {
+            width: 30px !important;
+            height: 30px !important;
+            animation-delay: 0.75s !important;
+            margin-left: 1rem !important;
+          }
+        }
       `}</style>
     </div>
   );

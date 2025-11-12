@@ -129,7 +129,7 @@ export default function IgniteAboutCard() {
           <div className="d-flex flex-column align-items-center gap-2 mb-4 mb-md-0">
             <h3 className="heading-title gradient-text">TRAINING</h3>
             <p className="heading-subtitle">
-              Engaging sessions with experts to                 <br className="d-none d-md-block" />
+              Engaging sessions with experts to <br className="d-none d-md-block" />
               strengthen core foundations.
             </p>
           </div>
@@ -780,7 +780,7 @@ bottom: 5%;
 .ignite-section {
         padding: 80px 0px;
                 max-width: 100%;
-}
+        }
         .subtitle-wrapper{
          margin-top:0;
          

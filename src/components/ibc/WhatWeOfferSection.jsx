@@ -33,7 +33,7 @@ const WhatWeOfferSection = () => {
                 <div className="container what-we-offer">
                     <div className="step">
                         <div className="icon-wrap" data-step="01">
-                            <img src="/images/school.png" alt="School Options" />
+                            <img src="images/school.png" alt="School Options" />
                         </div>
                         <div className="step-title">SCHOOL OPTIONS</div>
                         <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
@@ -41,7 +41,7 @@ const WhatWeOfferSection = () => {
 
                     <div className="step">
                         <div className="icon-wrap" data-step="02">
-                            <img src="/images/idealcur.png" alt="Ideal Curriculum" />
+                            <img src="images/idealcur.png" alt="Ideal Curriculum" />
                         </div>
                         <div className="step-title">IDEAL CURRICULUM</div>
                         <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
@@ -49,7 +49,7 @@ const WhatWeOfferSection = () => {
 
                     <div className="step">
                         <div className="icon-wrap" data-step="03">
-                            <img src="/images/subject.png" alt="Subject Choices" />
+                            <img src="images/subject.png" alt="Subject Choices" />
                         </div>
                         <div className="step-title">SUBJECT CHOICES</div>
                         <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
@@ -57,18 +57,16 @@ const WhatWeOfferSection = () => {
 
                     <div className="step">
                         <div className="icon-wrap" data-step="04">
-                            <img src="/images/universitypath.png" alt="University Pathways" />
+                            <img src="images/universitypath.png" alt="University Pathways" />
                         </div>
                         <div className="step-title">UNIVERSITY PATHWAYS</div>
                         <div className="step-desc">Map a clear, strategic path to top international universities.</div>
                     </div>
                 </div>
+
             </section>
             <style jsx>{`
             @media (max-width: 575px) {
-            .what-we-offer-section{
-                padding:80px 0;
-            }
                 .what-we-offer-section .SubHeading { 
                     margin: 0;
                 }

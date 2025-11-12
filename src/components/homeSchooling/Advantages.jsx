@@ -75,7 +75,7 @@ const AdvantagesCarousel = () => {
             <div className="mobile-layout">
                 <div className="section-header">
                     <div
-                        className="text-center mb-5 fade-in-section"
+                        className="text-center mb-5 fade-in-section advheader"
                         data-scroll
                         data-scroll-class="is-inview"
                         data-scroll-repeat
@@ -95,46 +95,16 @@ const AdvantagesCarousel = () => {
 
                         {/* Main title */}
                         <h2
-                            className="fw-bold mb-0 fade-in-section"
                             data-scroll
                             data-scroll-class="is-inview"
-                            data-scroll-repeat
-                            style={{
-                                animationDelay: "0.3s",
-                                fontSize: isMobile ? "1.5rem" : "2.5rem",
-                                lineHeight: "1.1",
-                                textTransform: "uppercase",
-                                marginTop: "3vh"
-                            }}
+                            data-scroll-repeat="true"
+                            className="fade-in-section testTitle"
+                            style={{ animationDelay: "0.2s" }}
                         >
-                            <span
-                                style={{
-                                    background: "linear-gradient(135deg, #3F88BA, #161664)",
-                                    WebkitBackgroundClip: "text",
-                                    WebkitTextFillColor: "transparent"
-                                }}
-                            >
-                                Breaking Free From The
-                            </span>{" "}
-                            <span
-                                style={{
-                                    background: "linear-gradient(135deg, #00A491, #003E37)",
-                                    WebkitBackgroundClip: "text",
-                                    WebkitTextFillColor: "transparent"
-                                }}
-                            >
-                                One-Size-Fits-All
-                            </span>{" "}
-                            <span
-                                style={{
-                                    background: "linear-gradient(135deg, #3F88BA, #161664)",
-                                    WebkitBackgroundClip: "text",
-                                    WebkitTextFillColor: "transparent"
-                                }}
-                            >
-                                Model
-                            </span>
+
+                            Breaking Free From The <span className="highlight">One-Size-Fits-All </span>Model
                         </h2>
+
                     </div>
                 </div>
 
@@ -487,12 +457,12 @@ const AdvantagesCarousel = () => {
                     }
 
                     .desktop-card-text {
-                              font-size: 18px;
-        color: #233467;
-        line-height: 1.6;
-        margin: 0;
-        font-weight: 600;
-                    }
+                        font-size: 18px;
+                        color: #233467;
+                        line-height: 1.6;
+                        margin: 0;
+                        font-weight: 600;
+                                    }
 
                     .desktop-carousel-dots {
                         display: flex;
@@ -524,13 +494,32 @@ const AdvantagesCarousel = () => {
                         height: 3px;
                     }
                 }
-                                    @media (max-width: 480px) {
-                                        .advantages-container {
-                    width: 95vw;
-                    padding: 0px 0px;
-                    margin: 0 auto;
+                @media (max-width: 575px) {
+                    .mobile-icon {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    .mobile-card{
+                        padding: 10px 25px;
+                    }
+                    .mobile-cards{
+                        padding: 10px 0px;
+                    }
+                    .mobile-title2, .mobile-title {
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    .advheader{
+                        margin-bottom:0px !important;
+                    }
                 }
-                                    }
+                @media (max-width: 480px) {
+                    .advantages-container {
+                        width: 95vw;
+                        padding: 0px 0px;
+                        margin: 0 auto;
+                    }
+                }
 
             `}</style>
         </div>

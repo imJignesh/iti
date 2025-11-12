@@ -3,21 +3,21 @@
 import { useEffect, useState } from "react";
 
 export default function SubjectsCard() {
-    const [isMobile, setIsMobile] = useState(false);
-    const [isMediumScreen, setIsMediumScreen] = useState(false);
-  
-    useEffect(() => {
-      const checkDevice = () => {
-        const width = window.innerWidth;
-        setIsMobile(width <= 1100);
-        setIsMediumScreen(width >= 1536 && width <= 1919);
-      };
-  
-      checkDevice();
-      window.addEventListener('resize', checkDevice);
-  
-      return () => window.removeEventListener('resize', checkDevice);
-    }, []);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      const width = window.innerWidth;
+      setIsMobile(width <= 1100);
+      setIsMediumScreen(width >= 1536 && width <= 1919);
+    };
+
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+
+    return () => window.removeEventListener('resize', checkDevice);
+  }, []);
   const sections = [
     { name: "English", questions: 75, time: "45 Minutes", score: "0-36" },
     { name: "Maths", questions: 60, time: "60 Minutes", score: "0-36" },
@@ -27,12 +27,12 @@ export default function SubjectsCard() {
   ];
 
   return (
-<div
-  className="custom-container fade-in-section"
-  data-scroll
-  data-scroll-class="is-inview"
-  data-scroll-repeat
->
+    <div
+      className="custom-container fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat
+    >
 
       <div className="d-flex align-items-center justify-content-center mb-md-4 mb-3 fade-in-section"
         data-scroll
@@ -41,8 +41,8 @@ export default function SubjectsCard() {
         style={{ animationDelay: "0.25s" }}>
         <div className="SubHeading testSubheading">          ACT TEST OVERVIEW
 
-</div>
-       
+        </div>
+
       </div>
 
 
@@ -260,7 +260,12 @@ export default function SubjectsCard() {
             font-size: 1rem !important;
           }
         }
-        
+        @media (max-width: 575px) {
+          .custom-container{
+            margin-top:80px;
+            margin-bottom:0;
+          }
+        }
         @media (max-width: 480px) {
           table th, table td {
             padding: 0.6rem 0.4rem !important;

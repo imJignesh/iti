@@ -63,12 +63,10 @@ const WhatWeOfferSection = () => {
                         <div className="step-desc">Map a clear, strategic path to top international universities.</div>
                     </div>
                 </div>
+
             </section>
             <style jsx>{`
             @media (max-width: 575px) {
-            .what-we-offer-section{
-                padding:80px 0;
-            }
                 .what-we-offer-section .SubHeading { 
                     margin: 0;
                 }

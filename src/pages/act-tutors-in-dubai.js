@@ -178,6 +178,7 @@ const act = ({ headerHeight }) => {
     };
   }, []);
 
+
   return (
     <>
       <SEO
@@ -235,7 +236,7 @@ const act = ({ headerHeight }) => {
           <MarqueeBanner />
         </section>
 
-        <section data-scroll-section>
+        <section data-scroll-section className='actblogs'>
           <Blog />
         </section>
         <section data-scroll-section>

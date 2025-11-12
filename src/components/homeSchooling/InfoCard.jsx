@@ -180,7 +180,7 @@ export default function InfoCard() {
               >
                 {isMobile ? (
                   <>
-                    Thrive Confidently As A Private <br /> Candidate In Dubai, UAE
+                    Thrive Confidently As A Private Candidate In Dubai, UAE
                   </>
                 ) : (
                   <>

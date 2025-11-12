@@ -148,6 +148,7 @@ const TrainerCard = ({ trainer }) => (
 export default function Trainers() {
   const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
   // Replaced static setShowAll(true) with setShowAll(!showAll) for toggling
+  const [isMounted, setIsMounted] = useState(false);
   const [showAll, setShowAll] = useState(false);
   const trainersGridRef = useRef(null);
   const navPrevRef = useRef(null);
@@ -155,9 +156,15 @@ export default function Trainers() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Swiper active below 1199px
-      setIsTrainersSwiper(window.innerWidth <= 1199);
+      const width = window.innerWidth;
+
+      // Swiper active below 1199px (Desktop/Large Tablet breakpoint)
+      setIsTrainersSwiper(width <= 1199);
+      // Note: We don't need to use the old isMobileView state for the line break anymore
+      // setIsMobileView(width <= 768); 
     };
+
+    // 1. Run once on mount to set initial state
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -579,6 +586,10 @@ export default function Trainers() {
           }
 
           @media (max-width: 575px) {
+          .${containerClass} .trainersSection .trainersTitle {
+              font-size:20.4px;
+             
+            }
           .trainers-global-container .trainersSection{
             padding: 80px 0 80px 0;
             }
@@ -602,7 +613,12 @@ export default function Trainers() {
             </div>
 
             <h2 className="trainersTitle">
-              The Best IGCSE <span className="highlight">Trainers</span> For Your<br />Success Journey
+              The Best IGCSE <span className="highlight">Trainers</span> For Your
+
+              {/* Add this conditional rendering logic: */}
+              {isMounted && !isTrainersSwiper ? <br /> : null}
+
+              Success Journey
             </h2>
 
             {isTrainersSwiper ? (

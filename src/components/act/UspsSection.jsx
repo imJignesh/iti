@@ -157,7 +157,7 @@ function UpsSection() {
       <div className="container">
         {/* Header Section */}
         <div
-          className="text-center mb-5 fade-in-section"
+          className="text-center mb-5 fade-in-section uspheading"
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
@@ -284,7 +284,11 @@ function UpsSection() {
           }
         }
 @media (max-width: 575px) {
-          .custom-grid {
+.uspheading{
+        margin-bottom:0 !important;
+}
+.custom-grid {
+          margin-bottom:2rem;
   gap: .5rem;
 }
   .cust-text {

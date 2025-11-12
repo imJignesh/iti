@@ -66,9 +66,6 @@ const WhatWeOfferSection = () => {
             </section>
             <style jsx>{`
             @media (max-width: 575px) {
-            .what-we-offer-section{
-                padding:80px 0;
-            }
                 .what-we-offer-section .SubHeading { 
                     margin: 0;
                 }

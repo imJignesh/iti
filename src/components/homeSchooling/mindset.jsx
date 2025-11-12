@@ -84,7 +84,7 @@ export default function HomeschoolingMindset() {
           style={{ animationDelay: "0.2s" }}
         >
 
-          <span className="highlight">  Mindset </span>- Lorem ipsum dolor sit amet, consectetur adipiscing
+          When <span className="highlight">  Learning </span>Becomes A Lifestyle, Not A Limitation
         </h2>
       </div>
 
@@ -128,6 +128,7 @@ export default function HomeschoolingMindset() {
       </div>
 
       <style jsx>{`
+
         .mindset-section {
           text-align: center;
           padding: 2rem 1rem;
@@ -248,6 +249,8 @@ export default function HomeschoolingMindset() {
           margin: 0;
         }
 
+         
+
         /* Mobile: show only partial content by default */
         @media (max-width: 767px) {
           .desc {
@@ -363,6 +366,37 @@ export default function HomeschoolingMindset() {
             display: none;
           }
         }
+        @media (max-width: 575px) {
+            .mindset-section {
+              padding-top:0 ;
+              padding-bottom:80px ;
+              }
+
+            .mobileicon{
+              width:35px;
+              height:35px;
+            }
+            .title-container{
+              margin-bottom: 0;
+            }
+            .card-content{
+              align-items: center;
+            }
+            .desc{
+              padding-top:10px;
+              max-height:4em;
+              padding-bottom:5px ;
+            }
+            .card{
+              padding:1rem;
+            }
+            .toggle-icon{
+            width:auto;
+            }
+            .toggle-btn{
+              bottom:-5px;
+            }
+         }
 
         @media (min-width: 1024px) {
           .card-title {
@@ -374,6 +408,7 @@ export default function HomeschoolingMindset() {
             font-weight: 500;
           }
         }
+          
       `}</style>
     </section>
   );

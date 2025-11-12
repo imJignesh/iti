@@ -96,6 +96,11 @@ const UniversityLogosCard = () => {
         .university-logos-container {
           height: 30vh; /* Desktop */
         }
+          @media (max-width: 575px) {
+            .university-logos-container{
+            padding:0 0 80px 0 !important; 
+            }
+          }
         @media (max-width: 767px) {
           .university-logos-container {
             height: auto; /* Mobile */

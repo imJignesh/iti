@@ -301,9 +301,12 @@
 @media (max-width:600px) {
   .footerWrap .footerDesc {
     font-size: 15px;
+
   }
 
   .footerWrap {
+    margin-top: 80px;
+
     padding: 30px 10px;
   }
 

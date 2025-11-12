@@ -351,6 +351,19 @@ export default function SubjectsCard1({ }) {
         }
 
         /* Extra small devices - consistent across iPhone 12 (390px) and Galaxy S8+ (360px) */
+        @media (max-width: 575px) {
+          .subjects-card1-section{
+            padding-top: 80px;
+            padding-bottom:0;
+          } 
+            .subjects-card1-section .subjects-card1-bubble-row{
+            flex-wrap: wrap;
+            }
+            .subjects-card1-section .subjects-card1-bubble{
+              padding: 0.5rem 1rem;;
+              font-size: 1rem;
+            }
+        }
         @media (max-width: 414px) {
           .subjects-card1-section .subjects-card1-inner {
             padding: 35px 12px;

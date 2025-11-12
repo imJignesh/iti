@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
 export default function Accordion() {
-  const [open, setOpen] = useState(false); 
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="card mx-auto">
@@ -134,7 +134,7 @@ export default function Accordion() {
           color: white;
           padding: 20px;
           transition: all 0.3s ease;
-          margin-block:40px !important;
+          
         }
             }
       `}</style>

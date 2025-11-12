@@ -147,6 +147,7 @@ const TrainerCard = ({ trainer }) => (
 
 export default function Trainers() {
   const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
+  const [isMounted, setIsMounted] = useState(false); // New state to handle SSR issues
   const [showAll, setShowAll] = useState(false);
   const trainersGridRef = useRef(null);
   const navPrevRef = useRef(null);
@@ -154,17 +155,23 @@ export default function Trainers() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Swiper active below 1199px
-      setIsTrainersSwiper(window.innerWidth <= 1199);
+      const width = window.innerWidth;
+
+      // Swiper active below 1199px (Desktop/Large Tablet breakpoint)
+      setIsTrainersSwiper(width <= 1199);
+      // Note: We don't need to use the old isMobileView state for the line break anymore
+      // setIsMobileView(width <= 768); 
     };
+
+    // 1. Run once on mount to set initial state
     handleResize();
+    setIsMounted(true); // Component has mounted on the client
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
-
-  // The new global container class is 'trainers-global-container'
   const containerClass = 'trainers-global-container';
 
   return (
@@ -600,7 +607,14 @@ export default function Trainers() {
             </div>
 
             <h2 className="trainersTitle">
-              The Best <span className="highlight">A Levels</span> Trainers For Your<br />Success Journey
+              The Best <span className="highlight">A Levels</span> Trainers For Your
+
+              {/* FIX: Use !isTrainersSwiper which is true for desktop (>1199px).
+                 It will render <br /> only on desktop, ensuring the line break is hidden 
+                 whenever the swiper or mobile view is active. */}
+              {isMounted && !isTrainersSwiper ? <br /> : null}
+
+              Success Journey
             </h2>
 
             {isTrainersSwiper ? (

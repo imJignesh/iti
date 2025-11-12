@@ -246,8 +246,13 @@ section.post-detail-section {
 }
 
 @media (max-width: 575px) {
+
+    .innerpage .actblogs .blogSection {
+        padding: 0 0 80px 0;
+    }
+
     .innerpage .blogSection {
-        padding: 50px 0 40px 0;
+        padding: 80px 0 80px 0;
 
     }
 

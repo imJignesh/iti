@@ -4,26 +4,26 @@ export default function Curriculum() {
   return (
     <section className="curriculum-section">
       <div className="testHeadings">
-          <div
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <div className="SubHeading testSubheading">Curriculum Offerings For Private Candidates
-            </div>
+        <div
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+          className="fade-in-section"
+          style={{ animationDelay: "0.1s" }}
+        >
+          <div className="SubHeading testSubheading">Curriculum Offerings For Private Candidates
           </div>
-          <h2
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section testTitle"
-            style={{ animationDelay: "0.2s" }}
-          >
-            
-            <span className="highlight">  Curriculum Offerings </span>- Lorem ipsum dolor sit amet, consectetur adipiscing
-          </h2>
+        </div>
+        <h2
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+          className="fade-in-section testTitle"
+          style={{ animationDelay: "0.2s" }}
+        >
+
+          <span className="highlight">Choose A Program </span>That Suits Your Private Path
+        </h2>
       </div>
 
       <div className="curriculum-container">
@@ -238,7 +238,12 @@ export default function Curriculum() {
             min-width: 180px;
           }
         }
-
+          @media (max-width: 480px) {
+            .curriculum-section {
+              padding-top:0;
+              padding-bottom:80px;
+              }
+          }
         /* Small Mobile */
         @media (max-width: 480px) {
           .curriculum-img {

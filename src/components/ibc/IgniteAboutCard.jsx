@@ -771,9 +771,11 @@ bottom: 5%;
 }
   }
 @media (max-width: 575px) {
+
 .ignite-section {
         padding: 80px 0px;
-}
+                max-width: 100%;
+        }
         .subtitle-wrapper{
          margin-top:0;
          

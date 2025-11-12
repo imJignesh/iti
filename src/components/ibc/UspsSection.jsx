@@ -285,6 +285,7 @@ function UpsSection() {
         }
 @media (max-width: 575px) {
           .custom-grid {
+          margin-bottom:2rem;
   gap: .5rem;
 }
   .cust-text {

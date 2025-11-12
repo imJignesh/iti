@@ -445,11 +445,14 @@ export default function IBCurriculumStages() {
           }
         }
           @media (max-width: 575px) {
+           .ibcurriculum{
+        padding:0 20px;
+   }
           .custom-grid {
   gap: .5rem;
 }
   .container1{
-  max-width:90vw !important;
+  max-width:100vw !important;
   margin:0 auto !important;
   }
   .cust-text {
@@ -505,6 +508,7 @@ export default function IBCurriculumStages() {
   }
   
   .custom-grid {
+  
     gap: .5rem;
     margin-bottom:3.5rem;
   }

@@ -591,6 +591,17 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
           }
         }
           @media (max-width: 575px) {
+          .ignite-section {
+        padding: 80px 0px;
+                max-width: 100%;
+        }
+        .subtitle-wrapper{
+         margin-top:0;
+         
+        }
+          .subtitle-wrapper >div{
+          margin-bottom:0 !important;
+            }
           .custom-grid {
   gap: .5rem;
 }
