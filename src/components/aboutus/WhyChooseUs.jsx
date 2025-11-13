@@ -688,6 +688,22 @@ export default function WhyChooseUs() {
                 padding: 0 10px;
               }
             }
+              @media(max-width:575px){
+                .testTitle{
+                  font-size: 20.4px !important;  
+                  max-width: 100%;
+                }
+                .why-choose-section{
+                  padding-top:0 !important;
+                  padding-bottom:0 !important;
+                }
+                .content-section .text-center.mb-5{
+                   margin-bottom:20px !important;
+                }
+                .description,.order-2{
+                  margin-bottom:0 !important;
+                }
+              }
           `}</style>
         </section>
       )}

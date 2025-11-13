@@ -339,6 +339,23 @@
   }
 }
 
+@media (max-width: 575px) {
+  .achievementsSection {
+    padding: 80px 0 0 0;
+  }
+
+
+
+  .container.freedemo-curriculm {
+    gap: 50px;
+    width: 90% !important;
+  }
+
+  .achievementsHeadings {
+    padding-bottom: 10px;
+  }
+}
+
 @media (max-width: 480px) {
 
   .act-exam-table th,

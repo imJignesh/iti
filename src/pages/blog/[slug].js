@@ -86,7 +86,7 @@ const getSidebarHtmlStaticMobile = () => {
                     </div>
                     <button type="submit" class="submit-btn blog-submit-btn">
                         Submit
-                        <span class="arrow">→</span>
+                        <span class="blogReadMoreArrow"><img alt="arrow" width="20" height="20" src="/images/right-arrow-blue.png"></span>
                     </button>
                 </form>
             </div>

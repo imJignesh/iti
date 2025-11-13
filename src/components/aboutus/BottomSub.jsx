@@ -323,7 +323,23 @@ export default function CallToAction() {
         .mobile-only h1 {
         font-size: 1.5rem !important;
     }
+
+   
                   }
+    
+    @media (max-width: 575px) {
+      .cta-container{
+        margin-top: 35%;
+      }
+        .mobile-only h1{
+          font-size:18.4px !important;
+        }
+           .mobileParagraph{
+        font-size:15px !important;
+        line-height: 1.3 !important;
+        text-transform: none !important;
+          }
+    }
                                 @media (max-width: 400px) {
                                                   .mobileImage {
     width: 280px;

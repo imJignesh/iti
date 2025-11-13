@@ -770,6 +770,23 @@ bottom: 5%;
 }
   }
 @media (max-width: 575px) {
+    .ignite-section{
+    padding: 80px 0;
+        width: 100vw;
+    }
+        .ignite-container{
+          gap:0;
+        }
+        .subtitle-wrapper,.subtitle-wrapper>div{
+          margin-top:0;
+          margin-bottom:0px !important;
+        }
+          .ignite-main-title{
+            margin:20px auto;
+          }
+          .ignite-description{
+            font-weight:normal;
+          }
           .custom-grid {
   gap: .5rem;
 }

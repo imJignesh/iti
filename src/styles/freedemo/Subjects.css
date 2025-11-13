@@ -243,6 +243,10 @@
 }
 
 @media (max-width: 575px) {
+    .subjectSection {
+        padding: 0;
+    }
+
     .subjectSection .bgRect:nth-child(2) {
         top: 42%;
         left: 0;

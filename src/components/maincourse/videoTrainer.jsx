@@ -342,7 +342,7 @@ const TrainersMessage = () => {
           }
 
           .image-wrapper.short {
-            height: 220px; /* Same as width for square-ish aspect */
+            height: 225px; /* Same as width for square-ish aspect */
           }
 
           .trainer-name {
@@ -388,7 +388,7 @@ const TrainersMessage = () => {
           }
 
           .image-wrapper.short {
-            height: 180px; /* Same as width */
+            height: 225px; /* Same as width */
           }
 
           .trainer-name {

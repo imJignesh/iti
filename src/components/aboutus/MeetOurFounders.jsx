@@ -1,5 +1,42 @@
 import React, { useEffect, useState } from "react";
 
+// Helper component for the Read More/Read Less functionality
+const TruncatedText = ({ text, wordLimit = 16 }) => {
+  const words = text.split(/\s+/).filter(Boolean); // Split by whitespace and remove empty strings
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Determine if the text is longer than the limit
+  const isTooLong = words.length > wordLimit;
+
+  // Get the visible text based on the expanded state
+  const visibleText = isExpanded || !isTooLong
+    ? text
+    : words.slice(0, wordLimit).join(" ") + "...";
+
+  const toggleExpanded = (e) => {
+    // Prevent the default action of the anchor tag (which is usually navigation)
+    e.preventDefault();
+    setIsExpanded(prev => !prev);
+  };
+
+  return (
+    <>
+      <p className="message-text-content">
+        {visibleText}
+      </p>
+      {isTooLong && (
+        <a
+          href="#" // Use # or javascript:void(0);
+          onClick={toggleExpanded}
+          className="read-more-link" // Changed class name
+        >
+          {isExpanded ? "Read Less" : "Read More"}
+        </a>
+      )}
+    </>
+  );
+};
+
 export default function MeetOurFounders() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -13,6 +50,12 @@ export default function MeetOurFounders() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Founder 1's message (moved to a constant for cleaner use)
+  const founderMessage1 = "Ignite began with a belief: every child holds extraordinary potential, but their journeys differ. Too often, dreams are slowed by roadblocks that could be removed with timely help. We listen first, teach second, customising every step, so our students gain the skills, confidence, and direction to thrive in a world full of possibilities.";
+
+  // Founder 2's message (moved to a constant for cleaner use)
+  const founderMessage2 = "For me, education is and always will be the most reliable route to career success. Beyond academics, the very process of learning builds discipline, problem-solving, and resilience. At Ignite, we aim to teach the ability to learn itself, so our students don’t just keep up with change, they lead it.";
 
   return (
     <section className="founders-section py-5">
@@ -71,9 +114,8 @@ export default function MeetOurFounders() {
               {/* Founder's Message */}
               <div className="founder-message">
                 <h3 className="message-title">FOUNDERS MESSAGE</h3>
-                <p className="message-text">
-                  Ignite began with a belief: every child holds extraordinary potential, but their journeys differ. Too often, dreams are slowed by roadblocks that could be removed with timely help. We listen first, teach second, customising every step, so our students gain the skills, confidence, and direction to thrive in a world full of possibilities.
-                </p>
+                {/* Replaced <p> with TruncatedText component */}
+                <TruncatedText text={founderMessage1} />
               </div>
             </div>
           </div>
@@ -86,9 +128,8 @@ export default function MeetOurFounders() {
               {/* Founder's Message */}
               <div className="founder-message2">
                 <h3 className="message-title2">FOUNDERS MESSAGE</h3>
-                <p className="message-text2">
-                  For me, education is and always will be the most reliable route to career success. Beyond academics, the very process of learning builds discipline, problem-solving, and resilience. At Ignite, we aim to teach the ability to learn itself, so our students don’t just keep up with change, they lead it.
-                </p>
+                {/* Replaced <p> with TruncatedText component */}
+                <TruncatedText text={founderMessage2} />
               </div>
             </div>
           </div>
@@ -207,22 +248,10 @@ export default function MeetOurFounders() {
         .founder-message2 {
           padding: 2rem;
           border-radius: 16px;
-                    margin-top:67px;
+          margin-top:67px;
         }
 
-        .message-title {
-          font-size: 35px;
-          font-weight: 700;
-          margin-bottom: 1.5rem;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          background: linear-gradient(90deg, #00a491, #003e37);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          color: transparent;
-        }
-
+        .message-title,
         .message-title2 {
           font-size: 35px;
           font-weight: 700;
@@ -235,27 +264,45 @@ export default function MeetOurFounders() {
           background-clip: text;
           color: transparent;
         }
-
-        .message-text {
+        
+        /* New class for the text content */
+        .message-text-content {
           color: #444;
           font-size: 23px;
           line-height: 1.8;
-          margin-bottom: 1.2rem;
+          margin-bottom: 1.2rem; 
         }
 
-        .message-text:last-child {
-          margin-bottom: 0;
+        /* New anchor link style */
+        .read-more-link {
+          color: #00a491; /* Highlight color for the link */
+          font-size: 23px; /* Match the text size */
+          font-weight: 600;
+          cursor: pointer;
+          padding: 0;
+          margin-bottom: 1.2rem; /* Consistent spacing */
+          display: block; /* Make it take its own line */
+          text-align: left;
+          text-decoration: none; /* Remove default underline */
         }
-
-        .message-text2 {
-          color: #444;
-          font-size: 23px;
-          line-height: 1.8;
-          margin-bottom: 1.2rem;
+        
+        .read-more-link:hover {
+          text-decoration: underline;
         }
-
-        .message-text2:last-child {
-          margin-bottom: 0;
+        
+        .testTitle {
+          font-size: 1.8rem;
+          font-weight: 700;
+          max-width: 50%;
+          color: var(--blue-color);
+          margin: 40px auto;
+          line-height: 1.2;
+          text-transform: uppercase;
+        }
+        .founder-message a {
+            color: var(--blue-color);
+            text-decoration: underline !important;
+            font-weight: 600;
         }
 
         /* Mobile Responsive Styles */
@@ -301,22 +348,55 @@ export default function MeetOurFounders() {
             padding: 1.5rem;
             margin-top: 0;
           }
+          
+          .read-more-link {
+            text-align: center;
+          }
         }
 
         @media (max-width: 576px) {
+
+          .founders-section{
+            padding:0 !important;
+          }
+          .founders-section>div>div,.founder-image-container,.order-1,.message-title{
+            margin-bottom:0 !important;
+          }
           .founder-image-container,
           .founder-image-container2 {
-            height: 360px;
+            height: auto;
           }
-
+          .testTitle{
+            max-width:100%;
+            margin:20px 0;
+          }
           .message-title,
           .message-title2 {
             font-size: 1.2rem;
+            text-align: left;
+          }
+          .founder-message,.founder-message2{
+            padding:0 20px;
+          }
+          
+          :global(.message-text-content) {
+            font-size: 15px;
+            line-height: 1.3;
+            text-align: left;
+           
+          }
+          
+          :global(.read-more-link) {
+            font-size: 15px;
+            text-align: left;
+            color: var(--blue-color);
+            text-decoration: underline !important;
+            font-weight: 600;
           }
 
-          .message-text,
-          .message-text2 {
-            font-size: 15px;
+          .founder-image-container2 {
+            margin-top: 30px;
+            margin-bottom: 0 !important;
           }
         }
 
@@ -336,8 +416,8 @@ export default function MeetOurFounders() {
             height: 420px;
             margin-bottom: 2rem;
           }
-          .message-text,
-          .message-text2 {
+          .message-text-content,
+          .read-more-link {
             font-size: 15px;
           }
       }
@@ -352,20 +432,12 @@ export default function MeetOurFounders() {
             height: 420px;
             margin-bottom: 1rem;
           }
-          .message-text,
-          .message-text2 {
+          .message-text-content,
+          .read-more-link {
             font-size: 1.3rem;
           }
       }
-           .testTitle {
-  font-size: 1.8rem;
-  font-weight: 700;
-  max-width: 50%;
-  color: var(--blue-color);
-  margin: 40px auto;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
+           
       `}</style>
     </section>
   );

@@ -429,6 +429,63 @@ button.dislike {
     }
 }
 
+@media (max-width: 575px) {
+    .text-center.mb-5.image-feature {
+        margin-bottom: 0 !important;
+    }
+
+    section.post-detail-section,
+    .post-content-and-sidebar-section.py-5 {
+        padding-bottom: 0 !important;
+    }
+
+    .author-bio-section {
+        max-width: 100%;
+
+    }
+
+    .buttonBlue {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .author-bio-heading,
+    .author-bio-text {
+        font-size: 14px;
+    }
+
+    .author-bio-image img {
+        width: 100%;
+    }
+
+    .card {
+        padding: 10px 0;
+    }
+
+    .form-group select {
+        font-size: 1rem;
+    }
+
+    .form-group option {
+        font-size: 14px;
+    }
+
+    .submit-btn.blog-submit-btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+        background: transparent;
+        border: 1px solid #1f2d61;
+        color: #1f2d61;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .sticky-sidebar-wrapper {
+        padding-bottom: 20px;
+    }
+
+}
+
 @media (max-width: 480px) {
     h1.main-title {
         font-size: 24px;

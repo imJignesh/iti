@@ -88,7 +88,7 @@ export default function Timeline() {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            With Every Step Forward, We've Grown With 
+            With Every Step Forward, We've Grown With
             <span className="highlight"> Our Students</span>
           </h2>
         </div>
@@ -516,10 +516,19 @@ export default function Timeline() {
         }
 
         @media (max-width: 576px) {
+          .timeline-section{
+            padding-top:80px !important;
+            padding-bottom:80px !important;
+          }
           .main-title {
             font-size: 1.6rem;
           }
-
+          .text-center{
+            margin-bottom:0 !important;
+          }
+          .timeline-content{
+            padding:0;
+          }
           .subtitle {
             font-size: 12px;
           }

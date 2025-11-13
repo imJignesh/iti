@@ -55,7 +55,7 @@ const APBenefits = () => {
         setOpenIndex(openIndex === index ? null : index);
     };
     return (
-        <div className='mx-auto' style={{ maxWidth: "90vw", border: "none !important", overflow: "hidden !important", marginBlock: "70px" }}>
+        <div className='mx-auto' style={{ maxWidth: "90vw", border: "none !important", overflow: "hidden !important", marginBlock: isMobile ? "auto" : "70px", paddingBottom: isMobile ? "80px" : "0" }}>
             <div className="d-flex align-items-center justify-content-center mb-md-4 mb-3">
                 <div className="SubHeading testSubheading" style={{ fontSize: isMobile ? "17.5px" : "30px", marginBottom: isMobile ? "20px" : "20px" }}>WHY DO STUDENTS CHOOSE APS?
                 </div>
@@ -413,7 +413,7 @@ margin-block: 10px;
             display: block;
         }
     }
-
+    
     /* Extra small mobile devices */
     @media (max-width: 480px) {
         .cards {
@@ -445,7 +445,32 @@ margin-block: 10px;
             height: 10px;
         }
     }
+@media (max-width: 575px) {
+        .cards {
+            padding: 0;
+        }
+        .title {
+            font-size: 20.4px;
+        }
+        .text{
+            font-size: 16px;
+            letter-spacing: normal;
+            margin-top:0;
+            line-height:normal;
+        }
+        .icon{
+            margin-bottom: 10px;
+            height: 40px;
+            width: 40px;
+        }
+        .toggle-btn{
+            bottom:0;
+        }
+        .card1{
+            padding: 5px 10px 20px 10px;
+        }
 
+    }
     /* Desktop: hide toggle button */
     @media (min-width: 769px) {
         .toggle-btn {

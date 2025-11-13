@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+// Removed: useEffect, useRef
+import { useState } from 'react';
 import SEO from "@/components/SEO";
 import TeamBanner from "@/components/team/Banner";
-import MovingBanner from "@/components/home/MovingBanner";
+import MarqueeBanner from '@/components/a-level/MarqueeBanner';
 
-// Data array for the trainers
+// Data array for the trainers (Original data kept for context)
 const trainersData = [
     {
         name: "MASAB",
@@ -121,70 +122,52 @@ const trainersData = [
     },
 ];
 
+// Data array for the Co-Founders (Extracted from JSX)
+const coFoundersData = [
+    {
+        name: "Sumit Advani",
+        image: "/images/sumit.png",
+        description: "Sumit, Co-Founder of Ignite Training Institute, holds a B.Sc. in IT along with a Diploma in Advertising & PR. With over 10 years of experience in the UAE’s education industry, he specializes in designing tailored academic programs that align with each student’s unique goals. Beyond academics, Sumit actively oversees the institute’s infrastructure & spearheads marketing initiatives, ensuring Ignite continues to deliver excellence both inside & outside the classroom.",
+    },
+    {
+        name: "Mohnish Ahuja",
+        image: "/images/mohnish.png",
+        description: "Mohnish, Co-Founder of Ignite Training Institute, holds a BMS degree & serves as the Head of Academics. With over 12 years of expertise in education, standardized testing, & student profile development, he brings a wealth of knowledge to the classroom. An IB-certified trainer and experienced A-Level educator, Mohnish is passionate about guiding students toward academic excellence. Driven by his vision, he is dedicated to transforming Ignite into a global hub for world-class education.",
+    },
+];
 
+// Data array for the admin staff (Extracted from JSX)
+const adminStaffData = [
+    {
+        name: "Saif",
+        image: "/images/saif.png",
+        description:
+            "Saif, an ACCA-qualified professional, serves as the Student Coordinator & manages all student-related matters, from planning academic activities to ensuring smooth daily operations. With over 5 years of experience, Saif is committed to helping students achieve their goals & navigate the academic & admission process. Outside work, he enjoys reading, staying active through fitness routines, & pursuing his passion for house music by DJ’ing & mixing tracks, finding both creativity & relaxation in blending beats.",
+    },
+    {
+        name: "Ahzeb",
+        image: "/images/ahzeb.png",
+        description:
+            "Ahzeb plays a key role by combining business development expertise with technical oversight. With over a decade of experience across diverse sales teams & cultures, he excels in crafting unique strategies, enrolling students in the right programs, coordinating schedules, providing tech support, & managing the company’s database. He works closely with teams, fosters partnerships, & contributes to performance reviews & new business initiatives. Outside of work, he’s a stand-up performer & avid writing enthusiast.",
+    },
+];
 
-// 1. ACCEPT headerHeight as a prop
+// Helper function to slice by word count
+const sliceByWordCount = (text, wordLimit) => {
+    const words = text.split(/\s+/); // Splits by any whitespace
+    if (words.length <= wordLimit) {
+        return text;
+    }
+    return words.slice(0, wordLimit).join(' ') + '...';
+};
+
 const OurTeam = ({ headerHeight }) => {
-    const scrollRef = useRef(null);
-    const scrollInstanceRef = useRef(null);
     const [expandedTrainers, setExpandedTrainers] = useState({});
 
-    // Locomotive Scroll setup - similar to blog.js
-    useEffect(() => {
-        const initScroll = async () => {
-            try {
-                const LocomotiveScrollModule = await import("locomotive-scroll");
-                const LocomotiveScroll = LocomotiveScrollModule.default || LocomotiveScrollModule;
-
-                if (!scrollRef.current) {
-                    console.log("Locomotive Scroll: scrollRef.current is null, cannot initialize.");
-                    return;
-                }
-
-                scrollInstanceRef.current = new LocomotiveScroll({
-                    el: scrollRef.current,
-                    smooth: true,
-                    lerp: 0.1,
-                });
-
-                if (scrollInstanceRef.current && typeof scrollInstanceRef.current.update === 'function') {
-                    scrollInstanceRef.current.update();
-                    console.log("✅ LocomotiveScroll initialized and updated");
-                }
-            } catch (error) {
-                console.error("Failed to load or initialize LocomotiveScroll:", error);
-            }
-        };
-
-        if (typeof window !== "undefined") {
-            initScroll();
-        }
-
-        return () => {
-            if (scrollInstanceRef.current) {
-                scrollInstanceRef.current.destroy();
-                scrollInstanceRef.current = null;
-            }
-        };
-    }, []);
-
-    // FIX: Update Locomotive Scroll when content height changes (Read More/Less)
-    useEffect(() => {
-        if (scrollInstanceRef.current) {
-            // Use a short delay to ensure the DOM has completed the height change
-            const timeoutId = setTimeout(() => {
-                scrollInstanceRef.current.update();
-            }, 100);
-
-            return () => clearTimeout(timeoutId);
-        }
-    }, [expandedTrainers]);
-
-
-    const toggleReadMore = (index) => {
+    const toggleReadMore = (key) => {
         setExpandedTrainers(prevState => ({
             ...prevState,
-            [index]: !prevState[index]
+            [key]: !prevState[key]
         }));
     };
 
@@ -201,170 +184,178 @@ const OurTeam = ({ headerHeight }) => {
         <>
             <SEO title="Meet Our Expert Trainers | Know Our Team Better"
                 description="Get to know Ignite Training Institute’s expert mentors in the UAE, shaping bright futures with 2000+ trained students & remarkable academic results" />
-            {/* 👇 SCHEMA INJECTION: Use the reusable component here */}
-            {/* 2. APPLY paddingTop style using the headerHeight prop */}
-            <div ref={scrollRef} data-scroll-container style={{ paddingTop: `${headerHeight}px` }}>
-                <section data-scroll-section>
+
+            <div style={{ paddingTop: `${headerHeight}px` }}>
+                <section>
                     <TeamBanner />
                 </section>
 
-                <section className="meet-out-team" data-scroll-section>
+                <section className="meet-out-team">
                     <div className="container">
                         <div className="meet-team-Headings">
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.1s" }}
-                            >
+                            <div className="fade-in-section" style={{ animationDelay: "0.1s" }}>
                                 <h3 className="SubHeading">MEET OUR TEAM</h3>
                             </div>
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.25s" }}
-                            >
-                                <h1 className="meetTitle">
-                                    Dedicated Ignite Trainers Shaping Bright <span className="highlight">Futures</span>
-                                </h1>
+                            <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
+                                <h2 className="fade-in-section testTitle" style={{ animationDelay: "0.2s" }}>
+                                    Dedicated Ignite Trainers Shaping Bright<span className="highlight"> Futures </span>
+                                </h2>
                             </div>
-
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.25s" }}
-                            >
+                            <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
                                 <h1 className="cofounderTitle">
                                     CO-FOUNDERS
                                 </h1>
                             </div>
                         </div>
                         <div className="meet-team-cards">
-                            <div className="team-card">
-                                <div className="team-card-image">
-                                    <img src="/images/sumit.png" alt="ignite training institute's trainers" />
-                                </div>
-                                <div className="team-card-info">
-                                    <div className="team-card-name">
-                                        <h3>Sumit Advani</h3>
+                            {coFoundersData.map((founder, index) => {
+                                // Use a unique key for co-founder toggle state
+                                const key = `founder-${index}`;
+                                const isExpanded = expandedTrainers[key];
+                                const fullDescription = founder.description;
+                                const shortDescription = sliceByWordCount(fullDescription, 16); // Applies 8-word limit
+                                const isLongEnoughToToggle = fullDescription.split(/\s+/).length > 8;
+
+                                return (
+                                    <div className="team-card" key={key}>
+                                        <div className="team-card-image">
+                                            <img src={founder.image} alt={founder.name} />
+                                        </div>
+                                        <div className="team-card-info">
+                                            <div className="team-card-name">
+                                                <h3>{founder.name}</h3>
+                                            </div>
+                                            <div className="team-card-content">
+                                                <p className={`description ${isExpanded ? "expanded" : ""}`}>
+                                                    {isExpanded ? fullDescription : shortDescription}
+                                                </p>
+                                                {/* Show Read More/Less link only if text exceeds 8 words */}
+                                                {isLongEnoughToToggle && (
+                                                    <a
+                                                        href="#"
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            toggleReadMore(key); // Toggle using the unique key
+                                                        }}
+                                                    >
+                                                        {isExpanded ? "Read Less" : "Read More"}
+                                                    </a>
+                                                )}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="team-card-content">
-                                        <p>Sumit, Co-Founder of Ignite Training Institute, holds a B.Sc. in IT along with a Diploma in Advertising & PR. With over 10 years of experience in the UAE’s education industry, he specializes in designing tailored academic programs that align with each student’s unique goals. Beyond academics, Sumit actively oversees the institute’s infrastructure & spearheads marketing initiatives, ensuring Ignite continues to deliver excellence both inside & outside the classroom.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="team-card">
-                                <div className="team-card-image">
-                                    <img src="/images/mohnish.png" alt="ignite training institute's trainers" />
-                                </div>
-                                <div className="team-card-info">
-                                    <div className="team-card-name">
-                                        <h3>Mohnish Ahuja</h3>
-                                    </div>
-                                    <div className="team-card-content">
-                                        <p>Mohnish, Co-Founder of Ignite Training Institute, holds a BMS degree & serves as the Head of Academics. With over 12 years of expertise in education, standardized testing, & student profile development, he brings a wealth of knowledge to the classroom. An IB-certified trainer and experienced A-Level educator, Mohnish is passionate about guiding students toward academic excellence. Driven by his vision, he is dedicated to transforming Ignite into a global hub for world-class education.</p>
-                                    </div>
-                                </div>
-                            </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
-                <section className="admin-staff" data-scroll-section>
+
+                <section className="admin-staff">
                     <div className="container">
                         <div className="meet-team-Headings">
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.25s" }}
-                            >
+                            <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
                                 <h1 className="cofounderTitle">
                                     STUDENT SUCCESS MANAGERS
                                 </h1>
                             </div>
                         </div>
                         <div className="admin-staff-cards">
-                            <div className="admin-card">
-                                <div className="admin-card-image">
-                                    <img src="/images/saif.png" alt="ignite training institute's trainers" />
-                                </div>
-                                <div className="admin-card-info">
-                                    <div className="admin-card-content">
-                                        <p>Saif, an ACCA-qualified professional, serves as the Student Coordinator & manages all student-related matters, from planning academic activities to ensuring smooth daily operations. With over 5 years of experience, Saif is committed to helping students achieve their goals & navigate the academic & admission process. Outside work, he enjoys reading, staying active through fitness routines, & pursuing his passion for house music by DJ’ing & mixing tracks, finding both creativity & relaxation in blending beats.</p>
+                            {adminStaffData.map((admin, index) => {
+                                // Using a unique key for admin staff toggle state
+                                const key = `admin-${index}`;
+                                const isExpanded = expandedTrainers[key];
+                                const fullDescription = admin.description;
+                                const shortDescription = sliceByWordCount(fullDescription, 8); // Applies 8-word limit
+                                const isLongEnoughToToggle = fullDescription.split(/\s+/).length > 8;
+
+                                return (
+                                    <div className="admin-card" key={key}>
+                                        <div className="admin-card-image">
+                                            <img src={admin.image} alt={admin.name} />
+                                        </div>
+                                        <div className="admin-card-info">
+                                            <div className="admin-card-name">
+                                                <h3>{admin.name}</h3>
+                                            </div>
+                                            <div className="admin-card-content">
+                                                <p className={`description ${isExpanded ? "expanded" : ""}`}>
+                                                    {isExpanded ? fullDescription : shortDescription}
+                                                </p>
+                                                {/* Show Read More/Less link only if text exceeds 8 words */}
+                                                {isLongEnoughToToggle && (
+                                                    <a
+                                                        href="#"
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            toggleReadMore(key); // Toggle using the unique key
+                                                        }}
+                                                    >
+                                                        {isExpanded ? "Read Less" : "Read More"}
+                                                    </a>
+                                                )}
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="admin-card">
-                                <div className="admin-card-image">
-                                    <img src="/images/ahzeb.png" alt="ignite training institute's trainers" />
-                                </div>
-                                <div className="admin-card-info">
-                                    <div className="admin-card-content">
-                                        <p>Ahzeb plays a key role by combining business development expertise with technical oversight. With over a decade of experience across diverse sales teams & cultures, he excels in crafting unique strategies, enrolling students in the right programs, coordinating schedules, providing tech support, & managing the company’s database. He works closely with teams, fosters partnerships, & contributes to performance reviews & new business initiatives. Outside of work, he’s a stand-up performer & avid writing enthusiast.</p>
-                                    </div>
-                                </div>
-                            </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
-                <section className="moving-container" data-scroll-section>
-                    <MovingBanner />
+
+                <section>
+                    <MarqueeBanner />
                 </section>
-                <section className="trainer-section" data-scroll-section>
+
+                <section className="trainer-section">
                     <div className="container">
                         <div className="meet-team-Headings">
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.25s" }}
-                            >
+                            <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
                                 <h1 className="cofounderTitle">
                                     Trainers
                                 </h1>
                             </div>
                         </div>
                         <div className="trainer-cards">
-                            {trainersData.map((trainer, index) => (
-                                <div className="trainer-card" key={index}>
-                                    <div className="trainer-name">
-                                        <h3>{trainer.name}</h3>
+                            {/* Original trainersData map (retains original logic) */}
+                            {trainersData.map((trainer, index) => {
+                                // Use the index directly as the key for trainers (using the previous logic)
+                                const isExpanded = expandedTrainers[index];
+                                return (
+                                    <div className="trainer-card" key={index}>
+                                        <div className="trainer-name">
+                                            <h3>{trainer.name}</h3>
+                                        </div>
+                                        <div className="trainer-image">
+                                            <img src={trainer.image} alt={trainer.name} />
+                                        </div>
+                                        <div className="trainer-info">
+                                            <p className={`description ${isExpanded ? "expanded" : ""}`}>
+                                                {isExpanded
+                                                    ? trainer.description
+                                                    : trainer.description.length > 150
+                                                        ? trainer.description.slice(0, 150) + "..."
+                                                        : trainer.description}
+                                            </p>
+                                            {trainer.description.length > 150 && (
+                                                <a
+                                                    href="#"
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        toggleReadMore(index);
+                                                    }}
+                                                >
+                                                    {isExpanded ? "Read Less" : "Read More"}
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
-                                    <div className="trainer-image">
-                                        <img src={trainer.image} alt={trainer.name} />
-                                    </div>
-                                    <div className="trainer-info">
-                                        <p className={`description ${expandedTrainers[index] ? "expanded" : ""}`}>
-                                            {expandedTrainers[index]
-                                                ? trainer.description
-                                                : trainer.description.length > 150
-                                                    ? trainer.description.slice(0, 150) + "..."
-                                                    : trainer.description}
-                                        </p>
-                                        {trainer.description.length > 150 && (
-                                            <a
-                                                href="#"
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    toggleReadMore(index);
-                                                }}
-                                            >
-                                                {expandedTrainers[index] ? "Read Less" : "Read More"}
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
+                {/* The commented out section (trainer-message-section) is kept commented out, 
+                and data-scroll-section is removed. */}
                 {/* <section className="moving-container" data-scroll-section>
                     <MovingBanner />
                 </section>
@@ -429,20 +420,11 @@ const OurTeam = ({ headerHeight }) => {
                         </div>
                     </div>
                 </section> */}
-
-                <section className="cta-section" data-scroll-section>
+                <section className="cta-section">
                     <div className="meet-team-Headings">
-
-                        <div
-                            data-scroll
-                            data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
-                            className="fade-in-section"
-                            style={{ animationDelay: "0.1s" }}
-                        >
+                        <div className="fade-in-section" style={{ animationDelay: "0.1s" }}>
                             <h3 className="SubHeading">DOES NOT REQUIRE THIS HEADING</h3>
                         </div>
-
                     </div>
                     <div className="container call-to-action teams">
                         <div className="cta-container">
