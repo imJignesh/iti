@@ -452,7 +452,12 @@ const IBCurriculumStages = () => {
     line-height: 1.4;
   }
 }
-
+@media (max-width: 575px) {
+      .achievementsSection {
+        padding: 0 0 80px 0;
+      }
+}
+      
 /*Table*/
 .actTestHeadings {
   text-align: center;
@@ -600,6 +605,8 @@ const IBCurriculumStages = () => {
 .myCustomAchievments .achievement-section-content {
   font-size: 18px;
 }
+
+
 
 @media (max-width: 768px) {
   .act-exam-table th,
@@ -945,6 +952,27 @@ background: linear-gradient(235.04deg, #EDFFF4 45.21%, #A6EAC7 95.86%);
   .achievements-score {
     font-size: calc(2.5rem - 10px);
   }
+}
+ @media (max-width: 575px) {
+    
+    .achievementsHeadings .SubHeading{
+        margin:0;
+    }
+    .achievementsTitle{
+        margin: 20px 0;
+        font-size: 20.4px;
+    }
+    .curriculum-content{
+        padding-top:15px;
+    }
+    .curriculum-info{
+        padding: 5px 30px;
+    }
+    
+    .curriculum-section-heading1,
+    .curriculum-section-heading2{
+        margin-bottom:0;
+    }
 }
 `}</style>
     </div>

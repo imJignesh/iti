@@ -18,50 +18,50 @@ const uspData = [
   {
     number: "01",
     icon: "/images/usp-icon1.png",
-    title: "Profound Expertise",
-    desc: "Learn from experienced tutors with deep business knowledge.",
+    title: "Language Mastery",
+    desc: "Build strong English fluency with focused skills training.",
   },
   {
     number: "02",
     icon: "/images/usp-icon2.png",
-    title: "Applicable Insights",
-    desc: "Grasp concepts through practical, real-world business case studies.",
+    title: "Personalized Approach",
+    desc: "Customized lessons that match your learning style perfectly.",
   },
   {
     number: "03",
     icon: "/images/usp-icon3.png",
-    title: "Established Outcomes",
-    desc: "Proven track record of excellence & high Business Studies scores.",
+    title: "Cultural Insights",
+    desc: "Learn language in context through global cultural relevance.",
   },
   {
     number: "04",
     icon: "/images/usp-icon4.png",
-    title: "Interactive Sessions",
-    desc: "Engaging lessons that nurture analytical & critical thinking skills.",
+    title: "Proven Results",
+    desc: "Consistent academic success with top scores in English.",
   },
   {
     number: "05",
     icon: "/images/usp-icon5.png",
-    title: "Flexible Scheduling",
-    desc: "Classes arranged to fit your time & learning preferences.",
+    title: "Interactive Learning",
+    desc: "Engaging sessions that truly bring language to life.",
   },
   {
     number: "06",
     icon: "/images/usp-icon6.png",
-    title: "Customized Learning",
-    desc: "Courses tailored to your learning pace, goals, & curriculum.",
+    title: "Flexible Sessions",
+    desc: "Online or in-person classes that perfectly fit your schedule.",
   },
   {
     number: "07",
     icon: "/images/usp-icon1.png",
-    title: "Confidence Boost",
-    desc: "Gain clarity in concepts & approach exams with confidence.",
+    title: "Tailored Guidance",
+    desc: "Curriculum-specific support based on goals and abilities.",
   },
   {
     number: "08",
     icon: "/images/usp-icon2.png",
-    title: "Exam Strategies",
-    desc: "Excel in business papers with structured, exam-focused techniques.",
+    title: "Exam Excellence",
+    desc: "Targeted preparation for top performance in English exams.",
   },
 ];
 
@@ -84,7 +84,7 @@ export default function Usps({ }) {
           style={{ animationDelay: "0.2s" }}
         >
           <div className="row justify-content-between gx-5">
-            <div className="col-lg-4">
+            <div className="col-lg-4 uspwrapper">
               <div
                 className="uspLeft"
                 // FIX: These attributes enable Locomotive Scroll's custom sticky behavior
@@ -103,7 +103,7 @@ export default function Usps({ }) {
                   className="fade-in-sections uspTitle"
                   style={{ animationDelay: "0.2s" }}
                 >
-                  What Do Students Get From Ignite's Psychology Support?
+                  What Do Students Get From Ignite's English Support?
                 </h2>
 
                 {/* <div
@@ -163,6 +163,27 @@ export default function Usps({ }) {
           </div>
         </div>
       </div>
+      <style jsx>{`
+      
+      @media (max-width: 520px) {
+        .uspSection .uspTitle{
+          font-size:20.4px !important;
+          line-height:20px !important;
+        }
+        .uspSection .uspItemTitle{
+          font-size:16px !important;
+          line-height:18px !important;
+        }
+        .uspwrapper{
+          padding:0;
+        }
+        .uspSection .uspRight {
+          padding-top: 10px;
+        } 
+      }
+      
+      
+      `}</style>
     </>
   );
 }

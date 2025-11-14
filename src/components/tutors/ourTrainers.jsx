@@ -658,6 +658,7 @@ export default function Trainers({ }) {
     font-size: 0.9rem;
   }
 }
+  
 @media (max-width: 700px) {
   .trainersSection .trainersGrid {
     grid-template-columns: 1fr;
@@ -676,6 +677,19 @@ export default function Trainers({ }) {
     height: 32px;
   }
 }
+  @media(max-width:575px){
+          .trainersSection{
+            padding:0 10px;
+          }
+          .trainersSection, .trainersTitle{
+            font-size:20.4px !important;
+          }
+          .trainersSection .trainersPagination{
+            min-height: 0;
+            margin:0;
+          }
+          
+  }
         `}</style>
       </section>
     </>

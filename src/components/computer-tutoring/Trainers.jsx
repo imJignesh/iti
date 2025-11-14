@@ -471,9 +471,21 @@ export default function Trainers() {
             }
           }
 
-          @media (max-width: 575px) {
-          .trainers-global-container .trainersSection{
-            padding: 80px 0 80px 0;
+           @media (max-width: 575px) {
+          .${containerClass} .trainersSection .trainersTitle {
+              font-size: 20.4px;
+              max-width: 100%;
+              margin: 20px 0;
+            }
+            .trainers-global-container .trainersSection .trainersPagination{
+              min-height: 0;
+              display:none;
+            }
+            .trainers-global-container .trainersSection .trainerCard{
+              margin-bottom: 0 !important;
+            }
+            .trainers-global-container .trainersSection{
+              padding: 80px 0 0 0;
             }
             .${containerClass} .trainersSection .trainerImg {
               object-fit: contain;

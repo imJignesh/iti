@@ -297,7 +297,7 @@ function UpsSection() {
     -o-transition: opacity.3s ease!important;
     transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
-    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+    font-size: 1rem !important;
     margin-top: -17px !important;
     font-weight:600 !important;
   }
@@ -309,6 +309,12 @@ function UpsSection() {
     animation-delay: 0.75s !important;
     margin-left: 1rem !important;
   }
+    .testTitle{
+          font-size:20.4px !important;
+        }
+        .usps>div>div.mb-5{
+          margin-bottom:0 !important;
+        }
 }
   @media screen and (min-width: 1536px) and (max-width: 1919px) {
   .custom-grid {

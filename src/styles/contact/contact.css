@@ -124,7 +124,7 @@
  /* Responsive */
  @media (max-width: 600px) {
      .highlight-banners {
-
+         margin: 80px auto;
          padding: 0 20px;
      }
 
@@ -404,19 +404,44 @@
          margin: 0 auto !important;
      }
 
+     .contact-card a,
+     .contact-card span {
+         font-size: 18px;
+         font-weight: 500;
+         margin-top: 0;
+         max-width: 100%;
+     }
+
+     .contact-visit address {
+         font-size: 15px;
+         font-weight: 500;
+         margin-top: 0;
+         max-width: 100%;
+     }
+
+     .contact-card img,
+     .contact-visit img {
+         max-width: 50px;
+     }
+
      .contact-card h3,
      .contact-visit h3 {
-         padding-top: 20px;
+         padding-top: 0;
+         font-size: 20px;
+
      }
 
      .contact-card p,
      .contact-visit p {
          padding: 20px 0;
+         font-weight: 400 !important;
      }
 
-     .contact-visit address {
-         max-width: 100% !important;
-         font-size: 1.2rem !important;
-         margin-top: 15px !important;
+     .contact-visit {
+         padding: 20px 10px;
+     }
+
+     .contact-container {
+         padding: 80px 10px;
      }
  }

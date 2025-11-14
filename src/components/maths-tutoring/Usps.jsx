@@ -163,6 +163,26 @@ export default function Usps({ }) {
           </div>
         </div>
       </div>
+      <style jsx>{`
+      
+      @media (max-width: 520px) {
+        .uspSection .uspTitle{
+          font-size:20.4px !important;
+          line-height:20px !important;
+        }
+        .uspSection .uspItemTitle{
+          font-size:16px !important;
+          line-height:18px !important;
+        }
+        .uspwrapper{
+          padding:0;
+        }
+        .uspSection .uspRight {
+          padding-top: 10px;
+        } 
+      }
+      
+      `}</style>
     </>
   );
 }

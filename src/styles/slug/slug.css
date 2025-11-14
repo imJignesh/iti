@@ -480,6 +480,10 @@ button.dislike {
         margin-top: 20px;
     }
 
+    .form-container h2 {
+        width: 100%;
+    }
+
     .sticky-sidebar-wrapper {
         padding-bottom: 20px;
     }

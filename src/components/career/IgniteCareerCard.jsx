@@ -1,7 +1,55 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function IgniteCareerCard() {
+  // State to track if the current view is mobile (or below a certain breakpoint)
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Function to check the screen size and update the state
+  const checkScreenSize = () => {
+    // Using 768px as the breakpoint, consistent with the existing CSS media query
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  // useEffect to set up the listener when the component mounts
+  useEffect(() => {
+    // Run once on mount to set initial state
+    checkScreenSize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", checkScreenSize);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
+
+  // Conditional Content for the main title
+  const mainTitleContent = isMobile ? (
+    // Mobile title (no line break)
+    <>
+      Educate With Passion, Lead <span className="highlight"> With Purpose</span>
+    </>
+  ) : (
+    // Desktop title (with line break)
+    <>
+      Educate With Passion, <br />
+      Lead <span className="highlight"> With Purpose</span>
+    </>
+  );
+
+  // Conditional Content for the secondary title (from previous request)
+  const secondaryTitleContent = isMobile ? (
+    // Mobile title (no line break)
+    <>We Shape Bright Futures With Care & Commitment</>
+  ) : (
+    // Desktop title (with line break)
+    <>
+      We Shape Bright Futures <br /> With Care & Commitment
+    </>
+  );
+
   return (
     <section className="ignite-section">
       <div className="ignite-container">
@@ -31,8 +79,8 @@ export default function IgniteCareerCard() {
             data-scroll-repeat style={{
               animationDelay: "0.3s",
             }}>
-            Educate With Passion, <br />
-            Lead <span className="green-text"> With Purpose</span>
+            {/* Conditional Main Title Content */}
+            {mainTitleContent}
           </h1>
 
           <p className="ignite-description fade-in-section" data-scroll
@@ -48,7 +96,8 @@ export default function IgniteCareerCard() {
             data-scroll-repeat style={{
               animationDelay: "0.3s",
             }}>
-            We Shape Bright Futures <br /> With Care & Commitment
+            {/* Conditional Secondary Title Content */}
+            {secondaryTitleContent}
           </h2>
 
           <p className="ignite-short-description">
@@ -353,6 +402,56 @@ height: 30px;
             width: 15px;
           }
         }
+        @media (max-width: 575px) {
+        .ignite-container{
+          max-width: 100%;
+        }
+            .ignite-section{
+              padding: 0;
+              max-width: 100%;
+              margin: 80px 10px;
+            }
+            .ignite-description{
+              max-width: 100%;
+              font-weight: 400;
+              line-height: 1.2;
+              
+            }
+              .ignite-left{
+                margin-top:0;
+              }
+                .subtitle-wrapper,.subtitle-wrapper > div{
+                  margin-top: 0;
+                  margin-bottom: 0 !important;
+                }
+                  .ignite-main-title{
+                    margin:20px auto;
+                    font-size:20.4px;
+                  }
+                    .ignite-secondary-title{
+                    margin:10px auto;
+                    font-size:16.4px;
+                  }
+                    .ignite-short-description{
+                max-width: 100%;
+                font-weight: 400;
+              }
+                .ignite-container{
+                  gap:10px;
+                }
+              .check-boxes-container{
+                padding:10px 0;
+              }
+              .check-box{
+                padding:10px 5px;
+              }
+                .check-boxes-container .check-box>div{
+                  gap:10px !important;
+                }
+                .check-box span{
+                  font-size:14px;
+                }
+        }
 
         @media (max-width: 480px) {
           .header-title {
@@ -360,45 +459,38 @@ height: 30px;
             padding: 0 4px;
           }
              .check-box {
-  background: linear-gradient(
-    269.48deg,
-    rgba(231, 246, 255, 0) 2.74%,
-    #A3CAF5 93.4%
-  );
-  border-radius: 15px;
-  padding: 20px;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  flex: 1;
-}
+              background: linear-gradient(
+                269.48deg,
+                rgba(231, 246, 255, 0) 2.74%,
+                #A3CAF5 93.4%
+              );
+              border-radius: 15px;
+              
+              display: flex;
+              align-items: flex-start;
+              gap: 12px;
+              flex: 1;
+            }
 
-      .check-box span {
-          font-size: 17px;
-          color: #2C5F7D;
-          font-weight: 500;
-          line-height: 1.4;
-        }
+          .check-box span {
+              
+              color: #2C5F7D;
+              font-weight: 500;
+              line-height: 1.4;
+            }
             .icon-height{
-width: 20px;
-height: 20px;
-}
-   .check-box span {
-          font-size: 10px;
-          color: #2C5F7D;
-          font-weight: 500;
-          line-height: 1.4;
-        }
-        .ignite-section {
-     padding: 5px 20px;
-          max-width:100%;
-        margin: 40px auto;          
-          font-family: 'Montserrat', sans-serif;
-        }
-          .header-title img {
-            width: 12px !important;
-            height: 15px !important;
-          }
+              width: 20px;
+              height: 20px;
+              }
+            
+            .header-title img {
+              width: 12px !important;
+              height: 15px !important;
+            }
+              .ignite-short-description{
+                max-width: 100%;
+                font-weight: 400;
+              }
         }
           @media screen and (min-width: 1536px) and (max-width: 1600px) {
                   .ignite-section {

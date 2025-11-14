@@ -469,6 +469,9 @@ export default function IgniteAchievements() {
     animation-delay: 0.75s !important;
     margin-left: 1rem !important;
   }
+    .testTitle{
+              margin:20px 0;
+            }
 }
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
    .desktop-stats-container {

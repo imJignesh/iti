@@ -18,50 +18,50 @@ const uspData = [
   {
     number: "01",
     icon: "/images/usp-icon1.png",
-    title: "Language Mastery",
-    desc: "Build fluency and accuracy in Spanish communication skills.",
+    title: "Expert Guidance",
+    desc: "Get expert-led support to simplify complex coding topics.",
   },
   {
     number: "02",
     icon: "/images/usp-icon2.png",
-    title: "Personalized Approach",
-    desc: "Lessons tailored to your learning pace, goals, and level.",
+    title: "Coding Excellence",
+    desc: "Master programming languages with confidence and clarity.",
   },
   {
     number: "03",
     icon: "/images/usp-icon3.png",
-    title: "Cultural Insights",
-    desc: "Learn Spanish with cultural depth and real-world relevance.",
+    title: "Flexible Approach",
+    desc: "Learn at your pace with schedule-friendly coaching sessions.",
   },
   {
     number: "04",
     icon: "/images/usp-icon4.png",
     title: "Proven Results",
-    desc: "Track record of high scores in the Spanish examinations.",
+    desc: "Track record of top scores in Computer Science examinations.",
   },
   {
     number: "05",
     icon: "/images/usp-icon5.png",
-    title: "Interactive Learning",
-    desc: "Engaging, dynamic lessons that boost language retention.",
+    title: "Exam Success",
+    desc: "Focused training to ace curriculum-specific coding assessments.",
   },
   {
     number: "06",
     icon: "/images/usp-icon6.png",
-    title: "Flexible Sessions",
-    desc: "In-person or online classes that suit your class schedule.",
+    title: "Tailored Support",
+    desc: "Personalized help aligned with your curriculum and goals.",
   },
   {
     number: "07",
     icon: "/images/usp-icon1.png",
-    title: "Tailored Guidance",
-    desc: "Curriculum-specific tutoring aligned with academic expectations.",
+    title: "Interactive Approach",
+    desc: "Hands-on coding sessions that enhance real-world understanding.",
   },
   {
     number: "08",
     icon: "/images/usp-icon2.png",
-    title: "Exam Excellence",
-    desc: "Focused strategies for success in Spanish language assessments.",
+    title: "Boosted Grades",
+    desc: "Strategic guidance that improves academic performance consistently.",
   },
 ];
 
@@ -103,7 +103,7 @@ export default function Usps({ }) {
                   className="fade-in-sections uspTitle"
                   style={{ animationDelay: "0.2s" }}
                 >
-                  What Do Students Get From Ignite's Spanish Support?
+                  What Do Students Get From Ignite's French Support?
                 </h2>
 
                 {/* <div
@@ -163,6 +163,27 @@ export default function Usps({ }) {
           </div>
         </div>
       </div>
+      <style jsx>{`
+      
+      @media (max-width: 520px) {
+        .uspSection .uspTitle{
+          font-size:20.4px !important;
+          line-height:20px !important;
+        }
+        .uspSection .uspItemTitle{
+          font-size:16px !important;
+          line-height:18px !important;
+        }
+        .uspwrapper{
+          padding:0;
+        }
+        .uspSection .uspRight {
+          padding-top: 10px;
+        } 
+      }
+      
+      
+      `}</style>
     </>
   );
 }

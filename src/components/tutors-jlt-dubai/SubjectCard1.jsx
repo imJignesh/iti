@@ -374,8 +374,8 @@ export default function SubjectsCard1({ }) {
         /* Extra small devices - consistent across iPhone 12 (390px) and Galaxy S8+ (360px) */
          @media (max-width: 575px) {
           .subjects-card1-section{
-            padding-top: 80px;
-            padding-bottom:0;
+            padding: 80px 0;
+            
           } 
             .subjects-card1-section .subjects-card1-bubble-row{
             flex-wrap: wrap;

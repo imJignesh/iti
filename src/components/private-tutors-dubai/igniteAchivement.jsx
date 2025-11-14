@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useEffect, useState } from "react";
@@ -27,7 +26,7 @@ export default function IgniteAchievements() {
         data-scroll-repeat
         style={{ maxWidth: '90vw', animationDelay: "0.15s", marginBlock: isMobile ? "20px" : "40px" }}>
 
-        {/* Mobile Header Section - Only show on mobile */}
+        {/* Mobile Header Section - Only show on mobile (d-md-none) */}
         <div className="d-md-none text-center mb-4 fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
@@ -36,7 +35,7 @@ export default function IgniteAchievements() {
           <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
           </div>
 
-          {/* Main Title */}
+          {/* Main Title - Mobile: NO LINE BREAK */}
           <h2
             data-scroll
             data-scroll-class="is-inview"
@@ -44,8 +43,7 @@ export default function IgniteAchievements() {
             className="fade-in-section testTitle text-uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            Progress Measured Through Steady<br /> <span className="highlight"> Academic{" "}</span>
-            Growth
+            Progress Measured Through Steady <span className="highlight"> Academic </span>Growth
           </h2>
 
           {/* Subtitle */}
@@ -65,7 +63,7 @@ export default function IgniteAchievements() {
           </p>
         </div>
 
-        {/* Desktop Layout - Horizontal */}
+        {/* Desktop Layout - Horizontal (d-none d-md-block) */}
         <div className="d-none d-md-block fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
@@ -83,7 +81,7 @@ export default function IgniteAchievements() {
                   </div>
                 </div>
 
-                {/* Main Title */}
+                {/* Main Title - Desktop: HARD-CODED LINE BREAK */}
                 <h2
                   data-scroll
                   data-scroll-class="is-inview"
@@ -93,7 +91,7 @@ export default function IgniteAchievements() {
                 >
 
                   Progress Measured Through Steady
-                  <span className="highlight"> Academic </span>Growth
+                  <br /><span className="highlight"> Academic </span>Growth
                 </h2>
 
 
@@ -457,7 +455,7 @@ export default function IgniteAchievements() {
     -o-transition: opacity.3s ease!important;
     transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
-    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+    font-size: 1rem !important;
     margin-block: 30px !important;
     font-weight:600 !important;
   }
@@ -469,6 +467,9 @@ export default function IgniteAchievements() {
     animation-delay: 0.75s !important;
     margin-left: 1rem !important;
   }
+    .testTitle{
+              margin:20px 0;
+            }
 }
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
    .desktop-stats-container {

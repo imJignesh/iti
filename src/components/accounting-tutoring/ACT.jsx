@@ -71,7 +71,7 @@ const AchievementsCarousel = () => {
   if (!mounted) return null;
 
   return (
-    <section className="achievementsSection">
+    <section className="achievementsSection subject-syllabus">
       <div className="container">
         <div className="achievementsHeadings mb-5">
           <div
@@ -480,6 +480,18 @@ const AchievementsCarousel = () => {
     .achievementsSection {
   padding: 20px 0;
 }
+}
+
+@media (max-width: 575px) {
+  .subject-syllabus{
+    padding:0 0 80px 0;
+  }
+  .subject-syllabus .achievementsHeadings{
+    margin-bottom:0 !important;
+  }
+  .subject-syllabus .achievementsTitle{
+      margin:20px 0;
+  }
 }
 
 .subjects-card {

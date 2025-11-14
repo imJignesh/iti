@@ -19,49 +19,49 @@ const uspData = [
     number: "01",
     icon: "/images/usp-icon1.png",
     title: "Profound Expertise",
-    desc: "Learn from expert Physics tutors with in-depth subject mastery.",
+    desc: "Learn from experienced tutors with deep business knowledge.",
   },
   {
     number: "02",
     icon: "/images/usp-icon2.png",
     title: "Applicable Insights",
-    desc: "Relate Physics concepts to real-world situations and problems.",
+    desc: "Grasp concepts through practical, real-world business case studies.",
   },
   {
     number: "03",
     icon: "/images/usp-icon3.png",
-    title: "Proven Success",
-    desc: "Consistent track record of top scores in the Physics examinations.",
+    title: "Established Outcomes",
+    desc: "Proven track record of excellence & high Business Studies scores.",
   },
   {
     number: "04",
     icon: "/images/usp-icon4.png",
-    title: "Clear Concepts",
-    desc: "Understand challenging theories through simplified step-by-step teaching.",
+    title: "Interactive Sessions",
+    desc: "Engaging lessons that nurture analytical & critical thinking skills.",
   },
   {
     number: "05",
     icon: "/images/usp-icon5.png",
-    title: "Personalized Learning",
-    desc: "Custom lessons designed around your goals and curriculum.",
+    title: "Flexible Scheduling",
+    desc: "Classes arranged to fit your time & learning preferences.",
   },
   {
     number: "06",
     icon: "/images/usp-icon6.png",
-    title: "Exam Excellence",
-    desc: "Strategic preparation focused on scoring high in assessments.",
+    title: "Customized Learning",
+    desc: "Courses tailored to your learning pace, goals, & curriculum.",
   },
   {
     number: "07",
     icon: "/images/usp-icon1.png",
-    title: "Flexible Tutoring",
-    desc: "Sessions planned to match your availability and learning pace.",
+    title: "Confidence Boost",
+    desc: "Gain clarity in concepts & approach exams with confidence.",
   },
   {
     number: "08",
     icon: "/images/usp-icon2.png",
-    title: "Boosted Confidence",
-    desc: "Strengthen understanding to approach Physics with clarity and ease.",
+    title: "Exam Strategies",
+    desc: "Excel in business papers with structured, exam-focused techniques.",
   },
 ];
 
@@ -103,7 +103,7 @@ export default function Usps({ }) {
                   className="fade-in-sections uspTitle"
                   style={{ animationDelay: "0.2s" }}
                 >
-                  What Do Students Get From Ignite's Physics Support?
+                  What Do Students Get From Ignite's Psychology Support?
                 </h2>
 
                 {/* <div
@@ -163,6 +163,27 @@ export default function Usps({ }) {
           </div>
         </div>
       </div>
+      <style jsx>{`
+      
+      @media (max-width: 520px) {
+        .uspSection .uspTitle{
+          font-size:20.4px !important;
+          line-height:20px !important;
+        }
+        .uspSection .uspItemTitle{
+          font-size:16px !important;
+          line-height:18px !important;
+        }
+        .uspwrapper{
+          padding:0;
+        }
+        .uspSection .uspRight {
+          padding-top: 10px;
+        } 
+      }
+      
+      
+      `}</style>
     </>
   );
 }

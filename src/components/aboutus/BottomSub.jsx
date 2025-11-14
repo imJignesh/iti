@@ -334,11 +334,18 @@ export default function CallToAction() {
         .mobile-only h1{
           font-size:18.4px !important;
         }
+          .mobileImage{
+            margin-top:0;
+          }
            .mobileParagraph{
         font-size:15px !important;
         line-height: 1.3 !important;
         text-transform: none !important;
           }
+        .mobileButton{
+          padding:0.5rem 1.5rem;
+          
+        }
     }
                                 @media (max-width: 400px) {
                                                   .mobileImage {

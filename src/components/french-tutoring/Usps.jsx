@@ -18,50 +18,50 @@ const uspData = [
   {
     number: "01",
     icon: "/images/usp-icon1.png",
-    title: "Expert Guidance",
-    desc: "Learn from skilled tutors with deep accounting expertise.",
+    title: "Language Mastery",
+    desc: "Develop strong fluency and confidence in French communication.",
   },
   {
     number: "02",
     icon: "/images/usp-icon2.png",
-    title: "Practical Insights",
-    desc: "Understand real-world accounting through applied learning methods.",
+    title: "Personalized Approach",
+    desc: "Lessons tailored to your goals, pace, and strengths.",
   },
   {
     number: "03",
     icon: "/images/usp-icon3.png",
-    title: "Proven Results",
-    desc: "Consistent track record of top scores in Accounting assessments.",
+    title: "Cultural Insights",
+    desc: "Learn French with real-world cultural relevance and depth.",
   },
   {
     number: "04",
     icon: "/images/usp-icon4.png",
-    title: "Clear Concepts",
-    desc: "Grasp complex accounting topics with simplified explanations.",
+    title: "Proven Results",
+    desc: "Consistent track record of high grades in French exams.",
   },
   {
     number: "05",
     icon: "/images/usp-icon5.png",
-    title: "Flexible Sessions",
-    desc: "Study efficiently on your terms with schedule-friendly classes..",
+    title: "Interactive Learning",
+    desc: "Lively & interactive sessions that enhance language retention.",
   },
   {
     number: "06",
     icon: "/images/usp-icon6.png",
-    title: "Tailored Learning",
-    desc: "Accounting lessons expertly designed to match your style and goals.",
+    title: "Flexible Sessions",
+    desc: "Online or in-person classes that suit your schedule.",
   },
   {
     number: "07",
     icon: "/images/usp-icon1.png",
-    title: "Confidence Boost",
-    desc: "Build lasting clarity and confidence through guided support.",
+    title: "Tailored Guidance",
+    desc: "Curriculum-specific support to meet academic requirements.",
   },
   {
     number: "08",
     icon: "/images/usp-icon2.png",
-    title: "Exam Strategies",
-    desc: "Tackle exams with smart, targeted preparation techniques.",
+    title: "Exam Excellence",
+    desc: "Thorough preparation for top performance in French assessments.",
   },
 ];
 
@@ -163,6 +163,27 @@ export default function Usps({ }) {
           </div>
         </div>
       </div>
+      <style jsx>{`
+      
+      @media (max-width: 520px) {
+        .uspSection .uspTitle{
+          font-size:20.4px !important;
+          line-height:20px !important;
+        }
+        .uspSection .uspItemTitle{
+          font-size:16px !important;
+          line-height:18px !important;
+        }
+        .uspwrapper{
+          padding:0;
+        }
+        .uspSection .uspRight {
+          padding-top: 10px;
+        } 
+      }
+      
+      
+      `}</style>
     </>
   );
 }

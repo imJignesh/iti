@@ -50,7 +50,7 @@ const IBCurriculumStages = () => {
           alt="bg-shape"
           className="testimonialRect rect-3"
         />      </section>
-      <section className="achievementsSection" style={{ position: 'relative' }}>
+      <section className="" style={{ position: 'relative' }}>
         <div className="container">
           <div className="row pading-in gy-5">
             <div className="col-lg-6">
@@ -951,7 +951,29 @@ padding-inline:0 !important;
   font-size: 2rem;
   text-align: center;
 }
-}`}</style>
+}
+@media (max-width: 575px) {
+    .achievementsSection {
+      padding: 80px 0;
+    }
+    .achievementsTitle{
+        font-size:20.4px;
+        margin:20px 0;
+    }
+    .curriculum-content{
+        padding-top:15px;
+    }
+    .curriculum-info{
+        padding: 5px 30px;
+    }
+    
+    .curriculum-section-heading1,
+    .curriculum-section-heading2{
+        margin-bottom:0;
+    }
+  }
+
+`}</style>
     </div>
   )
 }

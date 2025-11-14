@@ -574,7 +574,7 @@ font-size: 2.5rem;
           max-width: 90vw;
           margin: auto;
           text-align: center;
-          padding: 10px 0;
+          padding: 0;
   font-family: 'Montserrat', sans-serif;
         }
           .custom-grid {

@@ -50,7 +50,7 @@ const IBCurriculumStages = () => {
           alt="bg-shape"
           className="testimonialRect rect-3"
         />      </section>
-      <section className="achievementsSection" style={{ position: 'relative' }}>
+      <section className="" style={{ position: 'relative' }}>
         <div className="container">
           <div className="row pading-in gy-5">
             <div className="col-lg-6">
@@ -918,40 +918,64 @@ padding-inline:0 !important;
 }
 
 @media (max-width: 768px) {
-  .achievements-slideCard {
-    padding: 15px;
-    min-height: 200px;
-  }
-  .curriculum-section-heading2 {
-  font-weight: 700;
-  font-size: 2rem;
-  text-align: center;
-  }
+    .achievements-slideCard {
+      padding: 15px;
+      min-height: 200px;
+    }
+    .curriculum-section-heading2 {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    }
 
-  .achievements-score {
-    font-size: 1.5rem;
-  }
+    .achievements-score {
+      font-size: 1.5rem;
+    }
 
-  .achievements-navButton {
-    width: 30px;
-    height: 30px;
-  }
+    .achievements-navButton {
+      width: 30px;
+      height: 30px;
+    }
 
-  .achievements-arrow {
-    width: 10px;
-    height: 10px;
+    .achievements-arrow {
+      width: 10px;
+      height: 10px;
+    }
+    .curriculum-col {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-right: 0px;
+    padding: 30px;
   }
-  .curriculum-col {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  padding-right: 0px;
-  padding: 30px;
+  .curriculum-section-heading1{
+    font-size: 2rem;
+    text-align: center;
+  }
 }
-.curriculum-section-heading1{
-  font-size: 2rem;
-  text-align: center;
+  @media (max-width: 575px) {
+    .achievementsSection{
+      padding: 80px 0px;
+    }
+    .achievementsHeadings .SubHeading{
+        margin:0;
+    }
+    .achievementsTitle{
+        margin: 20px 0;
+        font-size: 20.4px;
+    }
+    .curriculum-content{
+        padding-top:15px;
+    }
+    .curriculum-info{
+        padding: 5px 30px;
+    }
+    
+    .curriculum-section-heading1,
+    .curriculum-section-heading2{
+        margin-bottom:0;
+    }
 }
-}`}</style>
+`}</style>
     </div>
   )
 }

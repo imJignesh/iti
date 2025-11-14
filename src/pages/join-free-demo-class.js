@@ -10,8 +10,8 @@ import Subjects from "@/components/freedemo/Subjects";
 import MovingBanner from "@/components/freedemo/MovingBanner";
 import MarqueeBanner from '@/components/freedemo/MarqueeBanner';
 import Testimonial from "@/components/freedemo/Testimonial";
-import TrainersMessage from "@/components/maincourse/videoTrainer";
-import CallToAction from "@/components/maincourse/CallToAction";
+import TrainersMessage from "@/components/freedemo/videoTrainer";
+import CallToAction from "@/components/freedemo/CallToAction";
 import StudentAchievements from '@/components/freedemo/StudentAchivement';
 import SEO from "@/components/SEO";
 

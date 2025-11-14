@@ -946,6 +946,27 @@ background: linear-gradient(235.04deg, #EDFFF4 45.21%, #A6EAC7 95.86%);
     font-size: calc(2.5rem - 10px);
   }
 }
+  @media (max-width: 575px) {
+    
+    .achievementsHeadings .SubHeading{
+        margin:0;
+    }
+    .achievementsTitle{
+        margin: 20px 0;
+        font-size: 20.4px;
+    }
+    .curriculum-content{
+        padding-top:15px;
+    }
+    .curriculum-info{
+        padding: 5px 30px;
+    }
+    
+    .curriculum-section-heading1,
+    .curriculum-section-heading2{
+        margin-bottom:0;
+    }
+}
 `}</style>
     </div>
   )

@@ -281,33 +281,39 @@ function UpsSection() {
             font-size: 16px !important;
           }
         }
-@media (max-width: 575px) {
- .custom-grid {
-          margin-bottom:2rem;
-  gap: .5rem;
-}
-  .cust-text {
-    background: linear-gradient(90deg, #161664, #3F88BA) !important;
-    color: white !important;
-    padding: 8px 8px 8px 13px !important;
-    border: none !important;
-    -webkit-transition: opacity .3s ease !important;
-    -moz-transition: opacity.3s ease!important;
-    -o-transition: opacity.3s ease!important;
-    transition: opacity .3s ease !important;
-    letter-spacing: 1px !important;
-    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
-    margin-top: -17px !important;
-    font-weight:600 !important;
-  }
+      @media (max-width: 575px) {
+      .custom-grid {
+                margin-bottom:2rem;
+        gap: .5rem;
+      }
+        .cust-text {
+          background: linear-gradient(90deg, #161664, #3F88BA) !important;
+          color: white !important;
+          padding: 8px 8px 8px 13px !important;
+          border: none !important;
+          -webkit-transition: opacity .3s ease !important;
+          -moz-transition: opacity.3s ease!important;
+          -o-transition: opacity.3s ease!important;
+          transition: opacity .3s ease !important;
+          letter-spacing: 1px !important;
+          font-size: 1rem !important;
+          margin-top: -17px !important;
+          font-weight:600 !important;
+        }
 
-  .custom-height {
-    width: 30px !important;
-    height: 30px !important;
-    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
-    animation-delay: 0.75s !important;
-    margin-left: 1rem !important;
-  }
+        .custom-height {
+          width: 30px !important;
+          height: 30px !important;
+          background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+          animation-delay: 0.75s !important;
+          margin-left: 1rem !important;
+        }
+        .testTitle{
+          font-size:20.4px !important;
+        }
+        .usps>div>div.mb-5{
+          margin-bottom:0 !important;
+        }
 }
   @media screen and (min-width: 1536px) and (max-width: 1919px) {
   .custom-grid {

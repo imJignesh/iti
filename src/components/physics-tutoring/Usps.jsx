@@ -18,50 +18,50 @@ const uspData = [
   {
     number: "01",
     icon: "/images/usp-icon1.png",
-    title: "Expert Guidance",
-    desc: "Get expert-led support to simplify complex coding topics.",
+    title: "Profound Expertise",
+    desc: "Learn from expert Physics tutors with in-depth subject mastery.",
   },
   {
     number: "02",
     icon: "/images/usp-icon2.png",
-    title: "Coding Excellence",
-    desc: "Master programming languages with confidence and clarity.",
+    title: "Applicable Insights",
+    desc: "Relate Physics concepts to real-world situations and problems.",
   },
   {
     number: "03",
     icon: "/images/usp-icon3.png",
-    title: "Flexible Approach",
-    desc: "Learn at your pace with schedule-friendly coaching sessions.",
+    title: "Proven Success",
+    desc: "Consistent track record of top scores in the Physics examinations.",
   },
   {
     number: "04",
     icon: "/images/usp-icon4.png",
-    title: "Proven Results",
-    desc: "Track record of top scores in Computer Science examinations.",
+    title: "Clear Concepts",
+    desc: "Understand challenging theories through simplified step-by-step teaching.",
   },
   {
     number: "05",
     icon: "/images/usp-icon5.png",
-    title: "Exam Success",
-    desc: "Focused training to ace curriculum-specific coding assessments.",
+    title: "Personalized Learning",
+    desc: "Custom lessons designed around your goals and curriculum.",
   },
   {
     number: "06",
     icon: "/images/usp-icon6.png",
-    title: "Tailored Support",
-    desc: "Personalized help aligned with your curriculum and goals.",
+    title: "Exam Excellence",
+    desc: "Strategic preparation focused on scoring high in assessments.",
   },
   {
     number: "07",
     icon: "/images/usp-icon1.png",
-    title: "Interactive Approach",
-    desc: "Hands-on coding sessions that enhance real-world understanding.",
+    title: "Flexible Tutoring",
+    desc: "Sessions planned to match your availability and learning pace.",
   },
   {
     number: "08",
     icon: "/images/usp-icon2.png",
-    title: "Boosted Grades",
-    desc: "Strategic guidance that improves academic performance consistently.",
+    title: "Boosted Confidence",
+    desc: "Strengthen understanding to approach Physics with clarity and ease.",
   },
 ];
 
@@ -103,7 +103,7 @@ export default function Usps({ }) {
                   className="fade-in-sections uspTitle"
                   style={{ animationDelay: "0.2s" }}
                 >
-                  What Do Students Get From Ignite's French Support?
+                  What Do Students Get From Ignite's Physics Support?
                 </h2>
 
                 {/* <div
@@ -125,7 +125,7 @@ export default function Usps({ }) {
                   className="uspBtn fade-in-sections buttonSkyBlue"
                   style={{ animationDelay: "0.5s" }}
                 >
-                  KNOW MORE ABOUT IGNITE{" "}
+                  KNOW MORE{" "}
                   <Image
                     src="/images/right-arrow-blue.png"
                     width={40}
@@ -163,6 +163,27 @@ export default function Usps({ }) {
           </div>
         </div>
       </div>
+      <style jsx>{`
+      
+      @media (max-width: 520px) {
+        .uspSection .uspTitle{
+          font-size:20.4px !important;
+          line-height:20px !important;
+        }
+        .uspSection .uspItemTitle{
+          font-size:16px !important;
+          line-height:18px !important;
+        }
+        .uspwrapper{
+          padding:0;
+        }
+        .uspSection .uspRight {
+          padding-top: 10px;
+        } 
+      }
+      
+      
+      `}</style>
     </>
   );
 }

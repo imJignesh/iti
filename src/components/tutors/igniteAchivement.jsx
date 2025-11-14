@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useEffect, useState } from "react";
@@ -36,7 +35,7 @@ export default function IgniteAchievements() {
           <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
           </div>
 
-          {/* Main Title */}
+          {/* Main Title - Mobile Version */}
           <h2
             data-scroll
             data-scroll-class="is-inview"
@@ -44,7 +43,7 @@ export default function IgniteAchievements() {
             className="fade-in-section testTitle text-uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            Milestones That Clearly Reflect <br /> <span className="highlight"> Our{" "}</span>
+            Milestones That Clearly Reflect <span className="highlight"> Our{" "}</span>
             Impact
           </h2>
 
@@ -83,7 +82,7 @@ export default function IgniteAchievements() {
                   </div>
                 </div>
 
-                {/* Main Title */}
+                {/* Main Title - Desktop Version */}
                 <h2
                   data-scroll
                   data-scroll-class="is-inview"
@@ -91,8 +90,8 @@ export default function IgniteAchievements() {
                   className="fade-in-section testTitle"
                   style={{ animationDelay: "0.2s" }}
                 >
-                  LOREM IPSUM DOLOR SIT AMET,
-                  <span className="highlight"> CONSECTETUR </span>ADIPISCING
+                  Milestones That Clearly Reflect <br /> <span className="highlight"> Our{" "}</span>
+                  Impact
                 </h2>
 
 
@@ -439,35 +438,39 @@ export default function IgniteAchievements() {
           }
         }
           @media (max-width: 575px) {
-          .mobileign{
-          margin-top: 80px !important;
-          margin-bottom: 80px !important;
-          }
-          .custom-grid {
-  gap: .5rem;
-}
-  .cust-text {
-    background: linear-gradient(90deg, #161664, #3F88BA) !important;
-    color: white !important;
-    padding: 8px 8px 8px 13px !important;
-    border: none !important;
-    -webkit-transition: opacity .3s ease !important;
-    -moz-transition: opacity.3s ease!important;
-    -o-transition: opacity.3s ease!important;
-    transition: opacity .3s ease !important;
-    letter-spacing: 1px !important;
-    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
-    margin-block: 30px !important;
-    font-weight:600 !important;
-  }
+            .mobileign{
+              margin-top: 80px !important;
+              margin-bottom: 80px !important;
+            }
+            .custom-grid {
+              gap: .5rem;
+            }
+            .cust-text {
+              background: linear-gradient(90deg, #161664, #3F88BA) !important;
+              color: white !important;
+              padding: 8px 8px 8px 13px !important;
+              border: none !important;
+              -webkit-transition: opacity .3s ease !important;
+              -moz-transition: opacity.3s ease!important;
+              -o-transition: opacity.3s ease!important;
+              transition: opacity .3s ease !important;
+              letter-spacing: 1px !important;
+              font-size: 1rem!important;
+              margin-block: 30px !important;
+              font-weight:600 !important;
+            }
 
-  .custom-height {
-    width: 30px !important;
-    height: 30px !important;
-    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
-    animation-delay: 0.75s !important;
-    margin-left: 1rem !important;
-  }
+            .custom-height {
+              width: 30px !important;
+              height: 30px !important;
+              background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+              animation-delay: 0.75s !important;
+              margin-left: 1rem !important;
+            }
+            .testTitle{
+              margin:20px 0;
+            }
+            
 }
   @media screen and (min-width: 1300px) and (max-width: 1600px) {
    .desktop-stats-container {
