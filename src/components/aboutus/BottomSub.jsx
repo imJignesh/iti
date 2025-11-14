@@ -82,6 +82,7 @@ export default function CallToAction() {
       <style jsx>{`
         .cta-wrapper {
           position: relative;
+          
         }
 
         .cta-container {
