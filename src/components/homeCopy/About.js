@@ -144,7 +144,7 @@ const About = () => {
               style={{ animationDelay: "0.1s" }}
             >
               <div className="aboutHeadingRow">
-                <span className="SubHeading">ABOUT IGNITE</span>
+                <span className="SubHeading" style={{ fontSize: "1.5rem" }}>ABOUT IGNITE</span>
               </div>
             </div>
 

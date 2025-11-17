@@ -3,6 +3,10 @@
   margin: 100px 0 80px 0;
 }
 
+.homeCopy .aboutSection .SubHeading1 {
+  font-size: 1.5rem;
+}
+
 .homeCopy .aboutSection .aboutSectionInner {
   display: flex;
   gap: 60px;
@@ -231,6 +235,8 @@
 .aboutRight .mainCardBtn {
   font-weight: 600;
 }
+
+
 
 @media (max-width: 1199px) {
   .homeCopy .aboutSection .statSmall {

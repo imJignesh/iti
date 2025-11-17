@@ -122,9 +122,9 @@ export default function Trainers() {
 
           .${containerClass} .trainersSection .trainersGrid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(auto-fit, calc((100% - 96px) / 5));
             gap: 32px 24px;
-            justify-items: center;
+            justify-content: center; /* ALIGN COLUMNS TO CENTER */
             margin-bottom: 36px;
             width: 70vw;
             margin: 0 auto;
