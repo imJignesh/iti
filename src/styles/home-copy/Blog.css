@@ -59,8 +59,9 @@
   display: none;
 }
 
-.homeCopy .blogSection .blogLeft h2 {
+.homeCopy .blogSection .blogLeft h3 {
   width: 80%;
+  font-size: 2rem;
 }
 
 .homeCopy .blogSection .blogRight {
@@ -244,7 +245,7 @@
     padding-bottom: 20px;
   }
 
-  .homeCopy .blogSection .blogLeft h2 {
+  .homeCopy .blogSection .blogLeft h3 {
     width: 100%;
   }
 

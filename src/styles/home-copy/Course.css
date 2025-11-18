@@ -221,6 +221,7 @@
   max-width: 22vw;
   line-height: 1.2;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .homeCopy .courseSection .mainCardDetails {

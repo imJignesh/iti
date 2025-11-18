@@ -99,9 +99,9 @@ const Blog = () => {
                             data-scroll-repeat="true"
                             style={{ animationDelay: "0.1s" }}
                         >
-                            <span className="SubHeading">BLOGS</span>
+                            <h2 className="SubHeading">BLOGS</h2>
                         </div>
-                        <h2
+                        <h3
                             data-scroll
                             data-scroll-class="is-inview"
                             data-scroll-repeat="true"
@@ -110,8 +110,8 @@ const Blog = () => {
                         >
                             Explore Expert Insights, Study Tips, & Success Stories
                             {/* <span className="blogHighlight"> ADIPISCING</span> */}
-                        </h2>
-                        <div
+                        </h3>
+                        <h4
                             data-scroll
                             data-scroll-class="is-inview"
                             data-scroll-repeat="true"
@@ -119,7 +119,7 @@ const Blog = () => {
                             style={{ animationDelay: "0.3s" }}
                         >
                             Dive Into Our Signature Blogs
-                        </div>
+                        </h4>
                         <a href="/blog" className="nodecoration mobile-hide">
                             <button
                                 data-scroll

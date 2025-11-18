@@ -58,9 +58,9 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">STANDARDISED TESTS</div>
+            <h2 className="SubHeading testSubheading">STANDARDISED TESTS</h2>
           </div>
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -69,7 +69,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
           >
             Power Your Academic Goals With Expert Prep{" "}
             <span className="highlight">Support</span>
-          </h2>
+          </h3>
 
           <div
             data-scroll
@@ -145,10 +145,10 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                     style={{ backgroundImage: `url(${card.img})` }}
                   >
                     <span className={`testCardNumber ${isCardActive ? "mobileActiveNumber" : ""}`}>{card.number}</span>
-                    <span className={`testCardTitle ${isCardActive ? "mobileActiveTitle" : ""}`}>{card.title}</span>
+                    <h3 className={`testCardTitle ${isCardActive ? "mobileActiveTitle" : ""}`}>{card.title}</h3>
                   </div>
                   <div className={`testCardDetailsWrap ${isCardActive ? "mobileShowContent" : "mobileHideContent"}`}>
-                    <div className="testCardLabel">{card.label}</div>
+                    <h3 className="testCardLabel">{card.label}</h3>
                     <div className="testCardDetails">
                       {card.details &&
                         card.details.map((d, i) => <span key={i}>{d}</span>)}
@@ -198,12 +198,12 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                   >
                     <div className="imageOverlay"></div>
                     <span className="cardNumber">{card.number}</span>
-                    <span className="cardTitle">{card.title}</span>
+                    <h3 className="cardTitle">{card.title}</h3>
                   </div>
                   <div
                     className={`cardContentArea ${isCardActive ? "showContent" : "hideContent"}`}
                   >
-                    <div className="cardLabel">{card.label}</div>
+                    <h3 className="cardLabel">{card.label}</h3>
                     <div className="cardDetails">
                       {card.details &&
                         card.details.map((d, i) => (

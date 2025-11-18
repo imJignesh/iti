@@ -30,7 +30,7 @@
 }
 
 .footerWrap .footerTitle {
-  /* font-size: 1.7vw; */
+  font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 28px 0;

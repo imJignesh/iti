@@ -20,9 +20,9 @@ const Footer = () => {
         {/* <div className={styles.footerContactRow}>
           <span className="SubHeading">CONTACT US</span>
         </div> */}
-        <h2 className={styles.footerTitle}>
+        <h3 className={styles.footerTitle}>
           REVOLUTIONIZING THE WAY STUDENTS LEARN
-        </h2>
+        </h3>
         <div className={styles.footerMainRow}>
           <div
             className={styles.footerTop}

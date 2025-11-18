@@ -65,7 +65,7 @@ const Course = () => {
                         className="fade-in-section"
                         style={{ animationDelay: "0.1s" }}
                     >
-                        <h3 className="SubHeading">TUTORING PROGRAMS</h3>
+                        <h2 className="SubHeading">TUTORING PROGRAMS</h2>
                     </div>
                     <div
                         data-scroll
@@ -74,9 +74,9 @@ const Course = () => {
                         className="fade-in-section"
                         style={{ animationDelay: "0.25s" }}
                     >
-                        <h1 className="courseTitle">
+                        <h3 className="courseTitle">
                             Become Exam-Ready With Targeted Prep <span className="highlight">Courses</span>
-                        </h1>
+                        </h3>
                     </div>
                     <div
                         data-scroll
@@ -111,7 +111,7 @@ const Course = () => {
                                 onMouseEnter={() => setHovered(idx)}
                             >
                                 <span className="cardNumber">{card.number}</span>
-                                <span className="cardTitle">{card.title}</span>
+                                <h3 className="cardTitle">{card.title}</h3>
                                 <div
                                     className="cardBg"
                                     style={{ backgroundImage: `url('${card.img}')` }}
@@ -125,7 +125,7 @@ const Course = () => {
                                 >
                                     <div>
                                         <div className="mainCardLabel">{card.label}</div>
-                                        <div className="mainCardTitle">{card.subtitle}</div>
+                                        <h3 className="mainCardTitle">{card.subtitle}</h3>
                                     </div>
                                     <div className="mainCardDetails">
                                         {card.details.map((d, i) => (

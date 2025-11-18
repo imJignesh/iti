@@ -86,7 +86,7 @@ const Hero = () => {
                                 className={`fade-in-section heroMainHeading ${mobileClass}`}
                                 style={{ animationDelay: "0.4s" }}
                             >
-                                <h3 className="SubHeading">BEST TUTORS IN UAE</h3>
+                                <h2 className="SubHeading">BEST TUTORS IN UAE</h2>
                             </div>
 
                             {/* --- Conditionally Rendered Hero Title --- */}
@@ -108,15 +108,15 @@ const Hero = () => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.8s" }}
                             >
-                                <p className="heroParagraph pt-3 pb-3">
-                                    <span>Improve Your Grades Today!</span>
+                                <div className="heroParagraph pt-3 pb-3">
+                                    <h3>Improve Your Grades Today!</h3>
                                     <b>
                                         We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, & more through our curriculum-specific approach & expert tutors in Dubai, guiding them toward a stronger understanding & lasting growth.
                                     </b>
                                     <strong>
                                         Ignite's experienced tutors in Dubai help students thrive in IBDP, IB MYP, IGCSE, A-Levels, AP, & more with personalized support & structured programs.
                                     </strong>
-                                </p>
+                                </div>
                             </div>
                         </div>
                         <div className="col-12 col-lg-5 col-xl-5 heroRight">

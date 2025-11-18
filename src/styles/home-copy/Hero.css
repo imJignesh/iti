@@ -84,7 +84,7 @@
   display: none;
 }
 
-.homeCopy .hero .heroParagraph span {
+.homeCopy .hero .heroParagraph h3 {
   text-transform: uppercase;
   display: block;
   font-size: 1.3rem;

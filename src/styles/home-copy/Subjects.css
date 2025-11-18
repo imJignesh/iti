@@ -67,14 +67,14 @@
   z-index: 1;
 }
 
-.homeCopy .subjectSection .subjectLeft span {
+.homeCopy .subjectSection .subjectLeft h2 {
 
   -webkit-text-fill-color: white;
   margin-bottom: 30px;
 }
 
-.homeCopy .subjectSection .subjectLeft span::before,
-.homeCopy .subjectSection .subjectLeft span:after {
+.homeCopy .subjectSection .subjectLeft h2::before,
+.homeCopy .subjectSection .subjectLeft h2:after {
   filter: contrast(0) brightness(2);
 }
 
@@ -113,7 +113,7 @@
 .homeCopy .subjectSection .subjectBubblesGrid {
   display: flex;
   flex-direction: column;
-  gap: 1.5vw;
+  gap: 3vw;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -136,7 +136,7 @@
   color: var(--green-text);
   font-size: 1.3vw;
   font-weight: 400;
-  padding: 0.8vw 1.5vw;
+  padding: 1vw 1.5vw;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: none;
@@ -174,7 +174,7 @@
 }
 
 @media (max-width: 1199px) {
-  .homeCopy .subjectSection .subjectLeft span {
+  .homeCopy .subjectSection .subjectLeft h2 {
     font-size: 18px;
   }
 
@@ -201,7 +201,7 @@
   }
 
   .homeCopy .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
-    padding: 10px 30px;
+    padding: 12px 30px;
   }
 }
 
@@ -213,7 +213,7 @@
     padding: 70px 20px;
   }
 
-  .homeCopy .subjectSection .subjectLeft span {
+  .homeCopy .subjectSection .subjectLeft h2 {
     margin-bottom: 10px;
   }
 
@@ -285,7 +285,7 @@
     rotate: 180deg;
   }
 
-  .homeCopy .subjectSection .subjectLeft span {
+  .homeCopy .subjectSection .subjectLeft h2 {
     font-size: 15px;
   }
 
@@ -313,13 +313,13 @@
   }
 
   .homeCopy .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
-    padding: 10px 40px;
+    padding: 12px 40px;
   }
 }
 
 @media (max-width: 420px) {
   .homeCopy .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
-    padding: 5px 15px;
+    padding: 7px 15px;
   }
 
   .homeCopy .subjectSection .bgRect:nth-child(2) {

@@ -24,7 +24,7 @@
   top: 10vw;
 }
 
-.uspSection .uspLeft span {
+.uspSection .uspLeft h2 {
   -webkit-text-fill-color: var(--white-color);
   width: max-content;
   /* font-size: 1.3vw; */
@@ -32,15 +32,15 @@
 }
 
 
-.uspSection .uspLeft span {
+.uspSection .uspLeft h2 {
   -webkit-text-fill-color: var(--white-color);
   width: max-content;
   /* font-size: 1.3vw; */
   margin-bottom: 20px;
 }
 
-.uspSection .uspLeft span:before,
-.uspSection .uspLeft span:after {
+.uspSection .uspLeft h2:before,
+.uspSection .uspLeft h2:after {
   width: 16px;
   filter: contrast(0) brightness(2);
 }
@@ -146,7 +146,7 @@
 .uspSection .uspItemTitle {
   font-size: 1vw;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   color: var(--white-color);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -251,8 +251,8 @@
     max-width: 95vw;
   }
 
-  .uspSection .uspLeft span:before,
-  .uspSection .uspLeft span:after {
+  .uspSection .uspLeft h2:before,
+  .uspSection .uspLeft h2:after {
     width: 10px;
   }
 
@@ -286,7 +286,7 @@
     gap: 20px;
   }
 
-  .uspSection .uspLeft span,
+  .uspSection .uspLeft h2,
   .uspSection .uspTitle {
     font-size: 15px !important;
     margin-bottom: 0;

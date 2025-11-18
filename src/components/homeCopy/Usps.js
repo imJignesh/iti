@@ -97,27 +97,27 @@ export default function Usps({ }) {
                 data-scroll-sticky
                 data-scroll-target=".uspSection"
               >
-                <span
+                <h2
                   className="fade-in-sections SubHeading"
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
-                </span>
+                </h2>
 
-                <h2
+                <h3
                   className="fade-in-sections uspTitle"
                   style={{ animationDelay: "0.2s" }}
                 >
                   Here's Why Ignite Is The UAE's First Choice
-                </h2>
+                </h3>
 
 
-                <div
+                <h4
                   className="fade-in-sections uspSubtitle"
                   style={{ animationDelay: "0.3s" }}
                 >
                   Real Support, Real Progress
-                </div>
+                </h4>
 
                 {/* 1. DESKTOP TEXT (Visible on large screens and up) */}
                 <p
@@ -168,7 +168,7 @@ export default function Usps({ }) {
                           />
                         </div>
                         <div className="uspContent">
-                          <div className="uspItemTitle">{usp.title}</div>
+                          <h3 className="uspItemTitle">{usp.title}</h3>
                           <div className="uspItemDesc">{usp.desc}</div>
                         </div>
                       </div>

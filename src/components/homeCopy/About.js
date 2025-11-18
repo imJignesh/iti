@@ -50,7 +50,7 @@ const About = () => {
     <section className="aboutSection">
       <div className="container">
         <div className="aboutHeading">
-          <span className="SubHeading">ABOUT IGNITE</span>
+          <h2 className="SubHeading">ABOUT IGNITE</h2>
         </div>
         <div className="row aboutSectionInner">
           <div className="col-12 col-lg-6 aboutLeft">
@@ -148,7 +148,7 @@ const About = () => {
               </div>
             </div>
 
-            <h2
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -157,7 +157,7 @@ const About = () => {
             >
               EXAM-READY SUPPORT WITH TRUSTED CURRICULA{" "}
               <span className="aboutHighlight">EXPERTS</span>
-            </h2>
+            </h3>
 
             <p
               data-scroll

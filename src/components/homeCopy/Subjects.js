@@ -114,7 +114,7 @@ export default function Subjects({ }) {
             className="bgRect"
           />
           <div className="col-4 subjectLeft">
-            <span
+            <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -122,8 +122,8 @@ export default function Subjects({ }) {
               style={{ animationDelay: "0.1s" }}
             >
               SUBJECT TUTORING
-            </span>
-            <h1
+            </h2>
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -132,7 +132,7 @@ export default function Subjects({ }) {
             >
               Expert Guidance For Every Subject In Every{" "}
               <span className="subjectHighlight">Way</span>
-            </h1>
+            </h3>
             <p
               data-scroll
               data-scroll-class="is-inview"
@@ -155,9 +155,11 @@ export default function Subjects({ }) {
                   style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
                 >
                   {row.map((subj) => (
+                    <h3>
                     <a key={subj.name} href={subj.link} className="subjectBubble nodecoration">
                       {subj.name}
                     </a>
+                    </h3>
                   ))}
                 </div>
               ))}
