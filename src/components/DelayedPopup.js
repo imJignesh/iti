@@ -1,23 +1,33 @@
 // components/DelayedPopup.js
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useRouter } from "next/navigation";
+
+// IMPORTANT: Update this path to where PopupContext is exported from (_app.js)
+import { PopupContext } from '../pages/_app';
 
 import Image from '@/components/CustomImageWrapper';
 const POPUP_DELAY_MS = 2000;
 const HAS_SEEN_POPUP_KEY = 'hasSeenPopupSession';
 
 const DelayedPopup = () => {
+    // 1. Consume context for manual trigger state and its close function
+    const { isManualOpen, closeManualPopup } = useContext(PopupContext);
+
     const router = useRouter();
 
-    const [isVisible, setIsVisible] = useState(false);
+    // Renamed original state to track only the delayed visibility
+    const [isDelayedVisible, setIsDelayedVisible] = useState(false);
     const [pageInfo, setPageInfo] = useState('');
 
+    const isVisible = isDelayedVisible || isManualOpen;
+
+    // ... (rest of existing form data state)
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         phone: "",
-        curriculum: "-Select-",
+        curriculum: "International Baccalaureate (IB)", // Set initial value here
     });
 
     const [errors, setErrors] = useState({});
@@ -30,7 +40,7 @@ const DelayedPopup = () => {
 
             if (!hasSeen) {
                 const timer = setTimeout(() => {
-                    setIsVisible(true);
+                    setIsDelayedVisible(true);
                     sessionStorage.setItem(HAS_SEEN_POPUP_KEY, 'true');
                 }, POPUP_DELAY_MS);
 
@@ -50,9 +60,17 @@ const DelayedPopup = () => {
     }, []);
 
     const closePopup = (e) => {
-        e.preventDefault();
+        if (e) e.preventDefault();
+
         if (!loading) {
-            setIsVisible(false);
+            // Close the internal delayed state
+            setIsDelayedVisible(false);
+
+            // Reset the context state if it was manually opened
+            if (isManualOpen) {
+                closeManualPopup();
+            }
+
             setErrors({});
             setSubmissionStatus(null);
         }
@@ -92,7 +110,7 @@ const DelayedPopup = () => {
             newErrors.phone = "Phone must be 6-15 digits.";
             isValid = false;
         }
-        if (formData.curriculum === '-Select-') {
+        if (formData.curriculum === '-Select-') { // Ensure this matches a non-selectable option if you have one
             newErrors.curriculum = "Please select a curriculum.";
             isValid = false;
         }
@@ -132,24 +150,17 @@ const DelayedPopup = () => {
             const result = await response.json();
 
             if (response.ok && result.success) {
-                console.log('Popup Form Submitted successfully! Redirecting...');
+                closePopup();
 
-                // 1. Close the popup immediately before redirection
-                setIsVisible(false);
-
-                // 2. Use the dynamic URL returned from the API route
                 if (result.redirectUrl) {
-                    router.push(result.redirectUrl); // <--- Uses the dynamic URL from the API
+                    router.push(result.redirectUrl);
                 } else {
-                    // Fallback in case the API forgets the URL (shouldn't happen)
                     router.push('/thank-you-default');
                 }
             } else {
-                console.error('Submission failed via API:', result.message);
                 setSubmissionStatus('error');
             }
         } catch (error) {
-            console.error('API call failed:', error);
             setSubmissionStatus('error');
         } finally {
             setLoading(false);
@@ -178,7 +189,7 @@ const DelayedPopup = () => {
                         <p style={{ color: 'red', textAlign: 'center', fontWeight: 'bold' }}>Submission failed. Please try again.</p>
                     )}
 
-                    {/* Name (SingleLine) - State key: name */}
+                    {/* Name */}
                     <label>Name</label>
                     <input
                         type="text"
@@ -191,7 +202,7 @@ const DelayedPopup = () => {
                     />
                     {errors.name && <p className="error-text" style={{ color: 'red', fontSize: '0.8rem', marginTop: '0.2rem' }}>{errors.name}</p>}
 
-                    {/* Email - State key: email */}
+                    {/* Email */}
                     <label>Email</label>
                     <input
                         type="text"
@@ -204,7 +215,7 @@ const DelayedPopup = () => {
                     />
                     {errors.email && <p className="error-text" style={{ color: 'red', fontSize: '0.8rem', marginTop: '0.2rem' }}>{errors.email}</p>}
 
-                    {/* Phone (PhoneNumber_countrycode) - State key: phone */}
+                    {/* Phone */}
                     <label>Phone</label>
                     <input
                         type="text"
@@ -217,16 +228,17 @@ const DelayedPopup = () => {
                     />
                     {errors.phone && <p className="error-text" style={{ color: 'red', fontSize: '0.8rem', marginTop: '0.2rem' }}>{errors.phone}</p>}
 
-                    {/* Curriculum (Dropdown) - State key: curriculum */}
+                    {/* Curriculum (Dropdown) - Corrected options to use value property */}
                     <label>Curriculum</label>
                     <select
                         name="curriculum"
-                        value={formData.curriculum}
+                        value={formData.curriculum} // This controls which option is selected
                         onChange={handleChange}
                         required
                         className="formInput"
                     >
-                        <option selected="true" value="International Baccalaureate (IB)">International Baccalaureate (IB)</option>
+                        {/* Removed selected="true" to fix React warning */}
+                        <option value="International Baccalaureate (IB)">International Baccalaureate (IB)</option>
                         <option value="IGCSE/GCSE">IGCSE/GCSE</option>
                         <option value="A-Levels">A-Levels</option>
                         <option value="EmSAT">EmSAT</option>

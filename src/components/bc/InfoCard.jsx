@@ -13,6 +13,7 @@ export default function InfoCard() {
     phone: "",
     school: "",
     message: "",
+    formType: "Organic_Curriculum",
   });
 
   // New state for validation errors

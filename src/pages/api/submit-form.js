@@ -5,8 +5,11 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: 'Method Not Allowed' });
     }
 
-    // 💡 NEW: Destructure the 'formType' and 'curriculum' fields from the request body
-    const { name, email, phone, school, message, pageinfo, formType, curriculum } = req.body;
+    // 💡 UPDATED: Destructure ALL fields, including new Career fields
+    const {
+        name, email, phone, school, message, pageinfo, formType, curriculum,
+        location, department, position, subjects, job_type, notice_period, experience
+    } = req.body;
 
     // --- 1. DETERMINE THE CURRENT PAGE PATH/SLUG ---
     const urlMatch = pageinfo ? pageinfo.split(' | ')[0].replace('URL: ', '').toLowerCase() : '';
@@ -19,7 +22,7 @@ export default async function handler(req, res) {
         path = '';
     }
 
-    // --- 2. CONFIGURATION: DEFINE ALL 5 FORMS BY THEIR SLUGS/TYPE, ALIASES, AND REDIRECT URLS ---
+    // --- 2. CONFIGURATION: DEFINE ALL FORMS BY THEIR SLUGS/TYPE, ALIASES, AND REDIRECT URLS ---
     const FORM_CONFIGS = [
         {
             type: 'POPUP_FORM', // Unique identifier passed from the frontend
@@ -100,7 +103,27 @@ export default async function handler(req, res) {
             },
             redirectUrl: '/thank-you-subject', // <-- Unique thank-you page for subject pages
         },
-        // You would add other forms here...
+        {
+            type: 'CAREER_FORM', // Must match formType sent from CareerForm.jsx
+            slugs: ['/careers'],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Career/formperma/5MGjIF4X7ef6W9KUqep6lOshMxA11LSyAx7Ub7300E4/htmlRecords/submit',
+            fieldMap: {
+                // Map API fields (from FormData) to Zoho field names
+                name: 'SingleLine',
+                email: 'Email',
+                phone: 'PhoneNumber_countrycode',
+                location: 'SingleLine1',      // Example mapping for Career fields
+                department: 'SingleLine2',    // Example mapping
+                position: 'SingleLine3',      // Example mapping
+                subjects: 'SingleLine4',      // Example mapping
+                job_type: 'Radio',            // Example mapping
+                notice_period: 'SingleLine5', // Example mapping
+                experience: 'SingleLine6',    // Example mapping
+                pageinfo: 'SingleLine7',      // Example mapping
+                cv_file: 'FileUpload1',       // CRITICAL: Zoho field for file upload (Check your Zoho form for the exact field name)
+            },
+            redirectUrl: '/thank-you-career', // <-- New thank-you page
+        },
     ];
     // -----------------------------------------------------------------
 
@@ -155,6 +178,33 @@ export default async function handler(req, res) {
     if (fieldMap.pageinfo) {
         zohoPayload.append(fieldMap.pageinfo, pageinfo || '');
     }
+
+    // 💡 NEW: Career Form Fields (Only appended if they exist in the fieldMap of the matched form)
+    // ⚠️ NOTE: This code assumes career form data is submitted as URL-encoded text.
+    // File upload (cv_file) requires a fundamental change to handle 'multipart/form-data'.
+    if (fieldMap.location) {
+        zohoPayload.append(fieldMap.location, location || '');
+    }
+    if (fieldMap.department) {
+        zohoPayload.append(fieldMap.department, department || '');
+    }
+    if (fieldMap.position) {
+        zohoPayload.append(fieldMap.position, position || '');
+    }
+    if (fieldMap.subjects) {
+        zohoPayload.append(fieldMap.subjects, subjects || '');
+    }
+    if (fieldMap.job_type) {
+        zohoPayload.append(fieldMap.job_type, job_type || '');
+    }
+    if (fieldMap.notice_period) {
+        zohoPayload.append(fieldMap.notice_period, notice_period || '');
+    }
+    if (fieldMap.experience) {
+        zohoPayload.append(fieldMap.experience, experience || '');
+    }
+    // The 'cv_file' field will NOT be submitted correctly here as it requires 'multipart/form-data'.
+
 
     // --- 5. SUBMIT TO ZOHO ---
     try {

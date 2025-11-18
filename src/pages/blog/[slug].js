@@ -1,13 +1,13 @@
 // pages/[slug].js
-
 'use client';
 
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
 import Head from 'next/head';
 import SidebarForm from '@/components/SidebarForm';
 import { useMemo } from "react";
+import { PopupContext } from '../../pages/_app';
 
 
 // You must add 'import "locomotive-scroll/dist/locomotive-scroll.css";'
@@ -30,6 +30,7 @@ const fetcher = async (url) => {
     return res.json();
 };
 
+
 // Helper function to create a URL-friendly slug from a string
 const slugify = (text) => {
     return text.toString().toLowerCase()
@@ -50,7 +51,6 @@ const getSidebarHtmlImage = () => {
         </div>
     `;
 };
-
 const getSidebarHtmlStaticMobile = () => {
     return `
         <div class="sticky-sidebar-wrapper">
@@ -95,14 +95,19 @@ const getSidebarHtmlStaticMobile = () => {
 };
 
 
-// Component to handle rendering the post content with the TOC inserted
+// --- TOCPostContent COMPONENT ---
 const TOCPostContent = ({ content, toc }) => {
+    const { openManualPopup } = useContext(PopupContext);
+    const contentRef = useRef(null);
+
     if (!content) return null;
 
+    // --- DOM Manipulation ---
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = content;
+    const allH2s = tempDiv.querySelectorAll('h2');
 
-    const firstH2 = tempDiv.querySelector('h2');
+    const firstH2 = allH2s[0];
     if (firstH2) {
         const tocWrapper = document.createElement('div');
         tocWrapper.id = 'toc-container';
@@ -125,20 +130,81 @@ const TOCPostContent = ({ content, toc }) => {
         </div>
     `;
 
+    const gif1Html = `
+        <div class="blog-gif-wrapper my-5">
+            <a href="/join-free-demo-class/"><img src="/images/blog-gif-1.gif" alt="Illustrative GIF 1" class="img-fluid w-100 rounded" /></a>
+        </div>
+    `;
+
+    // Define unique class for targeting the 2nd GIF WRAPPER
+    const gif2PlaceholderClass = 'gif-popup-trigger-2';
+    const gif2Html = `
+        <div class="blog-gif-wrapper my-5 ${gif2PlaceholderClass}" style="cursor: pointer;">
+            <img 
+                src="/images/blog-gif-2.gif" 
+                alt="Illustrative GIF 2 (Click to open popup)" 
+                class="img-fluid w-100 rounded" 
+            />
+        </div>
+    `;
+
+    // Insert GIF 2 before the 4th H2 (index 3)
+    const fourthH2 = allH2s[3];
+    if (fourthH2) {
+        const gif2TempDiv = document.createElement('div');
+        gif2TempDiv.innerHTML = gif2Html.trim();
+        fourthH2.parentNode.insertBefore(gif2TempDiv.firstChild, fourthH2);
+    }
+
+    // Insert GIF 1 before the 3rd H2 (index 2)
+    const thirdH2 = allH2s[2];
+    if (thirdH2) {
+        const gif1TempDiv = document.createElement('div');
+        gif1TempDiv.innerHTML = gif1Html.trim();
+        thirdH2.parentNode.insertBefore(gif1TempDiv.firstChild, thirdH2);
+    }
+
     let newContent = tempDiv.innerHTML;
     if (firstH2) {
         const tocPlaceholder = `<div id="toc-container"></div>`;
         newContent = newContent.replace(tocPlaceholder, tocHtml);
     }
 
+    // --- Event Delegation Logic ---
+    useEffect(() => {
+        const rootElement = contentRef.current;
+        if (!rootElement || !openManualPopup) return;
+
+        // Use event delegation on the root element
+        const handleClick = (event) => {
+            // Check if the clicked element (or an ancestor) has the trigger class
+            const triggerElement = event.target.closest(`.${gif2PlaceholderClass}`);
+
+            if (triggerElement) {
+                console.log('Popup: Delegated click caught. Opening popup.');
+                event.preventDefault(); // Stop any default link behavior
+                openManualPopup();
+            }
+        };
+
+        // Attach ONE listener to the root container
+        rootElement.addEventListener('click', handleClick);
+
+        return () => {
+            rootElement.removeEventListener('click', handleClick);
+        };
+
+    }, [content, openManualPopup]);
+
     return (
-        <div
-            className="post-content lh-lg text-secondary"
-            dangerouslySetInnerHTML={{ __html: newContent }}
-        />
+        <div ref={contentRef}>
+            <div
+                className="post-content lh-lg text-secondary"
+                dangerouslySetInnerHTML={{ __html: newContent }}
+            />
+        </div>
     );
 };
-
 
 export default function PostDetail() {
     const router = useRouter();

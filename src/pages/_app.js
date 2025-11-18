@@ -87,22 +87,44 @@ import DelayedPopup from "../components/DelayedPopup";
 import { useRouter } from "next/router";
 
 import LocomotiveScrollProvider from '../components/LocomotiveScrollProvider';
-import { useState } from "react";
+import { useState, createContext } from "react"; // <-- Updated import
 
+
+// --- 1. Define and Export the Context ---
+export const PopupContext = createContext({
+    isManualOpen: false,
+    openManualPopup: () => { console.error('PopupContext used without Provider'); },
+    closeManualPopup: () => { console.error('PopupContext used without Provider'); },
+});
+
+// --- 2. Define the Provider Component ---
+const PopupProvider = ({ children }) => {
+    // This state controls the popup's visibility when manually triggered
+    const [isManualOpen, setIsManualOpen] = useState(false);
+
+    const openManualPopup = () => setIsManualOpen(true);
+    const closeManualPopup = () => setIsManualOpen(false);
+
+    return (
+        <PopupContext.Provider value={{ isManualOpen, openManualPopup, closeManualPopup }}>
+            {children}
+        </PopupContext.Provider>
+    );
+}
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
     const [headerHeight, setHeaderHeight] = useState(0);
 
     return (
-        <>
+        // --- 3. CRITICAL: Wrap the entire app with the PopupProvider ---
+        <PopupProvider>
             <LocomotiveScrollProvider>
                 <Header setHeaderHeight={setHeaderHeight} />
                 <Component {...pageProps} headerHeight={headerHeight} />
                 <Footer />
-                <DelayedPopup />
+                <DelayedPopup /> {/* DelayedPopup now correctly reads the context */}
             </LocomotiveScrollProvider>
-        </>
+        </PopupProvider>
     );
 }
-

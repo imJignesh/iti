@@ -10,6 +10,7 @@ export default function SidebarForm({ pageInfo, formType }) {
         email: "",
         phone: "",
         course: "IB Diploma", // Default value from original select
+        formType: "BLOG_SIDEBAR",
     });
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
@@ -67,10 +68,26 @@ export default function SidebarForm({ pageInfo, formType }) {
             });
 
             if (response.ok) {
-                setSubmissionStatus('success');
-                setFormData({ name: "", email: "", phone: "", course: "IB Diploma" });
+                // Parse the JSON response
+                const result = await response.json(); // <--- CRITICAL: Await the response body
+
+                if (result.success) {
+                    setSubmissionStatus('success');
+                    setFormData({ name: "", email: "", phone: "", course: "IB Diploma" });
+
+
+                    if (result.redirectUrl) {
+                        window.location.href = result.redirectUrl; // Redirect the user
+                    }
+                } else {
+                    // Handle the case where the API returns 200 OK but success: false
+                    setSubmissionStatus('error');
+                    console.error('Submission failed with message:', result.message);
+                }
             } else {
                 setSubmissionStatus('error');
+                // Optional: Log the API status for debugging
+                console.error('API response not OK:', response.status);
             }
         } catch (error) {
             setSubmissionStatus('error');

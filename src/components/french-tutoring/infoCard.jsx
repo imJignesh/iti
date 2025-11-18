@@ -14,6 +14,7 @@ export default function InfoCard() {
     phone: "",
     school: "",
     message: "",
+    type: 'Organic_Subject',
   });
 
   // New state for validation errors
