@@ -88,12 +88,12 @@ const FAQSection = () => {
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "0px" : "20px" }}>
-              <span className="SubHeading" style={{ fontSize: isHighDpi ? "28px" : isMobile ? "" : "28px" }}>FAQS
-              </span>
+              <h2 className="SubHeading" style={{ fontSize: isHighDpi ? "28px" : isMobile ? "" : "28px" }}>FAQS
+              </h2>
             </div>
 
             {/* Main Title */}
-            <h2
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -108,7 +108,7 @@ const FAQSection = () => {
             >
 
               Answers To Your Questions <br />About<span className="highlight"> AP</span> Tutoring Programs
-            </h2>
+            </h3>
 
             <p
               style={{
@@ -144,7 +144,7 @@ const FAQSection = () => {
                     paddingBottom: "1.5rem",
                   }}
                 >
-                  <span
+                  <h3
                     className="fw-bold h5 lh-sm mb-0"
                     style={{
                       color: "#1e3a8a",
@@ -155,7 +155,7 @@ const FAQSection = () => {
                     }}
                   >
                     {faq.question}
-                  </span>
+                  </h3>
                   {openIndex === index ? (
                     <Minus
                       style={{

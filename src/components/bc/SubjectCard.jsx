@@ -48,8 +48,8 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">SUBJECTS WE SUPPORT
-            </div>
+            <h2 className="SubHeading testSubheading">SUBJECTS WE SUPPORT
+            </h2>
           </div>
           <h2
             data-scroll

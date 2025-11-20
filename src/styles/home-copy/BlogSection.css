@@ -213,8 +213,9 @@
 
 @media (max-width: 575px) {
   .homeCopy .blogSection .blogImg {
-    width: 150px;
-    height: 200px;
+    /* width: 150px;
+    height: 200px; */
+    max-width: 100%;
   }
 
   .homeCopy .blogSection .container>div {

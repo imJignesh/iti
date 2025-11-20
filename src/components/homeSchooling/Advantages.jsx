@@ -89,12 +89,12 @@ const AdvantagesCarousel = () => {
                             className="fade-in-section"
                             style={{ animationDelay: "0.1s" }}
                         >
-                            <div className="SubHeading testSubheading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?
-                            </div>
+                            <h2 className="SubHeading testSubheading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?
+                            </h2>
                         </div>
 
                         {/* Main title */}
-                        <h2
+                        <h3
                             data-scroll
                             data-scroll-class="is-inview"
                             data-scroll-repeat="true"
@@ -103,7 +103,7 @@ const AdvantagesCarousel = () => {
                         >
 
                             Breaking Free From The <span className="highlight">One-Size-Fits-All </span>Model
-                        </h2>
+                        </h3>
 
                     </div>
                 </div>
@@ -129,49 +129,20 @@ const AdvantagesCarousel = () => {
                     <div className="desktop-content">
                         <div className="desktop-left">
                             <div className="testimonialHeader" style={{ marginTop: "15%" }}>
-                                <span className="SubHeading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?</span>
+                                <h2 className="SubHeading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?</h2>
                             </div>
-                            <h2
-                                className="fw-bold mb-0 fade-in-section"
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat
-                                style={{
-                                    animationDelay: "0.3s",
-                                    fontSize: isMobile ? "1.5rem" : "2rem",
-                                    lineHeight: "1.1",
-                                    textTransform: "uppercase",
-                                    marginTop: "3vh"
-                                }}
-                            >
-                                <span
-                                    style={{
-                                        background: "linear-gradient(135deg,#161664, #3F88BA)",
-                                        WebkitBackgroundClip: "text",
-                                        WebkitTextFillColor: "transparent"
-                                    }}
-                                >
-                                    Breaking Free From The
-                                </span>{" "}
-                                <span
-                                    style={{
-                                        background: "linear-gradient(135deg, #00A491, #003E37)",
-                                        WebkitBackgroundClip: "text",
-                                        WebkitTextFillColor: "transparent"
-                                    }}
-                                >
-                                    One-Size-Fits-All
-                                </span>{" "}
-                                <span
-                                    style={{
-                                        background: "linear-gradient(135deg, #3F88BA, #161664)",
-                                        WebkitBackgroundClip: "text",
-                                        WebkitTextFillColor: "transparent"
-                                    }}
-                                >
-                                    Model
-                                </span>
-                            </h2>
+
+                             <h3
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle text-uppercase"
+              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+            >
+              Breaking Free From The<br /> <span className="highlight">One-Size-Fits-All </span>Model
+
+            </h3>
+                           
                             <p className="desktop-subtitle">
                                 Empowering students with personalized learning pathways, flexible pacing, & tailored support to nurture individual aspirations.
                             </p>

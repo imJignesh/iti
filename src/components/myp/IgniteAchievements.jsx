@@ -40,18 +40,18 @@ export default function IgniteAchievements() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
-              </div>
+              <h2 className="SubHeading testSubheading">OUR ACHIEVEMENTS
+              </h2>
             </div>
-            <h2
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s", color: "#19245E !important", maxWidth: "700px !important" }}
+              style={{ animationDelay: "0.2s", color: "#19245E !important", maxWidth: "700px !important", fontSize: "2rem" }}
             >
               Driving Growth Through <span className="highlight">Meaningful</span> Outcomes
-            </h2>
+            </h3>
           </div>
           {/* Subtitle */}
           <p className="mx-auto fade-in-section subtitle-text"

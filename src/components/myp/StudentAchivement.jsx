@@ -144,12 +144,12 @@ export default function StudentAchievements() {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">OUR APPROACH
-            </div>
+            <h2 className="SubHeading testSubheading">OUR APPROACH
+            </h2>
           </div>
 
           {/* Main title */}
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -158,7 +158,7 @@ export default function StudentAchievements() {
           >
             How We Make IB MYP Learning
             <span className="highlight"> Truly </span>Effective
-          </h2>
+          </h3>
         </div>
 
         {/* Slider Section */}

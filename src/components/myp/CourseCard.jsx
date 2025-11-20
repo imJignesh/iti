@@ -69,18 +69,18 @@ function CourseCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="SubHeading testSubheading">courses
-                </div>
+                <h2 className="SubHeading testSubheading">courses
+                </h2>
               </div>
-              <h2
+              <h3
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s" }}
+                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
               >
                 Learning Starts Here With <br /><span className="highlight"> Tailored </span> MYP Courses
-              </h2>
+              </h3>
             </div>
           </div>
 
@@ -124,15 +124,15 @@ function CourseCard() {
                   // The click handler is now the primary control for opening/closing the content
                   onClick={() => toggleAccordion(index)}
                 >
-                  <span
-                    className="gradient-text py-3 text-uppercase"
+                  <h3
+                    className="gradient-text py-3 text-uppercase mb-0"
                     style={{
                       transform: hoveredIndex === index ? 'translateX(10px)' : 'translateX(0)',
                       transition: 'transform 0.3s ease-out',
                     }}
                   >
                     {item.title}
-                  </span>
+                  </h3>
                   <span
                     style={{
                       color: "#3F88BA",
@@ -326,9 +326,8 @@ function CourseCard() {
                       {String(index + 1).padStart(2, "0")}.
                     </span>
 
-                    <span
-                      style={{
-                        fontSize: "1rem",
+                    <h3
+                      style={{                        
                         letterSpacing: "1px",
                         fontWeight: 800,
                         background: "linear-gradient(90deg, #161664, #3F88BA)",
@@ -336,10 +335,13 @@ function CourseCard() {
                         WebkitTextFillColor: "transparent",
                         transform: hoveredIndex === index ? 'translateX(8px)' : 'translateX(0)',
                         transition: 'transform 0.3s ease-out',
+                        marginBottom: 0,
+                        fontSize: "18px",
+                        lineHeight: '27px'
                       }}
                     >
                       {item.title}
-                    </span>
+                    </h3>
                   </div>
 
                   {/* Right side: Chevron always sticks to right */}

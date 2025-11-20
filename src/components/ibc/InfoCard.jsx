@@ -194,8 +194,8 @@ export default function InfoCard() {
               </h1>
               <div className="divider"></div>
 
-              <p
-                className="text-white mb-4 fade-in-section fs-8 fs-md-10"
+              <h2
+                className="text-white fade-in-section fs-8 fs-md-10"
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat
@@ -204,11 +204,15 @@ export default function InfoCard() {
                   fontWeight: "600",
                   opacity: "1",
                   animationDelay: "0.25s",
-                  marginTop: "19px"
+
+                  fontSize: "inherit",  // forces same size as previous p tag class
+                  lineHeight: "inherit", // optional: keep same spacing
+                  marginTop: "19px",
+                  marginBottom: "26px",
                 }}
               >
                 Expert Help At Every IB Milestone
-              </p>
+              </h2>
 
               <div
                 className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold fade-in-section info-row"
@@ -216,25 +220,30 @@ export default function InfoCard() {
                 data-scroll-class="is-inview"
                 data-scroll-repeat
                 style={{
-                  background: "linear-gradient(to right, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",
-                  backdropFilter: "blur(3px)",       // stronger blur (left side)
-                  WebkitBackdropFilter: "blur(3px)", // Safari
+                  background:
+                    "linear-gradient(to right, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",
+                  backdropFilter: "blur(3px)",
+                  WebkitBackdropFilter: "blur(3px)",
                   borderRadius: "100px",
                   maxWidth: "823px",
                   fontSize: "0.9rem",
                   animationDelay: "0.3s",
                   border: "1px solid rgba(255, 255, 255, 0.30)",
                 }}
-
               >
-                <div
+                {/* ---- BLOCK 1 ---- */}
+                <h3
                   className="d-flex flex-column align-items-center text-center text-white info-col"
                   style={{
                     borderRight: "1px solid rgba(255, 255, 255, 0.3)",
                     paddingRight: isMobile ? "16px" : "3.7rem",
+                    margin: 0,
+                    fontSize: "inherit",
+                    fontWeight: "inherit",
+                    lineHeight: "inherit",
                   }}
                 >
-                  <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
+                  <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
                       src="/assets/medal.png"
                       alt="Grade Support"
@@ -242,18 +251,23 @@ export default function InfoCard() {
                       height={isMobile ? 30 : 45}
                       className="icon-img"
                     />
-                  </div>
-                  Grade 8 To <br />12Support
-                </div>
+                  </span>
+                  Grade 8 To <br /> 12Support
+                </h3>
 
-                <div
+                {/* ---- BLOCK 2 ---- */}
+                <h3
                   className="d-flex flex-column align-items-center text-center text-white info-col"
                   style={{
                     borderRight: "1px solid rgba(255, 255, 255, 0.3)",
                     paddingRight: isMobile ? "16px" : "4rem",
+                    margin: 0,
+                    fontSize: "inherit",
+                    fontWeight: "inherit",
+                    lineHeight: "inherit",
                   }}
                 >
-                  <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
+                  <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
                       src="/assets/person.png"
                       alt="Learning Mode"
@@ -261,24 +275,33 @@ export default function InfoCard() {
                       height={isMobile ? 30 : 45}
                       className="icon-img"
                     />
-                  </div>
+                  </span>
                   Online <br /> & In-Person
-                </div>
+                </h3>
 
-                <div
+                {/* ---- BLOCK 3 ---- */}
+                <h3
                   className="d-flex flex-column align-items-center text-center text-white info-col"
+                  style={{
+                    margin: 0,
+                    fontSize: "inherit",
+                    fontWeight: "inherit",
+                    lineHeight: "inherit",
+                  }}
                 >
-                  <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
+                  <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
                       src="/assets/location.png"
                       alt="Location"
                       width={isMobile ? 22 : 32}
-                      height={isMobile ? 28 : 40}
+                      height={isMobile ? 30 : 42}
                       className="icon-img"
                     />
-                  </div>
-                  <span className="fontd"> Dubai <br /> (DIFC, JLT)</span>
-                </div>
+                  </span>
+                  
+                    Dubai <br /> (DIFC, JLT)
+                  
+                </h3>
               </div>
 
               <p
@@ -1161,7 +1184,7 @@ margin-block: 30px !important;
             max-width: none !important;
           }
 
-          .text-white.mb-4:first-of-type {
+          .text-white.mb-4:first-of-type, .text-white.fs-8:first-of-type {
             font-size: 0.75rem !important;
             margin-bottom: 1.5rem !important;
             text-align: center !important;

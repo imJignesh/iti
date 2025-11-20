@@ -45,9 +45,9 @@ export default function IBCurriculumStages() {
         style={{ maxWidth: "1140px", animationDelay: "0.15s", padding: isMobile ? "0" : undefined }}
       >
         <div className="curriculumSubSection">
-          <div className="SubHeading testSubheading">
+          <h2 className="SubHeading testSubheading">
             STAGES OF THE CURRICULUM
-          </div>
+          </h2>
           <div className="testHeadings">
             <h2
               data-scroll

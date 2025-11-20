@@ -41,7 +41,7 @@
 .testTitle {
 
   font-weight: 700;
-  max-width: 56%;
+  /* max-width: 56%; */
   color: var(--blue-color);
   margin: 40px auto;
   line-height: 1.2;

@@ -35,7 +35,7 @@ export default function IgniteAboutCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="SubHeading testSubheading">OUR APPROACH</div>
+                <h2 className="SubHeading testSubheading">OUR APPROACH</h2>
               </div>
             </div>
           </div>

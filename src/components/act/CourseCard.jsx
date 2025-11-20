@@ -68,10 +68,10 @@ function CourseCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="SubHeading testSubheading">courses
-                </div>
+                <h2 className="SubHeading testSubheading">courses
+                </h2>
               </div>
-              <h2
+              <h3
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
@@ -80,7 +80,7 @@ function CourseCard() {
               >
                 Learning Starts Here With<br />
                 <span className="highlight">  Tailored  </span>ACT Courses
-              </h2>
+              </h3>
             </div>
           </div>
 
@@ -123,15 +123,16 @@ function CourseCard() {
                   }}
                   onClick={() => toggleAccordion(index)}
                 >
-                  <span
+                  <h3
                     className="gradient-text py-3 text-uppercase"
                     style={{
                       transform: hoveredIndex === index ? 'translateX(10px)' : 'translateX(0)',
                       transition: 'transform 0.3s ease-out',
+                      marginBottom: 0,
                     }}
                   >
                     {item.title}
-                  </span>
+                  </h3>
                   <span
                     style={{
                       color: "#3F88BA",
@@ -264,11 +265,11 @@ function CourseCard() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">courses
-              </div>
+              <h2 className="SubHeading testSubheading">courses
+              </h2>
             </div>
 
-            <h2
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -277,7 +278,7 @@ function CourseCard() {
             >
               Learning Starts Here With
               <span className="highlight">  Tailored  </span>ACT Courses
-            </h2>
+            </h3>
           </div>
 
           {/* Mobile Cards */}
@@ -326,7 +327,7 @@ function CourseCard() {
                       {String(index + 1).padStart(2, "0")}.
                     </span>
 
-                    <span
+                    <h3
                       style={{
                         fontSize: "1rem",
                         letterSpacing: "1px",
@@ -336,10 +337,13 @@ function CourseCard() {
                         WebkitTextFillColor: "transparent",
                         transform: hoveredIndex === index ? 'translateX(8px)' : 'translateX(0)',
                         transition: 'transform 0.3s ease-out',
+                        marginBottom: 0,
+                        fontSize: "18px",
+                        lineHeight: '27px'
                       }}
                     >
                       {item.title}
-                    </span>
+                    </h3>
                   </div>
 
                   {/* Right side: Chevron rotation based on active state */}

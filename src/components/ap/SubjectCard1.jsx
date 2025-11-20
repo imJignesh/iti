@@ -159,11 +159,11 @@ export default function SubjectsCard() {
         {/* LEFT COLUMN */}
         <div className="subjectLeft">
           <span className="subjectHeader">
-            <span className="SubHeading">SUBJECTS WE SUPPORT</span>
+            <h2 className="SubHeading">SUBJECTS WE SUPPORT</h2>
           </span>
-          <h2 className="subjectTitle">
+          <h3 className="subjectTitle">
             Tutoring That Makes Every AP Subject Clear
-          </h2>
+          </h3>
         </div>
 
         {/* RIGHT COLUMN - Fixed Container */}
@@ -199,9 +199,9 @@ export default function SubjectsCard() {
                     zIndex: isCenter ? 10 : Math.max(1, 5 - Math.abs(position))
                   }}
                 >
-                  <div className={`subjectBubble ${isCenter ? 'highlighted' : ''}`}>
+                  <h3 className={`subjectBubble ${isCenter ? 'highlighted' : ''}`}>
                     {subject}
-                  </div>
+                  </h3>
                 </div>
               ))}
             </div>
@@ -361,7 +361,7 @@ export default function SubjectsCard() {
           color: white;
           font-size: 1.2vw;
           font-weight: 500;
-          padding: 15px 40px;
+          padding: 17px 40px;
           transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           user-select: none;
           text-align: center;
@@ -461,7 +461,7 @@ export default function SubjectsCard() {
           }
 
           .subjectBubble {
-            padding: 12px 30px;
+            padding: 14px 30px;
             font-size: 18px !important;
           }
 
@@ -527,7 +527,7 @@ export default function SubjectsCard() {
 
         @media (max-width: 767px) {
           .subjectBubble {
-            padding: 8px 15px 12px 15px !important;
+            padding: 10px 15px 14px 15px !important;
             font-size: 13px !important;
           }
           
@@ -607,8 +607,16 @@ margin:0 !important;
 
         @media (max-width: 420px) {
           .subjectBubble {
-            padding: 8px 20px !important;
+            padding: 10px 15px !important;
             font-size: 11px !important;
+          }
+
+          .subjectTitle {
+            width: auto;
+            font-size: 18px !important;
+            line-height: 1.4;
+            padding: 0px 10px;
+            margin-top: 18px;
           }
         }
       `}</style>

@@ -41,19 +41,19 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">SUBJECTS WE SUPPORT
-            </div>
+            <h2 className="SubHeading testSubheading">SUBJECTS WE SUPPORT
+            </h2>
           </div>
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section testTitle"
-            style={{ animationDelay: "0.2s" }}
+            style={{ animationDelay: "0.2s", fontSize: '2rem' }}
           >
             Tutoring That Makes Every <br /> ACT  <span className="highlight"> Subject </span>
             Clear
-          </h2>
+          </h3>
         </div>
       </div>
       <div className="container">
@@ -92,9 +92,9 @@ export default function SubjectsCard1({ }) {
                   style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
                 >
                   {row.map((subj) => (
-                    <div key={subj} className="subjects-card1-bubble">
+                    <h3 key={subj} className="subjects-card1-bubble">
                       {subj}
-                    </div>
+                    </h3>
                   ))}
                 </div>
               ))}
@@ -199,7 +199,7 @@ export default function SubjectsCard1({ }) {
           color: var(--green-text);
           font-size: 1.4vw;
           font-weight: 400;
-          padding: 10px 55px;
+          padding: 14px 55px;
           cursor: pointer;
           transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
           box-shadow: none;
@@ -240,7 +240,7 @@ export default function SubjectsCard1({ }) {
 
         @media (max-width: 1280px) {
           .subjects-card1-section .subjects-card1-bubble {
-            padding: 10px 45px;
+            padding: 12px 45px;
           }
         }
 
@@ -258,7 +258,7 @@ export default function SubjectsCard1({ }) {
           }
 
           .subjects-card1-section .subjects-card1-bubble {
-            padding: 10px 30px;
+            padding: 14px 30px;
           }
         }
 
@@ -359,7 +359,7 @@ export default function SubjectsCard1({ }) {
             flex-wrap: wrap;
             }
             .subjects-card1-section .subjects-card1-bubble{
-              padding: 0.5rem 1rem;;
+              padding: 0.7rem 1rem;;
               font-size: 1rem;
             }
               
@@ -380,7 +380,7 @@ export default function SubjectsCard1({ }) {
           }
 
           .subjects-card1-section .subjects-card1-bubble {
-            padding: 8px 12px;
+            padding: 10px 15px;
             font-size: 17px;
             border-radius: 20px;
           }

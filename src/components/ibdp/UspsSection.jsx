@@ -171,18 +171,18 @@ function UpsSection() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">OUR PROMISE</div>
+              <h2 className="SubHeading testSubheading">OUR PROMISE</h2>
             </div>
-            <h2
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle text-uppercase"
-              style={{ animationDelay: "0.2s" }}
+              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
             >
               What Do Students Get From Ignite's <span className="highlight">IBDP Support?</span>
 
-            </h2>
+            </h3>
           </div>
         </div>
 

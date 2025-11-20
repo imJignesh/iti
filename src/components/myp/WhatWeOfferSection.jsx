@@ -13,7 +13,7 @@ const WhatWeOfferSection = () => {
                             className="fade-in-section"
                             style={{ animationDelay: "0.1s" }}
                         >
-                            <h4 className="SubHeading">WHAT MORE DO WE OFFER?</h4>
+                            <h2 className="SubHeading">WHAT MORE DO WE OFFER?</h2>
                         </div>
                         <div
                             data-scroll
@@ -22,9 +22,9 @@ const WhatWeOfferSection = () => {
                             className="fade-in-section"
                             style={{ animationDelay: "0.25s" }}
                         >
-                            <h1 className="achievementsTitle">
+                            <h3 className="achievementsTitle">
                                 Comprehensive Guidance For Every IB MYP <span className="highlight">Milestone</span>
-                            </h1>
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const WhatWeOfferSection = () => {
                         <div className="icon-wrap" data-step="01">
                             <img src="/images/school.png" alt="School Options" />
                         </div>
-                        <div className="step-title">SCHOOL OPTIONS</div>
+                        <h3 className="step-title mb-0">SCHOOL OPTIONS</h3>
                         <div className="step-desc">Identify schools that align with your learning style & goals.</div>
                     </div>
 
@@ -43,7 +43,7 @@ const WhatWeOfferSection = () => {
                         <div className="icon-wrap" data-step="02">
                             <img src="/images/idealcur.png" alt="Ideal Curriculum" />
                         </div>
-                        <div className="step-title">IDEAL CURRICULUM</div>
+                        <h3 className="step-title mb-0">IDEAL CURRICULUM</h3>
                         <div className="step-desc">Choose a pathway that supports your long-lasting success.</div>
                     </div>
 
@@ -51,7 +51,7 @@ const WhatWeOfferSection = () => {
                         <div className="icon-wrap" data-step="03">
                             <img src="/images/subject.png" alt="Subject Choices" />
                         </div>
-                        <div className="step-title">SUBJECT CHOICES</div>
+                        <h3 className="step-title mb-0">SUBJECT CHOICES</h3>
                         <div className="step-desc">Make subject choices with us that shape your future direction.</div>
                     </div>
 
@@ -59,7 +59,7 @@ const WhatWeOfferSection = () => {
                         <div className="icon-wrap" data-step="04">
                             <img src="/images/universitypath.png" alt="University Pathways" />
                         </div>
-                        <div className="step-title">UNIVERSITY PATHWAYS</div>
+                        <h3 className="step-title mb-0">UNIVERSITY PATHWAYS</h3>
                         <div className="step-desc">Map your academic journey to your dream global institution.</div>
                     </div>
                 </div>

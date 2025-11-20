@@ -231,7 +231,7 @@ export default function Testimonial({ }) {
           style={{ animationDelay: "0.1s" }}
         >
           <div className="testimonialHeader">
-            <span className="SubHeading">REVIEWS & TESTIMONIALS</span>
+            <h2 className="SubHeading">REVIEWS & TESTIMONIALS</h2>
           </div>
         </div>
 

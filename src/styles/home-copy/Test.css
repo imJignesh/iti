@@ -33,6 +33,7 @@
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   letter-spacing: 0.04em;
+  display: inline;
 }
 
 .homeCopy .testSection1 .testCardsRow {

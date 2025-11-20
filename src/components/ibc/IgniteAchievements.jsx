@@ -32,11 +32,11 @@ export default function IgniteAchievements() {
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.2s" }}>
-          <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
-          </div>
+          <h2 className="SubHeading testSubheading">OUR ACHIEVEMENTS
+          </h2>
 
           {/* Main Title */}
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -46,7 +46,7 @@ export default function IgniteAchievements() {
 
             Milestones That Showcase Our <span className="highlight"> Legacy{" "} </span>
             Of Learning
-          </h2>
+          </h3>
 
           {/* Subtitle */}
           <p className="mx-auto fade-in-section"

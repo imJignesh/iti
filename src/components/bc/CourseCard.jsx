@@ -93,10 +93,10 @@ function CourseCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="SubHeading testSubheading">courses
-                </div>
+                <h2 className="SubHeading testSubheading">courses
+                </h2>
               </div>
-              <h2
+              <h3
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
@@ -105,7 +105,7 @@ function CourseCard() {
               >
                 Learning Starts Here With
                 <span className="highlight">  Tailored  </span>IBDP Courses
-              </h2>
+              </h3>
             </div>
           </div>
 
@@ -293,11 +293,11 @@ function CourseCard() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">courses
-              </div>
+              <h2 className="SubHeading testSubheading">courses
+              </h2>
             </div>
 
-            <h2
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -306,7 +306,7 @@ function CourseCard() {
             >
               LOREM IPSUM DOLOR SIT AMET,
               <span className="highlight"> CONSECTETUR </span>ADIPISCING
-            </h2>
+            </h3>
           </div>
 
           {/* Mobile Cards */}

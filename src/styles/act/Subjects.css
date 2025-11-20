@@ -60,14 +60,14 @@
   z-index: 1;
 }
 
-.subjectSection .subjectLeft span {
+.subjectSection .subjectLeft h2 {
   /* font-size: 1.3vw; */
   -webkit-text-fill-color: white;
   margin-bottom: 30px;
 }
 
-.subjectSection .subjectLeft span::before,
-.subjectSection .subjectLeft span:after {
+.subjectSection .subjectLeft h2::before,
+.subjectSection .subjectLeft h2:after {
   filter: contrast(0) brightness(2);
 }
 

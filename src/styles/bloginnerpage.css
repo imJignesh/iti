@@ -62,7 +62,7 @@ section.post-detail-section {
     display: none;
 }
 
-.innerpage .blogSection .blogLeft h2 {
+.innerpage .blogSection .blogLeft h3 {
     width: 80%;
 }
 
@@ -257,9 +257,7 @@ section.post-detail-section {
     }
 
     .innerpage .blogSection .blogImg {
-        width: 150px;
-        height: 200px;
-
+        max-width: 100%;
     }
 
     .innerpage .blogSection .blogCard {
@@ -280,7 +278,7 @@ section.post-detail-section {
         font-size: 0.8rem;
     }
 
-    .innerpage .blogSection .blogLeft h2 {
+    .innerpage .blogSection .blogLeft h3 {
         width: 100%;
     }
 

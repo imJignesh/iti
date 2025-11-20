@@ -213,8 +213,8 @@
 
 @media (max-width: 575px) {
   .home .blogSection .blogImg {
-    width: 150px;
-    height: 200px;
+    /* width: 150px;
+    height: 200px; */
   }
 }
 
