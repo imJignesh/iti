@@ -168,13 +168,13 @@ const CurriculumCard = ({ defaultClass, full, children }) => {
     const classes = `fd-curr ${colorClass} ${full ? 'full' : ''}`;
 
     return (
-        <div
+        <h3
             className={classes}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
             {children}
-        </div>
+        </h3>
     );
 };
 

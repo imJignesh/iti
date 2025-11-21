@@ -83,7 +83,7 @@ const IBCurriculumStages = () => {
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>
+                    <h3>
                       <a
                         href="https://ignitetraininginstitute.com/ib-curriculum-tutors-in-dubai/"
                         target="_blank"
@@ -92,7 +92,7 @@ const IBCurriculumStages = () => {
                       >
                         IB (MYP & IBDP)
                       </a>
-                    </h1>
+                    </h3>
                   </div>
 
                   <div className="curriculum-info">
@@ -103,7 +103,7 @@ const IBCurriculumStages = () => {
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>
+                    <h3>
                       <a
                         href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/"
                         target="_blank"
@@ -112,7 +112,7 @@ const IBCurriculumStages = () => {
                       >
                         IGCSE
                       </a>
-                    </h1>
+                    </h3>
                   </div>
 
                   <div className="curriculum-info">
@@ -123,7 +123,7 @@ const IBCurriculumStages = () => {
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>
+                    <h3>
                       <a
                         href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai/"
                         target="_blank"
@@ -132,7 +132,7 @@ const IBCurriculumStages = () => {
                       >
                         A-Levels
                       </a>
-                    </h1>
+                    </h3>
                   </div>
 
                   <div className="curriculum-info">
@@ -143,7 +143,7 @@ const IBCurriculumStages = () => {
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>
+                    <h3>
                       <a
                         href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/"
                         target="_blank"
@@ -152,7 +152,7 @@ const IBCurriculumStages = () => {
                       >
                         Private Candidate (Homeschooling)
                       </a>
-                    </h1>
+                    </h3>
                   </div>
                 </div>
 
@@ -200,7 +200,7 @@ const IBCurriculumStages = () => {
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>
+                    <h3>
                       <a
                         href="https://ignitetraininginstitute.com/act-tutors-in-dubai/"
                         target="_blank"
@@ -209,7 +209,7 @@ const IBCurriculumStages = () => {
                       >
                         ACT
                       </a>
-                    </h1>
+                    </h3>
                   </div>
 
                   <div className="curriculum-info">
@@ -220,7 +220,7 @@ const IBCurriculumStages = () => {
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>
+                    <h3>
                       <a
                         href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai/"
                         target="_blank"
@@ -229,7 +229,7 @@ const IBCurriculumStages = () => {
                       >
                         Advanced Placements (AP)
                       </a>
-                    </h1>
+                    </h3>
                   </div>
 
                   <div className="curriculum-info">
@@ -240,7 +240,7 @@ const IBCurriculumStages = () => {
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>
+                    <h3>
                       <a
                         href="https://ignitetraininginstitute.com/ucat-tutors-in-dubai/"
                         target="_blank"
@@ -249,7 +249,7 @@ const IBCurriculumStages = () => {
                       >
                         UCAT
                       </a>
-                    </h1>
+                    </h3>
                   </div>
                 </div>
 
@@ -425,7 +425,7 @@ top: -53px;
   gap: 15px;
   padding: 15px;
 }
-.curriculum-info h1 {
+.curriculum-info h3 {
   color: rgba(35, 52, 103, 1);
   font-size: 23px;
   font-weight: 600;
@@ -747,7 +747,7 @@ padding-inline:0 !important;
   .curriculum-info {
     padding: 15px 30px;
   }
-  .curriculum-info h1 {
+  .curriculum-info h3 {
     font-size: 16px;
   }
   .curriculum-section-heading1 {
