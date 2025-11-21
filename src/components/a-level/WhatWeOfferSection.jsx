@@ -22,8 +22,8 @@ const WhatWeOfferSection = () => {
                             className="fade-in-section"
                             style={{ animationDelay: "0.25s" }}
                         >
-                            <h3 className="achievementsTitle">
-                                Comprehensive Guidance For Every Academic <span className="highlight">Milestone</span>
+                            <h3 className="achievementsTitle"> 
+                                 Comprehensive Guidance For Every IGCSE <span className="highlight">Milestone</span>
                             </h3>
                         </div>
                     </div>
@@ -36,7 +36,7 @@ const WhatWeOfferSection = () => {
                             <img src="/images/school.png" alt="School Options" />
                         </div>
                         <h3 className="step-title mb-0">SCHOOL OPTIONS</h3>
-                        <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
+                        <div className="step-desc">Find schools that fit your learning style & academic goals.</div>
                     </div>
 
                     <div className="step">
@@ -44,7 +44,7 @@ const WhatWeOfferSection = () => {
                             <img src="/images/idealcur.png" alt="Ideal Curriculum" />
                         </div>
                         <h3 className="step-title mb-0">IDEAL CURRICULUM</h3>
-                        <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
+                        <div className="step-desc">Select the curriculum that best supports your future plans.</div>
                     </div>
 
                     <div className="step">
@@ -52,7 +52,7 @@ const WhatWeOfferSection = () => {
                             <img src="/images/subject.png" alt="Subject Choices" />
                         </div>
                         <h3 className="step-title mb-0">SUBJECT CHOICES</h3>
-                        <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
+                        <div className="step-desc">Choose subjects that align with your career & university path.</div>
                     </div>
 
                     <div className="step">
@@ -60,7 +60,7 @@ const WhatWeOfferSection = () => {
                             <img src="/images/universitypath.png" alt="University Pathways" />
                         </div>
                         <h3 className="step-title mb-0">UNIVERSITY PATHWAYS</h3>
-                        <div className="step-desc">Map a clear, strategic path to top international universities.</div>
+                        <div className="step-desc">MPlan a step-by-step route toward top global universities.</div>
                     </div>
                 </div>
             </section>

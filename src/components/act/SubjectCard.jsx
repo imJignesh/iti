@@ -34,16 +34,30 @@ export default function SubjectsCard() {
       data-scroll-repeat
     >
 
-      <div className="d-flex align-items-center justify-content-center mb-md-4 mb-3 fade-in-section"
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat
-        style={{ animationDelay: "0.25s" }}>
-        <div className="SubHeading testSubheading">          ACT TEST OVERVIEW
-
-        </div>
-
-      </div>
+      <div className="text-center mb-5 fade-in-section">
+            <div className="testHeadings">
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section"
+                style={{ animationDelay: "0.2s" }}
+              >
+                <h2 className="SubHeading testSubheading">ACT TEST OVERVIEW
+                </h2>
+              </div>
+              <h3
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section testTitle"
+                style={{ animationDelay: "0.2s" }}
+              >
+                Here’s What To Expect  <br /> When You Take The
+                <span className="highlight">  ACT Test  </span>
+              </h3>
+            </div>
+          </div>
 
 
       <div className="table-container">

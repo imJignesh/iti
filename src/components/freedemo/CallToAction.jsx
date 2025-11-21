@@ -63,8 +63,7 @@ export default function CallToAction() {
             fontSize: isMobile ? '14px' : '1.25rem',
             color: '#d1d5db',
             marginBottom: '2rem',
-            lineHeight: '1.6',
-            textTransform: 'uppercase'
+            lineHeight: '1.6',           
         },
         button: {
             display: 'flex',
@@ -225,11 +224,11 @@ export default function CallToAction() {
                     <div style={styles.desktopLayout} className="desktop-only">
                         <div style={styles.textSection}>
                             <h2 style={styles.heading}>
-                                Experience Ignite Firsthand, See What Sets Us Apart
+                                Experience Ignite Firsthand & Discover The Difference
                             </h2>
 
                             <p style={styles.paragraph}>
-                                Get a glimpse of our teaching style & expert mentors. Discover how Ignite can make a real difference in your journey.
+                                Explore our teaching approach and meet the mentors who make learning inspiring, structured, & impactful.
                             </p>
                             <a href="https://ignitetraininginstitute.com/join-free-demo-class/" target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
                                 <button

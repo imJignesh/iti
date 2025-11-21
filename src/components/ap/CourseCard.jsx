@@ -79,7 +79,7 @@ function CourseCard() {
                 style={{ animationDelay: "0.2s" }}
               >
                 Learning Starts Here With<br />
-                <span className="highlight">  Tailored  </span>ACT Courses
+                <span className="highlight">  Tailored  </span>AP Courses
               </h3>
             </div>
           </div>

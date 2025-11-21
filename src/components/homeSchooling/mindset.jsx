@@ -331,7 +331,7 @@ export default function HomeschoolingMindset() {
           }
 
           .card {
-            padding: 2rem;
+            padding: 4rem;
           }
 
           .card-content {
@@ -388,7 +388,7 @@ export default function HomeschoolingMindset() {
               padding-bottom:5px ;
             }
             .card{
-              padding:1rem;
+              padding:2rem;
             }
             .toggle-icon{
             width:auto;

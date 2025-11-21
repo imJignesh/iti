@@ -168,7 +168,8 @@ export default function Trainers({ }) {
             className="fade-in-section trainersTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            Individual Learning Backed By <span className="trainersHighlight">Experience & Trust</span>
+            
+            Individual Learning Backed By <br/> <span className="trainersHighlight">Experience & Trust</span>
           </h3>
 
           {isTrainersSwiper ? (

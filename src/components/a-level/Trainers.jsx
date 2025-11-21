@@ -607,7 +607,7 @@ export default function Trainers() {
             </div>
 
             <h3 className="trainersTitle">
-              The Best <span className="highlight">A Levels</span> Trainers For Your
+              The Best A Levels<span className="highlight"> Trainers </span> For Your
 
               {/* FIX: Use !isTrainersSwiper which is true for desktop (>1199px).
                  It will render <br /> only on desktop, ensuring the line break is hidden 

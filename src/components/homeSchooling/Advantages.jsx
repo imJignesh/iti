@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 const advantages = [
     {
@@ -38,6 +38,28 @@ const AdvantagesCarousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
 
+    // 1. Use useCallback for nextSlide to prevent unnecessary re-creations
+    const nextSlide = useCallback(() => {
+        if (isMobile) {
+            setCurrentSlide((prev) =>
+                prev < advantages.length - 1 ? prev + 1 : prev
+            );
+        } else {
+            // Desktop: infinite scroll
+            setCurrentSlide((prev) => (prev + 1) % advantages.length);
+        }
+    }, [isMobile]); // Dependency on isMobile
+
+    const prevSlide = () => {
+        if (isMobile) {
+            setCurrentSlide((prev) => (prev > 0 ? prev - 1 : prev));
+        } else {
+            // Desktop: infinite scroll
+            setCurrentSlide((prev) => (prev - 1 + advantages.length) % advantages.length);
+        }
+    };
+
+    // Effect for responsiveness
     useEffect(() => {
         const handleResize = () => {
             const width = window.innerWidth;
@@ -49,25 +71,21 @@ const AdvantagesCarousel = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const nextSlide = () => {
-        if (isMobile) {
-            setCurrentSlide((prev) =>
-                prev < advantages.length - 1 ? prev + 1 : prev
-            );
-        } else {
-            // Desktop: infinite scroll
-            setCurrentSlide((prev) => (prev + 1) % advantages.length);
-        }
-    };
+    // 2. Effect for Auto-Scrolling (Desktop Only)
+    useEffect(() => {
+        // Only enable auto-scroll if it's not a mobile view
+        if (!isMobile) {
+            // Set the interval for 1000 milliseconds (1 second)
+            const interval = setInterval(() => {
+                nextSlide();
+            }, 5000);
 
-    const prevSlide = () => {
-        if (isMobile) {
-            setCurrentSlide((prev) => (prev > 0 ? prev - 1 : prev));
-        } else {
-            // Desktop: infinite scroll
-            setCurrentSlide((prev) => (prev - 1 + advantages.length) % advantages.length);
+            // Cleanup function to clear the interval when the component unmounts
+            // or if isMobile changes to true
+            return () => clearInterval(interval);
         }
-    };
+    }, [isMobile, nextSlide]); // Dependencies: isMobile and the memoized nextSlide function
+
 
     return (
         <div className="advantages-container">

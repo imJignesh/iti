@@ -23,7 +23,7 @@ const WhatWeOfferSection = () => {
                             style={{ animationDelay: "0.25s" }}
                         >
                             <h3 className="achievementsTitle">
-                                Comprehensive Guidance For Every Academic <span className="highlight">Milestone</span>
+                                Comprehensive Guidance For Every AP <span className="highlight">Milestone</span>
                             </h3>
                         </div>
                     </div>
@@ -36,7 +36,7 @@ const WhatWeOfferSection = () => {
                             <img src="/images/school.png" alt="School Options" />
                         </div>
                         <h3 className="step-title mb-0">SCHOOL OPTIONS</h3>
-                        <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
+                        <div className="step-desc">Identify schools that recognize AP credits & support learners.</div>
                     </div>
 
                     <div className="step">
@@ -44,7 +44,7 @@ const WhatWeOfferSection = () => {
                             <img src="/images/idealcur.png" alt="Ideal Curriculum" />
                         </div>
                         <h3 className="step-title mb-0">IDEAL CURRICULUM</h3>
-                        <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
+                        <div className="step-desc">Integrate AP courses into your curriculum for stronger prep.</div>
                     </div>
 
                     <div className="step">
@@ -52,7 +52,7 @@ const WhatWeOfferSection = () => {
                             <img src="/images/subject.png" alt="Subject Choices" />
                         </div>
                         <h3 className="step-title mb-0">SUBJECT CHOICES</h3>
-                        <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
+                        <div className="step-desc">Select subjects that align with your university major & career.</div>
                     </div>
 
                     <div className="step">
@@ -60,7 +60,7 @@ const WhatWeOfferSection = () => {
                             <img src="/images/universitypath.png" alt="University Pathways" />
                         </div>
                         <h3 className="step-title mb-0">UNIVERSITY PATHWAYS</h3>
-                        <div className="step-desc">Map a clear, strategic path to top international universities.</div>
+                        <div className="step-desc">Leverage AP scores to strengthen applications to global schools.</div>
                     </div>
                 </div>
 

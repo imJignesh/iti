@@ -168,7 +168,8 @@ export default function Trainers({ }) {
             className="fade-in-section trainersTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            Individual Learning Backed By <span className="trainersHighlight">Experience & Trust</span>
+            
+            Train With Expert Mentors At <br/> Dubai’s <span className="trainersHighlight">Trusted Institute</span>
           </h3>
 
           {isTrainersSwiper ? (

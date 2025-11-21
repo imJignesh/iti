@@ -378,7 +378,7 @@ export default function IgniteAchievements() {
           font-weight: 700;
           line-height: 1.2;
           margin: 0;
-          text-transform: uppercase;
+          text-transform: capitalize;
         }
 
         .stat-description {
@@ -540,7 +540,7 @@ export default function IgniteAchievements() {
           font-weight: 700;
           line-height: 1.2;
           margin: 0;
-          text-transform: uppercase;
+          text-transform: capitalize;
         }
 
         .stat-description {

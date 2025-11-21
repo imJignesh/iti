@@ -136,6 +136,7 @@ export default function CallToAction() {
           color: #d1d5db;
           margin-bottom: 2rem;
           line-height: 1.6;
+          text-transform: none !important;
         }
 
         .cta-button {

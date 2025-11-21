@@ -859,6 +859,7 @@ padding-inline:0 !important;
   border-bottom-left-radius: 20px;
   padding: 30px 30px 50px 30px;
   padding-right: 100px;
+  height: -webkit-fill-available;
 }
 .curriculum-col-left {
   background: url("/assets/turg.png") no-repeat center center;

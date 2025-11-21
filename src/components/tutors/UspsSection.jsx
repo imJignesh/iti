@@ -178,7 +178,7 @@ function UpsSection() {
               className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
             >
-              What Do Students Get From<br /><span className="highlight"> Ignite's</span> ACT Support?
+              What Do Students Get From<br /><span className="highlight"> Ignite's</span> Tutoring Support?
 
             </h3>
           </div>

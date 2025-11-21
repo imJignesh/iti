@@ -296,7 +296,7 @@ export default function SubjectsCard() {
 
         .subjectTitle {
           color: white;
-          font-size: 1.6rem;
+          font-size: 29px;
           font-weight: 700;
           line-height: 1.2;
           text-transform: uppercase;

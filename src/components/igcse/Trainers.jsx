@@ -613,7 +613,7 @@ export default function Trainers() {
             </div>
 
             <h3 className="trainersTitle">
-              The Best IGCSE <span className="highlight">Trainers</span> For Your
+              The Best IGCSE <span className="highlight">Trainers</span> For Your  <br/>
 
               {/* Add this conditional rendering logic: */}
               {isMounted && !isTrainersSwiper ? <br /> : null}

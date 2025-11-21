@@ -168,8 +168,8 @@ export default function Trainers({ }) {
             className="fade-in-section trainersTitle"
             style={{ animationDelay: "0.2s" }}
           >
-
-            Guidance From Dubai’s Most <span className="trainersHighlight">Trusted</span> Academic Coaches
+            
+            Guidance From Dubai’s Most <span className="trainersHighlight">Trusted</span> <br/> Academic Coaches
           </h3>
 
           {isTrainersSwiper ? (

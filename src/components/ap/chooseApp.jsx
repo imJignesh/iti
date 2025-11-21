@@ -23,7 +23,7 @@ const benefits = [
         mobileIcon: "/assets/3lgo.png",
         upbutton: "/assets/brup.svg",
         downButton: "/assets/brdown.png",
-        text: `AP exams let students dive deep into subjects, building true mastery. This focused approach strengthens both academic confidence and career clarity—guiding smarter choices for the future.`,
+        text: `AP exams let students dive deep into subjects, building true mastery. This focused approach strengthens both academic confidence and career clarity, guiding smarter choices for the future.`,
     },
     {
         title: "Unique College Application",

@@ -57,7 +57,7 @@ const TrainersMessage = () => {
   return (
     <div className="container videoTrainer">
       <div
-        className="text-center mb-5 fade-in-section"
+        className="text-center fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
@@ -71,52 +71,19 @@ const TrainersMessage = () => {
           className="fade-in-section"
           style={{ animationDelay: "0.1s" }}
         >
-          <h2 className="SubHeading" style={{ fontSize: "28px"}}>TRAINERS MESSAGE</h2>
+          <h2 className="SubHeading mb-0" style={{ fontSize: "28px" }}>TRAINERS MESSAGE</h2>
         </div>
 
         {/* Main title */}
+
         <h3
-          className="fw-bold mb-0 fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
-          data-scroll-repeat
-          style={{
-            animationDelay: "0.3s",
-            fontSize: isMobile ? "21px" : "2rem",
-            lineHeight: "1.1",
-            textTransform: "uppercase",
-            marginTop: "3vh",
-            maxWidth: isMobile ? "100%" : "57%",
-            marginInline: "auto",
-          }}
+          data-scroll-repeat="true"
+          className="fade-in-section testTitle"
+          style={{ animationDelay: "0.2s", fontSize: "2rem" }}
         >
-          <span
-            style={{
-              background: "linear-gradient(135deg , #161664, #3F88BA)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            What Our Trainers Want
-          </span>{" "}
-          <span
-            style={{
-              background: "linear-gradient(135deg, #00A491, #003E37)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Every Student
-          </span>{" "}
-          <span
-            style={{
-              background: "linear-gradient(135deg , #161664, #3F88BA)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            To Know
-          </span>
+          What Our Trainers Want <br /><span className="highlight"> Every Student </span> To Know
         </h3>
       </div>
 

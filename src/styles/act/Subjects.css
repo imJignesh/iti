@@ -63,7 +63,7 @@
 .subjectSection .subjectLeft h2 {
   /* font-size: 1.3vw; */
   -webkit-text-fill-color: white;
-  margin-bottom: 30px;
+
 }
 
 .subjectSection .subjectLeft h2::before,

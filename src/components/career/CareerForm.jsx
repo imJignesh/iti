@@ -482,6 +482,10 @@ export default function CareerForm() {
           text-align: center;
           padding: 50px 20px;
           font-family: 'Montserrat', sans-serif;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
 
         .title {
@@ -499,6 +503,7 @@ export default function CareerForm() {
         }
 
         .career-form {
+          width: 80%;
           margin-top: 30px;
           padding: 6rem;
           border-radius: 30px;

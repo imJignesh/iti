@@ -38,7 +38,7 @@ export default function Timeline() {
     },
   ];
 
-
+  // 1. Effect for mobile view detection
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
@@ -49,6 +49,24 @@ export default function Timeline() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // 2. 🔄 New Effect for Automatic Year Cycling (5 seconds)
+  useEffect(() => {
+    // Find the index of the currently active year
+    const currentIndex = timelineData.findIndex(item => item.year === activeYear);
+
+    // Calculate the index for the next year (wraps around using modulo)
+    const nextIndex = (currentIndex + 1) % timelineData.length;
+    const nextYear = timelineData[nextIndex].year;
+
+    // Set a timer to update the active year after 5000 milliseconds (5 seconds)
+    const timer = setTimeout(() => {
+      setActiveYear(nextYear);
+    }, 5000); // 5000ms = 5 seconds
+
+    // Cleanup function: clears the timeout when the component unmounts or activeYear changes
+    return () => clearTimeout(timer);
+  }, [activeYear, timelineData]); // Reruns the effect whenever activeYear changes
 
   const handleYearClick = (year) => {
     setActiveYear(year);
@@ -350,17 +368,24 @@ export default function Timeline() {
           background-color: #2c5aa0;
         }
 
-        .timeline-segment:nth-child(1).active ~ .timeline-segment:nth-child(2).active .timeline-connector,
+        .timeline-segment:nth-child(1).active ~ .timeline-segment:nth-child(2) .timeline-connector,
         .timeline-segment:nth-child(2).active .timeline-connector {
           background-color: #2c5aa0;
         }
 
-        .timeline-segment:nth-child(1).active ~ .timeline-segment:nth-child(2).active ~ .timeline-segment:nth-child(3).active .timeline-connector,
-        .timeline-segment:nth-child(2).active ~ .timeline-segment:nth-child(3).active .timeline-connector,
+        .timeline-segment:nth-child(1).active ~ .timeline-segment:nth-child(2) ~ .timeline-segment:nth-child(3) .timeline-connector,
+        .timeline-segment:nth-child(2).active ~ .timeline-segment:nth-child(3) .timeline-connector,
         .timeline-segment:nth-child(3).active .timeline-connector {
           background-color: #2c5aa0;
         }
-
+        
+        .timeline-segment:nth-child(1).active ~ .timeline-segment:nth-child(2) ~ .timeline-segment:nth-child(3) ~ .timeline-segment:nth-child(4) .timeline-connector,
+        .timeline-segment:nth-child(2).active ~ .timeline-segment:nth-child(3) ~ .timeline-segment:nth-child(4) .timeline-connector,
+        .timeline-segment:nth-child(3).active ~ .timeline-segment:nth-child(4) .timeline-connector,
+        .timeline-segment:nth-child(4).active .timeline-connector {
+          background-color: #2c5aa0;
+        }
+        
         /* Mobile Timeline Styles */
         .mobile-timeline {
           position: relative;
