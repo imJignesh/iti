@@ -85,7 +85,7 @@ export default function Trainers() {
           }
 
           .${containerClass} .trainersSection .trainersTitle {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             max-width: 60%;
             margin: 40px auto;
@@ -503,12 +503,12 @@ export default function Trainers() {
         <section className="trainersSection" data-scroll-section>
           <div className="container">
             <div>
-              <span className="SubHeading trainersSubheading">OUR TUTORS</span>
+              <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
             </div>
 
-            <h2 className="trainersTitle">
+            <h3 className="trainersTitle">
               The Best <span className="highlight">Trainers</span> For Your<br />Success Journey
-            </h2>
+            </h3>
 
             {isTrainersSwiper ? (
               <div className="trainersSwiperWrap">

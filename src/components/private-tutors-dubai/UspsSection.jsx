@@ -178,9 +178,9 @@ function UpsSection() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">OUR PROMISE</div>
+              <h2 className="SubHeading testSubheading">OUR PROMISE</h2>
             </div>
-            <h2
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -189,7 +189,7 @@ function UpsSection() {
             >
               What Do Students Get From <br /><span className="highlight"> Individual</span> Tutoring Support?
 
-            </h2>
+            </h3>
           </div>
         </div>
 

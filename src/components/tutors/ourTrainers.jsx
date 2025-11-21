@@ -158,10 +158,10 @@ export default function Trainers({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <span className="SubHeading trainersSubheading">OUR TUTORS</span>
+            <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
           </div>
 
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -169,7 +169,7 @@ export default function Trainers({ }) {
             style={{ animationDelay: "0.2s" }}
           >
             Individual Learning Backed By <span className="trainersHighlight">Experience & Trust</span>
-          </h2>
+          </h3>
 
           {isTrainersSwiper ? (
             <div className="trainersSwiperWrap">
@@ -348,7 +348,7 @@ export default function Trainers({ }) {
   margin-right: 8px;
 }
 .trainersSection .trainersTitle {
-  font-size: 2.2vw;
+  font-size: 2rem;
   font-weight: 700;
   max-width: 60%;
   margin: 40px auto;

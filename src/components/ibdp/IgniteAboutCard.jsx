@@ -326,7 +326,7 @@ export default function IgniteAboutCard() {
         }
 
         .ignite-main-title {
-          font-size: 2.5rem;
+          font-size: 2rem;
           font-weight: 700;
           color: #233467;
           line-height: 1.2;
@@ -508,7 +508,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
           }
 
           .ignite-main-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             color: #233467;
             line-height: 1;

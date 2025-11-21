@@ -190,7 +190,7 @@ export default function Trainers() {
           }
 
           .${containerClass} .trainersSection .trainersTitle {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             max-width: 60%;
             margin: 40px auto;

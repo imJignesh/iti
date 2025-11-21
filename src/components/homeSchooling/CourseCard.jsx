@@ -112,7 +112,7 @@ function CourseCard() {
                   style={{ animationDelay: "0.2s", fontSize: '2rem' }}
                 >
                   Learning Starts Here With<br />
-                  <span className="highlight">  Tailored  </span>IGCSE Courses
+                  <span className="highlight">  Tailored  </span>Homeschooling Courses
                 </h3>
               </div>
             </div>

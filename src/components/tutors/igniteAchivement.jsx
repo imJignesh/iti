@@ -32,20 +32,22 @@ export default function IgniteAchievements() {
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.2s" }}>
-          <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
-          </div>
+          <h2 className="SubHeading testSubheading">OUR ACHIEVEMENTS
+          </h2>
 
           {/* Main Title - Mobile Version */}
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section testTitle text-uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            Milestones That Clearly Reflect <span className="highlight"> Our{" "}</span>
-            Impact
-          </h2>
+            
+            Success Defined By Consistent<br/>
+                  <span className="highlight"> Academic </span>Progress
+            
+          </h3>
 
           {/* Subtitle */}
           <p className="mx-auto fade-in-section"
@@ -78,21 +80,22 @@ export default function IgniteAchievements() {
               {/* Desktop Header */}
               <div className="mb-4">
                 <div className="mb-3">
-                  <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
-                  </div>
+                  <h2 className="SubHeading testSubheading">OUR ACHIEVEMENTS
+                  </h2>
                 </div>
 
                 {/* Main Title - Desktop Version */}
-                <h2
+                <h3
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className="fade-in-section testTitle"
                   style={{ animationDelay: "0.2s" }}
                 >
-                  Milestones That Clearly Reflect <br /> <span className="highlight"> Our{" "}</span>
-                  Impact
-                </h2>
+                  Success Defined By Consistent <br/>
+                  <span className="highlight"> Academic </span>Progress
+                  
+                </h3>
 
 
                 {/* Subtitle */}

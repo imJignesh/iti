@@ -45,10 +45,10 @@ export default function TutoringCourses() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">TUTORING COURSES</div>
+              <h2 className="SubHeading testSubheading">TUTORING COURSES</h2>
             </div>
 
-            <h2
+            <h3
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
@@ -57,7 +57,7 @@ export default function TutoringCourses() {
             >
               Courses That Build Confidence & <span className="highlight">
                 Academic</span> Excellence
-            </h2>
+            </h3>
           </div>
         </section>
 

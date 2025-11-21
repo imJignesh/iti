@@ -11,9 +11,9 @@ export default function CallToAction() {
           {/* Desktop Layout */}
           <div className="desktop-only desktopLayout text-uppercase">
             <div className="textSection">
-              <h1 className="heading">
+              <h2 className="heading">
                 Discover Courses That Support Every Step Of Learning
-              </h1>
+              </h2>
 
               <p className="paragraph">
                 Explore our wide range of tutoring programs, each designed to

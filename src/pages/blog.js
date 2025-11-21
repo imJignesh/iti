@@ -256,7 +256,7 @@ const Blogpg = ({ headerHeight }) => {
                     <div className="dark-overlay"></div>
 
                     <div className="overlay">
-                        <h2
+                        <h1
                             className="heading"
                             style={{
                                 background: "linear-gradient(90deg, #EDFFF4, #A6EAC7)",
@@ -266,7 +266,7 @@ const Blogpg = ({ headerHeight }) => {
                             }}
                         >
                             BlOG
-                        </h2>
+                        </h1>
                         <p className="subHeading">HOME // Blog</p>
                     </div>
                 </section>

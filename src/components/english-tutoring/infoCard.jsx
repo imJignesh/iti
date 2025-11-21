@@ -185,8 +185,8 @@ export default function InfoCard() {
               </h1>
               <div className="divider"></div>
 
-              <p
-                className="text-white mb-4 fade-in-section fs-8 fs-md-10"
+              <h2
+                className="text-white fade-in-section fs-8 fs-md-10"
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat
@@ -195,11 +195,16 @@ export default function InfoCard() {
                   fontWeight: "600",
                   opacity: "1",
                   animationDelay: "0.25s",
-                  marginTop: "19px"
+
+                  fontSize: "inherit",  // forces same size as previous p tag class
+                  lineHeight: "inherit", // optional: keep same spacing
+                  marginTop: "19px",
+                  marginBottom: "26px",
                 }}
               >
                 Guided Path To Excellence
-              </p>
+              </h2>
+
 
               <div
                 className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold fade-in-section info-row"
@@ -218,14 +223,19 @@ export default function InfoCard() {
                 }}
 
               >
-                <div
+                {/* ---- BLOCK 1 ---- */}
+                <h3
                   className="d-flex flex-column align-items-center text-center text-white info-col"
                   style={{
                     borderRight: "1px solid rgba(255, 255, 255, 0.3)",
                     paddingRight: isMobile ? "16px" : "3.7rem",
+                    margin: 0,
+                    fontSize: "inherit",
+                    fontWeight: "inherit",
+                    lineHeight: "inherit",
                   }}
                 >
-                  <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
+                  <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
                       src="/assets/checkmark.png"
                       alt="Grade Support"
@@ -233,44 +243,57 @@ export default function InfoCard() {
                       height={isMobile ? 22 : 40}
                       className="icon-img"
                     />
-                  </div>
-                  Assured Grade <br />
-                  Improvement                </div>
+                  </span>
+                  Assured Grade <br /> Improvement
+                </h3>
 
-                <div
+                {/* ---- BLOCK 2 ---- */}
+                <h3
                   className="d-flex flex-column align-items-center text-center text-white info-col"
                   style={{
                     borderRight: "1px solid rgba(255, 255, 255, 0.3)",
                     paddingRight: isMobile ? "16px" : "4rem",
+                    margin: 0,
+                    fontSize: "inherit",
+                    fontWeight: "inherit",
+                    lineHeight: "inherit",
                   }}
                 >
-                  <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
+                  <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
                       src="/assets/person.png"
                       alt="Learning Mode"
-                      width={isMobile ? 16 : 30}
-                      height={isMobile ? 25 : 45}
+                      width={isMobile ? 20 : 30}
+                      height={isMobile ? 30 : 45}
                       className="icon-img"
                     />
-                  </div>
+                  </span>
                   Online <br /> & In-Person
-                </div>
+                </h3>
 
-                <div
+                {/* ---- BLOCK 3 ---- */}
+                <h3
                   className="d-flex flex-column align-items-center text-center text-white info-col"
-                  style={{ animationDelay: "0.45s" }}
+                  style={{
+                    margin: 0,
+                    fontSize: "inherit",
+                    fontWeight: "inherit",
+                    lineHeight: "inherit",
+                  }}
                 >
-                  <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
+                  <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
                       src="/assets/location.png"
                       alt="Location"
-                      width={isMobile ? 18 : 32}
-                      height={isMobile ? 25 : 40}
+                      width={isMobile ? 22 : 32}
+                      height={isMobile ? 30 : 42}
                       className="icon-img"
                     />
-                  </div>
-                  <span className="fontd"> Dubai <br /> (DIFC, JLT)</span>
-                </div>
+                  </span>
+
+                  Dubai <br /> (DIFC, JLT)
+
+                </h3>
               </div>
 
               <p
@@ -1121,7 +1144,7 @@ margin-block: 30px !important;
             max-width: none !important;
           }
 
-          .text-white.mb-4:first-of-type {
+          .text-white.mb-4:first-of-type, .text-white.fs-8:first-of-type {
             font-size: 0.75rem !important;
             margin-bottom: 1.5rem !important;
             text-align: center !important;

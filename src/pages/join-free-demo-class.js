@@ -234,7 +234,7 @@ const FreeDemo = ({ headerHeight }) => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.1s" }}
                             >
-                                <h4 className="SubHeading">CURRICULUMS & STANDARDISED TESTS</h4>
+                                <h2 className="SubHeading">CURRICULUMS & STANDARDISED TESTS</h2>
                             </div>
                             <div
                                 data-scroll
@@ -243,9 +243,9 @@ const FreeDemo = ({ headerHeight }) => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.25s" }}
                             >
-                                <h1 className="achievementsTitle">
+                                <h3 className="achievementsTitle">
                                     Curriculum-Focused  <br></br> Tutoring & Exam Prep<span className="highlight"> Expertise</span> {" "}
-                                </h1>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -299,7 +299,7 @@ const FreeDemo = ({ headerHeight }) => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.1s" }}
                             >
-                                <h4 className="SubHeading">SUBJECTS WE SUPPORT</h4>
+                                <h2 className="SubHeading">SUBJECTS WE SUPPORT</h2>
                             </div>
                             <div
                                 data-scroll
@@ -308,9 +308,9 @@ const FreeDemo = ({ headerHeight }) => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.25s" }}
                             >
-                                <h1 className="achievementsTitle">
+                                <h3 className="achievementsTitle">
                                     In-Depth Tutoring That Makes Every<br></br>  <span className="highlight"> Subject</span> Clear{" "}
-                                </h1>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -336,7 +336,7 @@ const FreeDemo = ({ headerHeight }) => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.1s" }}
                             >
-                                <h4 className="SubHeading">WHAT MORE DO WE OFFER?</h4>
+                                <h2 className="SubHeading">WHAT MORE DO WE OFFER?</h2>
                             </div>
                             <div
                                 data-scroll
@@ -345,11 +345,11 @@ const FreeDemo = ({ headerHeight }) => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.25s" }}
                             >
-                                <h1 className="achievementsTitle">
+                                <h3 className="achievementsTitle">
 
                                     Comprehensive Guidance For Every <span className="highlight">Academic</span>{" "}
                                     Milestone
-                                </h1>
+                                </h3>
                             </div>
 
                         </div>
@@ -360,7 +360,7 @@ const FreeDemo = ({ headerHeight }) => {
                             <div className="icon-wrap" data-step="01">
                                 <img src="/images/school.png" alt="School Options" />
                             </div>
-                            <div className="step-title">SCHOOL OPTIONS</div>
+                            <h3 className="step-title mb-0">SCHOOL OPTIONS</h3>
                             <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
                         </div>
 
@@ -368,7 +368,7 @@ const FreeDemo = ({ headerHeight }) => {
                             <div className="icon-wrap" data-step="02">
                                 <img src="/images/idealcur.png" alt="Ideal Curriculum" />
                             </div>
-                            <div className="step-title">IDEAL CURRICULUM</div>
+                            <h3 className="step-title mb-0">IDEAL CURRICULUM</h3>
                             <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
                         </div>
 
@@ -376,7 +376,7 @@ const FreeDemo = ({ headerHeight }) => {
                             <div className="icon-wrap" data-step="03">
                                 <img src="/images/subject.png" alt="Subject Choices" />
                             </div>
-                            <div className="step-title">SUBJECT CHOICES</div>
+                            <h3 className="step-title mb-0">SUBJECT CHOICES</h3>
                             <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
                         </div>
 
@@ -384,7 +384,7 @@ const FreeDemo = ({ headerHeight }) => {
                             <div className="icon-wrap" data-step="04">
                                 <img src="/images/universitypath.png" alt="University Pathways" />
                             </div>
-                            <div className="step-title">UNIVERSITY PATHWAYS</div>
+                            <h3 className="step-title mb-0">UNIVERSITY PATHWAYS</h3>
                             <div className="step-desc">Map a clear, strategic path to top international universities.</div>
                         </div>
                     </div>

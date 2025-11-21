@@ -32,11 +32,11 @@ export default function IgniteAchievements() {
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.2s" }}>
-          <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
-          </div>
+          <dih2v className="SubHeading testSubheading">OUR ACHIEVEMENTS
+          </dih2v>
 
           {/* Main Title - Mobile: NO LINE BREAK */}
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -44,7 +44,7 @@ export default function IgniteAchievements() {
             style={{ animationDelay: "0.2s" }}
           >
             Progress Measured Through Steady <span className="highlight"> Academic </span>Growth
-          </h2>
+          </h3>
 
           {/* Subtitle */}
           <p className="mx-auto fade-in-section"
@@ -77,12 +77,12 @@ export default function IgniteAchievements() {
               {/* Desktop Header */}
               <div className="mb-4">
                 <div className="mb-3">
-                  <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
-                  </div>
+                  <h2 className="SubHeading testSubheading">OUR ACHIEVEMENTS
+                  </h2>
                 </div>
 
                 {/* Main Title - Desktop: HARD-CODED LINE BREAK */}
-                <h2
+                <h3
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
@@ -92,7 +92,7 @@ export default function IgniteAchievements() {
 
                   Progress Measured Through Steady
                   <br /><span className="highlight"> Academic </span>Growth
-                </h2>
+                </h3>
 
 
                 {/* Subtitle */}

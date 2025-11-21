@@ -201,14 +201,14 @@ const HomeSchooling = ({ headerHeight }) => {
         {/* <section data-scroll-section>
             <StudentAchievements />
           </section> */}
+        <section data-scroll-section>
+          <Curriculum />
+        </section>
 
         <section data-scroll-section>
           <CourseCard />
         </section>
 
-        <section data-scroll-section>
-          <Curriculum />
-        </section>
         <section data-scroll-section>
           <Advantages />
         </section>

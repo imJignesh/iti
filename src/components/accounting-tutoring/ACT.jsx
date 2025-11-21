@@ -81,7 +81,7 @@ const AchievementsCarousel = () => {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <h4 className="SubHeading">SUBJECT SYLLABUS</h4>
+            <h2 className="SubHeading">SUBJECT SYLLABUS</h2>
           </div>
           <div
             data-scroll
@@ -90,10 +90,10 @@ const AchievementsCarousel = () => {
             className="fade-in-section"
             style={{ animationDelay: "0.25s" }}
           >
-            <h1 className="achievementsTitle text-uppercase">
+            <h3 className="achievementsTitle text-uppercase">
               Explore Key Areas In The <br></br>{" "}
               <span className="highlight"> Accounting</span> Syllabus{" "}
-            </h1>
+            </h3>
           </div>
         </div>
         <div className="row gy-4 gy-sm-3">
@@ -108,7 +108,7 @@ const AchievementsCarousel = () => {
                 style={{ animationDelay: "0.1s" }}
               >
                 <div className="counts">{item.counts}</div>
-                <div className="subjects-name">{item.subjectsName}</div>
+                <h3 className="subjects-name">{item.subjectsName}</h3>
               </div>
             </div>
           ))}
@@ -118,6 +118,10 @@ const AchievementsCarousel = () => {
         /* Header */
 .achievementsSection {
   padding: 70px 0;
+}
+
+.subjects-card .subjects-name{
+      margin-bottom: 0;
 }
 
 .achievementsHeadings {
@@ -355,6 +359,7 @@ const AchievementsCarousel = () => {
     font-size: 1rem;
   }
 }
+
 
 @media (max-width: 768px) {
   .achievements-slideCard {

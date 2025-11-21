@@ -120,7 +120,7 @@ const FAQSection = () => {
                 color: "#19245E",
                 fontWeight: 800,
                 margin: isMobile ? "20px auto" : "0 0 20px 0",
-                fontSize: isHighDpi ? "1.75rem" : isMobile ? "20.4px" : "1.8rem"
+                fontSize: isHighDpi ? "1.75rem" : isMobile ? "20.4px" : "2rem"
               }}
             >
               {currentTitle}

@@ -71,18 +71,18 @@ const TrainersMessage = () => {
           className="fade-in-section"
           style={{ animationDelay: "0.1s" }}
         >
-          <div className="SubHeading testSubheading">TRAINERS MESSAGE</div>
+          <h2 className="SubHeading" style={{ fontSize: "28px"}}>TRAINERS MESSAGE</h2>
         </div>
 
         {/* Main title */}
-        <h2
+        <h3
           className="fw-bold mb-0 fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{
             animationDelay: "0.3s",
-            fontSize: isMobile ? "21px" : "2.5rem",
+            fontSize: isMobile ? "21px" : "2rem",
             lineHeight: "1.1",
             textTransform: "uppercase",
             marginTop: "3vh",
@@ -117,7 +117,7 @@ const TrainersMessage = () => {
           >
             To Know
           </span>
-        </h2>
+        </h3>
       </div>
 
       <div className="trainers-container">

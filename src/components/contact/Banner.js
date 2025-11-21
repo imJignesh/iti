@@ -15,7 +15,7 @@ export default function ContactBanner() {
       <div className="dark-overlay"></div>
 
       <div className="overlay">
-        <h2
+        <h1
           className="heading"
           style={{
             background: "linear-gradient(90deg, #EDFFF4, #A6EAC7)",
@@ -25,7 +25,7 @@ export default function ContactBanner() {
           }}
         >
           CONTACT US
-        </h2>
+        </h1>
         <p className="subHeading">HOME // CONTACT</p>
       </div>
 

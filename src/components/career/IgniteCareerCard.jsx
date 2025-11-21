@@ -68,20 +68,20 @@ export default function IgniteCareerCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="SubHeading testSubheading">Work With Ignite
-                </div>
+                <h2 className="SubHeading testSubheading">Work With Ignite
+                </h2>
               </div>
             </div>
           </div>
 
-          <h1 className="ignite-main-title fade-in-section" data-scroll
+          <h3 className="ignite-main-title fade-in-section" data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat style={{
               animationDelay: "0.3s",
             }}>
             {/* Conditional Main Title Content */}
             {mainTitleContent}
-          </h1>
+          </h3>
 
           <p className="ignite-description fade-in-section" data-scroll
             data-scroll-class="is-inview"
@@ -91,14 +91,14 @@ export default function IgniteCareerCard() {
             At Ignite, tutoring goes beyond the classroom - it's a journey of personal growth, flexibility, & purpose. We’re always seeking passionate educators who believe in the power of teaching & learning. Join our team & grow with us as we inspire students every day.
           </p>
 
-          <h2 className="ignite-secondary-title fade-in-section" data-scroll
+          <h3 className="ignite-secondary-title fade-in-section" data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat style={{
               animationDelay: "0.3s",
             }}>
             {/* Conditional Secondary Title Content */}
             {secondaryTitleContent}
-          </h2>
+          </h3>
 
           <p className="ignite-short-description">
             We empower passionate trainers to shape student journeys while growing through purpose-driven initiatives & a flexible teaching environment.
@@ -133,13 +133,13 @@ export default function IgniteCareerCard() {
               {/* First item */}
               <div className="d-flex align-items-center gap-3">
                 <img src="/assets/check.png" alt="career at ignite" className="icon-height" />
-                <span>Empowering students & educators alike</span>
+                <h3>Empowering students & educators alike</h3>
               </div>
 
               {/* Second item */}
               <div className="d-flex align-items-center gap-3">
                 <img src="/assets/check.png" alt="career at ignite" className="icon-height" />
-                <span className="spanText">Igniting great teaching & deeper learning</span>
+                <h3 className="spanText">Igniting great teaching & deeper learning</h3>
               </div>
 
 
@@ -323,7 +323,7 @@ height: 30px;
   flex: 1;
 }
 
-        .check-box span {
+        .check-box h3 {
           font-size: 23px;
           color: #2C5F7D;
           font-weight: 500;
@@ -448,7 +448,7 @@ height: 30px;
                 .check-boxes-container .check-box>div{
                   gap:10px !important;
                 }
-                .check-box span{
+                .check-box h3{
                   font-size:14px;
                 }
         }
@@ -472,7 +472,7 @@ height: 30px;
               flex: 1;
             }
 
-          .check-box span {
+          .check-box h3 {
               
               color: #2C5F7D;
               font-weight: 500;
@@ -654,7 +654,7 @@ height: 20px;
 }
 
 
-        .check-box span {
+        .check-box h3 {
           font-size: 15px;
           color: #233467;
           font-weight: 500;
@@ -823,7 +823,7 @@ height: 20px;
 }
 
 
-        .check-box span {
+        .check-box h3 {
           font-size: 12px;
           color: #233467;
           font-weight: 500;

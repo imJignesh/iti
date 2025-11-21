@@ -11,7 +11,7 @@ export default function CareersBanner() {
       <div className="dark-overlay"></div>
 
       <div className="overlay">
-        <h2 className="heading"
+        <h1 className="heading"
           style={{
             background: "linear-gradient(90deg, #EDFFF4, #A6EAC7)",
             WebkitBackgroundClip: "text",
@@ -20,7 +20,7 @@ export default function CareersBanner() {
           }}
         >
           COURSES
-        </h2>
+        </h1>
         <p className="subHeading">HOME // CAREERS</p>
       </div>
 
@@ -87,7 +87,7 @@ font-size: 1.35vw;
               height: 90vw; /* square card on mobile */
               margin: 0 auto;
             }
-            h2 {
+            h1 {
             margin:0 !important;
               font-size: 6.33vw !important;
               font-weight: 800 !important;

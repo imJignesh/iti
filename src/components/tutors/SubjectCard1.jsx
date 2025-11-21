@@ -43,10 +43,10 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">SUBJECTS WE SUPPORT
-            </div>
+            <h2 className="SubHeading testSubheading">SUBJECTS WE SUPPORT
+            </h2>
           </div>
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -55,7 +55,7 @@ export default function SubjectsCard1({ }) {
           >
             Tutoring That Makes Every <br /> ACT  <span className="highlight"> Subject </span>
             Clear
-          </h2>
+          </h3>
         </div>
       </div>
       <div className="container">
@@ -85,7 +85,7 @@ export default function SubjectsCard1({ }) {
           <div className="subjects-card1-right">
             <div className="subjects-card1-bubbles-grid">
               {subjectRows.map((row, rowIdx) => (
-                <div
+                <h3
                   key={rowIdx}
                   data-scroll
                   data-scroll-class="is-inview"
@@ -98,7 +98,7 @@ export default function SubjectsCard1({ }) {
                       {subj}
                     </div>
                   ))}
-                </div>
+                </h3>
               ))}
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function SubjectsCard1({ }) {
           color: var(--green-text);
           font-size: 1.4vw;
           font-weight: 400;
-          padding: 10px 55px;
+          padding: 17px 55px;
           cursor: pointer;
           transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
           box-shadow: none;
@@ -242,7 +242,7 @@ export default function SubjectsCard1({ }) {
 
         @media (max-width: 1280px) {
           .subjects-card1-section .subjects-card1-bubble {
-            padding: 10px 45px;
+            padding: 12px 45px;
           }
         }
 
@@ -260,7 +260,7 @@ export default function SubjectsCard1({ }) {
           }
 
           .subjects-card1-section .subjects-card1-bubble {
-            padding: 10px 30px;
+            padding: 14px 30px;
           }
         }
 

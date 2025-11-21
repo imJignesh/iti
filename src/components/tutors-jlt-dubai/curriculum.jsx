@@ -25,9 +25,9 @@ const IBCurriculumStages = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <h4 className="SubHeading">
+              <h2 className="SubHeading">
                 CURRICULA & STANDARDISED TESTS WE OFFER
-              </h4>
+              </h2>
             </div>
             <div
               data-scroll
@@ -36,10 +36,10 @@ const IBCurriculumStages = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.25s" }}
             >
-              <h1 className="achievementsTitle">
+              <h3 className="achievementsTitle">
                 Curriculum-Based Learning &<br />
                 <span className="highlight">  Exam Prep</span> Solutions{" "}
-              </h1>
+              </h3>
             </div>
           </div>
         </div>

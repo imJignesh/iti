@@ -108,20 +108,20 @@ const Learning = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading" style={{ marginLeft: isMobile ? "25px" : "" }}>
+              <h2 className="SubHeading testSubheading" style={{ marginLeft: isMobile ? "25px" : "" }}>
                 HOW ARE WE DIFFERENT?
-              </div>
+              </h2>
             </div>
 
             {/* Main title */}
-            <h2
+            <h3
               className="fw-bold mb-0 fade-in-section"
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
               style={{
                 animationDelay: "0.3s",
-                fontSize: isMobile ? "1.4rem" : "2.5rem",
+                fontSize: isMobile ? "1.4rem" : "2.2rem",
                 lineHeight: "1.1",
                 textTransform: "uppercase",
                 marginTop: "3vh",
@@ -129,33 +129,26 @@ const Learning = () => {
               }}
             >
               <span
-                style={{
-                  background: "#19245E",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                Here's How Our Approach Makes
-              </span>{" "}
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #00A491, #003E37)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                All The
-              </span>{" "}
-              <span
-                style={{
-                  background: "#19245E",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                Difference
-              </span>
-            </h2>
+                  style={{
+                    background: "linear-gradient(135deg,#161664, #3F88BA)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent"
+                  }}
+                >
+                  Here's How Our Approach Makes<br/>
+                  <span
+                    style={{
+                      background: "linear-gradient(135deg, #00A491, #003E37)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent"
+                    }}
+                  >
+                    All The 
+                  </span>{" "}
+                  Difference
+                </span>
+             
+            </h3>
 
             <p className="mobile-subtitle">
               We blend expertise, structure, & care to help students thrive academically & personally, ensuring every learner gets the clarity & support they need.
@@ -221,17 +214,18 @@ const Learning = () => {
           <div className="desktop-content">
             <div className="desktop-left">
               <div className="testimonialHeader" style={{ marginTop: "15%" }}>
-                <span className="SubHeading">HOW ARE WE DIFFERENT?
-                </span>
+                <h2 className="SubHeading">HOW ARE WE DIFFERENT?
+                </h2>
               </div>
-              <h2
+
+              <h3
                 className="fw-bold mb-0 fade-in-section"
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat
                 style={{
                   animationDelay: "0.3s",
-                  fontSize: isMobile ? "1.5rem" : "30px",
+                  fontSize: isMobile ? "1.5rem" : "2rem",
                   lineHeight: "1.1",
                   textTransform: "uppercase",
                   marginTop: "3vh"
@@ -244,27 +238,20 @@ const Learning = () => {
                     WebkitTextFillColor: "transparent"
                   }}
                 >
-                  Here's How Our Approach Makes
-                </span>{" "}
-                <span
-                  style={{
-                    background: "linear-gradient(135deg, #00A491, #003E37)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
-                  }}
-                >
-                  All The
-                </span>{" "}
-                <span
-                  style={{
-                    background: "linear-gradient(135deg, #3F88BA, #161664)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
-                  }}
-                >
+                  Here's How Our Approach Makes <br/>
+                  <span
+                    style={{
+                      background: "linear-gradient(135deg, #00A491, #003E37)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent"
+                    }}
+                  >
+                    All The
+                  </span>{" "}
                   Difference
                 </span>
-              </h2>
+                
+              </h3>
               <p className="desktop-subtitle">
                 We blend expertise, structure, & care to help students thrive academically & personally, ensuring every learner gets the clarity & support they need.
               </p>

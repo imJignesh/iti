@@ -202,9 +202,9 @@ const OurTeam = ({ headerHeight }) => {
                                 </h2>
                             </div>
                             <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
-                                <h1 className="cofounderTitle">
+                                <h2 className="cofounderTitle">
                                     CO-FOUNDERS
-                                </h1>
+                                </h2>
                             </div>
                         </div>
                         <div className="meet-team-cards">
@@ -254,9 +254,9 @@ const OurTeam = ({ headerHeight }) => {
                     <div className="container">
                         <div className="meet-team-Headings">
                             <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
-                                <h1 className="cofounderTitle">
+                                <h2 className="cofounderTitle">
                                     STUDENT SUCCESS MANAGERS
-                                </h1>
+                                </h2>
                             </div>
                         </div>
                         <div className="admin-staff-cards">
@@ -310,9 +310,9 @@ const OurTeam = ({ headerHeight }) => {
                     <div className="container">
                         <div className="meet-team-Headings">
                             <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
-                                <h1 className="cofounderTitle">
+                                <h2 className="cofounderTitle">
                                     Trainers
-                                </h1>
+                                </h2>
                             </div>
                         </div>
                         <div className="trainer-cards">

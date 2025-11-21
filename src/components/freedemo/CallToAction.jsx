@@ -51,7 +51,7 @@ export default function CallToAction() {
             paddingRight: '2rem'
         },
         heading: {
-            fontSize: '2.5rem',
+            fontSize: '2rem',
             fontWeight: 'bold',
             color: 'white',
             marginBottom: '1.5rem',
@@ -141,7 +141,7 @@ export default function CallToAction() {
             textAlign: 'center',
         },
         mobileHeading: {
-            fontSize: '2rem',
+            fontSize: '1.5rem',
             fontWeight: 'bold',
             color: 'white',
             marginBottom: '1.5rem',
@@ -224,9 +224,9 @@ export default function CallToAction() {
                     {/* Desktop Layout */}
                     <div style={styles.desktopLayout} className="desktop-only">
                         <div style={styles.textSection}>
-                            <h1 style={styles.heading}>
+                            <h2 style={styles.heading}>
                                 Experience Ignite Firsthand, See What Sets Us Apart
-                            </h1>
+                            </h2>
 
                             <p style={styles.paragraph}>
                                 Get a glimpse of our teaching style & expert mentors. Discover how Ignite can make a real difference in your journey.
@@ -257,9 +257,9 @@ export default function CallToAction() {
                     {/* Mobile Layout */}
                     <div style={styles.mobileLayout} className="mobile-only">
                         <div style={styles.mobileTextSection}>
-                            <h1 style={styles.mobileHeading}>
+                            <h2 style={styles.mobileHeading}>
                                 Experience Ignite Firsthand, See What Sets Us Apart
-                            </h1>
+                            </h2>
 
                             <p style={styles.mobileParagraph}>
                                 Get a glimpse of our teaching style & expert mentors. Discover how Ignite can make a real difference in your journey.

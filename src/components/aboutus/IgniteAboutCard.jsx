@@ -35,12 +35,12 @@ export default function IgniteAboutCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="SubHeading testSubheading">OUR APPROACH</div>
+                <h2 className="SubHeading testSubheading">OUR APPROACH</h2>
               </div>
             </div>
           </div>
 
-          <h1
+          <h3
             className="ignite-main-title fade-in-section text-uppercase"
             data-scroll
             data-scroll-class="is-inview"
@@ -51,7 +51,7 @@ export default function IgniteAboutCard() {
           >
             Not Just Better Grades, A Journey Of
             Consistent <span className="green-text">Progress</span>
-          </h1>
+          </h3>
 
           <p
             className="ignite-description  fade-in-section"
@@ -326,7 +326,7 @@ export default function IgniteAboutCard() {
         }
 
         .ignite-main-title {
-          font-size: 2.5rem;
+          font-size: 2rem;
           font-weight: 700;
           color: #233467;
           line-height: 1.2;
@@ -502,7 +502,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
           }
 
           .ignite-main-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             color: #233467;
             line-height: 1;

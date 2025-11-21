@@ -14,9 +14,9 @@ const IBCurriculumStages = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <h4 className="SubHeading">
+              <h2 className="SubHeading">
                 CURRICULUM & STANDARDISED TESTS WE OFFER
-              </h4>
+              </h2>
             </div>
             <div
               data-scroll
@@ -25,7 +25,7 @@ const IBCurriculumStages = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.25s" }}
             >
-              <h2
+              <h3
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
@@ -34,7 +34,7 @@ const IBCurriculumStages = () => {
               >
                 Curriculum-Aligned Coaching &
                 <span className="highlight"> Test Prep </span>Programs
-              </h2>
+              </h3>
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>IB Maths Tutors (MYP)</h1>
+                      <h3>IB Maths Tutors (MYP)</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -85,7 +85,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>IB Maths Tutors (IBDP)</h1>
+                      <h3>IB Maths Tutors (IBDP)</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -96,7 +96,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>IGCSE/GCSE Maths Tutors</h1>
+                      <h3>IGCSE/GCSE Maths Tutors</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -107,7 +107,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>A-Levels Maths Tutors</h1>
+                      <h3>A-Levels Maths Tutors</h3>
                     </div>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>ACT Maths <br />Tutors</h1>
+                      <h3>ACT Maths <br />Tutors</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -157,7 +157,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>AP Maths <br />Tutors</h1>
+                      <h3>AP Maths <br />Tutors</h3>
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -168,7 +168,7 @@ const IBCurriculumStages = () => {
                         height={30}
                         quality={100}
                       />{" "}
-                      <h1>UCAT Maths Tutors</h1>
+                      <h3>UCAT Maths Tutors</h3>
                     </div>
                   </div>
                   {/* <div className="col-lg-6">
@@ -329,7 +329,7 @@ const IBCurriculumStages = () => {
   gap: 15px;
   padding: 15px;
 }
-.curriculum-info h1 {
+.curriculum-info h3 {
   color: rgba(35, 52, 103, 1);
   font-size: 24px;
   font-weight: 500;
@@ -614,7 +614,7 @@ const IBCurriculumStages = () => {
   .curriculum-info {
     padding: 15px 30px;
   }
-  .curriculum-info h1 {
+  .curriculum-info h3 {
     font-size: 16px;
   }
   .curriculum-section-heading1 {
@@ -843,7 +843,7 @@ background: linear-gradient(235.04deg, #EDFFF4 45.21%, #A6EAC7 95.86%);
     font-size: 57px; /* 62px - 5px */
   }
   
-  .curriculum-info h1 {
+  .curriculum-info h3 {
     font-size: 19px; /* 24px - 5px */
   }
   
@@ -894,7 +894,7 @@ background: linear-gradient(235.04deg, #EDFFF4 45.21%, #A6EAC7 95.86%);
     font-size: 52px; /* 62px - 10px */
   }
   
-  .curriculum-info h1 {
+  .curriculum-info h3 {
     font-size: 14px; /* 24px - 10px */
   }
   

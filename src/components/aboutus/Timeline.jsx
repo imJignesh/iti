@@ -77,11 +77,11 @@ export default function Timeline() {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">Our Timeline
-            </div>
+            <h2 className="SubHeading testSubheading">Our Timeline
+            </h2>
           </div>
 
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -90,7 +90,7 @@ export default function Timeline() {
           >
             With Every Step Forward, We've Grown With
             <span className="highlight"> Our Students</span>
-          </h2>
+          </h3>
         </div>
 
         {/* Timeline Content */}
@@ -109,9 +109,9 @@ export default function Timeline() {
                 className={`timeline-item ${index === 0 ? 'first' : ''} ${item.year === activeYear ? 'active' : ''} ${index === timelineData.length - 1 ? 'last' : ''}`}
                 onClick={() => handleYearClick(item.year)}
               >
-                <div className={`year-marker ${item.year === activeYear ? 'main' : ''}`}>
+                <h3 className={`year-marker ${item.year === activeYear ? 'main' : ''}`}>
                   {item.year}
-                </div>
+                </h3>
                 {item.year === activeYear && (
                   <p className="timeline-description">
                     {item.description}
@@ -128,7 +128,7 @@ export default function Timeline() {
           <div className="desktop-timeline d-none d-md-block">
             {/* Main Year */}
             <div className="main-year-container">
-              <h1 className="main-year">{activeYear}</h1>
+              <h3 className="main-year">{activeYear}</h3>
               <p className="timeline-description">
                 {getCurrentData().description}
               </p>
@@ -144,7 +144,7 @@ export default function Timeline() {
                     onClick={() => handleYearClick(item.year)}
                   >
                     <div className={`timeline-dot ${item.year === activeYear ? 'filled' : ''}`}>
-                      <span className="year-label">{item.year}</span>
+                      <h3 className="year-label">{item.year}</h3>
                     </div>
                     {index < timelineData.length - 1 && (
                       <div className="timeline-connector"></div>

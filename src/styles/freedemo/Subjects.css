@@ -127,7 +127,7 @@
     color: var(--green-text);
     font-size: 1.4vw;
     font-weight: 400;
-    padding: 10px 55px;
+    padding: 17px 55px;
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: none;
@@ -149,7 +149,7 @@
 
 @media (max-width: 1280px) {
     .subjectSection .subjectBubble {
-        padding: 10px 45px;
+        padding: 12px 45px;
     }
 }
 
@@ -237,7 +237,7 @@
 
 @media (max-width: 767px) {
     .subjectSection .subjectBubbleRow .subjectBubble {
-        padding: 5px 15px 10px 15px;
+        padding: 10px 15px 14px 15px;
         font-size: 16px;
     }
 }

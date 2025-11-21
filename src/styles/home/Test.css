@@ -46,6 +46,7 @@
   margin: 40px auto;
   line-height: 1.2;
   text-transform: uppercase;
+  font-size: 2rem;
 }
 
 .highlight {
@@ -560,6 +561,7 @@
 
   .testSection1 .testCardTitle {
     font-size: 3rem;
+    margin-bottom: 0;
   }
 
   .testSection1 .mobileActiveTitle {

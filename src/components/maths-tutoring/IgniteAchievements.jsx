@@ -33,11 +33,11 @@ export default function IgniteAchievements() {
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.2s" }}>
-          <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
-          </div>
+          <h2 className="SubHeading testSubheading">OUR ACHIEVEMENTS
+          </h2>
 
           {/* Main Title */}
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -46,7 +46,7 @@ export default function IgniteAchievements() {
           >
             Milestones That Clearly Reflect <span className="highlight"> Our{" "}</span>
             Impact
-          </h2>
+          </h3>
 
           {/* Subtitle */}
           <p className="mx-auto fade-in-section"
@@ -79,12 +79,12 @@ export default function IgniteAchievements() {
               {/* Desktop Header */}
               <div className="mb-4">
                 <div className="mb-3">
-                  <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
-                  </div>
+                  <h2 className="SubHeading testSubheading">OUR ACHIEVEMENTS
+                  </h2>
                 </div>
 
                 {/* Main Title */}
-                <h2
+                <h3
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
@@ -93,7 +93,7 @@ export default function IgniteAchievements() {
                 >
                   Milestones That Clearly
                   <span className="highlight"> Reflect </span>Our Impact
-                </h2>
+                </h3>
 
 
                 {/* Subtitle */}

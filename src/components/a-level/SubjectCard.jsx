@@ -159,7 +159,7 @@ export default function SubjectsCard() {
             <h2 className="SubHeading">SUBJECTS WE SUPPORT</h2>
           </span>
           <h3 className="subjectTitle">
-            Tutoring That Makes Every IBDP Subject Clear (HL & SL)
+            Tutoring That Makes Every A Levels Subject Clear
           </h3>
         </div>
 

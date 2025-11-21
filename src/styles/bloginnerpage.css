@@ -26,7 +26,7 @@ section.post-detail-section {
 }
 
 .innerpage .blogSection .blogTitle {
-    font-size: 1.6vw;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--blue-color);
     text-transform: uppercase;

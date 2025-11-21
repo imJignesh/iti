@@ -55,15 +55,15 @@ const Contact = ({ headerHeight }) => {
                 </section>
 
                 <section className="highlight-banners" data-scroll-section>
-                    <div className="banner green-banner">
+                    <h2 className="banner green-banner mb-0">
                         <span className="text-normal">WANNA EXCEL</span>
                         <span className="text-bold">ACADEMICALLY?</span>
-                    </div>
+                    </h2>
 
-                    <div className="banner blue-banner">
+                    <h3 className="banner blue-banner mb-0">
                         <span className="text-normal">LOOKING FOR BEST TUTORS</span>
                         <span className="text-bold">TO LEARN?</span>
-                    </div>
+                    </h3>
                 </section>
                 <section className="contact-form" data-scroll-section>
                     <form>

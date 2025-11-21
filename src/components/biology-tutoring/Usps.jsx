@@ -92,19 +92,19 @@ export default function Usps({ }) {
                 data-scroll-sticky
                 data-scroll-target=".uspSection"
               >
-                <span
-                  className="fade-in-sections SubHeading"
+                <h2
+                  className="fade-in-sections SubHeading mb-0"
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
-                </span>
+                </h2>
 
-                <h2
-                  className="fade-in-sections uspTitle"
+                <h3
+                  className="fade-in-sections uspTitle mb-0"
                   style={{ animationDelay: "0.2s" }}
                 >
                   What Do Students Get From Ignite's Biology Support?
-                </h2>
+                </h3>
 
                 {/* <div
                   className="fade-in-sections uspSubtitle"
@@ -151,7 +151,7 @@ export default function Usps({ }) {
                           />
                         </div>
                         <div className="uspContent">
-                          <div className="uspItemTitle">{usp.title}</div>
+                          <h3 className="uspItemTitle">{usp.title}</h3>
                           <div className="uspItemDesc">{usp.desc}</div>
                         </div>
                       </div>

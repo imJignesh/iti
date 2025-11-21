@@ -58,9 +58,9 @@ export default function Subjects({ }) {
                                     style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
                                 >
                                     {row.map((subj) => (
-                                        <div key={subj} className="subjectBubble">
+                                        <h3 key={subj} className="subjectBubble">
                                             {subj}
-                                        </div>
+                                        </h3>
                                     ))}
                                 </div>
                             ))}

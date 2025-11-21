@@ -75,11 +75,11 @@ export default function MeetOurFounders() {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">meet our founders</div>
+            <h2 className="SubHeading testSubheading">meet our founders</h2>
           </div>
 
           {/* Main title */}
-          <h2
+          <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -88,7 +88,7 @@ export default function MeetOurFounders() {
           >
             The Visionaries Behind The Ignite's
             <span className="highlight"> Purpose</span>
-          </h2>
+          </h3>
         </div>
 
         {/* First Founder */}
@@ -291,7 +291,7 @@ export default function MeetOurFounders() {
         }
         
         .testTitle {
-          font-size: 1.8rem;
+          font-size: 2rem;
           font-weight: 700;
           max-width: 50%;
           color: var(--blue-color);
