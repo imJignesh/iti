@@ -78,7 +78,7 @@ const FAQSection = () => {
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{
-        marginBottom: isMobile ? "0" : "96px",
+        marginBottom: isMobile ? "0" : "0",
         maxWidth: isMobile ? "95vw" : "90vw",
         backgroundImage: 'url("/assets/faqbg.png")',
         backgroundSize: "cover",
@@ -94,7 +94,7 @@ const FAQSection = () => {
         data-scroll-class="is-inview"
         data-scroll-repeat
         style={{
-          padding: isMobile ? "2rem 1rem" : "3rem 5rem",
+          padding: isMobile ? "0 1rem" : "3rem 5rem",
           display: "flex",
           alignItems: "center", // vertical center
           minHeight: "60vh", // keep section height

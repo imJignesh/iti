@@ -1,6 +1,6 @@
 /* About Us Section  */
 .homeCopy .aboutSection {
-  margin: 100px 0 80px 0;
+  margin: 0;
 }
 
 .homeCopy .aboutSection .SubHeading1 {
@@ -332,7 +332,7 @@
 
 @media (max-width: 575px) {
   .homeCopy .aboutSection {
-    margin: 80px 0;
+    margin: 0 0;
   }
 
   .homeCopy .aboutSection .statCard {

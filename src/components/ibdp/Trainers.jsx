@@ -187,7 +187,7 @@ export default function Trainers() {
           /* Trainer Section - Refactored for global use with .trainers-global-container */
 
           .${containerClass} .trainersSection {
-            padding: 100px 0 100px 0;
+            padding: 0;
             background: var(--white-bg);
             text-align: center;
           }
@@ -592,7 +592,7 @@ export default function Trainers() {
 
           @media (max-width: 575px) {
           .trainers-global-container .trainersSection{
-            padding: 80px 0 80px 0;
+            padding: 0;
             }
             .${containerClass} .trainersSection .trainerImg {
               object-fit: contain;

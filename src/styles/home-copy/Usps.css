@@ -9,7 +9,7 @@
   border-radius: 3.2vw;
   padding: 3.47vw 2.78vw;
   color: var(--white-color);
-  margin: 1.39vw auto;
+  margin: 0 auto;
   max-width: 90vw;
   box-shadow: 0 0.28vw 2.22vw rgba(0, 0, 0, 0.08);
 }

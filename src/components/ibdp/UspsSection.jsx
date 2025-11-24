@@ -245,7 +245,7 @@ function UpsSection() {
 
       <style jsx>{`
       .usps{
-      padding: 0 0 100px 0 ;
+      padding: 0 ;
       }
         .fade-in-section {
           opacity: 0;
@@ -286,7 +286,7 @@ function UpsSection() {
         }
 @media (max-width: 575px) {
 .usps{
-      padding: 0 0 80px 0 ;
+      
       }
           .custom-grid {
           margin-bottom:2rem;

@@ -42,6 +42,10 @@ body a {
   width: 100%;
 }
 
+section:not(section section) {
+  padding: 50px 0 !important;
+}
+
 @media (max-width: 1124px) {
   .container {
     max-width: 90vw !important;

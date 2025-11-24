@@ -83,7 +83,7 @@ function CourseCard() {
 
   return (
     <>
-      <div className="py-5 px-3 fade-in-section desktop-version">
+      <div className="px-3 fade-in-section desktop-version">
         <div className="container" style={{ maxWidth: "74.166vw" }}>
           {/* Header Section */}
           <div className="text-center mb-5 fade-in-section">

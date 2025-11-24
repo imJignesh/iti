@@ -322,7 +322,9 @@ export default function Testimonial({ }) {
               </SwiperSlide>
             ))}
 
-          </Swiper>  <button className="swiper-button-prev" tabIndex={0} aria-label="Previous testimonial">
+          </Swiper>
+          <div className="testimonialPagination"></div>
+          <button className="swiper-button-prev" tabIndex={0} aria-label="Previous testimonial">
             <img
               src="/images/right-arrow-blue.png"
               alt="Prev"
@@ -340,7 +342,7 @@ export default function Testimonial({ }) {
             />
           </button>
 
-          <div className="testimonialPagination"></div>
+
         </div>
       </section>
 

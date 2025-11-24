@@ -142,7 +142,7 @@ export default function SubjectsCard() {
   const visibleItems = createInfiniteItems();
 
   return (
-    <div className={`subjectSection ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "10px" : "90px", marginBottom: isMobile ? "50px" : "0" }}>
+    <div className={`subjectSection ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "10px" : "0", marginBottom: isMobile ? "50px" : "0" }}>
       <div className="subjectSectionInner">
         {/* Background decorative rectangles */}
         <div className="testimonialRect rect-1" style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '20px' }} />
@@ -153,7 +153,7 @@ export default function SubjectsCard() {
         {/* LEFT COLUMN */}
         <div className="subjectLeft">
           <span className="subjectHeader">
-            <h2 className="SubHeading" style={{ marginBottom: '0px'}}>SUBJECTS WE SUPPORT</h2>
+            <h2 className="SubHeading" style={{ marginBottom: '0px' }}>SUBJECTS WE SUPPORT</h2>
           </span>
           <h3 className="subjectTitle">
             Tutoring That Makes Every IBDP Subject Clear (HL & SL)
@@ -206,7 +206,7 @@ export default function SubjectsCard() {
       <style jsx>{`
         .subjectSection {
           width: 100%;
-          padding: 48px 0;
+          padding: 0;
           opacity: 0;
           transform: translateY(20px);
           transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -576,7 +576,7 @@ export default function SubjectsCard() {
 
         @media (max-width: 575px) {
         .subjectSection {
-          padding: 80px 0 ;
+          
 margin:0 !important;
         }
           .subjectLeft {

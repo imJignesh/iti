@@ -241,7 +241,7 @@ export default function IgniteAboutCard() {
 
 
         .ignite-section {
-          padding: 60px 20px;
+          padding: 0 20px;
           max-width:88vw;
           margin: 0 auto;
           font-family: "Montserrat", sans-serif;
@@ -288,7 +288,7 @@ export default function IgniteAboutCard() {
           justify-content: center;
           gap: 15px;
           margin-bottom: 20px;
-                    margin-top:30px;
+          
 
         }
 
@@ -477,7 +477,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
           }
 
           .ignite-section {
-            padding: 60px 0px;
+            
             max-width:100%;
           }
 
@@ -707,8 +707,7 @@ justify-content:space-between;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
-    display: flex
-;
+    display: flex;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -moz-box-align: center;
@@ -721,7 +720,7 @@ justify-content:space-between;
     justify-content: center;
     gap: 15px;
     margin-bottom: 0;
-    margin-top: 30px;
+    
 }
     .ignite-description{
     font-size: 0.9vw;
@@ -778,7 +777,7 @@ bottom: 5%;
   }
 @media (max-width: 575px) {
 .ignite-section {
-        padding: 80px 0px;
+        
                 max-width: 100%;
         }
         .subtitle-wrapper{

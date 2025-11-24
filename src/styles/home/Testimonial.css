@@ -1,12 +1,12 @@
 .testimonialSection {
-  padding: 40px 0;
+  padding: 0 0;
   background: #fff;
   text-align: center;
   position: relative;
 }
 
 .testimonialSection .testimonialHeader {
-  margin: 50px 0;
+  margin: 0 0;
 }
 
 .testimonialSection .testimonialBgBox {
@@ -293,6 +293,12 @@
 @media (max-width: 991px) {
   .testimonialSection {
     padding-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .testimonialSection .testimonialCard {
+    min-height: 40vw;
+    max-height: 40vw;
   }
 }
 
@@ -375,11 +381,16 @@
   .testimonialSection .testimonialHeader {
     margin: 0;
   }
+
+  .testimonialSection .testimonialCard {
+    min-height: 50vw;
+    max-height: 50vw;
+  }
 }
 
 @media (max-width: 500px) {
   .testimonialSection {
-    padding-bottom: 44px;
+    margin-bottom: 45px;
   }
 
   .testimonialSection .testimonialText {
