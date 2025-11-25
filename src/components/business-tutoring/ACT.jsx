@@ -71,9 +71,9 @@ const AchievementsCarousel = () => {
   if (!mounted) return null;
 
   return (
-    <section className="achievementsSection subject-syllabus">
+    <section className="subject-syllabus">
       <div className="container">
-        <div className="achievementsHeadings mb-5">
+        <div className="achievementsHeadings ">
           <div
             data-scroll
             data-scroll-class="is-inview"
@@ -487,7 +487,7 @@ const AchievementsCarousel = () => {
 }
 @media (max-width: 575px) {
   .subject-syllabus{
-    padding:0 0 80px 0;
+    padding:0 0 0 0;
   }
   .subject-syllabus .achievementsHeadings{
     margin-bottom:0 !important;

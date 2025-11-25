@@ -122,7 +122,7 @@ const TrainersMessage = () => {
         .container {
           font-family: "Montserrat", sans-serif;
           margin: 0 auto;
-          padding: 40px 0.5rem;
+          padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
           align-items: center;

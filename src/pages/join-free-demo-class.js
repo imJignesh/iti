@@ -8,6 +8,7 @@ import { Navigation } from "swiper/modules";
 import InfoCard from '@/components/freedemo/InfoCard';
 import Subjects from "@/components/freedemo/Subjects";
 import MovingBanner from "@/components/freedemo/MovingBanner";
+import SubjectsCard from '@/components/freedemo/SubjectCard';
 import MarqueeBanner from '@/components/freedemo/MarqueeBanner';
 import Testimonial from "@/components/freedemo/Testimonial";
 import TrainersMessage from "@/components/freedemo/videoTrainer";
@@ -217,6 +218,7 @@ const FreeDemo = ({ headerHeight }) => {
                 ref={scrollRef}
                 data-scroll-container
                 style={{ paddingTop: `${headerHeight}px` }}
+                className=" innerpage"
             >
 
                 <section data-scroll-section>
@@ -289,7 +291,7 @@ const FreeDemo = ({ headerHeight }) => {
                 </section >
 
                 {/* subjects header */}
-                < section className="achievementsSection" >
+                {/* < section className="achievementsSection" >
                     <div className="container">
                         <div className="achievementsHeadings">
                             <div
@@ -314,11 +316,13 @@ const FreeDemo = ({ headerHeight }) => {
                             </div>
                         </div>
                     </div>
-                </section >
+                </section > */}
                 {/* Subjects Section */}
-                <Subjects />
+                {/* <Subjects /> */}
 
-
+                <section data-scroll-section>
+                    <SubjectsCard />
+                </section>
 
                 {/* achievements carousel */}
                 {/* <section data-scroll-section>
@@ -348,7 +352,7 @@ const FreeDemo = ({ headerHeight }) => {
                                 <h3 className="achievementsTitle">
 
                                     Comprehensive Guidance For Every Academic <span className="highlight">Milestone</span>
-                                    
+
                                 </h3>
                             </div>
 

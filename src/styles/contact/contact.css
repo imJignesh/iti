@@ -83,7 +83,7 @@
      flex-direction: column;
      gap: 30px;
      max-width: 900px;
-     margin: 50px auto;
+     margin: 0 auto;
  }
 
  .banner {
@@ -124,7 +124,11 @@
  /* Responsive */
  @media (max-width: 600px) {
      .highlight-banners {
-         margin: 80px auto;
+         margin: 0 auto;
+         padding: 0 20px;
+     }
+
+     .contact-form form {
          padding: 0 20px;
      }
 
@@ -132,6 +136,7 @@
          font-size: 22px;
          padding: 20px 30px;
          text-align: center;
+         margin: 0 20px;
      }
 
      .text-normal {
@@ -159,7 +164,7 @@
  /* Contact Form */
  .contact-form {
      max-width: 800px;
-     margin: 50px auto;
+     margin: 0 auto;
      font-family: Arial, sans-serif;
  }
 

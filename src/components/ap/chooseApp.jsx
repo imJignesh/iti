@@ -55,7 +55,7 @@ const APBenefits = () => {
         setOpenIndex(openIndex === index ? null : index);
     };
     return (
-        <div className='mx-auto' style={{ maxWidth: "90vw", border: "none !important", overflow: "hidden !important", marginBlock: isMobile ? "auto" : "70px", paddingBottom: isMobile ? "80px" : "0" }}>
+        <div className='mx-auto' style={{ maxWidth: "90vw", border: "none !important", overflow: "hidden !important", marginBlock: isMobile ? "auto" : "0", paddingBottom: isMobile ? "80px" : "0" }}>
             <div className="d-flex align-items-center justify-content-center mb-md-4 mb-3">
                 <div className="SubHeading testSubheading" style={{ fontSize: isMobile ? "17.5px" : "30px", marginBottom: isMobile ? "20px" : "20px" }}>WHY DO STUDENTS CHOOSE APS?
                 </div>

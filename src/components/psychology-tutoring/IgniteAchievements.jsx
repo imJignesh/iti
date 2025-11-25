@@ -25,7 +25,7 @@ export default function IgniteAchievements() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: '90vw', animationDelay: "0.15s", marginBlock: isMobile ? "20px" : "40px" }}>
+        style={{ maxWidth: '90vw', animationDelay: "0.15s", marginBlock: isMobile ? "0px" : "0" }}>
 
         {/* Mobile Header Section - Only show on mobile */}
         <div className="d-md-none text-center mb-4 fade-in-section"

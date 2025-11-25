@@ -58,7 +58,7 @@ export default function MeetOurFounders() {
   const founderMessage2 = "For me, education is and always will be the most reliable route to career success. Beyond academics, the very process of learning builds discipline, problem-solving, and resilience. At Ignite, we aim to teach the ability to learn itself, so our students don’t just keep up with change, they lead it.";
 
   return (
-    <section className="founders-section py-5">
+    <section className="founders-section">
       <div className="container">
         <div
           className="text-center mb-5 fade-in-section"
@@ -159,7 +159,7 @@ export default function MeetOurFounders() {
         }
 
         .founder-row {
-          margin-bottom: 4rem;
+          margin-bottom: 0;
         }
 
         .founder-row:last-child {

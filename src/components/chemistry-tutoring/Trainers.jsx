@@ -125,10 +125,9 @@ export default function Trainers() {
             grid-template-columns: repeat(auto-fit, calc((100% - 96px) / 5));
             gap: 32px 24px;
             justify-content: center; /* ALIGN COLUMNS TO CENTER */
-            margin-bottom: 36px;
             width: 70vw;
             margin: 0 auto;
-            margin-bottom: 50px;
+            margin-bottom: 0;
           }
 
           .${containerClass} .trainersSection .trainerCard {
@@ -500,7 +499,7 @@ export default function Trainers() {
               margin-bottom: 0 !important;
             }
             .trainers-global-container .trainersSection{
-              padding: 80px 0 0 0;
+              padding: 0px 0 0 0;
             }
             .${containerClass} .trainersSection .trainerImg {
               object-fit: contain;

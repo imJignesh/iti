@@ -24,7 +24,7 @@ export default function IgniteAchievements() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: '90vw', animationDelay: "0.15s", marginBlock: isMobile ? "20px" : "40px" }}>
+        style={{ maxWidth: '90vw', animationDelay: "0.15s", marginBlock: isMobile ? "0px" : "0" }}>
 
         {/* Mobile Header Section - Only show on mobile */}
         <div className="d-md-none text-center mb-4 fade-in-section"
@@ -43,10 +43,10 @@ export default function IgniteAchievements() {
             className="fade-in-section testTitle text-uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            
-            Success Defined By Consistent<br/>
-                  <span className="highlight"> Academic </span>Progress
-            
+
+            Success Defined By Consistent<br />
+            <span className="highlight"> Academic </span>Progress
+
           </h3>
 
           {/* Subtitle */}
@@ -92,9 +92,9 @@ export default function IgniteAchievements() {
                   className="fade-in-section testTitle"
                   style={{ animationDelay: "0.2s" }}
                 >
-                  Success Defined By Consistent <br/>
+                  Success Defined By Consistent <br />
                   <span className="highlight"> Academic </span>Progress
-                  
+
                 </h3>
 
 
@@ -442,8 +442,8 @@ export default function IgniteAchievements() {
         }
           @media (max-width: 575px) {
             .mobileign{
-              margin-top: 80px !important;
-              margin-bottom: 80px !important;
+              margin-top: 0px !important;
+              margin-bottom: 0px !important;
             }
             .custom-grid {
               gap: .5rem;

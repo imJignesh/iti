@@ -77,7 +77,7 @@ export default function Timeline() {
   };
 
   return (
-    <section className="timeline-section py-5">
+    <section className="timeline-section">
       <div className="container">
         {/* Header */}
         <div
@@ -205,7 +205,7 @@ export default function Timeline() {
         /* Timeline Content */
         .timeline-content {
           position: relative;
-          padding: 3rem 0;
+          padding: 0.2rem 0;
         }
 
         /* Background Years */
@@ -542,8 +542,8 @@ export default function Timeline() {
 
         @media (max-width: 576px) {
           .timeline-section{
-            padding-top:80px !important;
-            padding-bottom:80px !important;
+            padding-top:0 !important;
+            padding-bottom:0 !important;
           }
           .main-title {
             font-size: 1.6rem;

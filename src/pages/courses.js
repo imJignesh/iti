@@ -75,7 +75,7 @@ const About = ({ headerHeight }) => {
             />
             <div
                 ref={scrollRef}
-                className="overflow-hidden innerpage"
+                className=" innerpage"
                 data-scroll-container
                 style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
             >

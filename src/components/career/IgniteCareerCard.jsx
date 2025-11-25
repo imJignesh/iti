@@ -165,9 +165,9 @@ width: 30px;
 height: 30px;
 }
         .ignite-section {
-     padding: 20px 20px;
+     padding: 0 20px;
           max-width:88vw;
-        margin: 40px auto;          
+        margin: 0 auto;          
           font-family: 'Montserrat', sans-serif;
         }
 
@@ -409,7 +409,7 @@ height: 30px;
             .ignite-section{
               padding: 0;
               max-width: 100%;
-              margin: 80px 10px;
+              margin: 0 10px;
             }
             .ignite-description{
               max-width: 100%;

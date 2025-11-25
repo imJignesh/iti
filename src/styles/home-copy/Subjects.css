@@ -10,6 +10,10 @@
   padding: 50px 0;
 }
 
+.usp-section.sp-container {
+  padding: 0;
+}
+
 .homeCopy .subjectSection .subjectSectionInner.blue {
   background: url(/images/subject-bg.png);
   background-size: cover;

@@ -4,7 +4,8 @@ import React from 'react'
 const IBCurriculumStages = () => {
   return (
     <div>
-      <section className="achievementsSection pb-0">
+
+      <section className="">
         <div className="container">
           <div className="achievementsHeadings">
             <div
@@ -37,10 +38,6 @@ const IBCurriculumStages = () => {
               </h3>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="achievementsSection">
-        <div className="container">
           <div className="row gy-5">
             <div className="col-lg-6 mx-auto">
               <div
@@ -191,7 +188,7 @@ const IBCurriculumStages = () => {
       <style jsx>{`
 /* Header */
 .achievementsSection {
-  padding: 70px 0;
+  padding: 0 0;
 }
 
 .achievementsHeadings {

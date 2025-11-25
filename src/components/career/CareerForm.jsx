@@ -480,7 +480,7 @@ export default function CareerForm() {
           max-width: 90vw;
           margin: auto;
           text-align: center;
-          padding: 50px 20px;
+          padding: 0 20px;
           font-family: 'Montserrat', sans-serif;
           display: flex;
           flex-direction: column;
@@ -805,7 +805,10 @@ export default function CareerForm() {
           }
         }
           @media (max-width: 575px) {
-          
+          .career-form{
+            width: 100%;
+            margin-top: 0;
+          }
         .career-section {
           max-width: 90vw;
           margin: auto;

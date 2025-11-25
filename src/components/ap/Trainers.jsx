@@ -372,7 +372,7 @@ export default function Trainers() {
             z-index: 1;
             /* Added for spacing the button */
             margin-top: 20px;
-            margin-bottom: 50px;
+            margin-bottom: 0;
           }
 
           .${containerClass} .trainersSection .trainersSeeMore::before {

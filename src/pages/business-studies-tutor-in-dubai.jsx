@@ -163,6 +163,7 @@ const BusinessTutorsInDubai = ({ headerHeight }) => {
                 ref={scrollRef}
                 data-scroll-container
                 style={{ paddingTop: `${headerHeight}px` }}
+                className=" innerpage"
             >
                 <section data-scroll-section>
                     <BusinessTutorsInfoCard />

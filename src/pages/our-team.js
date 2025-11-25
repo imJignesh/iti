@@ -186,7 +186,7 @@ const OurTeam = ({ headerHeight }) => {
             <SEO title="Meet Our Expert Trainers | Know Our Team Better"
                 description="Get to know Ignite Training Institute’s expert mentors in the UAE, shaping bright futures with 2000+ trained students & remarkable academic results" />
 
-            <div style={{ paddingTop: `${headerHeight}px` }}>
+            <div style={{ paddingTop: `${headerHeight}px` }} className="innerpage">
                 <section>
                     <TeamBanner />
                 </section>
@@ -422,7 +422,7 @@ const OurTeam = ({ headerHeight }) => {
                     </div>
                 </section> */}
                 <section className="cta-section">
-   
+
                     <div className="container call-to-action teams">
                         <div className="cta-container">
                             <div className="cta-content">

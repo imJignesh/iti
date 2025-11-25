@@ -42,7 +42,7 @@ body a {
   width: 100%;
 }
 
-.innerpage section:nth-child(1) {
+.innerpage>section:nth-child(1) {
   padding: 0 0 50px 0 !important;
 }
 

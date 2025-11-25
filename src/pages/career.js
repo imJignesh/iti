@@ -43,10 +43,10 @@ const act = ({ headerHeight }) => {
       <SEO title="Career - Ignite Training Institute l Tutor Jobs In Dubai, UAE"
         description="Join Ignite’s team of expert tutors in Dubai. Explore tutoring jobs, growth opportunities & benefits while helping students achieve academic success" />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
-    // 2. APPLY the style for paddingTop to the scroll container
+
       <div
         ref={scrollRef}
-        className='overflow-hidden'
+        className='overflow-hidden innerpage'
         data-scroll-container
         style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
       >

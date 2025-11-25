@@ -331,7 +331,7 @@ export default function CallToAction() {
     
     @media (max-width: 575px) {
       .cta-container{
-        margin-top: 35%;
+        margin-top: 19%;
       }
         .mobile-only h1{
           font-size:18.4px !important;

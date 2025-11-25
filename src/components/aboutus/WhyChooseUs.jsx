@@ -87,7 +87,7 @@ export default function WhyChooseUs() {
     <>
       {/* Attach ref to the main section */}
       {!isMobile ? (
-        <section ref={sectionRef} className="why-choose-section py-5">
+        <section ref={sectionRef} className="why-choose-section">
           <div className="container">
             <div className="row align-items-center">
               {/* Left side - Image */}

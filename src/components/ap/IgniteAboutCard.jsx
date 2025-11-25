@@ -20,14 +20,8 @@ export default function IgniteAboutCard() {
       <div className="ignite-container">
         {/* Left Content */}
         <div className="ignite-left">
-          <div className="subtitle-wrapper">
-            <div
-              className="d-flex align-items-center justify-content-center fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{ animationDelay: "0.25s" }}
-            >
+          <div className="text-center mb-5 fade-in-section">
+            <div className="testHeadings">
               <div
                 data-scroll
                 data-scroll-class="is-inview"
@@ -35,23 +29,21 @@ export default function IgniteAboutCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <h2 className="SubHeading testSubheading">OUR APPROACH</h2>
+                <h2 className="SubHeading testSubheading">OUR APPROACH
+                </h2>
               </div>
+              <h3
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section testTitle"
+                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+              >
+                How We Make AP Learning Truly<span className="highlight"> Tailored </span> Effective
+              </h3>
             </div>
           </div>
 
-          <h3
-            className="ignite-main-title fade-in-section text-uppercase"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{
-              animationDelay: "0.3s",
-            }}
-          >
-            How We Make AP Learning Truly
-            <span className="green-text"> Effective</span>
-          </h3>
 
           {/* <p
             className="ignite-description  fade-in-section"

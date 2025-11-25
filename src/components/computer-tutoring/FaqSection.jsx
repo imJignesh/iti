@@ -61,7 +61,7 @@ const FAQSection = () => {
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{
-        marginBottom: isMobile ? "80px" : "96px",
+        marginBottom: isMobile ? "0px" : "0",
         maxWidth: isMobile ? "95vw" : "90vw",
         backgroundImage: 'url("/assets/faqbg.png")',
         backgroundSize: "cover",
