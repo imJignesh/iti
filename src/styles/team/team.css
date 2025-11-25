@@ -658,6 +658,7 @@ span.grtx {
     font-weight: 700;
     margin-bottom: 1vw;
     line-height: 1.4;
+    text-transform: uppercase;
 }
 
 .teams .cta-content p {
@@ -665,42 +666,61 @@ span.grtx {
     margin-bottom: 2vw;
     color: #d9e3f2;
     line-height: 1.6;
-    text-transform: uppercase;
 }
+
+
+    .cta-button {
+        display: flex;
+        gap: 1.3vw;
+        flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+          background: transparent;
+          border: 2px solid white;
+          color: white;
+          padding: 0.7rem 0.6rem 0.7rem 1.8rem;
+          border-radius: 9999px;
+          font-size: 1.30rem;
+          font-weight: 500;
+          cursor: pointer;
+          min-width: 20rem;
+          transition: 0.3s;
+          outline: none;
+        }
+
+         .buttonIcon {
+          background: black;
+          color: white;
+          border-radius: 50%;
+          padding: 0.5rem;
+          margin-left: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+        }
+
 
 .cta-buttons {
     display: flex;
-    flex-wrap: wrap;
     gap: 1.3vw;
+   
 }
 
-.cta-buttons .btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5ve 1.5vw;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    font-size: 1.2vw;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    transition: background 0.3s, color 0.3s;
-}
-
-.cta-buttons .btn span {
+/* .cta-buttons .btn span {
     margin-left: 1vw;
     font-size: 1.3vw;
     transition: transform 0.3s;
-}
+} */
 
-.cta-buttons .btn:hover {
+/* .cta-buttons .btn:hover {
     background: #fff;
     color: #123b7a;
 }
 
 .cta-buttons .btn:hover span {
     transform: translateX(5px);
-}
+} */
 
 /* Mobile Screens */
 @media (max-width: 768px) {
@@ -749,12 +769,24 @@ span.grtx {
         margin: 4vw auto !important;
     }
 
-    .cta-buttons {
+    .buttonIcon {
+          background: black;
+          color: white;
+          border-radius: 50%;
+          padding: 0.5rem;
+          margin-left: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+        }
+
+    .cta-button {
         flex-direction: column;
         gap: 12px;
         align-content: space-around;
     }
-
+/* 
     .cta-buttons .btn {
         font-size: 3vw;
         padding: 2vw 1.5vw;
@@ -765,7 +797,7 @@ span.grtx {
 
     .cta-buttons .btn span {
         font-size: 3vw;
-    }
+    } */
 
     .cta-images {
         margin-top: 20px;
@@ -779,4 +811,5 @@ span.grtx {
         max-width: 100%;
         height: auto;
     }
+
 }
