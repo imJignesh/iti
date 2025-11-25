@@ -183,7 +183,7 @@ export default function Trainers() {
           /* Trainer Section - Refactored for global use with .trainers-global-container */
 
           .${containerClass} .trainersSection {
-            padding: 100px 0 40px 0;
+            padding: 0 0;
             background: var(--white-bg);
             text-align: center;
           }
@@ -591,7 +591,7 @@ export default function Trainers() {
              
             }
           .trainers-global-container .trainersSection{
-            padding: 80px 0 80px 0;
+            padding: 0 0px 0px 0;
             }
             .${containerClass} .trainersSection .trainerImg {
               object-fit: contain;
@@ -613,7 +613,7 @@ export default function Trainers() {
             </div>
 
             <h3 className="trainersTitle">
-              The Best IGCSE <span className="highlight">Trainers</span> For Your  <br/>
+              The Best IGCSE <span className="highlight">Trainers</span> For Your  <br />
 
               {/* Add this conditional rendering logic: */}
               {isMounted && !isTrainersSwiper ? <br /> : null}

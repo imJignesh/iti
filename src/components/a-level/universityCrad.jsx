@@ -76,8 +76,8 @@ const UniversityLogosCard = () => {
 
         /* Desktop sizes */
         .desktop-logo {
-          width: 450px;
-          height: 300px;
+          width: auto;
+          height: auto;
         }
 
         /* Mobile sizes */
@@ -88,17 +88,16 @@ const UniversityLogosCard = () => {
 
         /* Image scaling */
         .logo-img {
-          max-width: 100%;
-          max-height: 100%;
+          max-width: 200px;
           object-fit: contain;
         }
 
         .university-logos-container {
-          height: 30vh; /* Desktop */
+          height: auto; /* Desktop */
         }
           @media (max-width: 575px) {
             .university-logos-container{
-            padding:0 0 80px 0 !important; 
+            padding:0 0 0 0 !important; 
             }
           }
         @media (max-width: 767px) {
@@ -106,18 +105,7 @@ const UniversityLogosCard = () => {
             height: auto; /* Mobile */
           }
         }
-          @media (min-width: 1536px) and (max-width: 1919px) {
-  .desktop-logo{
-    width: 390px;
-    height: 300px;
-}
-}
-          @media (min-width: 1200px) and (max-width: 1535px) {
-  .desktop-logo{
-    width: 350px;
-    height: 280px;
-}
-}
+
       `}</style>
     </>
   );

@@ -16,7 +16,7 @@ export default function IgniteAchievements() {
     return () => window.removeEventListener('resize', checkDevice);
   }, []);
   return (
-    <div className=" py-md-5 mobileign fade-in-section" data-scroll
+    <div className="mobileign fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{ animationDelay: "0.1s" }}>
@@ -100,16 +100,16 @@ export default function IgniteAchievements() {
                   Milestones That Reflect
                 </h3> */}
 
-                 <h3
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className="fade-in-section testTitle text-uppercase"
-              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
-            >
-             Milestones That Reflect <br/><span className="highlight"> Our Journey</span>Of Mentoring
+                <h3
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                  className="fade-in-section testTitle text-uppercase"
+                  style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                >
+                  Milestones That Reflect <br /><span className="highlight"> Our Journey</span>Of Mentoring
 
-            </h3>
+                </h3>
 
                 {/* <h2
                   className="fw-bold fade-in-section text-uppercase"
@@ -495,8 +495,8 @@ export default function IgniteAchievements() {
         }
           @media (max-width: 575px) {
           .mobileign{
-          margin-top: 80px !important;
-          margin-bottom: 80px !important;
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
           }
           .custom-grid {
   gap: .5rem;

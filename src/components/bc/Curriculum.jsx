@@ -231,7 +231,7 @@ export default function IBCurriculumStages() {
           margin: 0 auto !important;
         }
         .ibcurriculum {
-          padding: 60px 20px;
+          padding: 0 20px;
         }
         .fade-in-section {
           opacity: 0;

@@ -106,7 +106,7 @@ export default function SubjectsCard1({ }) {
         /* Subject Section  */
         .subjects-card1-section {
           width: 100%;
-          padding: 50px 0 80px 0;
+          padding: 0 0 0px 0;
         }
 
         .subjects-card1-section .container {
@@ -349,10 +349,10 @@ export default function SubjectsCard1({ }) {
          @media (max-width: 575px) {
          .subjects-card1-section .container {
             
-            padding-bottom: 80px;
+            padding-bottom: 0;
           }
           .subjects-card1-section{
-            padding-top: 80px;
+            padding-top: 0px;
             padding-bottom:0;
           } 
             .subjects-card1-section .subjects-card1-bubble-row{

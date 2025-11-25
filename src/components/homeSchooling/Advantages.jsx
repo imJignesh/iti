@@ -150,17 +150,17 @@ const AdvantagesCarousel = () => {
                                 <h2 className="SubHeading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?</h2>
                             </div>
 
-                             <h3
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true"
-              className="fade-in-section testTitle text-uppercase"
-              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
-            >
-              Breaking Free From The<br /> <span className="highlight">One-Size-Fits-All </span>Model
+                            <h3
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="fade-in-section testTitle text-uppercase"
+                                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                            >
+                                Breaking Free From The<br /> <span className="highlight">One-Size-Fits-All </span>Model
 
-            </h3>
-                           
+                            </h3>
+
                             <p className="desktop-subtitle">
                                 Empowering students with personalized learning pathways, flexible pacing, & tailored support to nurture individual aspirations.
                             </p>
@@ -212,7 +212,7 @@ const AdvantagesCarousel = () => {
             <style jsx>{`
                 .advantages-container {
                     width: 100%;
-                    padding: 40px 20px;
+                    padding: 0 20px;
                 }
                      .divider{
           width:1px;
@@ -330,7 +330,7 @@ const AdvantagesCarousel = () => {
                     }
 
                     .advantages-container {
-                        padding: 60px 40px;
+                        padding: 0 40px;
                         max-width: 90vw;
                         margin: 0 auto;
                     }

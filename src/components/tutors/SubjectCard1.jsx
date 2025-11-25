@@ -53,7 +53,7 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            
+
             Tutoring In Dubai That Makes  <br /> Every <span className="highlight"> Subject </span>
             Clear
           </h3>
@@ -109,7 +109,7 @@ export default function SubjectsCard1({ }) {
         /* Subject Section  */
         .subjects-card1-section {
           width: 100%;
-          padding: 50px 0 80px 0;
+          padding: 0 0 0px 0;
         }
 
         .subjects-card1-section .container {

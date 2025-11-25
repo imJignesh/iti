@@ -138,7 +138,7 @@ export default function InfoCard() {
       style={{
         maxWidth: isMobile ? "95vw" : "90vw",
         marginInline: "auto",
-        marginBlock: isMobile ? "0" : "2.5rem",
+        marginBlock: isMobile ? "0" : "0",
         animationDelay: "0.1s",
       }}
     >

@@ -35,29 +35,29 @@ export default function SubjectsCard() {
     >
 
       <div className="text-center mb-5 fade-in-section">
-            <div className="testHeadings">
-              <div
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section"
-                style={{ animationDelay: "0.2s" }}
-              >
-                <h2 className="SubHeading testSubheading">ACT TEST OVERVIEW
-                </h2>
-              </div>
-              <h3
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s" }}
-              >
-                Here’s What To Expect  <br /> When You Take The
-                <span className="highlight">  ACT Test  </span>
-              </h3>
-            </div>
+        <div className="testHeadings">
+          <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
+            style={{ animationDelay: "0.2s" }}
+          >
+            <h2 className="SubHeading testSubheading">ACT TEST OVERVIEW
+            </h2>
           </div>
+          <h3
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section testTitle"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Here’s What To Expect  <br /> When You Take The
+            <span className="highlight">  ACT Test  </span>
+          </h3>
+        </div>
+      </div>
 
 
       <div className="table-container">
@@ -206,7 +206,7 @@ export default function SubjectsCard() {
         }
           .custom-container {
   max-width: 85vw;
-  margin-block: 70px;
+  margin-block: 0;
   margin-left: 0;
   background: white;
   margin-right: auto;
@@ -276,7 +276,7 @@ export default function SubjectsCard() {
         }
         @media (max-width: 575px) {
           .custom-container{
-            margin-top:80px;
+            margin-top:0;
             margin-bottom:0;
           }
         }

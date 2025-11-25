@@ -131,7 +131,7 @@ export default function HomeschoolingMindset() {
 
         .mindset-section {
           text-align: center;
-          padding: 2rem 1rem;
+          padding: 0 1rem;
           max-width: 1500px;
           margin: 0 auto;
         }
@@ -369,7 +369,7 @@ export default function HomeschoolingMindset() {
         @media (max-width: 575px) {
             .mindset-section {
               padding-top:0 ;
-              padding-bottom:80px ;
+              padding-bottom:0 ;
               }
 
             .mobileicon{

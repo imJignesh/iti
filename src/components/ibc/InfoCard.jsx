@@ -138,7 +138,7 @@ export default function InfoCard() {
       style={{
         maxWidth: isMobile ? "95vw" : "90vw",
         marginInline: "auto",
-        marginBlock: isMobile ? "0" : "2.5rem",
+        marginBlock: isMobile ? "0" : "0",
         animationDelay: "0.1s",
       }}
     >
@@ -298,9 +298,9 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </span>
-                  
-                    Dubai <br /> (DIFC, JLT)
-                  
+
+                  Dubai <br /> (DIFC, JLT)
+
                 </h3>
               </div>
 

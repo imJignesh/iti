@@ -56,7 +56,7 @@ export default function IgniteCareerCard() {
         {/* Left Content */}
         <div className="ignite-left">
           <div className="subtitle-wrapper">
-            <div className="d-flex align-items-center justify-content-center mb-md-4 mb-3 fade-in-section"
+            <div className="d-flex align-items-center justify-content-center fade-in-section"
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
@@ -362,7 +362,7 @@ height: 30px;
           }
 
                 .ignite-section {
-          padding: 60px 20px;
+          padding: 0 20px;
           margin: 0 auto;
           font-family: 'Montserrat', sans-serif;
         }

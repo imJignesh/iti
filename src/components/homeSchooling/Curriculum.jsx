@@ -78,7 +78,7 @@ export default function Curriculum() {
 
       <style jsx>{`
         .curriculum-section {
-          padding: 40px 20px;
+          padding: 0 20px;
           text-align: center;
         }
 
@@ -241,7 +241,7 @@ export default function Curriculum() {
           @media (max-width: 480px) {
             .curriculum-section {
               padding-top:0;
-              padding-bottom:80px;
+              padding-bottom:0;
               }
           }
         /* Small Mobile */

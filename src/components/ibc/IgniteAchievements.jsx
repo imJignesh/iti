@@ -16,7 +16,7 @@ export default function IgniteAchievements() {
     return () => window.removeEventListener('resize', checkDevice);
   }, []);
   return (
-    <div className=" py-md-5 mobileign fade-in-section" data-scroll
+    <div className="mobileign fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{ animationDelay: "0.1s" }}>
@@ -438,8 +438,8 @@ export default function IgniteAchievements() {
         }
           @media (max-width: 575px) {
           .mobileign{
-          margin-top: 80px !important;
-          margin-bottom: 80px !important;
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
           }
           .custom-grid {
   gap: .5rem;

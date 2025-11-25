@@ -180,7 +180,7 @@ function UpsSection() {
               className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s", fontSize: '2rem' }}
             >
-              What Do Students Get From<br /> Ignite's <span className="highlight"> AP Support? </span> 
+              What Do Students Get From<br /> Ignite's <span className="highlight"> AP Support? </span>
 
             </h3>
           </div>
@@ -245,7 +245,7 @@ function UpsSection() {
 
       <style jsx>{`
       .usps{
-      padding: 0 0 80px 0 ;
+      padding: 0 0 ;
       }
         .fade-in-section {
           opacity: 0;

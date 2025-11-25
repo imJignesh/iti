@@ -57,7 +57,7 @@ function CourseCard() {
 
   return (
     <>
-      <div className="py-5 px-3 fade-in-section desktop-version">
+      <div className="px-3 fade-in-section desktop-version">
         <div className="container" style={{ maxWidth: "74.166vw" }}>
           {/* Header Section */}
           <div className="text-center mb-5 fade-in-section">
@@ -327,7 +327,7 @@ function CourseCard() {
                     </span>
 
                     <h3
-                      style={{                        
+                      style={{
                         letterSpacing: "1px",
                         fontWeight: 800,
                         background: "linear-gradient(90deg, #161664, #3F88BA)",

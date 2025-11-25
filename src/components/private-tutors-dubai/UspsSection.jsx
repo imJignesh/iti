@@ -252,7 +252,7 @@ function UpsSection() {
 
       <style jsx>{`
       .usps{
-      padding: 0 0 80px 0 ;
+      padding: 0 0 ;
       }
         .fade-in-section {
           opacity: 0;

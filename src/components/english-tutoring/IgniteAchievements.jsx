@@ -442,8 +442,8 @@ export default function IgniteAchievements() {
         }
           @media (max-width: 575px) {
           .mobileign{
-          margin-top: 80px !important;
-          margin-bottom: 80px !important;
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
           }
           .custom-grid {
             gap: .5rem;

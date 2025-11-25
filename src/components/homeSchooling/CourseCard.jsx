@@ -89,7 +89,7 @@ function CourseCard() {
     <>
       {/* 6. Render Desktop Version only if NOT mobile */}
       {!isMobile && (
-        <div className="py-5 px-3 fade-in-section desktop-version">
+        <div className="px-3 fade-in-section desktop-version">
           <div className="container" style={{ maxWidth: "74.166vw" }}>
             {/* Header Section */}
             <div className="text-center mb-5 fade-in-section">
@@ -633,8 +633,8 @@ function CourseCard() {
         /* Responsive adjustments */
         @media (max-width: 576px) {
         .mobile-version {
-          padding-top:80px !important;
-          padding-bottom:80px !important;
+          padding-top:0 !important;
+          padding-bottom:0 !important;
           }
         .mobile-card-header {
           padding: 1rem !important;
