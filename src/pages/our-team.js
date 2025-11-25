@@ -180,7 +180,6 @@ const OurTeam = ({ headerHeight }) => {
     };
 
     const breadcrumbPath = getBreadcrumbPath();
-
     return (
         <>
             <SEO title="Meet Our Expert Trainers | Know Our Team Better"
