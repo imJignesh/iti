@@ -1,7 +1,7 @@
 
 
 import React, { useEffect, useState } from "react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 
@@ -168,22 +168,28 @@ export default function Trainers({ }) {
             className="fade-in-section trainersTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            
-            Individual Learning Backed By <br/> <span className="trainersHighlight">Experience & Trust</span>
+
+            Individual Learning Backed By <br /> <span className="trainersHighlight">Experience & Trust</span>
           </h3>
 
           {isTrainersSwiper ? (
             <div className="trainersSwiperWrap">
               <Swiper
-                modules={[Navigation, Pagination]}
+                modules={[Navigation, Pagination, Autoplay]}
                 slidesPerView={4}
                 spaceBetween={20}
-                centeredSlides={true}
+
                 loop={true}
                 navigation={{
                   nextEl: ".swiper-button-next",
                   prevEl: ".swiper-button-prev",
                 }}
+
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false, // Prevents autoplay from stopping when the user interacts
+                }}
+
                 pagination={{ clickable: true, el: ".trainersPagination" }}
                 breakpoints={{
                   0: { slidesPerView: 1.4 },

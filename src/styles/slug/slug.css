@@ -72,7 +72,7 @@ h1.main-title {
     position: -webkit-sticky;
     /* For Safari compatibility */
     position: sticky;
-    top: 4vw;
+    top: 5.5vw;
     /* Adjust this value as needed, e.g., to account for a fixed header */
 }
 
@@ -100,7 +100,7 @@ h1.main-title {
     -webkit-text-fill-color: transparent;
     padding: 20px 0px;
     position: relative;
-    display: inline-block;
+    display: block;
     text-align: left;
     font-size: 28px;
     /* Default font size for larger screens */

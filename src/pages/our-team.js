@@ -5,6 +5,7 @@ import { useState } from 'react';
 import SEO from "@/components/SEO";
 import TeamBanner from "@/components/team/Banner";
 import MarqueeBanner from '@/components/a-level/MarqueeBanner';
+import { ArrowRight } from 'lucide-react';
 
 // Data array for the trainers (Original data kept for context)
 const trainersData = [
@@ -421,11 +422,7 @@ const OurTeam = ({ headerHeight }) => {
                     </div>
                 </section> */}
                 <section className="cta-section">
-                    <div className="meet-team-Headings">
-                        <div className="fade-in-section" style={{ animationDelay: "0.1s" }}>
-                            <h3 className="SubHeading">DOES NOT REQUIRE THIS HEADING</h3>
-                        </div>
-                    </div>
+   
                     <div className="container call-to-action teams">
                         <div className="cta-container">
                             <div className="cta-content">
@@ -434,8 +431,30 @@ const OurTeam = ({ headerHeight }) => {
                                     Get to know the passionate experts whose knowledge, guidance, & commitment inspire students to achieve their full potential.
                                 </p>
                                 <div className="cta-buttons">
-                                    <a href="/ourteam" className="btn">Join Our Team <span>→</span></a>
-                                    <a href="/join-free-demo-class" className="btn">Join a Free Demo <span>→</span></a>
+                                    <a href="/our-team">
+                                        <button className="cta-button">
+                                            <span>
+                                                Join Our Team
+                                            </span>
+                                            <div className="buttonIcon">
+                                                <ArrowRight size={20} />
+                                            </div>
+
+                                        </button>
+                                    </a>
+                                    <a href="/join-free-demo-class">
+                                        <button className="cta-button">
+                                            <span>
+                                                Join a Free Demo
+                                            </span>
+                                            <div className="buttonIcon">
+                                                <ArrowRight size={20} />
+                                            </div>
+
+                                        </button>
+                                    </a>
+                                    {/* <a href="/ourteam" className="btn">Join Our Team <span>→</span></a>
+                                    <a href="/join-free-demo-class" className="btn">Join a Free Demo <span>→</span></a> */}
                                 </div>
                             </div>
                         </div>
