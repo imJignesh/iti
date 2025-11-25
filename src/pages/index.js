@@ -99,7 +99,7 @@ const HomeCopy = ({ headerHeight }) => {
             />
             <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
                 {/* Banner Section */}
-                <div className="">
+                <div className={isMobile ? "hero-section-mobile" : "hero-section-desktop"}>
                     <Hero />
                 </div>
                 {/* Course Section  */}

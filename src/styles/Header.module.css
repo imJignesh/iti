@@ -56,7 +56,7 @@ header .header_left_content .nav {
 
 header .header_left_content .link {
   color: #161664;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -105,7 +105,7 @@ header .header_right_content {
 
 
 header .header_right_content button {
-  font-size: 0.8vw;
+  font-size: 1vw;
   font-weight: 500;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -401,7 +401,7 @@ header .toggleButton img {
   }
 
   header .header_left_content .link {
-    font-size: 0.9vw;
+    font-size: 1vw;
   }
 
   /* Styles for MacBook Pro 16" and larger laptops */
@@ -416,14 +416,14 @@ header .toggleButton img {
   }
 
   header .header_right_content button {
-    font-size: 0.7vw;
+    font-size: 1vw;
     padding: 0.2vw 0.6vw;
   }
 }
 
 /* MacBook Pro 14" M4 (~1512px wide) */
 @media (max-width: 1535px) {
-  .header {
+  /* .header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -431,7 +431,7 @@ header .toggleButton img {
     padding: 20px 10px;
     max-width: 85vw;
 
-  }
+  } */
 
   header .header_left_content .link {
     font-size: 1rem;

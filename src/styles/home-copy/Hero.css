@@ -1,4 +1,9 @@
 /* Hero Banner Section */
+
+.hero-section-desktop {
+  padding: 10vh 0;
+}
+
 .homeCopy .hero {
   /* padding: 100px 0;
   background: url(/images/banner-bg.png);
@@ -22,7 +27,7 @@
 
 }
 
-@keyframes revealClipLeftToRight {
+. @keyframes revealClipLeftToRight {
   from {
     clip-path: inset(0 100% 0 0);
   }
@@ -38,7 +43,7 @@
 }
 
 .homeCopy .hero .heroLeft {
-    margin-top: -1vw;
+  margin-top: -1vw;
 }
 
 
