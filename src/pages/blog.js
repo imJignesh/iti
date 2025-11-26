@@ -244,7 +244,7 @@ const Blogpg = ({ headerHeight }) => {
             {/* 3. Apply the headerHeight as paddingTop to the main scroll container. */}
             <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }} >
                 <section
-                    className="careers-banner fade-in-section"
+                    className="blog-banner fade-in-section"
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat

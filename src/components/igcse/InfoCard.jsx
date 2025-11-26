@@ -13,6 +13,7 @@ export default function InfoCard() {
     email: "",
     phone: "",
     school: "",
+    course: "", // <--- ADDED: Initialize the new field
     message: "",
     formType: "Organic_Curriculum",
   });
@@ -77,6 +78,12 @@ export default function InfoCard() {
       newErrors.school = "School name is required.";
       isValid = false;
     }
+
+    // --- 4. Course Validation (Required) ---
+    if (!formData.course.trim()) { // <--- ADDED: Course validation
+      newErrors.course = "Course selection is required.";
+      isValid = false;
+    }
     setErrors(newErrors);
     return isValid;
   };
@@ -120,13 +127,18 @@ export default function InfoCard() {
         },
         body: JSON.stringify(dataToSend), // ✅ CORRECT: Sending the object that includes pageinfo
       });
-      if (response.ok) {
-        setSubmissionStatus('success');
-        setFormData({ name: "", email: "", phone: "", school: "", message: "" });
+      const result = await response.json();
+      if (response.ok && result.success && result.redirectUrl) {
+
+        window.location.href = result.redirectUrl;
+
       } else {
+        // Fallback for API success: false or missing redirectUrl
+        console.error('Submission failed via API:', result.message || 'Unknown error');
         setSubmissionStatus('error');
       }
     } catch (error) {
+      console.error('API call failed:', error);
       setSubmissionStatus('error');
     } finally {
       setLoading(false);
@@ -509,6 +521,44 @@ export default function InfoCard() {
                       }}
                     />
                     {errors.school && <div className="invalid-feedback d-block fw-bold text-warning">{errors.school}</div>}
+                  </div>
+
+                  <div
+                    className="mb-3 fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{ animationDelay: "0.8s" }}
+                  >
+                    {/* Assuming this maps to 'course' in your formData state */}
+                    <select
+                      name="course"
+                      value={formData.course}
+                      onChange={handleChange}
+                      className="form-control bg-transparent text-white fw-semibold"
+                      style={{
+                        border: "1.5px solid #FFFFFF",
+                        borderRadius: "40px",
+                        fontSize: "0.9rem",
+                        padding: "12px 15px",
+                      }}
+                    >
+
+                      {/* Your list of options */}
+                      <option value="IB Diploma">IB Diploma</option>
+                      <option value="IB MYP">IB MYP</option>
+                      <option value="IGCSE">IGCSE</option>
+                      <option value="A-Levels">A-Levels</option>
+                      <option value="Homeschooling">Homeschooling</option>
+                      <option value="EmSAT">EmSAT</option>
+                      <option value="ACT">ACT</option>
+                      <option value="Advanced Placements">Advanced Placements</option>
+                      <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
+                      <option value="STEM (Others)">STEM (Others)</option>
+                    </select>
+
+                    {/* Assuming error checking for this new field would be errors.course */}
+                    {errors.course && <div className="invalid-feedback d-block fw-bold text-warning">{errors.course}</div>}
                   </div>
 
                   <div
@@ -940,7 +990,7 @@ export default function InfoCard() {
           }
 
           .form-heading {
-            font-size: 2.05rem !important; /* Even larger font */
+            font-size: 1.8rem !important; /* Even larger font */
           }
 
           .form-control {

@@ -782,7 +782,7 @@ export default function InfoCard() {
           }
 
           .form-heading {
-            font-size: 2.05rem !important; /* Even larger font */
+            font-size: 1.8rem !important; /* Even larger font */
           }
 
           .form-control {

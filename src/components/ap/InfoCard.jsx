@@ -14,7 +14,7 @@ export default function InfoCard() {
     phone: "",
     school: "",
     message: "",
-    formType: "Organic_Curriculum",
+    formType: "Tests",
   });
 
   // New state for validation errors
@@ -78,6 +78,8 @@ export default function InfoCard() {
       newErrors.school = "School name is required.";
       isValid = false;
     }
+
+
     setErrors(newErrors);
     return isValid;
   };
@@ -121,13 +123,18 @@ export default function InfoCard() {
         },
         body: JSON.stringify(dataToSend), // ✅ CORRECT: Sending the object that includes pageinfo
       });
-      if (response.ok) {
-        setSubmissionStatus('success');
-        setFormData({ name: "", email: "", phone: "", school: "", message: "" });
+      const result = await response.json();
+      if (response.ok && result.success && result.redirectUrl) {
+
+        window.location.href = result.redirectUrl;
+
       } else {
+        // Fallback for API success: false or missing redirectUrl
+        console.error('Submission failed via API:', result.message || 'Unknown error');
         setSubmissionStatus('error');
       }
     } catch (error) {
+      console.error('API call failed:', error);
       setSubmissionStatus('error');
     } finally {
       setLoading(false);
@@ -521,6 +528,8 @@ export default function InfoCard() {
                     />
                     {errors.school && <div className="invalid-feedback d-block fw-bold text-warning">{errors.school}</div>}
                   </div>
+
+
 
                   <div
                     className="mb-4 fade-in-section"
@@ -961,7 +970,7 @@ export default function InfoCard() {
           }
 
           .form-heading {
-            font-size: 2.05rem !important; /* Even larger font */
+            font-size: 1.8rem !important; /* Even larger font */
           }
 
           .form-control {

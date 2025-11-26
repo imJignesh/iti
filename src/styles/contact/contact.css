@@ -24,6 +24,23 @@
      background-position: center;
  }
 
+ .blog-banner {
+     font-family: "Montserrat", sans-serif;
+     position: relative;
+     max-width: 90vw;
+     width: 100%;
+     height: calc(90vw / 2.98);
+     /* desktop aspect ratio */
+     margin: auto;
+     border-radius: 12px;
+     overflow: hidden;
+     background-image: url("/images/blog-banner.png");
+     background-size: cover;
+     background-position: center;
+ }
+
+
+
  /* Dark overlay */
  .dark-overlay {
      position: absolute;
@@ -58,7 +75,9 @@
  }
 
  @media (max-width: 768px) {
-     .careers-banner {
+
+     .careers-banner,
+     .blog-banner {
          height: 90vw;
          /* square card on mobile */
      }

@@ -159,14 +159,40 @@
   margin: 0;
 }
 
+.footerWrap .footerLinksCol li a::before {
+  content: "→";
+  color: #FFF;
+  margin-right: 10px;
+  opacity: 1;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footerWrap .footerLinksCol li a:hover {
+  opacity: 1;
+}
+
+.footerWrap .footerLinksCol li a:hover::before {
+  transform: translateX(5px) scale(1.2);
+}
+
+
+.footerWrap .footerLinksCol li a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+
 .footerWrap .footerLinksCol li,
 .footerWrap .footerLinksCol li a {
+  transition: transform 0.3s ease;
   font-size: 1rem;
   color: var(--white-color);
-  margin-bottom: 8px;
   opacity: 0.7;
   letter-spacing: 0.5px;
 }
+
 
 .footerWrap .footerBottomRow {
   margin-top: 30px;

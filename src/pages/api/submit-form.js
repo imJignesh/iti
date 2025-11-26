@@ -7,7 +7,7 @@ export default async function handler(req, res) {
 
     // 💡 UPDATED: Destructure ALL fields, including new Career fields
     const {
-        name, email, phone, school, message, pageinfo, formType, curriculum,
+        name, email, phone, school, course, message, pageinfo, formType, curriculum,
         location, department, position, subjects, job_type, notice_period, experience
     } = req.body;
 
@@ -47,6 +47,7 @@ export default async function handler(req, res) {
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
                 school: 'SingleLine1',
+                course: 'Dropdown',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
             },
@@ -71,10 +72,64 @@ export default async function handler(req, res) {
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
                 school: 'SingleLine1',
+                course: 'Dropdown',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
             },
             redirectUrl: '/thank-you-curriculum', // <-- Unique thank-you page for curriculum pages
+        },
+        {
+            type: 'Tests', // Optional type for completeness
+            slugs: [
+                "/act-tutors-in-dubai",
+                "/advanced-placements-tutors-in-dubai"
+            ],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Tests/formperma/8zcXiMlEz_lXvS_IJxAtMq7Rta3AT8-bwNe_rllPvJg/htmlRecords/submit',
+            fieldMap: {
+                name: 'SingleLine',
+                email: 'Email',
+                phone: 'PhoneNumber_countrycode',
+                school: 'SingleLine1',
+                course: 'Dropdown',
+                message: 'MultiLine',
+                pageinfo: 'SingleLine2',
+            },
+            redirectUrl: '/thank-you-curriculum', // <-- Unique thank-you page for curriculum pages
+        },
+        {
+            type: 'Freedemo', // Optional type for completeness
+            slugs: [
+                "/act-tutors-in-dubai",
+                "/advanced-placements-tutors-in-dubai"
+            ],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Freedemo/formperma/KAwVRrjBN9gUy9u3j43gxKyKXGIc9361RYMOFY1MlcI/htmlRecords/submit',
+            fieldMap: {
+                name: 'SingleLine',
+                email: 'Email',
+                phone: 'PhoneNumber_countrycode',
+                school: 'SingleLine1',
+                course: 'Dropdown',
+                message: 'MultiLine',
+                pageinfo: 'SingleLine2',
+            },
+            redirectUrl: '/thank-you-freedemo', // <-- Unique thank-you page for curriculum pages
+        },
+        {
+            type: 'Homeschooling', // Optional type for completeness
+            slugs: [
+                "/courses/homeschooling-tutors-in-dubai"
+            ],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Homeschooling/formperma/bdx3_HZb5eCExd0eEaR-m3Cqfjo3i2VrFROA3E4oaYo/htmlRecords/submit',
+            fieldMap: {
+                name: 'SingleLine',
+                email: 'Email',
+                phone: 'PhoneNumber_countrycode',
+                school: 'SingleLine1',
+                course: 'Dropdown',
+                message: 'MultiLine',
+                pageinfo: 'SingleLine2',
+            },
+            redirectUrl: '/thank-you-homeschooling', // <-- Unique thank-you page for curriculum pages
         },
         {
             type: 'Organic_Subject', // Optional type for completeness
@@ -98,6 +153,7 @@ export default async function handler(req, res) {
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
                 school: 'SingleLine1',
+                course: 'Dropdown',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
             },
@@ -162,6 +218,10 @@ export default async function handler(req, res) {
     // The school field is only defined for BLOG_SIDEBAR, Organic_Curriculum, and Organic_Subject
     if (fieldMap.school) {
         zohoPayload.append(fieldMap.school, school || '');
+    }
+
+    if (course && fieldMap.course) { // <--- ADDED: Course append logic
+        zohoPayload.append(fieldMap.course, course);
     }
 
     // The curriculum field is only defined for POPUP_FORM
