@@ -4,6 +4,10 @@
   padding: 10vh 0;
 }
 
+.homeCopy .hero-section-mobile section.hero {
+  padding-top: 20px !important;
+}
+
 .homeCopy .hero {
   /* padding: 100px 0;
   background: url(/images/banner-bg.png);

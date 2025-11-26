@@ -127,7 +127,9 @@ const HomeCopy = ({ headerHeight }) => {
                 {/* <Alumni setActiveIndex={setActiveIndex} /> */}
 
                 {/* Our USPs */}
-                <Usps />
+                <section data-scroll-section>
+                    <Usps />
+                </section>
 
                 {/* Trainers Section */}
                 <section data-scroll-section>

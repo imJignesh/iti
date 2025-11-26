@@ -43,11 +43,11 @@ body a {
 }
 
 .innerpage>section:nth-child(1) {
-  padding: 0 0 50px 0 !important;
+  padding: 0 0 70px 0 !important;
 }
 
 section:not(section section) {
-  padding: 50px 0 !important;
+  padding: 70px 0 !important;
 }
 
 @media (max-width: 1124px) {
@@ -65,6 +65,14 @@ section:not(section section) {
 @media (max-width: 767px) {
   .container {
     max-width: 100% !important;
+  }
+
+  .innerpage>section:nth-child(1) {
+    padding: 0 0 50px 0 !important;
+  }
+
+  section:not(section section) {
+    padding: 50px 0 !important;
   }
 }
 

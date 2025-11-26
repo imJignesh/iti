@@ -319,6 +319,7 @@
 
   .homeCopy .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
     padding: 12px 40px;
+    display: block;
   }
 }
 
