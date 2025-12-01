@@ -76,21 +76,25 @@ section:not(section section) {
   }
 }
 
-/* --- FIX APPLIED HERE: The two conflicting blocks are consolidated --- */
-
-/* FADE-IN START STATE: Ensures all elements using fade-in-section are hidden 
-   and positioned at the bottom of the animation before any scroll detection. */
+/* --- FIX: FADE-IN START STATE --- */
+/* Default Desktop State */
 .fade-in-section {
   opacity: 0;
-  /* Starts hidden */
-  /* Ensures initial position matches the @keyframes starting position */
   transform: translateY(80px);
-  /* Add transition properties so non-animated elements (like the hero title) 
-     transition smoothly when 'is-inview' is added, even without a delay. */
+  /* Desktop start position */
   transition: opacity 0.8s, transform 0.8s;
 }
 
-/* SUB-HEADING STYLES (Kept separate from animation logic) */
+/* FIX: Mobile Override (Must set the transform to a small, non-zero value) */
+@media (max-width: 575px) {
+  .fade-in-section {
+    transform: translateY(20px);
+    /* Reduced mobile start position */
+  }
+}
+
+
+/* SUB-HEADING STYLES (No changes needed) */
 .SubHeading {
   font-size: 28px;
   font-weight: 600;
@@ -128,20 +132,15 @@ section:not(section section) {
   right: 0;
 }
 
-/* Tablet */
+/* Tablet (No changes needed) */
 @media (max-width: 1024px) {
   .SubHeading {
     font-size: 24px;
   }
 }
 
-/* Mobile */
+/* Mobile (No changes needed for SubHeading) */
 @media (max-width: 575px) {
-  .fade-in-section {
-    /* Reduces the vertical push on mobile views */
-    transform: translateY(0px);
-  }
-
   .SubHeading {
     font-size: 15px;
     padding: 0 24px;
@@ -233,7 +232,7 @@ section:not(section section) {
   height: auto;
 }
 
-/* Fade-In Animation (Cleaned to correctly trigger the keyframes) */
+/* Fade-In Animation */
 
 /* When Locomotive Scroll adds the is-inview class, the animation starts */
 .is-inview.fade-in-section {
@@ -244,6 +243,7 @@ section:not(section section) {
   from {
     opacity: 0;
     transform: translateY(80px);
+    /* Desktop keyframe start position */
   }
 
   to {
@@ -252,7 +252,23 @@ section:not(section section) {
   }
 }
 
-/* Clip Path Animation */
+/* FIX: Mobile Keyframe Override (Must match the 20px start position) */
+@media (max-width: 575px) {
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      /* Mobile keyframe start position */
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* Clip Path Animation (No changes needed) */
 
 .is-clipped {
   clip-path: inset(0 100% 0 0);

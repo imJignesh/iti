@@ -11,7 +11,6 @@ const ScrollContext = createContext(null);
 
 // --- 2. Custom Hook to Access Instance ---
 export const useScroll = () => {
-    // This hook returns the live Locomotive Scroll instance (or null if not initialized/disabled).
     return useContext(ScrollContext);
 };
 
@@ -28,8 +27,8 @@ const LocomotiveScrollProvider = ({ children }) => {
         if (typeof window === "undefined") return;
 
         const checkWidth = () => {
-            // Only enable if width is >= 1280px
-            const shouldEnable = window.innerWidth >= 1280;
+            // User's current logic: Scroll enabled if width is >= 280px
+            const shouldEnable = window.innerWidth >= 280;
             setIsScrollEnabled(shouldEnable);
         };
 
@@ -51,24 +50,32 @@ const LocomotiveScrollProvider = ({ children }) => {
         };
 
         const initScroll = async () => {
-            // Case 1: Scroll is disabled OR already initialized
             if (!isScrollEnabled || scrollInstanceRef.current) {
                 if (!isScrollEnabled) destroyScroll();
                 return;
             }
 
-            // Case 2: Scroll is enabled and needs initialization
             const LocomotiveScroll = (await import("locomotive-scroll")).default;
             if (!scrollRef.current) return;
+
+            // --- FIX: Use large negative rootMargin for mobile/tablet to stabilize detection ---
+            const isMobileView = window.innerWidth <= 991;
+
+            // On mobile, shrink the detection viewport by 15% on the top and bottom.
+            // This creates a large, stable area where elements are considered "in-view."
+            const rootMarginValue = isMobileView ? '-15% 0px -15% 0px' : '0px';
 
             const scroll = new LocomotiveScroll({
                 el: scrollRef.current,
                 smooth: true,
                 lerp: 0.1,
+                // The rootMargin configuration is passed directly to the Intersection Observer instance 
+                // used internally by Locomotive Scroll for visibility detection.
+                rootMargin: rootMarginValue,
             });
+            // --- END FIX ---
 
             scrollInstanceRef.current = scroll;
-            // You might want to remove the console log in production
             console.log("Locomotive Scroll Initialized");
         };
 
@@ -76,13 +83,10 @@ const LocomotiveScrollProvider = ({ children }) => {
             initScroll();
         }
 
-        // Cleanup on unmount or when dependencies change
         return destroyScroll;
     }, [isScrollEnabled]);
 
     return (
-        // The container div for Locomotive Scroll
-        // data-scroll-container is only added when scroll is enabled
         <div ref={scrollRef} data-scroll-container={isScrollEnabled ? true : undefined}>
             <ScrollContext.Provider value={scrollInstanceRef.current}>
                 {children}
