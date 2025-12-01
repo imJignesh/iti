@@ -5,6 +5,7 @@
 }
 
 .homeCopy .hero-section-mobile section.hero {
+  /* Reduced top padding for mobile view, relying on the section padding */
   padding-top: 20px !important;
 }
 
@@ -15,11 +16,10 @@
   background-repeat: no-repeat;
   background-size: 30vw;
 
-  /* --- FIX APPLIED HERE: Set initial clip-path and apply animation, nothing else --- */
+  /* Setting initial clip-path for animation start (Desktop) */
   -webkit-clip-path: inset(0 100% 0 0);
   clip-path: inset(0 100% 0 0);
   animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
-  /* --------------------------------------------------------------------------------- */
 
   background-position: 6.5vw 1vw;
 }
@@ -318,14 +318,14 @@
     padding: inherit !important;
   }
 
+  /* Target the animation area for mobile to reset padding */
   .p .homeCopy .hero {
-    /* --- FIX APPLIED HERE: Cleaned up conflicting animation declarations --- */
     background: url(/images/banner-bg-mobile.png);
     background-repeat: no-repeat;
     background-size: 85%;
     background-position: top right;
-    padding: 40px 0 0 0;
-    /* Set initial hidden state from the right */
+    /* FIX: Reduce top padding to reduce whitespace */
+    padding: 20px 0 0 0;
     clip-path: inset(0 0 0 100%);
     animation: revealClipRightToLeft 1.8s 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
@@ -350,11 +350,6 @@
   }
 
   .homeCopy .hero .heroLeft .heroTitle-mobile {
-    /* display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    line-height: 1;
-    font-size: 1.4rem; */
     display: block;
     margin: 0 auto;
     max-width: 90vw;
@@ -394,7 +389,8 @@
 
 @media (max-width: 575px) {
   .homeCopy .hero {
-    padding: 15px 0 0 0;
+    /* FIX: Reduced top padding */
+    padding: 10px 0 0 0;
     background: url(/images/banner-bg-mobile.png) no-repeat;
     background-size: 50vh 16vh;
     background-position: top 0vh right -2vh;
@@ -458,10 +454,12 @@
 
   .homeCopy .hero .heroRight .buttonGroup {
     justify-content: space-evenly;
-    top: 60%;
-    left: 36%;
-    bottom: 5vw;
-    width: auto
+    /* FIX: Adjust vertical position and ensure button group is fully visible */
+    top: 55%;
+    left: 35%;
+    bottom: 0;
+    /* Ensures buttons push the bottom edge down */
+    width: 60vw;
   }
 
   .homeCopy .hero .heroRight .buttonGroup button {
@@ -480,24 +478,18 @@
   .homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
     font-size: 1rem;
     font-weight: 600;
-    padding: 20px 15px;
+    padding: 8px 15px;
   }
 
 
 }
 
 @media (max-width: 425px) {
-
-  /* Removed '₹' character which was invalid CSS */
   .homeCopy .hero {
+    /* FIX: Reduced top padding */
     padding: 10px 0 0 0;
     background-size: 90%;
   }
-
-  /* .homeCopy .hero .heroRight .buttonGroup {
-    top: 68%;
-    left: 40%;
-  } */
 
   .homeCopy .hero .heroRight .buttonGroup button {
     font-size: 14px;
@@ -521,10 +513,6 @@
     display: inline-block;
   }
 
-  .homeCopy .hero .heroVideo {
-    /* height: 400px; */
-  }
-
   .homeCopy .hero .heroRight .mobileContent {
     font-size: 16px;
     line-height: 18px;
@@ -543,7 +531,11 @@
 
   .homeCopy .hero .heroRight .buttonGroup {
     justify-content: space-evenly;
+    /* FIX: Keep position low but ensure visibility */
     top: 60%;
+    width: auto;
+    left: 25%;
+    right: 25%;
   }
 
   .homeCopy .hero .heroRight .buttonGroup button {
@@ -576,6 +568,10 @@
 
   .homeCopy .hero .heroRight .buttonGroup {
     width: 55vw;
+    /* FIX: Ensure buttons don't fall off the screen */
+    top: 63%;
+    left: 20%;
+    right: 20%;
   }
 
   .homeCopy .hero .heroLeft div {
@@ -594,11 +590,4 @@
     -webkit-mask-size: 90%;
     mask-size: 100%;
   }
-
-  .homeCopy .hero .heroRight .buttonGroup {
-    top: 63%;
-    bottom: auto;
-  }
 }
-
-/* Removed the final snippet which was causing issues */

@@ -137,6 +137,11 @@ section:not(section section) {
 
 /* Mobile */
 @media (max-width: 575px) {
+  .fade-in-section {
+    /* Reduces the vertical push on mobile views */
+    transform: translateY(0px);
+  }
+
   .SubHeading {
     font-size: 15px;
     padding: 0 24px;
@@ -153,6 +158,7 @@ section:not(section section) {
     /* center vertically */
   }
 }
+
 
 /* Buttons (No changes needed) */
 
