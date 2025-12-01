@@ -43,11 +43,9 @@ function useInViewAnimation(threshold = 0.3) {
 const HomeCopy = ({ headerHeight }) => {
     const [active, setActive] = useState(1);
     const [activeIndex, setActiveIndex] = React.useState(1);
-    const scrollRef = useRef(null);
-    const scrollInstanceRef = useRef(null);
+    // Removed scrollRef and scrollInstanceRef
     const [courseHeadingRef, courseHeadingInView] = useInViewAnimation();
     const [isMobile, setIsMobile] = useState(false);
-
     const [isMobileSwiper, setIsMobileSwiper] = useState(false);
 
     useEffect(() => {
@@ -62,34 +60,7 @@ const HomeCopy = ({ headerHeight }) => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    useEffect(() => {
-        let scroll;
-
-        const initScroll = async () => {
-            if (isMobile) return;
-
-            const LocomotiveScroll = (await import("locomotive-scroll")).default;
-            if (!scrollRef.current) return;
-            scroll = new LocomotiveScroll({
-                el: scrollRef.current,
-                smooth: true,
-                lerp: 0.1,
-            });
-
-            scrollInstanceRef.current = scroll;
-        };
-
-        if (typeof window !== "undefined") {
-            initScroll();
-        }
-
-        return () => {
-            if (scrollInstanceRef.current) {
-                scrollInstanceRef.current.destroy();
-                scrollInstanceRef.current = null;
-            }
-        };
-    }, [isMobile]);
+    // Removed the conflicting useEffect block for scroll initialization/destruction.
 
     return (
         <>
@@ -106,7 +77,6 @@ const HomeCopy = ({ headerHeight }) => {
                 <Course />
 
                 {/* Moving Banner Section */}
-                {/* <MovingBanner /> */}
                 <section data-scroll-section>
                     <MarqueeBanner />
                 </section>

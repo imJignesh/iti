@@ -87,7 +87,7 @@ import DelayedPopup from "../components/DelayedPopup";
 import { useRouter } from "next/router";
 
 import LocomotiveScrollProvider from '../components/LocomotiveScrollProvider';
-import { useState, createContext } from "react"; // <-- Updated import
+import { useState, createContext } from "react";
 
 
 // --- 1. Define and Export the Context ---

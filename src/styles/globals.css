@@ -76,11 +76,21 @@ section:not(section section) {
   }
 }
 
+/* --- FIX APPLIED HERE: The two conflicting blocks are consolidated --- */
+
+/* FADE-IN START STATE: Ensures all elements using fade-in-section are hidden 
+   and positioned at the bottom of the animation before any scroll detection. */
 .fade-in-section {
-  opacity: 1 !important;
-  transform: translatey(0px) !important;
+  opacity: 0;
+  /* Starts hidden */
+  /* Ensures initial position matches the @keyframes starting position */
+  transform: translateY(80px);
+  /* Add transition properties so non-animated elements (like the hero title) 
+     transition smoothly when 'is-inview' is added, even without a delay. */
+  transition: opacity 0.8s, transform 0.8s;
 }
 
+/* SUB-HEADING STYLES (Kept separate from animation logic) */
 .SubHeading {
   font-size: 28px;
   font-weight: 600;
@@ -144,7 +154,7 @@ section:not(section section) {
   }
 }
 
-/* Buttons  */
+/* Buttons (No changes needed) */
 
 .buttonBlue,
 .buttonSkyBlue {
@@ -217,12 +227,10 @@ section:not(section section) {
   height: auto;
 }
 
-/* Fade-In Animation */
-.fade-in-section {
-  opacity: 0;
-}
+/* Fade-In Animation (Cleaned to correctly trigger the keyframes) */
 
-.is-inview {
+/* When Locomotive Scroll adds the is-inview class, the animation starts */
+.is-inview.fade-in-section {
   animation: fadeInUp 0.8s 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 

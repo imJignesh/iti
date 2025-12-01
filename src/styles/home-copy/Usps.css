@@ -194,6 +194,9 @@
     align-items: center;
     gap: 20px;
     min-width: 100%;
+    position: static;
+    /* Override sticky on mobile/tablet */
+    top: auto;
   }
 
   .uspSection .uspTitle {

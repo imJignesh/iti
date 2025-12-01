@@ -67,8 +67,8 @@ const staticBlogs = [
 
 const Blog = () => {
     const [blogData, setBlogData] = React.useState(staticBlogs);
-    // scrollRef holds the instance (or null) directly.
-    const scrollRef = useScroll();
+    // scrollInstance holds the instance (or null) directly.
+    const scrollInstance = useScroll();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -80,15 +80,13 @@ const Blog = () => {
 
     useEffect(() => {
         if (blogData.length > 0) {
-            // FIX APPLIED HERE: Remove .current.
-            // scrollRef is the instance, or null if Locomotive Scroll is disabled/not ready.
-            // The optional chaining (?.) handles the null case safely.
-            scrollRef?.update();
+            // FIX APPLIED HERE: Use optional chaining on scrollInstance (the instance itself)
+            scrollInstance?.update();
         }
-    }, [blogData, scrollRef]); // Added scrollRef to dependencies
+    }, [blogData, scrollInstance]); // Added scrollInstance to dependencies
 
     return (
-        <section className="blogSection">
+        <section className="blogSection" data-scroll-section>
             <div className="container">
                 <div className="row gap-5 gap-lg-0">
                     <div className="col-12 col-lg-5 blogLeft">
