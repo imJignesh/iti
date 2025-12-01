@@ -180,6 +180,26 @@ export default async function handler(req, res) {
             },
             redirectUrl: '/thank-you-career', // <-- New thank-you page
         },
+        {
+            type: 'CONTACT_US', // New unique identifier
+            slugs: ['/contact-us'], // Matches the page path
+            // Zoho URL from contact-zoho.html
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Contact/formperma/h_7YNNyAc6n4bPwBAZeDqgxMUn73Vna_ZJpKdSvkxG8/htmlRecords/submit',
+            fieldMap: {
+                // Map API fields (from request body) to Zoho field names
+                name: 'SingleLine',            // From Zoho: SingleLine
+                email: 'Email',                // From Zoho: Email
+                phone: 'PhoneNumber_countrycode',// From Zoho: PhoneNumber_countrycode
+                grade: 'SingleLine1',          // From Zoho: SingleLine1
+                school: 'SingleLine2',         // From Zoho: SingleLine2
+                tests_courses: 'Dropdown',     // From Zoho: Dropdown (Tests / Courses)
+                courses: 'Dropdown1',          // From Zoho: Dropdown1 (Courses)
+                heard_about: 'Dropdown2',      // Assuming the final dropdown is Dropdown2 in Zoho
+                message: 'MultiLine',          // Assuming message is MultiLine in Zoho
+                pageinfo: 'SingleLine3',       // Assuming SingleLine3 is available for pageinfo
+            },
+            redirectUrl: '/thank-you-contact', // New unique thank-you page
+        },
     ];
     // -----------------------------------------------------------------
 
