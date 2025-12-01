@@ -533,9 +533,7 @@
     justify-content: space-evenly;
     /* FIX: Keep position low but ensure visibility */
     top: 60%;
-    width: auto;
-    left: 25%;
-    right: 25%;
+
   }
 
   .homeCopy .hero .heroRight .buttonGroup button {
