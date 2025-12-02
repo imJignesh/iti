@@ -258,7 +258,7 @@ export default function Timeline() {
         .timeline-description {
           max-width: 600px;
           margin: 2rem auto 0;
-          color: #6c757d;
+          color: #233467;
           font-size: 16px;
           line-height: 1.6;
           text-align: center;

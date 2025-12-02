@@ -89,18 +89,11 @@ const Learning = () => {
   };
 
   return (
-    <div className="advantages-container" style={{ marginBlock: isMobile ? "2.5rem" : "96px" }}>
+    <div className="container" style={{ marginBlock: isMobile ? "0" : "" }}>
       {/* Mobile Layout */}
       <div className="mobile-layout">
-        <div className="section-header">
-          <div
-            className="text-center mb-5 fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{ animationDelay: "0.15s" }}
-          >
-            {/* Gradient subtitle with lines */}
+        <div className="text-center fade-in-section wedifferent">
+          <div className="testHeadings">
             <div
               data-scroll
               data-scroll-class="is-inview"
@@ -108,53 +101,26 @@ const Learning = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <h2 className="SubHeading testSubheading" style={{ marginLeft: isMobile ? "25px" : "" }}>
-                HOW ARE WE DIFFERENT?
+              <h2 className="SubHeading testSubheading">HOW ARE WE DIFFERENT?
               </h2>
             </div>
-
-            {/* Main title */}
             <h3
-              className="fw-bold mb-0 fade-in-section"
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{
-                animationDelay: "0.3s",
-                fontSize: isMobile ? "1.4rem" : "2.2rem",
-                lineHeight: "1.1",
-                textTransform: "uppercase",
-                marginTop: "3vh",
-                marginLeft: "8px",
-              }}
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle"
+              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
             >
-              <span
-                  style={{
-                    background: "linear-gradient(135deg,#161664, #3F88BA)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
-                  }}
-                >
-                  Here's How Our Approach Makes<br/>
-                  <span
-                    style={{
-                      background: "linear-gradient(135deg, #00A491, #003E37)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent"
-                    }}
-                  >
-                    All The 
-                  </span>{" "}
-                  Difference
-                </span>
-             
+              Here's How Our Approach Makes <span className="highlight"> All The </span> Difference
             </h3>
-
-            <p className="mobile-subtitle">
-              We blend expertise, structure, & care to help students thrive academically & personally, ensuring every learner gets the clarity & support they need.
-            </p>
           </div>
+          <p className="mobile-subtitle">
+            We blend expertise, structure, & care to help students thrive academically & personally, ensuring every learner gets the clarity & support they need.
+          </p>
         </div>
+
+
+
 
         <div className="mobile-cards-container">
           <div
@@ -238,7 +204,7 @@ const Learning = () => {
                     WebkitTextFillColor: "transparent"
                   }}
                 >
-                  Here's How Our Approach Makes <br/>
+                  Here's How Our Approach Makes <br />
                   <span
                     style={{
                       background: "linear-gradient(135deg, #00A491, #003E37)",
@@ -250,7 +216,7 @@ const Learning = () => {
                   </span>{" "}
                   Difference
                 </span>
-                
+
               </h3>
               <p className="desktop-subtitle">
                 We blend expertise, structure, & care to help students thrive academically & personally, ensuring every learner gets the clarity & support they need.
@@ -345,6 +311,7 @@ const Learning = () => {
           line-height: 1.6;
           margin-top: 20px;
           font-weight:500;
+          padding-bottom: 40px;
         }
 
         .mobile-cards-container {
@@ -463,10 +430,16 @@ const Learning = () => {
           margin: 0;
           font-weight:500;
         }
+           :global(.mobile-card-icon img) {
+            height: 50px !important;
+            width: auto !important;
+        }
 
         /* Desktop Layout */
        @media (min-width: 768px) {
-                    .mobile-layout {
+                  
+                   
+                      .mobile-layout {
                         display: none;
                     }
 
@@ -475,7 +448,7 @@ const Learning = () => {
                     }
 
                     .advantages-container {
-                        padding: 60px 40px;
+                        padding: 0 40px;
                         max-width: 90vw;
                         margin: 0 auto;
                     }

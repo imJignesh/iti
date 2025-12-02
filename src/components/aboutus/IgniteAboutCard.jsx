@@ -16,11 +16,19 @@ export default function IgniteAboutCard() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <section className="ignite-section">
+    <div
+      className="container fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat
+      style={{ maxWidth: "1140px", animationDelay: "0.15s" }}
+    >
+
       <div className="ignite-container">
         {/* Left Content */}
         <div className="ignite-left">
-          <div className="mb-5 fade-in-section">
+          <div className="mb-5">
+
             <div className="testHeadings">
               <div
                 data-scroll
@@ -213,24 +221,24 @@ export default function IgniteAboutCard() {
 
         .rect-1 {
            top: 5%;
-    left: -45%;
-    width: 350px;
-    height: 88px;
-        }
+          left: -45%;
+          width: 350px;
+          height: 88px;
+              }
 
-        .rect-2 {
-    top: 40%;
-    right: 100%;
-    width: 114px;
-    height: 88px;
-        }
+              .rect-2 {
+          top: 40%;
+          right: 100%;
+          width: 114px;
+          height: 88px;
+              }
 
-        .rect-3 {
- bottom: 5%;
-    right: 100%;
-    width: 542px;
-    height: 88px;
-        }
+              .rect-3 {
+          bottom: 5%;
+          right: 100%;
+          width: 542px;
+          height: 88px;
+              }
 
 
         .ignite-section {
@@ -336,8 +344,8 @@ export default function IgniteAboutCard() {
 
         .ignite-description {
           font-size: 1vw;
-          font-weight: 600;
-          color: #7a8ca3;
+          // font-weight: 600;
+          color: #233467;
           margin: 0 0 18px 0;
           line-height: 1.6;
           max-width: 90%;
@@ -709,9 +717,9 @@ justify-content:space-between;
     margin-top: 30px;
 }
     .ignite-description{
-    font-size: 0.9vw;
-    font-weight: 600;
-    color: #7a8ca3;
+    font-size: 1vw;
+    font-weight: normal;
+    color: #233467;
     margin: 0 0 18px 0;
     line-height: 1.6;
     max-width: 90%;
@@ -806,6 +814,6 @@ bottom: 5%;
   }
 }
       `}</style>
-    </section>
+    </div>
   );
 }

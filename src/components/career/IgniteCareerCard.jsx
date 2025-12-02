@@ -90,7 +90,7 @@ export default function IgniteCareerCard() {
             }}>
             At Ignite, tutoring goes beyond the classroom - it's a journey of personal growth, flexibility, & purpose. We’re always seeking passionate educators who believe in the power of teaching & learning. Join our team & grow with us as we inspire students every day.
           </p>
-
+          <br />
           <h3 className="ignite-secondary-title fade-in-section" data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat style={{
@@ -151,23 +151,23 @@ export default function IgniteCareerCard() {
 
       <style jsx>{`
       @font-face {
-  font-family: 'Monstra';
-  src: url('/fonts/Monstra.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+          font-family: 'Monstra';
+          src: url('/fonts/Monstra.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+        }
 
-.my-text {
-  font-family: 'Monstra', sans-serif;
-}
-.icon-height{
-width: 30px;
-height: 30px;
-}
+        .my-text {
+          font-family: 'Monstra', sans-serif;
+        }
+        .icon-height{
+        width: 30px;
+        height: 30px;
+        }
         .ignite-section {
-     padding: 0 20px;
+          padding: 0 20px;
           max-width:88vw;
-        margin: 0 auto;          
+          margin: 0 auto;          
           font-family: 'Montserrat', sans-serif;
         }
 
@@ -254,7 +254,7 @@ height: 30px;
 
         .ignite-description {
           font-size: 1vw;
-          font-weight:600;
+          // font-weight:600;
           color: #7a8ca3;
           margin: 0 0 18px 0;
           line-height: 1.6;
@@ -278,7 +278,7 @@ height: 30px;
 
         .ignite-short-description {
       font-size: 1vw;
-          font-weight:600;
+          // font-weight:600;
           color: #7a8ca3;
           margin: 0 0 18px 0;
           line-height: 1.4;

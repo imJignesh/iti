@@ -19,7 +19,7 @@ export default function IgniteAchievements() {
     <div className="mobileign fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s", marginBlock: isMobile ? "20px!important" : "80px!important" }}>
+      style={{ animationDelay: "0.1s", marginBlock: isMobile ? "20px!important" : "0!important" }}>
       <div className="container fade-in-section"
         data-scroll
         data-scroll-class="is-inview"

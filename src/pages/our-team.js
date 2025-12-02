@@ -1,13 +1,13 @@
 'use client';
 
 // Removed: useEffect, useRef
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import SEO from "@/components/SEO";
 import TeamBanner from "@/components/team/Banner";
 import MarqueeBanner from '@/components/a-level/MarqueeBanner';
 import { ArrowRight } from 'lucide-react';
 
-// Data array for the trainers (Original data kept for context)
+// Data arrays (Strictly using provided data)
 const trainersData = [
     {
         name: "MASAB",
@@ -182,6 +182,13 @@ const OurTeam = ({ headerHeight }) => {
     const breadcrumbPath = getBreadcrumbPath();
     return (
         <>
+            {/* Inject empty style block here */}
+            <style jsx global>
+                {`
+                    /* Add your global CSS for the OurTeam component here */
+                `}
+            </style>
+
             <SEO title="Meet Our Expert Trainers | Know Our Team Better"
                 description="Get to know Ignite Training Institute’s expert mentors in the UAE, shaping bright futures with 2000+ trained students & remarkable academic results" />
 
@@ -190,37 +197,65 @@ const OurTeam = ({ headerHeight }) => {
                     <TeamBanner />
                 </section>
 
-                <section className="meet-out-team">
+                {/* --- Section 1: Co-Founders --- */}
+                <section className="meet-out-team" data-scroll-section>
                     <div className="container">
-                        <div className="meet-team-Headings">
-                            <div className="fade-in-section" style={{ animationDelay: "0.1s" }}>
-                                <h3 className="SubHeading">MEET OUR TEAM</h3>
-                            </div>
-                            <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
-                                <h2 className="fade-in-section testTitle" style={{ animationDelay: "0.2s" }}>
+                        <div className="text-center mb-5">
+                            <div className="testHeadings">
+                                {/* SubHeading */}
+                                <div
+                                    data-scroll
+                                    data-scroll-class="is-inview"
+                                    data-scroll-repeat="true"
+                                    className="fade-in-section"
+                                    style={{ animationDelay: "0.1s" }}
+                                >
+                                    <h2 className="SubHeading testSubheading">MEET OUR TEAM
+                                    </h2>
+                                </div>
+                                {/* Main Title */}
+                                <h3
+                                    data-scroll
+                                    data-scroll-class="is-inview"
+                                    data-scroll-repeat="true"
+                                    className="fade-in-section testTitle"
+                                    style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                                >
                                     Dedicated Ignite Trainers Shaping Bright<span className="highlight"> Futures </span>
-                                </h2>
-                            </div>
-                            <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
-                                <h2 className="cofounderTitle">
+                                </h3>
+                                {/* Co-Founders Header */}
+                                <h2
+                                    data-scroll
+                                    data-scroll-class="is-inview"
+                                    data-scroll-repeat="true"
+                                    className="fade-in-section testTitle cofounderTitle"
+                                    style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                                >
                                     CO-FOUNDERS
                                 </h2>
                             </div>
                         </div>
                         <div className="meet-team-cards">
                             {coFoundersData.map((founder, index) => {
-                                // Use a unique key for co-founder toggle state
                                 const key = `founder-${index}`;
                                 const isExpanded = expandedTrainers[key];
                                 const fullDescription = founder.description;
-                                const shortDescription = sliceByWordCount(fullDescription, 16); // Applies 8-word limit
-                                const isLongEnoughToToggle = fullDescription.split(/\s+/).length > 8;
+                                const shortDescription = sliceByWordCount(fullDescription, 16);
+                                const isLongEnoughToToggle = fullDescription.split(/\s+/).length > 16;
 
                                 return (
-                                    <div className="team-card" key={key}>
+                                    <div
+                                        className="team-card fade-in-section"
+                                        key={key}
+                                        data-scroll
+                                        data-scroll-class="is-inview"
+                                        data-scroll-repeat="true"
+                                        style={{ animationDelay: `${0.3 + index * 0.1}s` }} // Staggered delay
+                                    >
                                         <div className="team-card-image">
                                             <img src={founder.image} alt={founder.name} />
                                         </div>
+                                        {/* ... rest of card content ... */}
                                         <div className="team-card-info">
                                             <div className="team-card-name">
                                                 <h3>{founder.name}</h3>
@@ -229,13 +264,12 @@ const OurTeam = ({ headerHeight }) => {
                                                 <p className={`description ${isExpanded ? "expanded" : ""}`}>
                                                     {isExpanded ? fullDescription : shortDescription}
                                                 </p>
-                                                {/* Show Read More/Less link only if text exceeds 8 words */}
                                                 {isLongEnoughToToggle && (
                                                     <a
                                                         href="#"
                                                         onClick={(e) => {
                                                             e.preventDefault();
-                                                            toggleReadMore(key); // Toggle using the unique key
+                                                            toggleReadMore(key);
                                                         }}
                                                     >
                                                         {isExpanded ? "Read Less" : "Read More"}
@@ -250,10 +284,17 @@ const OurTeam = ({ headerHeight }) => {
                     </div>
                 </section>
 
-                <section className="admin-staff">
+                {/* --- Section 2: Admin Staff (Student Success Managers) --- */}
+                <section className="admin-staff" data-scroll-section>
                     <div className="container">
                         <div className="meet-team-Headings">
-                            <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
+                            <div
+                                className="fade-in-section"
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                style={{ animationDelay: "0.25s" }}
+                            >
                                 <h2 className="cofounderTitle">
                                     STUDENT SUCCESS MANAGERS
                                 </h2>
@@ -261,33 +302,39 @@ const OurTeam = ({ headerHeight }) => {
                         </div>
                         <div className="admin-staff-cards">
                             {adminStaffData.map((admin, index) => {
-                                // Using a unique key for admin staff toggle state
                                 const key = `admin-${index}`;
                                 const isExpanded = expandedTrainers[key];
                                 const fullDescription = admin.description;
-                                const shortDescription = sliceByWordCount(fullDescription, 8); // Applies 8-word limit
+                                const shortDescription = sliceByWordCount(fullDescription, 8);
                                 const isLongEnoughToToggle = fullDescription.split(/\s+/).length > 8;
 
                                 return (
-                                    <div className="admin-card" key={key}>
+                                    <div
+                                        className="admin-card fade-in-section"
+                                        key={key}
+                                        data-scroll
+                                        data-scroll-class="is-inview"
+                                        data-scroll-repeat="true"
+                                        style={{ animationDelay: `${0.3 + index * 0.1}s` }} // Staggered delay
+                                    >
                                         <div className="admin-card-image">
                                             <img src={admin.image} alt={admin.name} />
                                         </div>
+                                        {/* ... rest of card content ... */}
                                         <div className="admin-card-info">
-                                            <div className="admin-card-name">
+                                            {/* <div className="admin-card-name">
                                                 <h3>{admin.name}</h3>
-                                            </div>
+                                            </div> */}
                                             <div className="admin-card-content">
                                                 <p className={`description ${isExpanded ? "expanded" : ""}`}>
                                                     {isExpanded ? fullDescription : shortDescription}
                                                 </p>
-                                                {/* Show Read More/Less link only if text exceeds 8 words */}
                                                 {isLongEnoughToToggle && (
                                                     <a
                                                         href="#"
                                                         onClick={(e) => {
                                                             e.preventDefault();
-                                                            toggleReadMore(key); // Toggle using the unique key
+                                                            toggleReadMore(key);
                                                         }}
                                                     >
                                                         {isExpanded ? "Read Less" : "Read More"}
@@ -306,22 +353,43 @@ const OurTeam = ({ headerHeight }) => {
                     <MarqueeBanner />
                 </section>
 
-                <section className="trainer-section">
+                {/* --- Section 3: Trainers --- */}
+                <section className="trainer-section" data-scroll-section>
                     <div className="container">
                         <div className="meet-team-Headings">
-                            <div className="fade-in-section" style={{ animationDelay: "0.25s" }}>
+                            <div
+                                className="fade-in-section"
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                style={{ animationDelay: "0.25s" }}
+                            >
                                 <h2 className="cofounderTitle">
                                     Trainers
                                 </h2>
                             </div>
                         </div>
                         <div className="trainer-cards">
-                            {/* Original trainersData map (retains original logic) */}
                             {trainersData.map((trainer, index) => {
-                                // Use the index directly as the key for trainers (using the previous logic)
-                                const isExpanded = expandedTrainers[index];
+                                const key = `trainer-${index}`;
+                                const isExpanded = expandedTrainers[key];
+
+                                // Logic for cutting description at 150 characters
+                                const displayDescription = isExpanded
+                                    ? trainer.description
+                                    : trainer.description.length > 150
+                                        ? trainer.description.slice(0, 150) + "..."
+                                        : trainer.description;
+
                                 return (
-                                    <div className="trainer-card" key={index}>
+                                    <div
+                                        className="trainer-card fade-in-section"
+                                        key={key}
+                                        data-scroll
+                                        data-scroll-class="is-inview"
+                                        data-scroll-repeat="true"
+                                        style={{ animationDelay: `${0.3 + index * 0.05}s` }} // Staggered delay
+                                    >
                                         <div className="trainer-name">
                                             <h3>{trainer.name}</h3>
                                         </div>
@@ -330,18 +398,14 @@ const OurTeam = ({ headerHeight }) => {
                                         </div>
                                         <div className="trainer-info">
                                             <p className={`description ${isExpanded ? "expanded" : ""}`}>
-                                                {isExpanded
-                                                    ? trainer.description
-                                                    : trainer.description.length > 150
-                                                        ? trainer.description.slice(0, 150) + "..."
-                                                        : trainer.description}
+                                                {displayDescription}
                                             </p>
                                             {trainer.description.length > 150 && (
                                                 <a
                                                     href="#"
                                                     onClick={(e) => {
                                                         e.preventDefault();
-                                                        toggleReadMore(index);
+                                                        toggleReadMore(key);
                                                     }}
                                                 >
                                                     {isExpanded ? "Read Less" : "Read More"}
@@ -354,77 +418,18 @@ const OurTeam = ({ headerHeight }) => {
                         </div>
                     </div>
                 </section>
-                {/* The commented out section (trainer-message-section) is kept commented out, 
-                and data-scroll-section is removed. */}
-                {/* <section className="moving-container" data-scroll-section>
-                    <MovingBanner />
-                </section>
-                <section className="trainer-message-section" data-scroll-section>
-                    <div className="container">
-                        <div className="meet-team-Headings">
 
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.1s" }}
-                            >
-                                <h3 className="SubHeading">Trainers Message</h3>
-                            </div>
-                            <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
-                                className="fade-in-section"
-                                style={{ animationDelay: "0.25s" }}
-                            >
-                                <h1 className="meetTitle">
-                                    Dedicated Ignite Trainers <br />Shaping Bright <span className="highlight">Futures</span>
-                                </h1>
-                            </div>
-                        </div>
-                        <div className="trainer-message-card">
-                            <div className="trainer-card">
-                                <div className="trainer-image">
-                                    <img src="/images/Trainermessage1.png" alt="ignite training institute's trainers" />
-                                </div>
-                                <div className="trainer-experience grbg">
-                                    <span className="grtx">10+ Years</span>
-                                </div>
-                            </div>
-                            <div className="trainer-card small">
-                                <div className="trainer-image">
-                                    <img src="/images/Trainermessage2.png" alt="ignite training institute's trainers" />
-                                </div>
-                                <div className="trainer-experience blbg">
-                                    <span className="bltx">10+ Years</span>
-                                </div>
-                            </div>
-                            <div className="trainer-card">
-                                <div className="trainer-image">
-                                    <img src="/images/Trainermessage3.png" alt="ignite training institute's trainers" />
-                                </div>
-                                <div className="trainer-experience grbg">
-                                    <span className="grtx">10+ Years</span>
-                                </div>
-                            </div>
-                            <div className="trainer-card small">
-                                <div className="trainer-image">
-                                    <img src="/images/Trainermessage4.png" alt="ignite training institute's trainers" />
-                                </div>
-                                <div className="trainer-experience blbg">
-                                    <span className="bltx">10+ Years</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section> */}
-                <section className="cta-section">
-
+                {/* --- Section 4: CTA --- */}
+                <section className="cta-section" data-scroll-section>
                     <div className="container call-to-action teams">
                         <div className="cta-container">
-                            <div className="cta-content">
+                            <div
+                                className="cta-content fade-in-section"
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                style={{ animationDelay: "0.1s" }}
+                            >
                                 <h2>Meet The Dedicated Educators <br /> Driving Student Success</h2>
                                 <p>
                                     Get to know the passionate experts whose knowledge, guidance, & commitment inspire students to achieve their full potential.
@@ -452,8 +457,6 @@ const OurTeam = ({ headerHeight }) => {
 
                                         </button>
                                     </a>
-                                    {/* <a href="/ourteam" className="btn">Join Our Team <span>→</span></a>
-                                    <a href="/join-free-demo-class" className="btn">Join a Free Demo <span>→</span></a> */}
                                 </div>
                             </div>
                         </div>

@@ -231,7 +231,7 @@ export default function CallToAction() {
                             <p style={styles.paragraph}>
                                 Get a glimpse of our teaching style & expert mentors. Discover how Ignite can make a real difference in your journey.
                             </p>
-                            <a href="https://ignitetraininginstitute.com/join-free-demo-class/" target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
+                            <a href="/join-free-demo-class/" style={{ textDecoration: 'none' }} rel="noreferrer">
                                 <button
                                     style={{ ...styles.button }}
                                 >
@@ -266,7 +266,7 @@ export default function CallToAction() {
                             </p>
 
                             <div style={styles.mobileButtonContainer}>
-                                <a href="https://ignitetraininginstitute.com/join-free-demo-class/" target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
+                                <a href="/join-free-demo-class/" style={{ textDecoration: 'none' }} rel="noreferrer">
 
                                     <button
                                         style={{ ...styles.mobileButton }}

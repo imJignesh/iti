@@ -85,7 +85,7 @@ const About = ({ headerHeight }) => {
                 <section data-scroll-section>
                     <TutoringCourses />
                 </section>
-                <section data-scroll-section>
+                <section data-scroll-section className="padding-0">
                     <Test
                         setActive={setActive}
                         isMobileSwiper={isMobileSwiper}

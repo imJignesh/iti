@@ -168,8 +168,8 @@ export default function Trainers({ }) {
             className="fade-in-section trainersTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            
-            Train With Expert Mentors At <br/> Dubai’s <span className="trainersHighlight">Trusted Institute</span>
+
+            Train With Expert Mentors At <br /> Dubai’s <span className="trainersHighlight">Trusted Institute</span>
           </h3>
 
           {isTrainersSwiper ? (
@@ -339,7 +339,7 @@ export default function Trainers({ }) {
 }
 
 .trainersSection {
-  padding: 100px 0 40px 0;
+  padding:  0;
   background: var(--white-bg);
   text-align: center;
 }

@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // ----------------------------------------------------------------------
-// Trainer Data
+// Trainer Data (Using only the provided data)
 // ----------------------------------------------------------------------
 
 const trainers = [
@@ -17,13 +17,11 @@ const trainers = [
     experience: "10+ YEARS",
     color: "green",
   },
-
 ];
 
 // ----------------------------------------------------------------------
 // Trainer Card Component
 // ----------------------------------------------------------------------
-
 
 const TrainerCard = ({ trainer }) => (
   <a href="/our-team">
@@ -48,21 +46,34 @@ export default function Trainers() {
   const trainersGridRef = useRef(null);
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
+  const [isMounted, setIsMounted] = useState(false); // For conditional rendering/line break
 
   useEffect(() => {
     const handleResize = () => {
       // Swiper active below 1199px
       setIsTrainersSwiper(window.innerWidth <= 1199);
     };
+
+    setIsMounted(true);
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
+  // Use the trainers array directly since there's no data that exceeds 10 for slicing
+  const displayTrainers = trainers;
 
   // The new global container class is 'trainers-global-container'
   const containerClass = 'trainers-global-container';
+
+  const currentTitle = (
+    <>
+      The Best <span className="highlight">Trainers</span> For Your
+      {/* FIX: Conditional line break for desktop only */}
+      {isMounted && !isTrainersSwiper ? <br /> : null}
+      Success Journey
+    </>
+  );
 
   return (
     <>
@@ -109,15 +120,14 @@ export default function Trainers() {
 
           .${containerClass} .trainersSection .trainersGrid {
             
-
-                display: grid;
-    grid-template-columns: repeat(auto-fit, calc((100% - 96px) / 5));
-    gap: 32px 24px;
-    justify-content: center;
-    margin-bottom: 36px;
-    width: 70vw;
-    margin: 0 auto;
-    margin-bottom: 50px;
+              display: grid;
+              grid-template-columns: repeat(auto-fit, calc((100% - 96px) / 5));
+              gap: 32px 24px;
+              justify-content: center;
+              margin-bottom: 0;
+              width: 70vw;
+              margin: 0 auto;
+              
           }
 
           .${containerClass} .trainersSection .trainerCard {
@@ -259,6 +269,9 @@ export default function Trainers() {
             cursor: pointer;
             transition: transform 0.3s ease, color 0.3s ease;
             z-index: 1;
+            /* Added for spacing the button */
+            margin-top: 20px;
+            margin-bottom: 0;
           }
 
           .${containerClass} .trainersSection .trainersSeeMore::before {
@@ -292,6 +305,56 @@ export default function Trainers() {
             color: var(--black-color);
             transform: scale(1.05);
           }
+
+          /* Style for SEE LESS to use the same look */
+          .${containerClass} .trainersSection .trainersSeeLess {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 5px 40px;
+            border-radius: 40px;
+            border: 3px solid transparent;
+            background-color: var(--white-color);
+            background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, #e7f6ff, var(--border-color)) border-box; /* Slight gradient variation for visual difference */
+            color: var(--blue-color);
+            font-size: 1vw;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+            z-index: 1;
+            margin-top: 20px;
+            margin-bottom: 50px;
+          }
+          
+          .${containerClass} .trainersSection .trainersSeeLess::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(
+              to right,
+              transparent,
+              #e7f6ff 60%,
+              var(--border-color) 85%,
+              var(--border-color)
+            );
+            z-index: -1;
+            transition: transform 0.6s ease-in-out;
+          }
+
+          .${containerClass} .trainersSection .trainersSeeLess:hover::before {
+            transform: translateX(-50%);
+          }
+          
+          .${containerClass} .trainersSection .trainersSeeLess:hover {
+            color: var(--black-color);
+            transform: scale(1.05);
+          }
+
 
           .${containerClass} .trainersSection .trainersPagination {
             margin-top: 32px;
@@ -511,81 +574,120 @@ export default function Trainers() {
         <section className="trainersSection" data-scroll-section>
           <div className="container">
             <div>
-              <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
+              {/* Heading 1: SubHeading - Added fade-in and data-scroll */}
+              <h2
+                className="SubHeading trainersSubheading fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                style={{ animationDelay: "0.1s" }}
+              >
+                OUR TUTORS
+              </h2>
             </div>
 
-            <h3 className="trainersTitle">
-              The Best <span className="highlight">Trainers</span> For Your<br />Success Journey
+            {/* Heading 2: Title - Added fade-in and data-scroll */}
+            <h3
+              className="trainersTitle fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              style={{ animationDelay: "0.2s" }}
+            >
+              {currentTitle}
             </h3>
 
-            {isTrainersSwiper ? (
-              <div className="trainersSwiperWrap">
-                <Swiper
-                  modules={[Navigation, Pagination]}
-                  spaceBetween={24}
-                  slidesPerView={1}
-                  breakpoints={{
-                    700: {
-                      slidesPerView: 2,
-                      spaceBetween: 24,
-                    },
-                    991: {
-                      slidesPerView: 3,
-                      spaceBetween: 24,
-                    },
-                  }}
-                  navigation={{
-                    prevEl: navPrevRef.current,
-                    nextEl: navNextRef.current,
-                  }}
-                  pagination={{
-                    clickable: true,
-                    el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
-                  }}
-                  onBeforeInit={(swiper) => {
-                    if (swiper.params.navigation) {
-                      swiper.params.navigation.prevEl = navPrevRef.current;
-                      swiper.params.navigation.nextEl = navNextRef.current;
-                    }
-                  }}
-                >
-                  {trainers.map((t, i) => (
-                    <SwiperSlide key={i}>
-                      <TrainerCard trainer={t} />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-                {/* Custom Navigation Buttons */}
-                <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
-                  {/* Placeholder for actual image/icon */}
-                  <img src="/images/left-arrow-blue.png" alt="english tutor in dubai" />
-                </button>
-                <button ref={navNextRef} className="customNavBtn swiper-button-next">
-                  {/* Placeholder for actual image/icon */}
-                  <img src="/images/right-arrow-blue.png" alt="english tutor in dubai" />
-                </button>
-                {/* Custom Pagination Container */}
-                <div className="trainersPagination"></div>
-              </div>
-            ) : (
-              <>
-                {/* Grid view for large screens */}
-                <div className="trainersGrid" ref={trainersGridRef}>
-                  {displayTrainers.map((t, i) => (
-                    <TrainerCard key={i} trainer={t} />
-                  ))}
-                </div>
-
-                {trainers.length > 10 && !showAll && (
-                  <button
-                    onClick={() => setShowAll(true)}
-                    className="trainersSeeMore"
+            {/* Content Wrapper for Scroll Tracking (Covers Swiper/Grid/Button) */}
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.3s" }}
+            >
+              {isTrainersSwiper ? (
+                <div className="trainersSwiperWrap">
+                  <Swiper
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={24}
+                    slidesPerView={1}
+                    breakpoints={{
+                      700: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                      },
+                      991: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                      },
+                    }}
+                    navigation={{
+                      prevEl: navPrevRef.current,
+                      nextEl: navNextRef.current,
+                    }}
+                    pagination={{
+                      clickable: true,
+                      el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
+                    }}
+                    onBeforeInit={(swiper) => {
+                      if (swiper.params.navigation) {
+                        swiper.params.navigation.prevEl = navPrevRef.current;
+                        swiper.params.navigation.nextEl = navNextRef.current;
+                      }
+                    }}
                   >
-                    SEE MORE
+                    {trainers.map((t, i) => (
+                      <SwiperSlide key={i}>
+                        <TrainerCard trainer={t} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                  {/* Custom Navigation Buttons */}
+                  <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
+                    <img src="/images/left-arrow-blue.png" alt="english tutor in dubai" />
                   </button>
-                )}
-              </>
-            )}
+                  <button ref={navNextRef} className="customNavBtn swiper-button-next">
+                    <img src="/images/right-arrow-blue.png" alt="english tutor in dubai" />
+                  </button>
+                  {/* Custom Pagination Container */}
+                  <div className="trainersPagination"></div>
+                </div>
+              ) : (
+                <>
+                  {/* Grid view for large screens */}
+                  <div className="trainersGrid" ref={trainersGridRef}>
+                    {displayTrainers.map((t, i) => (
+                      <div
+                        key={i}
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        className="fade-in-section"
+                        // Staggered delay for each card
+                        style={{ animationDelay: `${0.3 + i * 0.05}s` }}
+                      >
+                        <TrainerCard trainer={t} />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Combined SEE MORE / SEE LESS button logic */}
+                  {trainers.length > 10 && (
+                    <button
+                      onClick={() => setShowAll(!showAll)}
+                      className="trainersSeeMore fade-in-section"
+                      data-scroll
+                      data-scroll-class="is-inview"
+                      data-scroll-repeat="true"
+                      // Delay button appearance after all cards load
+                      style={{ animationDelay: `${0.3 + displayTrainers.length * 0.05}s` }}
+                    >
+                      {showAll ? "SEE LESS" : "SEE MORE"}
+                    </button>
+                  )}
+                </>
+              )}
+            </div>
           </div>
         </section>
       </div>

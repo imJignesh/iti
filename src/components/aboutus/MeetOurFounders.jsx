@@ -157,7 +157,7 @@ export default function MeetOurFounders() {
           overflow: hidden;
           position: relative;
         }
-
+        
         .founder-row {
           margin-bottom: 0;
         }
@@ -165,7 +165,14 @@ export default function MeetOurFounders() {
         .founder-row:last-child {
           margin-bottom: 0;
         }
-
+        :global(.message-text-content) {
+          color: #233467;
+        }
+        :global(.read-more-link) {
+          color: var(--blue-color);
+          text-decoration: underline !important;
+          font-weight: 600;
+          }
         /* Founder Image Container */
         .founder-image-container {
           position: relative;
@@ -267,12 +274,11 @@ export default function MeetOurFounders() {
         
         /* New class for the text content */
         .message-text-content {
-          color: #444;
           font-size: 23px;
           line-height: 1.8;
           margin-bottom: 1.2rem; 
         }
-
+        
         /* New anchor link style */
         .read-more-link {
           color: #00a491; /* Highlight color for the link */

@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // ----------------------------------------------------------------------
-// Trainer Data
+// Trainer Data (No Change)
 // ----------------------------------------------------------------------
 
 const trainers = [
@@ -133,6 +133,7 @@ const TrainerCard = ({ trainer }) => (
     <div data-color={trainer.color} className="trainerCard">
       <div className="trainerName">{trainer.name}</div>
       <div className="trainerImgWrap">
+        {/* NOTE: Assuming Image component is used, replacing with generic <img> based on current file structure */}
         <img src={trainer.img} alt="a level tutors in dubai" className="trainerImg" />
       </div>
       <div className="trainerSubtitle">{trainer.subtitle}</div>
@@ -147,32 +148,38 @@ const TrainerCard = ({ trainer }) => (
 
 export default function Trainers() {
   const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
-  const [isMounted, setIsMounted] = useState(false); // New state to handle SSR issues
   const [showAll, setShowAll] = useState(false);
+  const [isMounted, setIsMounted] = useState(false); // Added for conditional rendering
   const trainersGridRef = useRef(null);
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
-      const width = window.innerWidth;
-
-      // Swiper active below 1199px (Desktop/Large Tablet breakpoint)
-      setIsTrainersSwiper(width <= 1199);
-      // Note: We don't need to use the old isMobileView state for the line break anymore
-      // setIsMobileView(width <= 768); 
+      // Swiper active below 1199px
+      setIsTrainersSwiper(window.innerWidth <= 1199);
     };
 
-    // 1. Run once on mount to set initial state
+    // Set mounted state
+    setIsMounted(true);
     handleResize();
-    setIsMounted(true); // Component has mounted on the client
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
+
+  // The new global container class is 'trainers-global-container'
   const containerClass = 'trainers-global-container';
+
+  const currentTitle = (
+    <>
+      The Best A Levels<span className="highlight"> Trainers </span> For Your
+      {/* FIX: Conditional line break for desktop only */}
+      {isMounted && !isTrainersSwiper ? <br /> : null}
+      Success Journey
+    </>
+  );
 
   return (
     <>
@@ -181,7 +188,7 @@ export default function Trainers() {
           /* Trainer Section - Refactored for global use with .trainers-global-container */
 
           .${containerClass} .trainersSection {
-            padding: 0 0;
+            padding: 0;
             background: var(--white-bg);
             text-align: center;
           }
@@ -243,7 +250,7 @@ export default function Trainers() {
 
           .${containerClass} .trainersSection .trainerCard:nth-child(7),
           .${containerClass} .trainersSection .trainerCard:nth-child(9) {
-            translate: 0 20px;
+            transform: translateY(20px);
           }
 
           .${containerClass} .trainersSection .trainerCard[data-color="blue"] {
@@ -557,11 +564,12 @@ export default function Trainers() {
             }
 
             .${containerClass} .trainersSection .trainersSubheading {
-              font-size: 0.9rem;
+              font-size: 15px;
             }
 
             .${containerClass} .trainersSection .trainersTitle {
-              font-size: 1.2rem;
+              font-size: 20.4px;
+              line-height: 23px;
               max-width: 100%;
               margin: 20px 0;
             }
@@ -603,89 +611,120 @@ export default function Trainers() {
         <section className="trainersSection" data-scroll-section>
           <div className="container">
             <div>
-              <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
+              {/* Heading 1: SubHeading */}
+              <h2
+                className="SubHeading trainersSubheading fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                style={{ animationDelay: "0.1s" }}
+              >
+                OUR TUTORS
+              </h2>
             </div>
 
-            <h3 className="trainersTitle">
-              The Best A Levels<span className="highlight"> Trainers </span> For Your
-
-              {/* FIX: Use !isTrainersSwiper which is true for desktop (>1199px).
-                 It will render <br /> only on desktop, ensuring the line break is hidden 
-                 whenever the swiper or mobile view is active. */}
-              {isMounted && !isTrainersSwiper ? <br /> : null}
-
-              Success Journey
+            {/* Heading 2: Title */}
+            <h3
+              className="trainersTitle fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              style={{ animationDelay: "0.2s" }}
+            >
+              {currentTitle}
             </h3>
 
-            {isTrainersSwiper ? (
-              <div className="trainersSwiperWrap">
-                <Swiper
-                  modules={[Navigation, Pagination]}
-                  spaceBetween={24}
-                  slidesPerView={1}
-                  breakpoints={{
-                    700: {
-                      slidesPerView: 2,
-                      spaceBetween: 24,
-                    },
-                    991: {
-                      slidesPerView: 3,
-                      spaceBetween: 24,
-                    },
-                  }}
-                  navigation={{
-                    prevEl: navPrevRef.current,
-                    nextEl: navNextRef.current,
-                  }}
-                  pagination={{
-                    clickable: true,
-                    el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
-                  }}
-                  onBeforeInit={(swiper) => {
-                    if (swiper.params.navigation) {
-                      swiper.params.navigation.prevEl = navPrevRef.current;
-                      swiper.params.navigation.nextEl = navNextRef.current;
-                    }
-                  }}
-                >
-                  {trainers.map((t, i) => (
-                    <SwiperSlide key={i}>
-                      <TrainerCard trainer={t} />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-                {/* Custom Navigation Buttons */}
-                <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
-                  {/* Placeholder for actual image/icon */}
-                  <img src="/images/left-arrow-blue.png" alt="Previous" />
-                </button>
-                <button ref={navNextRef} className="customNavBtn swiper-button-next">
-                  {/* Placeholder for actual image/icon */}
-                  <img src="/images/right-arrow-blue.png" alt="Next" />
-                </button>
-                {/* Custom Pagination Container */}
-                <div className="trainersPagination"></div>
-              </div>
-            ) : (
-              <>
-                {/* Grid view for large screens */}
-                <div className="trainersGrid" ref={trainersGridRef}>
-                  {displayTrainers.map((t, i) => (
-                    <TrainerCard key={i} trainer={t} />
-                  ))}
-                </div>
-
-                {/* Combined SEE MORE / SEE LESS button logic */}
-                {trainers.length > 10 && (
-                  <button
-                    onClick={() => setShowAll(!showAll)}
-                    className="trainersSeeMore"
+            {/* Content Wrapper for Scroll Tracking (Covers Swiper/Grid/Button) */}
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.3s" }}
+            >
+              {isTrainersSwiper ? (
+                <div className="trainersSwiperWrap">
+                  <Swiper
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={24}
+                    slidesPerView={1}
+                    breakpoints={{
+                      700: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                      },
+                      991: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                      },
+                    }}
+                    navigation={{
+                      prevEl: navPrevRef.current,
+                      nextEl: navNextRef.current,
+                    }}
+                    pagination={{
+                      clickable: true,
+                      el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
+                    }}
+                    onBeforeInit={(swiper) => {
+                      if (swiper.params.navigation) {
+                        swiper.params.navigation.prevEl = navPrevRef.current;
+                        swiper.params.navigation.nextEl = navNextRef.current;
+                      }
+                    }}
                   >
-                    {showAll ? "SEE LESS" : "SEE MORE"}
+                    {trainers.map((t, i) => (
+                      <SwiperSlide key={i}>
+                        <TrainerCard trainer={t} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                  {/* Custom Navigation Buttons */}
+                  <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
+                    <img src="/images/left-arrow-blue.png" alt="a level tutors in dubai" />
                   </button>
-                )}
-              </>
-            )}
+                  <button ref={navNextRef} className="customNavBtn swiper-button-next">
+                    <img src="/images/right-arrow-blue.png" alt="a level tutors in dubai" />
+                  </button>
+                  {/* Custom Pagination Container */}
+                  <div className="trainersPagination"></div>
+                </div>
+              ) : (
+                <>
+                  {/* Grid view for large screens */}
+                  <div className="trainersGrid" ref={trainersGridRef}>
+                    {displayTrainers.map((t, i) => (
+                      <div
+                        key={i}
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        className="fade-in-section"
+                        // Staggered delay for each card
+                        style={{ animationDelay: `${0.3 + i * 0.05}s` }}
+                      >
+                        <TrainerCard trainer={t} />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Combined SEE MORE / SEE LESS button logic */}
+                  {trainers.length > 10 && (
+                    <button
+                      onClick={() => setShowAll(!showAll)}
+                      className="trainersSeeMore fade-in-section"
+                      data-scroll
+                      data-scroll-class="is-inview"
+                      data-scroll-repeat="true"
+                      // Delay button appearance after all cards load
+                      style={{ animationDelay: `${0.3 + displayTrainers.length * 0.05}s` }}
+                    >
+                      {showAll ? "SEE LESS" : "SEE MORE"}
+                    </button>
+                  )}
+                </>
+              )}
+            </div>
           </div>
         </section>
       </div>

@@ -64,7 +64,7 @@ export default function IBCurriculumStages() {
                 <br />
                 TUTORS FOR
                 <br />
-                <h3 className="program">IBDP</h3>
+                <span className="program">IBDP</span>
               </h3>
               <div className="divider"></div>
               <div className="card-description">
@@ -122,7 +122,7 @@ export default function IBCurriculumStages() {
                 <br />
                 TUTORS FOR
                 <br />
-                <h3
+                <span
                   className="program1"
                   style={{
                     backgroundImage:
@@ -136,7 +136,7 @@ export default function IBCurriculumStages() {
                   }}
                 >
                   MYP
-                </h3>
+                </span>
               </h3>
               <div className="divider"></div>
               <div className="card-description">

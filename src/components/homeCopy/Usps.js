@@ -1,21 +1,30 @@
-import React from "react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
-import "swiper/css/scrollbar";
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  EffectCoverflow,
-  Scrollbar,
-  Mousewheel,
-} from "swiper/modules";
-// import Image from "next/image";
+import React, { useState, useEffect, useCallback } from "react";
+// ... (rest of imports)
 import Image from '@/components/CustomImageWrapper';
 
+// Custom Hook to Detect Mobile/Tablet View for disabling sticky logic
+const useIsStickyDisabled = (breakpoint = 1100) => {
+  const [isStickyDisabled, setIsStickyDisabled] = useState(false);
+
+  const checkStickyDisabled = useCallback(() => {
+    if (typeof window !== "undefined") {
+      // Disable sticky tracking when screen width is less than the CSS breakpoint (1100px)
+      setIsStickyDisabled(window.innerWidth <= breakpoint);
+    }
+  }, [breakpoint]);
+
+  useEffect(() => {
+    checkStickyDisabled();
+    window.addEventListener("resize", checkStickyDisabled);
+    return () => window.removeEventListener("resize", checkStickyDisabled);
+  }, [checkStickyDisabled]);
+
+  return isStickyDisabled;
+};
+
+
 const uspData = [
+  // ... uspData remains the same ...
   {
     number: "01",
     icon: "/images/usp-icon1.png",
@@ -72,33 +81,41 @@ for (let i = 0; i < uspData.length; i += 2) {
 }
 
 export default function Usps({ }) {
-  // Define the text for both desktop and mobile
-  const desktopText = "We go beyond just tutoring with personalised learning, proven methods, & expert support that deliver real results.";
-  const mobileText = "Beyond just tutoring: personalised learning, proven methods, & expert support deliver real results.";
+  const isStickyDisabled = useIsStickyDisabled();
+
+  // Helper function to return data-scroll attributes or empty object
+  const getStickyProps = () => {
+    if (isStickyDisabled) {
+      return {};
+    }
+    return {
+      "data-scroll": true,
+      "data-scroll-sticky": true,
+      "data-scroll-target": ".uspSection",
+    };
+  };
 
   return (
     <>
-      {/* CRITICAL FIX: Removed the outer <section data-scroll-section> wrapper.
-        The host page (e.g., HomeCopy.js, subject-tutoring.js) must now provide the <section data-scroll-section>.
-      */}
       <div
-        className="usp-section sp-container" // Main container for styling
+        className="usp-section sp-container"
       >
         <div
-          className="fade-in-sections uspSection" // This is the data-scroll-target container
+          className="fade-in-sections uspSection"
           style={{ animationDelay: "0.2s" }}
         >
           <div className="row justify-content-between gx-5">
             <div className="col-lg-4">
               <div
                 className="uspLeft"
-                // FIX: These attributes enable Locomotive Scroll's custom sticky behavior
-                data-scroll
-                data-scroll-sticky
-                data-scroll-target=".uspSection"
+                // Apply sticky props only on desktop (when sticky is NOT disabled)
+                {...getStickyProps()}
               >
                 <h2
                   className="fade-in-sections SubHeading"
+                  data-scroll // Added data-scroll to ensure animation runs, even without sticky
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
@@ -106,6 +123,9 @@ export default function Usps({ }) {
 
                 <h3
                   className="fade-in-sections uspTitle"
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
                   style={{ animationDelay: "0.2s" }}
                 >
                   Here's Why Ignite Is The UAE's First Choice
@@ -114,6 +134,9 @@ export default function Usps({ }) {
 
                 <h4
                   className="fade-in-sections uspSubtitle"
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
                   style={{ animationDelay: "0.3s" }}
                 >
                   Real Support, Real Progress
@@ -122,6 +145,9 @@ export default function Usps({ }) {
                 {/* 1. DESKTOP TEXT (Visible on large screens and up) */}
                 <p
                   className="fade-in-section uspDesc d-none d-lg-block"
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
                   style={{ animationDelay: "0.4s" }}
                 >
                   We go beyond just tutoring & focus on personalised learning, proven methods, & expert guidance that drive real results. Discover what makes us the trusted choice for students & parents alike.
@@ -130,6 +156,9 @@ export default function Usps({ }) {
                 {/* 2. MOBILE TEXT (Visible on small/medium screens only) */}
                 <p
                   className="fade-in-section uspDesc d-lg-none"
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
                   style={{ animationDelay: "0.4s" }}
                 >
                   We go beyond just tutoring with personalised learning, proven methods, & expert support that deliver real results.
@@ -138,6 +167,9 @@ export default function Usps({ }) {
                 <a
                   href="/why-ignite/"
                   className="uspBtn fade-in-sections buttonSkyBlue"
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE{" "}
@@ -156,7 +188,15 @@ export default function Usps({ }) {
                 {uspDataRows.map((row, index) => (
                   <div key={index} className="uspSlide">
                     {row.map((usp, i) => (
-                      <div key={i} className="uspItem">
+                      <div
+                        key={i}
+                        className="uspItem"
+                        // Added data-scroll attributes to the individual USP items for animation tracking
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        style={{ animationDelay: `${0.6 + i * 0.15}s` }}
+                      >
                         <div className="uspNumber">{usp.number}</div>
                         <div className="uspIconCircle">
                           <Image

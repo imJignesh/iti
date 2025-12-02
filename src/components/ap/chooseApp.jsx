@@ -157,7 +157,7 @@ margin-block: 10px;
         color: #233467;
         font-weight: 500;
         margin-block:22px;
-        letter-spacing: 2px;
+        letter-spacing: normal;
         flex: 2;
     }
   }
@@ -249,7 +249,7 @@ margin-block: 10px;
         color: #233467;
         font-weight: 500;
         margin-block:22px;
-        letter-spacing: 2px;
+        letter-spacing: normal;
         flex: 2;
     }
 

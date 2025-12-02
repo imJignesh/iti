@@ -16,97 +16,38 @@ export default function IgniteAboutCard() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <section className="ignite-section">
-      <div className="ignite-container">
-        {/* Left Content */}
-        <div className="ignite-left">
-          <div className="text-center mb-5 fade-in-section">
-            <div className="testHeadings">
-              <div
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section"
-                style={{ animationDelay: "0.1s" }}
-              >
-                <h2 className="SubHeading testSubheading">OUR APPROACH
-                </h2>
-              </div>
-              <h3
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
-              >
-                How We Make ACT Prep Truly<span className="highlight"> Effective </span>
-              </h3>
-            </div>
-          </div>
-
-
-          {/* <p
-            className="ignite-description  fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{
-              animationDelay: "0.3s",
-            }}
-          >
-            Founded in 2015, Ignite Training Institute is dedicated to guiding students on their unique paths. Through personalized tutoring & in-depth expertise, we help students build confidence, strengthen understanding, & reach their full potential.
-          </p> */}
-          {/* <h2 className="ignite-secondary-title fade-in-section" data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat style={{
-              animationDelay: "0.3s",
-            }}>
-            LOREM IPSUM DOLOR SIT AMET,<br />
-            CONSECTETUR ADIPISCING
+    <div
+      className="overflow-hidden fade-in-section container aboutignite-card"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat
+      style={{ animationDelay: "0.1s" }}
+    >
+      <div
+        className="container fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat
+        style={{ maxWidth: "1140px", animationDelay: "0.15s" }}
+      >
+        <div
+          className="curriculumSubSection"
+        >
+          <h2 className="SubHeading testSubheading">
+            OUR APPROACH
           </h2>
-
-          <p className="ignite-short-description">
-            Choosing us means partnering with
-            experienced coaches who are dedicated to
-            unlocking your potential.
-          </p> */}
-        </div>
-
-        {/* Right Content */}
-        {/* <div className="ignite-right">
-          <img
-            src="/assets/arect.png"
-            alt="bg-shape"
-            className="testimonialRect rect-1"
-          />
-          <img
-            src="/assets/arect1.png"
-            alt="bg-shape"
-            className="testimonialRect rect-2"
-          />
-          <img
-            src="/assets/arect2.png"
-            alt="bg-shape"
-            className="testimonialRect rect-3"
-          />
-
-          <div
-            className="image-container fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{
-              animationDelay: "0.3s",
-            }}
-          >
-            <img
-              src="/assets/aboutbg.jpg"
-              alt="Two professionals working together on laptop"
-              className="main-image"
-            />
+          <div className="testHeadings">
+            <h3
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle"
+              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+            >
+              How We Make ACT Prep Truly<span className="highlight"> Effective </span>
+            </h3>
           </div>
-        </div> */}
-        {/* Separate Check items boxes */}
+        </div>
       </div>
 
       <div
@@ -198,7 +139,9 @@ export default function IgniteAboutCard() {
           font-weight: normal;
           font-style: normal;
         }
-
+        .aboutignite-card{
+            text-align: center;
+            }
         .my-text {
           font-family: "Monstra", sans-serif;
         }
@@ -799,6 +742,6 @@ bottom: 5%;
   }
 }
       `}</style>
-    </section>
+    </div>
   );
 }

@@ -18,7 +18,7 @@ export default function TutoringCourses() {
   }, []);
 
   return (
-    <div className="container mx-auto" style={{ marginBlock: isMobile ? "2.5rem" : "96px" }}>
+    <div className="container mx-auto" style={{ marginBlock: isMobile ? "2.5rem" : "0" }}>
       <Head>
         <title>Tutoring Courses</title>
         <meta charSet="utf-8" />
@@ -372,7 +372,7 @@ export default function TutoringCourses() {
           background: transparent;
           display: flex;
           justify-content: center;
-          padding: 2.5rem 0.5rem;
+          padding: 0 0.5rem;
           max-width: 90vw;
         }
 
@@ -424,6 +424,7 @@ export default function TutoringCourses() {
           width: 100%;
           height: 180px;
           justify-content: space-between;
+          margin-bottom: 20px;
         }
 
         @media (min-width: 768px) {
@@ -481,10 +482,10 @@ export default function TutoringCourses() {
         .card-description {
           color: #233467;
           opacity: 0.5;
-          font-size: ${isMobile ? "0.55rem" : "1rem"};
+          font-size: ${isMobile ? "0.7rem" : "1rem"};
           line-height: 1.2;
           margin-bottom: 0.5rem;
-          max-width: ${isMobile ? "140px" : "220px"};
+          max-width: ${isMobile ? "90%" : "100%"};
           flex-grow: 1;
           font-weight: 500;
           display: flex;

@@ -315,14 +315,43 @@
     color: var(--dark-color);
     text-align: left;
     padding-top: 20px;
-    padding-left: 60px;
 
+}
+
+.admin-card-content {
+    padding-left: 60px;
 }
 
 .admin-card-info a {
     color: var(--blue-color);
     text-decoration: underline !important;
     font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .admin-card-content {
+        padding-left: 30px;
+    }
+
+    .admin-staff-cards {
+        gap: 5rem;
+    }
+
+    .admin-card-info p {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-staff-cards {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .admin-card-content {
+        padding-left: 0px;
+    }
 }
 
 /*  Trainer Section */
@@ -454,7 +483,7 @@
 
     .admin-staff-cards {
         justify-content: space-around;
-        gap: 10px;
+        /* gap: 10px; */
     }
 
     .admin-card {

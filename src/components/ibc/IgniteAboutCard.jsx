@@ -16,97 +16,41 @@ export default function IgniteAboutCard() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <section className="ignite-section">
-      <div className="ignite-container">
-        {/* Left Content */}
-        <div className="ignite-left">
-          <div className="text-center mb-5 fade-in-section">
-            <div className="testHeadings">
-              <div
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section"
-                style={{ animationDelay: "0.1s" }}
-              >
-                <h2 className="SubHeading testSubheading">OUR APPROACH
-                </h2>
-              </div>
-              <h3
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
-              >
-                How We Make IB Learning Truly<span className="highlight"> Effective </span>
-              </h3>
-            </div>
-          </div>
-
-          {/* <p
-            className="ignite-description  fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{
-              animationDelay: "0.3s",
-            }}
-          >
-            Founded in 2015, Ignite Training Institute is dedicated to guiding students on their unique paths. Through personalized tutoring & in-depth expertise, we help students build confidence, strengthen understanding, & reach their full potential.
-          </p> */}
-          {/* <h2 className="ignite-secondary-title fade-in-section" data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat style={{
-              animationDelay: "0.3s",
-            }}>
-            LOREM IPSUM DOLOR SIT AMET,<br />
-            CONSECTETUR ADIPISCING
+    <div
+      className="overflow-hidden fade-in-section container aboutignite-card"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat
+      style={{ animationDelay: "0.1s" }}
+    >
+      <div
+        className="container fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat
+        style={{ maxWidth: "1140px", animationDelay: "0.15s" }}
+      >
+        <div
+          className="curriculumSubSection"
+        >
+          <h2 className="SubHeading testSubheading">
+            OUR APPROACH
           </h2>
-
-          <p className="ignite-short-description">
-            Choosing us means partnering with
-            experienced coaches who are dedicated to
-            unlocking your potential.
-          </p> */}
-        </div>
-
-        {/* Right Content */}
-        {/* <div className="ignite-right">
-          <img
-            src="/assets/arect.png"
-            alt="ib tutor in dubai"
-            className="testimonialRect rect-1"
-          />
-          <img
-            src="/assets/arect1.png"
-            alt="ib tutor in dubai"
-            className="testimonialRect rect-2"
-          />
-          <img
-            src="/assets/arect2.png"
-            alt="ib tutor in dubai"
-            className="testimonialRect rect-3"
-          />
-
-          <div
-            className="image-container fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{
-              animationDelay: "0.3s",
-            }}
-          >
-            <img
-              src="/assets/aboutbg.jpg"
-              alt="ib tutor in dubai"
-              className="main-image"
-            />
+          <div className="testHeadings">
+            <h3
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle"
+              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+            >
+              How We Make IB Learning Truly<span className="highlight"> Effective </span>
+            </h3>
           </div>
-        </div> */}
-        {/* Separate Check items boxes */}
+        </div>
       </div>
+      {/* <section className="ignite-section"> */}
+
 
       <div
         className="check-boxes-container fade-in-section approach"
@@ -120,7 +64,7 @@ export default function IgniteAboutCard() {
           <div className="d-flex flex-column align-items-center gap-2 mb-4 mb-md-0">
             <h3 className="heading-title gradient-text">TRAINING</h3>
             <p className="heading-subtitle">
-              Interactive lessons led by experts                <br className="d-none d-md-block" />
+              Interactive lessons led by experts <br className="d-none d-md-block" />
               to build strong foundations.
             </p>
           </div>
@@ -197,7 +141,9 @@ export default function IgniteAboutCard() {
           font-weight: normal;
           font-style: normal;
         }
-
+        .aboutignite-card{
+            text-align: center;
+            }
         .my-text {
           font-family: "Monstra", sans-serif;
         }
@@ -211,24 +157,24 @@ export default function IgniteAboutCard() {
 
         .rect-1 {
            top: 5%;
-    left: -45%;
-    width: 350px;
-    height: 88px;
-        }
+            left: -45%;
+            width: 350px;
+            height: 88px;
+          }
 
         .rect-2 {
-    top: 40%;
-    right: 100%;
-    width: 114px;
-    height: 88px;
+          top: 40%;
+          right: 100%;
+          width: 114px;
+          height: 88px;
         }
 
         .rect-3 {
- bottom: 5%;
-    right: 100%;
-    width: 542px;
-    height: 88px;
-        }
+        bottom: 5%;
+            right: 100%;
+            width: 542px;
+            height: 88px;
+                }
 
 
         .ignite-section {
@@ -387,7 +333,7 @@ export default function IgniteAboutCard() {
         }
 
         .check-box {
-background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 202, 245, 0.35) 92.85%);
+          background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 202, 245, 0.35) 92.85%);
           border-radius: 15px;
           padding: 20px;
           display: flex;
@@ -440,12 +386,12 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
 
         .heading-subtitle {
           font-size: 18px;
-    text-align: center;
-    color: #233467;
-    margin: 0;
-    line-height: 1.4;
-    font-weight: 500;
-}
+            text-align: center;
+            color: #233467;
+            margin: 0;
+            line-height: 1.4;
+            font-weight: 500;
+        }
 
         .gradient-text {
           background: linear-gradient(to right, #161664, #3f88ba);
@@ -582,223 +528,224 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
         }
           @media (max-width: 575px) {
           .custom-grid {
-  gap: .5rem;
-}
-  .cust-text {
-    background: linear-gradient(90deg, #161664, #3F88BA) !important;
-    color: white !important;
-    padding: 8px 8px 8px 13px !important;
-    border: none !important;
-    -webkit-transition: opacity .3s ease !important;
-    -moz-transition: opacity.3s ease!important;
-    -o-transition: opacity.3s ease!important;
-    transition: opacity .3s ease !important;
-    letter-spacing: 1px !important;
-    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
-    margin-top: 45px !important;
-    font-weight:600 !important;
-  }
-
-  .custom-height {
-    width: 30px !important;
-    height: 30px !important;
-    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
-    animation-delay: 0.75s !important;
-    margin-left: 1rem !important;
-  }
-}
-  @media (min-width: 1536px) and (max-width: 1919px) {
-  .ignite-main-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #233467;
-    line-height: 1.2;
-    margin: 40px 0 30px 0;
-}
-                .rect-1 {
-top: 5%;
-    left: -45.8%;
-    width: 283px;
-    height: 70px;
-        }
-
-        .rect-2 {
-    top: 40%;
-    right: 100%;
-    width: 114px;
-    height: 70px;
-        }
-
-        .rect-3 {
- bottom: 5%;
-    right: 100%;
-    width: 350px;
-    height: 70px;
-        }
-    
-
-.heading-title {
-    font-family: "Monstra", sans-serif;
-    font-weight: bolder;
-    font-size: 25px;
-    text-align: center;
-    position: relative;
-    display: inline-block;
-}
-    .heading-subtitle {
-    font-size: 16px;
-    text-align: center;
-    color: #233467;
-    margin: 0;
-    line-height: 1.4;
-    font-weight: 500;
-}
-      .custom-grid {
-    gap: .5rem;
-    margin-bottom:3.5rem;
-  }
-
-  .cust-text {
-    background: linear-gradient(90deg, #161664, #3F88BA) !important;
-    color: white !important;
-padding: 10px 8px 10px 15px !important;
-display:flex;
-justify-content:space-between;
-    border: none !important;
-    -webkit-transition: opacity .3s ease !important;
-    -moz-transition: opacity .3s ease !important;
-    -o-transition: opacity .3s ease !important;
-    transition: opacity .3s ease !important;
-    letter-spacing: 1px !important;
-    font-size: clamp(0.7rem, 1rem, 1.1rem) !important;
-    margin-top: 20px !important;
-    font-weight: 600 !important;
-    min-width:220px;
-  }
-
-  .custom-height {
-        width: 35px !important;
-        height: 35px !important;
-    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
-    animation-delay: 0.75s !important;
-    margin-left: 1rem !important;
-  }
-      }
-  @media (min-width: 1200px) and (max-width: 1535px) {
-  .subtitle-wrapper{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex
-;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -webkit-justify-content: center;
-    -moz-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-    .ignite-description{
-    font-size: 0.9vw;
-    font-weight: 600;
-    color: #7a8ca3;
-    margin: 0 0 18px 0;
-    line-height: 1.6;
-    max-width: 90%;
-}
-    .ignite-main-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #233467;
-    line-height: 1.2;
-    margin: 0 0 12px 0;
-    margin-bottom: 11px;
-}
-            .rect-1 {
-top: 5%;
-        left: -40%;
-        width: 200px;
-        height: 60px;
-        }
-
-        .rect-2 {
-        top: 40%;
-        right: 100%;
-        width: 105px;
-        height: 60px;
-        }
-
-        .rect-3 {
-bottom: 5%;
-        right: 100%;
-        width: 400px;
-        height: 60px;
-        }
-        .heading-title {
-    font-family: "Monstra", sans-serif;
-    font-weight: bolder;
-    font-size: 22px;
-    text-align: center;
-    position: relative;
-    display: inline-block;
-}
-    .heading-subtitle {
-    font-size: 14px;
-    text-align: center;
-    color: #233467;
-    margin: 0;
-    line-height: 1.4;
-    font-weight: 500;
-}
-  }
-@media (max-width: 575px) {
-
-.ignite-section {
-        padding: 0 0px;
-                max-width: 100%;
-        }
-        .subtitle-wrapper{
-         margin-top:0;
-         
-        }
-          .subtitle-wrapper >div{
-          margin-bottom:0 !important;
+            gap: .5rem;
+          }
+            .cust-text {
+              background: linear-gradient(90deg, #161664, #3F88BA) !important;
+              color: white !important;
+              padding: 8px 8px 8px 13px !important;
+              border: none !important;
+              -webkit-transition: opacity .3s ease !important;
+              -moz-transition: opacity.3s ease!important;
+              -o-transition: opacity.3s ease!important;
+              transition: opacity .3s ease !important;
+              letter-spacing: 1px !important;
+              font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+              margin-top: 45px !important;
+              font-weight:600 !important;
             }
-          .custom-grid {
-  gap: .5rem;
-}
-  .cust-text {
-    background: linear-gradient(90deg, #161664, #3F88BA) !important;
-    color: white !important;
-    padding: 8px 8px 8px 13px !important;
-    border: none !important;
-    -webkit-transition: opacity .3s ease !important;
-    -moz-transition: opacity.3s ease!important;
-    -o-transition: opacity.3s ease!important;
-    transition: opacity .3s ease !important;
-    letter-spacing: 1px !important;
-    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
-    margin-top: 10px !important;
-    font-weight:600 !important;
-  }
 
-  .custom-height {
-    width: 30px !important;
-    height: 30px !important;
-    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
-    animation-delay: 0.75s !important;
-    margin-left: 1rem !important;
-  }
-}
+            .custom-height {
+              width: 30px !important;
+              height: 30px !important;
+              background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+              animation-delay: 0.75s !important;
+              margin-left: 1rem !important;
+            }
+          }
+            @media (min-width: 1536px) and (max-width: 1919px) {
+            .ignite-main-title {
+              font-size: 1.8rem;
+              font-weight: 700;
+              color: #233467;
+              line-height: 1.2;
+              margin: 40px 0 30px 0;
+          }
+                          .rect-1 {
+          top: 5%;
+              left: -45.8%;
+              width: 283px;
+              height: 70px;
+                  }
+
+                  .rect-2 {
+              top: 40%;
+              right: 100%;
+              width: 114px;
+              height: 70px;
+                  }
+
+                  .rect-3 {
+          bottom: 5%;
+              right: 100%;
+              width: 350px;
+              height: 70px;
+                  }
+              
+
+          .heading-title {
+              font-family: "Monstra", sans-serif;
+              font-weight: bolder;
+              font-size: 25px;
+              text-align: center;
+              position: relative;
+              display: inline-block;
+          }
+              .heading-subtitle {
+              font-size: 16px;
+              text-align: center;
+              color: #233467;
+              margin: 0;
+              line-height: 1.4;
+              font-weight: 500;
+          }
+                .custom-grid {
+              gap: .5rem;
+              margin-bottom:3.5rem;
+            }
+
+            .cust-text {
+              background: linear-gradient(90deg, #161664, #3F88BA) !important;
+              color: white !important;
+          padding: 10px 8px 10px 15px !important;
+          display:flex;
+          justify-content:space-between;
+              border: none !important;
+              -webkit-transition: opacity .3s ease !important;
+              -moz-transition: opacity .3s ease !important;
+              -o-transition: opacity .3s ease !important;
+              transition: opacity .3s ease !important;
+              letter-spacing: 1px !important;
+              font-size: clamp(0.7rem, 1rem, 1.1rem) !important;
+              margin-top: 20px !important;
+              font-weight: 600 !important;
+              min-width:220px;
+            }
+
+            .custom-height {
+                  width: 35px !important;
+                  height: 35px !important;
+              background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+              animation-delay: 0.75s !important;
+              margin-left: 1rem !important;
+            }
+                }
+            @media (min-width: 1200px) and (max-width: 1535px) {
+            .subtitle-wrapper{
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: flex
+          ;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -moz-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              -webkit-box-pack: start;
+              -webkit-justify-content: center;
+              -moz-box-pack: start;
+              -ms-flex-pack: start;
+              justify-content: center;
+              gap: 15px;
+              margin-bottom: 0;
+              margin-top: 0;
+          }
+              .ignite-description{
+              font-size: 0.9vw;
+              font-weight: 600;
+              color: #7a8ca3;
+              margin: 0 0 18px 0;
+              line-height: 1.6;
+              max-width: 90%;
+          }
+              .ignite-main-title {
+              font-size: 1.5rem;
+              font-weight: 700;
+              color: #233467;
+              line-height: 1.2;
+              margin: 0 0 12px 0;
+              margin-bottom: 11px;
+          }
+                      .rect-1 {
+          top: 5%;
+                  left: -40%;
+                  width: 200px;
+                  height: 60px;
+                  }
+
+                  .rect-2 {
+                  top: 40%;
+                  right: 100%;
+                  width: 105px;
+                  height: 60px;
+                  }
+
+                  .rect-3 {
+          bottom: 5%;
+                  right: 100%;
+                  width: 400px;
+                  height: 60px;
+                  }
+                  .heading-title {
+              font-family: "Monstra", sans-serif;
+              font-weight: bolder;
+              font-size: 22px;
+              text-align: center;
+              position: relative;
+              display: inline-block;
+          }
+              .heading-subtitle {
+              font-size: 14px;
+              text-align: center;
+              color: #233467;
+              margin: 0;
+              line-height: 1.4;
+              font-weight: 500;
+          }
+            }
+          @media (max-width: 575px) {
+
+          .ignite-section {
+                  padding: 0 0px;
+                          max-width: 100%;
+                  }
+                  .subtitle-wrapper{
+                  margin-top:0;
+                  
+                  }
+                    .subtitle-wrapper >div{
+                    margin-bottom:0 !important;
+                      }
+                    .custom-grid {
+            gap: .5rem;
+          }
+            .cust-text {
+              background: linear-gradient(90deg, #161664, #3F88BA) !important;
+              color: white !important;
+              padding: 8px 8px 8px 13px !important;
+              border: none !important;
+              -webkit-transition: opacity .3s ease !important;
+              -moz-transition: opacity.3s ease!important;
+              -o-transition: opacity.3s ease!important;
+              transition: opacity .3s ease !important;
+              letter-spacing: 1px !important;
+              font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+              margin-top: 10px !important;
+              font-weight:600 !important;
+            }
+
+            .custom-height {
+              width: 30px !important;
+              height: 30px !important;
+              background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+              animation-delay: 0.75s !important;
+              margin-left: 1rem !important;
+            }
+          }
       `}</style>
-    </section>
+
+    </div>
   );
 }

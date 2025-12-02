@@ -16,33 +16,43 @@ export default function IgniteAboutCard() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <section className="ignite-section">
+    <div
+      className="overflow-hidden fade-in-section container aboutignite-card"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat
+      style={{ animationDelay: "0.1s" }}
+    >
+      <div
+        className="container fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat
+        style={{ maxWidth: "1140px", animationDelay: "0.15s" }}
+      >
+        <div
+          className="curriculumSubSection"
+        >
+          <h2 className="SubHeading testSubheading">
+            OUR APPROACH
+          </h2>
+          <div className="testHeadings">
+            <h3
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle"
+              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+            >
+              How We Make IBDP Learning Truly<span className="highlight"> Effective </span>
+            </h3>
+          </div>
+        </div>
+      </div>
+
       <div className="ignite-container">
         {/* Left Content */}
         <div className="ignite-left">
-          <div className="text-center mb-5 fade-in-section">
-            <div className="testHeadings">
-              <div
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section"
-                style={{ animationDelay: "0.1s" }}
-              >
-                <h2 className="SubHeading testSubheading">OUR APPROACH
-                </h2>
-              </div>
-              <h3
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
-              >
-                How We Make IBDP Learning Truly<span className="highlight"> Effective </span>
-              </h3>
-            </div>
-          </div>
 
 
           {/* <p
@@ -198,7 +208,9 @@ export default function IgniteAboutCard() {
           font-weight: normal;
           font-style: normal;
         }
-
+.aboutignite-card{
+            text-align: center;
+            }
         .my-text {
           font-family: "Monstra", sans-serif;
         }
@@ -805,6 +817,6 @@ bottom: 5%;
   }
 }
       `}</style>
-    </section>
+    </div>
   );
 }

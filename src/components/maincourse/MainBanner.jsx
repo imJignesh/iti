@@ -38,7 +38,7 @@ export default function CareersBanner() {
             font-family: 'Montserrat', sans-serif;
             position: relative;
             max-width: 90vw;
-            margin: 40px auto;
+            margin: 0 auto;
             width: 100%;
             height: calc(90vw / 2.98); /* desktop aspect ratio */
             border-radius: 12px;

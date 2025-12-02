@@ -14,7 +14,7 @@ const IBCurriculumStages = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <div style={{ marginBlock: isMobile ? "10px" : "100px" }}>
+    <div style={{ marginBlock: isMobile ? "10px" : "0" }}>
       <section className="achievementsSection pb-0" style={{ position: 'relative' }}>
         <div className="container">
           <div className="achievementsHeadings">
@@ -271,7 +271,7 @@ padding-inline:70px !important;
 }
 /* Header */
 .achievementsSection {
-  padding: 70px 0;
+  padding: 0 0;
   position: relative;
 }
     .testimonialRect {

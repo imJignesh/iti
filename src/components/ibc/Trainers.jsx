@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import Image from '@/components/CustomImageWrapper';
 
 // ----------------------------------------------------------------------
-// Trainer Data
+// Trainer Data (No Change)
 // ----------------------------------------------------------------------
 
 const trainers = [
@@ -126,7 +126,7 @@ const trainers = [
 ];
 
 // ----------------------------------------------------------------------
-// Trainer Card Component
+// Trainer Card Component (Wrapped in <a> tag by user)
 // ----------------------------------------------------------------------
 
 const TrainerCard = ({ trainer }) => (
@@ -135,7 +135,7 @@ const TrainerCard = ({ trainer }) => (
       <div className="trainerName">{trainer.name}</div>
       <div className="trainerImgWrap">
         <Image width={812}
-          height={1017} src={trainer.img} className="trainerImg" />
+          height={1017} src={trainer.img} className="trainerImg" alt={trainer.name} />
       </div>
       <div className="trainerSubtitle">{trainer.subtitle}</div>
       <div className="trainerExp">{trainer.experience}</div>
@@ -166,7 +166,7 @@ export default function Trainers() {
 
   const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 
-  // The new global container class is 'trainers-global-container'
+  // The new global container class from the provided code block
   const containerClass = 'trainers-global-container';
 
   return (
@@ -238,7 +238,7 @@ export default function Trainers() {
 
           .${containerClass} .trainersSection .trainerCard:nth-child(7),
           .${containerClass} .trainersSection .trainerCard:nth-child(9) {
-            translate: 0 20px;
+            transform: translateY(20px);
           }
 
           .${containerClass} .trainersSection .trainerCard[data-color="blue"] {
@@ -598,15 +598,35 @@ export default function Trainers() {
         <section className="trainersSection" data-scroll-section>
           <div className="container">
             <div>
-              <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
+              <h2
+                className="SubHeading trainersSubheading fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                style={{ animationDelay: "0.1s" }}
+              >
+                OUR TUTORS
+              </h2>
             </div>
 
-            <h3 className="trainersTitle">
+            <h3
+              className="trainersTitle fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              style={{ animationDelay: "0.2s" }}
+            >
               The Best <span className="highlight">Trainers</span> For Your<br />Success Journey
             </h3>
 
             {isTrainersSwiper ? (
-              <div className="trainersSwiperWrap">
+              <div
+                className="trainersSwiperWrap fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                style={{ animationDelay: "0.3s" }}
+              >
                 <Swiper
                   modules={[Navigation, Pagination]}
                   spaceBetween={24}
@@ -627,7 +647,7 @@ export default function Trainers() {
                   }}
                   pagination={{
                     clickable: true,
-                    el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
+                    el: `.${containerClass} .trainersSection .trainersPagination`,
                   }}
                   onBeforeInit={(swiper) => {
                     if (swiper.params.navigation) {
@@ -642,32 +662,46 @@ export default function Trainers() {
                     </SwiperSlide>
                   ))}
                 </Swiper>
-                {/* Custom Navigation Buttons */}
                 <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
-                  {/* Placeholder for actual image/icon */}
                   <img src="/images/left-arrow-blue.png" alt="ib tutor in dubai" />
                 </button>
                 <button ref={navNextRef} className="customNavBtn swiper-button-next">
-                  {/* Placeholder for actual image/icon */}
                   <img src="/images/right-arrow-blue.png" alt="ib tutor in dubai" />
                 </button>
-                {/* Custom Pagination Container */}
                 <div className="trainersPagination"></div>
               </div>
             ) : (
               <>
-                {/* Grid view for large screens */}
-                <div className="trainersGrid" ref={trainersGridRef}>
+                <div
+                  className="trainersGrid fade-in-section"
+                  ref={trainersGridRef}
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                  style={{ animationDelay: "0.3s" }}
+                >
                   {displayTrainers.map((t, i) => (
-                    <TrainerCard key={i} trainer={t} />
+                    <div
+                      key={i}
+                      data-scroll
+                      data-scroll-class="is-inview"
+                      data-scroll-repeat="true"
+                      className="fade-in-section"
+                      style={{ animationDelay: `${0.3 + i * 0.05}s` }}
+                    >
+                      <TrainerCard trainer={t} />
+                    </div>
                   ))}
                 </div>
 
-                {/* Combined SEE MORE / SEE LESS button logic */}
                 {trainers.length > 10 && (
                   <button
                     onClick={() => setShowAll(!showAll)}
-                    className="trainersSeeMore"
+                    className="trainersSeeMore fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    style={{ animationDelay: `${0.3 + displayTrainers.length * 0.05}s` }}
                   >
                     {showAll ? "SEE LESS" : "SEE MORE"}
                   </button>

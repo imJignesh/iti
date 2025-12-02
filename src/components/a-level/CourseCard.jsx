@@ -282,8 +282,8 @@ function CourseCard() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <h2 className="SubHeading testSubheading">courses
-              </h2>
+              <span className="SubHeading testSubheading">courses
+              </span>
             </h2>
 
             <h3

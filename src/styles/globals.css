@@ -50,6 +50,10 @@ section:not(section section) {
   padding: 70px 0 !important;
 }
 
+section.padding-0 {
+  padding-bottom: 0 !important;
+}
+
 @media (max-width: 1124px) {
   .container {
     max-width: 90vw !important;

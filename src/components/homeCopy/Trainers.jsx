@@ -133,13 +133,12 @@ const TrainerCard = ({ trainer }) => (
   <div data-color={trainer.color} className="trainerCard">
     <div className="trainerName">{trainer.name}</div>
     <div className="trainerImgWrap">
-      {/* <img src={trainer.img} alt={trainer.name} className="trainerImg" /> */}
       <Image
         src={trainer.img}
-        alt={trainer.name} // This alt will be overridden by the page-specific text
+        alt={trainer.name}
         className="trainerImg"
-        width={300} // You MUST add appropriate width and height
-        height={300} // based on how your trainers images are displayed
+        width={300}
+        height={300}
       />
     </div>
     <div className="trainerSubtitle">{trainer.subtitle}</div>
@@ -160,7 +159,7 @@ export default function Trainers() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Swiper active below 1199px (your mobile check)
+      // Swiper active below 1199px
       setIsTrainersSwiper(window.innerWidth <= 1199);
     };
     handleResize();
@@ -177,14 +176,10 @@ export default function Trainers() {
 
   const handleSeeLess = () => {
     setShowAll(false);
-    // Optional: Scroll to the top of the grid when seeing less
     if (trainersGridRef.current) {
       trainersGridRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  // The new global container class is 'trainers-global-container'
-  const containerClass = 'trainers-global-container';
 
   const desktopTitle = (
     <>
@@ -199,30 +194,31 @@ export default function Trainers() {
   );
   const currentTitle = isTrainersSwiper ? mobileTitle : desktopTitle;
 
+
   return (
     <>
+      {/* ------------------------------------------------------------------- */}
+      {/* CSS IS INCLUDED HERE VIA style jsx global AS REQUESTED */}
+      {/* ------------------------------------------------------------------- */}
       <style jsx global>
         {`
-          
-          /* Trainer Section - Refactored for global use with .trainers-global-container */
+          .trainersSection {
+            padding: 70px 0;
+            background: var(--white-bg);
+            text-align: center;
+          }
 
-          // .${containerClass} .trainersSection {
-          //   padding: 100px 0 40px 0;
-          //   background: var(--white-bg);
-          //   text-align: center;
-          // }
-
-          .${containerClass} .trainersSection .trainersHeader {
+          .trainersSection .trainersHeader {
             margin-bottom: 32px;
           }
 
-          .${containerClass} .trainersSection .trainersIcon {
+          .trainersSection .trainersIcon {
             width: 24px;
             height: 24px;
             margin-right: 8px;
           }
 
-          .${containerClass} .trainersSection .trainersTitle {
+          .trainersSection .trainersTitle {
             font-size: 2rem;
             font-weight: 700;
             max-width: 60%;
@@ -232,7 +228,7 @@ export default function Trainers() {
             color: var(--blue-color);
           }
 
-          .${containerClass} .trainersSection .trainersHighlight {
+          .trainersSection .trainersHighlight {
             background: linear-gradient(
               to left,
               var(--green-color),
@@ -243,7 +239,7 @@ export default function Trainers() {
             background-clip: text;
           }
 
-          .${containerClass} .trainersSection .trainersGrid {
+          .trainersSection .trainersGrid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 32px 24px;
@@ -254,7 +250,7 @@ export default function Trainers() {
             margin-bottom: 50px;
           }
 
-          .${containerClass} .trainersSection .trainerCard {
+          .trainersSection .trainerCard {
             padding: 20px 0 30px 0;
             border-radius: 40px;
             text-align: center;
@@ -267,16 +263,16 @@ export default function Trainers() {
             overflow: hidden;
           }
 
-          .${containerClass} .trainersSection .trainerCard:nth-child(7),
-          .${containerClass} .trainersSection .trainerCard:nth-child(9) {
+          .trainersSection .trainerCard:nth-child(7),
+          .trainersSection .trainerCard:nth-child(9) {
             translate: 0 20px;
           }
 
-          .${containerClass} .trainersSection .trainerCard[data-color="blue"] {
+          .trainersSection .trainerCard[data-color="blue"] {
             background: linear-gradient(var(--border-color) 0%, transparent 50%);
           }
 
-          .${containerClass} .trainersSection .trainerCard[data-color="green"] {
+          .trainersSection .trainerCard[data-color="green"] {
             background: linear-gradient(
               to top,
               var(--green-text) 0%,
@@ -284,7 +280,7 @@ export default function Trainers() {
             );
           }
 
-          .${containerClass} .trainersSection .trainerCard[data-color="blue"]:before {
+          .trainersSection .trainerCard[data-color="blue"]:before {
             content: "";
             width: 100%;
             height: 50%;
@@ -297,7 +293,7 @@ export default function Trainers() {
             );
           }
 
-          .${containerClass} .trainersSection .trainerCard[data-color="green"]:before {
+          .trainersSection .trainerCard[data-color="green"]:before {
             content: "";
             width: 100%;
             height: 50%;
@@ -306,7 +302,7 @@ export default function Trainers() {
             background: linear-gradient(to top, #d7f6e6 50%, transparent);
           }
 
-          .${containerClass} .trainersSection .trainerName {
+          .trainersSection .trainerName {
             font-size: 1vw;
             font-weight: 500;
             color: var(--black-color);
@@ -316,19 +312,19 @@ export default function Trainers() {
             text-transform: uppercase;
           }
 
-          .${containerClass} .trainersSection .trainerImgWrap {
+          .trainersSection .trainerImgWrap {
             width: 100%;
             height: 100%;
           }
 
-          .${containerClass} .trainersSection .trainerImg {
+          .trainersSection .trainerImg {
             width: 100%;
             height: 100%;
             object-fit: cover;
             aspect-ratio: 0.9;
           }
 
-          .${containerClass} .trainersSection .trainerSubtitle {
+          .trainersSection .trainerSubtitle {
             font-size: 0.7vw;
             color: var(--black-color);
             opacity: 0.5;
@@ -338,15 +334,15 @@ export default function Trainers() {
             padding: 0 5px;
           }
 
-          .${containerClass} .trainersSection .trainerCard:nth-child(odd) .trainerSubtitle {
+          .trainersSection .trainerCard:nth-child(odd) .trainerSubtitle {
             bottom: 70px;
           }
 
-          .${containerClass} .trainersSection .trainerCard:nth-child(even) .trainerSubtitle {
+          .trainersSection .trainerCard:nth-child(even) .trainerSubtitle {
             bottom: 50px;
           }
 
-          .${containerClass} .trainersSection .trainerExp {
+          .trainersSection .trainerExp {
             background: linear-gradient(to left, #3f88ba, var(--blue-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -360,7 +356,7 @@ export default function Trainers() {
             border-top: 1px solid rgba(0, 0, 0, 0.2);
           }
 
-          .${containerClass} .trainersSection .trainerCard:nth-child(even) .trainerExp {
+          .trainersSection .trainerCard:nth-child(even) .trainerExp {
             transform: translateY(20px);
             background: linear-gradient(
               to left,
@@ -372,7 +368,7 @@ export default function Trainers() {
             background-clip: text;
           }
 
-          .${containerClass} .trainersSection .trainersSeeMore {
+          .trainersSection .trainersSeeMore {
             position: relative;
             overflow: hidden;
             margin: 0 auto;
@@ -389,12 +385,11 @@ export default function Trainers() {
             cursor: pointer;
             transition: transform 0.3s ease, color 0.3s ease;
             z-index: 1;
-            /* Added for spacing the button */
             margin-top: 20px;
             margin-bottom: 0; 
           }
 
-          .${containerClass} .trainersSection .trainersSeeMore::before {
+          .trainersSection .trainersSeeMore::before {
             content: "";
             position: absolute;
             top: 0;
@@ -412,22 +407,21 @@ export default function Trainers() {
             transition: transform 0.6s ease-in-out;
           }
 
-          .${containerClass} .trainersSection .trainersSeeMore:hover::before {
+          .trainersSection .trainersSeeMore:hover::before {
             transform: translateX(-50%);
           }
 
-          .${containerClass} .trainersSection .trainersSeeMore * {
+          .trainersSection .trainersSeeMore * {
             position: relative;
             z-index: 1;
           }
 
-          .${containerClass} .trainersSection .trainersSeeMore:hover {
+          .trainersSection .trainersSeeMore:hover {
             color: var(--black-color);
             transform: scale(1.05);
           }
           
-          /* Style for SEE LESS to use the same look */
-          .${containerClass} .trainersSection .trainersSeeLess {
+          .trainersSection .trainersSeeLess {
             position: relative;
             overflow: hidden;
             margin: 0 auto;
@@ -436,7 +430,7 @@ export default function Trainers() {
             border: 3px solid transparent;
             background-color: var(--white-color);
             background: linear-gradient(white, white) padding-box,
-              linear-gradient(to right, #e7f6ff, var(--border-color)) border-box; /* Slight gradient variation for visual difference */
+              linear-gradient(to right, #e7f6ff, var(--border-color)) border-box;
             color: var(--blue-color);
             font-size: 1vw;
             font-weight: 700;
@@ -448,7 +442,7 @@ export default function Trainers() {
             margin-bottom: 50px;
           }
           
-          .${containerClass} .trainersSection .trainersSeeLess::before {
+          .trainersSection .trainersSeeLess::before {
             content: "";
             position: absolute;
             top: 0;
@@ -466,17 +460,17 @@ export default function Trainers() {
             transition: transform 0.6s ease-in-out;
           }
 
-          .${containerClass} .trainersSection .trainersSeeLess:hover::before {
+          .trainersSection .trainersSeeLess:hover::before {
             transform: translateX(-50%);
           }
           
-          .${containerClass} .trainersSection .trainersSeeLess:hover {
+          .trainersSection .trainersSeeLess:hover {
             color: var(--black-color);
             transform: scale(1.05);
           }
 
 
-          .${containerClass} .trainersSection .trainersPagination {
+          .trainersSection .trainersPagination {
             margin-top: 32px;
             display: flex;
             justify-content: center;
@@ -484,13 +478,13 @@ export default function Trainers() {
             min-height: 24px;
           }
 
-          .${containerClass} .trainersSection .trainersPagination span {
+          .trainersSection .trainersPagination span {
             width: 10px;
             height: 5px;
             border-radius: 4px;
           }
 
-          .${containerClass} .trainersSection .customNavBtn {
+          .trainersSection .customNavBtn {
             background: transparent;
             border: none;
             box-shadow: none;
@@ -509,32 +503,32 @@ export default function Trainers() {
             padding: 0;
           }
 
-          .${containerClass} .trainersSection .customNavBtn img {
+          .trainersSection .customNavBtn img {
             width: 32px;
             height: 32px;
             object-fit: contain;
             filter: none;
           }
 
-          .${containerClass} .trainersSection .customNavBtn:after,
-          .${containerClass} .trainersSection .customNavBtn:after {
+          .trainersSection .customNavBtn:after,
+          .trainersSection .customNavBtn:after {
             display: none;
           }
 
-          .${containerClass} .trainersSection .trainersSwiperWrap {
+          .trainersSection .trainersSwiperWrap {
             position: relative;
             padding: 0 50px;
             margin-bottom: 0;
           }
 
-          .${containerClass} .trainersSection .swiper-slide {
+          .trainersSection .swiper-slide {
             display: flex;
             justify-content: center;
           }
 
           /* Swiper Custom Navigation Overrides */
-          .${containerClass} .trainersSection .swiper-button-prev,
-          .${containerClass} .trainersSection .swiper-button-next {
+          .trainersSection .swiper-button-prev,
+          .trainersSection .swiper-button-next {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -543,22 +537,22 @@ export default function Trainers() {
             margin-top: 0;
           }
 
-          .${containerClass} .trainersSection .swiper-button-prev {
+          .trainersSection .swiper-button-prev {
             left: 0;
           }
 
-          .${containerClass} .trainersSection .swiper-button-next {
+          .trainersSection .swiper-button-next {
             right: 0;
           }
 
-          .${containerClass} .trainersSection .swiper-button-prev:after,
-          .${containerClass} .trainersSection .swiper-button-next:after {
+          .trainersSection .swiper-button-prev:after,
+          .trainersSection .swiper-button-next:after {
             content: '';
             display: none;
           }
 
           /* Swiper Custom Pagination Overrides */
-          .${containerClass} .trainersSection .swiper-pagination-bullet {
+          .trainersSection .swiper-pagination-bullet {
             width: 10px;
             height: 5px;
             border-radius: 4px;
@@ -568,21 +562,21 @@ export default function Trainers() {
             margin: 0 4px;
           }
 
-          .${containerClass} .trainersSection .swiper-pagination-bullet-active {
+          .trainersSection .swiper-pagination-bullet-active {
             background: var(--blue-color);
           }
 
 
           @media (max-width: 1199px) {
-            .${containerClass} .trainersSection .trainerImg {
+            .trainersSection .trainerImg {
               height: 300px;
             }
 
-            .${containerClass} .trainersSection .trainerCard[data-color="green"] {
+            .trainersSection .trainerCard[data-color="green"] {
               margin-bottom: 20px;
             }
 
-            .${containerClass} .trainersSection .trainerCard[data-color="green"] .trainerExp {
+            .trainersSection .trainerCard[data-color="green"] .trainerExp {
               font-size: 20px;
               background: linear-gradient(
                 to right,
@@ -595,100 +589,117 @@ export default function Trainers() {
               padding-top: 10px;
             }
 
-            .${containerClass} .trainersSection .trainerCard:nth-child(odd) .trainerSubtitle {
+            .trainersSection .trainerCard:nth-child(odd) .trainerSubtitle {
               bottom: 60px;
             }
 
-            .${containerClass} .trainersSection .trainerCard[data-color="green"]:before {
+            .trainersSection .trainerCard[data-color="green"]:before {
               background: linear-gradient(to top, #d7f6e6 60%, transparent);
             }
           }
 
           @media (max-width: 1100px) {
-            .${containerClass} .trainersSection .trainersGrid {
+            .trainersSection .trainersGrid {
               grid-template-columns: repeat(2, 1fr);
               gap: 24px 12px;
             }
 
-            .${containerClass} .trainersSection .trainersSubheading {
+            .trainersSection .trainersSubheading {
               font-size: 1.4rem;
             }
 
-            .${containerClass} .trainersSection .trainersTitle {
+            .trainersSection .trainersTitle {
               font-size: 2rem;
             }
 
-            .${containerClass} .trainersSection .trainerName,
-            .${containerClass} .trainersSection .trainerExp,
-            .${containerClass} .trainersSection .trainersSeeMore,
-            .${containerClass} .trainersSection .trainersSeeLess { /* Added trainersSeeLess */
+            .trainersSection .trainerName,
+            .trainersSection .trainerExp,
+            .trainersSection .trainersSeeMore,
+            .trainersSection .trainersSeeLess { 
               font-size: 1rem;
             }
 
-            .${containerClass} .trainersSection .trainerSubtitle {
+            .trainersSection .trainerSubtitle {
               font-size: 0.9rem;
             }
           }
 
           @media (max-width: 700px) {
-            .${containerClass} .trainersSection .trainersGrid {
+            .trainersSection .trainersGrid {
               grid-template-columns: 1fr;
               gap: 18px;
             }
 
-            .${containerClass} .trainersSection .trainersSubheading {
+            .trainersSection .trainersSubheading {
               font-size: 15px;
             }
 
-            .${containerClass} .trainersSection .trainersTitle {
+            .trainersSection .trainersTitle {
               font-size: 20.4px;
               line-height: 23px;
               max-width: 100%;
               margin: 20px 0;
             }
 
-            .${containerClass} .trainersSection .customNavBtn {
+            .trainersSection .customNavBtn {
               width: 32px;
               height: 32px;
             }
 
-            /* Swiper modifications for small screens */
-            .${containerClass} .trainersSection .trainersSwiperWrap {
+            .trainersSection .trainersSwiperWrap {
                padding: 0 40px;
             }
 
-            .${containerClass} .trainersSection .swiper-button-prev,
-            .${containerClass} .trainersSection .swiper-button-next {
+            .trainersSection .swiper-button-prev,
+            .trainersSection .swiper-button-next {
               width: 32px;
               height: 32px;
             }
           }
 
           @media (max-width: 575px) {
-            .${containerClass} .trainersSection .trainerImg {
+            .trainersSection .trainerImg {
               object-fit: contain;
             }
               
           }
-              .trainers-global-container .trainersSection .trainersPagination{
-              margin-top: 0;}
-              
+          .trainersSection .trainersPagination{
+          margin-top: 0;}
         `}
       </style>
+      {/* ------------------------------------------------------------------- */}
 
-      {/* Wrapping div with the new global class to scope the CSS */}
-      <div className={containerClass}>
-        <section className="trainersSection" data-scroll-section>
-          <div className="container">
-            <div>
-              <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
-            </div>
+      <section className="trainersSection">
+        <div className="container">
+          <div>
+            <h2
+              className="SubHeading trainersSubheading fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              style={{ animationDelay: "0.1s" }}
+            >
+              OUR TUTORS
+            </h2>
+          </div>
 
-            <h3 className="trainersTitle">
-              {/* --- NEW: Use the conditionally chosen title here --- */}
-              {currentTitle}
-            </h3>
+          <h3
+            className="trainersTitle fade-in-section"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            style={{ animationDelay: "0.2s" }}
+          >
+            {currentTitle}
+          </h3>
 
+          <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
+            style={{ animationDelay: "0.3s" }}
+          >
             {isTrainersSwiper ? (
               <div className="trainersSwiperWrap">
                 <Swiper
@@ -709,10 +720,6 @@ export default function Trainers() {
                     prevEl: navPrevRef.current,
                     nextEl: navNextRef.current,
                   }}
-                  pagination={{
-                    clickable: true,
-                    el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
-                  }}
                   onBeforeInit={(swiper) => {
                     if (swiper.params.navigation) {
                       swiper.params.navigation.prevEl = navPrevRef.current;
@@ -726,28 +733,31 @@ export default function Trainers() {
                     </SwiperSlide>
                   ))}
                 </Swiper>
-                {/* Custom Navigation Buttons */}
                 <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
-                  {/* Placeholder for actual image/icon */}
                   <img src="/images/left-arrow-blue.png" alt="Previous" />
                 </button>
                 <button ref={navNextRef} className="customNavBtn swiper-button-next">
-                  {/* Placeholder for actual image/icon */}
                   <img src="/images/right-arrow-blue.png" alt="Next" />
                 </button>
-                {/* Custom Pagination Container */}
                 <div className="trainersPagination"></div>
               </div>
             ) : (
               <>
-                {/* Grid view for large screens */}
                 <div className="trainersGrid" ref={trainersGridRef}>
                   {displayTrainers.map((t, i) => (
-                    <TrainerCard key={i} trainer={t} />
+                    <div
+                      key={i}
+                      data-scroll
+                      data-scroll-class="is-inview"
+                      data-scroll-repeat="true"
+                      className="fade-in-section"
+                      style={{ animationDelay: `${0.3 + i * 0.05}s` }}
+                    >
+                      <TrainerCard trainer={t} />
+                    </div>
                   ))}
                 </div>
 
-                {/* Conditional rendering for SEE MORE/SEE LESS */}
                 {trainers.length > 10 && (
                   !showAll ? (
                     <button
@@ -759,7 +769,7 @@ export default function Trainers() {
                   ) : (
                     <button
                       onClick={handleSeeLess}
-                      className="trainersSeeLess" // Using a new class for potential different styling
+                      className="trainersSeeLess"
                     >
                       SEE LESS
                     </button>
@@ -768,9 +778,8 @@ export default function Trainers() {
               </>
             )}
           </div>
-        </section>
-
-      </div>
+        </div>
+      </section>
     </>
   );
 }

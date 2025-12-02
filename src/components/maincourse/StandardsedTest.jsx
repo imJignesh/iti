@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // import Image from "next/image";
 import Image from '@/components/CustomImageWrapper';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -36,7 +36,16 @@ const testData = [
 
 
 const Test = ({ isMobileSwiper, active, setActive }) => {
-
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   // Set initial active slide for mobile, and initial active card for desktop
   useEffect(() => {
     if (isMobileSwiper && setActive) {
@@ -67,7 +76,18 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             className="fade-in-section testTitle font-sizet1"
             style={{ animationDelay: "0.2s" }}
           >
-            Score Higher With Test Prep <br /> Methods That Truly <span className="highlight">Work</span>
+            {isMobile ? (
+              // Mobile Title Structure (Example: shorter text without <br>)
+              <>
+                Score Higher With Test Prep Methods That Truly <span className="highlight">Work</span>
+              </>
+            ) : (
+              // Desktop Title Structure (Original)
+              <>
+                Score Higher With Test Prep <br /> Methods That Truly <span className="highlight">Work</span>
+              </>
+            )}
+
           </h3>
         </div>
       </div> {/* End container for headings */}
@@ -217,12 +237,15 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
         </div>
       )}
       <style jsx>{`
-  .font-sizet {
-  font-size: 30px !important;
-}
-  .font-sizet1 {
-  font-size: 2rem !important;
-}
+//   .font-sizet {
+//   font-size: 30px !important;
+// }
+//   .font-sizet1 {
+//   font-size: 2rem !important;
+// }
+      .testSection1{
+        padding:0 !important;
+      }
 
 
 @media (max-width: 768px) {

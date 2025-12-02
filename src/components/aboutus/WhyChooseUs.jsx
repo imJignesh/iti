@@ -296,7 +296,7 @@ export default function WhyChooseUs() {
             .description {
               color: #233467;
               font-size: 23px;
-              line-height: 36px;
+              // line-height: 36px;
               margin-bottom: 2rem;
             }
 

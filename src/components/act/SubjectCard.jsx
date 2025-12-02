@@ -33,8 +33,34 @@ export default function SubjectsCard() {
       data-scroll-class="is-inview"
       data-scroll-repeat
     >
-
-      <div className="text-center mb-5 fade-in-section">
+      <div
+        className="container text-center fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat
+        style={{ maxWidth: "1140px", animationDelay: "0.15s" }}
+      >
+        <div
+          className="curriculumSubSection"
+        >
+          <h2 className="SubHeading testSubheading">
+            ACT TEST OVERVIEW
+          </h2>
+          <div className="testHeadings">
+            <h3
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle"
+              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+            >
+              Here’s What To Expect  <br /> When You Take The
+              <span className="highlight">  ACT Test  </span>
+            </h3>
+          </div>
+        </div>
+      </div>
+      {/* <div className="text-center container mb-5 fade-in-section">
         <div className="testHeadings">
           <div
             data-scroll
@@ -57,7 +83,7 @@ export default function SubjectsCard() {
             <span className="highlight">  ACT Test  </span>
           </h3>
         </div>
-      </div>
+      </div> */}
 
 
       <div className="table-container">
