@@ -466,13 +466,13 @@ export default function PostDetail() {
     const likeButtonClasses = `border-0 background-none 
         flex items-center justify-center transition ${userVoteStatus === 'like'
             ? 'like'
-            : 'like'
+            : 'dislike'
         }`;
 
     const dislikeButtonClasses = `border-0 background-none
         flex items-center justify-center transition ${userVoteStatus === 'dislike'
             ? 'dislike'
-            : 'dislike'
+            : 'like'
         }`;
 
     const likeIconColor = userVoteStatus === 'like' ? '#fff' : '#1c3664';
@@ -598,7 +598,7 @@ export default function PostDetail() {
                                         </defs>
                                     </svg>
                                 </button>
-                                {/* <span className="text-lg font-semibold text-[#1c3664]">{likes}</span> */}
+                                <span className="text-lg font-semibold text-[#1c3664]">{likes}</span>
 
                                 {/* Dislike Button with dynamic class and count */}
                                 <button
