@@ -136,6 +136,15 @@ section.padding-0 {
   right: 0;
 }
 
+.highlight {
+  background: linear-gradient(to left,
+      var(--green-color),
+      var(--lightgreen-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Tablet (No changes needed) */
 @media (max-width: 1024px) {
   .SubHeading {

@@ -1,22 +1,19 @@
-/* Hero Banner Section */
-
-.hero-section-desktop {
+.heroSectionDesktop {
   padding: 10vh 0;
 }
 
-.homeCopy .hero-section-mobile section.hero {
-  /* Reduced top padding for mobile view, relying on the section padding */
+/* Specificity hack maintained using :global() for external classes */
+:global(.homeCopy) :global(.hero-section-mobile) .hero {
   padding-top: 20px !important;
 }
 
-.homeCopy .hero {
-  /* Set initial hidden state using clip-path and apply the animation with delay */
+/* Removed redundant .homeCopy prefix */
+.hero {
   padding: 3rem 0;
   background: url(/images/banner-bg.png);
   background-repeat: no-repeat;
   background-size: 30vw;
 
-  /* Setting initial clip-path for animation start (Desktop) */
   -webkit-clip-path: inset(0 100% 0 0);
   clip-path: inset(0 100% 0 0);
   animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards;
@@ -24,7 +21,8 @@
   background-position: 6.5vw 1vw;
 }
 
-. @keyframes revealClipLeftToRight {
+/* Keyframes must be defined globally */
+@keyframes revealClipLeftToRight {
   from {
     clip-path: inset(0 100% 0 0);
   }
@@ -34,17 +32,18 @@
   }
 }
 
-.homeCopy .hero .heroMain {
+.heroMain {
   display: flex;
   align-items: center;
 }
 
-.homeCopy .hero .heroLeft {
+.heroLeft {
   margin-top: -1vw;
 }
 
 
-.homeCopy .hero .heroLeft .heroTitle-desktop {
+/* Renamed to camelCase: heroTitle-desktop -> heroTitleDesktop */
+.heroTitleDesktop {
   font-size: 2rem;
   font-weight: 700;
   margin: 40px 0 50px 0;
@@ -53,7 +52,8 @@
   color: var(--blue-color);
 }
 
-.homeCopy .hero .heroLeft .heroTitle-mobile {
+/* Renamed to camelCase: heroTitle-mobile -> heroTitleMobile */
+.heroTitleMobile {
   display: none;
   font-weight: 700;
   line-height: 1.1;
@@ -61,16 +61,17 @@
   color: var(--blue-color);
 }
 
-.homeCopy .hero .highlight {
+/* The .highlight class is likely a global utility class used in the <span> */
+/* :global(.highlight) {
   background: linear-gradient(to left,
       var(--green-color),
       var(--lightgreen-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
+} */
 
-.homeCopy .hero .heroLeft .heroParagraph {
+.heroParagraph {
   padding-top: 30px;
   font-size: 1vw;
   font-weight: 400;
@@ -78,16 +79,17 @@
   line-height: 1.5;
 }
 
-.homeCopy .hero .heroParagraph b,
-.homeCopy .hero .heroParagraph strong {
+/* Use :global() for global elements inside a module class */
+.heroParagraph :global(b),
+.heroParagraph :global(strong) {
   font-weight: 400;
 }
 
-.homeCopy .hero .heroParagraph strong {
+.heroParagraph :global(strong) {
   display: none;
 }
 
-.homeCopy .hero .heroParagraph h3 {
+.heroParagraph :global(h3) {
   text-transform: uppercase;
   display: block;
   font-size: 1.3rem;
@@ -97,28 +99,20 @@
 }
 
 
-.homeCopy .hero .heroRight {
+.heroRight {
   display: flex;
   justify-content: flex-end;
-}
-
-.homeCopy .hero .heroRight {
   position: relative;
 }
 
-.homeCopy .hero .videoContainer {
+.videoContainer {
   position: relative;
-  /* width: 100%;
-  height: 100%;
-  max-height: 600px; */
   width: 30vw;
   height: 28vw;
   overflow: hidden;
 }
 
-.homeCopy .hero .heroVideo {
-  /* width: 100%;
-  height: 600px; */
+.heroVideo {
   width: 30vw;
   height: 28vw;
   max-height: 700px;
@@ -131,7 +125,7 @@
   -webkit-mask-size: contain;
 }
 
-.homeCopy .hero .videoMask {
+.videoMask {
   position: absolute;
   top: 0;
   left: 0;
@@ -142,7 +136,7 @@
   display: none;
 }
 
-.homeCopy .hero .maskImage {
+.maskImage {
   width: 100%;
   height: 100%;
   max-height: 600px;
@@ -152,7 +146,7 @@
   opacity: 0.8;
 }
 
-.homeCopy .hero .heroRight .heroImage {
+.heroImage {
   width: 100%;
   height: 100%;
   max-height: 600px;
@@ -160,17 +154,7 @@
   object-position: right;
 }
 
-.homeCopy .hero .heroRight .buttonGroup {
-  /* position: absolute;
-  top: 70%;
-  bottom: 0;
-  left: 39%;
-  right: 15%;
-  z-index: 9;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  justify-content: flex-end; */
+.buttonGroup {
   position: absolute;
   top: 0vw;
   bottom: 0vw;
@@ -183,13 +167,15 @@
   width: 17.5vw;
 }
 
-.homeCopy .hero .heroRight .buttonGroup img {
+/* Use :global() for child elements and utility classes */
+.buttonGroup :global(img) {
   width: 1.7vw;
   height: auto;
 }
 
-.homeCopy .hero .heroRight .buttonGroup .buttonBlue,
-.homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
+/* Use :global() for global classes used inside a module class */
+.buttonGroup :global(.buttonBlue),
+.buttonGroup :global(.buttonSkyBlue) {
   position: relative;
   overflow: hidden;
   padding: 1vw 1vw;
@@ -209,122 +195,185 @@
 
 }
 
-.homeCopy .hero .heroRight .buttonGroup button {
+.buttonGroup :global(button) {
   font-size: 22px;
   font-weight: 400;
   line-height: 16px;
   padding: 25px 30px;
 }
 
-.homeCopy .hero .heroRight .buttonGroup button img {
+.buttonGroup :global(button) :global(img) {
   width: 40px;
 }
 
+.SubHeading {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  background: linear-gradient(285.71deg, #3f88ba -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  padding: 0 40px;
+  display: inline-block;
+}
+
+.SubHeading:before,
+.SubHeading:after {
+  content: "";
+  width: 14px;
+  height: 100%;
+  /* full height on desktop */
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(/images/heading-icon.png) center no-repeat;
+  background-size: contain;
+}
+
+.SubHeading:before {
+  left: 0;
+}
+
+.SubHeading:after {
+  right: 0;
+}
+
+@media (max-width: 1024px) {
+  .SubHeading {
+    font-size: 24px;
+  }
+}
+
+/* Mobile (No changes needed for SubHeading) */
+@media (max-width: 575px) {
+  .SubHeading {
+    font-size: 15px;
+    padding: 0 24px;
+  }
+
+  .SubHeading:before,
+  .SubHeading:after {
+    width: 14px;
+    /* fixed size on mobile */
+    height: 24px;
+    /* instead of 100% */
+    top: 50%;
+    transform: translateY(-50%);
+    /* center vertically */
+  }
+}
+
+/* --- Media Queries --- */
+
+/* Removed .homeCopy prefix */
 @media (max-width: 1800px) {
-  .homeCopy .hero {
-    /* background-size: 500px;
-    background-position: top 10% left 5px; */
+  .hero {
     background-size: 28vw;
     background-position: 6.5vw 1vw;
   }
 }
 
+/* Removed .homeCopy prefix */
 @media (max-width: 1500px) {
-  .homeCopy .hero {
+  .hero {
     background-position: top 10% left;
   }
 
-  .homeCopy .hero .heroLeft .heroParagraph {
+  .heroLeft .heroParagraph {
     font-size: 1.3vw;
   }
 }
 
+/* Removed .homeCopy prefix */
 @media (max-width: 1280px) {
-  .homeCopy .hero .heroRight .buttonGroup {
-    /* top: 65%;
-    left: 37%; */
+  .heroRight .buttonGroup {
     gap: 0.8vw;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup button {
+  .heroRight .buttonGroup :global(button) {
     padding: 5px 20px;
     gap: 10px;
     font-size: 16px;
   }
 }
 
+/* Removed .homeCopy prefix */
 @media (max-width: 1024px) {
-  .homeCopy .hero .heroLeft .heroTitle {
+  .heroLeft .heroTitle {
+    /* Assuming .heroTitle is a typo and should be .heroTitleDesktop or .heroTitleMobile */
     font-size: 35px;
   }
 
-  .homeCopy .hero .heroLeft .heroParagraph {
+  .heroLeft .heroParagraph {
     font-size: 18px;
   }
 
-  .homeCopy .hero .heroLeft .heroParagraph span {
+  .heroLeft .heroParagraph :global(span) {
     font-size: 16px;
   }
 }
 
+/* Removed .homeCopy prefix */
 @media (max-width: 991px) {
-  .homeCopy .hero {
+  .hero {
     padding-bottom: 30px;
-    /* animation: revealClipLeftToRight 1.8s 1s ease forwards; */
   }
 
-  .homeCopy .hero .videoContainer {
+  .videoContainer {
     position: relative;
     width: 100vw;
     height: 48vw;
     overflow: hidden;
   }
 
-  .homeCopy .hero .heroRight {
+  .heroRight {
     justify-content: center;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup {
+  .heroRight .buttonGroup {
     top: 0vw;
     bottom: 1vw;
     right: 19vw;
     width: 31vw;
   }
 
-  .homeCopy .hero .heroLeft div {
+  .heroLeft :global(div) {
     text-align: center;
   }
 
-  .homeCopy .hero .heroParagraph b {
+  .heroParagraph :global(b) {
     display: none;
   }
 
-  .homeCopy .hero .heroParagraph strong {
+  .heroParagraph :global(strong) {
     display: block;
     opacity: 0.6;
     font-weight: 500;
   }
 
-  .homeCopy .hero .heroRight .heroImage,
-  .homeCopy .hero .heroVideo {
+  .heroRight .heroImage,
+  .heroVideo {
     object-position: center;
     width: 100vw;
     height: 50vw;
   }
 }
 
+/* Mobile Fixes - use :global() for Bootstrap utility classes */
 @media (max-width: 767px) {
-  .col-12.col-lg-7.col-xl-7.pe-5.heroLeft {
+  .heroLeft {
     padding: inherit !important;
   }
 
-  /* Target the animation area for mobile to reset padding */
-  .p .homeCopy .hero {
+  :global(.p) .hero {
     background: url(/images/banner-bg-mobile.png);
     background-repeat: no-repeat;
     background-size: 85%;
     background-position: top right;
-    /* FIX: Reduce top padding to reduce whitespace */
     padding: 20px 0 0 0;
     clip-path: inset(0 0 0 100%);
     animation: revealClipRightToLeft 1.8s 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -340,16 +389,16 @@
     }
   }
 
-  .homeCopy .hero .heroRight .buttonGroup {
+  .heroRight .buttonGroup {
     left: 40%;
     right: 15%;
   }
 
-  .homeCopy .hero .heroLeft .heroTitle-desktop {
+  .heroLeft .heroTitleDesktop {
     display: none;
   }
 
-  .homeCopy .hero .heroLeft .heroTitle-mobile {
+  .heroLeft .heroTitleMobile {
     display: block;
     margin: 0 auto;
     max-width: 90vw;
@@ -357,39 +406,38 @@
     font-size: 20.4px;
     border-bottom: 1px solid #CCCCCC;
     padding: 20px 0 20px 0;
-
   }
 
-  .homeCopy .hero .heroLeft .heroTitle-mobile span {
+  .heroLeft .heroTitleMobile :global(span) {
     display: inline-block;
   }
 
-  .homeCopy .hero .heroLeft .heroParagraph {
+  .heroLeft .heroParagraph {
     padding-top: 10px;
     margin-bottom: 10px;
   }
 
-  .homeCopy .hero .heroLeft .heroParagraph span {
+  .heroLeft .heroParagraph :global(span) {
     margin-bottom: 5px;
   }
 
-  .homeCopy .hero .heroRight .mobileContent {
+  .heroRight .mobileContent {
     font-size: 22px;
     margin: 0;
     line-height: 30px;
   }
 }
 
+/* Continued mobile fixes */
 @media (max-width: 700px) {
-  .homeCopy .hero {
+  .hero {
     background-position: top -1% right;
     background-size: 460px;
   }
 }
 
 @media (max-width: 575px) {
-  .homeCopy .hero {
-    /* FIX: Reduced top padding */
+  .hero {
     padding: 10px 0 0 0;
     background: url(/images/banner-bg-mobile.png) no-repeat;
     background-size: 50vh 16vh;
@@ -397,17 +445,16 @@
 
   }
 
-  .homeCopy .hero .videoContainer,
-  .homeCopy .hero .heroVideo {
+  .videoContainer,
+  .heroVideo {
     height: 70vw;
   }
 
-  .homeCopy .hero .heroVideo {
+  .heroVideo {
     width: 95vw;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup {
-
+  .heroRight .buttonGroup {
     top: 0vw;
     bottom: 0vw;
     right: 11vw;
@@ -415,23 +462,24 @@
     gap: 3vw;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup .buttonBlue,
-  .homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
+  .heroRight .buttonGroup :global(.buttonBlue),
+  .heroRight .buttonGroup :global(.buttonSkyBlue) {
     justify-content: space-around;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup img {
+  .heroRight .buttonGroup :global(img) {
     width: 7vw;
   }
 
-  .homeCopy .hero .heroLeft .heroTitle {
+  .heroLeft .heroTitle {
+    /* Assuming this refers to desktop or mobile title */
     font-size: 25px;
     margin: 15px auto;
     max-width: 70%;
     line-height: 1.2;
   }
 
-  .homeCopy .hero .heroRight .mobileContent {
+  .heroRight .mobileContent {
     left: 38%;
     max-width: 55%;
     font-size: 18px;
@@ -439,150 +487,143 @@
     line-height: 25px;
   }
 
-  .homeCopy .hero .heroLeft .heroParagraph span {
+  .heroLeft .heroParagraph :global(span) {
     margin-bottom: 25px;
     font-size: 14px;
   }
 
-  .homeCopy .hero .heroParagraph strong {
+  .heroParagraph :global(strong) {
     font-size: 15px;
     max-width: 95vw;
     display: inline-block;
     padding-bottom: 20px;
-
   }
 
-  .homeCopy .hero .heroRight .buttonGroup {
+  .heroRight .buttonGroup {
     justify-content: space-evenly;
-    /* FIX: Adjust vertical position and ensure button group is fully visible */
     top: 55%;
     left: 35%;
     bottom: 0;
-    /* Ensures buttons push the bottom edge down */
     width: 60vw;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup button {
+  .heroRight .buttonGroup :global(button) {
     padding: 10px 25px;
   }
 
-  .homeCopy .hero .heroVideo {
-
+  .heroVideo {
     mask: url("/images/banner-image-right-m.png") no-repeat center;
     -webkit-mask: url("/images/banner-image-right-m.png") no-repeat center;
     mask-size: 90%;
-
   }
 
-  .homeCopy .hero .heroRight .buttonGroup .buttonBlue,
-  .homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
+  .heroRight .buttonGroup :global(.buttonBlue),
+  .heroRight .buttonGroup :global(.buttonSkyBlue) {
     font-size: 1rem;
     font-weight: 600;
     padding: 8px 15px;
   }
 
-
+  .heroLeft :global(div) {
+    padding-top: 0px;
+  }
 }
 
 @media (max-width: 425px) {
-  .homeCopy .hero {
-    /* FIX: Reduced top padding */
+  .hero {
     padding: 10px 0 0 0;
     background-size: 90%;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup button {
+  .heroRight .buttonGroup :global(button) {
     font-size: 14px;
     padding: 8px 12px;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup button img {
+  .heroRight .buttonGroup :global(button) :global(img) {
     width: 25px;
     height: 25px;
   }
 
-  .homeCopy .hero .heroMain h3 {
+  .heroMain :global(h3) {
     font-size: 0.9rem;
   }
 
-  .homeCopy .hero .heroLeft .heroTitle-mobile {
+  .heroLeft .heroTitleMobile {
     font-size: 1.2rem;
   }
 
-  .homeCopy .hero .heroLeft .heroTitle-mobile span {
+  .heroLeft .heroTitleMobile :global(span) {
     display: inline-block;
   }
 
-  .homeCopy .hero .heroRight .mobileContent {
+  .heroRight .mobileContent {
     font-size: 16px;
     line-height: 18px;
   }
 
-  .homeCopy .hero .heroLeft .heroParagraph span {
+  .heroLeft .heroParagraph :global(span) {
     margin-bottom: 25px;
     font-size: 14px;
   }
 
-  .homeCopy .hero .heroParagraph strong {
+  .heroParagraph :global(strong) {
     font-size: 15px;
     max-width: 95%;
     display: inline-block;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup {
+  .heroRight .buttonGroup {
     justify-content: space-evenly;
-    /* FIX: Keep position low but ensure visibility */
     top: 60%;
-
   }
 
-  .homeCopy .hero .heroRight .buttonGroup button {
+  .heroRight .buttonGroup :global(button) {
     padding: 10px 25px;
   }
 
-  .homeCopy .hero .heroLeft div {
+  .heroLeft :global(div) {
     padding-top: 0px;
   }
 
-  .homeCopy .courseSection .mainCard .mainCardTitle {
-    max-width: 100%;
+  .heroRight .buttonGroup :global(.buttonBlue),
+  .heroRight .buttonGroup :global(.buttonSkyBlue) {
+    font-size: 0.8rem;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup .buttonBlue,
-  .homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
-    font-size: 0.8rem;
+  .courseSection .mainCard .mainCardTitle {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 360px) {
-  .homeCopy .hero .heroVideo {
+  .heroVideo {
     height: 300px;
   }
 
-  .homeCopy .hero .videoContainer,
-  .homeCopy .hero .heroVideo {
+  .videoContainer,
+  .heroVideo {
     height: 65vw;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup {
+  .heroRight .buttonGroup {
     width: 55vw;
-    /* FIX: Ensure buttons don't fall off the screen */
     top: 63%;
     left: 20%;
     right: 20%;
   }
 
-  .homeCopy .hero .heroLeft div {
+  .heroLeft :global(div) {
     padding-top: 0px;
   }
 
-  .homeCopy .hero .heroRight .buttonGroup .buttonBlue,
-  .homeCopy .hero .heroRight .buttonGroup .buttonSkyBlue {
+  .heroRight .buttonGroup :global(.buttonBlue),
+  .heroRight .buttonGroup :global(.buttonSkyBlue) {
     font-size: 0.8rem;
     padding: 8px 10px;
   }
 
-  .homeCopy .hero .heroVideo {
+  .heroVideo {
     mask: url(/images/banner-image-right-m.png) no-repeat center top;
     -webkit-mask: url(/images/banner-image-right-m.png) no-repeat center top;
     -webkit-mask-size: 90%;

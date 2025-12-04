@@ -1,66 +1,45 @@
 import React, { useState, useEffect } from "react";
-// import Image from "next/image";
 import Image from '@/components/CustomImageWrapper';
+// Import styles as an object from the CSS Module file
+import styles from '@/styles/home-copy/Hero.module.css';
 
-// --- 1. Custom Hook for Device Detection ---
-/**
- * Detects if the current device is considered 'mobile' based on a breakpoint.
- * Uses client-side window object check to avoid hydration issues during SSR.
- * @param {number} breakpoint - The max width (in pixels) for a device to be considered mobile (default: 992px).
- * @returns {boolean | undefined} - true if mobile, false if desktop/tablet, undefined during initial SSR.
- */
 const useDeviceCheck = (breakpoint = 992) => {
-    // Start as undefined to avoid hydration mismatch with Next.js SSR
     const [isMobile, setIsMobile] = useState(undefined);
 
-
     useEffect(() => {
-        // Function to determine if the screen width is less than the breakpoint
         const checkDevice = () => {
-            // Only run if 'window' is defined (i.e., running on the client)
             if (typeof window !== 'undefined') {
                 setIsMobile(window.innerWidth < breakpoint);
             }
         };
 
-        // Run check initially
         checkDevice();
-
-        // Add event listener for window resizing
         window.addEventListener('resize', checkDevice);
 
-        // Cleanup the event listener
         return () => window.removeEventListener('resize', checkDevice);
     }, [breakpoint]);
 
     return isMobile;
 };
-// --- End of useDeviceCheck Hook ---
 
-// No need for useRef or useEffect for scroll here.
-// The data-scroll-container is now handled by the provider
 const Hero = () => {
-    // Use the custom hook to determine the device
     const isMobile = useDeviceCheck();
 
-    // Function to handle the conditional title rendering
     const renderTitle = () => {
-        // If isMobile is undefined (during initial SSR/load), render the desktop title as the default.
         if (isMobile === undefined) {
             return (
-                <h1 className="heroTitle-desktop">
+                <h1 className={styles.heroTitleDesktop}>
                     Ignite Your Path To Top <span className="highlight">Academic</span> Performance
                 </h1>
             );
         }
 
-        // Client-side conditional rendering: render only the appropriate title
         return isMobile ? (
-            <h1 className="heroTitle-mobile">
+            <h1 className={styles.heroTitleMobile}>
                 Empower Your Academic Goals With <span className="highlight">Ignite’s</span> Tutors
             </h1>
         ) : (
-            <h1 className="heroTitle-desktop">
+            <h1 className={styles.heroTitleDesktop}>
                 Ignite Your Path To Top <span className="highlight">Academic</span> Performance
             </h1>
         );
@@ -72,24 +51,21 @@ const Hero = () => {
 
 
     return (
-        // The data-scroll-section is still needed here
-        <section className="hero revealClipRightToLeft " data-scroll-section>
+        <section className={`${styles.hero} revealClipRightToLeft `} data-scroll-section>
             <div className="container">
                 <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
-                    <div className="row heroMain">
-                        <div className="col-12 col-lg-7 col-xl-7 pe-5 heroLeft">
-                            {/* All your content with data-scroll attributes */}
+                    <div className={`row ${styles.heroMain}`}>
+                        <div className={`col-12 col-lg-7 col-xl-7 pe-5 ${styles.heroLeft}`}>
                             <div
                                 data-scroll
                                 data-scroll-class="is-inview"
                                 data-scroll-repeat="true"
-                                className={`fade-in-section heroMainHeading ${mobileClass}`}
+                                className={`fade-in-section ${styles.heroMainHeading} ${mobileClass}`}
                                 style={{ animationDelay: "0.4s" }}
                             >
-                                <h2 className="SubHeading">BEST TUTORS IN UAE</h2>
+                                <h2 className={styles.SubHeading}>BEST TUTORS IN UAE</h2>
                             </div>
 
-                            {/* --- Conditionally Rendered Hero Title --- */}
                             <div
                                 data-scroll
                                 data-scroll-class="is-inview"
@@ -99,7 +75,6 @@ const Hero = () => {
                             >
                                 {renderTitle()}
                             </div>
-                            {/* ---------------------------------------- */}
 
                             <div
                                 data-scroll
@@ -108,7 +83,8 @@ const Hero = () => {
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.8s" }}
                             >
-                                <div className="heroParagraph pt-3 pb-3">
+                                <div className={styles.heroParagraph}>
+                                    {/* These are global elements, their styles are handled via :global() in CSS */}
                                     <h3>Improve Your Grades Today!</h3>
                                     <b>
                                         We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, & more through our curriculum-specific approach & expert tutors in Dubai, guiding them toward a stronger understanding & lasting growth.
@@ -119,10 +95,10 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-lg-5 col-xl-5 heroRight">
-                            <div className="videoContainer">
+                        <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
+                            <div className={styles.videoContainer}>
                                 <video
-                                    className="heroVideo"
+                                    className={styles.heroVideo}
                                     autoPlay
                                     muted
                                     loop
@@ -130,17 +106,9 @@ const Hero = () => {
                                     poster="/images/banner-image-right.png"
                                 >
                                     <source src="/videos/education-video.mp4" type="video/mp4" />
-                                    <Image
-                                        src="/images/banner-image-right.png"
-                                        alt="Education Platform"
-                                        className="heroImage"
-                                        width={500}
-                                        height={500}
-                                        quality={100}
-                                    />
                                 </video>
                             </div>
-                            <div className="buttonGroup">
+                            <div className={styles.buttonGroup}>
                                 <a href="/join-free-demo-class/" className="buttonBlue">
                                     Get A Free Demo{" "}
                                     <Image
@@ -149,6 +117,7 @@ const Hero = () => {
                                         height={40}
                                         quality={100}
                                         alt="Right arrow"
+                                        loading="lazy"
                                     />
                                 </a>
                                 <a href="/courses/" className="buttonSkyBlue">
@@ -159,6 +128,7 @@ const Hero = () => {
                                         height={40}
                                         quality={100}
                                         alt="Right arrow"
+                                        loading="lazy"
                                     />
                                 </a>
                             </div>

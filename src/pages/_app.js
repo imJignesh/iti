@@ -1,31 +1,22 @@
 // src/pages/_app.js
 
-import { Montserrat } from 'next/font/google';
-
 // Add all your CSS here.
 import "@/styles/globals.css";
-
-const montserrat = Montserrat({
-    subsets: ['latin'],
-    display: 'swap',
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-});
-
 // Home Page Css
-import "@/styles/home/Hero.css";
-import "@/styles/home/Course.css";
-import "@/styles/home/About.css";
-import "@/styles/home/Test.css";
+// import "@/styles/home/Hero.css";
+// import "@/styles/home/Course.css";
+// import "@/styles/home/About.css";
+// import "@/styles/home/Test.css";
 import "@/styles/home/MovingBanner.css";
-import "@/styles/home/Subjects.css";
-import "@/styles/home/Alumni.css";
+// import "@/styles/home/Subjects.css";
+// import "@/styles/home/Alumni.css";
 // import "@/styles/home/Usps.css";
-import "@/styles/home/Trainers.css";
+// import "@/styles/home/Trainers.css";
 import "@/styles/home/Testimonial.css";
-import "@/styles/home/Blog.css";
+// import "@/styles/home/Blog.css";
 
 // Home Copy Page Css
-import "@/styles/home-copy/Hero.css";
+// import "@/styles/home-copy/Hero.css";
 import "@/styles/home-copy/Course.css";
 import "@/styles/home-copy/About.css";
 import "@/styles/home-copy/Test.css";
@@ -128,14 +119,12 @@ export default function MyApp({ Component, pageProps }) {
     return (
         // --- 3. CRITICAL: Wrap the entire app with the PopupProvider ---
         <PopupProvider>
-            <div className={montserrat.className}>
-                <LocomotiveScrollProvider>
-                    <Header setHeaderHeight={setHeaderHeight} />
-                    <Component {...pageProps} headerHeight={headerHeight} />
-                    <Footer />
-                    <DelayedPopup /> {/* DelayedPopup now correctly reads the context */}
-                </LocomotiveScrollProvider>
-            </div>
+            <LocomotiveScrollProvider>
+                <Header setHeaderHeight={setHeaderHeight} />
+                <Component {...pageProps} headerHeight={headerHeight} />
+                <Footer />
+                <DelayedPopup /> {/* DelayedPopup now correctly reads the context */}
+            </LocomotiveScrollProvider>
         </PopupProvider>
     );
 }
