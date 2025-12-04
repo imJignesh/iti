@@ -663,7 +663,7 @@ justify-content:space-between;
     font-weight: 700;
     color: #233467;
     line-height: 1.2;
-    margin: 0 0 12px 0;
+    margin: 40px auto;
     margin-bottom: 11px;
 }
             .rect-1 {

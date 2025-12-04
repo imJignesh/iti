@@ -1,20 +1,23 @@
-/* About Us Section  */
-.homeCopy .aboutSection {
+/* About.module.css (Corrected) */
+
+/* About Us Section - Local Class: .aboutSection */
+.aboutSection {
   margin: 0;
 }
 
-.homeCopy .aboutSection .SubHeading1 {
+/* Local Class: .SubHeading1 */
+.SubHeading1 {
   font-size: 1.5rem;
 }
 
-.homeCopy .aboutSection .aboutSectionInner {
+.aboutSectionInner {
   display: flex;
   gap: 60px;
   align-items: center;
   justify-content: center;
 }
 
-.homeCopy .aboutSection .aboutLeft {
+.aboutLeft {
   display: flex;
   align-items: flex-end;
   min-width: 340px;
@@ -22,7 +25,7 @@
   justify-content: space-evenly;
 }
 
-.homeCopy .aboutSection .aboutImageWrap {
+.aboutImageWrap {
   padding-right: 50px;
   position: relative;
   width: 80%;
@@ -33,48 +36,49 @@
   justify-content: center;
 }
 
-.homeCopy .aboutSection a.aboutBtn {
+/* Use :global() for the tag or class that is global (a.aboutBtn is local here) */
+a.aboutBtn {
   width: 16vw;
   padding: 0.8vw 1vw;
   gap: 1vw;
   font-size: 1vw;
 }
 
-.homeCopy .aboutSection .aboutImageWrap .rectangleBG {
+.aboutImageWrap .rectangleBG {
   position: absolute;
   z-index: -1;
   width: auto;
   height: 12%;
 }
 
-.homeCopy .aboutSection .aboutImageWrap .rectangleBG:nth-child(1) {
+.aboutImageWrap .rectangleBG:nth-child(1) {
   top: 20px;
   left: -20px;
 }
 
-.homeCopy .aboutSection .aboutImageWrap .rectangleBG:nth-child(2) {
+.aboutImageWrap .rectangleBG:nth-child(2) {
   bottom: 45%;
   right: 20px;
 }
 
-.homeCopy .aboutSection .aboutImageWrap .rectangleBG:nth-child(3) {
+.aboutImageWrap .rectangleBG:nth-child(3) {
   bottom: 30%;
   right: -20px;
 }
 
-.homeCopy .aboutSection .aboutImageWrap .rectangleBG:nth-child(4) {
+.aboutImageWrap .rectangleBG:nth-child(4) {
   bottom: 15%;
   right: 20px;
 }
 
-.homeCopy .aboutSection .aboutImage {
+.aboutImage {
   width: 75%;
   height: 100%;
   border-radius: 32px;
   object-fit: contain;
 }
 
-.homeCopy .aboutSection .statCard {
+.statCard {
   position: absolute;
   background: linear-gradient(to right, var(--border-color), #e7f6ff);
   border: 4px solid var(--white-color);
@@ -91,32 +95,32 @@
   gap: 8px;
 }
 
-.homeCopy .aboutSection .statCardYears {
+.statCardYears {
   top: 10%;
   right: -30px;
   width: max-content;
 }
 
-.homeCopy .aboutSection .statCardResources {
+.statCardResources {
   bottom: 0;
   left: 0;
   background: linear-gradient(to right, var(--green-text), #e7f6ff);
 }
 
-.homeCopy .aboutSection .statBig {
+.statBig {
   font-size: 1.8vw;
   font-weight: 700;
   color: var(--blue-color);
 }
 
-.homeCopy .aboutSection .statSmall {
+.statSmall {
   color: var(--blue-color);
   font-size: 0.7vw;
   font-weight: 600;
   line-height: 1.5;
 }
 
-.homeCopy .aboutSection .verticalLabel {
+.verticalLabel {
   position: absolute;
   right: 30vw;
   bottom: 12vw;
@@ -128,11 +132,12 @@
   letter-spacing: revert-layer;
 }
 
-.homeCopy .aboutSection .verticalLabel span {
+/* Use :global(span) for the global element tag */
+.verticalLabel :global(span) {
   color: var(--lightgreen-color);
 }
 
-.homeCopy .aboutSection .aboutRight {
+.aboutRight {
   flex: 1.2;
   min-width: 320px;
   display: flex;
@@ -142,22 +147,20 @@
   gap: 30px;
 }
 
-.homeCopy .aboutSection .aboutHeading {
+.aboutHeading {
   display: none;
   text-align: center;
   margin-bottom: 50px;
 }
 
-.homeCopy .aboutSection .aboutHeadingRow {
+.aboutHeadingRow {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 8px;
 }
 
-
-
-.homeCopy .aboutSection .aboutTitle {
+.aboutTitle {
   font-size: 2rem;
   font-weight: 700;
   color: var(--blue-color);
@@ -166,7 +169,11 @@
   text-transform: uppercase;
 }
 
-.homeCopy .aboutSection .aboutHighlight {
+/* Global utility class 'aboutHighlight' must be defined globally, 
+   but since it's used inside a local h3, we anchor it to the local title.
+   A better approach is to move this to globals.css and use the global name. 
+   Assuming you want to keep it local: */
+.aboutTitle :global(.aboutHighlight) {
   background: linear-gradient(to right,
       var(--lightgreen-color),
       var(--green-color));
@@ -176,7 +183,7 @@
   letter-spacing: 0.04em;
 }
 
-.homeCopy .aboutSection .aboutDesc {
+.aboutDesc {
   font-size: 1vw;
   color: #7a8ca3;
   margin-bottom: 18px;
@@ -184,14 +191,14 @@
   line-height: 1.6;
 }
 
-.homeCopy .aboutSection .aboutStatsRow {
+.aboutStatsRow {
   display: flex;
   gap: 48px;
   border-top: 2px solid #e6f6ff;
   padding-top: 18px;
 }
 
-.homeCopy .aboutSection .aboutStatsRow .aboutStatBorder {
+.aboutStatsRow .aboutStatBorder {
   width: 2px;
   height: 100px;
   background: linear-gradient(var(--border-color), #e7f6ff);
@@ -200,7 +207,7 @@
   display: none;
 }
 
-.homeCopy .aboutSection .aboutStatBlock {
+.aboutStatBlock {
   width: max-content;
   display: flex;
   flex-direction: column;
@@ -208,7 +215,7 @@
   gap: 4px;
 }
 
-.homeCopy .aboutSection .aboutStatBig {
+.aboutStatBig {
   font-size: 1.8rem;
   font-weight: 700;
   background: linear-gradient(to right,
@@ -219,7 +226,7 @@
   letter-spacing: 0.04em;
 }
 
-.homeCopy .aboutSection .aboutStatLabel {
+.aboutStatLabel {
   font-size: 0.9vw;
   color: var(--blue-color);
   font-weight: 600;
@@ -227,178 +234,174 @@
   max-width: 250px;
 }
 
-.homeCopy .aboutSection .aboutBtn {
+.aboutBtn {
   margin-top: 30px;
   width: max-content;
 }
 
-.aboutRight .mainCardBtn {
-  font-weight: 600;
-}
+/* Global classes used as string: .aboutRight .mainCardBtn */
+/* We define it simply, assuming mainCardBtn is defined globally */
 
-
+/* --- Media Queries --- */
 
 @media (max-width: 1199px) {
-  .homeCopy .aboutSection .statSmall {
-    /* font-size: 1rem; */
-  }
+  .statSmall {}
 
-  .homeCopy .aboutSection .aboutTitle {
+  .aboutTitle {
     font-size: 1.8rem;
   }
 
-  .homeCopy .aboutSection .aboutDesc {
+  .aboutDesc {
     font-size: 14px;
   }
 
-  .homeCopy .aboutSection .aboutStatLabel {
+  .aboutStatLabel {
     font-size: 0.8rem;
   }
 
-  .homeCopy .aboutSection .aboutBtn {
+  .aboutBtn {
     font-size: 0.8rem;
   }
 }
 
 @media (max-width: 991px) {
-  .homeCopy .aboutSection .aboutSectionInner {
+  .aboutSectionInner {
     gap: 30px;
   }
 
-  .homeCopy .aboutSection .aboutImageWrap {
+  .aboutImageWrap {
     max-width: 600px;
     margin: 0 auto;
   }
 
-  .homeCopy .aboutSection .aboutImage {
+  .aboutImage {
     height: 100%;
   }
 
-  .homeCopy .aboutSection .statCard {
+  .statCard {
     height: 25%;
   }
 
-  .homeCopy .aboutSection .verticalLabel {
+  .verticalLabel {
     font-size: 1rem;
   }
 
-  .homeCopy .aboutSection .statBig {
+  .statBig {
     font-size: 1.5rem;
   }
 
-  .homeCopy .aboutSection .aboutHeading {
+  .aboutHeading {
     display: block;
   }
 
-  .homeCopy .aboutSection .aboutHeadingRow span {
+  /* Use :global(span) for the global element tag */
+  .aboutHeadingRow :global(span) {
     display: none;
   }
 
-  .homeCopy .aboutSection .aboutRight,
-  .homeCopy .aboutSection .aboutStatsRow,
-  .homeCopy .aboutSection .aboutStatBlock {
+  .aboutRight,
+  .aboutStatsRow,
+  .aboutStatBlock {
     align-items: center;
     justify-content: center;
   }
 
-  .homeCopy .aboutSection .aboutTitle,
-  .homeCopy .aboutSection .aboutDesc,
-  .homeCopy .aboutSection .aboutStatLabel {
+  .aboutTitle,
+  .aboutDesc,
+  .aboutStatLabel {
     text-align: center;
   }
 
-  .homeCopy .aboutSection .aboutStatsRow {
+  .aboutStatsRow {
     gap: 20px;
   }
 
-  .homeCopy .aboutSection .aboutStatBig {
+  .aboutStatBig {
     font-size: 2.5rem;
   }
 
-  .homeCopy .aboutSection .aboutStatLabel {
+  .aboutStatLabel {
     font-size: 1rem;
   }
 
-  .homeCopy .aboutSection .aboutStatsRow .aboutStatBorder {
+  .aboutStatsRow .aboutStatBorder {
     display: block;
   }
 }
 
 @media (max-width: 767px) {
-  .homeCopy .aboutSection .aboutLeft {
+  .aboutLeft {
     overflow: hidden;
   }
 }
 
 @media (max-width: 575px) {
-  .homeCopy .aboutSection {
+  .aboutSection {
     margin: 0 0;
   }
 
-  .homeCopy .aboutSection .statCard {
+  .statCard {
     height: max-content;
     padding: 30px;
   }
 
-  .homeCopy .aboutSection .statCardYears {
+  .statCardYears {
     width: 45%;
     right: 0;
   }
 
-  .homeCopy .aboutSection .aboutImageWrap {
+  .aboutImageWrap {
     padding-right: 20px;
   }
 
-  .homeCopy .aboutSection .verticalLabel {
+  .verticalLabel {
     font-size: 0.8rem;
     top: 0;
     bottom: 42%;
   }
 
-  .homeCopy .aboutSection .aboutRight {
+  .aboutRight {
     gap: 10px;
   }
 
-  .homeCopy .aboutSection .aboutTitle {
+  .aboutTitle {
     font-size: 20.4px;
     line-height: 23px;
   }
 
-  .homeCopy .aboutSection .statBig {
+  .statBig {
     font-size: 25px;
   }
 
-  .homeCopy .aboutSection .aboutStatBig {
+  .aboutStatBig {
     font-size: 1.5rem;
   }
 
-  .homeCopy .aboutSection .aboutStatLabel {
+  .aboutStatLabel {
     font-size: 0.8rem;
   }
 
-  .mobile-mt-2 {
-    margin-top: 1rem !important;
-  }
+  /* Global utility class mobile-mt-2 must be defined globally */
 }
 
 @media (max-width:500px) {
-  .homeCopy .aboutSection .verticalLabel {
+  .verticalLabel {
     right: 66vw;
   }
 
-  .homeCopy .aboutSection .statCard {
+  .statCard {
     padding: 1.2vw 4vw;
   }
 
-  .homeCopy .aboutSection .statBig {
+  .statBig {
     font-size: 22px;
   }
 
-  .homeCopy .aboutSection .statSmall {
+  .statSmall {
     font-size: 0.7rem;
   }
 
-  .homeCopy .aboutSection a.aboutBtn {
+  a.aboutBtn {
     width: fit-content;
     padding: inherit;
     gap: inherit;
@@ -408,29 +411,29 @@
 }
 
 @media (max-width:425px) {
-  .homeCopy .aboutSection .aboutSectionInner {
+  .aboutSectionInner {
     gap: 20px;
   }
 
-  .homeCopy .aboutSection .statCard {
+  .statCard {
     padding: 1.2vw 4vw;
   }
 
-  .homeCopy .aboutSection .statBig {
+  .statBig {
     font-size: 20px;
   }
 }
 
 @media (max-width: 375px) {
-  .homeCopy .aboutSection .aboutSectionInner {
+  .aboutSectionInner {
     overflow: hidden;
   }
 
-  .homeCopy .aboutSection .statCard {
+  .statCard {
     padding: 1.2vw 4vw;
   }
 
-  .homeCopy .aboutSection .statBig {
+  .statBig {
     font-size: 18px;
   }
 }

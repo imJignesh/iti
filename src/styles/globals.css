@@ -145,6 +145,8 @@ section.padding-0 {
   background-clip: text;
 }
 
+
+
 /* Tablet (No changes needed) */
 @media (max-width: 1024px) {
   .SubHeading {

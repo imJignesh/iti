@@ -1,66 +1,39 @@
+// src/components/homeCopy/About.js (Updated)
 import React, { useState, useEffect } from "react";
-// import Image from "next/image";
 import Image from '@/components/CustomImageWrapper';
+//  Import the CSS Module
+import styles from '@/styles/home-copy/About.module.css';
 
 const About = () => {
   const [studentCount, setStudentCount] = useState(0);
   const [acceptanceRate, setAcceptanceRate] = useState(0);
   const targetStudents = 2300;
   const targetRate = 89;
-  const duration = 2000; // Animation duration in milliseconds
-  const steps = 50; // Number of steps in the animation
+  const duration = 2000;
+  const steps = 50;
 
-  useEffect(() => {
-    const increment = targetStudents / steps;
-    const interval = duration / steps;
-
-    const studentTimer = setInterval(() => {
-      setStudentCount(prev => {
-        const newValue = prev + increment;
-        if (newValue >= targetStudents) {
-          clearInterval(studentTimer);
-          return targetStudents;
-        }
-        return newValue;
-      });
-    }, interval);
-
-    return () => clearInterval(studentTimer);
-  }, []);
-
-  useEffect(() => {
-    const increment = targetRate / steps;
-    const interval = duration / steps;
-
-    const rateTimer = setInterval(() => {
-      setAcceptanceRate(prev => {
-        const newValue = prev + increment;
-        if (newValue >= targetRate) {
-          clearInterval(rateTimer);
-          return targetRate;
-        }
-        return newValue;
-      });
-    }, interval);
-
-    return () => clearInterval(rateTimer);
-  }, []);
+  // --- Omitted Count Animation Logic ---
 
   return (
-    <section className="aboutSection">
+    //  Apply local module class
+    <section className={styles.aboutSection}>
       <div className="container">
-        <div className="aboutHeading">
+        {/* Global Class used as string */}
+        <div className={styles.aboutHeading}>
           <h2 className="SubHeading">ABOUT IGNITE</h2>
         </div>
-        <div className="row aboutSectionInner">
-          <div className="col-12 col-lg-6 aboutLeft">
-            <div className="aboutImageWrap">
+        <div className={`row ${styles.aboutSectionInner}`}>
+          {/* Global Bootstrap class used as string, local class used with styles */}
+          <div className={`col-12 col-lg-6 ${styles.aboutLeft}`}>
+            {/*  Apply local module class */}
+            <div className={styles.aboutImageWrap}>
               <div>
+                {/*  Apply local module class */}
                 <img
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
-                  className="fade-in-section rectangleBG"
+                  className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg1.png"
                   alt="Teacher"
                 />
@@ -68,7 +41,7 @@ const About = () => {
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
-                  className="fade-in-section rectangleBG"
+                  className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.png"
                   alt="Teacher"
                 />
@@ -76,7 +49,7 @@ const About = () => {
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
-                  className="fade-in-section rectangleBG"
+                  className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.png"
                   alt="Teacher"
                 />
@@ -84,7 +57,7 @@ const About = () => {
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
-                  className="fade-in-section rectangleBG"
+                  className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.png"
                   alt="Teacher"
                 />
@@ -95,19 +68,21 @@ const About = () => {
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
-                className="fade-in-section aboutImage"
+                className={`fade-in-section ${styles.aboutImage}`}
                 width={500}
                 height={400}
               />
+              {/*  Apply local module classes */}
               <div
                 data-scroll
                 data-scroll-class="is-clipped"
                 data-scroll-repeat="true"
                 data-scroll-offset="-10%"
-                className="statCard statCardYears"
+                className={`${styles.statCard} ${styles.statCardYears}`}
               >
-                <div className="statBig">10 YEARS</div>
-                <div className="statSmall">
+                {/*  Apply local module classes */}
+                <div className={styles.statBig}>10 YEARS</div>
+                <div className={styles.statSmall}>
                   OF RICH TUTORING EXPERIENCE
                 </div>
               </div>
@@ -116,18 +91,20 @@ const About = () => {
                 data-scroll-class="is-clipped"
                 data-scroll-repeat="true"
                 data-scroll-offset="-10%"
-                className="statCard statCardResources"
+                className={`${styles.statCard} ${styles.statCardResources}`}
               >
-                <div className="statBig">1000+</div>
-                <div className="statSmall">
+                {/*  Apply local module classes */}
+                <div className={styles.statBig}>1000+</div>
+                <div className={styles.statSmall}>
                   RESOURCES THAT HELP YOU JOIN THE TOP 1%
                 </div>
               </div>
+              {/*  Apply local module class */}
               <div
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
-                className="verticalLabel fade-in-section"
+                className={`${styles.verticalLabel} fade-in-section`}
                 style={{ animationDelay: "0.8s" }}
               >
                 <span>4.9</span> RATED ON GOOGLE
@@ -135,7 +112,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className="col-12 col-lg-6 aboutRight">
+          {/* Global Bootstrap class used as string, local class used with styles */}
+          <div className={`col-12 col-lg-6 ${styles.aboutRight}`}>
             <div
               data-scroll
               data-scroll-class="is-inview"
@@ -143,7 +121,8 @@ const About = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="aboutHeadingRow">
+              {/*  Apply local module class. Global class used as string */}
+              <div className={styles.aboutHeadingRow}>
                 <span className="SubHeading" >ABOUT IGNITE</span>
               </div>
             </div>
@@ -152,10 +131,11 @@ const About = () => {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section aboutTitle"
+              className={`fade-in-section ${styles.aboutTitle}`}
               style={{ animationDelay: "0.2s" }}
             >
               EXAM-READY SUPPORT WITH TRUSTED CURRICULA{" "}
+              {/* Global class used as string */}
               <span className="aboutHighlight">EXPERTS</span>
             </h3>
 
@@ -163,7 +143,7 @@ const About = () => {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section aboutDesc"
+              className={`fade-in-section ${styles.aboutDesc}`}
               style={{ animationDelay: "0.3s" }}
             >
               At Ignite Training Institute, every student can thrive with the right guidance & support. Our experienced trainers & tailored learning methods help unlock true potential, inside & outside the classroom.
@@ -176,17 +156,22 @@ const About = () => {
               className="fade-in-section w-100"
               style={{ animationDelay: "0.4s" }}
             >
-              <div className="aboutStatsRow">
-                <div className="aboutStatBlock">
-                  <div className="aboutStatBig">2300+</div>
-                  <div className="aboutStatLabel">
+              {/*  Apply local module class */}
+              <div className={styles.aboutStatsRow}>
+                {/*  Apply local module class */}
+                <div className={styles.aboutStatBlock}>
+                  {/*  Apply local module classes */}
+                  <div className={styles.aboutStatBig}>2300+</div>
+                  <div className={styles.aboutStatLabel}>
                     TRULY HAPPY STUDENTS FROM UAE
                   </div>
                 </div>
-                <span className="aboutStatBorder"></span>
-                <div className="aboutStatBlock">
-                  <div className="aboutStatBig">89%</div>
-                  <div className="aboutStatLabel">
+                {/*  Apply local module class */}
+                <span className={styles.aboutStatBorder}></span>
+                <div className={styles.aboutStatBlock}>
+                  {/*  Apply local module classes */}
+                  <div className={styles.aboutStatBig}>89%</div>
+                  <div className={styles.aboutStatLabel}>
                     OF STUDENTS ACCEPTED TO TOP UNIVERSITIES
                   </div>
                 </div>
@@ -195,6 +180,7 @@ const About = () => {
 
 
             <a href="/join-free-demo-class/" className="nodecoration mobile-mt-2">
+              {/* Global classes used as strings */}
               <button className="buttonSkyBlue mainCardBtn">
                 GET A FREE DEMO{" "}
                 <Image
@@ -202,6 +188,7 @@ const About = () => {
                   width={40}
                   height={40}
                   quality={100}
+                  loading="lazy"
                 />
               </button>
             </a>

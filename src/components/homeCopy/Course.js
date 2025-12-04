@@ -1,7 +1,8 @@
 // components/home/Course.js
 import React, { useState } from "react";
 import Image from "next/image";
-
+// Import the Course module styles
+import styles from '@/styles/home-copy/Course.module.css';
 
 const courseData = [
     {
@@ -55,9 +56,11 @@ const Course = () => {
     const [hovered, setHovered] = useState(1);
 
     return (
-        <section className="courseSection">
+        // Apply local module class
+        <section className={styles.courseSection}>
             <div className="container">
-                <div className="courseHeadings">
+                {/* Apply local module class */}
+                <div className={styles.courseHeadings}>
                     <div
                         data-scroll
                         data-scroll-class="is-inview"
@@ -65,6 +68,7 @@ const Course = () => {
                         className="fade-in-section"
                         style={{ animationDelay: "0.1s" }}
                     >
+                        {/* Global Class used as string */}
                         <h2 className="SubHeading">TUTORING PROGRAMS</h2>
                     </div>
                     <div
@@ -74,7 +78,8 @@ const Course = () => {
                         className="fade-in-section"
                         style={{ animationDelay: "0.25s" }}
                     >
-                        <h3 className="courseTitle">
+                        {/* Apply local module class. Global class used as string */}
+                        <h3 className={styles.courseTitle}>
                             Become Exam-Ready With Targeted Prep <span className="highlight">Courses</span>
                         </h3>
                     </div>
@@ -85,6 +90,7 @@ const Course = () => {
                         className="fade-in-section"
                         style={{ animationDelay: "0.4s" }}
                     >
+                        {/* Global element, styles applied via :global(p) in module */}
                         <p>
                             Whether you're aiming for top scores or a strong foundation, Ignite’s courses give you the edge to succeed.
                         </p>
@@ -95,7 +101,7 @@ const Course = () => {
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat="true"
-                    className="fade-in-section courseInner"
+                    className={`fade-in-section ${styles.courseInner}`}
                     style={{ animationDelay: "0.4s" }}
                 >
                     {courseData.map((card, idx) => {
@@ -105,41 +111,51 @@ const Course = () => {
                                 data-scroll
                                 data-scroll-class="is-inview"
                                 data-scroll-repeat="true"
-                                className={isActive ? "mainCard" : "sideCard"}
+                                // Apply local module classes
+                                className={isActive ? styles.mainCard : styles.sideCard}
                                 style={{ animationDelay: `${0.3 + idx * 0.25}s`, background: "none" }}
                                 key={idx}
                                 onMouseEnter={() => setHovered(idx)}
                             >
-                                <span className="cardNumber">{card.number}</span>
-                                <h3 className="cardTitle">{card.title}</h3>
+                                {/* Apply local module class */}
+                                <span className={styles.cardNumber}>{card.number}</span>
+                                {/* Apply local module class */}
+                                <h3 className={styles.cardTitle}>{card.title}</h3>
+                                {/* Apply local module class */}
                                 <div
-                                    className="cardBg"
+                                    className={styles.cardBg}
                                     style={{ backgroundImage: `url('${card.img}')` }}
                                 />
                                 <div
+                                    // Combine local module classes
                                     className={
-                                        (isActive ? "mainCardContent" : "sideCardContent") +
+                                        (isActive ? styles.mainCardContent : styles.sideCardContent) +
                                         " " +
-                                        (isActive ? "activeOverlay" : "inactiveOverlay")
+                                        (isActive ? styles.activeOverlay : styles.inactiveOverlay)
                                     }
                                 >
                                     <div>
-                                        <div className="mainCardLabel">{card.label}</div>
-                                        <h3 className="mainCardTitle">{card.subtitle}</h3>
+                                        {/* Apply local module class */}
+                                        <div className={styles.mainCardLabel}>{card.label}</div>
+                                        {/* Apply local module class */}
+                                        <h3 className={styles.mainCardTitle}>{card.subtitle}</h3>
                                     </div>
-                                    <div className="mainCardDetails">
+                                    {/* Apply local module class */}
+                                    <div className={styles.mainCardDetails}>
                                         {card.details.map((d, i) => (
                                             <span key={i}>{d}</span>
                                         ))}
                                     </div>
                                     <a href={card.link} className="nodecoration">
-                                        <button className="buttonSkyBlue mainCardBtn">
+                                        {/* Global Class used as string, local module class used with styles */}
+                                        <button className={`buttonSkyBlue ${styles.mainCardBtn}`}>
                                             VIEW COURSE{" "}
                                             <Image
                                                 src="/images/right-arrow-blue.png"
                                                 width={40}
                                                 height={40}
                                                 quality={100}
+                                                loading="lazy"
                                             />
                                         </button>
                                     </a>
