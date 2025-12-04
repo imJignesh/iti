@@ -1,7 +1,16 @@
 // src/pages/_app.js
 
+import { Montserrat } from 'next/font/google';
+
 // Add all your CSS here.
 import "@/styles/globals.css";
+
+const montserrat = Montserrat({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
+
 // Home Page Css
 import "@/styles/home/Hero.css";
 import "@/styles/home/Course.css";
@@ -119,12 +128,14 @@ export default function MyApp({ Component, pageProps }) {
     return (
         // --- 3. CRITICAL: Wrap the entire app with the PopupProvider ---
         <PopupProvider>
-            <LocomotiveScrollProvider>
-                <Header setHeaderHeight={setHeaderHeight} />
-                <Component {...pageProps} headerHeight={headerHeight} />
-                <Footer />
-                <DelayedPopup /> {/* DelayedPopup now correctly reads the context */}
-            </LocomotiveScrollProvider>
+            <div className={montserrat.className}>
+                <LocomotiveScrollProvider>
+                    <Header setHeaderHeight={setHeaderHeight} />
+                    <Component {...pageProps} headerHeight={headerHeight} />
+                    <Footer />
+                    <DelayedPopup /> {/* DelayedPopup now correctly reads the context */}
+                </LocomotiveScrollProvider>
+            </div>
         </PopupProvider>
     );
 }
