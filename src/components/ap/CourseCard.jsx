@@ -314,7 +314,7 @@ function CourseCard() {
                     <span
                       style={{
                         fontSize: "2rem",
-                        fontWeight: 800,
+                        fontWeight: 700,
                         opacity: "0.7",
                         borderBottom: "1px solid rgba(22, 22, 100, 0.5)",
                         width: "50px",
@@ -332,7 +332,7 @@ function CourseCard() {
                       style={{
                         fontSize: "1rem",
                         letterSpacing: "1px",
-                        fontWeight: 800,
+                        fontWeight: 700,
                         background: "linear-gradient(90deg, #161664, #3F88BA)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",

@@ -25,6 +25,15 @@
   text-transform: uppercase;
 }
 
+.testTitle {
+  font-weight: 700;
+  color: var(--blue-color);
+  margin: 40px auto;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
 .homeCopy .testSection1 .highlight {
   background: linear-gradient(to right,
       var(--lightgreen-color),
@@ -558,7 +567,7 @@
   .homeCopy .testSection1 .testCardTitle {
     font-size: 3rem;
   }
-  
+
   .homeCopy .testSection1 .mobileActiveTitle {
     font-size: 1.8rem;
     margin-bottom: 0;

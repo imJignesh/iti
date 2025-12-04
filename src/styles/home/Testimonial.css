@@ -62,7 +62,7 @@
 
 .testimonialSection .testimonialTitle {
   color: var(--blue-color);
-  font-size: 1.8vw;
+  font-size: 2rem;
   font-weight: 700;
   max-width: 40%;
   text-transform: uppercase;

@@ -174,7 +174,7 @@ export default function Trainers() {
 
   const currentTitle = (
     <>
-      The Best ACT/AP<span className="highlight"> Trainers </span> For Your
+      The Best AP<span className="highlight"> Trainers </span> For Your
       {/* FIX: Conditional line break for desktop only */}
       {isMounted && !isTrainersSwiper ? <br /> : null}
       Success Journey

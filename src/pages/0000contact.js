@@ -431,14 +431,14 @@ const Contact = ({ headerHeight }) => {
                 <path d="m10 15 9 7 9-7" stroke="#fff" strokeWidth="2.2" strokeLinejoin="round" />
               </svg>
             </div>
-            <div style={{ fontWeight: 800, fontSize: 18, color: "#232B4D", letterSpacing: 1, marginBottom: 8, fontFamily: 'Montserrat, sans-serif', textAlign: 'center' }}>EMAIL US</div>
+            <div style={{ fontWeight: 700, fontSize: 18, color: "#232B4D", letterSpacing: 1, marginBottom: 8, fontFamily: 'Montserrat, sans-serif', textAlign: 'center' }}>EMAIL US</div>
             <div style={{ fontWeight: 500, fontSize: 18, color: "#7A8CA3", marginBottom: 18, textAlign: 'center', lineHeight: 1.4 }}>
               Email us now for expert tutoring<br />and tailored growth solutions.
             </div>
             <a
               href="mailto:hello@ignitetraininginstitute.com"
               style={{
-                fontWeight: 800,
+                fontWeight: 700,
                 fontSize: 18,
                 color: "#009688",
                 textDecoration: "none",
@@ -484,14 +484,14 @@ const Contact = ({ headerHeight }) => {
                 <path d="M27.5 23.5v2a2 2 0 0 1-2 2c-7.18 0-13-5.82-13-13a2 2 0 0 1 2-2h2a2 2 0 0 1 2 1.72c.13.81.37 1.6.7 2.34a2 2 0 0 1-.45 2.18l-.63.63a10.97 10.97 0 0 0 4.95 4.95l.63-.63a2 2 0 0 1 2.18-.45c.74.33 1.53.57 2.34.7A2 2 0 0 1 27.5 23.5Z" stroke="#fff" strokeWidth="2.2" strokeLinejoin="round" />
               </svg>
             </div>
-            <div style={{ fontWeight: 800, fontSize: 18, color: "#232B4D", letterSpacing: 1, marginBottom: 8, fontFamily: 'Montserrat, sans-serif', textAlign: 'center' }}>CALL US</div>
+            <div style={{ fontWeight: 700, fontSize: 18, color: "#232B4D", letterSpacing: 1, marginBottom: 8, fontFamily: 'Montserrat, sans-serif', textAlign: 'center' }}>CALL US</div>
             <div style={{ fontWeight: 500, fontSize: 18, color: "#7A8CA3", marginBottom: 18, textAlign: 'center', lineHeight: 1.4 }}>
               Call us today for personalised tutoring<br />and transformative growth.
             </div>
             <a
               href="tel:+9718080584756"
               style={{
-                fontWeight: 800,
+                fontWeight: 700,
                 fontSize: 18,
                 color: "#009688",
                 textDecoration: "none",

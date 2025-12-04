@@ -101,7 +101,7 @@ const FAQSection = () => {
               style={{
                 animationDelay: "0.2s",
                 color: "#19245E",
-                fontWeight: 800,
+                fontWeight: 700,
                 margin: isMobile ? "20px auto" : "0 0 20px 0",
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "2rem"
               }}
@@ -212,32 +212,32 @@ const FAQSection = () => {
           p{
           margin-block:1rem;
           }
-         .SubHeading {
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  padding: 22px;
-  display: inline-flex;  /* ✅ ensures proper alignment */
-  align-items: center;   /* ✅ centers text with icons */
-}
+         //          .SubHeading {
+//   font-size: 30px;
+//   font-weight: 600;
+//   line-height: 1;
+//   text-transform: uppercase;
+//   background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   position: relative;
+//   padding: 22px;
+//   display: inline-flex;  /* ✅ ensures proper alignment */
+//   align-items: center;   /* ✅ centers text with icons */
+// }
 
-.SubHeading:before,
-.SubHeading:after {
-  content: "";
-  width: 18px;   /* ✅ unchanged */
-  height: 36px;  /* ✅ unchanged */
-  position: absolute;
-  top: 50%;                /* center vertically */
-  transform: translateY(-50%); /* exact middle */
-  background: url(/images/heading-icon.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+// .SubHeading:before,
+// .SubHeading:after {
+//   content: "";
+//   width: 18px;   /* ✅ unchanged */
+//   height: 36px;  /* ✅ unchanged */
+//   position: absolute;
+//   top: 50%;                /* center vertically */
+//   transform: translateY(-50%); /* exact middle */
+//   background: url(/images/heading-icon.png);
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// }
 
 .SubHeading:before {
   left: 0;
