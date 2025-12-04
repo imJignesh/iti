@@ -51,6 +51,7 @@ const getSidebarHtmlImage = () => {
         </div>
     `;
 };
+
 const getSidebarHtmlStaticMobile = () => {
     return `
         <div class="sticky-sidebar-wrapper">
@@ -94,6 +95,20 @@ const getSidebarHtmlStaticMobile = () => {
     `;
 };
 
+const getClientUUID = () => {
+    // Ensure window/localStorage is available (client-side execution)
+    if (typeof window === 'undefined') {
+        return '';
+    }
+
+    let uuid = localStorage.getItem('mpl_client_id');
+    if (!uuid) {
+        // Generate a simple unique ID (production code might use a dedicated UUID library)
+        uuid = 'guest-' + Date.now() + Math.random().toString(16).substring(2);
+        localStorage.setItem('mpl_client_id', uuid);
+    }
+    return uuid;
+};
 
 // --- TOCPostContent COMPONENT ---
 const TOCPostContent = ({ content, toc }) => {
@@ -230,8 +245,12 @@ export default function PostDetail() {
 
 
     // --- Function to handle the vote submission ---
+    // pages/[slug].js (Inside PostDetail function)
+
     const handleVote = async (voteType) => {
         if (!post) return;
+
+        const clientUuid = getClientUUID();
 
         try {
             const response = await fetch(VOTE_API_URL, {
@@ -242,13 +261,22 @@ export default function PostDetail() {
                 body: JSON.stringify({
                     post_id: post.id,
                     vote_type: voteType,
+                    // --- CRITICAL FIX: INCLUDE client_uuid ---
+                    client_uuid: clientUuid,
                 }),
             });
 
             if (!response.ok) {
-                // Handle potential errors like 403 Forbidden (if IP tracking is strict)
-                const errorData = await response.json();
-                console.error('API Voting Error:', errorData);
+                // Safety check: Attempt to parse error data, but handle non-JSON 500 errors
+                let errorInfo = 'Unknown server error.';
+                try {
+                    const errorData = await response.json();
+                    errorInfo = errorData.message || errorData.code || JSON.stringify(errorData);
+                } catch (e) {
+                    // If parsing fails (common with 500 error), use the status text
+                    errorInfo = `Server returned status ${response.status}. Check backend logs.`;
+                }
+                console.error('API Voting Error:', errorInfo);
                 alert('Failed to record vote. You may have already voted or there was a server error.');
                 return;
             }
@@ -256,14 +284,13 @@ export default function PostDetail() {
             const data = await response.json();
 
             if (data.success) {
-                // 1. Update counts from API response
                 setLikes(data.data.likes);
                 setDislikes(data.data.dislikes);
 
-                // 2. Determine new userVoteStatus
                 let newStatus = voteType;
                 if (userVoteStatus === voteType) {
-                    newStatus = false;
+
+                    newStatus = userVoteStatus;
                 } else {
                     newStatus = voteType;
                 }
