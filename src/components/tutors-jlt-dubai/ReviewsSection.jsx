@@ -10,6 +10,7 @@ import {
   Pagination,
   Autoplay,
 } from "swiper/modules";
+import styles from "@/styles/home-copy/Testimonial.module.css";
 
 
 const testimonialData = [
@@ -172,11 +173,10 @@ const testimonialData = [
 ];
 
 
-
 export default function Testimonial({ }) {
   return (
     <>
-      <section className="testimonialSection">
+      <section className={styles.testimonialSection}>
         <div
           data-scroll
           data-scroll-class="is-inview"
@@ -184,7 +184,7 @@ export default function Testimonial({ }) {
           className="fade-in-section"
           style={{ animationDelay: "0.1s" }}
         >
-          <div className="testimonialHeader">
+          <div className={styles.testimonialHeader}>
             <h2 className="SubHeading">REVIEWS & TESTIMONIALS</h2>
           </div>
         </div>
@@ -193,13 +193,13 @@ export default function Testimonial({ }) {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
-          className="fade-in-section testimonialBgBox"
+          className={`fade-in-section ${styles.testimonialBgBox}`}
           style={{ animationDelay: "0.2s" }}
         >
           {/* Decorative rectangles */}
-          <img src="/images/rectangle-bg4.png" alt="tutors in jlt dubai" className="testimonialRect" />
-          <img src="/images/rectangle-bg4.png" alt="tutors in jlt dubai" className="testimonialRect" />
-          <img src="/images/rectangle-bg4.png" alt="tutors in jlt dubai" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.png" alt="tutors in jlt dubai" className={styles.testimonialRect} />
+          <img src="/images/rectangle-bg4.png" alt="tutors in jlt dubai" className={styles.testimonialRect} />
+          <img src="/images/rectangle-bg4.png" alt="tutors in jlt dubai" className={styles.testimonialRect} />
 
           <img
             src="/images/google-logo.png"
@@ -208,7 +208,7 @@ export default function Testimonial({ }) {
             data-scroll-class="is-clipped"
             data-scroll-repeat="true"
             data-scroll-offset="-10%"
-            className="googlelogo"
+            className={styles.googlelogo}
             style={{ animationDelay: "0.2s" }}
             width={250}
             height={80}
@@ -218,7 +218,7 @@ export default function Testimonial({ }) {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="fade-in-section testimonialTitle"
+            className={`fade-in-section ${styles.testimonialTitle}`}
             style={{ animationDelay: "0.3s" }}
           >
             IGNITE TRAINING INSTITUTE - TUTORS IN DUBAI
@@ -228,7 +228,7 @@ export default function Testimonial({ }) {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="fade-in-section googleReview"
+            className={`fade-in-section ${styles.googleReview}`}
             style={{ animationDelay: "0.4s" }}
           >
             <span>4.9 </span>
@@ -242,14 +242,14 @@ export default function Testimonial({ }) {
             data-scroll-class="is-clipped"
             data-scroll-repeat="true"
             data-scroll-offset="-10%"
-            className="starReview"
+            className={styles.starReview}
             style={{ animationDelay: "0.5s" }}
             width={250}
             height={80}
           />
         </div>
 
-        <div className="testimonialSliderWrap">
+        <div className={styles.testimonialSliderWrap}>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             loop={true}
@@ -260,7 +260,7 @@ export default function Testimonial({ }) {
             }}
             pagination={{
               clickable: true,
-              el: ".testimonialPagination",
+              el: `.${styles.testimonialPagination}`,
             }}
             autoplay={{
               delay: 3000,
@@ -272,21 +272,21 @@ export default function Testimonial({ }) {
               992: { slidesPerView: 3 },
               1200: { slidesPerView: 4 },
             }}
-            className="testimonialSwiper"
+            className={styles.testimonialSwiper}
           >
 
 
             {testimonialData.map((item, idx) => (
               <SwiperSlide key={idx}>
                 {item.type === "video" ? (
-                  <div className="testimonialCard testimonialCardVideo">
+                  <div className={`${styles.testimonialCard} ${styles.testimonialCardVideo}`}>
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="testimonialImg"
+                      className={styles.testimonialImg}
                     />
-                    <div className="testimonialVideoOverlay"></div>
-                    <div className="testimonialPlayBtn">
+                    <div className={styles.testimonialVideoOverlay}></div>
+                    <div className={styles.testimonialPlayBtn}>
                       <svg
                         width="48"
                         height="48"
@@ -304,24 +304,25 @@ export default function Testimonial({ }) {
                         <polygon points="20,16 34,24 20,32" fill="#ffffff90" />
                       </svg>
                     </div>
-                    <div className="testimonialVideoText">
+                    <div className={styles.testimonialVideoText}>
                       <b>{item.name}</b>
                       <span>{item.subtitle}</span>
                     </div>
                   </div>
                 ) : (
-                  <div className="testimonialCard testimonialCardText">
-                    <div className="testimonialText">{item.text}</div>
-                    <div className="testimonialTextName">
+                  <div className={`${styles.testimonialCard} ${styles.testimonialCardText}`}>
+                    <div className={styles.testimonialText}>{item.text}</div>
+                    <div className={styles.testimonialTextName}>
                       <b>{item.name}</b>
                     </div>
-                    <div className="testimonialTextSubtitle">{item.subtitle}</div>
+                    <div className={styles.testimonialTextSubtitle}>{item.subtitle}</div>
                   </div>
                 )}
               </SwiperSlide>
             ))}
 
-          </Swiper>  <button className="swiper-button-prev" tabIndex={0} aria-label="Previous testimonial">
+          </Swiper>
+          <button className="swiper-button-prev" tabIndex={0} aria-label="Previous testimonial">
             <img
               src="/images/right-arrow-blue.png"
               alt="Prev"
@@ -341,7 +342,7 @@ export default function Testimonial({ }) {
             />
           </button>
 
-          <div className="testimonialPagination"></div>
+          <div className={styles.testimonialPagination}></div>
         </div>
       </section>
 

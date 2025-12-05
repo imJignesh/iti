@@ -128,6 +128,15 @@ section.padding-0 {
   background-size: contain;
 }
 
+.testTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blue-color);
+  margin: 40px auto;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 .SubHeading:before {
   left: 0;
 }

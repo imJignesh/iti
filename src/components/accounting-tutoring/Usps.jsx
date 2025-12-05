@@ -13,6 +13,7 @@ import {
   Mousewheel,
 } from "swiper/modules";
 import Image from "next/image";
+import styles from '@/styles/home-copy/Usps.module.css';
 
 const uspData = [
   {
@@ -73,24 +74,24 @@ for (let i = 0; i < uspData.length; i += 2) {
 export default function Usps({ }) {
   return (
     <>
-      {/* CRITICAL FIX: Removed the outer <section data-scroll-section> wrapper.
-        The host page (e.g., HomeCopy.js, subject-tutoring.js) must now provide the <section data-scroll-section>.
-      */}
+
       <div
-        className="usp-section sp-container" // Main container for styling
+        className="usp-section sp-container"
       >
         <div
-          className="fade-in-sections uspSection" // This is the data-scroll-target container
+          // Apply local module class: styles.uspSection
+          className={`fade-in-sections ${styles.uspSection}`}
           style={{ animationDelay: "0.2s" }}
         >
           <div className="row justify-content-between gx-5">
             <div className="col-lg-4">
               <div
-                className="uspLeft"
-                // FIX: These attributes enable Locomotive Scroll's custom sticky behavior
+                // Apply local module class: styles.uspLeft
+                className={styles.uspLeft}
+                // FIX: Attributes enable Locomotive Scroll's custom sticky behavior
                 data-scroll
                 data-scroll-sticky
-                data-scroll-target=".uspSection"
+                data-scroll-target={`.${styles.uspSection}`} // Target the module class
               >
                 <h2
                   className="fade-in-sections SubHeading mb-0"
@@ -100,29 +101,20 @@ export default function Usps({ }) {
                 </h2>
 
                 <h3
-                  className="fade-in-sections uspTitle mb-0"
+                  // Apply local module class: styles.uspTitle
+                  className={`fade-in-sections ${styles.uspTitle} mb-0`}
                   style={{ animationDelay: "0.2s" }}
                 >
                   What Do Students Get From Ignite's French Support?
                 </h3>
 
-                {/* <div
-                  className="fade-in-sections uspSubtitle"
-                  style={{ animationDelay: "0.3s" }}
-                >
-                  Real Support, Real Progress
-                </div>
-
-                <p
-                  className="fade-in-section uspDesc"
-                  style={{ animationDelay: "0.4s" }}
-                >
-                  We go beyond just tutoring with personalised learning, proven methods, & expert support that deliver real results.
-                </p> */}
+                {/* The commented-out subtitle/desc elements (uspSubtitle, uspDesc) 
+                    are structurally correct if uncommented, using local styles. */}
 
                 <a
                   href="/why-ignite/"
-                  className="uspBtn fade-in-sections buttonSkyBlue"
+                  // Apply local module class: styles.uspBtn, and global class: buttonSkyBlue
+                  className={`${styles.uspBtn} fade-in-sections buttonSkyBlue`}
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE ABOUT IGNITE{" "}
@@ -137,22 +129,27 @@ export default function Usps({ }) {
               </div>
             </div>
             <div className="col-lg-7">
-              <div className="uspRight">
+              {/* Apply local module class: styles.uspRight */}
+              <div className={styles.uspRight}>
                 {uspDataRows.map((row, index) => (
-                  <div key={index} className="uspSlide">
+                  // Apply local module class: styles.uspSlide
+                  <div key={index} className={styles.uspSlide}>
                     {row.map((usp, i) => (
-                      <div key={i} className="uspItem">
-                        <div className="uspNumber">{usp.number}</div>
-                        <div className="uspIconCircle">
+                      // Apply local module class: styles.uspItem
+                      <div key={i} className={styles.uspItem}>
+                        <div className={styles.uspNumber}>{usp.number}</div>
+                        <div className={styles.uspIconCircle}>
                           <img
                             src={usp.icon}
                             alt={usp.title}
-                            className="uspIcon"
+                            // Apply local module class: styles.uspIcon
+                            className={styles.uspIcon}
                           />
                         </div>
-                        <div className="uspContent">
-                          <h3 className="uspItemTitle">{usp.title}</h3>
-                          <div className="uspItemDesc">{usp.desc}</div>
+                        <div className={styles.uspContent}>
+                          {/* Apply local module classes: styles.uspItemTitle, styles.uspItemDesc */}
+                          <h3 className={styles.uspItemTitle}>{usp.title}</h3>
+                          <div className={styles.uspItemDesc}>{usp.desc}</div>
                         </div>
                       </div>
                     ))}
@@ -163,27 +160,7 @@ export default function Usps({ }) {
           </div>
         </div>
       </div>
-      <style jsx>{`
-      
-      @media (max-width: 520px) {
-        .uspSection .uspTitle{
-          font-size:20.4px !important;
-          line-height:20px !important;
-        }
-        .uspSection .uspItemTitle{
-          font-size:16px !important;
-          line-height:18px !important;
-        }
-        .uspwrapper{
-          padding:0;
-        }
-        .uspSection .uspRight {
-          padding-top: 10px;
-        } 
-      }
-      
-      
-      `}</style>
+
     </>
   );
 }

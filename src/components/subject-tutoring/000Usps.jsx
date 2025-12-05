@@ -13,6 +13,7 @@ import {
   Mousewheel,
 } from "swiper/modules";
 import Image from "next/image";
+import styles from '@/styles/home-copy/Usps.module.css';
 
 const uspData = [
   {
@@ -73,20 +74,19 @@ for (let i = 0; i < uspData.length; i += 2) {
 export default function Usps({ }) {
   return (
     <>
-      {" "}
       <section
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat="true"
-        className="fade-in-section uspSection"
+        className={`fade-in-section ${styles.uspSection}`}
         style={{ animationDelay: "0.2s" }}
       >
-        <div className="uspLeft">
+        <div className={styles.uspLeft}>
           <span
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="fade-in-section SubHeading"
+            className={`fade-in-section SubHeading`}
             style={{ animationDelay: "0.1s" }}
           >
             OUR USP'S
@@ -96,7 +96,7 @@ export default function Usps({ }) {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="fade-in-section uspTitle"
+            className={`fade-in-section ${styles.uspTitle}`}
             style={{ animationDelay: "0.2s" }}
           >
             LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING
@@ -106,7 +106,7 @@ export default function Usps({ }) {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="fade-in-section uspSubtitle"
+            className={`fade-in-section ${styles.uspSubtitle}`}
             style={{ animationDelay: "0.3s" }}
           >
             LOREM IPSUM DOLOR SIT AMET
@@ -116,7 +116,7 @@ export default function Usps({ }) {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="fade-in-section uspDesc"
+            className={`fade-in-section ${styles.uspDesc}`}
             style={{ animationDelay: "0.4s" }}
           >
             Choosing us means partnering with experienced coaches who are
@@ -129,7 +129,7 @@ export default function Usps({ }) {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="uspBtn fade-in-section buttonSkyBlue"
+            className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
             style={{ animationDelay: "0.5s" }}
             type="button"
           >
@@ -143,46 +143,32 @@ export default function Usps({ }) {
           </button>
         </div>
 
-        <div className="uspRight">
+        <div className={styles.uspRight}>
           <Swiper
             direction="vertical"
-            slidesPerView="auto" // Default for desktop
-            spaceBetween={80} // Default for desktop
+            slidesPerView="auto"
+            spaceBetween={80}
             speed={800}
-            freeMode={true} // Default for desktop
+            freeMode={true}
             grabCursor={true}
             scrollbar={{
-              el: ".uspScrollbar",
+              el: `.${styles.uspScrollbar}`,
               draggable: true,
             }}
             modules={[Scrollbar, Mousewheel]}
-            className="uspSwiper"
+            className={styles.uspSwiper}
             breakpoints={{
-              0: { // Mobile breakpoint
-                slidesPerView: 'auto', // Keep auto for now
+              0: {
+                slidesPerView: 'auto',
                 spaceBetween: 20,
                 freeMode: {
-                  enabled: false, // Explicitly disable freeMode
-                  // You can set `momentum` to false if you want absolutely no bounce
-                  // momentum: false,
+                  enabled: false,
                 },
-                watchOverflow: true,
-                // New additions for better ending behavior:
-                // If you want the *last slide* to snap to the end of the container
-                // you might need to combine these with a non-integer slidesPerView
-                // or adjust CSS.
-                // Let's try `watchSlidesProgress` and `watchSlidesVisibility` to see boundaries
                 watchSlidesProgress: true,
                 watchSlidesVisibility: true,
-                // This is a powerful option for vertical Swipers where the end position is critical.
-                // It makes the last slide stop when its bottom edge reaches the end of the container.
-                // Works well with 'auto' and `freeMode: false`.
-                // However, ensure your slide heights are consistent for best results.
-                lastSlideMessage: 'You have reached the end', // A custom property to check if this works
-                // Set a specific height for each SwiperSlide on mobile if not already
-                // in your CSS, or make sure content within it does not cause height fluctuations.
+                lastSlideMessage: 'You have reached the end',
               },
-              768: { // Tablet/Desktop breakpoint
+              768: {
                 slidesPerView: 'auto',
                 spaceBetween: 80,
                 freeMode: true,
@@ -190,27 +176,27 @@ export default function Usps({ }) {
             }}
           >
             {uspDataRows.map((row, index) => (
-              <SwiperSlide key={index} className="uspSlide">
+              <SwiperSlide key={index} className={styles.uspSlide}>
                 {row.map((usp, i) => (
-                  <div key={i} className="uspItem">
-                    <div className="uspNumber">{usp.number}</div>
-                    <div className="uspIconCircle">
+                  <div key={i} className={styles.uspItem}>
+                    <div className={styles.uspNumber}>{usp.number}</div>
+                    <div className={styles.uspIconCircle}>
                       <img
                         src={usp.icon}
                         alt={usp.title}
-                        className="uspIcon"
+                        className={styles.uspIcon}
                       />
                     </div>
-                    <div className="uspContent">
-                      <div className="uspItemTitle">{usp.title}</div>
-                      <div className="uspItemDesc">{usp.desc}</div>
+                    <div className={styles.uspContent}>
+                      <div className={styles.uspItemTitle}>{usp.title}</div>
+                      <div className={styles.uspItemDesc}>{usp.desc}</div>
                     </div>
                   </div>
                 ))}
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="uspScrollbar" />
+          <div className={styles.uspScrollbar} />
         </div>
       </section>
     </>
