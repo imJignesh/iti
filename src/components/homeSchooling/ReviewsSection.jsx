@@ -10,7 +10,7 @@ import {
   Pagination,
   Autoplay,
 } from "swiper/modules";
-import styles from "@/styles/home/Testimonial.module.css";
+import styles from "@/styles/home-copy/Testimonial.module.css";
 
 const testimonialData = [
   // {
