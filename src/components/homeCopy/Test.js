@@ -1,11 +1,13 @@
+// src/components/homeCopy/Test.js (Updated)
 import React, { useEffect } from "react";
-// import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from '@/components/CustomImageWrapper';
+// Import the CSS Module
+import styles from '@/styles/home-copy/Test.module.css';
 
 const testData = [
   {
@@ -48,9 +50,11 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
   }, [isMobileSwiper, setActive]);
 
   return (
-    <section className="testSection1">
+    // Apply local module class
+    <section className={styles.testSection1}>
       <div className="container">
-        <div className="testHeadings">
+        {/* Apply local module class */}
+        <div className={styles.testHeadings}>
           <div
             data-scroll
             data-scroll-class="is-inview"
@@ -58,13 +62,15 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <h2 className="SubHeading testSubheading">STANDARDISED TESTS</h2>
+            {/* Global Class used as string, local class used with styles */}
+            <h2 className={`SubHeading ${styles.testSubheading}`}>STANDARDISED TESTS</h2>
           </div>
           <h3
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="fade-in-section testTitle"
+            // Apply local module class. Global class used as string
+            className={`fade-in-section ${styles.testTitle}`}
             style={{ animationDelay: "0.2s" }}
           >
             Power Your Academic Goals With Expert Prep{" "}
@@ -83,79 +89,63 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             </p>
           </div>
         </div>
-      </div>{" "}
-      {/* End container for headings */}
+      </div>
       {/* Conditional Rendering: Swiper for Mobile (outside container), Static Cards for Desktop (inside container) */}
       {isMobileSwiper ? (
         <Swiper
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
-          className="fade-in-section testMobileSwiper"
-          // spaceBetween={25} // Default value, overridden by breakpoints
+          // Apply local module class
+          className={styles.testMobileSwiper}
           centeredSlides={true}
-          loop={false} // Enable looping for mobile
-          pagination={false} // HIDE PAGINATION BULLETS
+          loop={false}
+          pagination={false}
           modules={[Pagination, Navigation, Autoplay]}
-          initialSlide={1} // Start with the second slide (index 1)
+          initialSlide={1}
           onSlideChange={(swiper) => {
             if (setActive) {
               setActive(swiper.realIndex);
             }
           }}
-          // navigation={true} // Uncomment if you want navigation arrows
           breakpoints={{
-            0: {
-              slidesPerView: 1.1,
-              spaceBetween: 20, // Adjusted for more visibility
-              centeredSlides: true,
-            },
-            400: {
-              slidesPerView: 1.1,
-              spaceBetween: 25, // Adjusted for more visibility
-              centeredSlides: true,
-            },
-            575: {
-              slidesPerView: 1.2,
-              spaceBetween: 25, // Adjusted for more visibility
-              centeredSlides: true,
-            },
-            786: {
-              slidesPerView: 1.5,
-              spaceBetween: 30, // Adjusted for more visibility
-              centeredSlides: true,
-            },
-            900: {
-              slidesPerView: 1.8,
-              spaceBetween: 30, // Adjusted for more visibility
-              centeredSlides: true,
-            },
+            0: { slidesPerView: 1.1, spaceBetween: 20, centeredSlides: true, },
+            400: { slidesPerView: 1.1, spaceBetween: 25, centeredSlides: true, },
+            575: { slidesPerView: 1.2, spaceBetween: 25, centeredSlides: true, },
+            786: { slidesPerView: 1.5, spaceBetween: 30, centeredSlides: true, },
+            900: { slidesPerView: 1.8, spaceBetween: 30, centeredSlides: true, },
           }}
         >
           {testData.map((card, idx) => {
             const isCardActive = active === idx;
             return (
               <SwiperSlide key={idx}>
-                <div className="testCardMobile">
+                {/* Apply local module class */}
+                <div className={styles.testCardMobile}>
+                  {/* Apply local module class */}
                   <div
                     data-scroll
                     data-scroll-class="is-clipped"
                     data-scroll-offset="-10%"
-                    className={`testCardImageWrap ${isCardActive ? "mobileActiveImageArea" : ""}`}
+                    // Apply local module classes
+                    className={`${styles.testCardImageWrap} ${isCardActive ? styles.mobileActiveImageArea : ""}`}
                     style={{ backgroundImage: `url(${card.img})` }}
                   >
-                    <span className={`testCardNumber ${isCardActive ? "mobileActiveNumber" : ""}`}>{card.number}</span>
-                    <h3 className={`testCardTitle ${isCardActive ? "mobileActiveTitle" : ""}`}>{card.title}</h3>
+                    {/* Apply local module classes */}
+                    <span className={`${styles.testCardNumber} ${isCardActive ? styles.mobileActiveNumber : ""}`}>{card.number}</span>
+                    <h3 className={`${styles.testCardTitle} ${isCardActive ? styles.mobileActiveTitle : ""}`}>{card.title}</h3>
                   </div>
-                  <div className={`testCardDetailsWrap ${isCardActive ? "mobileShowContent" : "mobileHideContent"}`}>
-                    <h3 className="testCardLabel">{card.label}</h3>
-                    <div className="testCardDetails">
+                  {/* Apply local module classes */}
+                  <div className={`${styles.testCardDetailsWrap} ${isCardActive ? styles.mobileShowContent : styles.mobileHideContent}`}>
+                    <h3 className={styles.testCardLabel}>{card.label}</h3>
+                    <div className={styles.testCardDetails}>
                       {card.details &&
                         card.details.map((d, i) => <span key={i}>{d}</span>)}
                     </div>
-                    <a href={card.link} className="testCardBtnMobile buttonSkyBlue" type="button">
+                    {/* Apply local module class and global class */}
+                    <a href={card.link} className={`${styles.testCardBtnMobile} buttonSkyBlue`} type="button">
                       {card.btn}
-                      <span className="btnArrow">
+                      <span className={styles.btnArrow}>
                         <Image
                           src="/images/right-arrow-blue.png"
                           width={30}
@@ -174,7 +164,8 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
       ) : (
         // Desktop Version: Remains inside container
         <div className="container">
-          <div className="row testCardsRow">
+          {/* Apply local module class */}
+          <div className={`row ${styles.testCardsRow}`}>
             {testData.slice(0, 3).map((card, idx) => {
               const isCardActive = active === idx;
               return (
@@ -183,7 +174,8 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
-                  className={`fade-in-section col-4 px-3 testCard`}
+                  // Apply local module class and global classes
+                  className={`fade-in-section col-4 px-3 ${styles.testCard}`}
                   style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
                   onMouseEnter={() => setActive(idx)}
                   onMouseLeave={() => setActive(1)}
@@ -193,24 +185,28 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                     data-scroll-class="is-clipped"
                     data-scroll-offset="-10%"
                     data-scroll-repeat="true"
-                    className={`cardImageArea ${isCardActive ? "activeImageArea" : ""}`}
+                    // Apply local module classes
+                    className={`${styles.cardImageArea} ${isCardActive ? styles.activeImageArea : ""}`}
                     style={{ backgroundImage: `url('${card.img}')` }}
                   >
-                    <div className="imageOverlay"></div>
-                    <span className="cardNumber">{card.number}</span>
-                    <h3 className="cardTitle">{card.title}</h3>
+                    {/* Apply local module classes */}
+                    <div className={styles.imageOverlay}></div>
+                    <span className={styles.cardNumber}>{card.number}</span>
+                    <h3 className={styles.cardTitle}>{card.title}</h3>
                   </div>
                   <div
-                    className={`cardContentArea ${isCardActive ? "showContent" : "hideContent"}`}
+                    // Apply local module classes
+                    className={`${styles.cardContentArea} ${isCardActive ? styles.showContent : styles.hideContent}`}
                   >
-                    <h3 className="cardLabel">{card.label}</h3>
-                    <div className="cardDetails">
+                    <h3 className={styles.cardLabel}>{card.label}</h3>
+                    <div className={styles.cardDetails}>
                       {card.details &&
                         card.details.map((d, i) => (
                           <p key={i} className="m-0">{d}</p>
                         ))}
                     </div>
-                    <a href={card.link} className="cardBtn buttonSkyBlue" type="button">
+                    {/* Apply local module class and global class */}
+                    <a href={card.link} className={`${styles.cardBtn} buttonSkyBlue`} type="button">
                       {card.btn}{" "}
                       <Image
                         src="/images/right-arrow-blue.png"

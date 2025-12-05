@@ -1,6 +1,4 @@
-/* USPs Section  */
-
-/* USPs Section  */
+/* Usps.module.css (Corrected for Purity) */
 
 .uspSection {
   background: linear-gradient(to right,
@@ -14,7 +12,7 @@
   box-shadow: 0 0.28vw 2.22vw rgba(0, 0, 0, 0.08);
 }
 
-.uspSection .uspLeft {
+.uspLeft {
   display: flex;
   flex-direction: column;
   gap: 1.39vw;
@@ -24,28 +22,21 @@
   top: 10vw;
 }
 
-.uspSection .uspLeft h2 {
+/* Use :global(h2) for the global element tag */
+.uspLeft :global(h2) {
   -webkit-text-fill-color: var(--white-color);
   width: max-content;
-  /* font-size: 1.3vw; */
-  margin-bottom: 1.39vw;
-}
-
-
-.uspSection .uspLeft h2 {
-  -webkit-text-fill-color: var(--white-color);
-  width: max-content;
-  /* font-size: 1.3vw; */
   margin-bottom: 20px;
 }
 
-.uspSection .uspLeft h2:before,
-.uspSection .uspLeft h2:after {
+/* Use :global(h2:before) for pseudo-elements on global tag */
+.uspLeft :global(h2::before),
+.uspLeft :global(h2::after) {
   width: 16px;
   filter: contrast(0) brightness(2);
 }
 
-.uspSection .uspTitle {
+.uspTitle {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 18px;
@@ -54,7 +45,7 @@
   color: var(--white-color);
 }
 
-.uspSection .uspSubtitle {
+.uspSubtitle {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 18px;
@@ -62,7 +53,7 @@
   color: var(--white-color);
 }
 
-.uspSection .uspDesc {
+.uspDesc {
   font-size: 0.8vw;
   margin-bottom: 32px;
   color: var(--white-color);
@@ -73,18 +64,18 @@
   border-bottom: 1px solid;
 }
 
-.uspSection .uspBtn {
+.uspBtn {
   width: max-content;
   font-weight: 700;
   font-size: 1.1rem;
 }
 
-.uspSection .uspRight {
+.uspRight {
   position: relative;
   padding-top: 1vw;
 }
 
-.uspSection .uspSwiper {
+.uspSwiper {
   width: 100%;
   height: 500px;
   padding: 25px 30px;
@@ -92,7 +83,7 @@
   margin-right: auto;
 }
 
-.uspSection .uspSlide {
+.uspSlide {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -102,7 +93,7 @@
   margin-bottom: 80px;
 }
 
-.uspSection .uspItem {
+.uspItem {
   background: transparent;
   border-radius: 18px;
   padding: 0;
@@ -115,7 +106,7 @@
   position: relative;
 }
 
-.uspSection .uspNumber {
+.uspNumber {
   position: absolute;
   top: -2.5vw;
   left: -1.5vw;
@@ -126,7 +117,7 @@
   margin-bottom: 8px;
 }
 
-.uspSection .uspIconCircle {
+.uspIconCircle {
   background: #baefd4;
   border-radius: 50%;
   width: 4rem;
@@ -137,13 +128,13 @@
   margin-bottom: 16px;
 }
 
-.uspSection .uspIcon {
+.uspIcon {
   width: 2rem;
   height: 2rem;
   object-fit: contain;
 }
 
-.uspSection .uspItemTitle {
+.uspItemTitle {
   font-size: 1vw;
   font-weight: 700;
   margin-bottom: 7px;
@@ -152,7 +143,7 @@
   letter-spacing: 1px;
 }
 
-.uspSection .uspItemDesc {
+.uspItemDesc {
   letter-spacing: 1px;
   font-size: 0.8rem;
   color: var(--white-color);
@@ -160,7 +151,7 @@
   line-height: 1.5;
 }
 
-.uspSection .uspScrollbar {
+.uspScrollbar {
   position: absolute;
   right: -20px;
   top: 0;
@@ -169,12 +160,13 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-.uspSection .uspScrollbar :global(.swiper-scrollbar-drag) {
+.uspScrollbar :global(.swiper-scrollbar-drag) {
+  /* Use :global() for Swiper classes */
   background: #fff;
 }
 
 @media (max-width: 1280px) {
-  .uspSection .uspDesc {
+  .uspDesc {
     font-size: 0.8rem;
   }
 }
@@ -187,7 +179,7 @@
     padding: 30px 20px;
   }
 
-  .uspSection .uspLeft {
+  .uspLeft {
     flex: none;
     max-width: 100%;
     text-align: center;
@@ -195,32 +187,32 @@
     gap: 20px;
     min-width: 100%;
     position: static;
-    /* Override sticky on mobile/tablet */
     top: auto;
   }
 
-  .uspSection .uspTitle {
+  .uspTitle {
     font-size: 1.4rem;
   }
 
-  .uspSection .uspSubtitle,
-  .uspSection .uspNumber {
+  .uspSubtitle,
+  .uspNumber {
     display: none;
   }
 
-  .uspSection .uspDesc {
+  /* Purity check: removed !important from opacity */
+  .uspDesc {
     font-size: 1rem;
     border: none;
     padding: 0 20px;
     margin-bottom: 10px;
-    opacity: 0.8 !important;
+    opacity: 0.8;
   }
 
-  .uspSection .uspGrid {
+  .uspGrid {
     gap: 30px 40px;
   }
 
-  .uspSection .uspItem {
+  .uspItem {
     flex-direction: row;
     gap: 20px;
     align-items: center;
@@ -229,22 +221,22 @@
     padding-bottom: 30px;
   }
 
-  .uspSection .uspIconCircle {
+  .uspIconCircle {
     width: auto;
     height: auto;
     padding: 20px;
   }
 
-  .uspSection .uspIcon {
+  .uspIcon {
     width: 40px;
     height: 40px;
   }
 
-  .uspSection .uspContent {
+  .uspContent {
     width: 80%;
   }
 
-  .uspSection .uspItemTitle {
+  .uspItemTitle {
     font-size: 1rem;
   }
 }
@@ -254,20 +246,20 @@
     max-width: 95vw;
   }
 
-  .uspSection .uspLeft h2:before,
-  .uspSection .uspLeft h2:after {
+  .uspLeft :global(h2::before),
+  .uspLeft :global(h2::after) {
     width: 10px;
   }
 
-  .uspSection .uspSwiper {
+  .uspSwiper {
     padding: 20px;
   }
 
-  .uspSection .uspGrid {
+  .uspGrid {
     grid-template-columns: 1fr;
   }
 
-  .uspSection .uspSlide:last-child .uspItem:last-child {
+  .uspSlide:last-child .uspItem:last-child {
     border: none;
   }
 
@@ -275,50 +267,50 @@
     height: 400px;
   }
 
-  .uspSection .uspSlide {
+  .uspSlide {
     margin-bottom: 20px !important;
   }
 
-  .uspSection .uspItem {
+  .uspItem {
     flex: 0 0 100%;
     max-width: 100%;
   }
 
-  .uspSection .uspSlide {
+  .uspSlide {
     justify-content: space-between;
     gap: 20px;
   }
 
-  .uspSection .uspLeft h2,
-  .uspSection .uspTitle {
-    font-size: 15px !important;
+  /* Purity check: removed !important from font-size/line-height */
+  .uspLeft :global(h2),
+  .uspTitle {
+    font-size: 15px;
     margin-bottom: 0;
-    ;
   }
 
-  .uspSection .uspBtn {
+  .uspBtn {
     margin: 5vw 0;
-
   }
 
-  .uspSection .uspIcon {
+  .uspIcon {
     width: 25px;
     height: 25px;
   }
 
-  .uspSection .uspTitle,
-  .uspSection .uspItemTitle {
-    font-size: 20.4px !important;
-    line-height: 23px !important;
+  /* Purity check: removed !important from font-size/line-height */
+  .uspTitle,
+  .uspItemTitle {
+    font-size: 20.4px;
+    line-height: 23px;
   }
 
-  .uspSection .uspDesc {
-    font-size: 14px !important;
-    line-height: 1.4 !important;
+  /* Purity check: removed !important from font-size/line-height */
+  .uspDesc {
+    font-size: 14px;
+    line-height: 1.4;
   }
 
-  .uspSection .uspBtn {
-
+  .uspBtn {
     font-weight: 600;
     font-size: 1rem;
   }
@@ -326,30 +318,29 @@
 
 @media (max-width: 520px) {
 
-  .uspSection .uspTitle,
-  .uspSection .uspItemTitle {
+  .uspTitle,
+  .uspItemTitle {
     font-size: 16px !important;
     line-height: 18px !important;
   }
 
-  .uspSection .uspIconCircle {
+  .uspIconCircle {
     padding: 12px;
   }
 }
 
 @media (max-width: 425px) {
 
-  .uspSection .uspSwiper,
-  .uspSection .uspDesc {
+  .uspSwiper,
+  .uspDesc {
     padding: 0;
   }
 
-  .uspSection .uspRight {
-
+  .uspRight {
     padding-top: 3rem;
   }
 
-  .uspSection .uspBtn {
+  .uspBtn {
     margin: 0 0 5vw 0;
   }
 
@@ -357,7 +348,7 @@
     padding-top: 30px;
   }
 
-  .uspSection .uspItem {
+  .uspItem {
     flex-direction: row;
     gap: 20px;
     align-items: center;
@@ -366,12 +357,8 @@
     padding-bottom: 30px;
   }
 
-  /* This is good for the very last item: */
-  .uspSection .uspSlide:last-child .uspItem:last-child {
+  .uspSlide:last-child .uspItem:last-child {
     border-bottom: none;
     padding-bottom: 0;
-    /* Make sure the very last item doesn't have excess padding */
   }
 }
-
-/* Removed redundant closing bracket */

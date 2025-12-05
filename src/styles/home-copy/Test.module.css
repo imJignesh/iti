@@ -1,30 +1,20 @@
-/* Test Section 1 - New Component */
-.homeCopy .testSection1 {
+/* Test Section 1 - Local Class: .testSection1 */
+.testSection1 {
   padding: 20px 0;
   background: #fff;
 }
 
-.homeCopy .testSection1 .testHeadings {
+.testHeadings {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.homeCopy .testSection1 .testSubheading {
-
+.testSubheading {
   font-weight: 600;
   letter-spacing: normal;
 }
 
-.homeCopy .testSection1 .testTitle {
-  font-size: 2rem;
-  font-weight: 700;
-  max-width: 60%;
-  color: var(--blue-color);
-  margin: 40px auto;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
+/* This is defined twice in your original CSS, consolidating here */
 .testTitle {
   font-weight: 700;
   color: var(--blue-color);
@@ -32,24 +22,15 @@
   line-height: 1.2;
   text-transform: uppercase;
   font-size: 2rem;
+  max-width: 60%;
 }
 
-.homeCopy .testSection1 .highlight {
-  background: linear-gradient(to right,
-      var(--lightgreen-color),
-      var(--green-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-.homeCopy .testSection1 .testCardsRow {
+.testCardsRow {
   margin-top: 40px;
 }
 
 /* Desktop Card Styles */
-.homeCopy .testSection1 .testCard {
+.testCard {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -61,7 +42,7 @@
   padding: 0;
 }
 
-.homeCopy .testSection1 .cardImageArea {
+.cardImageArea {
   position: relative;
   width: 100%;
   height: 25vw;
@@ -76,19 +57,18 @@
   box-shadow: none;
 }
 
-.homeCopy .testSection1 .activeImageArea {
+.activeImageArea {
   height: 15vw;
 }
 
-.homeCopy .testSection1 .activeImageArea .cardTitle {
+.activeImageArea .cardTitle {
   width: 100px;
   left: 20%;
   transform: translateX(-50%) !important;
   margin-bottom: 0;
-
 }
 
-.homeCopy .testSection1 .imageOverlay {
+.imageOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgb(0 0 0 / 20%) 60%, rgb(0 0 0 / 80%) 100%);
@@ -96,7 +76,7 @@
   pointer-events: none;
 }
 
-.homeCopy .testSection1 .cardNumber {
+.cardNumber {
   position: absolute;
   top: 28px;
   left: 28px;
@@ -111,12 +91,12 @@
   transition: 0.3s all;
 }
 
-.homeCopy .testSection1 .activeImageArea .cardNumber {
+.activeImageArea .cardNumber {
   font-size: 1.8rem;
   opacity: 1;
 }
 
-.homeCopy .testSection1 .cardTitle {
+.cardTitle {
   position: absolute;
   left: 10vw;
   bottom: 2vw;
@@ -133,7 +113,7 @@
   margin-bottom: 0;
 }
 
-.homeCopy .testSection1 .cardContentArea {
+.cardContentArea {
   margin-top: 0.5vw;
   display: flex;
   flex-direction: column;
@@ -149,21 +129,21 @@
   transition: opacity 0.8s, max-height 0.8s, transform 0.8s;
 }
 
-.homeCopy .testSection1 .showContent {
+.showContent {
   opacity: 1;
   max-height: 12vw;
   pointer-events: auto;
   transform: translateY(0);
 }
 
-.homeCopy .testSection1 .hideContent {
+.hideContent {
   opacity: 0;
   max-height: 0;
   pointer-events: none;
   transform: translateY(-150px);
 }
 
-.homeCopy .testSection1 .cardLabel {
+.cardLabel {
   font-weight: 700;
   color: var(--blue-color);
   margin-bottom: 0.5vw;
@@ -172,7 +152,7 @@
   font-size: 1vw;
 }
 
-.homeCopy .testSection1 .cardDetails {
+.cardDetails {
   font-size: 1vw;
   color: var(--blue-color);
   margin-bottom: 1vw;
@@ -180,164 +160,143 @@
   font-weight: 500;
 }
 
-.homeCopy .testSection1 .cardBtn {
+.cardDetails :global(p) {
+  margin: 0;
+}
+
+.cardBtn {
   font-size: 1vw;
   font-weight: 500;
   width: 100%;
   padding: 0.5vw 1vw;
 }
 
-.homeCopy .testSection1 .cardBtn img {
+.cardBtn :global(img) {
   width: 30px;
 }
 
 /* Desktop Media Queries */
 @media (max-width: 1440px) {
-  .homeCopy .testSection1 .cardImageArea {
+  .cardImageArea {
     height: 480px;
   }
 
-  .homeCopy .testSection1 .cardLabel {
+  .cardLabel {
     font-size: 20px;
   }
 
-  .homeCopy .testSection1 .cardDetails {
+  .cardDetails {
     font-size: 1rem;
   }
 
-  .homeCopy .testSection1 .activeImageArea {
+  .activeImageArea {
     height: 300px;
   }
 
-  .homeCopy .testSection1 .cardLabel,
-  .homeCopy .testSection1 .cardDetails {
+  .cardLabel,
+  .cardDetails {
     margin-bottom: 1rem;
-
   }
-
-
 }
 
 @media (max-width: 1280px) {
-  .homeCopy .testSection1 .cardLabel {
+  .cardLabel {
     font-size: 20px;
   }
 
-  .homeCopy .testSection1 .cardDetails {
+  .cardDetails {
     font-size: 1rem;
   }
 
-  .homeCopy .testSection1 .cardBtn {
+  .cardBtn {
     padding: 10px 30px;
   }
 
-  .homeCopy .testSection1 .cardBtn img {
+  .cardBtn :global(img) {
     width: 30px;
   }
 }
 
 @media (max-width: 1199px) {
-  .homeCopy .testSection1 .cardLabel {
+  .cardLabel {
     font-size: 18px;
   }
 
-  .homeCopy .testSection1 .cardTitle {
+  .cardTitle {
     left: 25%;
     margin-bottom: 0;
   }
 
-  .homeCopy .testSection1 .testCard {
+  .testCard :global(p) {
     padding: 0 10px !important;
   }
 
-  .homeCopy .testSection1 .cardImageArea {
+  .cardImageArea {
     height: 400px;
   }
 
-  .homeCopy .testSection1 .activeImageArea {
+  .activeImageArea {
     height: 225px;
   }
 
-  .homeCopy .testSection1 .cardDetails {
+  .cardDetails {
     margin-bottom: 15px;
   }
 
-  .homeCopy .testSection1 .cardDetails p {
+  .cardDetails :global(p) {
     margin: 0;
   }
 }
 
-/* Mobile Specific Styles (Applies when isMobileSwiper is true) */
+/* Mobile Specific Styles (Swiper) */
 @media (max-width: 991px) {
-  .homeCopy .testSection1 {
+  .testSection1 {
     padding: 0 0 30px 0;
   }
 
-  .homeCopy .testSection1 .testTitle {
+  .testTitle {
     max-width: 600px;
     font-size: 1.5rem;
     margin: 20px auto;
   }
 
-  /* Hide Pagination Bullets for Mobile Swiper */
-  .homeCopy .testSection1 .testMobileSwiper .swiper-pagination {
+  /* Target Swiper Global elements with local context */
+  .testMobileSwiper :global(.swiper-pagination) {
     display: none;
   }
 
-  /* Make mobile swiper full width and add padding to reveal adjacent slides */
-  .homeCopy .testSection1 .testMobileSwiper {
+  .testMobileSwiper {
     width: 100vw;
-    /* Use viewport width directly */
     margin-left: calc(50% - 50vw);
-    /* Centers if parent is fixed-width container, makes it truly full-bleed */
     padding-left: 20px;
-    /* Adjust this value for the desired visible portion on the left */
     padding-right: 20px;
-    /* Adjust this value for the desired visible portion on the right */
     overflow: hidden;
-    /* Important for Swiper to manage its own overflow and clipping */
     box-sizing: border-box;
-    /* Include padding in the element's total width */
   }
 
-  /* Define slide width when slidesPerView is 'auto' and add margin for spacing */
-  .homeCopy .testSection1 .testMobileSwiper .swiper-slide {
+  .testMobileSwiper :global(.swiper-slide) {
     width: calc(100vw - 40px);
-    /* Active slide width (viewport - 20px left adj - 20px right adj) */
     margin-right: 20px;
-    /* Space between slides. This value matches the padding. */
     flex-shrink: 0;
-    /* Prevent slides from shrinking smaller than their defined width */
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  /* Opacity for non-active mobile slides */
-  .homeCopy .testSection1 .testMobileSwiper .swiper-slide .testCardMobile {
-    transition: opacity 0.4s ease-in-out;
-    /* Smooth transition for opacity */
-    width: 100%;
-    /* Ensure card fills its parent swiper-slide */
-    max-width: none;
-    /* Override previous max-width constraint to allow 100% width */
-    margin: 0;
-    /* Override previous margin */
-  }
-
-  .homeCopy .testSection1 .testMobileSwiper .swiper-slide:not(.swiper-slide-active) .testCardMobile {
+  .testMobileSwiper :global(.swiper-slide:not(.swiper-slide-active)) .testCardMobile {
     opacity: 0.5;
-    /* Apply 50% opacity to non-active slides */
+    transition: opacity 0.4s ease-in-out;
+    width: 100%;
+    max-width: none;
+    margin: 0;
   }
 
-  /* Ensure active slide has full opacity (it will by default, but good to be explicit) */
-  .homeCopy .testSection1 .testMobileSwiper .swiper-slide-active .testCardMobile {
+  .testMobileSwiper :global(.swiper-slide-active) .testCardMobile {
     opacity: 1;
   }
 
-
   /* Mobile Card Structure for Swiper Slides */
-  .homeCopy .testSection1 .testCardMobile {
+  .testCardMobile {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -347,7 +306,7 @@
     overflow: visible;
   }
 
-  .homeCopy .testSection1 .testCardImageWrap {
+  .testCardImageWrap {
     border-radius: 24px;
     position: relative;
     width: 100%;
@@ -364,11 +323,11 @@
   }
 
   /* Active Image Area for Mobile */
-  .homeCopy .testSection1 .mobileActiveImageArea {
+  .mobileActiveImageArea {
     height: 180px;
   }
 
-  .homeCopy .testSection1 .testCardImageWrap::before {
+  .testCardImageWrap::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -379,7 +338,7 @@
     z-index: 0;
   }
 
-  .homeCopy .testSection1 .testCardNumber {
+  .testCardNumber {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -392,14 +351,14 @@
     transition: 0.3s all;
   }
 
-  .homeCopy .testSection1 .mobileActiveNumber {
+  .mobileActiveNumber {
     font-size: 2.5rem;
     top: 15px;
     left: 15px;
     opacity: 1;
   }
 
-  .homeCopy .testSection1 .testCardTitle {
+  .testCardTitle {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -411,7 +370,7 @@
     transition: 0.4s all;
   }
 
-  .homeCopy .testSection1 .mobileActiveTitle {
+  .mobileActiveTitle {
     left: 20%;
     transform: translateX(-50%) !important;
     font-size: 1.8rem;
@@ -419,7 +378,7 @@
   }
 
   /* Mobile Content Area */
-  .homeCopy .testSection1 .testCardDetailsWrap {
+  .testCardDetailsWrap {
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -433,21 +392,21 @@
     transform: translateY(-30px);
   }
 
-  .homeCopy .testSection1 .mobileShowContent {
+  .mobileShowContent {
     opacity: 1;
     max-height: 500px;
     pointer-events: auto;
     transform: translateY(0);
   }
 
-  .homeCopy .testSection1 .mobileHideContent {
+  .mobileHideContent {
     opacity: 0;
     max-height: 0;
     pointer-events: none;
     transform: translateY(-150px);
   }
 
-  .homeCopy .testSection1 .testCardLabel {
+  .testCardLabel {
     color: var(--blue-color);
     font-size: 1.1rem;
     font-weight: 700;
@@ -455,7 +414,7 @@
     text-transform: uppercase;
   }
 
-  .homeCopy .testSection1 .testCardDetails {
+  .testCardDetails {
     color: var(--blue-color);
     padding: 0;
     font-size: 1rem;
@@ -467,12 +426,12 @@
     margin-bottom: 12px;
   }
 
-  .homeCopy .testSection1 .testCardDetails span:first-child {
+  .testCardDetails :global(span):first-child {
     border-right: none;
     padding-right: 0;
   }
 
-  .homeCopy .testSection1 .testCardBtnMobile {
+  .testCardBtnMobile {
     width: 100%;
     font-weight: 500;
   }
@@ -482,102 +441,92 @@
 @media (max-width: 900px) {
 
   /* These apply to the desktop static cards when breakpoint is hit */
-  .homeCopy .testSection1 .testCardsRow {
+  .testCardsRow {
     flex-direction: column;
     gap: 24px;
     align-items: center;
   }
 
-  .homeCopy .testSection1 .testCard {
+  .testCard {
     max-width: 95vw;
     min-width: 220px;
     width: 100%;
   }
 
   /* Desktop card sizing within this breakpoint */
-  .homeCopy .testSection1 .cardImageArea {
+  .cardImageArea {
     border-radius: 18px;
     height: 160px;
   }
 
-  .homeCopy .testSection1 .activeImageArea {
+  .activeImageArea {
     height: 90px;
   }
 
-  .homeCopy .testSection1 .cardContentArea {
+  .cardContentArea {
     padding: 24px 16px 16px 16px;
     border-radius: 18px;
     margin-top: 12px;
   }
 
-  .homeCopy .testSection1 .cardTitle {
+  .cardTitle {
     font-size: 1.3rem;
     left: 18px;
     bottom: 18px;
     margin-bottom: 0;
   }
 
-  .homeCopy .testSection1 .cardNumber {
+  .cardNumber {
     font-size: 1.5rem;
     top: 14px;
     left: 14px;
   }
 
   /* Mobile Swiper-specific overrides for smaller screens */
-  .homeCopy .testSection1 .testMobileSwiper .swiper-slide {
+  .testMobileSwiper :global(.swiper-slide) {
     display: flex;
     justify-content: center;
   }
 
-  .homeCopy .testSection1 .testMobileSwiper .testCardMobile {
+  .testMobileSwiper .testCardMobile {
     width: 100%;
     max-width: 350px;
-    /* Re-apply a max-width for smaller mobile cards if needed */
   }
 
-  .homeCopy .testSection1 .testMobileSwiper .testCardImageWrap {
+  .testMobileSwiper .testCardImageWrap {
     height: 490px;
   }
 
-  .homeCopy .testSection1 .testMobileSwiper .mobileActiveImageArea {
+  .testMobileSwiper .mobileActiveImageArea {
     height: 300px;
   }
-
 }
 
 @media (max-width: 575px) {
-  .homeCopy .testSection1 .testSubheading {
+  .testSubheading {
     font-size: 0.9rem;
     margin-bottom: 8px;
   }
 
-  .homeCopy .testSection1 {
+  .testSection1 {
     padding: 0;
   }
 
-  .homeCopy .testSection1 .testTitle {
+  .testTitle {
     font-size: 20.4px !important;
     line-height: 23px;
   }
 
-  .homeCopy .testSection1 p {
+  .testSection1 :global(p) {
     font-size: 14px;
   }
 
-  .homeCopy .testSection1 .testCardTitle {
+  .cardTitle {
     font-size: 3rem;
   }
 
-  .homeCopy .testSection1 .mobileActiveTitle {
+  .mobileActiveTitle {
     font-size: 1.8rem;
     margin-bottom: 0;
   }
-
-  .homeCopy .buttonBlue,
-  .homeCopy .buttonSkyBlue {
-    padding: 10px 20px;
-    font-weight: 600;
-  }
 }
-
-/* Common button styles */

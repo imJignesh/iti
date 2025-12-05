@@ -145,7 +145,33 @@ section.padding-0 {
   background-clip: text;
 }
 
+/* Home Subject Section */
+.sp-container {
+  width: 70vw;
+  margin: 0 auto;
+  padding: 50px 0;
+}
 
+.usp-section.sp-container {
+  padding: 0;
+}
+
+@media (max-width: 1500px) {
+  .sp-container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+/* Home Subject Section */
+/* Home blog*/
+@media (max-width: 575px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
+/* Home blog*/
 
 /* Tablet (No changes needed) */
 @media (max-width: 1024px) {

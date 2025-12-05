@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { PopupContext } from '../pages/_app';
 
 import Image from '@/components/CustomImageWrapper';
-const POPUP_DELAY_MS = 2000;
+const POPUP_DELAY_MS = 10000;
 const HAS_SEEN_POPUP_KEY = 'hasSeenPopupSession';
 
 const DelayedPopup = () => {

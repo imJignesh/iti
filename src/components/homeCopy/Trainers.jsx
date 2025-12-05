@@ -203,7 +203,7 @@ export default function Trainers() {
       <style jsx global>
         {`
           .trainersSection {
-            padding: 70px 0;
+            // padding: 70px 0;
             background: var(--white-bg);
             text-align: center;
           }

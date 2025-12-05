@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+// Import the CSS Module
+import styles from '@/styles/home-copy/Subjects.module.css';
 
 const useIsMobile = (breakpoint = 768) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -76,17 +78,20 @@ const mobileSubjectRows = [
 export default function Subjects({ }) {
   const isMobile = useIsMobile();
   const subjectRows = isMobile ? mobileSubjectRows : desktopSubjectRows;
-  const bubbleClass = isMobile ? 'subjectBubblesSingleColumn' : 'subjectBubblesGrid';
+  // CORRECTED: Access the scoped names from the styles object
+  const bubbleClass = isMobile ? styles.subjectBubblesSingleColumn : styles.subjectBubblesGrid;
+
   return (
     <section
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat="true"
-      className="fade-in-section subjectSection"
+      className={`fade-in-section ${styles.subjectSection}`}
       style={{ animationDelay: "0.2s" }}
     >
       <div className="container">
-        <div className="subjectSectionInner blue">
+        {/* Combine module classes. 'blue' is defined in the module CSS. */}
+        <div className={`${styles.subjectSectionInner} ${styles.blue}`}>
           <img
             data-scroll
             data-scroll-class="is-clipped"
@@ -94,7 +99,7 @@ export default function Subjects({ }) {
             data-scroll-offset="-10%"
             src="/images/rectangle-bg4.png"
             alt="bg-shape"
-            className="bgRect"
+            className={styles.bgRect}
           />
           <img
             data-scroll
@@ -103,7 +108,7 @@ export default function Subjects({ }) {
             data-scroll-offset="-10%"
             src="/images/rectangle-bg5.png"
             alt="bg-shape"
-            className="bgRect"
+            className={styles.bgRect}
           />
           <img
             data-scroll
@@ -111,9 +116,10 @@ export default function Subjects({ }) {
             data-scroll-offset="-10%"
             src="/images/rectangle-bg4.png"
             alt="bg-shape"
-            className="bgRect"
+            className={styles.bgRect}
           />
-          <div className="col-4 subjectLeft">
+          {/* Global Bootstrap class used as string, local class used with styles */}
+          <div className={`col-4 ${styles.subjectLeft}`}>
             <h2
               data-scroll
               data-scroll-class="is-inview"
@@ -127,38 +133,41 @@ export default function Subjects({ }) {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section subjectTitle"
+              className={`fade-in-section ${styles.subjectTitle}`}
               style={{ animationDelay: "0.2s" }}
             >
               Expert Guidance For Every Subject In Every{" "}
-              <span className="subjectHighlight">Way</span>
+              {/* Apply local module class */}
+              <span className={styles.subjectHighlight}>Way</span>
             </h3>
             <p
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section subjectDesc"
+              className={`fade-in-section ${styles.subjectDesc}`}
               style={{ animationDelay: "0.3s" }}
             >
               We help students strengthen subject knowledge, choose the right curriculum path, & build the academic confidence needed to excel.
             </p>
           </div>
-          <div className="col-8 subjectRight">
-            <div className="subjectBubblesGrid">
+          {/* Global Bootstrap class used as string, local class used with styles */}
+          <div className={`col-8 ${styles.subjectRight}`}>
+            {/* Apply the bubbleClass variable, which now holds the scoped name */}
+            <div className={bubbleClass}>
               {subjectRows.map((row, rowIdx) => (
                 <div
                   key={rowIdx}
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
-                  className={`fade-in-section subjectBubbleRow`}
+                  className={`fade-in-section ${styles.subjectBubbleRow}`}
                   style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
                 >
                   {row.map((subj) => (
                     <h3>
-                    <a key={subj.name} href={subj.link} className="subjectBubble nodecoration">
-                      {subj.name}
-                    </a>
+                      <a key={subj.name} href={subj.link} className={`${styles.subjectBubble} nodecoration`}>
+                        {subj.name}
+                      </a>
                     </h3>
                   ))}
                 </div>

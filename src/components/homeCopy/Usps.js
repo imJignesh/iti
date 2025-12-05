@@ -1,8 +1,11 @@
+// src/components/homeCopy/Usps.js (Updated)
 import React, { useState, useEffect, useCallback } from "react";
 // ... (rest of imports)
 import Image from '@/components/CustomImageWrapper';
+// Import the CSS Module
+import styles from '@/styles/home-copy/Usps.module.css';
 
-// Custom Hook to Detect Mobile/Tablet View for disabling sticky logic
+// Custom Hook to Detect Mobile/Tablet View for disabling sticky logic (remains the same)
 const useIsStickyDisabled = (breakpoint = 1100) => {
   const [isStickyDisabled, setIsStickyDisabled] = useState(false);
 
@@ -91,29 +94,32 @@ export default function Usps({ }) {
     return {
       "data-scroll": true,
       "data-scroll-sticky": true,
-      "data-scroll-target": ".uspSection",
+      "data-scroll-target": `.${styles.uspSection}`, // Target the module class
     };
   };
 
   return (
     <>
       <div
+        // Global classes: usp-section and sp-container (assuming sp-container is now in globals.css)
         className="usp-section sp-container"
       >
         <div
-          className="fade-in-sections uspSection"
+          // Apply local module class
+          className={`fade-in-sections ${styles.uspSection}`}
           style={{ animationDelay: "0.2s" }}
         >
+          {/* Global Bootstrap classes used as strings */}
           <div className="row justify-content-between gx-5">
             <div className="col-lg-4">
               <div
-                className="uspLeft"
-                // Apply sticky props only on desktop (when sticky is NOT disabled)
+                // Apply local module class
+                className={styles.uspLeft}
                 {...getStickyProps()}
               >
                 <h2
                   className="fade-in-sections SubHeading"
-                  data-scroll // Added data-scroll to ensure animation runs, even without sticky
+                  data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   style={{ animationDelay: "0.1s" }}
@@ -122,7 +128,8 @@ export default function Usps({ }) {
                 </h2>
 
                 <h3
-                  className="fade-in-sections uspTitle"
+                  // Apply local module class
+                  className={`fade-in-sections ${styles.uspTitle}`}
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
@@ -133,7 +140,8 @@ export default function Usps({ }) {
 
 
                 <h4
-                  className="fade-in-sections uspSubtitle"
+                  // Apply local module class
+                  className={`fade-in-sections ${styles.uspSubtitle}`}
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
@@ -142,31 +150,34 @@ export default function Usps({ }) {
                   Real Support, Real Progress
                 </h4>
 
-                {/* 1. DESKTOP TEXT (Visible on large screens and up) */}
+                {/* 1. DESKTOP TEXT */}
                 <p
-                  className="fade-in-section uspDesc d-none d-lg-block"
+                  // Apply local module class and global Bootstrap classes
+                  className={`fade-in-section ${styles.uspDesc} d-none d-lg-block`}
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   style={{ animationDelay: "0.4s" }}
                 >
-                  We go beyond just tutoring & focus on personalised learning, proven methods, & expert guidance that drive real results. Discover what makes us the trusted choice for students & parents alike.
+                  We go beyond just tutoring and focus on personalised learning, proven methods, and expert guidance that drive real results. Discover what makes us the trusted choice for students and parents alike.
                 </p>
 
-                {/* 2. MOBILE TEXT (Visible on small/medium screens only) */}
+                {/* 2. MOBILE TEXT */}
                 <p
-                  className="fade-in-section uspDesc d-lg-none"
+                  // Apply local module class and global Bootstrap classes
+                  className={`fade-in-section ${styles.uspDesc} d-lg-none`}
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   style={{ animationDelay: "0.4s" }}
                 >
-                  We go beyond just tutoring with personalised learning, proven methods, & expert support that deliver real results.
+                  We go beyond just tutoring with personalised learning, proven methods, and expert support that deliver real results.
                 </p>
 
                 <a
                   href="/why-ignite/"
-                  className="uspBtn fade-in-sections buttonSkyBlue"
+                  // Apply local module class and global classes
+                  className={`${styles.uspBtn} fade-in-sections buttonSkyBlue`}
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
@@ -184,32 +195,35 @@ export default function Usps({ }) {
               </div>
             </div>
             <div className="col-lg-7">
-              <div className="uspRight">
+              {/* Apply local module class */}
+              <div className={styles.uspRight}>
                 {uspDataRows.map((row, index) => (
-                  <div key={index} className="uspSlide">
+                  // Apply local module class
+                  <div key={index} className={styles.uspSlide}>
                     {row.map((usp, i) => (
                       <div
                         key={i}
-                        className="uspItem"
-                        // Added data-scroll attributes to the individual USP items for animation tracking
+                        // Apply local module class
+                        className={styles.uspItem}
                         data-scroll
                         data-scroll-class="is-inview"
                         data-scroll-repeat="true"
                         style={{ animationDelay: `${0.6 + i * 0.15}s` }}
                       >
-                        <div className="uspNumber">{usp.number}</div>
-                        <div className="uspIconCircle">
+                        {/* Apply local module classes */}
+                        <div className={styles.uspNumber}>{usp.number}</div>
+                        <div className={styles.uspIconCircle}>
                           <Image
                             src={usp.icon}
                             alt={usp.title}
-                            className="uspIcon"
+                            className={styles.uspIcon}
                             width={64}
                             height={64}
                           />
                         </div>
-                        <div className="uspContent">
-                          <h3 className="uspItemTitle">{usp.title}</h3>
-                          <div className="uspItemDesc">{usp.desc}</div>
+                        <div className={styles.uspContent}>
+                          <h3 className={styles.uspItemTitle}>{usp.title}</h3>
+                          <div className={styles.uspItemDesc}>{usp.desc}</div>
                         </div>
                       </div>
                     ))}

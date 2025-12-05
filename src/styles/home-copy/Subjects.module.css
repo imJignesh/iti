@@ -1,26 +1,20 @@
-/* Subject Section  */
-.homeCopy .subjectSection {
+/* Subjects.module.css (Final Corrected Code) */
+
+/* Subject Section - Local Class: .subjectSection */
+.subjectSection {
   width: 100%;
   padding: 160px 0 80px 0;
 }
 
-.sp-container {
-  width: 70vw;
-  margin: 0 auto;
-  padding: 50px 0;
-}
+/* Global utility classes successfully removed/commented out for purity */
 
-.usp-section.sp-container {
-  padding: 0;
-}
-
-.homeCopy .subjectSection .subjectSectionInner.blue {
+.subjectSectionInner.blue {
   background: url(/images/subject-bg.png);
   background-size: cover;
   background-position: center;
 }
 
-.homeCopy .subjectSection .subjectSectionInner {
+.subjectSectionInner {
   padding: 6vw 2vw;
   display: flex;
   align-items: center;
@@ -31,7 +25,7 @@
   overflow: hidden;
 }
 
-.homeCopy .subjectSection .bgRect {
+.bgRect {
   position: absolute;
   width: auto;
   height: 70px;
@@ -39,18 +33,18 @@
   z-index: 0;
 }
 
-.homeCopy .subjectSection .bgRect:nth-child(1) {
+.bgRect:nth-child(1) {
   width: 16vw;
   top: 1vw;
   left: 0;
 }
 
-.homeCopy .subjectSection .bgRect:nth-child(2) {
+.bgRect:nth-child(2) {
   top: 22%;
   left: 20px;
 }
 
-.homeCopy .subjectSection .bgRect:nth-child(3) {
+.bgRect:nth-child(3) {
   width: 150px;
   object-fit: fill;
   object-position: left;
@@ -59,7 +53,7 @@
   left: 20px;
 }
 
-.homeCopy .subjectSection .subjectLeft {
+.subjectLeft {
   min-width: 320px;
   display: flex;
   flex-direction: column;
@@ -72,18 +66,19 @@
   z-index: 1;
 }
 
-.homeCopy .subjectSection .subjectLeft h2 {
-
+/* Use :global(h2) for the global element tag */
+.subjectLeft :global(h2) {
   -webkit-text-fill-color: white;
   margin-bottom: 30px;
 }
 
-.homeCopy .subjectSection .subjectLeft h2::before,
-.homeCopy .subjectSection .subjectLeft h2:after {
+/* Use :global(h2:before) for pseudo-elements on global tag */
+.subjectLeft :global(h2::before),
+.subjectLeft :global(h2:after) {
   filter: contrast(0) brightness(2);
 }
 
-.homeCopy .subjectSection .subjectTitle {
+.subjectTitle {
   color: var(--white-color);
   font-size: 2rem;
   font-weight: 700;
@@ -92,14 +87,15 @@
   max-width: 500px;
 }
 
-.homeCopy .subjectSection .subjectTitle .subjectHighlight {
+/* Targetting the local span class */
+.subjectTitle .subjectHighlight {
   font-size: 1.8vw;
   background: linear-gradient(to right, #A6EAC7 0%, #A6EAC7 60%, #FFFFFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.homeCopy .subjectSection .subjectDesc {
+.subjectDesc {
   color: #c4cad5;
   font-size: 1vw;
   max-width: 100vw;
@@ -107,7 +103,7 @@
   opacity: 0.4;
 }
 
-.homeCopy .subjectSection .subjectRight {
+.subjectRight {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -115,7 +111,7 @@
   z-index: 1;
 }
 
-.homeCopy .subjectSection .subjectBubblesGrid {
+.subjectBubblesGrid {
   display: flex;
   flex-direction: column;
   gap: 3vw;
@@ -126,7 +122,20 @@
   z-index: 1;
 }
 
-.homeCopy .subjectSection .subjectBubbleRow {
+/* ADDED MISSING MOBILE CLASS: This ensures the 'bubbleClass' variable resolves correctly in JS */
+.subjectBubblesSingleColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+
+.subjectBubbleRow {
   display: flex;
   gap: 30px;
   align-items: center;
@@ -135,7 +144,8 @@
   z-index: 1;
 }
 
-.homeCopy .subjectSection .subjectBubble {
+/* Subject Bubble: Nested in JSX inside <h3> then <a> (global tags) */
+.subjectBubble {
   border: 2px solid var(--border-color);
   border-radius: 40px;
   color: var(--green-text);
@@ -146,8 +156,6 @@
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: none;
   margin-bottom: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
   min-width: 7vw;
   text-align: center;
@@ -157,86 +165,79 @@
   z-index: 1;
 }
 
-.homeCopy .subjectSection .subjectBubble:hover {
+.subjectBubble:hover {
   color: var(--white-color);
   background-color: #ffffff4d;
   box-shadow: 2px 2px 5px 0 var(--blue-text);
 }
 
-@media (max-width: 1500px) {
-  .sp-container {
-    width: 90vw;
-    margin: 0 auto;
-  }
-
-
-}
+/* --- Media Queries --- */
 
 @media (max-width: 1280px) {
-  .homeCopy .subjectSection .subjectBubble {
+  .subjectBubble {
     padding: 10px 45px;
   }
 }
 
 @media (max-width: 1199px) {
-  .homeCopy .subjectSection .subjectLeft h2 {
+  .subjectLeft :global(h2) {
     font-size: 18px;
   }
 
-  .homeCopy .subjectSection .subjectTitle,
-  .homeCopy .subjectSection .subjectTitle .subjectHighlight {
+  .subjectTitle,
+  .subjectTitle .subjectHighlight {
     font-size: 24px;
     line-height: 1.4;
   }
 
-  .homeCopy .subjectSection .subjectSectionInner {
+  .subjectSectionInner {
     padding: 140px 30px;
   }
 
-  .homeCopy .subjectSection .subjectLeft {
+  .subjectLeft {
     gap: 5px;
   }
 
-  .homeCopy .subjectSection .subjectRight .subjectBubblesGrid {
+  .subjectRight .subjectBubblesGrid {
     gap: 10px;
   }
 
-  .homeCopy .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow {
+  .subjectRight .subjectBubblesGrid .subjectBubbleRow {
     gap: 10px;
   }
 
-  .homeCopy .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
+  .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
     padding: 12px 30px;
   }
 }
 
 @media (max-width: 1100px) {
-  .homeCopy .subjectSection .subjectSectionInner {
+  .subjectSectionInner {
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
     padding: 70px 20px;
   }
 
-  .homeCopy .subjectSection .subjectLeft h2 {
+  .subjectLeft :global(h2) {
     margin-bottom: 10px;
   }
 
-  .homeCopy .subjectSection .subjectDesc {
+  .subjectDesc {
     font-size: 1rem;
   }
 
-  .homeCopy .subjectSection .subjectBubble {
+  .subjectBubble {
     font-size: 1rem;
   }
 
-  .homeCopy .subjectSection .bgRect:nth-child(1) {
+  .bgRect:nth-child(1) {
     width: 100%;
     top: 40px;
     left: 0;
   }
 
-  .homeCopy .subjectSection .subjectLeft {
+  .subjectLeft {
     margin-left: 0;
     width: 100%;
     align-items: center;
@@ -245,34 +246,34 @@
     padding: 0 !important;
   }
 
-  .homeCopy .subjectSection .subjectRight {
+  .subjectRight {
     width: 100%;
     padding: 0 !important;
   }
 
-  .homeCopy .subjectSection .subjectBubblesGrid {
+  .subjectBubblesGrid {
     width: 100%;
     gap: 14px;
   }
 
-  .homeCopy .subjectSection .subjectBubbleRow {
+  .subjectBubbleRow {
     gap: 12px;
   }
 }
 
 @media (max-width: 767px) {
-  .homeCopy .subjectSection .subjectBubbleRow .subjectBubble {
+  .subjectBubbleRow .subjectBubble {
     padding: 5px 15px 10px 15px;
     font-size: 16px;
   }
 }
 
 @media (max-width: 575px) {
-  .homeCopy .subjectSection {
+  .subjectSection {
     padding: 80px 0 80px 0;
   }
 
-  .homeCopy .subjectSection .bgRect:nth-child(2) {
+  .bgRect:nth-child(2) {
     top: 35%;
     left: 0;
     width: 15%;
@@ -281,54 +282,54 @@
     border-radius: 0 20px 20px 0;
   }
 
-  .homeCopy .subjectSection .bgRect:nth-child(3) {
+  .bgRect:nth-child(3) {
     bottom: 2%;
     left: auto;
     right: 0;
     width: 30%;
     height: 50px;
-    rotate: 180deg;
+    transform: rotate(180deg);
   }
 
-  .homeCopy .subjectSection .subjectLeft h2 {
+  .subjectLeft :global(h2) {
     font-size: 15px;
   }
 
-  .homeCopy .subjectSection .subjectTitle,
-  .homeCopy .subjectSection .subjectTitle .subjectHighlight {
+  .subjectTitle,
+  .subjectTitle .subjectHighlight {
     font-size: 20.4px;
     line-height: 23px;
   }
 
-  .homeCopy .subjectSection .subjectDesc {
+  .subjectDesc {
     font-size: 14px;
   }
 
-  .homeCopy .subjectSection .subjectLeft {
+  .subjectLeft {
     min-width: auto;
   }
 
-  .homeCopy .subjectSection .subjectBubbleRow {
+  .subjectBubbleRow {
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .homeCopy .subjectSection .subjectRight .subjectBubblesGrid {
+  .subjectRight .subjectBubblesGrid {
     margin-bottom: 15px;
   }
 
-  .homeCopy .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
+  .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
     padding: 12px 40px;
     display: block;
   }
 }
 
 @media (max-width: 420px) {
-  .homeCopy .subjectSection .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
+  .subjectRight .subjectBubblesGrid .subjectBubbleRow .subjectBubble {
     padding: 7px 15px;
   }
 
-  .homeCopy .subjectSection .bgRect:nth-child(2) {
+  .bgRect:nth-child(2) {
     top: 40%;
   }
 }

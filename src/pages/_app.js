@@ -3,7 +3,7 @@
 // Add all your CSS here.
 import "@/styles/globals.css";
 // import "@/styles/home/MovingBanner.css";
-import "@/styles/home/Testimonial.css";
+// import "@/styles/home/Testimonial.css";
 
 // Home Page Css
 // import "@/styles/home/Hero.css";
@@ -20,13 +20,13 @@ import "@/styles/home/Testimonial.css";
 // import "@/styles/home-copy/Hero.css";
 // import "@/styles/home-copy/Course.css";
 // import "@/styles/home-copy/About.css";
-import "@/styles/home-copy/Test.css";
+// import "@/styles/home-copy/Test.css";
 // import "@/styles/home-copy/MovingBanner.css";
-import "@/styles/home-copy/Subjects.css";
+// import "@/styles/home-copy/Subjects.css";
 import "@/styles/home-copy/Alumni.css";
-import "@/styles/home-copy/Usps.css";
-import "@/styles/home-copy/Trainers.css";
-import "@/styles/home-copy/Testimonial.css";
+// import "@/styles/home-copy/Usps.css";
+// import "@/styles/home-copy/Trainers.css";
+// import "@/styles/home-copy/Testimonial.css";
 import "@/styles/home-copy/Blog.css";
 
 import "@/styles/contact/ContactHeadline.css";
