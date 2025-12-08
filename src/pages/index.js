@@ -64,6 +64,21 @@ const HomeCopy = ({ headerHeight }) => {
 
     return (
         <>
+            <link
+                rel="preload"
+                as="font"
+                href="https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2"
+                type="font/woff2"
+                crossorigin="anonymous"
+            />
+
+            <link
+                rel="preload"
+                as="font"
+                href="https://fonts.gstatic.com/s/montserrat/v31/JTUQjIg1_i6t8kCHKm459WxRyS7m0dR9pA.woff2"
+                type="font/woff2"
+                crossorigin="anonymous"
+            />
             <SEO
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
