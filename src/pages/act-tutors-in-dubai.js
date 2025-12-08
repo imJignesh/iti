@@ -16,6 +16,7 @@ import StudentAchievements from '@/components/act/StudentAchivement';
 import SubjectsCard from '@/components/act/SubjectCard';
 import SubjectsCard1 from '@/components/act/SubjectCard1';
 import UspsSection from '@/components/act/UspsSection';
+import Head from 'next/head';
 
 // 1. ACCEPT the headerHeight prop
 const act = ({ headerHeight }) => {
@@ -181,6 +182,10 @@ const act = ({ headerHeight }) => {
 
   return (
     <>
+      <Head>
+        <link rel="stylesheet" href="/styles/home/MovingBanner.css" />
+        <link rel="stylesheet" href="/styles/home/Subjects.css" />
+      </Head>
       <SEO
         title="ACT Tutors In Dubai | ACT Exam Preparation Classes In UAE"
         description="Score high on the ACT with expert ACT tutors in Dubai. Our comprehensive ACT exam preparation classes offer strategies, practice tests, and personalized support."

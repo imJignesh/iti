@@ -23,13 +23,13 @@ import "@/styles/globals.css";
 // import "@/styles/home-copy/Test.css";
 // import "@/styles/home-copy/MovingBanner.css";
 // import "@/styles/home-copy/Subjects.css";
-import "@/styles/home-copy/Alumni.css";
+// import "@/styles/home-copy/Alumni.css";
 // import "@/styles/home-copy/Usps.css";
 // import "@/styles/home-copy/Trainers.css";
 // import "@/styles/home-copy/Testimonial.css";
 import "@/styles/home-copy/Blog.css";
 
-import "@/styles/contact/ContactHeadline.css";
+// import "@/styles/contact/ContactHeadline.css";
 
 // Blog Page Css
 import "@/styles/blog/Blogpg.css";
@@ -38,23 +38,23 @@ import "@/styles/blog/Blogpg.css";
 import "@/styles/slug/slug.css";
 
 // ACT page Css
-import "@/styles/act/Hero.css";
-import "@/styles/act/GallerySlider.css";
-import "@/styles/act/Subjects.css";
-import "@/styles/act/Curriculum.css";
-import "@/styles/act/Usps.css";
-import "@/styles/act/Faq.css";
-import "@/styles/act/Article.css";
-import "@/styles/act/GallerySlider.css";
+// import "@/styles/act/Hero.css";
+// import "@/styles/act/GallerySlider.css";
+// import "@/styles/act/Subjects.css";
+// import "@/styles/act/Curriculum.css";
+// import "@/styles/act/Usps.css";
+// import "@/styles/act/Faq.css";
+// import "@/styles/act/Article.css";
+
 
 // AP page Css
-import "@/styles/ap/Hero.css";
-import "@/styles/ap/Curriculum.css";
-import "@/styles/ap/Usps.css";
-import "@/styles/ap/Faq.css";
-import "@/styles/ap/Article.css";
-import "@/styles/ap/GallerySlider.css";
-import "@/styles/ap/Whystud.css";
+// import "@/styles/ap/Hero.css";
+// import "@/styles/ap/Curriculum.css";
+// import "@/styles/ap/Usps.css";
+// import "@/styles/ap/Faq.css";
+// import "@/styles/ap/Article.css";
+// import "@/styles/ap/GallerySlider.css";
+// import "@/styles/ap/Whystud.css";
 
 // IBDP page Css
 import "@/styles/ibdp/Ibdp.css";
