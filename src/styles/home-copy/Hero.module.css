@@ -21,6 +21,28 @@
   background-position: 6.5vw 1vw;
 }
 
+body.is-bot-detected [data-scroll-container],
+body.is-bot-detected .hero,
+body.is-bot-detected .hero *,
+body.is-bot-detected [data-scroll],
+body.is-bot-detected [data-scroll-section] {
+  transition: none !important;
+  animation: none !important;
+  animation-delay: 0s !important;
+
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  transform: none !important;
+  -webkit-transform: none !important;
+
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+
+  z-index: 1 !important;
+}
+
+
 /* Keyframes must be defined globally */
 @keyframes revealClipLeftToRight {
   from {

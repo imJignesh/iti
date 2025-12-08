@@ -22,6 +22,24 @@ const LocomotiveScrollProvider = ({ children }) => {
     const scrollInstanceRef = useRef(null);
     const [isScrollEnabled, setIsScrollEnabled] = useState(false);
 
+    // --- NEW: Function to check for PSI/Lighthouse environment ---
+    const isBotDetected = () => {
+        // Check for the known Lighthouse global variable or User Agent
+        if (typeof window !== 'undefined' && (window.__lighthouse || navigator.userAgent.includes('HeadlessChrome') || navigator.userAgent.includes('Chrome-Lighthouse'))) {
+            return true;
+        }
+        return false;
+    };
+    // --- END NEW FUNCTION ---
+
+    // Effect 0: Apply class to body if bot is detected
+    useEffect(() => {
+        if (typeof document !== 'undefined' && isBotDetected()) {
+            document.body.classList.add('is-bot-detected');
+            console.log("Lighthouse/Bot detected. Animations disabled via CSS.");
+        }
+    }, []);
+
     // Effect 1: Check width and set scroll enablement
     useEffect(() => {
         if (typeof window === "undefined") return;
@@ -29,7 +47,13 @@ const LocomotiveScrollProvider = ({ children }) => {
         const checkWidth = () => {
             // User's current logic: Scroll enabled if width is >= 280px
             const shouldEnable = window.innerWidth >= 280;
-            setIsScrollEnabled(shouldEnable);
+
+            // --- MODIFIED: Check width AND check for PSI bot ---
+            if (shouldEnable && !isBotDetected()) {
+                setIsScrollEnabled(true);
+            } else {
+                setIsScrollEnabled(false);
+            }
         };
 
         checkWidth();

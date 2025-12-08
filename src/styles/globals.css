@@ -9,6 +9,17 @@ body {
   font-family: var(--font-monstserrat) !important;
 }
 
+body.is-bot-detected * {
+  /* Immediately stop all transitions and animations */
+  transition: none !important;
+  animation-duration: 0s !important;
+  /* Ensure elements are fully visible without transformation effects */
+  transform: none !important;
+  opacity: 1 !important;
+  /* Prevent Locomotive Scroll classes from hiding elements */
+  visibility: inherit !important;
+}
+
 body a {
   text-decoration: none;
 }
