@@ -328,7 +328,7 @@ const Contact = ({ headerHeight }) => {
                             <button type="submit" className="submit-btn" disabled={loading}>
                                 {loading ? 'SUBMITTING...' : 'SUBMIT'}
                                 <span className="arrow">
-                                    <img src="/images/right-arrow-skyblue.png" alt="contact ignite training institute" />
+                                    <img src="/images/right-arrow-skyblue.webp" alt="contact ignite training institute" />
                                 </span>
                             </button>
                         </div>

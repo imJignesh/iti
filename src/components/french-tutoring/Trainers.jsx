@@ -647,7 +647,7 @@ export default function Trainers() {
                     <img src="/images/left-arrow-blue.png" alt="english tutor in dubai" />
                   </button>
                   <button ref={navNextRef} className="customNavBtn swiper-button-next">
-                    <img src="/images/right-arrow-blue.png" alt="english tutor in dubai" />
+                    <img src="/images/right-arrow-blue.webp" alt="english tutor in dubai" />
                   </button>
                   {/* Custom Pagination Container */}
                   <div className="trainersPagination"></div>

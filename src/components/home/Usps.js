@@ -136,7 +136,7 @@ export default function Usps({ }) {
               >
                 KNOW MORE{" "}
                 <Image
-                  src="/images/right-arrow-blue.png"
+                  src="/images/right-arrow-blue.webp"
                   width={40}
                   height={40}
                   quality={100}

@@ -89,7 +89,7 @@ export default function Alumni({ setActiveIndex }) {
             {/* Swiper Nav Buttons */}
             <button className="swiper-button-prev customNavBtn">
               <img
-                src="/images/right-arrow-blue.png"
+                src="/images/right-arrow-blue.webp"
                 alt="Prev"
                 style={{ transform: "rotate(180deg)" }}
                 width={32}
@@ -98,7 +98,7 @@ export default function Alumni({ setActiveIndex }) {
             </button>
             <button className="swiper-button-next customNavBtn">
               <img
-                src="/images/right-arrow-blue.png"
+                src="/images/right-arrow-blue.webp"
                 alt="Next"
                 width={32}
                 height={32}

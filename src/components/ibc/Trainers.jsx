@@ -666,7 +666,7 @@ export default function Trainers() {
                   <img src="/images/left-arrow-blue.png" alt="ib tutor in dubai" />
                 </button>
                 <button ref={navNextRef} className="customNavBtn swiper-button-next">
-                  <img src="/images/right-arrow-blue.png" alt="ib tutor in dubai" />
+                  <img src="/images/right-arrow-blue.webp" alt="ib tutor in dubai" />
                 </button>
                 <div className="trainersPagination"></div>
               </div>

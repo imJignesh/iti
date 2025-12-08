@@ -9,7 +9,7 @@
 /* Global utility classes successfully removed/commented out for purity */
 
 .subjectSectionInner.blue {
-  background: url(/images/subject-bg.png);
+  background: url(/images/subject-bg.webp);
   background-size: cover;
   background-position: center;
 }

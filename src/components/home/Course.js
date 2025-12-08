@@ -10,7 +10,7 @@ const courseData = [
         label: "IB Diploma Programme",
         subtitle: "INTERNATIONAL BACCALAUREATE",
         details: ["Total Courses: 7", "|", "Online & In-Person"],
-        img: "/images/course-bg1.jpg",
+        img: "/images/course-bg1.webp",
     },
     {
         number: "02.",
@@ -18,7 +18,7 @@ const courseData = [
         label: "IB",
         subtitle: "INTERNATIONAL BACCALAUREATE",
         details: ["Total Courses: 7", "|", "Online & In-Person"],
-        img: "/images/course-bg2.jpg",
+        img: "/images/course-bg2.webp",
     },
     {
         number: "03.",
@@ -26,7 +26,7 @@ const courseData = [
         label: "MYP",
         subtitle: "MIDDLE YEARS PROGRAMME",
         details: ["Total Courses: 5", "|", "Online & In-Person"],
-        img: "/images/course-bg3.jpg",
+        img: "/images/course-bg3.webp",
     },
     {
         number: "04.",
@@ -34,7 +34,7 @@ const courseData = [
         label: "IGCSE",
         subtitle: "INTERNATIONAL GCSE",
         details: ["Total Courses: 8", "|", "Online & In-Person"],
-        img: "/images/course-bg4.jpg",
+        img: "/images/course-bg4.webp",
     },
     {
         number: "05.",
@@ -42,7 +42,7 @@ const courseData = [
         label: "A-LEVELS",
         subtitle: "ADVANCED LEVELS",
         details: ["Total Courses: 6", "|", "Online & In-Person"],
-        img: "/images/course-bg5.jpg",
+        img: "/images/course-bg5.webp",
     },
 ];
 
@@ -131,7 +131,7 @@ const Course = () => {
                                     <button className="buttonSkyBlue mainCardBtn">
                                         VIEW COURSE{" "}
                                         <Image
-                                            src="/images/right-arrow-blue.png"
+                                            src="/images/right-arrow-blue.webp"
                                             width={40}
                                             height={40}
                                             quality={100}

@@ -70,7 +70,7 @@ const AchievementsCarousel = () => {
                 {/* OPTIMIZATION: Added ref={prevRef} to correctly link the external button to Swiper */}
                 <button ref={prevRef} className="swiper-button-prev customNavBtn">
                     <img
-                        src="/images/right-arrow-blue.png"
+                        src="/images/right-arrow-blue.webp"
                         alt="Prev"
                         style={{ transform: "rotate(180deg)" }}
                         width={32}
@@ -80,7 +80,7 @@ const AchievementsCarousel = () => {
                 {/* OPTIMIZATION: Added ref={nextRef} to correctly link the external button to Swiper */}
                 <button ref={nextRef} className="swiper-button-next customNavBtn">
                     <img
-                        src="/images/right-arrow-blue.png"
+                        src="/images/right-arrow-blue.webp"
                         alt="Next"
                         width={32}
                         height={32}

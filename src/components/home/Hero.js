@@ -91,12 +91,12 @@ const Hero = () => {
                                         muted
                                         loop
                                         playsInline
-                                        poster="/images/banner-image-right.png"
+                                        poster="/images/banner-image-right.webp"
                                     >
                                         <source src="/videos/education-video.mp4" type="video/mp4" />
                                         {/* Fallback image if video doesn't load */}
                                         <Image
-                                            src="/images/banner-image-right.png"
+                                            src="/images/banner-image-right.webp"
                                             alt="Education Platform"
                                             className="heroImage"
                                             width={500}
@@ -109,7 +109,7 @@ const Hero = () => {
                                     <button type="button" className="buttonBlue">
                                         Get A Free Demo{" "}
                                         <Image
-                                            src="/images/right-arrow-skyblue.png"
+                                            src="/images/right-arrow-skyblue.webp"
                                             width={40}
                                             height={40}
                                             quality={100}
@@ -118,7 +118,7 @@ const Hero = () => {
                                     <button type="button" className="buttonSkyBlue">
                                         Explore Classes{" "}
                                         <Image
-                                            src="/images/right-arrow-blue.png"
+                                            src="/images/right-arrow-blue.webp"
                                             width={40}
                                             height={40}
                                             quality={100}

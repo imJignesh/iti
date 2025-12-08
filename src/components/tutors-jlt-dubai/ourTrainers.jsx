@@ -200,7 +200,7 @@ export default function Trainers({ }) {
               >
                 <button className="swiper-button-prev customNavBtn" tabIndex={0} aria-label="Previous trainer">
                   <img
-                    src="/images/right-arrow-blue.png"
+                    src="/images/right-arrow-blue.webp"
                     alt="Prev"
                     style={{ transform: "rotate(180deg)" }}
                     width={32}
@@ -233,7 +233,7 @@ export default function Trainers({ }) {
 
                 <button className="swiper-button-next customNavBtn" tabIndex={0} aria-label="Next trainer">
                   <img
-                    src="/images/right-arrow-blue.png"
+                    src="/images/right-arrow-blue.webp"
                     alt="Next"
                     width={32}
                     height={32}

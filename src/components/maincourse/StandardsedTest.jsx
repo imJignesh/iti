@@ -165,7 +165,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                       {card.btn}
                       <span className="btnArrow">
                         <Image
-                          src="/images/right-arrow-blue.png"
+                          src="/images/right-arrow-blue.webp"
                           width={30}
                           height={30}
                           quality={100}
@@ -222,7 +222,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                     <button className="cardBtn buttonSkyBlue" type="button">
                       {card.btn}{" "}
                       <Image
-                        src="/images/right-arrow-blue.png"
+                        src="/images/right-arrow-blue.webp"
                         width={40}
                         height={40}
                         quality={100}

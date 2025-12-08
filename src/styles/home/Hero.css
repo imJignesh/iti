@@ -92,9 +92,9 @@
   object-fit: cover;
   object-position: right;
   border-radius: 10px;
-  mask: url("/images/banner-image-right.png") no-repeat center;
+  mask: url("/images/banner-image-right.webp") no-repeat center;
   mask-size: contain;
-  -webkit-mask: url("/images/banner-image-right.png") no-repeat center;
+  -webkit-mask: url("/images/banner-image-right.webp") no-repeat center;
   -webkit-mask-size: contain;
 }
 
@@ -228,7 +228,7 @@
 
 @media (max-width: 767px) {
   .home .hero {
-    background: url(/images/banner-bg-mobile.png);
+    background: url(/images/banner-bg-mobile.webp);
     background-repeat: no-repeat;
     background-size: 85%;
     background-position: top right;

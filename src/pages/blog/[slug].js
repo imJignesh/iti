@@ -87,7 +87,7 @@ const getSidebarHtmlStaticMobile = () => {
                     </div>
                     <button type="submit" class="submit-btn blog-submit-btn">
                         Submit
-                        <span class="blogReadMoreArrow"><img alt="arrow" width="20" height="20" src="/images/right-arrow-blue.png"></span>
+                        <span class="blogReadMoreArrow"><img alt="arrow" width="20" height="20" src="/images/right-arrow-blue.webp"></span>
                     </button>
                 </form>
             </div>
@@ -672,7 +672,7 @@ export default function PostDetail() {
                                         >
                                             Get Tutor Help
                                             <img
-                                                src="/images/right-arrow-skyblue.png"
+                                                src="/images/right-arrow-skyblue.webp"
                                                 alt="arrow"
                                                 width={24}
                                                 height={24}

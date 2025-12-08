@@ -341,7 +341,7 @@ export default function Testimonial({ }) {
           <div className={styles.testimonialPagination}></div>
           <button className="swiper-button-prev" tabIndex={0} aria-label="Previous testimonial">
             <img
-              src="/images/right-arrow-blue.png"
+              src="/images/right-arrow-blue.webp"
               alt="Prev"
               style={{ transform: "rotate(180deg)" }}
               width={32}
@@ -350,7 +350,7 @@ export default function Testimonial({ }) {
           </button>
           <button className="swiper-button-next" tabIndex={0} aria-label="Next testimonial">
             <img
-              src="/images/right-arrow-blue.png"
+              src="/images/right-arrow-blue.webp"
               alt="Next"
               width={32}
               height={32}

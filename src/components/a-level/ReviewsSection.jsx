@@ -245,7 +245,7 @@ export default function Testimonial({ }) {
           </Swiper>
           <button className="swiper-button-prev" tabIndex={0} aria-label="Previous testimonial">
             <img
-              src="/images/right-arrow-blue.png"
+              src="/images/right-arrow-blue.webp"
               alt="a level tutors in dubai"
               className="btntest"
               style={{ transform: "rotate(180deg)" }}
@@ -255,7 +255,7 @@ export default function Testimonial({ }) {
           </button>
           <button className="swiper-button-next" tabIndex={0} aria-label="Next testimonial">
             <img
-              src="/images/right-arrow-blue.png"
+              src="/images/right-arrow-blue.webp"
               alt="a level tutors in dubai"
               className="btntest"
               width={32}

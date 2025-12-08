@@ -66,7 +66,7 @@ const Blog = () => {
                             >
                                 VIEW ALL BLOGS
                                 <img
-                                    src="/images/right-arrow-skyblue.png"
+                                    src="/images/right-arrow-skyblue.webp"
                                     alt="arrow"
                                     width={24}
                                     height={24}
@@ -103,7 +103,7 @@ const Blog = () => {
                                         READ MORE
                                         <span className="blogReadMoreArrow">
                                             <img
-                                                src="/images/right-arrow-blue.png"
+                                                src="/images/right-arrow-blue.webp"
                                                 alt="arrow"
                                                 width={20}
                                                 height={20}
@@ -124,7 +124,7 @@ const Blog = () => {
                     >
                         VIEW ALL BLOGS
                         <img
-                            src="/images/right-arrow-skyblue.png"
+                            src="/images/right-arrow-skyblue.webp"
                             alt="arrow"
                             width={24}
                             height={24}

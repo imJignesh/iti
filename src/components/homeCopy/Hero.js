@@ -103,7 +103,7 @@ const Hero = () => {
                                     muted
                                     loop
                                     playsInline
-                                    poster="/images/banner-image-right.png"
+                                    poster="/images/banner-image-right.webp"
                                 >
                                     <source src="/videos/education-video.mp4" type="video/mp4" />
                                 </video>
@@ -112,7 +112,7 @@ const Hero = () => {
                                 <a href="/join-free-demo-class/" className="buttonBlue">
                                     Get A Free Demo{" "}
                                     <Image
-                                        src="/images/right-arrow-skyblue.png"
+                                        src="/images/right-arrow-skyblue.webp"
                                         width={40}
                                         height={40}
                                         quality={100}
@@ -123,7 +123,7 @@ const Hero = () => {
                                 <a href="/courses/" className="buttonSkyBlue">
                                     Explore Classes{" "}
                                     <Image
-                                        src="/images/right-arrow-blue.png"
+                                        src="/images/right-arrow-blue.webp"
                                         width={40}
                                         height={40}
                                         quality={100}

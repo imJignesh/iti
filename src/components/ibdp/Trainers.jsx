@@ -663,7 +663,7 @@ export default function Trainers() {
                 </button>
                 <button ref={navNextRef} className="customNavBtn swiper-button-next">
                   {/* Placeholder for actual image/icon */}
-                  <img src="/images/right-arrow-blue.png" alt="ibdp tutor in dubai" />
+                  <img src="/images/right-arrow-blue.webp" alt="ibdp tutor in dubai" />
                 </button>
                 {/* Custom Pagination Container */}
                 <div className="trainersPagination"></div>

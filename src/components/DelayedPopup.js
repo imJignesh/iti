@@ -250,7 +250,7 @@ const DelayedPopup = () => {
                     <button type="submit" className="formSubmitBtn buttonSkyBlue mainCardBtn" disabled={loading}>
                         <em>{loading ? 'Submitting...' : 'Submit'}</em>
                         <Image
-                            src="/images/right-arrow-blue.png"
+                            src="/images/right-arrow-blue.webp"
                             width={40}
                             height={40}
                             quality={100}

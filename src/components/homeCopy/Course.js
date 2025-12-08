@@ -11,7 +11,7 @@ const courseData = [
         label: "IBDP",
         subtitle: "International Baccalaureate Diploma Programme",
         details: ["Total Courses: 5", "|", "Online & In-Person"],
-        img: "/images/course-bg1.jpg",
+        img: "/images/course-bg1.webp",
         link: "/courses/ibdp-tutors-in-dubai",
     },
     {
@@ -20,7 +20,7 @@ const courseData = [
         label: "IB MYP",
         subtitle: "Middle Years Programme",
         details: ["Total Courses: 2", "|", "Online & In-Person"],
-        img: "/images/course-bg2.jpg",
+        img: "/images/course-bg2.webp",
         link: "/courses/myp-tutors-in-dubai",
     },
     {
@@ -29,7 +29,7 @@ const courseData = [
         label: "A Levels",
         subtitle: "Advanced Levels",
         details: ["Total Courses: 3", "|", "Online & In-Person"],
-        img: "/images/course-bg3.jpg",
+        img: "/images/course-bg3.webp",
         link: "/courses/a-level-tutors-in-dubai",
     },
     {
@@ -38,7 +38,7 @@ const courseData = [
         label: "IGCSE",
         subtitle: "International General Certificate Of Secondary Education",
         details: ["Total Courses: 3", "|", "Online & In-Person"],
-        img: "/images/course-bg4.jpg",
+        img: "/images/course-bg4.webp",
         link: "/courses/igcse-tutors-in-dubai",
     },
     {
@@ -47,7 +47,7 @@ const courseData = [
         label: "Homeschooling",
         subtitle: "Private Candidacy",
         details: ["Total Courses: 2", "|", "Online & In-Person"],
-        img: "/images/course-bg5.jpg",
+        img: "/images/course-bg5.webp",
         link: "/courses/homeschooling-tutors-in-dubai",
     },
 ];
@@ -151,7 +151,7 @@ const Course = () => {
                                         <button className={`buttonSkyBlue ${styles.mainCardBtn}`}>
                                             VIEW COURSE{" "}
                                             <Image
-                                                src="/images/right-arrow-blue.png"
+                                                src="/images/right-arrow-blue.webp"
                                                 width={40}
                                                 height={40}
                                                 quality={100}

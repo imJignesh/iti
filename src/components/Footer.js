@@ -67,7 +67,7 @@ const Footer = () => {
               <form className={styles.footerNewsletterForm} onSubmit={e => e.preventDefault()}>
                 <input type="email" placeholder="Email" className={styles.footerNewsletterInput} />
                 <button className={styles.footerNewsletterBtn} type="submit">
-                  <img src="/images/right-arrow-blue.png" alt="Subscribe" width={28} height={28} />
+                  <img src="/images/right-arrow-blue.webp" alt="Subscribe" width={28} height={28} />
                 </button>
               </form>
             </div>

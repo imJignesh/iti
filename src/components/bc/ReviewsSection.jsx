@@ -384,7 +384,7 @@ export default function Testimonial({ }) {
           {/* Global Swiper navigation buttons (kept as strings) */}
           <button className="swiper-button-prev" tabIndex={0} aria-label="Previous testimonial">
             <img
-              src="/images/right-arrow-blue.png"
+              src="/images/right-arrow-blue.webp"
               alt="Prev"
               className="btntest"
               style={{ transform: "rotate(180deg)" }}
@@ -394,7 +394,7 @@ export default function Testimonial({ }) {
           </button>
           <button className="swiper-button-next" tabIndex={0} aria-label="Next testimonial">
             <img
-              src="/images/right-arrow-blue.png"
+              src="/images/right-arrow-blue.webp"
               alt="Next"
               className="btntest"
               width={32}

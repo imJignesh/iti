@@ -737,7 +737,7 @@ export default function Trainers() {
                   <img src="/images/left-arrow-blue.png" alt="Previous" />
                 </button>
                 <button ref={navNextRef} className="customNavBtn swiper-button-next">
-                  <img src="/images/right-arrow-blue.png" alt="Next" />
+                  <img src="/images/right-arrow-blue.webp" alt="Next" />
                 </button>
                 <div className="trainersPagination"></div>
               </div>

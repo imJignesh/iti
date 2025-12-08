@@ -141,9 +141,9 @@ body.is-bot-detected [data-scroll-section] {
   object-fit: cover;
   object-position: right;
   border-radius: 10px;
-  mask: url("/images/banner-image-right.png") no-repeat center;
+  mask: url("/images/banner-image-right.webp") no-repeat center;
   mask-size: contain;
-  -webkit-mask: url("/images/banner-image-right.png") no-repeat center;
+  -webkit-mask: url("/images/banner-image-right.webp") no-repeat center;
   -webkit-mask-size: contain;
 }
 
@@ -392,7 +392,7 @@ body.is-bot-detected [data-scroll-section] {
   }
 
   :global(.p) .hero {
-    background: url(/images/banner-bg-mobile.png);
+    background: url(/images/banner-bg-mobile.webp);
     background-repeat: no-repeat;
     background-size: 85%;
     background-position: top right;
@@ -461,7 +461,7 @@ body.is-bot-detected [data-scroll-section] {
 @media (max-width: 575px) {
   .hero {
     padding: 10px 0 0 0;
-    background: url(/images/banner-bg-mobile.png) no-repeat;
+    background: url(/images/banner-bg-mobile.webp) no-repeat;
     background-size: 50vh 16vh;
     background-position: top 0vh right -2vh;
 
@@ -534,8 +534,8 @@ body.is-bot-detected [data-scroll-section] {
   }
 
   .heroVideo {
-    mask: url("/images/banner-image-right-m.png") no-repeat center;
-    -webkit-mask: url("/images/banner-image-right-m.png") no-repeat center;
+    mask: url("/images/banner-image-right-m.webp") no-repeat center;
+    -webkit-mask: url("/images/banner-image-right-m.webp") no-repeat center;
     mask-size: 90%;
   }
 
@@ -646,8 +646,8 @@ body.is-bot-detected [data-scroll-section] {
   }
 
   .heroVideo {
-    mask: url(/images/banner-image-right-m.png) no-repeat center top;
-    -webkit-mask: url(/images/banner-image-right-m.png) no-repeat center top;
+    mask: url(/images/banner-image-right-m.webp) no-repeat center top;
+    -webkit-mask: url(/images/banner-image-right-m.webp) no-repeat center top;
     -webkit-mask-size: 90%;
     mask-size: 100%;
   }
