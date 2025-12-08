@@ -34,7 +34,7 @@
     font-size: 1.4rem;
     max-width: 60%;
     margin: 0 auto;
-    color: var(grey-text);
+    color: var(--grey-text);
     opacity: 50%;
     line-height: 30px;
 }
