@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const items = [
   "EXPERT GUIDANCE",
@@ -8,18 +8,6 @@ const items = [
 ];
 
 const MarqueeBanner = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 1100);
-    };
-
-    checkDevice();
-    window.addEventListener('resize', checkDevice);
-
-    return () => window.removeEventListener('resize', checkDevice);
-  }, []);
   return (
     <section>
       <div
@@ -27,7 +15,7 @@ const MarqueeBanner = () => {
         data-scroll-class="is-inview"
         data-scroll-repeat="true"
         className="fade-in-section bannerScroll1"
-        style={{ animationDelay: "0.4s", marginBottom: isMobile ? "100px" : "0" }}
+        style={{ animationDelay: "0.4s" }}
       >
         <div className="scrollContent1">
           {/* Repeat twice for infinite effect */}
@@ -158,7 +146,6 @@ const MarqueeBanner = () => {
               }
       }
       `}</style>
-
     </section>
   );
 };
