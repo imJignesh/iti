@@ -156,6 +156,7 @@ const Course = () => {
                                                 height={40}
                                                 quality={100}
                                                 loading="lazy"
+                                                alt="right arrow"
                                             />
                                         </button>
                                     </a>

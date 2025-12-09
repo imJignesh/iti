@@ -14,7 +14,6 @@ import "@/styles/team/team.css"; // Global Team Page CSS to be converted
 import "@/styles/contact/contact.css"; // Global Contact Page CSS to be converted
 import "@/styles/DelayedPopup.css"; // Global Popup CSS (Can remain here if global)
 
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";

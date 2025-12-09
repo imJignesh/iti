@@ -95,7 +95,7 @@ export default function WhyChooseUs() {
                 <div className="image-container">
                   <div className="cutout-wrapper">
                     <img
-                      src="/assets/Artboard.png"
+                      src="/assets/Artboard.webp"
                       alt="about ignite"
                       className="cutout-img"
                     />
@@ -431,7 +431,7 @@ export default function WhyChooseUs() {
                       src={
                         isMobile
                           ? "/assets/moabroad.png"
-                          : "/assets/Artboard.png"
+                          : "/assets/Artboard.webp"
                       }
                       alt="about ignite"
                       className="cutout-img"

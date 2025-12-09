@@ -139,6 +139,17 @@ section.padding-0 {
   background-size: contain;
 }
 
+.subjectLeft h2 {
+  -webkit-text-fill-color: white;
+  margin-bottom: 30px;
+}
+
+.subjectLeft h2::before,
+.subjectLeft h2:after {
+  filter: contrast(0) brightness(2);
+}
+
+
 
 .testTitle {
   font-size: 2rem;
