@@ -22,6 +22,7 @@ import { useRouter } from "next/router";
 
 import LocomotiveScrollProvider from '../components/LocomotiveScrollProvider';
 import { useState, createContext } from "react";
+import Link from 'next/link';
 
 // --- 1. Define the Montserrat Font Loader ---
 const montserrat = Montserrat({
@@ -71,6 +72,11 @@ export default function MyApp({ Component, pageProps }) {
                     <Footer />
                     <DelayedPopup />
                 </div>
+                <Link href="/join-free-demo-class" passHref legacyBehavior>
+                    <a className="sticky-demo-button" aria-label="Go to Free Demo Class page">
+                        Get a Free Demo
+                    </a>
+                </Link>
             </LocomotiveScrollProvider>
         </PopupProvider>
     );

@@ -130,13 +130,13 @@ body.is-bot-detected [data-scroll-section] {
 .videoContainer {
   position: relative;
   width: 30vw;
-  height: 28vw;
+  height: 33vw;
   overflow: hidden;
 }
 
 .heroVideo {
   width: 30vw;
-  height: 28vw;
+  height: 33vw;
   max-height: 700px;
   object-fit: cover;
   object-position: right;
@@ -619,6 +619,11 @@ body.is-bot-detected [data-scroll-section] {
 }
 
 @media (max-width: 360px) {
+
+  .hero {
+    background: url(/images/banner-bg-mobile.webp) right -2vh top 9% / 50vh 16vh no-repeat;
+  }
+
   .heroVideo {
     height: 300px;
   }
@@ -631,7 +636,7 @@ body.is-bot-detected [data-scroll-section] {
   .heroRight .buttonGroup {
     width: 55vw;
     top: 63%;
-    left: 20%;
+
     right: 20%;
   }
 

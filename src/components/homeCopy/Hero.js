@@ -44,22 +44,33 @@ const Hero = () => {
             </h1>
         );
     };
+
     let mobileClass = '';
     if (isMobile) {
         mobileClass = 'pt-3 pb-3';
     }
 
+    // Define scroll attributes as variables, conditionally including them only when NOT mobile
+    const scrollSectionAttr = isMobile ? {} : { 'data-scroll-section': true };
+    const scrollRevealAttr = isMobile ? {} : {
+        'data-scroll': true,
+        'data-scroll-class': 'is-inview',
+        'data-scroll-repeat': 'true'
+    };
 
     return (
-        <section className={`${styles.hero} revealClipRightToLeft `} data-scroll-section>
+        // Apply data-scroll-section conditionally
+        <section className={`${styles.hero} revealClipRightToLeft `} {...scrollSectionAttr}>
             <div className="container">
-                <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className="fade-in-section">
+                {/* Apply data-scroll attributes conditionally */}
+                <div
+                    {...scrollRevealAttr}
+                    className="fade-in-section"
+                >
                     <div className={`row ${styles.heroMain}`}>
                         <div className={`col-12 col-lg-7 col-xl-7 pe-5 ${styles.heroLeft}`}>
                             <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
+                                {...scrollRevealAttr}
                                 className={`fade-in-section ${styles.heroMainHeading} ${mobileClass}`}
                                 style={{ animationDelay: "0.4s" }}
                             >
@@ -67,9 +78,7 @@ const Hero = () => {
                             </div>
 
                             <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
+                                {...scrollRevealAttr}
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.6s" }}
                             >
@@ -77,9 +86,7 @@ const Hero = () => {
                             </div>
 
                             <div
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
+                                {...scrollRevealAttr}
                                 className="fade-in-section"
                                 style={{ animationDelay: "0.8s" }}
                             >

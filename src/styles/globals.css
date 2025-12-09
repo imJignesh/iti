@@ -65,6 +65,62 @@ section.padding-0 {
   padding-bottom: 0 !important;
 }
 
+@media (max-width: 991px) {
+  .testTitle {
+    max-width: 600px;
+    font-size: 1.5rem;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .testTitle {
+    font-size: 20.4px !important;
+    line-height: 23px;
+  }
+}
+
+/* Add this to your global CSS file for positioning and styling */
+
+.sticky-demo-button {
+  /* Positioning */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  /* Styling (Customize these colors/fonts) */
+  padding: 12px 20px;
+  background: #161d58;
+  /* Example color matching your banner's primary blue */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  /* Crucial for links */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sticky-demo-button:hover {
+  background-color: #2f648e;
+  /* Example darker hover color */
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .sticky-demo-button {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 1124px) {
   .container {
     max-width: 90vw !important;
@@ -345,7 +401,7 @@ section.padding-0 {
 
 .is-clipped {
   clip-path: inset(0 100% 0 0);
-  animation: revealImageClip 1.2s 0.6s cubic-bezier(0.4, 0, 0.2, 1.4) forwards;
+  animation: revealImageClip 0.3s 0.2s cubic-bezier(0.4, 0, 0.2, 1.4) forwards;
 }
 
 @keyframes revealImageClip {
