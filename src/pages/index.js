@@ -65,7 +65,8 @@ const HomeCopy = ({ headerHeight }) => {
     return (
         <>
             <Head> {/* <--- Add Head component */}
-                <link rel="preload" as="image" href="/images/banner-image-right.webp" /> {/* <--- ADD THIS LINE */}
+                <link rel="preload" as="image" href="/images/banner-image-right.webp" />
+                <link rel="preload" as="image" href="https://ignite.amigosserver.com/images/course-bg1.webp"></link>
             </Head>
             <SEO
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
