@@ -570,8 +570,8 @@ export default function Trainers() {
                       },
                     }}
                     navigation={{
-                      prevEl: navPrevRef.current,
-                      nextEl: navNextRef.current,
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
                     }}
                     pagination={{
                       clickable: true,

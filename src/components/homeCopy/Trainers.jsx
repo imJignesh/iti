@@ -154,12 +154,8 @@ export default function Trainers() {
   const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
   const [showAll, setShowAll] = useState(false);
   const trainersGridRef = useRef(null);
-
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
-  // FIX: Use state to hold navigation settings (null initially)
-  const [navigationPrev, setNavigationPrev] = useState(null);
-  const [navigationNext, setNavigationNext] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -170,17 +166,6 @@ export default function Trainers() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  // FIX: Use a simple useEffect to update the state variable with refs
-  // This ensures the refs are properly attached before Swiper uses them.
-  useEffect(() => {
-    // Check if the refs are assigned to the actual DOM elements
-    if (navPrevRef.current && navNextRef.current) {
-      setNavigationPrev(navPrevRef.current);
-      setNavigationNext(navNextRef.current);
-    }
-  }, [isTrainersSwiper]);
-
 
   const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 
@@ -731,15 +716,15 @@ export default function Trainers() {
                       spaceBetween: 24,
                     },
                   }}
-                  // Navigation prop is now fully defined using state variables
-                  navigation={navigationPrev && navigationNext ? {
-                    prevEl: navigationPrev,
-                    nextEl: navigationNext,
-                  } : undefined}
-                  pagination={{
-                    el: '.trainersPagination',
-                    clickable: true,
-                    bulletActiveClass: 'swiper-pagination-bullet-active',
+                  navigation={{
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  }}
+                  onBeforeInit={(swiper) => {
+                    if (swiper.params.navigation) {
+                      swiper.params.navigation.prevEl = navPrevRef.current;
+                      swiper.params.navigation.nextEl = navNextRef.current;
+                    }
                   }}
                 >
                   {trainers.map((t, i) => (
@@ -748,7 +733,6 @@ export default function Trainers() {
                     </SwiperSlide>
                   ))}
                 </Swiper>
-                {/* Ref attributes remain attached to the buttons */}
                 <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
                   <img src="/images/left-arrow-blue.png" alt="Previous" />
                 </button>
