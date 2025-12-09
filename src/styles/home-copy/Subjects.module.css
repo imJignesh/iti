@@ -67,14 +67,14 @@
 }
 
 /* Use :global(h2) for the global element tag */
-.subjectLeft :global(h2) {
+.subjectLeft h2 {
   -webkit-text-fill-color: white;
   margin-bottom: 30px;
 }
 
 /* Use :global(h2:before) for pseudo-elements on global tag */
-.subjectLeft :global(h2::before),
-.subjectLeft :global(h2:after) {
+.subjectLeft h2::before,
+.subjectLeft h2:after {
   filter: contrast(0) brightness(2);
 }
 
@@ -180,7 +180,7 @@
 }
 
 @media (max-width: 1199px) {
-  .subjectLeft :global(h2) {
+  .subjectLeft h2 {
     font-size: 18px;
   }
 
@@ -219,7 +219,7 @@
     padding: 70px 20px;
   }
 
-  .subjectLeft :global(h2) {
+  .subjectLeft h2 {
     margin-bottom: 10px;
   }
 
@@ -291,7 +291,7 @@
     transform: rotate(180deg);
   }
 
-  .subjectLeft :global(h2) {
+  .subjectLeft h2 {
     font-size: 15px;
   }
 

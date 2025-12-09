@@ -66,6 +66,8 @@ const LocomotiveScrollProvider = ({ children }) => {
 
     // Effect 2: Initialize/Destroy Locomotive Scroll based on isScrollEnabled
     useEffect(() => {
+        let timeoutId; // Declare timeout ID outside of initScroll
+
         const destroyScroll = () => {
             if (scrollInstanceRef.current) {
                 scrollInstanceRef.current.destroy();
@@ -79,35 +81,42 @@ const LocomotiveScrollProvider = ({ children }) => {
                 return;
             }
 
-            const LocomotiveScroll = (await import("locomotive-scroll")).default;
-            if (!scrollRef.current) return;
+            // --- OPTIMIZATION: Use a small delay (50ms) to allow LCP rendering first ---
+            timeoutId = setTimeout(async () => {
+                const LocomotiveScroll = (await import("locomotive-scroll")).default;
+                if (!scrollRef.current) return;
 
-            // --- FIX: Use large negative rootMargin for mobile/tablet to stabilize detection ---
-            const isMobileView = window.innerWidth <= 991;
+                // --- FIX: Use large negative rootMargin for mobile/tablet to stabilize detection ---
+                const isMobileView = window.innerWidth <= 991;
 
-            // On mobile, shrink the detection viewport by 15% on the top and bottom.
-            // This creates a large, stable area where elements are considered "in-view."
-            const rootMarginValue = isMobileView ? '-15% 0px -15% 0px' : '0px';
+                const rootMarginValue = isMobileView ? '-15% 0px -15% 0px' : '0px';
 
-            const scroll = new LocomotiveScroll({
-                el: scrollRef.current,
-                smooth: true,
-                lerp: 0.1,
-                // The rootMargin configuration is passed directly to the Intersection Observer instance 
-                // used internally by Locomotive Scroll for visibility detection.
-                rootMargin: rootMarginValue,
-            });
-            // --- END FIX ---
+                const scroll = new LocomotiveScroll({
+                    el: scrollRef.current,
+                    smooth: true,
+                    lerp: 0.1,
+                    // optional:
+                    getDirection: true,
+                    getSpeed: true,
+                    multiplier: 1,
+                    rootMargin: rootMarginValue,
+                });
+                // --- END FIX ---
 
-            scrollInstanceRef.current = scroll;
-            console.log("Locomotive Scroll Initialized");
+                scrollInstanceRef.current = scroll;
+                console.log("Locomotive Scroll Initialized");
+            }, 50); // Delay initialization by 50ms
+
         };
 
         if (typeof window !== "undefined") {
             initScroll();
         }
 
-        return destroyScroll;
+        return () => {
+            clearTimeout(timeoutId); // Clear the timeout on cleanup
+            destroyScroll();
+        };
     }, [isScrollEnabled]);
 
     return (

@@ -90,7 +90,7 @@ export default function Accordion() {
 
       <style jsx>{`
         .card {
-          background-image: url('/assets/Rectangle130.png');
+          background-image: url('/assets/Rectangle130.webp');
           background-size: cover;
           background-position: center;
           max-width:90vw;

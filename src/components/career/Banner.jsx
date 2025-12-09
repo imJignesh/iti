@@ -43,7 +43,7 @@ export default function CareersBanner() {
             height: calc(90vw / 2.98); /* desktop aspect ratio */
             border-radius: 12px;
             overflow: hidden;
-            background-image: url("/assets/banner.jpg");
+            background-image: url("/assets/banner.webp");
             background-size: cover;
             background-position: center;
           }

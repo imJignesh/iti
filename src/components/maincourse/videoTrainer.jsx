@@ -150,7 +150,7 @@ const TrainersMessage = () => {
       </div>
 
       <style jsx>{`
-        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
+        // @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
 
         .container {
           font-family: "Montserrat", sans-serif;

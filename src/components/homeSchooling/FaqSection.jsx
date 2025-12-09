@@ -69,7 +69,7 @@ const FAQSection = () => {
       style={{
         marginBottom: isMobile ? "0" : "0px",
         maxWidth: isMobile ? "95vw" : "90vw",
-        backgroundImage: 'url("/assets/faqbg.png")',
+        backgroundImage: 'url("/assets/faqbg.webp")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

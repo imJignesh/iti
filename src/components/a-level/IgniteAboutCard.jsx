@@ -88,12 +88,12 @@ export default function IgniteAboutCard() {
             className="testimonialRect rect-1"
           />
           <img
-            src="/assets/arect1.png"
+            src="/assets/arect1.webp"
             alt="bg-shape"
             className="testimonialRect rect-2"
           />
           <img
-            src="/assets/arect2.png"
+            src="/assets/arect2.webp"
             alt="bg-shape"
             className="testimonialRect rect-3"
           />

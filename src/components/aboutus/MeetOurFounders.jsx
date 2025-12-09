@@ -98,7 +98,7 @@ export default function MeetOurFounders() {
             <div className="founder-image-container">
               <div className="founder-image">
                 <img
-                  src="/assets/founder1.png"
+                  src="/assets/founder1.webp"
                   alt="about ignite"
                   className="founder-cutout"
                   width={508}
@@ -139,7 +139,7 @@ export default function MeetOurFounders() {
             <div className="founder-image-container2">
               <div className="founder-image2">
                 <img
-                  src="/assets/founder2.png"
+                  src="/assets/founder2.webp"
                   alt="about ignite"
                   className="founder-cutout2"
                   width={508}

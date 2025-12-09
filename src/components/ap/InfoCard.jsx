@@ -153,7 +153,7 @@ export default function InfoCard() {
       <div
         className="position-relative overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/ap.jpg')",
+          backgroundImage: "url('/assets/ap.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           borderRadius: "1.5rem",
@@ -384,17 +384,17 @@ export default function InfoCard() {
             >
               {/* Rectangle background images positioned within form section */}
               <img
-                src="/assets/rect1.png"
+                src="/assets/rect1.webp"
                 alt="bg-shape"
                 className="testimonialRect rect-1"
               />
               <img
-                src="/assets/rect2.png"
+                src="/assets/rect2.webp"
                 alt="bg-shape"
                 className="testimonialRect rect-2"
               />
               <img
-                src="/assets/rect3.png"
+                src="/assets/rect3.webp"
                 alt="bg-shape"
                 className="testimonialRect rect-3"
               />
@@ -571,7 +571,7 @@ export default function InfoCard() {
                   >
                     {loading ? 'SUBMITTING...' : 'SUBMIT'}
                     <img
-                      src={isMobile ? "/assets/mobilebutton.png" : "/assets/rwb.png"}
+                      src={isMobile ? "/assets/mobilebutton.webp" : "/assets/rwb.png"}
                       alt="right"
                       width={isMobile ? 35 : 40}
                       height={isMobile ? 35 : 40}

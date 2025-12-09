@@ -23,15 +23,15 @@
 }
 
 /* Use :global(h2) for the global element tag */
-.uspLeft :global(h2) {
+.uspLeft h2 {
   -webkit-text-fill-color: var(--white-color);
   width: max-content;
   margin-bottom: 20px;
 }
 
 /* Use :global(h2:before) for pseudo-elements on global tag */
-.uspLeft :global(h2::before),
-.uspLeft :global(h2::after) {
+.uspLeft h2::before,
+.uspLeft h2::after {
   width: 16px;
   filter: contrast(0) brightness(2);
 }

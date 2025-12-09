@@ -16,8 +16,8 @@ import Usps from "@/components/homeCopy/Usps";
 import Trainers from "@/components/homeCopy/Trainers";
 import Testimonial from "@/components/homeCopy/Testimonial";
 import MarqueeBanner from '@/components/homeCopy/MarqueeBanner';
-
 import Blog from "@/components/homeCopy/Blog";
+import Head from 'next/head';
 
 function useInViewAnimation(threshold = 0.3) {
     const [inView, setInView] = useState(false);
@@ -64,6 +64,9 @@ const HomeCopy = ({ headerHeight }) => {
 
     return (
         <>
+            <Head> {/* <--- Add Head component */}
+                <link rel="preload" as="image" href="/images/banner-image-right.webp" /> {/* <--- ADD THIS LINE */}
+            </Head>
             <SEO
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"

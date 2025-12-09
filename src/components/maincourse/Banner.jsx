@@ -365,7 +365,7 @@ export default function TutoringCourses() {
       </main>
 
       <style jsx>{`
-        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+        // @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
 
         .container {
           font-family: "Montserrat", sans-serif;

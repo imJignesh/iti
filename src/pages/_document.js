@@ -5,6 +5,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <link
+          rel="preload"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          as="script"
+        />
         {/*
           Tags inside next/document's Head are static and apply to all pages.
           They CANNOT be overridden by next/head on individual pages.
@@ -22,7 +27,7 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </Html>
   );
 }

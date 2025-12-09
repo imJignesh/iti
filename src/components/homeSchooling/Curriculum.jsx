@@ -46,7 +46,7 @@ export default function Curriculum() {
         {/* A-Levels */}
         <div className="curriculum-card">
           <img
-            src="/assets/alevel.jpg"
+            src="/assets/alevel.webp"
             alt="A-Levels"
             className="curriculum-img"
           />

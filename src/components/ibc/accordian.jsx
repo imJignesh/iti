@@ -81,7 +81,7 @@ export default function Accordion() {
           <p className="subtitle">At Ignite Training Institute, we specialize in delivering high-quality IB tutoring that leads to measurable academic progress and exam success. Our experienced tutors understand the demands of the IB curriculum and provide personalized support tailored to each learner’s needs. <br />
             With structured classes, exam-focused training, and consistent mentorship, we help students build confidence, master subjects, and achieve top scores. Whether you need help with IAs, EE, TOK, or final exams, Ignite offers the complete support system to navigate your IB journey with success.</p>
           <br />
-          
+
           <h2 className="title">Exclusive IB Resources</h2>
           <br />
           <div class="schemalinks">
@@ -93,7 +93,7 @@ export default function Accordion() {
 
       <style jsx>{`
         .card {
-          background-image: url('/assets/Rectangle130.png');
+          background-image: url('/assets/Rectangle130.webp');
           background-size: cover;
           background-position: center;
           max-width:90vw;

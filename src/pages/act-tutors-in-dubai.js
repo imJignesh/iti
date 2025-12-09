@@ -185,6 +185,7 @@ const act = ({ headerHeight }) => {
       <Head>
         <link rel="stylesheet" href="/styles/home/MovingBanner.css" />
         <link rel="stylesheet" href="/styles/home/Subjects.css" />
+        <link rel="preload" as="image" href="/assets/act.webp" />
       </Head>
       <SEO
         title="ACT Tutors In Dubai | ACT Exam Preparation Classes In UAE"

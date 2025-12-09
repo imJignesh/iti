@@ -63,7 +63,7 @@ export default function CallToAction() {
             fontSize: isMobile ? '14px' : '1.25rem',
             color: '#d1d5db',
             marginBottom: '2rem',
-            lineHeight: '1.6',           
+            lineHeight: '1.6',
         },
         button: {
             display: 'flex',
@@ -244,7 +244,7 @@ export default function CallToAction() {
 
                         <div style={styles.imageSection}>
                             <Image
-                                src="/assets/callto.jpg"
+                                src="/assets/callto.webp"
                                 alt="Tutoring team working together"
                                 style={styles.image}
                                 height={370}
@@ -285,7 +285,7 @@ export default function CallToAction() {
             {/* Mobile Image - Outside container to overlay */}
             <div style={styles.mobileImageContainer} className="mobile-only">
                 <Image
-                    src="/assets/callto.jpg"
+                    src="/assets/callto.webp"
                     alt="Tutoring team working together"
                     style={styles.mobileImage}
                     height={370}

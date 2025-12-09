@@ -259,7 +259,7 @@ function CourseCard() {
                         }}
                       >
                         <img
-                          src="/assets/corsebg.jpg"
+                          src="/assets/corsebg.webp"
                           alt="ib tutor in dubai"
                           className="img-fluid image1"
                           style={{
@@ -320,7 +320,7 @@ function CourseCard() {
                     style={{
                       backgroundImage: `
       linear-gradient(135deg, rgba(227, 242, 253, 0.9), rgba(187, 222, 251, 0.9)),
-      url("/assets/corsebg.jpg")
+      url("/assets/corsebg.webp")
     `,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
@@ -405,7 +405,7 @@ function CourseCard() {
                           background: "linear-gradient(135deg, #4A5D23, #2E3A16)",
                           padding: "1.5rem",
                           color: "#ffffff",
-                          backgroundImage: "url('/assets/corsebg.jpg')",
+                          backgroundImage: "url('/assets/corsebg.webp')",
                           backgroundSize: "cover",
                           backgroundPosition: "center right",
                           backgroundBlendMode: "multiply",
