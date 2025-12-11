@@ -349,7 +349,7 @@ export default function InfoCard() {
                       fontSize: "1rem",
                       padding: "10px 14px 10px 20px",
                       boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
-                      minWidth: "290px",
+                      minWidth: isMobile ? "260px" : "290px",
                       marginTop: isMobile ? "auto" : "40px",
                     }}
                   >

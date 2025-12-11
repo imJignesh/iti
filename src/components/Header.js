@@ -133,13 +133,14 @@ const Header = ({ setHeaderHeight }) => {
                                             <Image height={25} width={30} src="/images/menu-blog.png" alt="Blog" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>Blog</h4>
                                         </a>
-                                        <a href='/our-team' className={`${styles.megaMenuBox} ${isLinkActive('/our-team') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/menu-team.png" alt="Our Team" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
-                                            <h4>Our Team</h4>
-                                        </a>
+
                                         <a href='/about-us' className={`${styles.megaMenuBox} ${isLinkActive('/about-us') ? styles.activeLink : ''}`}>
                                             <Image height={25} width={30} src="/images/menu-about.png" alt="About Us" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
                                             <h4>About Us</h4>
+                                        </a>
+                                        <a href='/our-team' className={`${styles.megaMenuBox} ${isLinkActive('/our-team') ? styles.activeLink : ''}`}>
+                                            <Image height={25} width={30} src="/images/menu-team.png" alt="Our Team" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
+                                            <h4>Our Team</h4>
                                         </a>
                                         <a href='/contact-us' className={`${styles.megaMenuBox} ${isLinkActive('/contact-us') ? styles.activeLink : ''}`}>
                                             <Image height={25} width={30} src="/images/menu-contact.png" alt="Contact Us" data-scroll data-scroll-class="is-clipped" data-scroll-repeat="true" />
