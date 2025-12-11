@@ -10,13 +10,13 @@ import "swiper/css/pagination";
 // ----------------------------------------------------------------------
 
 const trainers = [
-  {
-    name: "SADAF",
-    img: "/images/trainer2.png",
-    subtitle: "Accounting, Economics & Business",
-    experience: "11+ YEARS",
-    color: "green",
-  },
+  // {
+  //   name: "SADAF",
+  //   img: "/images/trainer2.png",
+  //   subtitle: "Accounting, Economics & Business",
+  //   experience: "11+ YEARS",
+  //   color: "green",
+  // },
   {
     name: "HARSHA",
     img: "/images/trainer1.png",

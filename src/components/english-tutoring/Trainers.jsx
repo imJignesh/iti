@@ -13,7 +13,7 @@ const trainers = [
   {
     name: "ANUJA",
     img: "/images/trainer2.png",
-    subtitle: "English & French",
+    subtitle: "English",
     experience: "10+ YEARS",
     color: "green",
   },

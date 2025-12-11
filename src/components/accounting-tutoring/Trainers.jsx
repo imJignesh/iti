@@ -11,19 +11,19 @@ import "swiper/css/pagination";
 
 const trainers = [
   {
-    name: "SADAF",
+    name: "MASAB",
     img: "/images/trainer2.png",
-    subtitle: "Accounting, Economics & Business",
-    experience: "11+ YEARS",
+    subtitle: "Accounting",
+    experience: "10+ YEARS",
     color: "green",
   },
-  {
-    name: "HARSHA",
-    img: "/images/trainer1.png",
-    subtitle: "Economics & Business",
-    experience: "10+ YEARS",
-    color: "blue",
-  },
+  // {
+  //   name: "HARSHA",
+  //   img: "/images/trainer1.png",
+  //   subtitle: "Economics & Business",
+  //   experience: "10+ YEARS",
+  //   color: "blue",
+  // },
 ];
 
 // ----------------------------------------------------------------------

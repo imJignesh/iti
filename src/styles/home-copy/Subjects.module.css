@@ -263,7 +263,7 @@
 
 @media (max-width: 767px) {
   .subjectBubbleRow .subjectBubble {
-    padding: 5px 15px 10px 15px;
+    padding: 5px 15px 5px 15px;
     font-size: 16px;
   }
 }

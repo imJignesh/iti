@@ -13,30 +13,37 @@ const trainers = [
   {
     name: "RUSTHA",
     img: "/images/trainer2.png",
-    subtitle: "Chemistry, Biology, & EVM",
+    subtitle: "Biology",
     experience: "3+ YEARS",
     color: "green",
   },
   {
     name: "IPSITA",
     img: "/images/trainer1.png",
-    subtitle: "Biology & EVM",
+    subtitle: "Biology",
     experience: "7+ YEARS",
     color: "blue",
   },
   {
     name: "FREEZY",
     img: "/images/trainer2.png",
-    subtitle: "Biology, Chemistry",
+    subtitle: "Biology",
     experience: "4+ YEARS",
     color: "green",
   },
   {
     name: "DR. HAYA",
     img: "/images/trainer1.png",
-    subtitle: "Chemistry, Physics, Biology",
+    subtitle: "Biology",
     experience: "9+ YEARS",
     color: "blue",
+  },
+  {
+    name: "SHWETHA",
+    img: "/images/trainer2.png",
+    subtitle: "Biology",
+    experience: "6+ YEARS",
+    color: "green",
   },
 ];
 
