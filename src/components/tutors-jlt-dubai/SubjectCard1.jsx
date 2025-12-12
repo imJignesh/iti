@@ -53,7 +53,8 @@ export default function SubjectsCard1({ }) {
         data-scroll-class="is-inview"
         data-scroll-repeat
         style={{ animationDelay: "0.2s" }}>
-        <div className="testHeadings">
+
+        <div className="achievementsHeadings">
           <div
             data-scroll
             data-scroll-class="is-inview"
@@ -61,20 +62,22 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">SUBJECTS WE SUPPORT
-            </div>
+            <h2 className="SubHeading">
+              SUBJECTS WE SUPPORT
+            </h2>
           </div>
-          <h2
+          <div
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="fade-in-section testTitle"
-            style={{ animationDelay: "0.2s" }}
+            className="fade-in-section"
+            style={{ animationDelay: "0.25s" }}
           >
-
-            Tutoring In JLT Dubai That Makes  <br /> Every <span className="highlight"> Subject </span>
-            Clear
-          </h2>
+            <h3 className="achievementsTitle">
+              Tutoring In JLT Dubai That Makes  {isMobile ? "" : <br />} Every <span className="highlight"> Subject </span>
+              Clear
+            </h3>
+          </div>
         </div>
       </div>
       <div className="container">
@@ -375,7 +378,7 @@ export default function SubjectsCard1({ }) {
         /* Extra small devices - consistent across iPhone 12 (390px) and Galaxy S8+ (360px) */
          @media (max-width: 575px) {
           .subjects-card1-section{
-            padding: 80px 0;
+            padding: 0 0;
             
           } 
             .subjects-card1-section .subjects-card1-bubble-row{

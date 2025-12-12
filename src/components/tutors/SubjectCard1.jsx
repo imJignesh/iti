@@ -53,8 +53,7 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-
-            Tutoring In Dubai That Makes  <br /> Every <span className="highlight"> Subject </span>
+            Tutoring In Dubai That Makes  {isMobile ? " " : <br />} Every <span className="highlight"> Subject </span>
             Clear
           </h3>
         </div>
@@ -351,7 +350,7 @@ export default function SubjectsCard1({ }) {
         /* Extra small devices - consistent across iPhone 12 (390px) and Galaxy S8+ (360px) */
          @media (max-width: 575px) {
           .subjects-card1-section{
-            padding: 80px 0;
+            padding: 0 0;
             
           } 
             .subjects-card1-section .subjects-card1-bubble-row{

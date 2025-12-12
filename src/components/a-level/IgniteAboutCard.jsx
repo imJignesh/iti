@@ -41,7 +41,7 @@ export default function IgniteAboutCard() {
           </div>
 
           <h3
-            className="ignite-main-title fade-in-section text-uppercase"
+            className="testTitle text-center fade-in-section text-uppercase"
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat

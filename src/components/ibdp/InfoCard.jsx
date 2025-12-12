@@ -339,13 +339,13 @@ export default function InfoCard() {
                       color: "#273972",
                       borderRadius: "40px",
                       fontSize: "1rem",
-                      padding: "10px 14px 10px 20px",
+                      padding: "10px 15px",
                       boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
-                      minWidth: isMobile ? "260px" : "290px", // ensures spacing looks consistent
+                      minWidth: isMobile ? "240px" : "290px", // ensures spacing looks consistent
                       marginTop: isMobile ? "auto" : "40px",
                     }}
                   >
-                    <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>
+                    <span style={{ letterSpacing: isMobile ? "0" : "3px" }}>
                       Get A Free Demo
                     </span>
                     <img

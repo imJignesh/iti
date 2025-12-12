@@ -44,7 +44,7 @@ export default function IgniteAchievements() {
             className="fade-in-section testTitle text-uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            Success Built On Consistent<br /> <span className="highlight"> Academic Progress{" "}</span>
+            Success Built On Consistent<span className="highlight"> Academic Progress{" "}</span>
             Impact
           </h3>
 

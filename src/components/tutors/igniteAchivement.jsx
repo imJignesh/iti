@@ -44,7 +44,7 @@ export default function IgniteAchievements() {
             style={{ animationDelay: "0.2s" }}
           >
 
-            Success Defined By Consistent<br />
+            Success Defined By Consistent
             <span className="highlight"> Academic </span>Progress
 
           </h3>

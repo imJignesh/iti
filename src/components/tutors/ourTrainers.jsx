@@ -1,8 +1,10 @@
-
-
-import React, { useEffect, useState } from "react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import React, { useEffect, useState, useRef } from "react";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Image from '@/components/CustomImageWrapper';
 
 
 const trainers = [
@@ -122,583 +124,575 @@ const trainers = [
 ];
 
 
-export default function Trainers({ }) {
 
-  const [isTrainersSwiper, setIsTrainersSwiper] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 1100);
-    };
+// ----------------------------------------------------------------------
+// Trainer Card Component
+// ----------------------------------------------------------------------
 
-    checkDevice();
-    window.addEventListener("resize", checkDevice);
+const TrainerCard = ({ trainer }) => (
+  <a href="/our-team">
+    <div data-color={trainer.color} className="trainerCard">
+      <div className="trainerName">{trainer.name}</div>
+      <div className="trainerImgWrap">
+        <img src={trainer.img} alt={trainer.name} className="trainerImg" />
+      </div>
+      <div className="trainerSubtitle">{trainer.subtitle}</div>
+      <div className="trainerExp">{trainer.experience}</div>
+    </div>
+  </a>
+);
 
-    return () => window.removeEventListener("resize", checkDevice);
-  }, []);
+// ----------------------------------------------------------------------
+// Trainers Component
+// ----------------------------------------------------------------------
+
+export default function Trainers() {
+  const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+  const trainersGridRef = useRef(null);
+  const navPrevRef = useRef(null);
+  const navNextRef = useRef(null);
+
   useEffect(() => {
     const handleResize = () => {
-      setIsTrainersSwiper(true);
+      // Swiper active below 1199px
+      setIsTrainersSwiper(window.innerWidth <= 1199);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 
+  // The new global container class is 'trainers-global-container'
+  const containerClass = 'trainers-global-container';
+
+  const desktopTitle = (
+    <>
+      Train With Expert Mentors At <br /> Dubai’s <span className="trainersHighlight">Trusted Institute</span>
+    </>
+  );
+
+  const mobileTitle = (
+    <>
+      Train With Expert Mentors At Dubai’s <span className="trainersHighlight">Trusted Institute</span>
+    </>
+  );
+
+  const currentTitle = isTrainersSwiper ? mobileTitle : desktopTitle;
   return (
     <>
-      <section className="trainersSection">
-        <div className="container">
-          <div
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
-          </div>
+      <style jsx global>
+        {`
+          /* Trainer Section - Refactored for global use with .trainers-global-container */
 
-          <h3
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section trainersTitle"
-            style={{ animationDelay: "0.2s" }}
-          >
+          .${containerClass} .trainersSection {
+            padding: 0;
+            background: var(--white-bg);
+            text-align: center;
+          }
 
-            Train With Expert Mentors At <br /> Dubai’s <span className="trainersHighlight">Trusted Institute</span>
-          </h3>
+          .${containerClass} .trainersSection .trainersHeader {
+            margin-bottom: 32px;
+          }
 
-          {isTrainersSwiper ? (
-            <div className="trainersSwiperWrap">
-              <Swiper
-                modules={[Navigation, Pagination, Autoplay]}
-                slidesPerView={4}
-                spaceBetween={20}
+          .${containerClass} .trainersSection .trainersIcon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+          }
 
-                loop={true}
-                navigation={{
-                  nextEl: ".swiper-button-next",
-                  prevEl: ".swiper-button-prev",
-                }}
+          .${containerClass} .trainersSection .trainersTitle {
+            font-size: 2rem;
+            font-weight: 700;
+            max-width: 60%;
+            margin: 40px auto;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: var(--blue-color);
+          }
 
-                autoplay={{
-                  delay: 3000,
-                  disableOnInteraction: false, // Prevents autoplay from stopping when the user interacts
-                }}
+          .${containerClass} .trainersSection .trainersHighlight {
+            background: linear-gradient(
+              to left,
+              var(--green-color),
+              var(--lightgreen-color)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
 
-                pagination={{ clickable: true, el: ".trainersPagination" }}
-                breakpoints={{
-                  0: { slidesPerView: 1.4 },
-                  575: { slidesPerView: 2 },
-                  768: { slidesPerView: 3 },
-                  992: { slidesPerView: 4 },
-                }}
-                className="trainersSwiper"
-              >
-                <button className="swiper-button-prev customNavBtn" tabIndex={0} aria-label="Previous trainer">
-                  <img
-                    src="/images/right-arrow-blue.webp"
-                    alt="Prev"
-                    style={{ transform: "rotate(180deg)" }}
-                    width={32}
-                    height={32}
-                  />
-                </button>
+          .${containerClass} .trainersSection .trainersGrid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 32px 24px;
+            justify-items: center;
+            margin-bottom: 36px;
+            width: 70vw;
+            margin: 0 auto;
+            margin-bottom: 50px;
+          }
 
-                {trainers.map((t, i) => (
-                  <SwiperSlide key={i}>
-                    {({ isActive }) => (
-                      <a href="/our-team">
-                        <div
-                          data-color={t.color}
-                          className={` trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
-                          style={{ animationDelay: 0.2 }}
-                        >
-                          <div className="trainerName">{t.name}</div>
-                          <div className="trainerImgWrap">
-                            <img src={t.img} alt={t.name} className="trainerImg" />
-                          </div>
-                          <div className="trainerSubtitle subtitleBox">
-                            {t.subtitle}
-                          </div>
-                          <div className="trainerExp">{t.experience}</div>
-                        </div>
-                      </a>
-                    )}
-                  </SwiperSlide>
-                ))}
+          .${containerClass} .trainersSection .trainerCard {
+            padding: 20px 0 30px 0;
+            border-radius: 40px;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            transition: box-shadow 0.2s;
+            overflow: hidden;
+          }
 
-                <button className="swiper-button-next customNavBtn" tabIndex={0} aria-label="Next trainer">
-                  <img
-                    src="/images/right-arrow-blue.webp"
-                    alt="Next"
-                    width={32}
-                    height={32}
-                  />
-                </button>
-              </Swiper>
+          .${containerClass} .trainersSection .trainerCard:nth-child(7),
+          .${containerClass} .trainersSection .trainerCard:nth-child(9) {
+            translate: 0 20px;
+          }
 
-              {!isMobile && <div className="trainersPagination"></div>}
+          .${containerClass} .trainersSection .trainerCard[data-color="blue"] {
+            background: linear-gradient(var(--border-color) 0%, transparent 50%);
+          }
 
-              {/* <button
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section trainersSeeMore"
-                style={{ animationDelay: `${0.3 + trainers.length * 0.06}s` }}
-              >
-                SEE MORE
-              </button> */}
-              {isMobile && <div className="trainersPagination"></div>}
+          .${containerClass} .trainersSection .trainerCard[data-color="green"] {
+            background: linear-gradient(
+              to top,
+              var(--green-text) 0%,
+              transparent 70%
+            );
+          }
+
+          .${containerClass} .trainersSection .trainerCard[data-color="blue"]:before {
+            content: "";
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(
+              to top,
+              var(--white-bg) 50%,
+              transparent
+            );
+          }
+
+          .${containerClass} .trainersSection .trainerCard[data-color="green"]:before {
+            content: "";
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(to top, #d7f6e6 50%, transparent);
+          }
+
+          .${containerClass} .trainersSection .trainerName {
+            font-size: 1vw;
+            font-weight: 500;
+            color: var(--black-color);
+            margin-bottom: 8px;
+            padding: 0 10px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+          }
+
+          .${containerClass} .trainersSection .trainerImgWrap {
+            width: 100%;
+            height: 100%;
+          }
+
+          .${containerClass} .trainersSection .trainerImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 0.9;
+          }
+
+          .${containerClass} .trainersSection .trainerSubtitle {
+            font-size: 0.7vw;
+            color: var(--black-color);
+            opacity: 0.5;
+            margin-bottom: 10px;
+            position: absolute;
+            z-index: 9;
+            padding: 0 5px;
+          }
+
+          .${containerClass} .trainersSection .trainerCard:nth-child(odd) .trainerSubtitle {
+            bottom: 70px;
+          }
+
+          .${containerClass} .trainersSection .trainerCard:nth-child(even) .trainerSubtitle {
+            bottom: 50px;
+          }
+
+          .${containerClass} .trainersSection .trainerExp {
+            background: linear-gradient(to left, #3f88ba, var(--blue-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            width: 80%;
+            font-size: 1.2vw;
+            padding-top: 5px;
+            position: absolute;
+            bottom: 35px;
+            z-index: 9;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+          }
+
+          .${containerClass} .trainersSection .trainerCard:nth-child(even) .trainerExp {
+            transform: translateY(20px);
+            background: linear-gradient(
+              to left,
+              var(--green-color),
+              var(--lightgreen-color)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+
+          .${containerClass} .trainersSection .trainersSeeMore {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 5px 40px;
+            border-radius: 40px;
+            border: 3px solid transparent;
+            background-color: var(--white-color);
+            background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
+            color: var(--blue-color);
+            font-size: 1vw;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+            z-index: 1;
+          }
+
+          .${containerClass} .trainersSection .trainersSeeMore::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(
+              to right,
+              transparent,
+              #e7f6ff 60%,
+              var(--border-color) 85%,
+              var(--border-color)
+            );
+            z-index: -1;
+            transition: transform 0.6s ease-in-out;
+          }
+
+          .${containerClass} .trainersSection .trainersSeeMore:hover::before {
+            transform: translateX(-50%);
+          }
+
+          .${containerClass} .trainersSection .trainersSeeMore * {
+            position: relative;
+            z-index: 1;
+          }
+
+          .${containerClass} .trainersSection .trainersSeeMore:hover {
+            color: var(--black-color);
+            transform: scale(1.05);
+          }
+
+          .${containerClass} .trainersSection .trainersPagination {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 24px;
+          }
+
+          .${containerClass} .trainersSection .trainersPagination span {
+            width: 10px;
+            height: 5px;
+            border-radius: 4px;
+          }
+
+          .${containerClass} .trainersSection .customNavBtn {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            cursor: pointer;
+            transition: none;
+            padding: 0;
+          }
+
+          .${containerClass} .trainersSection .customNavBtn img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            filter: none;
+          }
+
+          .${containerClass} .trainersSection .customNavBtn:after,
+          .${containerClass} .trainersSection .customNavBtn:after {
+            display: none;
+          }
+
+          .${containerClass} .trainersSection .trainersSwiperWrap {
+            position: relative;
+            padding: 0 50px;
+            margin-bottom: 50px;
+          }
+
+          .${containerClass} .trainersSection .swiper-slide {
+            display: flex;
+            justify-content: center;
+          }
+
+          /* Swiper Custom Navigation Overrides */
+          .${containerClass} .trainersSection .swiper-button-prev,
+          .${containerClass} .trainersSection .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            margin-top: 0;
+          }
+
+          .${containerClass} .trainersSection .swiper-button-prev {
+            left: 0;
+          }
+
+          .${containerClass} .trainersSection .swiper-button-next {
+            right: 0;
+          }
+
+          .${containerClass} .trainersSection .swiper-button-prev:after,
+          .${containerClass} .trainersSection .swiper-button-next:after {
+            content: '';
+            display: none;
+          }
+
+          /* Swiper Custom Pagination Overrides */
+          .${containerClass} .trainersSection .swiper-pagination-bullet {
+            width: 10px;
+            height: 5px;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            opacity: 1;
+            transition: background 0.3s;
+            margin: 0 4px;
+          }
+
+          .${containerClass} .trainersSection .swiper-pagination-bullet-active {
+            background: var(--blue-color);
+          }
+
+
+          @media (max-width: 1199px) {
+            .${containerClass} .trainersSection .trainerImg {
+              height: 300px;
+            }
+
+            .${containerClass} .trainersSection .trainerCard[data-color="green"] {
+              margin-bottom: 20px;
+            }
+
+            .${containerClass} .trainersSection .trainerCard[data-color="green"] .trainerExp {
+              font-size: 20px;
+              background: linear-gradient(
+                to right,
+                var(--lightgreen-color),
+                var(--green-color)
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              bottom: 20px;
+              padding-top: 10px;
+            }
+
+            .${containerClass} .trainersSection .trainerCard:nth-child(odd) .trainerSubtitle {
+              bottom: 60px;
+            }
+
+            .${containerClass} .trainersSection .trainerCard[data-color="green"]:before {
+              background: linear-gradient(to top, #d7f6e6 60%, transparent);
+            }
+          }
+
+          @media (max-width: 1100px) {
+            .${containerClass} .trainersSection .trainersGrid {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 24px 12px;
+            }
+
+            .${containerClass} .trainersSection .trainersSubheading {
+              font-size: 1.4rem;
+            }
+
+            .${containerClass} .trainersSection .trainersTitle {
+              font-size: 2rem;
+            }
+
+            .${containerClass} .trainersSection .trainerName,
+            .${containerClass} .trainersSection .trainerExp,
+            .${containerClass} .trainersSection .trainersSeeMore {
+              font-size: 1rem;
+            }
+
+            .${containerClass} .trainersSection .trainerSubtitle {
+              font-size: 0.9rem;
+            }
+          }
+
+          @media (max-width: 700px) {
+            .${containerClass} .trainersSection .trainersGrid {
+              grid-template-columns: 1fr;
+              gap: 18px;
+            }
+
+            .${containerClass} .trainersSection .trainersSubheading {
+              font-size: 15px;
+            }
+
+            .${containerClass} .trainersSection .trainersTitle {
+              font-size: 20.4px;
+              line-height: 23px;
+              max-width: 100%;
+              margin: 20px 0;
+            }
+
+            .${containerClass} .trainersSection .customNavBtn {
+              width: 32px;
+              height: 32px;
+            }
+
+            /* Swiper modifications for small screens */
+            .${containerClass} .trainersSection .trainersSwiperWrap {
+               padding: 0 40px;
+            }
+
+            .${containerClass} .trainersSection .swiper-button-prev,
+            .${containerClass} .trainersSection .swiper-button-next {
+              width: 32px;
+              height: 32px;
+            }
+          }
+
+          @media (max-width: 575px) {
+          .trainers-global-container .trainersSection{
+            padding: 0;
+            }
+            .${containerClass} .trainersSection .trainerImg {
+              object-fit: contain;
+            }
+              .trainers-global-container .trainersSection .trainersPagination{
+              margin-top: 0;}
+              .trainers-global-container .trainersSection .trainersSwiperWrap{
+              margin-bottom: 0px;}
+          }
+              
+        `}
+      </style>
+
+      {/* Wrapping div with the new global class to scope the CSS */}
+      <div className={containerClass}>
+        <section className="trainersSection" data-scroll-section>
+          <div className="container">
+            <div>
+              <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
             </div>
-          ) : (
-            <>
-              <div className="trainersGrid">
-                {trainers.map((t, i) => (
-                  <div
-                    key={i}
-                    data-color={t.color}
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat="true"
-                    className="fade-in-section trainerCard"
-                    style={{ animationDelay: `${0.3 + i * 0.12}s` }}
-                  >
-                    <div className="trainerName">{t.name}</div>
-                    <div className="trainerImgWrap">
-                      <img src={t.img} alt={t.name} className="trainerImg" />
-                    </div>
-                    <div
-                      className="trainerSubtitle"
-                      style={{
-                        fontSize: "19px",
-                        color: "var(--black-color)",
-                        opacity: 0.5,
-                        marginBottom: "10px",
-                        position: "absolute",
-                        zIndex: 9,
-                        maxWidth: "98%",
-                        fontWeight: 500,
-                      }}
-                    >
-                      {t.subtitle}
-                    </div>
+            <h3 className="trainersTitle">
+              {/* --- NEW: Use the conditionally chosen title here --- */}
+              {currentTitle}
+            </h3>
 
-                    <div className="trainerExp">{t.experience}</div>
-                  </div>
-                ))}
+
+            {isTrainersSwiper ? (
+              <div className="trainersSwiperWrap">
+                <Swiper
+                  modules={[Navigation, Pagination]}
+                  spaceBetween={24}
+                  slidesPerView={1}
+                  breakpoints={{
+                    700: {
+                      slidesPerView: 2,
+                      spaceBetween: 24,
+                    },
+                    991: {
+                      slidesPerView: 3,
+                      spaceBetween: 24,
+                    },
+                  }}
+                  navigation={{
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  }}
+                  pagination={{
+                    clickable: true,
+                    el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
+                  }}
+                  onBeforeInit={(swiper) => {
+                    if (swiper.params.navigation) {
+                      swiper.params.navigation.prevEl = navPrevRef.current;
+                      swiper.params.navigation.nextEl = navNextRef.current;
+                    }
+                  }}
+                >
+                  {trainers.map((t, i) => (
+                    <SwiperSlide key={i}>
+                      <TrainerCard trainer={t} />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                {/* Custom Navigation Buttons */}
+                <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
+                  {/* Placeholder for actual image/icon */}
+                  <img src="/images/left-arrow-blue.png" alt="ibdp tutor in dubai" />
+                </button>
+                <button ref={navNextRef} className="customNavBtn swiper-button-next">
+                  {/* Placeholder for actual image/icon */}
+                  <img src="/images/right-arrow-blue.webp" alt="ibdp tutor in dubai" />
+                </button>
+                {/* Custom Pagination Container */}
+                <div className="trainersPagination"></div>
               </div>
+            ) : (
+              <>
+                {/* Grid view for large screens */}
+                <div className="trainersGrid" ref={trainersGridRef}>
+                  {displayTrainers.map((t, i) => (
+                    <TrainerCard key={i} trainer={t} />
+                  ))}
+                </div>
 
-              <button
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section trainersSeeMore"
-                style={{ animationDelay: `${0.3 + trainers.length * 0.06}s` }}
-              >
-                SEE MORE
-              </button>
-            </>
-          )}
-        </div>
-        <style jsx>{`
-
-        /* Trainer Section  */
-.subtitleBox {
-  font-size: 19px;
-  color: var(--black-color);
-  opacity: 0.5;
-  margin-block: 5px;
-  position: absolute;
-  z-index: 9;
-  max-width:71%;
-  font-weight: 500;
-}
-
-/* Handle responsive max-width */
-@media (max-width: 768px) {
-  .subtitleBox {
-    max-width: 94%;
-  }
-}
-
-  @media (min-width: 1536px) and (max-width: 1919px) {
-  .subtitleBox {
-    max-width: 88%;
-  }
-}
-  @media (min-width: 1200px) and (max-width: 1535px) {
-  .subtitleBox {
-    max-width: 100%;
-    font-size:17.5px;
-  }
-}
-
-.trainersSection {
-  padding:  0;
-  background: var(--white-bg);
-  text-align: center;
-}
-.trainersSection .trainersHeader {
-  margin-bottom: 32px;
-}
-.trainersSection .trainersSubheading {
-  font-size: 1.8vw;
-}
-.trainersSection .trainersIcon {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-}
-.trainersSection .trainersTitle {
-  font-size: 2rem;
-  font-weight: 700;
-  max-width: 60%;
-  margin: 40px auto;
-  line-height: 1.1;
-  text-transform: uppercase;
-  color: var(--blue-color);
-}
-.trainersSection .trainersHighlight {
-  background: linear-gradient(
-    to left,
-    var(--green-color),
-    var(--lightgreen-color)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.trainersSection .trainersGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 32px 24px;
-  justify-items: center;
-  margin-bottom: 36px;
-}
-.trainersSection .trainerCard {
-  padding: 20px 0 30px 0;
-  border-radius: 40px;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  transition: box-shadow 0.2s;
-  overflow: hidden;
-}
-.trainersSection .trainerCard:nth-child(7),
-.trainersSection .trainerCard:nth-child(9) {
-  translate: 0 20px;
-}
-
-.trainersSection .trainerCard[data-color="blue"] {
-  background: linear-gradient(var(--border-color) 0%, transparent 50%);
-}
-.trainersSection .trainerCard[data-color="green"] {
-  background: linear-gradient(to top, var(--green-text) 0%, transparent 70%);
-}
-.trainersSection .trainerCard[data-color="blue"]:before {
-  content: "";
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(to top, var(--white-bg) 50%, transparent);
-}
-.trainersSection .trainerCard[data-color="green"]:before {
-  content: "";
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(to top, #d7f6e6 50%, transparent);
-}
-.trainersSection .trainerName {
-  font-size: 1vw;
-  font-weight: 500;
-  color: var(--black-color);
-  margin-bottom: 8px;
-  padding: 0 10px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-.trainersSection .trainerImgWrap {
-  width: 100%;
-  height: 370px; /* fixed uniform height */
-  border-radius: 20px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.trainersSection .trainerImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* keeps proportions and crops */
-}
-}
-/* Default positioning for all screens */
-.trainersSection .trainerSubtitle {
-    font-size: 19px !important;
-    color: var(--black-color) !important;
-    opacity: 0.5 !important;
-    margin-bottom: 10px !important;
-    position: absolute !important;
-    z-index: 9 !important;
-    max-width: 69% !important;
-    font-weight: 500 !important;
-}
-
-
-.trainersSection .trainerExp {
-  background: linear-gradient(to left, #3f88ba, var(--blue-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-  width: 80%;
-  font-size: 1.2vw;
-  padding-top: 5px;
-  position: absolute;
-  z-index: 9;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-/* PC Layout: Name → Image → Experience → Subtitle */
-@media (min-width: 1200px) {
-  .trainersSection .trainerExp {
-    bottom: 73px;
-  }
-  .trainersSection .trainerSubtitle {
-    bottom: 9px;
-  }
-  .trainersSection .trainerCard:nth-child(even) .trainerExp {
-    bottom: 45px;
-    transform: translateY(0);
-  }
-  .trainersSection .trainerCard:nth-child(even) .trainerSubtitle {
-    bottom: 10px;
-  }
-}
-
-.trainersSection .trainerCard[data-color="green"] .trainerExp {
-  background: linear-gradient(
-    to left,
-    var(--green-color),
-    var(--lightgreen-color)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.trainersSection .trainersSeeMore {
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 5px 40px;
-  border-radius: 40px;
-  border: 3px solid transparent;
-  background-color: var(--white-color);
-  background: linear-gradient(white, white) padding-box,
-    linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
-  color: var(--blue-color);
-  font-size: 1vw;
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
-  z-index: 1;
-}
-
-.trainersSection .trainersSeeMore::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent,
-    #e7f6ff 60%,
-    var(--border-color) 85%,
-    var(--border-color)
-  );
-  z-index: -1;
-  transition: transform 0.6s ease-in-out;
-}
-
-.trainersSection .trainersSeeMore:hover::before {
-  transform: translateX(-50%);
-}
-
-.trainersSection .trainersSeeMore * {
-  position: relative;
-  z-index: 1;
-}
-
-.trainersSection .trainersSeeMore:hover {
-  color: var(--black-color);
-  transform: scale(1.05);
-}
-
-/* Pagination dots styling - Force blue color */
-.trainersSection .trainersPagination {
-  margin: 32px 0 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 24px;
-}
-
-.trainersSection .trainersPagination :global(.swiper-pagination-bullet) {
-  width: 12px !important;
-  height: 6px !important;
-  border-radius: 3px !important;
-  background: #d1d1d1 !important;
-  opacity: 1 !important;
-  margin: 0 4px !important;
-  transition: all 0.3s ease !important;
-}
-
-.trainersSection .trainersPagination :global(.swiper-pagination-bullet-active) {
-  background: #666666 !important;
-  width: 24px !important;
-}
-
-/* Additional fallback for pagination dots */
-.swiper-pagination-bullet {
-  width: 12px !important;
-  height: 6px !important;
-  border-radius: 3px !important;
-  background: #d1d1d1 !important;
-  opacity: 1 !important;
-}
-
-.swiper-pagination-bullet-active {
-  background: #666666 !important;
-  width: 24px !important;
-}
-
-.trainersSection .customNavBtn {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  cursor: pointer;
-  transition: none;
-  padding: 0;
-}
-.trainersSection .customNavBtn img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  filter: none;
-}
-.trainersSection .customNavBtn:after,
-.trainersSection .customNavBtn:after {
-  display: none;
-}
-
-@media (max-width: 1199px) {
-  .trainersSection .trainerImg {
-    height: 300px;
-  }
-  .trainersSection .trainerCard[data-color="green"] {
-    margin-bottom: 20px;
-  }
-  /* Mobile Layout: Name → Image → Subtitle → Experience */
-  .trainersSection .trainerSubtitle {
-    bottom: 60px;
-  }
-  .trainersSection .trainerExp {
-    font-size: 20px;
-    bottom: 20px;
-    padding-top: 10px;
-  }
-  .trainersSection .trainerCard[data-color="green"] .trainerExp {
-    background: linear-gradient(
-      to right,
-      var(--lightgreen-color),
-      var(--green-color)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .trainersSection .trainerCard[data-color="green"]:before{
-    background: linear-gradient(to top, #d7f6e6 60%, transparent);
-  }
-}
-@media (max-width: 1100px) {
-  .trainersSection .trainersGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px 12px;
-  }
-  .trainersSection .trainersSubheading {
-    font-size: 1.4rem;
-  }
-  .trainersSection .trainersTitle {
-    font-size: 2rem;
-  }
-  .trainersSection .trainerName,
-  .trainersSection .trainerExp,
-  .trainersSection .trainersSeeMore {
-    font-size: 1rem;
-  }
-  .trainersSection .trainerSubtitle {
-    font-size: 0.9rem;
-  }
-}
-  
-@media (max-width: 700px) {
-  .trainersSection .trainersGrid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  .trainersSection .trainersSubheading {
-    font-size: 1.2rem;
-  }
-  .trainersSection .trainersTitle {
-    font-size: 1.4rem;
-    max-width: 100%;
-    margin: 20px 0;
-  }
-  .trainersSection .customNavBtn {
-    width: 32px;
-    height: 32px;
-  }
-}
-  @media(max-width:575px){
-          .trainersSection{
-            padding:0 10px;
-          }
-          .trainersSection, .trainersTitle{
-            font-size:20.4px !important;
-          }
-          .trainersSection .trainersPagination{
-            min-height: 0;
-            margin:0;
-          }
-          
-  }
-        `}</style>
-      </section>
+                {/* Combined SEE MORE / SEE LESS button logic */}
+                {trainers.length > 10 && (
+                  <button
+                    onClick={() => setShowAll(!showAll)}
+                    className="trainersSeeMore"
+                  >
+                    {showAll ? "SEE LESS" : "SEE MORE"}
+                  </button>
+                )}
+              </>
+            )}
+          </div>
+        </section>
+      </div>
     </>
   );
 }

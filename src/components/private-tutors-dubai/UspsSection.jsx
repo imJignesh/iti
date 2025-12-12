@@ -16,6 +16,8 @@ function USPItem({ number, icon, title, desc }) {
     window.addEventListener('resize', checkDevice);
 
     return () => window.removeEventListener('resize', checkDevice);
+
+
   }, []);
 
   return (
@@ -94,6 +96,32 @@ function USPItem({ number, icon, title, desc }) {
 }
 
 function UpsSection() {
+
+  const [isMobileHeader, setIsMobileHeader] = useState(false);
+
+  useEffect(() => {
+    const checkHeaderDevice = () => {
+      // Using a standard mobile breakpoint (e.g., 576px) for the header text.
+      setIsMobileHeader(window.innerWidth < 576);
+    };
+
+    checkHeaderDevice();
+    window.addEventListener('resize', checkHeaderDevice);
+
+    return () => window.removeEventListener('resize', checkHeaderDevice);
+  }, []);
+
+  const desktopTitleContent = (
+    <>
+      What Do Students Get From <br /><span className="highlight"> Individual</span> Tutoring Support?
+    </>
+  );
+
+  const mobileTitleContent = (
+    <>
+      What Do Students Get From <span className="highlight"> Individual</span> Tutoring Support?
+    </>
+  );
   const uspItems = [
     {
       number: "01",
@@ -187,7 +215,8 @@ function UpsSection() {
               className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
             >
-              What Do Students Get From <br /><span className="highlight"> Individual</span> Tutoring Support?
+              {isMobileHeader ? mobileTitleContent : desktopTitleContent}
+
 
             </h3>
           </div>
@@ -291,6 +320,9 @@ function UpsSection() {
           }
         }
 @media (max-width: 575px) {
+.testTitle {
+            font-size: 20.4px !important;
+          }
  .custom-grid {
           margin-bottom:2rem;
   gap: .5rem;

@@ -284,6 +284,9 @@ function UpsSection() {
           }
         }
 @media (max-width: 575px) {
+.testTitle {
+            font-size: 20.4px !important;
+          }
 .custom-grid {
           margin-bottom:2rem;
   gap: .5rem;

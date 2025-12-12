@@ -645,6 +645,10 @@ export default function Trainers() {
           }
 
           @media (max-width: 575px) {
+          .${containerClass} .trainersSection .trainersTitle {
+              font-size: 20.4px;
+             
+            }
           .trainers-global-container .trainersSection{
             padding: 0 0px 0px 0;
             }

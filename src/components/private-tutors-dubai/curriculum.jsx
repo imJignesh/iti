@@ -14,7 +14,7 @@ const IBCurriculumStages = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <div style={{ marginBlock: isMobile ? "10px" : "" }}>
+    <div style={{ marginBlock: isMobile ? "0" : "" }}>
       <section className="achievementsSection pb-0" style={{ position: 'relative' }}>
         <div className="container">
           <div className="achievementsHeadings">
@@ -37,7 +37,7 @@ const IBCurriculumStages = () => {
               style={{ animationDelay: "0.25s" }}
             >
               <h3 className="achievementsTitle">
-                Curriculum-Based Learning & <br />
+                Curriculum-Based Learning & {isMobile ? "" : <br />}
                 <span className="highlight">  Exam Prep</span> Solutions{" "}
               </h3>
             </div>
@@ -956,7 +956,7 @@ padding-inline:0 !important;
 }
 @media (max-width: 575px) {
     .achievementsSection {
-      padding: 80px 0;
+      padding: 0 0;
     }
     .achievementsTitle{
         font-size:20.4px;
