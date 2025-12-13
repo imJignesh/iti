@@ -917,8 +917,8 @@ margin-block: 30px !important;
           .position-relative.overflow-hidden {
             position: relative;
             background-image: url("/assets/subject-tutoring.jpg") !important;
-            background-size: cover;
-            background-position: center;
+            background-size: contain !important;
+            background-position: top !important;
             background-repeat: no-repeat;
           }
 
@@ -962,7 +962,7 @@ margin-block: 30px !important;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(0, 0, 0, 0.60);
             z-index: 1;
           }
 

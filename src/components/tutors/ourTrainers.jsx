@@ -24,9 +24,9 @@ const trainers = [
   },
   {
     name: "SARANYA",
-    img: "/images/trainer1.png",
+    img: "/images/team/saranya.webp",
     subtitle: "Physics",
-    experience: "8+ Years",
+    experience: "8+ YEARS",
     color: "blue",
   },
   {

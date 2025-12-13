@@ -2,17 +2,17 @@
 
 import { Montserrat } from 'next/font/google'; // Import the font loader
 import "@/styles/globals.css";
-import "@/styles/home-copy/Blog.css"; // Keep this imported until you move it to a module
-import "@/styles/blog/Blogpg.css"; // Global Blog Page CSS to be converted
-import "@/styles/slug/slug.css"; // Global Blog Detail CSS to be converted
-import "@/styles/ibdp/Ibdp.css"; // Global IBDP CSS to be converted
-import "@/styles/bloginnerpage.css"; // Global Blog Inner Page CSS to be converted
-import "@/styles/freedemo/freedemo.css"; // Global Freedemo CSS to be converted
-import "@/styles/freedemo/Acheivements.css"; // Global Freedemo Achievements CSS to be converted
-import "@/styles/freedemo/Subjects.css"; // Global Freedemo Subjects CSS to be converted
-import "@/styles/team/team.css"; // Global Team Page CSS to be converted
-import "@/styles/contact/contact.css"; // Global Contact Page CSS to be converted
-import "@/styles/DelayedPopup.css"; // Global Popup CSS (Can remain here if global)
+import "@/styles/home-copy/Blog.css";
+import "@/styles/blog/Blogpg.css";
+import "@/styles/slug/slug.css";
+import "@/styles/ibdp/Ibdp.css";
+import "@/styles/bloginnerpage.css";
+import "@/styles/freedemo/freedemo.css";
+import "@/styles/freedemo/Acheivements.css";
+import "@/styles/freedemo/Subjects.css";
+import "@/styles/team/team.css";
+import "@/styles/contact/contact.css";
+import "@/styles/DelayedPopup.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
@@ -21,13 +21,12 @@ import DelayedPopup from "../components/DelayedPopup";
 import { useRouter } from "next/router";
 
 import LocomotiveScrollProvider from '../components/LocomotiveScrollProvider';
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react"; // Ensure useEffect is imported
 import Link from 'next/link';
 
 // --- 1. Define the Montserrat Font Loader ---
 const montserrat = Montserrat({
     // Specify a range or specific weights to manage size. 
-    // We'll use 400-700 as a standard range for headers and body text.
     weight: ['400', '500', '700', '900'],
     subsets: ['latin'],
     display: 'swap',
@@ -61,6 +60,46 @@ export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
     const [headerHeight, setHeaderHeight] = useState(0);
 
+    // --- NEW STATE & LOGIC FOR SCROLL BUTTON ---
+    const [showButton, setShowButton] = useState(false);
+    const mobileBreakpoint = 768; // Matches the CSS media query breakpoint
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // Only execute logic on mobile screens
+            if (window.innerWidth <= mobileBreakpoint) {
+                // Determine if the user has scrolled past a small threshold (e.g., 100px)
+                const shouldShow = window.scrollY > 100;
+                setShowButton(shouldShow);
+            } else {
+                // Always show the button on desktop/tablet (if not hidden by other logic)
+                setShowButton(true);
+            }
+        };
+
+        const handleResize = () => {
+            // Re-evaluate button visibility on resize
+            if (window.innerWidth > mobileBreakpoint) {
+                setShowButton(true);
+            } else {
+                // Re-apply scroll-based visibility check if resized to mobile
+                handleScroll();
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleResize);
+
+        // Initial check
+        handleScroll();
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+    // ------------------------------------------
+
     return (
         // --- 4. Apply the font class to the component container ---
         <PopupProvider>
@@ -72,11 +111,13 @@ export default function MyApp({ Component, pageProps }) {
                     <Footer />
                     <DelayedPopup />
                 </div>
-                <Link href="/join-free-demo-class" passHref legacyBehavior>
-                    <a className="sticky-demo-button" aria-label="Go to Free Demo Class page">
-                        Get a Free Demo
-                    </a>
-                </Link>
+                {showButton && ( // Conditionally render the button based on the state
+                    <Link href="/join-free-demo-class" passHref legacyBehavior>
+                        <a className="sticky-demo-button" aria-label="Go to Free Demo Class page">
+                            Get a Free Demo
+                        </a>
+                    </Link>
+                )}
             </LocomotiveScrollProvider>
         </PopupProvider>
     );

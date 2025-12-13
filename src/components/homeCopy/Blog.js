@@ -80,10 +80,13 @@ const Blog = () => {
 
     useEffect(() => {
         if (blogData.length > 0) {
-            // FIX APPLIED HERE: Use optional chaining on scrollInstance (the instance itself)
-            scrollInstance?.update();
+            // FIX: Check if scrollInstance exists AND if the update method is a function.
+            // This prevents the TypeError.
+            if (scrollInstance && typeof scrollInstance.update === 'function') {
+                scrollInstance.update();
+            }
         }
-    }, [blogData, scrollInstance]); // Added scrollInstance to dependencies
+    }, [blogData, scrollInstance]);
 
     return (
         <section className="blogSection" data-scroll-section>

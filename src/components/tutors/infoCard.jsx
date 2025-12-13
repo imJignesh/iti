@@ -6,6 +6,22 @@ export default function InfoCard() {
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileButton, setIsMobileButton] = useState(false);
 
+  // --- ADDED: Form State Variables ---
+  const [pageInfo, setPageInfo] = useState('');
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    school: "",
+    course: "", // Initialize empty for validation check
+    message: "",
+    formType: "Tutor", // Using 'Tutor' based on submit-form.js config
+  });
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+  // ------------------------------------
+
   useEffect(() => {
     const checkDevice = () => {
       setIsMobile(window.innerWidth <= 1100);
@@ -15,8 +31,118 @@ export default function InfoCard() {
     checkDevice();
     window.addEventListener("resize", checkDevice);
 
+    // --- ADDED: Page Info Capture ---
+    if (typeof window !== 'undefined') {
+      const url = window.location.href;
+      const title = window.document.title || window.location.pathname;
+      setPageInfo(`URL: ${url} | Title/Path: ${title}`);
+    }
+    // ------------------------------------
+
     return () => window.removeEventListener("resize", checkDevice);
   }, []);
+
+  // --- ADDED: Validation Logic ---
+  const validate = () => {
+    const newErrors = {};
+    let isValid = true;
+
+    // 1. Name Validation (Required)
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required.";
+      isValid = false;
+    }
+
+    // 2. Email Validation (Required & Format)
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email address is invalid.";
+      isValid = false;
+    }
+
+    // 3. Phone Validation (Required for this form)
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required.";
+      isValid = false;
+    }
+
+    // 4. School Validation (Required)
+    if (!formData.school.trim()) {
+      newErrors.school = "School name is required.";
+      isValid = false;
+    }
+
+    // 5. Course Validation (Required)
+    if (!formData.course.trim()) {
+      newErrors.course = "Course selection is required.";
+      isValid = false;
+    }
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  // --- ADDED: Handle Change Logic ---
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+
+    // Clear the error for this specific field as the user types
+    if (errors[name]) {
+      setErrors(prevErrors => ({ ...prevErrors, [name]: '' }));
+    }
+  };
+
+  // --- ADDED: Handle Submit Logic ---
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmissionStatus(null);
+
+    // --- STEP 1: RUN VALIDATION ---
+    if (!validate()) {
+      return;
+    }
+
+    // Validation passed, proceed with API call
+    setLoading(true);
+
+    try {
+      // Create the object that includes the required pageinfo
+      const dataToSend = {
+        ...formData,
+        pageinfo: pageInfo, // This is the crucial data
+      };
+
+      const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success && result.redirectUrl) {
+        // Successful submission and redirection path found
+        window.location.href = result.redirectUrl;
+      } else {
+        // Fallback for API success: false or missing redirectUrl
+        console.error('Submission failed via API:', result.message || 'Unknown error');
+        setSubmissionStatus('error');
+      }
+    } catch (error) {
+      console.error('API call failed:', error);
+      setSubmissionStatus('error');
+    } finally {
+      setLoading(false);
+    }
+  };
+  // ------------------------------------
 
   return (
     <div
@@ -282,61 +408,44 @@ export default function InfoCard() {
                   justifyContent: "center",
                 }}
               >
-                <h2
-                  className="fw-bold text-uppercase mb-4 fade-in-section text-center form-heading"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
-                  style={{ animationDelay: "0.65s" }}
-                >
-                  GET A FREE DEMO CLASS +  FREE STUDY RESOURCES
-                </h2>
+                <form onSubmit={handleSubmit}>
+                  <input type="hidden" name="pageinfo" value="" />
 
-                <div
-                  className="mb-3 fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
-                  style={{ animationDelay: "0.7s" }}
-                >
-                  <input
-                    type="text"
-                    className="form-control bg-transparent text-white fw-semibold"
-                    placeholder="NAME"
-                    style={{
-                      border: "1.5px solid #FFFFFF",
-                      borderRadius: "40px",
-                      fontSize: "0.9rem",
-                      padding: "12px 15px",
-                    }}
-                  />
-                </div>
+                  <h2
+                    className="fw-bold text-uppercase mb-4 fade-in-section text-center form-heading"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{ animationDelay: "0.65s" }}
+                  >
+                    GET A FREE DEMO CLASS +  FREE STUDY RESOURCES
+                  </h2>
 
-                <div
-                  className="row g-2 mb-3 fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
-                  style={{ animationDelay: "0.75s" }}
-                >
-                  <div className="col-6">
-                    <input
-                      type="email"
-                      className="form-control bg-transparent text-white fw-semibold"
-                      placeholder="EMAIL"
-                      style={{
-                        border: "1.5px solid #FFFFFF",
-                        borderRadius: "40px",
-                        fontSize: "0.9rem",
-                        padding: "12px 15px",
-                      }}
-                    />
-                  </div>
-                  <div className="col-6">
+                  {submissionStatus === 'success' && (
+                    <div className="alert alert-success text-center fw-bold">
+                      Thank you! Your submission was successful.
+                    </div>
+                  )}
+                  {submissionStatus === 'error' && (
+                    <div className="alert alert-danger text-center fw-bold">
+                      Submission failed. Please try again.
+                    </div>
+                  )}
+
+                  <div
+                    className="mb-3 fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{ animationDelay: "0.7s" }}
+                  >
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       className="form-control bg-transparent text-white fw-semibold"
-                      placeholder="PH.NO"
+                      placeholder="NAME"
                       style={{
                         border: "1.5px solid #FFFFFF",
                         borderRadius: "40px",
@@ -344,70 +453,157 @@ export default function InfoCard() {
                         padding: "12px 15px",
                       }}
                     />
+                    {errors.name && <div className="invalid-feedback d-block fw-bold text-warning">{errors.name}</div>}
                   </div>
-                </div>
 
-                <div
-                  className="mb-3 fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
-                  style={{ animationDelay: "0.8s" }}
-                >
-                  <input
-                    type="text"
-                    className="form-control bg-transparent text-white fw-semibold"
-                    placeholder="SCHOOL"
+                  <div
+                    className="row g-2 mb-3 fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{ animationDelay: "0.75s" }}
+                  >
+                    <div className="col-6">
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="form-control bg-transparent text-white fw-semibold"
+                        placeholder="EMAIL"
+                        style={{
+                          border: "1.5px solid #FFFFFF",
+                          borderRadius: "40px",
+                          fontSize: "0.9rem",
+                          padding: "12px 15px",
+                        }}
+                      />
+                      {errors.email && <div className="invalid-feedback d-block fw-bold text-warning">{errors.email}</div>}
+                    </div>
+                    <div className="col-6">
+                      <input
+                        type="text"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="form-control bg-transparent text-white fw-semibold"
+                        placeholder="PH.NO"
+                        style={{
+                          border: "1.5px solid #FFFFFF",
+                          borderRadius: "40px",
+                          fontSize: "0.9rem",
+                          padding: "12px 15px",
+                        }}
+                      />
+                      {errors.phone && <div className="invalid-feedback d-block fw-bold text-warning">{errors.phone}</div>}
+                    </div>
+                  </div>
+
+                  <div
+                    className="mb-3 fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{ animationDelay: "0.8s" }}
+                  >
+                    <input
+                      type="text"
+                      name="school"
+                      value={formData.school}
+                      onChange={handleChange}
+                      className="form-control bg-transparent text-white fw-semibold"
+                      placeholder="SCHOOL"
+                      style={{
+                        border: "1.5px solid #FFFFFF",
+                        borderRadius: "40px",
+                        fontSize: "0.9rem",
+                        padding: "12px 15px",
+                      }}
+                    />
+                    {errors.school && <div className="invalid-feedback d-block fw-bold text-warning">{errors.school}</div>}
+                  </div>
+                  <div
+                    className="mb-3 fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{ animationDelay: "0.8s" }}
+                  >
+                    <select
+                      name="course"
+                      value={formData.course}
+                      onChange={handleChange}
+                      className="form-control bg-transparent text-white fw-semibold"
+                      style={{
+                        border: "1.5px solid #FFFFFF",
+                        borderRadius: "40px",
+                        fontSize: "0.9rem",
+                        padding: "12px 15px",
+                      }}
+                    >
+                      <option value="" disabled hidden>SELECT COURSE</option>
+                      <option value="IB Diploma">IB Diploma</option>
+                      <option value="IB MYP">IB MYP</option>
+                      <option value="IGCSE">IGCSE</option>
+                      <option value="A-Levels">A-Levels</option>
+                      <option value="Homeschooling">Homeschooling</option>
+                      <option value="EmSAT">EmSAT</option>
+                      <option value="ACT">ACT</option>
+                      <option value="Advanced Placements">Advanced Placements</option>
+                      <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
+                      <option value="STEM (Others)">STEM (Others)</option>
+                      <option value="Ucat">Ucat</option>
+                    </select>
+
+                    {errors.course && <div className="invalid-feedback d-block fw-bold text-warning">{errors.course}</div>}
+                  </div>
+                  <div
+                    className="mb-4 fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{ animationDelay: "0.85s" }}
+                  >
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="form-control bg-transparent text-white fw-semibold"
+                      placeholder="DROP A MESSAGE (Optional)"
+                      rows="5"
+                      style={{
+                        border: "1.5px solid #FFFFFF",
+                        borderRadius: "25px",
+                        fontSize: "0.9rem",
+                        padding: "16px 15px",
+                        resize: "none",
+                      }}
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
                     style={{
-                      border: "1.5px solid #FFFFFF",
+                      background: "transparent",
+                      color: "white",
+                      fontSize: "1rem",
+                      padding: "11px 28px",
+                      border: "1.5px solid rgba(255, 255, 255, 0.7)",
                       borderRadius: "40px",
-                      fontSize: "0.9rem",
-                      padding: "12px 15px",
+                      transition: "all 0.3s ease",
                     }}
-                  />
-                </div>
-
-                <div
-                  className="mb-4 fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
-                  style={{ animationDelay: "0.85s" }}
-                >
-                  <textarea
-                    className="form-control bg-transparent text-white fw-semibold"
-                    placeholder="DROP A MESSAGE"
-                    rows="5"
-                    style={{
-                      border: "1.5px solid #FFFFFF",
-                      borderRadius: "25px",
-                      fontSize: "0.9rem",
-                      padding: "16px 15px",
-                      resize: "none",
-                    }}
-                  ></textarea>
-                </div>
-
-                <button
-                  className="btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
-                  style={{
-                    background: "transparent",
-                    color: "white",
-                    fontSize: "1rem",
-                    padding: "11px 28px",
-                    border: "1.5px solid rgba(255, 255, 255, 0.7)",
-                    borderRadius: "40px",
-                    transition: "all 0.3s ease",
-                  }}
-                >
-                  SUBMIT
-                  <img
-                    src={isMobile ? "/assets/mobilebutton.webp" : "/assets/rwb.png"}
-                    alt="right"
-                    width={isMobile ? 35 : 40}
-                    height={isMobile ? 35 : 40}
-                  />
-                </button>
+                  >
+                    {loading ? 'SUBMITTING...' : 'SUBMIT'}
+                    <img
+                      src={isMobile ? "/assets/mobilebutton.webp" : "/assets/rwb.png"}
+                      alt="right"
+                      width={isMobile ? 35 : 40}
+                      height={isMobile ? 35 : 40}
+                    />
+                  </button>
+                </form>
               </div>
             </div>
           </div>
@@ -924,8 +1120,8 @@ margin-block: 30px !important;
           .position-relative.overflow-hidden {
             position: relative;
             background-image: url("/assets/motutors.png") !important;
-            background-size: cover;
-            background-position: center;
+            background-size: contain !important;
+            background-position: top !important;
             background-repeat: no-repeat;
           }
 
@@ -969,7 +1165,7 @@ margin-block: 30px !important;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(0, 0, 0, 0.60);
             z-index: 1;
           }
 

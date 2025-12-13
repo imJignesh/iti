@@ -142,6 +142,19 @@
 
  /* Responsive */
  @media (max-width: 600px) {
+     .careers-banner {
+
+         background-image: url("/images/contact/banner.jpg");
+
+     }
+
+     .subHeading {
+         margin: 0;
+         font-size: 15px;
+         font-weight: 700;
+         opacity: 0.8;
+     }
+
      .highlight-banners {
          margin: 0 auto;
          padding: 0 20px;

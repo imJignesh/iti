@@ -467,7 +467,14 @@ button.dislike {
     }
 
     .form-group option {
-        font-size: 14px;
+        font-size: 24px;
+    }
+
+    .form-group input,
+    .form-group select {
+
+        font-size: 15px;
+
     }
 
     .submit-btn.blog-submit-btn {

@@ -535,16 +535,11 @@ export default function InfoCard() {
                     >
 
                       {/* Your list of options */}
-                      <option value="IB Diploma">IB Diploma</option>
-                      <option value="IB MYP">IB MYP</option>
-                      <option value="IGCSE">IGCSE</option>
+                      <option value="International Baccalaureate (IB)">International Baccalaureate (IB)</option>
+                      <option value="IGCSE/GCSE">IGCSE/GCSE</option>
                       <option value="A-Levels">A-Levels</option>
-                      <option value="Homeschooling">Homeschooling</option>
-                      <option value="EmSAT">EmSAT</option>
-                      <option value="ACT">ACT</option>
-                      <option value="Advanced Placements">Advanced Placements</option>
-                      <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
-                      <option value="STEM (Others)">STEM (Others)</option>
+                      <option value="Advanced Placements (AP)">Advanced Placements (AP)</option>
+
                     </select>
 
                     {/* Assuming error checking for this new field would be errors.course */}
@@ -1114,8 +1109,8 @@ margin-block: 30px !important;
           .position-relative.overflow-hidden {
             position: relative;
             background-image: url("/assets/subject-tutoring.jpg") !important;
-            background-size: cover;
-            background-position: center;
+            background-size: contain !important;
+            background-position: top !important;
             background-repeat: no-repeat;
           }
 
@@ -1159,7 +1154,7 @@ margin-block: 30px !important;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(0, 0, 0, 0.60);
             z-index: 1;
           }
 

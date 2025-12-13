@@ -15,7 +15,7 @@ export default function InfoCard() {
     phone: "",
     school: "",
     message: "",
-    formType: "Tests",
+    formType: "Organic_Curriculum",
   });
 
   // New state for validation errors
@@ -342,8 +342,9 @@ export default function InfoCard() {
                       fontSize: "1rem",
                       padding: "10px 14px 10px 20px",
                       boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
-                      minWidth: isMobile ? "260px" : "290px", // ensures spacing looks consistent
-                      marginTop: isMobile ? "auto" : "40px",
+                      minWidth: isMobile ? "auto" : "290px", // ensures spacing looks consistent
+                      marginTop: isMobile ? "auto" : "20px",
+                      gap: isMobile ? "20px" : "auto",
                     }}
                   >
                     <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>
@@ -1082,8 +1083,8 @@ margin-block: 30px !important;
           .position-relative.overflow-hidden {
             position: relative;
             background-image: url("/assets/mobileact.png") !important;
-            background-size: cover;
-            background-position: center;
+            background-size: contain !important;
+            background-position: top !important;
             background-repeat: no-repeat;
           }
 
@@ -1127,7 +1128,7 @@ margin-block: 30px !important;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(0, 0, 0, 0.60);
             z-index: 1;
           }
 

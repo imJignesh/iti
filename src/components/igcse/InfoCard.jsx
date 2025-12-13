@@ -13,7 +13,7 @@ export default function InfoCard() {
     email: "",
     phone: "",
     school: "",
-    course: "", // <--- ADDED: Initialize the new field
+
     message: "",
     formType: "Organic_Curriculum",
   });
@@ -80,10 +80,10 @@ export default function InfoCard() {
     }
 
     // --- 4. Course Validation (Required) ---
-    if (!formData.course.trim()) { // <--- ADDED: Course validation
-      newErrors.course = "Course selection is required.";
-      isValid = false;
-    }
+    // if (!formData.course.trim()) { // <--- ADDED: Course validation
+    //   newErrors.course = "Course selection is required.";
+    //   isValid = false;
+    // }
     setErrors(newErrors);
     return isValid;
   };
@@ -348,8 +348,9 @@ export default function InfoCard() {
                       fontSize: "1rem",
                       padding: "10px 14px 10px 20px",
                       boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
-                      minWidth: isMobile ? "260px" : "290px", // ensures spacing looks consistent
-                      marginTop: isMobile ? "auto" : "40px",
+                      minWidth: isMobile ? "auto" : "290px", // ensures spacing looks consistent
+                      marginTop: isMobile ? "auto" : "20px",
+                      gap: isMobile ? "20px" : "auto",
                     }}
                   >
                     <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>
@@ -523,43 +524,6 @@ export default function InfoCard() {
                     {errors.school && <div className="invalid-feedback d-block fw-bold text-warning">{errors.school}</div>}
                   </div>
 
-                  <div
-                    className="mb-3 fade-in-section"
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat
-                    style={{ animationDelay: "0.8s" }}
-                  >
-                    {/* Assuming this maps to 'course' in your formData state */}
-                    <select
-                      name="course"
-                      value={formData.course}
-                      onChange={handleChange}
-                      className="form-control bg-transparent text-white fw-semibold"
-                      style={{
-                        border: "1.5px solid #FFFFFF",
-                        borderRadius: "40px",
-                        fontSize: "0.9rem",
-                        padding: "12px 15px",
-                      }}
-                    >
-
-                      {/* Your list of options */}
-                      <option value="IB Diploma">IB Diploma</option>
-                      <option value="IB MYP">IB MYP</option>
-                      <option value="IGCSE">IGCSE</option>
-                      <option value="A-Levels">A-Levels</option>
-                      <option value="Homeschooling">Homeschooling</option>
-                      <option value="EmSAT">EmSAT</option>
-                      <option value="ACT">ACT</option>
-                      <option value="Advanced Placements">Advanced Placements</option>
-                      <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
-                      <option value="STEM (Others)">STEM (Others)</option>
-                    </select>
-
-                    {/* Assuming error checking for this new field would be errors.course */}
-                    {errors.course && <div className="invalid-feedback d-block fw-bold text-warning">{errors.course}</div>}
-                  </div>
 
                   <div
                     className="mb-4 fade-in-section"
@@ -1124,8 +1088,8 @@ margin-block: 30px !important;
           .position-relative.overflow-hidden {
             position: relative;
             background-image: url("/assets/moibrect.png") !important;
-            background-size: cover;
-            background-position: center;
+            background-size: contain !important;
+            background-position: top !important;
             background-repeat: no-repeat;
           }
 
@@ -1169,7 +1133,7 @@ margin-block: 30px !important;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(0, 0, 0, 0.60);
             z-index: 1;
           }
 

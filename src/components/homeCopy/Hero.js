@@ -60,7 +60,7 @@ const Hero = () => {
 
     return (
         // Apply data-scroll-section conditionally
-        <section className={`${styles.hero} revealClipRightToLeft `} {...scrollSectionAttr}>
+        <section className={`${styles.hero} revealClipRightToLeft ${styles.homeherosection} `} {...scrollSectionAttr}>
             <div className="container">
                 {/* Apply data-scroll attributes conditionally */}
                 <div

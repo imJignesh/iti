@@ -70,7 +70,7 @@ export default function CareersBanner() {
 
           .heading {
             margin: 0px 0px 0px 70px;
-font-size: 3.33vw; 
+            font-size: 3.33vw; 
             font-weight: 700;
             line-height:70px;
           }
@@ -99,6 +99,15 @@ font-size: 1.35vw;
               font-weight: 800 !important;
             opacity: 0.8 !important;            }
           }
+            @media (max-width: 575px) {
+              .heading {
+                font-size:2rem;
+                margin:0;
+              }
+                p {
+                  font-size:15px;
+                }
+            }
       `}</style>
     </section>
   );

@@ -651,15 +651,14 @@ export default function PostDetail() {
                             {/* --- END UPDATED: Like/Dislike Block --- */}
                             <div className="author-bio-section">
                                 <div className="author-bio-image">
-                                    <img src="/images/author.jpg" alt="Author image" />
+                                    <img src="/images/Sumit.webp" alt="Author image" />
                                 </div>
 
                                 <div className="author-bio-content">
                                     <h3 className="author-bio-heading">WRITTEN BY SUMIT ADVANI</h3>
 
                                     <p className="author-bio-text">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />
-                                        Lorem Ipsum has been the industry's. Lorem Ipsum has been the industry's
+                                        Sumit Advani, Co-Founder of Ignite Training Institute, brings over 10 years of education expertise in the UAE. With a B.Sc. in IT and a Diploma in Advertising & PR, he designs personalised academic programs that empower students to achieve their goals.
                                     </p>
 
                                     <a href="/join-free-demo-class" className="">

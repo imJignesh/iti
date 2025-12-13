@@ -59,10 +59,10 @@ export default async function handler(req, res) {
                 "/ib-curriculum-tutors-in-dubai",
                 "/courses/ibdp-tutors-in-dubai",
                 "/courses/myp-tutors-in-dubai",
-                "/british-curriculum-tutors-in-dubai",
-                "/courses/a-level-tutors-in-dubai",
                 "/courses/igcse-tutors-in-dubai",
-                "/courses/homeschooling-tutors-in-dubai",
+                "/courses/a-level-tutors-in-dubai",
+                "/british-curriculum-tutors-in-dubai",
+                // "/courses/homeschooling-tutors-in-dubai",
                 "/act-tutors-in-dubai",
                 "/advanced-placements-tutors-in-dubai"
             ],
@@ -72,17 +72,19 @@ export default async function handler(req, res) {
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
                 school: 'SingleLine1',
-                course: 'Dropdown',
+                // course: 'Dropdown',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
             },
             redirectUrl: '/thank-you-curriculum', // <-- Unique thank-you page for curriculum pages
         },
         {
-            type: 'Tests', // Optional type for completeness
+            type: 'Tutor', // Optional type for completeness
             slugs: [
-                "/act-tutors-in-dubai",
-                "/advanced-placements-tutors-in-dubai"
+                "/tutors-in-jlt-dubai",
+                "/tutors-in-dubai",
+                "/private-tutors-in-dubai"
+
             ],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Tests/formperma/8zcXiMlEz_lXvS_IJxAtMq7Rta3AT8-bwNe_rllPvJg/htmlRecords/submit',
             fieldMap: {
@@ -90,11 +92,11 @@ export default async function handler(req, res) {
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
                 school: 'SingleLine1',
-                course: 'Dropdown',
+                course: 'SingleLine3',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
             },
-            redirectUrl: '/thank-you-curriculum', // <-- Unique thank-you page for curriculum pages
+            redirectUrl: '/thank-you-tutor', // <-- Unique thank-you page for curriculum pages
         },
         {
             type: 'Freedemo', // Optional type for completeness
@@ -108,7 +110,7 @@ export default async function handler(req, res) {
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
                 school: 'SingleLine1',
-                course: 'Dropdown',
+                course: 'SingleLine3',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
             },
@@ -125,7 +127,7 @@ export default async function handler(req, res) {
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
                 school: 'SingleLine1',
-                course: 'Dropdown',
+                course: 'SingleLine3',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
             },
@@ -153,7 +155,7 @@ export default async function handler(req, res) {
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
                 school: 'SingleLine1',
-                course: 'Dropdown',
+                course: 'SingleLine3',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
             },

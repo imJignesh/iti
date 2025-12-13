@@ -34,17 +34,17 @@ export default function IgniteAboutCard() {
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
-                className="fade-in-section"
+                className={`fade-in-section ${isMobile ? 'text-center' : ''}`}
                 style={{ animationDelay: "0.1s" }}
               >
-                <h2 className="SubHeading testSubheading">OUR APPROACH
+                <h2 className={`SubHeading testSubheading ${isMobile ? 'text-center' : ''}`}>OUR APPROACH
                 </h2>
               </div>
               <h3
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
-                className="fade-in-section testTitle"
+                className={`fade-in-section testTitle ${isMobile ? 'text-center' : ''}`}
                 style={{ animationDelay: "0.2s", fontSize: "2rem" }}
               >
                 Not Just Better Grades, A Journey Of
@@ -591,6 +591,10 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
           }
         }
           @media (max-width: 575px) {
+        .testHeadings {
+          width: 100%;
+        }
+
           .custom-grid {
   gap: .5rem;
 }

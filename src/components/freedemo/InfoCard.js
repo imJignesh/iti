@@ -546,6 +546,7 @@ export default function InfoCard() {
                     >
 
                       {/* Your list of options */}
+                      <option value="" disabled hidden>SELECT COURSE</option>
                       <option value="IB Diploma">IB Diploma</option>
                       <option value="IB MYP">IB MYP</option>
                       <option value="IGCSE">IGCSE</option>
@@ -556,6 +557,7 @@ export default function InfoCard() {
                       <option value="Advanced Placements">Advanced Placements</option>
                       <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
                       <option value="STEM (Others)">STEM (Others)</option>
+                      <option value="Ucat">Ucat</option>
                     </select>
 
                     {/* Assuming error checking for this new field would be errors.course */}
@@ -1130,8 +1132,8 @@ margin-block: 30px !important;
           .position-relative.overflow-hidden {
             position: relative;
             background-image: url("/assets/mobileact.png") !important;
-            background-size: cover;
-            background-position: center;
+            background-size: contain !important;
+            background-position: top !important;
             background-repeat: no-repeat;
           }
 
@@ -1175,7 +1177,7 @@ margin-block: 30px !important;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.45);
+            background: rgba(0, 0, 0, 0.60);
             z-index: 1;
           }
 

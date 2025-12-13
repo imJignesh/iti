@@ -21,6 +21,24 @@
   background-position: 6.5vw 1vw;
 }
 
+.homeherosection>div {
+  position: relative;
+
+}
+
+.homeherosection>div::after {
+  content: "";
+  z-index: 1;
+  background: url(/images/hero-bg-1.png) no-repeat;
+  width: 13%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  aspect-ratio: 81 / 32;
+  background-size: cover;
+}
+
+
 body.is-bot-detected [data-scroll-container],
 body.is-bot-detected .hero,
 body.is-bot-detected .hero *,
@@ -179,7 +197,7 @@ body.is-bot-detected [data-scroll-section] {
 .buttonGroup {
   position: absolute;
   top: 0vw;
-  bottom: 0vw;
+  bottom: 1vw;
   right: 2vw;
   z-index: 9;
   display: flex;
@@ -198,22 +216,22 @@ body.is-bot-detected [data-scroll-section] {
 /* Use :global() for global classes used inside a module class */
 .buttonGroup :global(.buttonBlue),
 .buttonGroup :global(.buttonSkyBlue) {
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 1;
+  border: 0;
+  border-radius: 2vw;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1vw;
+  padding: 1vw 1.5vw;
+  font-size: 1.1vw;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .3s;
+  display: flex;
   position: relative;
   overflow: hidden;
-  padding: 1vw 1vw;
-  border-radius: 40px;
-  text-transform: uppercase;
-  border: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1vw;
-  cursor: pointer;
-  transition: 0.3s ease;
-  z-index: 1;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
 
 }
 
@@ -459,6 +477,7 @@ body.is-bot-detected [data-scroll-section] {
 }
 
 @media (max-width: 575px) {
+
   .hero {
     padding: 10px 0 0 0;
     background: url(/images/banner-bg-mobile.webp) no-repeat;
