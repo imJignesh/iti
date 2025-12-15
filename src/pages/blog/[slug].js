@@ -156,6 +156,23 @@ const TOCPostContent = ({ content, toc }) => {
             <a href="/join-free-demo-class/"><img src="/images/blog-gif-1.gif" alt="Illustrative GIF 1" class="img-fluid w-100 rounded" /></a>
         </div>
     `;
+    const video1Html = `
+        <div class="blog-video-wrapper my-5">
+            <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
+                <video
+                    class="img-fluid w-100 rounded"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+          
+                    style="object-fit: cover;"
+                >
+                    <source src="/videos/blog-gif1.mp4" type="video/mp4" />
+                </video>
+            </a>
+        </div>
+    `;
 
     // Define unique class for targeting the 2nd GIF WRAPPER
     const gif2PlaceholderClass = 'gif-popup-trigger-2';
@@ -168,21 +185,52 @@ const TOCPostContent = ({ content, toc }) => {
             />
         </div>
     `;
+    const video2Html = `
+        <div class="blog-video-wrapper my-5">
+            <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
+                <video
+                    class="img-fluid w-100 rounded"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+          
+                    style="object-fit: cover;"
+                >
+                    <source src="/videos/blog-gif-2.mp4" type="video/mp4" />
+                </video>
+            </a>
+        </div>
+    `;
 
     // Insert GIF 2 before the 4th H2 (index 3)
+    // const fourthH2 = allH2s[3];
+    // if (fourthH2) {
+    //     const gif2TempDiv = document.createElement('div');
+    //     gif2TempDiv.innerHTML = gif2Html.trim();
+    //     fourthH2.parentNode.insertBefore(gif2TempDiv.firstChild, fourthH2);
+    // }
     const fourthH2 = allH2s[3];
     if (fourthH2) {
         const gif2TempDiv = document.createElement('div');
-        gif2TempDiv.innerHTML = gif2Html.trim();
+        gif2TempDiv.innerHTML = video2Html.trim();
         fourthH2.parentNode.insertBefore(gif2TempDiv.firstChild, fourthH2);
     }
 
+
     // Insert GIF 1 before the 3rd H2 (index 2)
+    // const thirdH2 = allH2s[2];
+    // if (thirdH2) {
+    //     const gif1TempDiv = document.createElement('div');
+    //     gif1TempDiv.innerHTML = gif1Html.trim();
+    //     thirdH2.parentNode.insertBefore(gif1TempDiv.firstChild, thirdH2);
+    // }
     const thirdH2 = allH2s[2];
     if (thirdH2) {
-        const gif1TempDiv = document.createElement('div');
-        gif1TempDiv.innerHTML = gif1Html.trim();
-        thirdH2.parentNode.insertBefore(gif1TempDiv.firstChild, thirdH2);
+        const video1TempDiv = document.createElement('div');
+        // --- USE THE NEW video1Html HERE ---
+        video1TempDiv.innerHTML = video1Html.trim();
+        thirdH2.parentNode.insertBefore(video1TempDiv.firstChild, thirdH2);
     }
 
     let newContent = tempDiv.innerHTML;
