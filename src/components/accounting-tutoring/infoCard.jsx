@@ -12,6 +12,7 @@ export default function InfoCard() {
     name: "",
     email: "",
     phone: "",
+    grade: "",
     school: "",
     course: "",
     message: "",
@@ -72,6 +73,11 @@ export default function InfoCard() {
     else if (!formData.phone.trim()) {
       // Assume phone is required for this form
       newErrors.phone = "Phone number is required.";
+      isValid = false;
+    }
+    // Grade Validation (Required)
+    if (!formData.grade.trim()) {
+      newErrors.grade = "Grade is required.";
       isValid = false;
     }
     if (!formData.school.trim()) {
@@ -488,30 +494,49 @@ export default function InfoCard() {
                       {errors.phone && <div className="invalid-feedback d-block fw-bold text-warning">{errors.phone}</div>}
                     </div>
                   </div>
-
                   <div
-                    className="mb-3 fade-in-section"
+                    className="row g-2 mb-3 fade-in-section"
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat
-                    style={{ animationDelay: "0.8s" }}
+                    style={{ animationDelay: "0.75s" }}
                   >
-                    <input
-                      type="text"
-                      name="school"
-                      value={formData.school}
-                      onChange={handleChange}
-                      className="form-control bg-transparent text-white fw-semibold"
-                      placeholder="SCHOOL"
-                      style={{
-                        border: "1.5px solid #FFFFFF",
-                        borderRadius: "40px",
-                        fontSize: "0.9rem",
-                        padding: "12px 15px",
-                      }}
-                    />
-                    {errors.school && <div className="invalid-feedback d-block fw-bold text-warning">{errors.school}</div>}
+                    <div className="col-4">
+                      <input
+                        type="text"
+                        name="grade"
+                        value={formData.grade}
+                        onChange={handleChange}
+                        className="form-control bg-transparent text-white fw-semibold"
+                        placeholder="GRADE"
+                        style={{
+                          border: "1.5px solid #FFFFFF",
+                          borderRadius: "40px",
+                          fontSize: "0.9rem",
+                          padding: "12px 15px",
+                        }}
+                      />
+                      {errors.grade && <div className="invalid-feedback d-block fw-bold text-warning">{errors.grade}</div>}
+                    </div>
+                    <div className="col-8">
+                      <input
+                        type="text"
+                        name="school"
+                        value={formData.school}
+                        onChange={handleChange}
+                        className="form-control bg-transparent text-white fw-semibold"
+                        placeholder="SCHOOL"
+                        style={{
+                          border: "1.5px solid #FFFFFF",
+                          borderRadius: "40px",
+                          fontSize: "0.9rem",
+                          padding: "12px 15px",
+                        }}
+                      />
+                      {errors.school && <div className="invalid-feedback d-block fw-bold text-warning">{errors.school}</div>}
+                    </div>
                   </div>
+
 
                   <div
                     className="mb-3 fade-in-section"

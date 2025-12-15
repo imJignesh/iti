@@ -9,7 +9,7 @@ export default function SidebarForm({ pageInfo, formType }) {
         name: "",
         email: "",
         phone: "",
-        course: "IB Diploma", // Default value from original select
+        course: "", // Default value from original select
         formType: "BLOG_SIDEBAR",
     });
     const [errors, setErrors] = useState({});
@@ -52,7 +52,7 @@ export default function SidebarForm({ pageInfo, formType }) {
             email: formData.email,
             phone: formData.phone,
             // Course selection is mapped to the 'school' field and also included in 'message'
-            school: `Course: ${formData.course}`,
+            school: formData.course,
             message: `Inquiry from blog sidebar. Course Selected: ${formData.course}.`,
             pageinfo: pageInfo,
             formType: formType,
@@ -168,10 +168,16 @@ export default function SidebarForm({ pageInfo, formType }) {
                         value={formData.course}
                         onChange={handleChange}
                     >
-                        <option>IB Diploma</option>
-                        <option>IGCSE</option>
-                        <option>ACT</option>
-                        <option>SAT</option>
+                        <option value="IB Diploma">IB Diploma</option>
+                        <option value="IB MYP">IB MYP</option>
+                        <option value="IGCSE/GCSE">IGCSE/GCSE</option>
+                        <option value="A Levels">A Levels</option>
+                        <option value="Homeschooling">Homeschooling</option>
+                        <option value="ACT">ACT</option>
+                        <option value="UCAT">UCAT</option>
+                        <option value="Advanced Placements">Advanced Placements</option>
+                        <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
+                        <option value="STEM (Others)">STEM (Others)</option>
                     </select>
                 </div>
 

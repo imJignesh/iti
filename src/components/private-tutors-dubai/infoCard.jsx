@@ -12,7 +12,7 @@ export default function InfoCard() {
     name: "",
     email: "",
     phone: "",
-    school: "",
+    grade: "",
     course: "", // Initialize empty for validation check
     message: "",
     formType: "Tutor", // Using 'Tutor' based on submit-form.js config
@@ -68,9 +68,9 @@ export default function InfoCard() {
       isValid = false;
     }
 
-    // 4. School Validation (Required)
-    if (!formData.school.trim()) {
-      newErrors.school = "School name is required.";
+    // 4. Grade Validation (Required)
+    if (!formData.grade.trim()) {
+      newErrors.grade = "Grade name is required.";
       isValid = false;
     }
 
@@ -512,11 +512,11 @@ export default function InfoCard() {
                   >
                     <input
                       type="text"
-                      name="school"
-                      value={formData.school}
+                      name="grade"
+                      value={formData.grade}
                       onChange={handleChange}
                       className="form-control bg-transparent text-white fw-semibold"
-                      placeholder="SCHOOL"
+                      placeholder="GRADE"
                       style={{
                         border: "1.5px solid #FFFFFF",
                         borderRadius: "40px",
@@ -524,7 +524,7 @@ export default function InfoCard() {
                         padding: "12px 15px",
                       }}
                     />
-                    {errors.school && <div className="invalid-feedback d-block fw-bold text-warning">{errors.school}</div>}
+                    {errors.grade && <div className="invalid-feedback d-block fw-bold text-warning">{errors.grade}</div>}
                   </div>
                   <div
                     className="mb-3 fade-in-section"
@@ -545,18 +545,17 @@ export default function InfoCard() {
                         padding: "12px 15px",
                       }}
                     >
-                      <option value="" disabled hidden>SELECT COURSE</option>
                       <option value="IB Diploma">IB Diploma</option>
                       <option value="IB MYP">IB MYP</option>
-                      <option value="IGCSE">IGCSE</option>
+                      <option value="IGCSE/GCSE">IGCSE/GCSE</option>
                       <option value="A-Levels">A-Levels</option>
                       <option value="Homeschooling">Homeschooling</option>
-                      <option value="EmSAT">EmSAT</option>
+                      {/* <option value="EmSAT">EmSAT</option> */}
                       <option value="ACT">ACT</option>
+                      <option value="UCAT">UCAT</option>
                       <option value="Advanced Placements">Advanced Placements</option>
                       <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
                       <option value="STEM (Others)">STEM (Others)</option>
-                      <option value="Ucat">Ucat</option>
                     </select>
 
                     {errors.course && <div className="invalid-feedback d-block fw-bold text-warning">{errors.course}</div>}

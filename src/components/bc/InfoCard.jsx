@@ -12,7 +12,7 @@ export default function InfoCard() {
     email: "",
     phone: "",
     school: "",
-    course: "", // <--- ADDED: Initialize the new field
+    grade: "",
     message: "",
     formType: "Organic_Curriculum",
   });
@@ -74,11 +74,13 @@ export default function InfoCard() {
       isValid = false;
     }
 
-    // --- 4. Course Validation (Required) ---
-    if (!formData.course.trim()) { // <--- ADDED: Course validation
-      newErrors.course = "Course selection is required.";
+    if (!formData.grade.trim()) {
+      newErrors.grade = "Grade is required.";
       isValid = false;
     }
+
+    // --- 4. Course Validation (Required) ---
+
     setErrors(newErrors);
     return isValid;
   };
@@ -518,6 +520,32 @@ export default function InfoCard() {
                     </div>
                   </div>
 
+                  {/* --- NEW GRADE FIELD HERE --- */}
+                  <div
+                    className="mb-3 fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{ animationDelay: "0.77s" }}
+                  >
+                    <input
+                      type="text"
+                      name="grade"
+                      value={formData.grade}
+                      onChange={handleChange}
+                      className="form-control bg-transparent text-white fw-semibold"
+                      placeholder="GRADE"
+                      style={{
+                        border: "1.5px solid #FFFFFF",
+                        borderRadius: "40px",
+                        fontSize: "0.9rem",
+                        padding: "12px 15px",
+                      }}
+                    />
+                    {errors.grade && <div className="invalid-feedback d-block fw-bold text-warning">{errors.grade}</div>}
+                  </div>
+                  {/* --- NEW GRADE FIELD HERE --- */}
+
                   <div
                     className="mb-3 fade-in-section"
                     data-scroll
@@ -542,43 +570,7 @@ export default function InfoCard() {
                     {errors.school && <div className="invalid-feedback d-block fw-bold text-warning">{errors.school}</div>}
                   </div>
 
-                  <div
-                    className="mb-3 fade-in-section"
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat
-                    style={{ animationDelay: "0.8s" }}
-                  >
-                    {/* Assuming this maps to 'course' in your formData state */}
-                    <select
-                      name="course"
-                      value={formData.course}
-                      onChange={handleChange}
-                      className="form-control bg-transparent text-white fw-semibold"
-                      style={{
-                        border: "1.5px solid #FFFFFF",
-                        borderRadius: "40px",
-                        fontSize: "0.9rem",
-                        padding: "12px 15px",
-                      }}
-                    >
 
-                      {/* Your list of options */}
-                      <option value="IB Diploma">IB Diploma</option>
-                      <option value="IB MYP">IB MYP</option>
-                      <option value="IGCSE">IGCSE</option>
-                      <option value="A-Levels">A-Levels</option>
-                      <option value="Homeschooling">Homeschooling</option>
-                      <option value="EmSAT">EmSAT</option>
-                      <option value="ACT">ACT</option>
-                      <option value="Advanced Placements">Advanced Placements</option>
-                      <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
-                      <option value="STEM (Others)">STEM (Others)</option>
-                    </select>
-
-                    {/* Assuming error checking for this new field would be errors.course */}
-                    {errors.course && <div className="invalid-feedback d-block fw-bold text-warning">{errors.course}</div>}
-                  </div>
 
                   <div
                     className="mb-4 fade-in-section"

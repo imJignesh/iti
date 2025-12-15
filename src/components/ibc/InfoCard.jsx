@@ -12,8 +12,8 @@ export default function InfoCard() {
     name: "",
     email: "",
     phone: "",
+    grade: "",
     school: "",
-
     message: "",
     formType: "Organic_Curriculum",
   });
@@ -63,23 +63,25 @@ export default function InfoCard() {
     }
 
 
-    // --- 3. Phone Validation (Optional, but if filled, must be 6-15 digits) ---
-    // Note: We use a simple regex since Zoho handles the country code component.
-    // if (formData.phone && !/^\d{6,15}$/.test(formData.phone)) {
-    //   newErrors.phone = "Phone must be 6-15 digits.";
-    //   isValid = false;
-    // }
+    // --- 3. Phone Validation (Required) ---
     else if (!formData.phone.trim()) {
-      // Assume phone is required for this form
       newErrors.phone = "Phone number is required.";
       isValid = false;
     }
+
+    // --- 4. Grade Validation (New - Required) ---
+    if (!formData.grade.trim()) {
+      newErrors.grade = "Grade is required.";
+      isValid = false;
+    }
+
+    // --- 5. School Validation (Required) ---
     if (!formData.school.trim()) {
       newErrors.school = "School name is required.";
       isValid = false;
     }
 
-    // --- 4. Course Validation (Required) ---
+    // --- 6. Course Validation (Optional/Removed) ---
     // if (!formData.course.trim()) { // <--- ADDED: Course validation
     //   newErrors.course = "Course selection is required.";
     //   isValid = false;
@@ -125,7 +127,7 @@ export default function InfoCard() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(dataToSend), // ✅ CORRECT: Sending the object that includes pageinfo
+        body: JSON.stringify(dataToSend),
       });
       const result = await response.json();
       if (response.ok && result.success && result.redirectUrl) {
@@ -522,6 +524,32 @@ export default function InfoCard() {
                       {errors.phone && <div className="invalid-feedback d-block fw-bold text-warning">{errors.phone}</div>}
                     </div>
                   </div>
+
+                  {/* --- NEW GRADE FIELD HERE --- */}
+                  <div
+                    className="mb-3 fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{ animationDelay: "0.77s" }}
+                  >
+                    <input
+                      type="text"
+                      name="grade"
+                      value={formData.grade}
+                      onChange={handleChange}
+                      className="form-control bg-transparent text-white fw-semibold"
+                      placeholder="GRADE"
+                      style={{
+                        border: "1.5px solid #FFFFFF",
+                        borderRadius: "40px",
+                        fontSize: "0.9rem",
+                        padding: "12px 15px",
+                      }}
+                    />
+                    {errors.grade && <div className="invalid-feedback d-block fw-bold text-warning">{errors.grade}</div>}
+                  </div>
+                  {/* ----------------------------- */}
 
                   <div
                     className="mb-3 fade-in-section"

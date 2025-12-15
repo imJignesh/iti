@@ -79,10 +79,16 @@ const getSidebarHtmlStaticMobile = () => {
                     <div class="form-group">
                         <label htmlFor="course">Tests/Courses</label>
                         <select id="course">
-                            <option>IB Diploma</option>
-                            <option>IGCSE</option>
-                            <option>ACT</option>
-                            <option>SAT</option>
+                            <option value="IB Diploma">IB Diploma</option>
+                            <option value="IB MYP">IB MYP</option>
+                            <option value="IGCSE/GCSE">IGCSE/GCSE</option>
+                            <option value="A Levels">A Levels</option>
+                            <option value="Homeschooling">Homeschooling</option>
+                            <option value="ACT">ACT</option>
+                            <option value="UCAT">UCAT</option>
+                            <option value="Advanced Placements">Advanced Placements</option>
+                            <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
+                            <option value="STEM (Others)">STEM (Others)</option>
                         </select>
                     </div>
                     <button type="submit" class="submit-btn blog-submit-btn">

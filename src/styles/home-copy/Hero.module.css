@@ -635,12 +635,27 @@ body.is-bot-detected [data-scroll-section] {
   .courseSection .mainCard .mainCardTitle {
     max-width: 100%;
   }
+
+  .heroLeft {
+    margin-top: -1vw;
+  }
+
+  .buttonGroup :global(.buttonBlue),
+  .buttonGroup :global(.buttonSkyBlue) {
+    border-radius: 5vw;
+
+  }
+
 }
 
 @media (max-width: 360px) {
 
   .hero {
     background: url(/images/banner-bg-mobile.webp) right -2vh top 9% / 50vh 16vh no-repeat;
+  }
+
+  .heroLeft {
+    margin-top: -3vw;
   }
 
   .heroVideo {

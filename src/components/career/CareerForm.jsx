@@ -1,4 +1,4 @@
-// components/CareerForm.jsx
+// components/CareerForm.jsx - DIRECT ZOHO SUBMISSION
 
 "use client";
 import React, { useState, useRef, useEffect } from "react";
@@ -7,11 +7,10 @@ export default function CareerForm() {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("");
   const fileInputRef = useRef(null);
+  const formRef = useRef(null);
 
-  // --- STATE MANAGEMENT ---
-  const [pageInfo, setPageInfo] = useState('');
   const [loading, setLoading] = useState(false);
-  const [submissionStatus, setSubmissionStatus] = useState(null); // 'success' or 'error'
+  const [submissionStatus, setSubmissionStatus] = useState(null);
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     name: "",
@@ -20,57 +19,40 @@ export default function CareerForm() {
     location: "",
     department: "",
     position: "",
-    // 'subjects' field removed to match the provided Zoho form structure
-    job_type: "Full Time", // Default selection
+    subjects: "",
+    job_type: "Full Time",
     notice_period: "",
     experience: "",
-    formType: "CAREER_FORM", // Explicit type for API route matching
   });
 
-  // --- 1. EFFECTS AND INITIAL SETUP ---
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Get the shortest possible identifier: the pathname
-      const url = new URL(window.location.href);
-
-      // FIX: Only set pageInfo to the URL pathname, e.g., /career
-      setPageInfo(url.pathname);
-    }
-  }, []);
-
-  // --- 2. VALIDATION LOGIC ---
+  // --- VALIDATION LOGIC ---
   const validate = () => {
     const newErrors = {};
     let isValid = true;
 
-    // Required Text Fields
     if (!formData.name.trim()) { newErrors.name = "Name is required."; isValid = false; }
     if (!formData.email.trim() || !/\S+@\S+\.\S+/.test(formData.email)) { newErrors.email = "Valid email is required."; isValid = false; }
     if (!formData.phone.trim()) { newErrors.phone = "Contact number is required."; isValid = false; }
     if (!formData.department.trim()) { newErrors.department = "Department is required."; isValid = false; }
     if (!formData.position.trim()) { newErrors.position = "Position is required."; isValid = false; }
-    // subjects field validation removed
     if (!formData.experience.trim()) { newErrors.experience = "Experience is required."; isValid = false; }
-
-    // File Field
     if (!file) { newErrors.file = "CV is required."; isValid = false; }
 
     setErrors(newErrors);
     return isValid;
   };
 
-  // --- 3. HANDLE CHANGE FOR TEXT INPUTS/SELECTS ---
+  // --- HANDLE CHANGE ---
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
-  // --- 4. FILE AND DRAG HANDLERS ---
+  // --- FILE HANDLERS ---
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
-      // Check file size (1MB max)
       if (selectedFile.size > 1024 * 1024) {
         alert("File size exceeds 1MB limit");
         setFile(null);
@@ -78,7 +60,6 @@ export default function CareerForm() {
         return;
       }
 
-      // Check file type
       const validTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
       if (!validTypes.includes(selectedFile.type)) {
         alert("Only PDF and DOC files are supported");
@@ -89,7 +70,7 @@ export default function CareerForm() {
 
       setFile(selectedFile);
       setFileName(selectedFile.name);
-      setErrors(prev => ({ ...prev, file: '' })); // Clear file error
+      setErrors(prev => ({ ...prev, file: '' }));
     } else {
       setFile(null);
       setFileName("");
@@ -100,7 +81,6 @@ export default function CareerForm() {
     e.preventDefault();
     e.stopPropagation();
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      // Use the file change handler to process files from drag and drop
       handleFileChange({ target: { files: e.dataTransfer.files } });
     }
   };
@@ -114,65 +94,70 @@ export default function CareerForm() {
     fileInputRef.current.click();
   };
 
-  // --- 5. JOB TYPE BUTTON HANDLER ---
+  // --- JOB TYPE HANDLER ---
   const handleJobTypeChange = (type) => {
     setFormData(prev => ({ ...prev, job_type: type }));
   };
 
-  // --- 6. SUBMISSION LOGIC ---
+  // --- SUBMISSION LOGIC (DIRECT TO ZOHO) ---
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmissionStatus(null);
+
     if (!validate()) return;
+
     setLoading(true);
 
-    // CRITICAL: Use FormData for file upload and text fields
-    const dataToSend = new FormData();
-    dataToSend.append('name', formData.name);
-    dataToSend.append('email', formData.email);
-
-
-    const fullPhoneNumber = `+971${formData.phone}`;
-    dataToSend.append('phone', fullPhoneNumber);
-    // 👆 FIX ENDS HERE
-
-    // dataToSend.append('pageinfo', pageInfo);
-    dataToSend.append('formType', formData.formType);
-
-    // Append career-specific text fields:
-    dataToSend.append('location', formData.location);
-    dataToSend.append('department', formData.department);
-    dataToSend.append('position', formData.position);
-    // dataToSend.append('subjects', formData.subjects); // Removed
-    dataToSend.append('job_type', formData.job_type);
-    dataToSend.append('notice_period', formData.notice_period);
-    dataToSend.append('experience', formData.experience);
-
-    // The file field (key must be 'cv_file' to match the backend)
-    if (file) {
-      dataToSend.append('cv_file', file);
-    }
-
     try {
-      // CRITICAL CHANGE: Submit to the new, dedicated file upload API route
-      const response = await fetch('/api/career-upload', {
-        method: 'POST',
-        body: dataToSend, // Browser sets multipart/form-data header
-      });
+      // Build FormData for DIRECT submission to Zoho
+      const zohoFormData = new FormData();
 
-      const result = await response.json();
+      // Hidden fields required by Zoho
+      zohoFormData.append('zf_referrer_name', '');
+      zohoFormData.append('zf_redirect_url', window.location.origin + '/thank-you-career');
+      zohoFormData.append('zc_gad', '');
 
-      if (response.ok && result.success && result.redirectUrl) {
-        setSubmissionStatus('success');
-        // Execute Redirection
-        window.location.href = result.redirectUrl;
-      } else {
-        setSubmissionStatus('error');
-        console.error('Submission failed via API:', result.message || 'Unknown error');
+      // Map to Zoho field names
+      zohoFormData.append('SingleLine', formData.name);
+      zohoFormData.append('Email', formData.email);
+      zohoFormData.append('PhoneNumber_countrycode', `+971${formData.phone}`);
+      zohoFormData.append('SingleLine1', formData.location);
+      zohoFormData.append('SingleLine2', formData.position);
+      zohoFormData.append('SingleLine3', formData.department);
+      zohoFormData.append('Radio', formData.job_type);
+      zohoFormData.append('SingleLine4', formData.notice_period);
+      zohoFormData.append('SingleLine5', formData.experience);
+      zohoFormData.append('SingleLine6', formData.subjects);
+
+      // Append file (Zoho field name is 'FileUpload')
+      if (file) {
+        zohoFormData.append('FileUpload', file);
       }
+
+      console.log('📤 Submitting directly to Zoho...');
+
+      // Submit directly to Zoho
+      const response = await fetch(
+        'https://forms.zohopublic.com/sumitignitetrain1/form/Career/formperma/5MGjIF4X7ef6W9KUqep6lOshMxA11LSyAx7Ub7300E4/htmlRecords/submit',
+        {
+          method: 'POST',
+          body: zohoFormData,
+          mode: 'no-cors', // Required for cross-origin Zoho submission
+        }
+      );
+
+      // With no-cors mode, we can't read the response, but if no error was thrown, assume success
+      console.log('✅ Submitted to Zoho');
+      setSubmissionStatus('success');
+
+      // Redirect after a short delay
+      setTimeout(() => {
+        window.location.href = '/thank-you-career';
+      }, 1000);
+
     } catch (error) {
+      console.error('❌ Submission Error:', error);
       setSubmissionStatus('error');
-      console.error('Network/Fetch Error:', error);
     } finally {
       setLoading(false);
     }
@@ -184,7 +169,6 @@ export default function CareerForm() {
       data-scroll-class="is-inview"
       data-scroll-repeat
     >
-      {/* Title */}
       <h2 className="title fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
@@ -195,13 +179,21 @@ export default function CareerForm() {
         THE RIGHT <span>OPPORTUNITIES</span>
       </h2>
 
-      {/* Submission Status Feedback */}
-      {submissionStatus === 'success' && (<div className="alert alert-success" style={{ marginBottom: '20px' }}>Application submitted successfully! Redirecting...</div>)}
-      {submissionStatus === 'error' && (<div className="alert alert-danger" style={{ marginBottom: '20px' }}>Submission failed. Please check your inputs.</div>)}
+      {submissionStatus === 'success' && (
+        <div className="alert alert-success" style={{ marginBottom: '20px' }}>
+          Application submitted successfully! Redirecting...
+        </div>
+      )}
+      {submissionStatus === 'error' && (
+        <div className="alert alert-danger" style={{ marginBottom: '20px' }}>
+          Submission failed. Please try again.
+        </div>
+      )}
 
-
-      {/* Form */}
-      <form onSubmit={handleSubmit} className="career-form fade-in-section"
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="career-form fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
@@ -250,7 +242,6 @@ export default function CareerForm() {
         </div>
         {errors.phone && <div className="invalid-feedback d-block">{errors.phone}</div>}
 
-
         <div className="two-col">
           <div className="fade-in-section"
             data-scroll
@@ -268,15 +259,21 @@ export default function CareerForm() {
             style={{ animationDelay: "0.3s" }}
           >
             <label htmlFor="department">DEPARTMENT*</label>
-            <input
-              type="text"
-              id="department"
+
+            <select
               name="department"
               value={formData.department}
               onChange={handleChange}
               className={errors.department ? 'is-invalid' : ''}
               required
-            />
+            >
+              <option value="Teaching">Teaching</option>
+              <option value="Admin">Admin</option>
+              <option value="Sales">Sales</option>
+              <option value="HR">HR</option>
+              <option value="Finance">Finance</option>
+              <option value="Marketing">Marketing</option>
+            </select>
             {errors.department && <div className="invalid-feedback d-block">{errors.department}</div>}
           </div>
         </div>
@@ -300,26 +297,23 @@ export default function CareerForm() {
             />
             {errors.position && <div className="invalid-feedback d-block">{errors.position}</div>}
           </div>
-          {/* REMOVED SUBJECTS INPUT TO MATCH ZOHO FORM */}
           <div className="fade-in-section"
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
             style={{ animationDelay: "0.4s" }}
           >
-            <label htmlFor="subjects" className="subject">SUBJECTS* (Removed field to match Zoho form. If you need to include this, please update your Zoho form first.)</label>
+            <label htmlFor="subjects" className="subject">SUBJECTS</label>
             <input
               type="text"
               id="subjects"
               name="subjects"
-              value="" // Value cleared, but leaving the JSX shell for structure preservation
-              disabled
-              style={{ borderBottom: '1px dashed #ccc' }}
+              value={formData.subjects}
+              onChange={handleChange}
             />
           </div>
         </div>
 
-        {/* Job type buttons */}
         <div className="job-type fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
@@ -372,7 +366,6 @@ export default function CareerForm() {
           </div>
         </div>
 
-        {/* File upload */}
         <div className={`file-section fade-in-section ${errors.file ? 'is-invalid-container' : ''}`}
           data-scroll
           data-scroll-class="is-inview"
@@ -398,6 +391,7 @@ export default function CareerForm() {
           <input
             type="file"
             ref={fileInputRef}
+            name="cv_file"
             onChange={handleFileChange}
             accept=".pdf,.doc,.docx"
             style={{ display: "none" }}
@@ -406,9 +400,7 @@ export default function CareerForm() {
           {errors.file && <div className="invalid-feedback d-block" style={{ marginTop: '5px' }}>{errors.file}</div>}
         </div>
 
-
-        <div className="text-center"
-        >
+        <div className="text-center">
           <button
             type="submit"
             disabled={loading}
@@ -443,7 +435,6 @@ export default function CareerForm() {
       </form>
 
       <style jsx>{`
-        /* Add CSS for validation */
         .is-invalid {
             border-bottom: 2px solid #ff4d4d !important;
         }
@@ -455,20 +446,35 @@ export default function CareerForm() {
             color: #ff4d4d;
             font-size: 0.75rem;
             margin-top: 5px;
-            display: none; /* Hide by default */
+            display: none;
         }
         .invalid-feedback.d-block {
-            display: block; /* Show when validation fails */
+            display: block;
         }
         
-        /* Add CSS for active job type button */
         .job-type .outlined.active {
             background: linear-gradient(90deg, #3F88BA, #161664);
             color: white;
             border-color: transparent;
         }
 
-        /* Existing CSS below */
+        .alert {
+          padding: 15px;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        .alert-success {
+          background: #d4edda;
+          color: #155724;
+          border: 1px solid #c3e6cb;
+        }
+        .alert-danger {
+          background: #f8d7da;
+          color: #721c24;
+          border: 1px solid #f5c6cb;
+        }
+
         @font-face {
           font-family: 'Monstra';
           src: url('/fonts/Monstra.ttf') format('truetype');
@@ -532,14 +538,8 @@ export default function CareerForm() {
           color: #233467;
           font-family: 'Montserrat', sans-serif;
           appearance: none;
-          -webkit-appearance: none;
-          -moz-appearance: none;
         }
         input::placeholder {
-          color: #4b4b77;
-          font-size: 14px;
-        }
-        select {
           color: #4b4b77;
           font-size: 14px;
         }
@@ -554,7 +554,7 @@ export default function CareerForm() {
         .phone-input img:first-child {
           width: 45px;
           height: 35px;
-          border-radius: 8px; /* adjust value as needed */
+          border-radius: 8px;
         }
 
         .phone-input select {
@@ -566,9 +566,6 @@ export default function CareerForm() {
           width: auto;
           min-width: 80px;
           padding: 4px 8px;
-          appearance: none;
-          -webkit-appearance: none;
-          -moz-appearance: none;
           font-weight: 700;
         }
 
@@ -582,7 +579,7 @@ export default function CareerForm() {
 
         .subject{
           position: relative;
-          background-image: url('/assets/dropdown-arrow.png');
+          
           background-repeat: no-repeat;
           background-position: right 10px center;
           background-size: 10px 10px;
@@ -678,51 +675,6 @@ export default function CareerForm() {
           transform: translateY(-2px);
         }
 
-        .file-info {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-        }
-
-        .remove-file {
-          background: none;
-          border: none;
-          color: #ff4d4d;
-          font-size: 20px;
-          cursor: pointer;
-          padding: 0 5px;
-          margin-left: 10px;
-        }
-
-        .submit-wrapper {
-          display: flex;
-          justify-content: center;
-          margin-top: 35px;
-        }
-
-        .submit-btn {
-          background: linear-gradient(90deg, #3F88BA, #161664);
-          color: white;
-          padding: 15px 35px;
-          border-radius: 30px;
-          border: none;
-          font-weight: 700;
-          font-size: 16px;
-          cursor: pointer;
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-          transition: all 0.3s ease;
-          font-family: 'Montserrat', sans-serif;
-          letter-spacing: 0.5px;
-        }
-        .submit-btn:hover {
-          opacity: 0.9;
-          transform: translateY(-2px);
-        }
-
         .fade-in-section {
           opacity: 0;
           transform: translateY(20px);
@@ -751,9 +703,7 @@ export default function CareerForm() {
           
           .job-type {
             flex-direction: row;
-            align-items: center;
             gap: 10px;
-            justify-content: flex-start;
           }
           
           .outlined {
@@ -771,27 +721,11 @@ export default function CareerForm() {
             padding: 10px 0;
           }
 
-          input::placeholder {
-            font-size: 12px;
-          }
-
-          select {
-            font-size: 12px;
-          }
-
           .phone-input select {
             font-size: 12px;
           }
 
-          .phone-input input {
-            font-size: 14px;
-          }
-
-          .file-note {
-            font-size: 12px;
-          }
-
-        .file-upload {
+          .file-upload {
             font-size: 14px;
             padding: 15px 25px;
           }
@@ -800,58 +734,30 @@ export default function CareerForm() {
             width: 18px;
             height: 18px;
             font-size: 10px;
-            top: -6px;
-            right: -6px;
           }
         }
-          @media (max-width: 575px) {
+        
+        @media (max-width: 575px) {
           .career-form{
             width: 100%;
             margin-top: 0;
           }
-        .career-section {
-          max-width: 90vw;
-          margin: auto;
-          text-align: center;
-          padding: 0;
-          font-family: 'Montserrat', sans-serif;
-        }
-          .custom-grid {
-            gap: .5rem;
+          .career-section {
+            padding: 0;
           }
           .cust-text {
-            background: linear-gradient(90deg, #161664, #3F88BA) !important;
-            color: white !important;
             padding: 8px 8px 8px 13px !important;
-            border: none !important;
-            -webkit-transition: opacity .3s ease !important;
-            -moz-transition: opacity.3s ease!important;
-            -o-transition: opacity.3s ease!important;
-            transition: opacity .3s ease !important;
             letter-spacing: 1px !important;
             font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
             margin-top: 45px !important;
-            font-weight:600 !important;
           }
           .phone-input select {
-                  border: none;
-                  background: #D9D9D980;
-                  border-radius: 4px !important;
-                  font-size: 14px;
-                  color: #233467;
-                  width: auto;
-                  min-width: 70px;
-                  padding: 4px 8px;
-                  appearance: none;
-                  -webkit-appearance: none;
-                  -moz-appearance: none;
-                  font-weight: 700;
-                }
+            font-size: 14px;
+            min-width: 70px;
+          }
           .custom-height {
             width: 30px !important;
             height: 30px !important;
-            background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
-            animation-delay: 0.75s !important;
             margin-left: 3rem !important;
           }
         }

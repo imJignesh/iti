@@ -623,4 +623,9 @@
   .sideCard .mainCardDetails {
     gap: 10px !important;
   }
+
+  .mainCardTitle {
+    max-width: 24ch;
+    min-width: 24ch;
+  }
 }

@@ -541,7 +541,7 @@ export default function InfoCard() {
 
                       {/* Your list of options */}
 
-                      <option value="IGCSE">IGCSE</option>
+                      <option value="IGCSE/GCSE">IGCSE/GCSE</option>
                       <option value="A-Levels">A-Levels</option>
                       <option value="Advanced Placements">Advanced Placements</option>
                     </select>

@@ -1,14 +1,15 @@
-// pages/api/career-upload.js
+// pages/api/career-upload.js - FIXED WITH ZOHO HIDDEN FIELDS
+
 import { createReadStream, promises as fs } from 'fs';
 import { resolve } from 'path';
 import { IncomingForm } from 'formidable';
 import FormData from 'form-data';
-import axios from 'axios'; // <-- NEW IMPORT
+import axios from 'axios';
 
-// --- CRITICAL CONFIG: Disable Next.js Body Parser to handle file upload ---
+// --- CRITICAL CONFIG: Disable Next.js Body Parser ---
 export const config = {
     api: {
-        bodyParser: false, // CRITICAL: This allows us to process the file stream manually
+        bodyParser: false,
     },
 };
 
@@ -16,18 +17,23 @@ export const config = {
 const CAREER_FORM_CONFIG = {
     zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Career/formperma/5MGjIF4X7ef6W9KUqep6lOshMxA11LSyAx7Ub7300E4/htmlRecords/submit',
     fieldMap: {
-        // Map fields from request body to Zoho field names
-        name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode',
-        location: 'SingleLine1', position: 'SingleLine2', department: 'SingleLine3',
-        job_type: 'Radio', notice_period: 'SingleLine4', experience: 'SingleLine5',
-        pageinfo: 'SingleLine6',
+        name: 'SingleLine',
+        email: 'Email',
+        phone: 'PhoneNumber_countrycode',
+        location: 'SingleLine1',
+        position: 'SingleLine2',
+        department: 'SingleLine3',
+        subjects: 'SingleLine6',
+        job_type: 'Radio',
+        notice_period: 'SingleLine4',
+        experience: 'SingleLine5',
+        cv_file: 'FileUpload',
     },
     redirectUrl: '/thank-you-career',
 };
 
-// --- HELPER: Parse Multipart Form Data (File + Text) ---
+// --- HELPER: Parse Multipart Form Data ---
 const parseMultipartForm = (req) => {
-    // Note: The 'tmp' directory must exist in your project root or resolve correctly.
     const form = new IncomingForm({
         uploadDir: resolve('./tmp'),
         keepExtensions: true,
@@ -39,12 +45,10 @@ const parseMultipartForm = (req) => {
         form.parse(req, (err, fields, files) => {
             if (err) return reject(err);
 
-            // Formidable returns fields as arrays, map them to single values
             const data = {};
             for (const key in fields) {
                 data[key] = fields[key][0];
             }
-            // File field (key used in CareerForm.jsx is 'cv_file')
             const cvFile = files.cv_file ? files.cv_file[0] : null;
 
             resolve({ data, cvFile });
@@ -52,8 +56,9 @@ const parseMultipartForm = (req) => {
     });
 };
 
-
 export default async function handler(req, res) {
+    console.log('--- DEBUG: API Called ---');
+
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method Not Allowed' });
     }
@@ -62,65 +67,107 @@ export default async function handler(req, res) {
     let tempFilePath = null;
 
     try {
-        // 1. Parse the incoming multipart request (file + text fields)
+        // 1. Parse the incoming multipart request
         const { data, cvFile: parsedCvFile } = await parseMultipartForm(req);
         cvFile = parsedCvFile;
         tempFilePath = cvFile ? cvFile.filepath : null;
 
-        if (data.pageinfo) {
-            console.warn('Forcing pageinfo (SingleLine6) to empty string to prevent Zoho URL length error.');
-            data.pageinfo = '';
-        }
+        console.log('--- DEBUG: Incoming Data ---');
+        console.log(data);
+        console.log('--- CV File Info ---');
+        console.log(cvFile ? {
+            originalFilename: cvFile.originalFilename,
+            mimetype: cvFile.mimetype,
+            size: cvFile.size,
+            filepath: cvFile.filepath
+        } : 'No file uploaded');
+        console.log('-------------------------------------------');
+
+        // 2. Scrub client-side only fields
+        delete data.formType;
+        delete data.pageinfo;
 
         if (!cvFile || !tempFilePath) {
-            return res.status(400).json({ success: false, message: "CV file is missing or corrupted on the server." });
+            return res.status(400).json({
+                success: false,
+                message: "CV file is required."
+            });
         }
 
         const { zohoUrl, fieldMap, redirectUrl } = CAREER_FORM_CONFIG;
 
-        // 2. Build the new Zoho Multipart Payload (FormData)
+        // 3. Build Zoho FormData with REQUIRED hidden fields
         const zohoFormData = new FormData();
+
+        // ⭐ CRITICAL: Add Zoho's required hidden fields FIRST
+        zohoFormData.append('zf_referrer_name', '');
+        zohoFormData.append('zf_redirect_url', redirectUrl);
+        zohoFormData.append('zc_gad', '');
 
         // Map text fields
         for (const [key, zohoField] of Object.entries(fieldMap)) {
-            if (data[key] !== undefined) {
-                // Append the form field
+            if (key !== 'cv_file' && data[key] !== undefined) {
                 zohoFormData.append(zohoField, data[key] || '');
             }
         }
 
-        // Map the File: Zoho's file upload field name is 'FileUpload'
-        zohoFormData.append('FileUpload', createReadStream(cvFile.filepath), cvFile.originalFilename);
+        // ⭐ Append the CV file
+        if (cvFile && tempFilePath) {
+            const fileStream = createReadStream(tempFilePath);
+            zohoFormData.append(
+                fieldMap.cv_file, // 'FileUpload'
+                fileStream,
+                {
+                    filename: cvFile.originalFilename || 'resume.pdf',
+                    contentType: cvFile.mimetype || 'application/pdf',
+                }
+            );
+            console.log('✅ File appended to form data:', cvFile.originalFilename);
+        }
 
-        // 3. Submit to Zoho using AXIOS
-        const zohoResponse = await axios.post(zohoUrl, zohoFormData, { // <-- USING AXIOS
-            headers: zohoFormData.getHeaders(), // CRITICAL for form-data package
-            maxRedirects: 0, // Prevent axios from following Zoho's 302 redirect
-            validateStatus: status => status === 200 || status === 302, // Only treat 200/302 as successful
+        // 4. Submit to Zoho with proper headers
+        console.log('--- Submitting to Zoho ---');
+        const zohoResponse = await axios.post(zohoUrl, zohoFormData, {
+            headers: {
+                ...zohoFormData.getHeaders(),
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            },
+            maxRedirects: 0,
+            validateStatus: status => status === 200 || status === 302,
+            maxContentLength: Infinity,
+            maxBodyLength: Infinity,
         });
 
+        console.log('✅ Zoho Response Status:', zohoResponse.status);
 
         if (zohoResponse.status === 200 || zohoResponse.status === 302) {
-            return res.status(200).json({ success: true, message: 'Career form submitted successfully.', redirectUrl });
+            return res.status(200).json({
+                success: true,
+                message: 'Career form submitted successfully.',
+                redirectUrl
+            });
         } else {
-            // This block is unlikely to be reached due to validateStatus, but kept for robustness
             const zohoErrorText = zohoResponse.data || 'No response data';
             throw new Error(`Zoho submission failed with status ${zohoResponse.status}. Response: ${zohoErrorText}`);
         }
 
     } catch (error) {
-        // Log the error detail
-        console.error('API Route Error:', error.message);
-        // If it's an Axios error, the full response might be in error.response
+        console.error('❌ API Route Error:', error.message);
         if (error.response) {
+            console.error('Zoho response status:', error.response.status);
             console.error('Zoho response data:', error.response.data);
         }
-        return res.status(500).json({ success: false, message: `An internal error occurred: ${error.message}` });
+        return res.status(500).json({
+            success: false,
+            message: `An internal error occurred: ${error.message}`
+        });
     } finally {
-        // 4. CLEAN UP: Delete the temporary file
+        // 5. Clean up temp file
         if (tempFilePath) {
             try {
                 await fs.unlink(tempFilePath);
+                console.log('🗑️ Temp file cleaned up');
             } catch (cleanupError) {
                 console.error('Error cleaning up temp file:', cleanupError);
             }

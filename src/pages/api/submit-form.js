@@ -7,7 +7,7 @@ export default async function handler(req, res) {
 
     // 💡 UPDATED: Destructure ALL fields, including new Career fields
     const {
-        name, email, phone, school, course, message, pageinfo, formType, curriculum,
+        name, email, phone, grade, school, course, message, pageinfo, formType, curriculum,
         location, department, position, subjects, job_type, notice_period, experience
     } = req.body;
 
@@ -33,7 +33,7 @@ export default async function handler(req, res) {
                 name: 'SingleLine',
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
-                curriculum: 'Dropdown',
+                curriculum: 'SingleLine1',
             },
             redirectUrl: '/thank-you-popup', // <-- Unique thank-you page for popup
         },
@@ -71,8 +71,8 @@ export default async function handler(req, res) {
                 name: 'SingleLine',
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
+                grade: 'SingleLine3',
                 school: 'SingleLine1',
-                // course: 'Dropdown',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
             },
@@ -91,7 +91,7 @@ export default async function handler(req, res) {
                 name: 'SingleLine',
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
-                school: 'SingleLine1',
+                grade: 'SingleLine1',
                 course: 'SingleLine3',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
@@ -109,7 +109,7 @@ export default async function handler(req, res) {
                 name: 'SingleLine',
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
-                school: 'SingleLine1',
+                grade: 'SingleLine1',
                 course: 'SingleLine3',
                 message: 'MultiLine',
                 pageinfo: 'SingleLine2',
@@ -154,6 +154,7 @@ export default async function handler(req, res) {
                 name: 'SingleLine',
                 email: 'Email',
                 phone: 'PhoneNumber_countrycode',
+                grade: 'SingleLine4',
                 school: 'SingleLine1',
                 course: 'SingleLine3',
                 message: 'MultiLine',
@@ -240,6 +241,10 @@ export default async function handler(req, res) {
     // The school field is only defined for BLOG_SIDEBAR, Organic_Curriculum, and Organic_Subject
     if (fieldMap.school) {
         zohoPayload.append(fieldMap.school, school || '');
+    }
+
+    if (grade && fieldMap.grade) {
+        zohoPayload.append(fieldMap.grade, grade);
     }
 
     if (course && fieldMap.course) { // <--- ADDED: Course append logic

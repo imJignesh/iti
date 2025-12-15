@@ -12,7 +12,7 @@ export default function InfoCard() {
     name: "",
     email: "",
     phone: "",
-    school: "",
+    grade: "",
     course: "", // Kept for form consistency, though not explicitly used in this form's fields
     message: "",
     formType: "Freedemo", // IMPORTANT: Set a unique form type for this page
@@ -73,9 +73,9 @@ export default function InfoCard() {
       isValid = false;
     }
 
-    // 4. School Validation (Required)
-    if (!formData.school.trim()) {
-      newErrors.school = "School name is required.";
+    // 4. Grade Validation (Required)
+    if (!formData.grade.trim()) {
+      newErrors.grade = "School name is required.";
       isValid = false;
     }
     if (!formData.course.trim()) { // <--- ADDED: Course validation
@@ -510,8 +510,8 @@ export default function InfoCard() {
                   >
                     <input
                       type="text"
-                      name="school"
-                      value={formData.school}
+                      name="grade"
+                      value={formData.grade}
                       onChange={handleChange}
                       className="form-control bg-transparent text-white fw-semibold"
                       placeholder="SCHOOL"
@@ -522,7 +522,7 @@ export default function InfoCard() {
                         padding: "12px 15px",
                       }}
                     />
-                    {errors.school && <div className="invalid-feedback d-block fw-bold text-warning">{errors.school}</div>}
+                    {errors.grade && <div className="invalid-feedback d-block fw-bold text-warning">{errors.grade}</div>}
                   </div>
                   <div
                     className="mb-3 fade-in-section"

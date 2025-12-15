@@ -27,7 +27,7 @@ const DelayedPopup = () => {
         name: "",
         email: "",
         phone: "",
-        curriculum: "International Baccalaureate (IB)", // Set initial value here
+        curriculum: "", // Set initial value here
     });
 
     const [errors, setErrors] = useState({});
@@ -237,13 +237,16 @@ const DelayedPopup = () => {
                         required
                         className="formInput"
                     >
-                        {/* Removed selected="true" to fix React warning */}
-                        <option value="International Baccalaureate (IB)">International Baccalaureate (IB)</option>
+                        <option value="IB Diploma">IB Diploma</option>
+                        <option value="IB MYP">IB MYP</option>
                         <option value="IGCSE/GCSE">IGCSE/GCSE</option>
-                        <option value="A-Levels">A-Levels</option>
-                        <option value="EmSAT">EmSAT</option>
-                        <option value="Advanced Placements (AP)">Advanced Placements (AP)</option>
+                        <option value="A Levels">A Levels</option>
+                        <option value="Homeschooling">Homeschooling</option>
                         <option value="ACT">ACT</option>
+                        <option value="UCAT">UCAT</option>
+                        <option value="Advanced Placements">Advanced Placements</option>
+                        <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
+                        <option value="STEM (Others)">STEM (Others)</option>
                     </select>
                     {errors.curriculum && <p className="error-text" style={{ color: 'red', fontSize: '0.8rem', marginTop: '0.2rem' }}>{errors.curriculum}</p>}
 

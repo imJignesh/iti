@@ -62,7 +62,7 @@ export default function MyApp({ Component, pageProps }) {
 
     // --- NEW STATE & LOGIC FOR SCROLL BUTTON ---
     const [showButton, setShowButton] = useState(false);
-    const mobileBreakpoint = 768; // Matches the CSS media query breakpoint
+    const mobileBreakpoint = 2600; // Matches the CSS media query breakpoint
 
     useEffect(() => {
         const handleScroll = () => {
