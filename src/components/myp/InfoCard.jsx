@@ -527,7 +527,7 @@ export default function InfoCard() {
                     />
                     {errors.grade && <div className="invalid-feedback d-block fw-bold text-warning">{errors.grade}</div>}
                   </div>
-                  {/* ---
+                  {/* --- NEW GRADE FIELD HERE --- */}
 
 
 
@@ -633,7 +633,7 @@ export default function InfoCard() {
         }
 
         /* 🔹 Mobile fix */
-                    @media(max - width: 768px) {
+                    @media(max-width: 768px) {
           .info - row {
                     -webkit - mask - image: linear-gradient(
                   to right,
@@ -1368,6 +1368,6 @@ export default function InfoCard() {
       }
 
       `}</style>
-              </div>
-              );
+    </div>
+  );
 }
