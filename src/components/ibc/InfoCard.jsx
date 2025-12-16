@@ -659,8 +659,8 @@ export default function InfoCard() {
         }
 
         /* 🔹 Mobile fix */
-        @media (max-width: 768px) {
-          .info-row {
+        @media(max-width: 768px) {
+          .inf-row {
             -webkit-mask-image: linear-gradient(
               to right,
               rgba(0, 0, 0, 0),
@@ -1144,7 +1144,7 @@ margin-block: 30px !important;
         @media (max-width: 991.98px) {
           .position-relative.overflow-hidden {
             position: relative;
-            background-image: url("/assets/moibrect.png") !important;
+            background-image: url("/assets/moibrect1.png") !important;
             background-size: contain !important;
             background-position: top !important;
             background-repeat: no-repeat;
