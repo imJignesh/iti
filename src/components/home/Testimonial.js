@@ -82,12 +82,12 @@ export default function Testimonial({ }) {
           style={{ animationDelay: "0.2s" }}
         >
           {/* Decorative rectangles */}
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.webp" alt="bg-shape" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.webp" alt="bg-shape" className="testimonialRect" />
+          <img src="/images/rectangle-bg4.webp" alt="bg-shape" className="testimonialRect" />
 
           <img
-            src="/images/google-logo.png"
+            src="/images/google-logo.webp"
             alt="google logo"
             data-scroll
             data-scroll-class="is-clipped"

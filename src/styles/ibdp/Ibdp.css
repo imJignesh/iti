@@ -7,7 +7,7 @@
 .ibdpBanner .leftContent {
   width: 75vw;
   position: relative;
-  background: url(/images/ibdb-hero-bg.png);
+  background: url(/images/ibdb-hero-bg.webp);
   background-size: contain;
   background-repeat: no-repeat;
 }

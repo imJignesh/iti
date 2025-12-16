@@ -34,7 +34,7 @@ const About = () => {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className={`fade-in-section ${styles.rectangleBG}`}
-                  src="/images/rectangle-bg1.png"
+                  src="/images/rectangle-bg1.webp"
                   alt="Teacher"
                 />
                 <img
@@ -42,7 +42,7 @@ const About = () => {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className={`fade-in-section ${styles.rectangleBG}`}
-                  src="/images/rectangle-bg2.png"
+                  src="/images/rectangle-bg2.webp"
                   alt="Teacher"
                 />
                 <img
@@ -50,7 +50,7 @@ const About = () => {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className={`fade-in-section ${styles.rectangleBG}`}
-                  src="/images/rectangle-bg2.png"
+                  src="/images/rectangle-bg2.webp"
                   alt="Teacher"
                 />
                 <img
@@ -58,12 +58,12 @@ const About = () => {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className={`fade-in-section ${styles.rectangleBG}`}
-                  src="/images/rectangle-bg2.png"
+                  src="/images/rectangle-bg2.webp"
                   alt="Teacher"
                 />
               </div>
               <Image
-                src="/images/about-us-img.png"
+                src="/images/about-us-img.webp"
                 alt="Teacher"
                 data-scroll
                 data-scroll-class="is-inview"

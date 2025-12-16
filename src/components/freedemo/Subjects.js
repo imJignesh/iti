@@ -25,7 +25,7 @@ export default function Subjects({ }) {
                         data-scroll-class="is-clipped"
                         data-scroll-repeat="true"
                         data-scroll-offset="-10%"
-                        src="/images/rectangle-bg4.png"
+                        src="/images/rectangle-bg4.webp"
                         alt="bg-shape"
                         className="bgRect"
                     />
@@ -34,7 +34,7 @@ export default function Subjects({ }) {
                         data-scroll-class="is-clipped"
                         data-scroll-repeat="true"
                         data-scroll-offset="-10%"
-                        src="/images/rectangle-bg5.png"
+                        src="/images/rectangle-bg5.webp"
                         alt="bg-shape"
                         className="bgRect"
                     />
@@ -42,7 +42,7 @@ export default function Subjects({ }) {
                         data-scroll
                         data-scroll-class="is-clipped"
                         data-scroll-offset="-10%"
-                        src="/images/rectangle-bg4.png"
+                        src="/images/rectangle-bg4.webp"
                         alt="bg-shape"
                         className="bgRect"
                     />

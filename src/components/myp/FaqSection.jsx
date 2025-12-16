@@ -250,7 +250,7 @@ const FAQSection = () => {
 //   position: absolute;
 //   top: 50%;                /* center vertically */
 //   transform: translateY(-50%); /* exact middle */
-//   background: url(/images/heading-icon.png);
+//   background: url(/images/heading-icon.webp);
 //   background-size: contain;
 //   background-repeat: no-repeat;
 // }
@@ -284,7 +284,7 @@ const FAQSection = () => {
   position: absolute;
   top: 50%;                /* center vertically */
   transform: translateY(-50%); /* exact middle */
-  background: url(/images/heading-icon.png);
+  background: url(/images/heading-icon.webp);
   background-size: contain;
   background-repeat: no-repeat;
 }

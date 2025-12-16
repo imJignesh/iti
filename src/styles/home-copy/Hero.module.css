@@ -10,7 +10,7 @@
 /* Removed redundant .homeCopy prefix */
 .hero {
   padding: 3rem 0;
-  background: url(/images/banner-bg.png);
+  background: url(/images/banner-bg.webp);
   background-repeat: no-repeat;
   background-size: 30vw;
 
@@ -270,7 +270,7 @@ body.is-bot-detected [data-scroll-section] {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(/images/heading-icon.png) center no-repeat;
+  background: url(/images/heading-icon.webp) center no-repeat;
   background-size: contain;
 }
 

@@ -3,13 +3,15 @@
   width: 95vw;
   margin: 0 auto;
 }
+
 .ibdpBanner .leftContent {
   width: 75vw;
   position: relative;
-  background: url(/images/ibdb-hero-bg.png);
+  background: url(/images/ibdb-hero-bg.webp);
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .ibdpBanner .leftContent .ibdpImage {
   width: 100%;
   height: 100%;
@@ -21,6 +23,7 @@
   padding: 50px 25% 50px 70px;
   color: var(--white-color);
 }
+
 .ibdpBanner .leftContent .contentInner .mainHeading {
   font-size: 3.5vw;
   font-weight: 700;
@@ -28,44 +31,50 @@
   max-width: 80%;
   padding-bottom: 25px;
 }
+
 .ibdpBanner .leftContent .contentInner .subHeading {
-    font-size: 1vw;
-    font-weight: 500;
-    letter-spacing: 2px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1vw;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 .ibdpBanner .leftContent .contentInner .featureCards {
-    display: flex;
-    gap: 40px;
-    margin: 30px 0;
-    background: linear-gradient(to left ,rgba(255, 255, 255, 0.1) 50% , transparent);
-    padding: 20px 40px 20px 0;
-    backdrop-filter: blur(2px);
-    border-radius: 40px;
+  display: flex;
+  gap: 40px;
+  margin: 30px 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.1) 50%, transparent);
+  padding: 20px 40px 20px 0;
+  backdrop-filter: blur(2px);
+  border-radius: 40px;
 }
-.ibdpBanner .leftContent .contentInner .featureCards .featureCardInner{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+
+.ibdpBanner .leftContent .contentInner .featureCards .featureCardInner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-.ibdpBanner .leftContent .contentInner .featureCards .cardImage{
-    width: 60px;
-    min-width: 60px;
-    max-width: 25%;
-    height: auto;
-    object-fit: contain;
-    border-right: 2px solid #615f60;
-    padding-right: 20px;
+
+.ibdpBanner .leftContent .contentInner .featureCards .cardImage {
+  width: 60px;
+  min-width: 60px;
+  max-width: 25%;
+  height: auto;
+  object-fit: contain;
+  border-right: 2px solid #615f60;
+  padding-right: 20px;
 }
-.ibdpBanner .leftContent .contentInner .featureCards .featureText{
-    margin: 0;  
-    font-size: 1vw;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+
+.ibdpBanner .leftContent .contentInner .featureCards .featureText {
+  margin: 0;
+  font-size: 1vw;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
-.ibdpBanner .leftContent .contentInner .descriptionText{
-    font-size: 1.5vw;
+
+.ibdpBanner .leftContent .contentInner .descriptionText {
+  font-size: 1.5vw;
 }
 
 .ibdpBanner .ctaButtons {

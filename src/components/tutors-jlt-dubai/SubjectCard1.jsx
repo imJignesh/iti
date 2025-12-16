@@ -87,7 +87,7 @@ export default function SubjectsCard1({ }) {
             data-scroll-class="is-clipped"
             data-scroll-repeat="true"
             data-scroll-offset="-10%"
-            src="/images/rectangle-bg4.png"
+            src="/images/rectangle-bg4.webp"
             alt="bg-shape"
             className="subjects-card1-bg-rect"
           />

@@ -87,7 +87,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: url(/images/heading-icon.png);
+  background: url(/images/heading-icon.webp);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -99,7 +99,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  background: url(/images/heading-icon.png);
+  background: url(/images/heading-icon.webp);
   background-size: contain;
   background-repeat: no-repeat;
 }

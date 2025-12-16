@@ -247,12 +247,12 @@ export default function Testimonial({ }) {
           style={{ animationDelay: "0.2s" }}
         >
           {/* Decorative rectangles - Apply local module class */}
-          <img src="/images/rectangle-bg4.png" alt="ib tutor in dubai" className={styles.testimonialRect} />
-          <img src="/images/rectangle-bg4.png" alt="ib tutor in dubai" className={styles.testimonialRect} />
-          <img src="/images/rectangle-bg4.png" alt="ib tutor in dubai" className={styles.testimonialRect} />
+          <img src="/images/rectangle-bg4.webp" alt="ib tutor in dubai" className={styles.testimonialRect} />
+          <img src="/images/rectangle-bg4.webp" alt="ib tutor in dubai" className={styles.testimonialRect} />
+          <img src="/images/rectangle-bg4.webp" alt="ib tutor in dubai" className={styles.testimonialRect} />
 
           <img
-            src="/images/google-logo.png"
+            src="/images/google-logo.webp"
             alt="ib tutor in dubai"
             data-scroll
             data-scroll-class="is-clipped"

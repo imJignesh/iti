@@ -20,7 +20,7 @@
     margin: auto;
     border-radius: 12px;
     overflow: hidden;
-    background-image: url("/assets/ourteam.png");
+    background-image: url("/assets/ourteam.webp");
     background-size: cover;
     background-position: center;
 }
@@ -656,7 +656,7 @@ span.grtx {
 }
 
 .call-to-action {
-    background: url('/images/cta-bg.png') no-repeat;
+    background: url('/images/cta-bg.webp') no-repeat;
     background-size: cover;
     padding: 5vw;
     color: #fff;
@@ -758,7 +758,7 @@ span.grtx {
     }
 
     .call-to-action {
-        background: url('/images/cta-bg-m.png') no-repeat;
+        background: url('/images/cta-bg-m.webp') no-repeat;
         background-size: contain;
         padding: 5vw;
         color: #fff;
@@ -858,7 +858,7 @@ span.grtx {
     }
 
     .call-to-action.teams:before {
-        background: url(/images/team-footer.png);
+        background: url(/images/team-footer.webp);
         content: '';
         display: block;
         position: absolute;

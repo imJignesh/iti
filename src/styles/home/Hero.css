@@ -1,7 +1,7 @@
 /* Hero Banner Section */
 .home .hero {
   padding: 100px 0;
-  background: url(/images/banner-bg.png);
+  background: url(/images/banner-bg.webp);
   background-repeat: no-repeat;
   background-size: 600px;
   clip-path: inset(0 100% 0 0);

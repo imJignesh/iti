@@ -204,12 +204,12 @@ export default function Testimonial({ }) {
         >
           {/* Decorative rectangles */}
           {/* Apply local module class */}
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className={styles.testimonialRect} />
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className={styles.testimonialRect} />
-          <img src="/images/rectangle-bg4.png" alt="bg-shape" className={styles.testimonialRect} />
+          <img src="/images/rectangle-bg4.webp" alt="bg-shape" className={styles.testimonialRect} />
+          <img src="/images/rectangle-bg4.webp" alt="bg-shape" className={styles.testimonialRect} />
+          <img src="/images/rectangle-bg4.webp" alt="bg-shape" className={styles.testimonialRect} />
 
           <img
-            src="/images/google-logo.png"
+            src="/images/google-logo.webp"
             alt="google logo"
             data-scroll
             data-scroll-class="is-clipped"

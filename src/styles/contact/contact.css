@@ -34,7 +34,7 @@
      margin: auto;
      border-radius: 12px;
      overflow: hidden;
-     background-image: url("/images/blog-banner.png");
+     background-image: url("/images/blog-banner.webp");
      background-size: cover;
      background-position: center;
  }
