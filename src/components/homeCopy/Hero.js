@@ -112,7 +112,7 @@ const Hero = () => {
                                     playsInline
                                     poster="/images/banner-image-right.webp"
                                 >
-                                    <source src="/videos/education-video.mp4" type="video/mp4" />
+                                    <source src="/videos/ignite-home-480.mp4" type="video/mp4" />
                                 </video>
                             </div>
                             <div className={styles.buttonGroup}>
