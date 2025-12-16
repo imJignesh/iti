@@ -11,8 +11,8 @@ export default function Accordion() {
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Ignite Training Institute - IBDP Tuition In Dubai, UAE For Academic Success & Growth</h2>
-          <p className="subtitle">Ignite Training Institute offers IBDP tuition in Dubai designed to unlock each student’s academic potential. With a focus on concept clarity, analytical skills, and exam techniques, our tuition sessions help students build a solid foundation in every subject. Lessons are customized based on the student’s IB year, subject combination, and learning style. <br />
-            Whether a student needs help with HL Math or SL English, we tailor our approach to their needs. Regular assessments and feedback loops track progress and reinforce learning. Our goal is to nurture both academic performance and student confidence throughout the IB journey.</p>
+          <h3 className="subtitle">Ignite Training Institute offers IBDP tuition in Dubai designed to unlock each student’s academic potential. With a focus on concept clarity, analytical skills, and exam techniques, our tuition sessions help students build a solid foundation in every subject. Lessons are customized based on the student’s IB year, subject combination, and learning style. <br />
+            Whether a student needs help with HL Math or SL English, we tailor our approach to their needs. Regular assessments and feedback loops track progress and reinforce learning. Our goal is to nurture both academic performance and student confidence throughout the IB journey.</h3>
 
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
@@ -22,32 +22,32 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">IB Diploma Tutoring In Dubai By Experienced Mentors</h2>
-          <p className="subtitle">Our IB Diploma tutoring in Dubai is led by experienced mentors who understand the rigor of the IB Diploma. Every tutor at Ignite brings deep subject knowledge and IB exam insight to the table. From internal assessments (IAs) to extended essays (EE), our team supports students through every academic requirement. <br />
-            Sessions are interactive, focused, and aligned with current IB standards. We guide students on how to approach exam questions, apply critical thinking, and manage time under pressure. With our mentoring, students gain the tools they need to excel both inside and outside the classroom.</p>
+          <h3 className="subtitle">Our IB Diploma tutoring in Dubai is led by experienced mentors who understand the rigor of the IB Diploma. Every tutor at Ignite brings deep subject knowledge and IB exam insight to the table. From internal assessments (IAs) to extended essays (EE), our team supports students through every academic requirement. <br />
+            Sessions are interactive, focused, and aligned with current IB standards. We guide students on how to approach exam questions, apply critical thinking, and manage time under pressure. With our mentoring, students gain the tools they need to excel both inside and outside the classroom.</h3>
           <br />
 
           <h2 className="title">IBDP Private Classes In Dubai For Targeted Exam Preparation</h2>
-          <p className="subtitle">Ignite’s IBDP coaching in Dubai is tailored specifically for exam readiness. We focus on refining answer writing, mastering IB command terms, and solving past papers strategically. Students learn how to approach different paper formats, whether it is data analysis in the Sciences or structured essays in the Humanities. <br />
-            Our coaching emphasizes high-impact revision techniques, timed mocks, and personalized feedback. Each session is built to improve performance and confidence in the lead-up to finals. With our focused coaching, students enter the IB exams feeling prepared and in control.</p>
+          <h3 className="subtitle">Ignite’s IBDP coaching in Dubai is tailored specifically for exam readiness. We focus on refining answer writing, mastering IB command terms, and solving past papers strategically. Students learn how to approach different paper formats, whether it is data analysis in the Sciences or structured essays in the Humanities. <br />
+            Our coaching emphasizes high-impact revision techniques, timed mocks, and personalized feedback. Each session is built to improve performance and confidence in the lead-up to finals. With our focused coaching, students enter the IB exams feeling prepared and in control.</h3>
           <br />
 
           <h2 className="title">Achieve Your Dream Scores With Focused IBDP Coaching</h2>
-          <p className="subtitle">At Ignite Training Institute, our focused IBDP coaching is designed to help students reach their target scores with confidence. We identify each student’s strengths and areas for improvement, then tailor sessions to match their academic goals. Through concept reinforcement, past paper practice, and exam-specific strategies, students build the skills needed to excel. <br />
-            Our expert IB tutors offer personalized attention across all subjects, ensuring clarity in even the most challenging topics. Regular progress checks and feedback keep students on track. With the right guidance and structure, achieving your dream IBDP score becomes a realistic and rewarding goal.</p>
+          <h3 className="subtitle">At Ignite Training Institute, our focused IBDP coaching is designed to help students reach their target scores with confidence. We identify each student’s strengths and areas for improvement, then tailor sessions to match their academic goals. Through concept reinforcement, past paper practice, and exam-specific strategies, students build the skills needed to excel. <br />
+            Our expert IB tutors offer personalized attention across all subjects, ensuring clarity in even the most challenging topics. Regular progress checks and feedback keep students on track. With the right guidance and structure, achieving your dream IBDP score becomes a realistic and rewarding goal.</h3>
           <br />
 
           <h2 className="title">IBDP Training In Dubai For Confident IB Performance</h2>
-          <p className="subtitle">Our IBDP training in Dubai goes beyond traditional tutoring as it is a structured program built for long-term academic growth. At Ignite, we train students to think critically, write analytically, and apply concepts across subjects. <br />
-            Through consistent practice, goal setting, and smart study plans, students steadily improve their scores and skills. Our training covers everything from core subject mastery to IA, TOK, and EE guidance. With regular performance tracking and mentor support, students develop the confidence to meet and exceed IB expectations.</p>
+          <h3 className="subtitle">Our IBDP training in Dubai goes beyond traditional tutoring as it is a structured program built for long-term academic growth. At Ignite, we train students to think critically, write analytically, and apply concepts across subjects. <br />
+            Through consistent practice, goal setting, and smart study plans, students steadily improve their scores and skills. Our training covers everything from core subject mastery to IA, TOK, and EE guidance. With regular performance tracking and mentor support, students develop the confidence to meet and exceed IB expectations.</h3>
           <br />
 
           <h2 className="title">IB Diploma Classes In Dubai With Complete Subject Support</h2>
-          <p className="subtitle">Ignite’s IB Diploma classes in Dubai offer comprehensive support across all IBDP subjects from Group 1 to Group 6. Whether it’s HL Chemistry, SL Economics, Math AA, Language & Literature, Visual Arts, or any other IB subject, our expert tutors provide structured guidance aligned with the IB curriculum. <br />
-            Students receive help with core concepts, exam strategies, and coursework requirements. Each session combines theory instruction, targeted revision, and assignment assistance to ensure subject mastery. We also provide detailed feedback on past papers, IAs, and practice essays. With small group and one-on-one options available, students receive the attention they need to excel. Our complete subject support ensures no topic is left unclear.</p>
+          <h3 className="subtitle">Ignite’s IB Diploma classes in Dubai offer comprehensive support across all IBDP subjects from Group 1 to Group 6. Whether it’s HL Chemistry, SL Economics, Math AA, Language & Literature, Visual Arts, or any other IB subject, our expert tutors provide structured guidance aligned with the IB curriculum. <br />
+            Students receive help with core concepts, exam strategies, and coursework requirements. Each session combines theory instruction, targeted revision, and assignment assistance to ensure subject mastery. We also provide detailed feedback on past papers, IAs, and practice essays. With small group and one-on-one options available, students receive the attention they need to excel. Our complete subject support ensures no topic is left unclear.</h3>
           <br />
 
           <h2 className="title">How Ignite’s IBDP Classes Guide Students To Success?</h2>
-          <p className="subtitle">Ignite’s IBDP classes are structured to help students succeed through personalized guidance, subject mastery, and smart exam preparation.</p>
+          <h3 className="subtitle">Ignite’s IBDP classes are structured to help students succeed through personalized guidance, subject mastery, and smart exam preparation.</h3>
           <br />
 
           <ul className="subtitle">

@@ -11,8 +11,8 @@ export default function Accordion() {
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Ignite Training Institute - MYP Tuition In Dubai for Academic Support & Growth</h2>
-          <p className="subtitle">Ignite Training Institute offers personalized MYP tuition in Dubai to support students through every stage of the IB Middle Years Programme. Our sessions focus on strengthening core understanding, refining academic skills, and bridging knowledge gaps. Whether students need help with Math, Sciences, Humanities, or Language Acquisition, our expert tutors adapt to their needs. <br />
-            We offer structured lesson plans aligned with the MYP framework and assessment criteria. Regular practice, feedback, and concept revision help students stay confident and academically consistent. Our tuition model encourages growth, critical thinking, and a love for learning.</p>
+          <h3 className="subtitle">Ignite Training Institute offers personalized MYP tuition in Dubai to support students through every stage of the IB Middle Years Programme. Our sessions focus on strengthening core understanding, refining academic skills, and bridging knowledge gaps. Whether students need help with Math, Sciences, Humanities, or Language Acquisition, our expert tutors adapt to their needs. <br />
+            We offer structured lesson plans aligned with the MYP framework and assessment criteria. Regular practice, feedback, and concept revision help students stay confident and academically consistent. Our tuition model encourages growth, critical thinking, and a love for learning.</h3>
 
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
@@ -22,33 +22,33 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">IB MYP Tutoring In Dubai By Subject-Specialist Mentors</h2>
-          <p className="subtitle">At Ignite, students benefit from IB MYP tutoring in Dubai delivered by subject-specialist mentors with deep knowledge of the Middle Years Programme. Each tutor brings a student-focused approach, guiding learners through inquiry-based learning and interdisciplinary skills. Whether it's helping with assessments, projects, or day-to-day understanding, our mentors provide targeted academic support. <br />
-            We work closely with students to build clarity, academic curiosity, and exam-readiness. Sessions are interactive and personalized, helping students achieve stronger academic outcomes. With mentor support, students are better prepared for both classroom success and the DP transition.</p>
+          <h3 className="subtitle">At Ignite, students benefit from IB MYP tutoring in Dubai delivered by subject-specialist mentors with deep knowledge of the Middle Years Programme. Each tutor brings a student-focused approach, guiding learners through inquiry-based learning and interdisciplinary skills. Whether it's helping with assessments, projects, or day-to-day understanding, our mentors provide targeted academic support. <br />
+            We work closely with students to build clarity, academic curiosity, and exam-readiness. Sessions are interactive and personalized, helping students achieve stronger academic outcomes. With mentor support, students are better prepared for both classroom success and the DP transition.</h3>
           <br />
 
           <h2 className="title">MYP Classes In Dubai Focused On Concept Mastery & Growth</h2>
-          <p className="subtitle">Ignite’s MYP classes in Dubai are designed to help students build strong conceptual foundations and core academic skills. Our approach supports every subject area by breaking down complex topics and linking them to real-world understanding. We focus on analytical thinking, writing structure, math reasoning, and scientific inquiry to help students succeed across disciplines. <br />
-            Each class is aligned with the MYP framework, including the criteria for formative and summative assessments. Students also receive guidance for personal projects and interdisciplinary learning tasks. Through regular evaluations and support, we aim to help students thrive in all subject areas.</p>
+          <h3 className="subtitle">Ignite’s MYP classes in Dubai are designed to help students build strong conceptual foundations and core academic skills. Our approach supports every subject area by breaking down complex topics and linking them to real-world understanding. We focus on analytical thinking, writing structure, math reasoning, and scientific inquiry to help students succeed across disciplines. <br />
+            Each class is aligned with the MYP framework, including the criteria for formative and summative assessments. Students also receive guidance for personal projects and interdisciplinary learning tasks. Through regular evaluations and support, we aim to help students thrive in all subject areas.</h3>
           <br />
 
           <h2 className="title">Choose The Top Expert Support For The Middle Year Programme</h2>
-          <p className="subtitle">Choosing the right academic support for the IB Middle Years Programme can make all the difference in a student’s journey. Ignite provides top-tier tutoring and classes designed to build confidence, subject knowledge, and essential skills. Our expert mentors understand the unique demands of the MYP curriculum and offer targeted guidance to meet them. <br />
-            With flexible formats, continuous feedback, and skill-focused learning, we ensure students stay ahead. From project planning to assessment readiness, we cover it all. Give your child the expert academic support they need to succeed in the MYP years.</p>
+          <h3 className="subtitle">Choosing the right academic support for the IB Middle Years Programme can make all the difference in a student’s journey. Ignite provides top-tier tutoring and classes designed to build confidence, subject knowledge, and essential skills. Our expert mentors understand the unique demands of the MYP curriculum and offer targeted guidance to meet them. <br />
+            With flexible formats, continuous feedback, and skill-focused learning, we ensure students stay ahead. From project planning to assessment readiness, we cover it all. Give your child the expert academic support they need to succeed in the MYP years.</h3>
           <br />
 
           <h2 className="title">Middle Years Programme Tutoring In Dubai With Expert Guidance</h2>
-          <p className="subtitle">Ignite Training Institute offers specialized tutoring for the Middle Years Programme (MYP), designed to support students in mastering concepts and excelling in their final years. Our tailored approach ensures every learner receives personalized attention, with a balance of subject mastery, skill-building, and exam readiness. <br />
+          <h3 className="subtitle">Ignite Training Institute offers specialized tutoring for the Middle Years Programme (MYP), designed to support students in mastering concepts and excelling in their final years. Our tailored approach ensures every learner receives personalized attention, with a balance of subject mastery, skill-building, and exam readiness. <br />
             With experienced tutors, interactive lessons, and structured study plans, we help students strengthen their academic foundation and boost confidence. Regular assessments, feedback, and targeted review sessions further enhance learning outcomes. <br />
-            Whether it’s Mathematics, Sciences, or Humanities, our MYP tutoring in Dubai equips students with the tools to succeed. At Ignite, we make learning engaging, effective, and aligned with each student’s unique goals.</p>
+            Whether it’s Mathematics, Sciences, or Humanities, our MYP tutoring in Dubai equips students with the tools to succeed. At Ignite, we make learning engaging, effective, and aligned with each student’s unique goals.</h3>
           <br />
 
           <h2 className="title">Master Every Subject With Targeted IB MYP Coaching Support In UAE</h2>
-          <p className="subtitle">Ignite’s targeted IB MYP coaching in the UAE helps students master every subject through strategic and skill-based instruction. Our coaching plans are individualized, ensuring that each student receives support where they need it most. Whether it’s Math, Science, English, or Design, we help students understand the subject deeply and meet IB assessment expectations. <br />
-            Past paper practice, assignment guidance, and personal project support are all part of our approach. We build study habits and skills that stay with students well beyond the MYP years. With the right coaching, students develop confidence across the entire curriculum.</p>
+          <h3 className="subtitle">Ignite’s targeted IB MYP coaching in the UAE helps students master every subject through strategic and skill-based instruction. Our coaching plans are individualized, ensuring that each student receives support where they need it most. Whether it’s Math, Science, English, or Design, we help students understand the subject deeply and meet IB assessment expectations. <br />
+            Past paper practice, assignment guidance, and personal project support are all part of our approach. We build study habits and skills that stay with students well beyond the MYP years. With the right coaching, students develop confidence across the entire curriculum.</h3>
           <br />
 
           <h2 className="title">How Ignite’s MYP Classes Guide Students To Success?</h2>
-          <p className="subtitle">Ignite’s MYP classes are designed to build strong academic foundations, critical thinking, and the skills students need to thrive in the IB Middle Years Programme.</p>
+          <h3 className="subtitle">Ignite’s MYP classes are designed to build strong academic foundations, critical thinking, and the skills students need to thrive in the IB Middle Years Programme.</h3>
           <br />
 
           <ul className="subtitle">

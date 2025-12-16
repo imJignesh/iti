@@ -330,6 +330,10 @@
 
   }
 
+  .footerWrap .footerTitle {
+    font-size: 1.5rem;
+  }
+
   .footerWrap {
     margin-top: 80px;
 
