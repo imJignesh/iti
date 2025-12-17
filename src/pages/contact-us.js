@@ -54,11 +54,11 @@ const Contact = ({ headerHeight }) => {
             isValid = false;
         }
         // Assuming at least one course/test selection is required
-        if (!formData.tests_courses && !formData.courses) {
-            newErrors.tests_courses = "Please select a test or a course.";
-            newErrors.courses = "Please select a test or a course.";
-            isValid = false;
-        }
+        // if (!formData.tests_courses && !formData.courses) {
+        //     newErrors.tests_courses = "Please select a test or a course.";
+        //     newErrors.courses = "Please select a test or a course.";
+        //     isValid = false;
+        // }
 
         setErrors(newErrors);
         return isValid;
@@ -268,16 +268,16 @@ const Contact = ({ headerHeight }) => {
                             {errors.message && <div className="error-message">{errors.message}</div>}
                         </div>
 
-                        <div className="form-group full-width">
+                        {/* <div className="form-group full-width">
                             <label>TESTS / COURSES</label>
-                            {/* 💡 ADD props: name, value, onChange and use Zoho options */}
+                          
                             <select
                                 name="tests_courses"
                                 value={formData.tests_courses}
                                 onChange={handleChange}
                             >
                                 <option value="">Select</option>
-                                {/* Options from contact-zoho.html */}
+                                
                                 <option value="IB Diploma">IB Diploma</option>
                                 <option value="IB MYP">IB MYP</option>
                                 <option value="IGCSE">IGCSE</option>
@@ -290,7 +290,7 @@ const Contact = ({ headerHeight }) => {
                                 <option value="STEM (Others)">STEM (Others)</option>
                             </select>
                             {errors.tests_courses && <div className="error-message">{errors.tests_courses}</div>}
-                        </div>
+                        </div> */}
 
                         <div className="form-group full-width">
                             <label>COURSES</label>

@@ -624,6 +624,7 @@ export default function InfoCard() {
       </div>
 
       <style jsx>{`
+      
         .form-control::placeholder {
           color: #ffffff !important;
           opacity: 0.5;

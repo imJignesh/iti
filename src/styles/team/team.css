@@ -679,7 +679,7 @@ span.grtx {
 /* Left Content */
 .teams .cta-content {
     max-width: 40vw;
-    padding: 4vw 0 0 4vw;
+    padding: 4vw 0 0 3vw;
 }
 
 .teams .cta-content h2 {
@@ -700,7 +700,7 @@ span.grtx {
 
 .cta-button {
     display: flex;
-    gap: 1.3vw;
+    gap: 0;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
@@ -712,7 +712,7 @@ span.grtx {
     font-size: 1.30rem;
     font-weight: 500;
     cursor: pointer;
-    min-width: 20rem;
+    min-width: 15vw;
     transition: 0.3s;
     outline: none;
 }

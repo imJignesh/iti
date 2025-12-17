@@ -65,6 +65,10 @@ section.padding-0 {
   padding-bottom: 0 !important;
 }
 
+option {
+  background-color: #000000 !important;
+}
+
 @media (max-width: 991px) {
   .testTitle {
     max-width: 600px;

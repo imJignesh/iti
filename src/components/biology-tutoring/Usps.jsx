@@ -109,7 +109,7 @@ export default function Usps({ }) {
                 </h3>
 
                 <a
-                  href="/why-ignite/"
+                  href="/about-us/"
                   // Apply local module class and global class
                   className={`${styles.uspBtn} fade-in-sections buttonSkyBlue`}
                   style={{ animationDelay: "0.5s" }}

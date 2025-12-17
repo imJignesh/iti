@@ -163,6 +163,20 @@ const sliceByWordCount = (text, wordLimit) => {
 };
 
 const OurTeam = ({ headerHeight }) => {
+
+    const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobileDevice(window.innerWidth <= 768);
+        };
+
+        handleResize(); // run on mount
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const [expandedTrainers, setExpandedTrainers] = useState({});
 
     const toggleReadMore = (key) => {
@@ -430,7 +444,8 @@ const OurTeam = ({ headerHeight }) => {
                                 data-scroll-repeat="true"
                                 style={{ animationDelay: "0.1s" }}
                             >
-                                <h2>Meet The Dedicated Educators <br /> Driving Student Success</h2>
+
+                                <h2>Meet The Dedicated Educators {!isMobileDevice && <br />} Driving Student Success</h2>
                                 <p>
                                     Get to know the passionate experts whose knowledge, guidance, & commitment inspire students to achieve their full potential.
                                 </p>

@@ -7,7 +7,8 @@ import { useEffect, useRef, useState } from "react";
 import TutoringHeroSection from "@/components/aboutus/BottomSub";
 import MarqueeBanner from "@/components/act/MarqueeBanner";
 import TutoringCourses from "@/components/maincourse/Banner";
-import Test from "@/components/maincourse/StandardsedTest";
+// import Test from "@/components/maincourse/StandardsedTest";
+import Test from "@/components/maincourse/Test";
 import CallToAction from "@/components/maincourse/CallToAction";
 import TrainersMessage from "@/components/maincourse/videoTrainer";
 import Testimonial from "@/components/ibdp/ReviewsSection";
@@ -91,6 +92,8 @@ const About = ({ headerHeight }) => {
                         isMobileSwiper={isMobileSwiper}
                         active={active}
                     />
+
+
                 </section>
                 <section data-scroll-section>
                     <Learning

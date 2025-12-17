@@ -19,10 +19,10 @@ const trainers = [
     color: "blue",
   },
   {
-    name: "SADAF",
+    name: "SHWETHA",
     img: "/images/trainer2.png",
-    subtitle: "Accounting, Economics & Business",
-    experience: "11+ YEARS",
+    subtitle: "Biology",
+    experience: "6+ YEARS",
     color: "green",
   },
   {

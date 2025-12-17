@@ -82,10 +82,12 @@
 }
 
 
-.freedemo-curriculm .fd-curr.full {
+.freedemo-curriculm .fd-curr.full,
+.freedemo-curriculm .full {
   grid-column: span 2;
-  padding: 1.5rem 0 2rem 1rem !important;
+
 }
+
 
 
 .freedemo-curriculm .check {

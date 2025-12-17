@@ -94,7 +94,7 @@ h1.main-title {
 .post-content h3 {
     font-weight: 500 !important;
     line-height: 1;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     background: linear-gradient(to left, var(--green-color), var(--lightgreen-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

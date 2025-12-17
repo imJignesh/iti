@@ -175,7 +175,7 @@ export default function Usps({ }) {
                 </p>
 
                 <a
-                  href="/why-ignite/"
+                  href="/about-us/"
                   // Apply local module class and global classes
                   className={`${styles.uspBtn} fade-in-sections buttonSkyBlue`}
                   data-scroll

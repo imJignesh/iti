@@ -206,7 +206,7 @@ export default function IgniteAchievements() {
                   <div className="stat-number teal-text">60%</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title teal-text">OF RICH TUTORING EXPERIENCE</h4>
+                    <p className="stat-title teal-text">OF RICH TUTORING EXPERIENCE</p>
                   </div>
                 </div>
 
@@ -215,7 +215,7 @@ export default function IgniteAchievements() {
                   <div className="stat-number blue-text">30+</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title blue-text">TRULY HAPPY STUDENTS FROM UAE</h4>
+                    <p className="stat-title blue-text">TRULY HAPPY STUDENTS FROM UAE</p>
                   </div>
                 </div>
               </div>
@@ -227,7 +227,7 @@ export default function IgniteAchievements() {
                   <div className="stat-number blue-text">60%</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title blue-text">OF RICH TUTORING EXPERIENCE</h4>
+                    <p className="stat-title blue-text">OF RICH TUTORING EXPERIENCE</p>
                   </div>
                 </div>
 
@@ -236,7 +236,7 @@ export default function IgniteAchievements() {
                   <div className="stat-number teal-text">30+</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title teal-text">TRULY HAPPY STUDENTS FROM UAE</h4>
+                    <p className="stat-title teal-text">TRULY HAPPY STUDENTS FROM UAE</p>
                   </div>
                 </div>
               </div>
@@ -285,13 +285,13 @@ export default function IgniteAchievements() {
               <div className="col-6">
                 <div className="stat-card-mobile">
                   <div className="stat-number blue-text">60%</div>
-                  <h4 className="stat-title-mobile blue-text">OF RICH TUTORING EXPERIENCE</h4>
+                  <p className="stat-title-mobile blue-text">OF RICH TUTORING EXPERIENCE</p>
                 </div>
               </div>
               <div className="col-6">
                 <div className="stat-card-mobile">
                   <div className="stat-number teal-text">30+</div>
-                  <h4 className="stat-title-mobile teal-text">TRULY HAPPY STUDENTS FROM UAE</h4>
+                  <p className="stat-title-mobile teal-text">TRULY HAPPY STUDENTS FROM UAE</p>
                 </div>
               </div>
             </div>
@@ -301,13 +301,13 @@ export default function IgniteAchievements() {
               <div className="col-6">
                 <div className="stat-card-mobile">
                   <div className="stat-number blue-text">60%</div>
-                  <h4 className="stat-title-mobile blue-text">OF RICH TUTORING EXPERIENCE</h4>
+                  <p className="stat-title-mobile blue-text">OF RICH TUTORING EXPERIENCE</p>
                 </div>
               </div>
               <div className="col-6">
                 <div className="stat-card-mobile">
                   <div className="stat-number teal-text">30+</div>
-                  <h4 className="stat-title-mobile teal-text">TRULY HAPPY STUDENTS FROM UAE</h4>
+                  <p className="stat-title-mobile teal-text">TRULY HAPPY STUDENTS FROM UAE</p>
                 </div>
               </div>
             </div>
@@ -429,7 +429,7 @@ export default function IgniteAchievements() {
           font-weight: 700;
           line-height: 1.2;
           margin: 0;
-          text-transform: uppercase;
+          //text-transform: uppercase;
         }
 
         /* Responsive adjustments */

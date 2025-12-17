@@ -202,7 +202,7 @@ export default function InfoCard() {
                   </>
                 ) : (
                   <>
-                    IB Tutors In Dubai,UAE<br /> For Student Success
+                    IB Tutors In Dubai, UAE<br /> For Student Success
                   </>
                 )}
               </h1>

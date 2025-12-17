@@ -185,7 +185,10 @@ const Footer = () => {
           style={{ animationDelay: "0.8s" }}
         >
           <div className={styles.footerContactLabel}>CONTACT</div>
-          <div className={styles.footerContact}>+00 97686 93485</div>
+          <div className={styles.footerContact}>
+            <span>+971568357374</span>
+            <br />
+            <span>hello@ignitetraininginstitute.com</span></div>
         </div>
       </div>
     </footer>

@@ -1,12 +1,27 @@
 import React, { useEffect, useState } from "react";
 
+// Mapping of UI text to specific URLs
+const subjectLinks = {
+  "English": "/english-tutor-in-dubai",
+  "French": "/french-tutor-in-dubai",
+  "Spanish": "/spanish-tutor-in-dubai",
+  "Computer Science": "/computer-science-tutor-in-dubai",
+  "Economics": "/economics-tutor-in-dubai",
+  "Biology": "/biology-tutor-in-dubai",
+  "Chemistry": "/chemistry-tutor-in-dubai",
+  "Physics": "/physics-tutor-in-dubai",
+  "Maths": "/maths-tutor-in-dubai",
+  "Business Studies": "/business-studies-tutor-in-dubai",
+  "Accounting": "/accounting-tutor-in-dubai",
+  "Psychology": "/psychology-tutor-in-dubai"
+};
+
 const subjectRows = [
   ["English", "French", "Spanish"],
   ["Computer Science", "Economics", "Biology"],
   ["Chemistry", "Physics", "Maths"],
   ["Business Studies", "Accounting", "Psychology"],
 ];
-
 
 export default function SubjectsCard1({ }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -21,6 +36,7 @@ export default function SubjectsCard1({ }) {
 
     return () => window.removeEventListener("resize", checkDevice);
   }, []);
+
   return (
     <section
       data-scroll
@@ -42,8 +58,7 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <h2 className="SubHeading testSubheading">SUBJECTS WE SUPPORT
-            </h2>
+            <h2 className="SubHeading testSubheading">SUBJECTS WE SUPPORT</h2>
           </div>
           <h3
             data-scroll
@@ -52,8 +67,7 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s", fontSize: "2rem" }}
           >
-
-            In-Depth Tutoring That Makes Every<br></br>  <span className="highlight"> Subject</span> Clear
+            In-Depth Tutoring That Makes Every<br /> <span className="highlight"> Subject</span> Clear
           </h3>
         </div>
       </div>
@@ -93,9 +107,11 @@ export default function SubjectsCard1({ }) {
                   style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
                 >
                   {row.map((subj) => (
-                    <h3 key={subj} className="subjects-card1-bubble">
-                      {subj}
-                    </h3>
+                    <a key={subj} href={subjectLinks[subj] || "#"}>
+                      <h3 className="subjects-card1-bubble">
+                        {subj}
+                      </h3>
+                    </a>
                   ))}
                 </div>
               ))}

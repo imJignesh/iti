@@ -64,7 +64,7 @@ export default function CallToAction() {
             color: '#d1d5db',
             marginBottom: '2rem',
             lineHeight: '1.6',
-            textTransform: 'uppercase'
+
         },
         button: {
             display: 'flex',
@@ -155,7 +155,7 @@ export default function CallToAction() {
             marginBottom: '2rem',
             lineHeight: '1.6',
             textAlign: 'center',
-            textTransform: 'uppercase'
+
         },
         mobileButtonContainer: {
             display: 'flex',

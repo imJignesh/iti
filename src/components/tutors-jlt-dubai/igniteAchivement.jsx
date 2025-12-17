@@ -158,7 +158,7 @@ export default function IgniteAchievements() {
                   <div className="stat-number teal-text">10+</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title teal-text">Years Of Experience</h4>
+                    <p className="stat-title teal-text">Years Of Experience</p>
                     <p className="stat-description">Proven expertise in guiding students toward progress</p>
                   </div>
                 </div>
@@ -168,7 +168,7 @@ export default function IgniteAchievements() {
                   <div className="stat-number blue-text">1K+</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title blue-text">Exam Prep Resources</h4>
+                    <p className="stat-title blue-text">Exam Prep Resources</p>
                     <p className="stat-description">Extensive guides curated to strengthen every subject area</p>
                   </div>
                 </div>
@@ -181,7 +181,7 @@ export default function IgniteAchievements() {
                   <div className="stat-number blue-text">100%</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title blue-text">Better Grades Achieved</h4>
+                    <p className="stat-title blue-text">Better Grades Achieved</p>
                     <p className="stat-description">Targeted academic support to help you progress consistently</p>
                   </div>
                 </div>
@@ -191,7 +191,7 @@ export default function IgniteAchievements() {
                   <div className="stat-number teal-text">2K+</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title teal-text">Student Success Stories</h4>
+                    <p className="stat-title teal-text">Student Success Stories</p>
                     <p className="stat-description">Proven results shaped through goal-focused tutoring support</p>
                   </div>
                 </div>
@@ -245,13 +245,13 @@ export default function IgniteAchievements() {
               <div className="col-6">
                 <div className="stat-card-mobile">
                   <div className="stat-number blue-text">10+</div>
-                  <h4 className="stat-title-mobile blue-text">Years Of Experience</h4>
+                  <p className="stat-title-mobile blue-text">Years Of Experience</p>
                 </div>
               </div>
               <div className="col-6">
                 <div className="stat-card-mobile">
                   <div className="stat-number teal-text">1K+</div>
-                  <h4 className="stat-title-mobile teal-text">Exam Prep Resources</h4>
+                  <p className="stat-title-mobile teal-text">Exam Prep Resources</p>
                 </div>
               </div>
             </div>
@@ -261,13 +261,13 @@ export default function IgniteAchievements() {
               <div className="col-6">
                 <div className="stat-card-mobile">
                   <div className="stat-number blue-text">100%</div>
-                  <h4 className="stat-title-mobile blue-text">Better Grades Achieved</h4>
+                  <p className="stat-title-mobile blue-text">Better Grades Achieved</p>
                 </div>
               </div>
               <div className="col-6">
                 <div className="stat-card-mobile">
                   <div className="stat-number teal-text">2K+</div>
-                  <h4 className="stat-title-mobile teal-text">Student Success Stories</h4>
+                  <p className="stat-title-mobile teal-text">Student Success Stories</p>
                 </div>
               </div>
             </div>
@@ -413,7 +413,7 @@ export default function IgniteAchievements() {
           font-weight: 700;
           line-height: 1.2;
           margin: 0;
-          text-transform: uppercase;
+          //text-transform: uppercase;
         }
 
                 @media (min-width: 1900) {

@@ -252,12 +252,12 @@ const FreeDemo = ({ headerHeight }) => {
                         </div>
                     </div>
                     {/* OPTIMIZATION: Corrected 'class' to 'className' in the following divs */}
-                    <div className="container freedemo-curriculm">
+                    {/* <div className="container freedemo-curriculm">
 
                         <div className="column">
                             <div className="title">CURRICULUMS</div>
                             <div className="cards">
-                                {/* REPLACED div with CurriculumCard component */}
+                                
                                 <CurriculumCard defaultClass="light-green">
                                     <span className="check">✔</span> IB (MYP & IBDP)
                                 </CurriculumCard>
@@ -275,7 +275,7 @@ const FreeDemo = ({ headerHeight }) => {
                         <div className="column">
                             <div className="title tests">STANDARDISED TESTS</div>
                             <div className="cards">
-                                {/* REPLACED div with CurriculumCard component */}
+                               
                                 <CurriculumCard defaultClass="light-blue">
                                     <span className="check">✔</span> ACT
                                 </CurriculumCard>
@@ -285,6 +285,54 @@ const FreeDemo = ({ headerHeight }) => {
                                 <CurriculumCard defaultClass="light-blue" full>
                                     <span className="check">✔</span> UCAT
                                 </CurriculumCard>
+                            </div>
+                        </div>
+                    </div> */}
+                    <div className="container freedemo-curriculm">
+                        <div className="column">
+                            <div className="title">CURRICULUMS</div>
+                            <div className="cards">
+                                <a href="/ib-curriculum-tutors-in-dubai">
+                                    <CurriculumCard defaultClass="light-green">
+                                        <span className="check">✔</span> IB (MYP & IBDP)
+                                    </CurriculumCard>
+                                </a>
+                                <a href="/courses/igcse-tutors-in-dubai">
+                                    <CurriculumCard defaultClass="light-green">
+                                        <span className="check">✔</span> IGCSE
+                                    </CurriculumCard>
+                                </a>
+                                <a href="/courses/a-level-tutors-in-dubai" className="full">
+                                    <CurriculumCard defaultClass="light-green" full>
+                                        <span className="check">✔</span> A Levels
+                                    </CurriculumCard>
+                                </a>
+                                <a href="/courses/homeschooling-tutors-in-dubai" className="full">
+                                    <CurriculumCard defaultClass="light-green" full>
+                                        <span className="check">✔</span> Private Candidate (Homeschooling)
+                                    </CurriculumCard>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="column">
+                            <div className="title tests">STANDARDISED TESTS</div>
+                            <div className="cards">
+                                <a href="/act-tutors-in-dubai">
+                                    <CurriculumCard defaultClass="light-blue">
+                                        <span className="check">✔</span> ACT
+                                    </CurriculumCard>
+                                </a>
+                                <a href="/advanced-placements-tutors-in-dubai">
+                                    <CurriculumCard defaultClass="light-blue">
+                                        <span className="check">✔</span> AP
+                                    </CurriculumCard>
+                                </a>
+                                {/* Using "#" as no specific URL was provided for UCAT */}
+                                <a href="#" className="full">
+                                    <CurriculumCard defaultClass="light-blue" full>
+                                        <span className="check">✔</span> UCAT
+                                    </CurriculumCard>
+                                </a>
                             </div>
                         </div>
                     </div>

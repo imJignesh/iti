@@ -109,9 +109,9 @@ export default function CallToAction() {
         mobileImageContainer: {
             position: 'absolute',
             top: '-12vh',
-            left: '45%',
+            left: '50%',
             transform: 'translateX(-50%)',
-            width: '60%',
+            width: '70%',
             zIndex: 5,
         },
         mobileImage: {
@@ -119,7 +119,7 @@ export default function CallToAction() {
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
             width: '100%',
             objectFit: "cover",
-            width: "300px",
+            width: "100%",
             height: "auto"
         },
         mobileLayout: {
@@ -129,7 +129,7 @@ export default function CallToAction() {
             position: 'relative',
             padding: '1.5rem',
             justifyContent: 'flex-end',
-            paddingTop: '20vh'
+            paddingTop: '10rem'
         },
         mobileTextSection: {
             display: 'flex',
@@ -230,11 +230,11 @@ export default function CallToAction() {
                             <p style={styles.paragraph}>
                                 Explore our teaching approach and meet the mentors who make learning inspiring, structured, & impactful.
                             </p>
-                            <a href="https://ignitetraininginstitute.com/join-free-demo-class/" target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
+                            <a href="/about-us" target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
                                 <button
                                     style={{ ...styles.button }}
                                 >
-                                    <span>GET A FREE DEMO</span>
+                                    <span>Know More About Ignite</span>
                                     <div style={{ ...styles.buttonIcon }}>
                                         <ArrowRight size={20} />
                                     </div>

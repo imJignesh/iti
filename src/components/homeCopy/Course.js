@@ -10,7 +10,7 @@ const courseData = [
         title: "IBDP",
         label: "IBDP",
         subtitle: "International Baccalaureate Diploma Programme",
-        details: ["Total Courses: 5", "|", "Online & In-Person"],
+        details: ["Total Courses: 4", "|", "Online & In-Person"],
         img: "/images/course-bg1.webp",
         link: "/courses/ibdp-tutors-in-dubai",
     },

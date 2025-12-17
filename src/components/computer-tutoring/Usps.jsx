@@ -104,7 +104,7 @@ export default function Usps({ }) {
                 </h3>
 
                 <a
-                  href="/why-ignite/"
+                  href="/about-us/"
                   className={`${styles.uspBtn} fade-in-sections buttonSkyBlue`}
                   style={{ animationDelay: "0.5s" }}
                 >
