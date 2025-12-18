@@ -1,8 +1,19 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import GlobalPhoneInput from '../GlobalPhoneInput';
 
 export default function InfoCard() {
+  const handlePhoneChange = (value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      phone: value,
+    }));
+
+    if (errors.phone) {
+      setErrors(prevErrors => ({ ...prevErrors, phone: '' }));
+    }
+  };
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileButton, setIsMobileButton] = useState(false);
 
@@ -478,21 +489,11 @@ export default function InfoCard() {
                       {errors.email && <div className="invalid-feedback d-block fw-bold text-warning">{errors.email}</div>}
                     </div>
                     <div className="col-6">
-                      <input
-                        type="text"
-                        name="phone"
+                      <GlobalPhoneInput
                         value={formData.phone}
-                        onChange={handleChange}
-                        className="form-control bg-transparent text-white fw-semibold"
-                        placeholder="PH.NO"
-                        style={{
-                          border: "1.5px solid #FFFFFF",
-                          borderRadius: "40px",
-                          fontSize: "0.9rem",
-                          padding: "12px 15px",
-                        }}
+                        onChange={handlePhoneChange}
+                        error={errors.phone}
                       />
-                      {errors.phone && <div className="invalid-feedback d-block fw-bold text-warning">{errors.phone}</div>}
                     </div>
                   </div>
 

@@ -2,32 +2,27 @@
 
 import React, { useState, useEffect, useContext } from 'react';
 import { useRouter } from "next/navigation";
-
-// IMPORTANT: Update this path to where PopupContext is exported from (_app.js)
 import { PopupContext } from '../pages/_app';
-
 import Image from '@/components/CustomImageWrapper';
+import GlobalPhoneInput from './GlobalPhoneInput'; // Ensure the path to your new component is correct
+
 const POPUP_DELAY_MS = 10000;
 const HAS_SEEN_POPUP_KEY = 'hasSeenPopupSession';
 
 const DelayedPopup = () => {
-    // 1. Consume context for manual trigger state and its close function
     const { isManualOpen, closeManualPopup } = useContext(PopupContext);
-
     const router = useRouter();
 
-    // Renamed original state to track only the delayed visibility
     const [isDelayedVisible, setIsDelayedVisible] = useState(false);
     const [pageInfo, setPageInfo] = useState('');
 
     const isVisible = isDelayedVisible || isManualOpen;
 
-    // ... (rest of existing form data state)
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         phone: "",
-        curriculum: "", // Set initial value here
+        curriculum: "IB Diploma",
     });
 
     const [errors, setErrors] = useState({});
@@ -48,11 +43,9 @@ const DelayedPopup = () => {
                 const title = window.document.title || window.location.pathname;
                 setPageInfo(`URL: ${url} | Title/Path: ${title}`);
 
-
                 return () => clearTimeout(timer);
             }
 
-            // Get page info on client side load even if popup is suppressed
             const url = window.location.href;
             const title = window.document.title || window.location.pathname;
             setPageInfo(`URL: ${url} | Title/Path: ${title}`);
@@ -61,16 +54,11 @@ const DelayedPopup = () => {
 
     const closePopup = (e) => {
         if (e) e.preventDefault();
-
         if (!loading) {
-            // Close the internal delayed state
             setIsDelayedVisible(false);
-
-            // Reset the context state if it was manually opened
             if (isManualOpen) {
                 closeManualPopup();
             }
-
             setErrors({});
             setSubmissionStatus(null);
         }
@@ -82,9 +70,19 @@ const DelayedPopup = () => {
             ...prevData,
             [name]: value,
         }));
-
         if (errors[name]) {
             setErrors(prevErrors => ({ ...prevErrors, [name]: '' }));
+        }
+    };
+
+    // New handler for the GlobalPhoneInput to capture formattedValue
+    const handlePhoneChange = (formattedValue) => {
+        setFormData((prevData) => ({
+            ...prevData,
+            phone: formattedValue,
+        }));
+        if (errors.phone) {
+            setErrors(prevErrors => ({ ...prevErrors, phone: '' }));
         }
     };
 
@@ -103,14 +101,17 @@ const DelayedPopup = () => {
             newErrors.email = "Email address is invalid.";
             isValid = false;
         }
-        if (!formData.phone.trim()) {
+
+        // Updated validation for the formatted phone string
+        if (!formData.phone || !formData.phone.trim()) {
             newErrors.phone = "Phone number is required.";
             isValid = false;
-        } else if (!/^\d{6,15}$/.test(formData.phone.trim())) {
-            newErrors.phone = "Phone must be 6-15 digits.";
+        } else if (!/^[\d\s()+-]{6,20}$/.test(formData.phone.trim())) {
+            newErrors.phone = "Invalid phone format.";
             isValid = false;
         }
-        if (formData.curriculum === '-Select-') { // Ensure this matches a non-selectable option if you have one
+
+        if (formData.curriculum === '-Select-') {
             newErrors.curriculum = "Please select a curriculum.";
             isValid = false;
         }
@@ -123,27 +124,20 @@ const DelayedPopup = () => {
         e.preventDefault();
         setSubmissionStatus(null);
 
-        if (!validate()) {
-            return;
-        }
+        if (!validate()) return;
 
         setLoading(true);
 
         try {
             const dataToSend = {
-                name: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                curriculum: formData.curriculum,
+                ...formData,
                 pageinfo: pageInfo,
                 formType: 'POPUP_FORM',
             };
 
             const response = await fetch('/api/submit-form', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(dataToSend),
             });
 
@@ -151,9 +145,8 @@ const DelayedPopup = () => {
 
             if (response.ok && result.success) {
                 closePopup();
-
                 if (result.redirectUrl) {
-                    router.push(result.redirectUrl);
+                    window.location.href = result.redirectUrl;
                 } else {
                     router.push('/thank-you-default');
                 }
@@ -167,29 +160,23 @@ const DelayedPopup = () => {
         }
     };
 
-    if (!isVisible) {
-        return null;
-    }
+    if (!isVisible) return null;
 
     return (
         <div className="popupOverlay">
             <div className="popupContent">
-                <button
-                    className="closeButton"
-                    onClick={closePopup}
-                    disabled={loading}
-                >
+                <button className="closeButton" onClick={closePopup} disabled={loading}>
                     &times;
                 </button>
 
                 <form onSubmit={handleSubmit} className="popupForm">
                     <h3>Fuel Your Journey to Success!</h3>
                     <p>Register for a free consultation and study resources.</p>
+
                     {submissionStatus === 'error' && (
                         <p style={{ color: 'red', textAlign: 'center', fontWeight: 'bold' }}>Submission failed. Please try again.</p>
                     )}
 
-                    {/* Name */}
                     <label>Name</label>
                     <input
                         type="text"
@@ -197,44 +184,34 @@ const DelayedPopup = () => {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Enter your name"
-                        required
                         className="formInput"
                     />
-                    {errors.name && <p className="error-text" style={{ color: 'red', fontSize: '0.8rem', marginTop: '0.2rem' }}>{errors.name}</p>}
+                    {errors.name && <p className="error-text">{errors.name}</p>}
 
-                    {/* Email */}
                     <label>Email</label>
                     <input
-                        type="text"
+                        type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Enter your email"
-                        required
                         className="formInput"
                     />
-                    {errors.email && <p className="error-text" style={{ color: 'red', fontSize: '0.8rem', marginTop: '0.2rem' }}>{errors.email}</p>}
+                    {errors.email && <p className="error-text">{errors.email}</p>}
 
-                    {/* Phone */}
+                    {/* Updated Phone Field */}
                     <label>Phone</label>
-                    <input
-                        type="text"
-                        name="phone"
+                    <GlobalPhoneInput
                         value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="Enter phone number (digits only)"
-                        required
-                        className="formInput"
+                        onChange={handlePhoneChange}
+                        error={errors.phone}
                     />
-                    {errors.phone && <p className="error-text" style={{ color: 'red', fontSize: '0.8rem', marginTop: '0.2rem' }}>{errors.phone}</p>}
 
-                    {/* Curriculum (Dropdown) - Corrected options to use value property */}
                     <label>Curriculum</label>
                     <select
                         name="curriculum"
-                        value={formData.curriculum} // This controls which option is selected
+                        value={formData.curriculum}
                         onChange={handleChange}
-                        required
                         className="formInput"
                     >
                         <option value="IB Diploma">IB Diploma</option>
@@ -248,7 +225,7 @@ const DelayedPopup = () => {
                         <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
                         <option value="STEM (Others)">STEM (Others)</option>
                     </select>
-                    {errors.curriculum && <p className="error-text" style={{ color: 'red', fontSize: '0.8rem', marginTop: '0.2rem' }}>{errors.curriculum}</p>}
+                    {errors.curriculum && <p className="error-text">{errors.curriculum}</p>}
 
                     <button type="submit" className="formSubmitBtn buttonSkyBlue mainCardBtn" disabled={loading}>
                         <em>{loading ? 'Submitting...' : 'Submit'}</em>

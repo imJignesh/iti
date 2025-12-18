@@ -1,8 +1,47 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import GlobalPhoneInput from '../GlobalPhoneInput';
 
 export default function InfoCard() {
+
+
+  useEffect(() => {
+    const handleDropdownScroll = (e) => {
+      // Prevents Locomotive Scroll from catching the wheel/touch event
+      e.stopPropagation();
+    };
+
+    // We use a timeout to ensure the DOM element exists if it's rendered late
+    const timer = setTimeout(() => {
+      const countryList = document.querySelector('.country-list');
+      if (countryList) {
+        countryList.addEventListener('wheel', handleDropdownScroll, { passive: false });
+        countryList.addEventListener('touchmove', handleDropdownScroll, { passive: false });
+      }
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+      const countryList = document.querySelector('.country-list');
+      if (countryList) {
+        countryList.removeEventListener('wheel', handleDropdownScroll);
+        countryList.removeEventListener('touchmove', handleDropdownScroll);
+      }
+    };
+  }, []);
+  // Add this specific handler for phone
+  const handlePhoneChange = (value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      phone: value,
+    }));
+
+    if (errors.phone) {
+      setErrors(prevErrors => ({ ...prevErrors, phone: '' }));
+    }
+  };
+
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileButton, setIsMobileButton] = useState(false);
   const [pageInfo, setPageInfo] = useState('');
@@ -415,7 +454,7 @@ export default function InfoCard() {
 
                   <input type="hidden" name="pageinfo" value="" />
                   <h2
-                    className="fw-bold text-uppercase mb-4 fade-in-section text-center form-heading"
+                    className="fw-bold text-uppercase mb-4  text-center form-heading"
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat
@@ -435,7 +474,7 @@ export default function InfoCard() {
                   )}
 
                   <div
-                    className="mb-3 fade-in-section"
+                    className="mb-3 "
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat
@@ -459,7 +498,7 @@ export default function InfoCard() {
                   </div>
 
                   <div
-                    className="row g-2 mb-3 fade-in-section"
+                    className="row g-2 mb-3 "
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat
@@ -482,29 +521,26 @@ export default function InfoCard() {
                       />
                       {errors.email && <div className="invalid-feedback d-block fw-bold text-warning">{errors.email}</div>}
                     </div>
-                    <div className="col-6">
-                      <input
-                        type="text"
-                        name="phone"
+                    {/* <div className="col-6">
+                      <GlobalPhoneInput
                         value={formData.phone}
-                        onChange={handleChange}
-                        className="form-control bg-transparent text-white fw-semibold"
-                        placeholder="PH.NO"
-                        style={{
-                          border: "1.5px solid #FFFFFF",
-                          borderRadius: "40px",
-                          fontSize: "0.9rem",
-                          padding: "12px 15px",
-                        }}
+                        onChange={handlePhoneChange}
+                        error={errors.phone}
                       />
-                      {errors.phone && <div className="invalid-feedback d-block fw-bold text-warning">{errors.phone}</div>}
+                    </div> */}
+                    <div className="col-6">
+                      <GlobalPhoneInput
+                        value={formData.phone}
+                        onChange={handlePhoneChange}
+                        error={errors.phone}
+                      />
                     </div>
                   </div>
 
 
                   {/* --- NEW GRADE FIELD HERE --- */}
                   <div
-                    className="mb-3 fade-in-section"
+                    className="mb-3 "
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat
@@ -529,7 +565,7 @@ export default function InfoCard() {
                   {/* --- NEW GRADE FIELD HERE --- */}
 
                   <div
-                    className="mb-3 fade-in-section"
+                    className="mb-3 "
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat
@@ -554,7 +590,7 @@ export default function InfoCard() {
 
 
                   <div
-                    className="mb-4 fade-in-section"
+                    className="mb-4 "
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat
