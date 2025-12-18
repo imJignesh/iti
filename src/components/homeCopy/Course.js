@@ -64,7 +64,7 @@ const Course = () => {
                     <div
                         data-scroll
                         data-scroll-class="is-inview"
-                        data-scroll-repeat="true"
+                        data-scroll-repeat="false"
                         className="fade-in-section"
                         style={{ animationDelay: "0.1s" }}
                     >
@@ -74,7 +74,7 @@ const Course = () => {
                     <div
                         data-scroll
                         data-scroll-class="is-inview"
-                        data-scroll-repeat="true"
+                        data-scroll-repeat="false"
                         className="fade-in-section"
                         style={{ animationDelay: "0.25s" }}
                     >
@@ -86,7 +86,7 @@ const Course = () => {
                     <div
                         data-scroll
                         data-scroll-class="is-inview"
-                        data-scroll-repeat="true"
+                        data-scroll-repeat="false"
                         className="fade-in-section"
                         style={{ animationDelay: "0.4s" }}
                     >
