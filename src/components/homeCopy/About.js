@@ -45,7 +45,12 @@ const About = () => {
           {/* Global Bootstrap class used as string, local class used with styles */}
           <div className={`col-12 col-lg-6 ${styles.aboutLeft}`}>
             {/*  Apply local module class */}
-            <div className={styles.aboutImageWrap}>
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className={`fade-in-section ${styles.aboutImageWrap}`}
+            >
               <div>
                 {/*  Apply local module class */}
                 <img
@@ -93,10 +98,10 @@ const About = () => {
               />
               {/*  Apply local module classes */}
               <div
-                data-scroll
-                data-scroll-class="is-clipped"
-                data-scroll-repeat="true"
-                data-scroll-offset="-10%"
+                // data-scroll
+                // data-scroll-class="is-clipped"
+                // data-scroll-repeat="true"
+                // data-scroll-offset="-10%"
                 className={`${styles.statCard} ${styles.statCardYears}`}
               >
                 {/*  Apply local module classes */}
@@ -106,10 +111,10 @@ const About = () => {
                 </div>
               </div>
               <div
-                data-scroll
-                data-scroll-class="is-clipped"
-                data-scroll-repeat="true"
-                data-scroll-offset="-10%"
+                // data-scroll
+                // data-scroll-class="is-clipped"
+                // data-scroll-repeat="true"
+                // data-scroll-offset="-10%"
                 className={`${styles.statCard} ${styles.statCardResources}`}
               >
                 {/*  Apply local module classes */}
@@ -120,10 +125,10 @@ const About = () => {
               </div>
               {/*  Apply local module class */}
               <div
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className={`${styles.verticalLabel} fade-in-section`}
+                // data-scroll
+                // data-scroll-class="is-inview"
+                // data-scroll-repeat="true"
+                className={`${styles.verticalLabel} `}
                 style={{ animationDelay: "0.8s" }}
               >
                 <span>4.9</span> RATED ON GOOGLE
