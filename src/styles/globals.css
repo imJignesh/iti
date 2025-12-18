@@ -159,6 +159,7 @@ option {
 /* Default Desktop State */
 .fade-in-section {
   opacity: 0;
+  visibility: hidden;
   transform: translateY(80px);
   /* Desktop start position */
   transition: opacity 0.8s, transform 0.8s;
@@ -167,6 +168,7 @@ option {
 /* FIX: Mobile Override (Must set the transform to a small, non-zero value) */
 @media (max-width: 575px) {
   .fade-in-section {
+    visibility: hidden;
     transform: translateY(20px);
     /* Reduced mobile start position */
   }
@@ -390,6 +392,9 @@ option {
 /* When Locomotive Scroll adds the is-inview class, the animation starts */
 .is-inview.fade-in-section {
   animation: fadeInUp 0.8s 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 @keyframes fadeInUp {
