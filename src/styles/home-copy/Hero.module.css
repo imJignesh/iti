@@ -363,6 +363,14 @@ body.is-bot-detected [data-scroll-section] {
     padding-bottom: 30px;
   }
 
+  .mobileHeroVisible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    /* Ensure the clip-path animation still runs */
+    transition: opacity 0.5s ease-in !important;
+  }
+
   .videoContainer {
     position: relative;
     width: 100vw;

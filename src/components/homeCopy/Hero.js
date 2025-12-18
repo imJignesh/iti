@@ -57,7 +57,8 @@ const Hero = () => {
         'data-scroll-class': 'is-inview',
         'data-scroll-repeat': 'true'
     };
-
+    const visibilityClass = isMobile ? styles.mobileHeroVisible : "";
+    const fadeInClass = isMobile === false ? "fade-in-section" : "";
     return (
         // Apply data-scroll-section conditionally
         <section className={`${styles.hero} revealClipRightToLeft ${styles.homeherosection} `} {...scrollSectionAttr}>
@@ -65,13 +66,13 @@ const Hero = () => {
                 {/* Apply data-scroll attributes conditionally */}
                 <div
                     {...scrollRevealAttr}
-                    className="fade-in-section"
+                    className={`${fadeInClass} ${visibilityClass}`}
                 >
                     <div className={`row ${styles.heroMain}`}>
-                        <div className={`col-12 col-lg-7 col-xl-7 pe-5 ${styles.heroLeft}`}>
+                        <div className={`col-12 col-lg-7 col-xl-7 pe-5 ${styles.heroLeft} ${visibilityClass}`}>
                             <div
                                 {...scrollRevealAttr}
-                                className={`fade-in-section ${styles.heroMainHeading} ${mobileClass}`}
+                                className={`${fadeInClass} ${styles.heroMainHeading} ${mobileClass}`}
                                 style={{ animationDelay: "0.4s" }}
                             >
                                 <h2 className={styles.SubHeading}>BEST TUTORS IN UAE</h2>
@@ -79,7 +80,7 @@ const Hero = () => {
 
                             <div
                                 {...scrollRevealAttr}
-                                className="fade-in-section"
+                                className={fadeInClass}
                                 style={{ animationDelay: "0.6s" }}
                             >
                                 {renderTitle()}
@@ -87,7 +88,7 @@ const Hero = () => {
 
                             <div
                                 {...scrollRevealAttr}
-                                className="fade-in-section"
+                                className={fadeInClass}
                                 style={{ animationDelay: "0.8s" }}
                             >
                                 <div className={styles.heroParagraph}>

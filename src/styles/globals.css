@@ -66,7 +66,7 @@ section.padding-0 {
 }
 
 option {
-  background-color: #FFF !important;
+  background-color: #fff !important;
   color: #000 !important;
 }
 
@@ -86,7 +86,17 @@ option {
   }
 }
 
+.react-phone-input-2 .country-list {
+  z-index: 99999 !important;
+  /* Reset pointer events to ensure it's interactive */
+  pointer-events: all !important;
+  overflow-y: auto !important;
+}
 
+/* Optional: Style the search field if you enable it */
+.react-phone-input-2 .search-box {
+  color: #333 !important;
+}
 
 
 /* Add this to your global CSS file for positioning and styling */
@@ -161,19 +171,30 @@ option {
 .fade-in-section {
   opacity: 0;
   visibility: hidden;
+  /* <--- Crucial: Stops the element from appearing before JS is ready */
   transform: translateY(80px);
-  /* Desktop start position */
-  transition: opacity 0.8s, transform 0.8s;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.8s;
 }
 
-/* FIX: Mobile Override (Must set the transform to a small, non-zero value) */
+/* Your existing Mobile Override */
 @media (max-width: 575px) {
   .fade-in-section {
-    visibility: hidden;
     transform: translateY(20px);
-    /* Reduced mobile start position */
+    /* Keep visibility hidden here too */
+    visibility: hidden;
   }
 }
+
+/* --- TRIGGER STATE --- */
+.is-inview.fade-in-section {
+  opacity: 1;
+  visibility: visible;
+  /* <--- Shows the element once Locomotive confirms it's in view */
+  transform: translateY(0);
+}
+
 
 
 /* SUB-HEADING STYLES (No changes needed) */
@@ -393,9 +414,6 @@ option {
 /* When Locomotive Scroll adds the is-inview class, the animation starts */
 .is-inview.fade-in-section {
   animation: fadeInUp 0.8s 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
 }
 
 @keyframes fadeInUp {
