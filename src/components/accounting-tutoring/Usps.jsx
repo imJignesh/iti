@@ -80,7 +80,7 @@ export default function Usps({ }) {
       >
         <div
           // Apply local module class: styles.uspSection
-          className={`fade-in-sections ${styles.uspSection}`}
+          className={`fade-in-section ${styles.uspSection}`}
           style={{ animationDelay: "0.2s" }}
         >
           <div className="row justify-content-between gx-5">
@@ -94,7 +94,7 @@ export default function Usps({ }) {
                 data-scroll-target={`.${styles.uspSection}`} // Target the module class
               >
                 <h2
-                  className="fade-in-sections SubHeading mb-0"
+                  className="fade-in-section SubHeading mb-0"
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
@@ -102,7 +102,7 @@ export default function Usps({ }) {
 
                 <h3
                   // Apply local module class: styles.uspTitle
-                  className={`fade-in-sections ${styles.uspTitle} mb-0`}
+                  className={`fade-in-section ${styles.uspTitle} mb-0`}
                   style={{ animationDelay: "0.2s" }}
                 >
                   What Do Students Get From Ignite's French Support?
@@ -114,7 +114,7 @@ export default function Usps({ }) {
                 <a
                   href="/about-us/"
                   // Apply local module class: styles.uspBtn, and global class: buttonSkyBlue
-                  className={`${styles.uspBtn} fade-in-sections buttonSkyBlue`}
+                  className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE ABOUT IGNITE{" "}
@@ -136,7 +136,7 @@ export default function Usps({ }) {
                   <div key={index} className={styles.uspSlide}>
                     {row.map((usp, i) => (
                       // Apply local module class: styles.uspItem
-                      <div key={i} className={styles.uspItem}>
+                      <div key={i} className={`fade-in-section ${styles.uspItem}`}>
                         <div className={styles.uspNumber}>{usp.number}</div>
                         <div className={styles.uspIconCircle}>
                           <img

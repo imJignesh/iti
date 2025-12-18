@@ -77,7 +77,7 @@ export default function Usps({ }) {
         // data-scroll
         // data-scroll-class="is-inview"
         // data-scroll-repeat="true"
-        className="fade-in-sections uspSection"
+        className="fade-in-section uspSection"
         style={{ animationDelay: "0.2s" }}
       >
         <div className="row justify-content-between">
@@ -87,7 +87,7 @@ export default function Usps({ }) {
                 // data-scroll
                 // data-scroll-class="is-inview"
                 // data-scroll-repeat="true"
-                className="fade-in-sections SubHeading"
+                className="fade-in-section SubHeading"
                 style={{ animationDelay: "0.1s" }}
               >
                 OUR USP'S
@@ -97,7 +97,7 @@ export default function Usps({ }) {
                 // data-scroll
                 // data-scroll-class="is-inview"
                 // data-scroll-repeat="true"
-                className="fade-in-sections uspTitle"
+                className="fade-in-section uspTitle"
                 style={{ animationDelay: "0.2s" }}
               >
                 LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING
@@ -107,7 +107,7 @@ export default function Usps({ }) {
                 // data-scroll
                 // data-scroll-class="is-inview"
                 // data-scroll-repeat="true"
-                className="fade-in-sections uspSubtitle"
+                className="fade-in-section uspSubtitle"
                 style={{ animationDelay: "0.3s" }}
               >
                 LOREM IPSUM DOLOR SIT AMET
@@ -130,7 +130,7 @@ export default function Usps({ }) {
                 // data-scroll
                 // data-scroll-class="is-inview"
                 // data-scroll-repeat="true"
-                className="uspBtn fade-in-sections buttonSkyBlue"
+                className="uspBtn fade-in-section buttonSkyBlue"
                 style={{ animationDelay: "0.5s" }}
                 type="button"
               >

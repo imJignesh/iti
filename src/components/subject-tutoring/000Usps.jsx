@@ -178,7 +178,7 @@ export default function Usps({ }) {
             {uspDataRows.map((row, index) => (
               <SwiperSlide key={index} className={styles.uspSlide}>
                 {row.map((usp, i) => (
-                  <div key={i} className={styles.uspItem}>
+                  <div key={i} className={`fade-in-section ${styles.uspItem}`}>
                     <div className={styles.uspNumber}>{usp.number}</div>
                     <div className={styles.uspIconCircle}>
                       <img

@@ -103,10 +103,14 @@ export default function Usps({ }) {
       <div
         // Global classes: usp-section and sp-container (assuming sp-container is now in globals.css)
         className="usp-section sp-container"
+
       >
         <div
           // Apply local module class
-          className={`fade-in-sections ${styles.uspSection}`}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+          className={`fade-in-section ${styles.uspSection}`}
           style={{ animationDelay: "0.2s" }}
         >
           {/* Global Bootstrap classes used as strings */}
@@ -118,7 +122,7 @@ export default function Usps({ }) {
                 {...getStickyProps()}
               >
                 <h2
-                  className="fade-in-sections SubHeading"
+                  className="fade-in-section SubHeading"
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
@@ -129,7 +133,7 @@ export default function Usps({ }) {
 
                 <h3
                   // Apply local module class
-                  className={`fade-in-sections ${styles.uspTitle}`}
+                  className={`fade-in-section ${styles.uspTitle}`}
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
@@ -141,7 +145,7 @@ export default function Usps({ }) {
 
                 <h4
                   // Apply local module class
-                  className={`fade-in-sections ${styles.uspSubtitle}`}
+                  className={`fade-in-section ${styles.uspSubtitle}`}
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
@@ -177,7 +181,7 @@ export default function Usps({ }) {
                 <a
                   href="/about-us/"
                   // Apply local module class and global classes
-                  className={`${styles.uspBtn} fade-in-sections buttonSkyBlue`}
+                  className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
@@ -204,7 +208,8 @@ export default function Usps({ }) {
                       <div
                         key={i}
                         // Apply local module class
-                        className={styles.uspItem}
+                        // className={`fade-in-section ${styles.uspItem}`}
+                        className={`fade-in-section ${styles.uspItem}`}
                         data-scroll
                         data-scroll-class="is-inview"
                         data-scroll-repeat="true"

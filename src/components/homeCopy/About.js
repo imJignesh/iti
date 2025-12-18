@@ -11,6 +11,18 @@ const About = () => {
   const targetRate = 89;
   const duration = 2000;
   const steps = 50;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth <= 991);
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
 
   // --- Omitted Count Animation Logic ---
 
@@ -19,7 +31,14 @@ const About = () => {
     <section className={styles.aboutSection}>
       <div className="container">
         {/* Global Class used as string */}
-        <div className={styles.aboutHeading}>
+        <div
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+          style={{ animationDelay: "0.1s" }}
+          className={`${styles.aboutHeading} fade-in-section`}
+
+        >
           <h2 className="SubHeading">ABOUT IGNITE</h2>
         </div>
         <div className={`row ${styles.aboutSectionInner}`}>
@@ -176,22 +195,32 @@ const About = () => {
                   </div>
                 </div>
               </div>
+
+
             </div>
 
 
-            <a href="/join-free-demo-class/" className="nodecoration mobile-mt-2">
-              {/* Global classes used as strings */}
-              <button className="buttonSkyBlue mainCardBtn">
-                GET A FREE DEMO{" "}
-                <Image
-                  src="/images/right-arrow-blue.webp"
-                  width={40}
-                  height={40}
-                  quality={100}
-                  loading="lazy"
-                />
-              </button>
-            </a>
+            <span
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className={`fade-in-section ${styles.aboutDesc}`}
+              style={{ animationDelay: "0.3s", paddingTop: isMobile ? '20px' : '' }}
+            >
+              <a href="/join-free-demo-class/" className="nodecoration mobile-mt-2">
+                {/* Global classes used as strings */}
+                <button className="buttonSkyBlue mainCardBtn">
+                  GET A FREE DEMO{" "}
+                  <Image
+                    src="/images/right-arrow-blue.webp"
+                    width={40}
+                    height={40}
+                    quality={100}
+                    loading="lazy"
+                  />
+                </button>
+              </a>
+            </span>
           </div>
         </div>
       </div>

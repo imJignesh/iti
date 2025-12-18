@@ -78,7 +78,7 @@ export default function Usps({ }) {
         className="usp-section sp-container"
       >
         <div
-          className={`fade-in-sections ${styles.uspSection}`}
+          className={`fade-in-section ${styles.uspSection}`}
           style={{ animationDelay: "0.2s" }}
         >
           <div className="row justify-content-between gx-5">
@@ -90,14 +90,14 @@ export default function Usps({ }) {
                 data-scroll-target={`.${styles.uspSection}`}
               >
                 <h2
-                  className="fade-in-sections SubHeading mb-0"
+                  className="fade-in-section SubHeading mb-0"
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
                 </h2>
 
                 <h3
-                  className={`fade-in-sections ${styles.uspTitle} mb-0`}
+                  className={`fade-in-section ${styles.uspTitle} mb-0`}
                   style={{ animationDelay: "0.2s" }}
                 >
                   What Do Students Get From Ignite's English Support?
@@ -105,7 +105,7 @@ export default function Usps({ }) {
 
                 <a
                   href="/about-us/"
-                  className={`${styles.uspBtn} fade-in-sections buttonSkyBlue`}
+                  className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE ABOUT IGNITE{" "}
@@ -124,7 +124,7 @@ export default function Usps({ }) {
                 {uspDataRows.map((row, index) => (
                   <div key={index} className={styles.uspSlide}>
                     {row.map((usp, i) => (
-                      <div key={i} className={styles.uspItem}>
+                      <div key={i} className={`fade-in-section ${styles.uspItem}`}>
                         <div className={styles.uspNumber}>{usp.number}</div>
                         <div className={styles.uspIconCircle}>
                           <img

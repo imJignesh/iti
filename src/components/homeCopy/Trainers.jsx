@@ -743,38 +743,50 @@ export default function Trainers() {
               </div>
             ) : (
               <>
-                <div className="trainersGrid" ref={trainersGridRef}>
+                <div
+                  className="trainersGrid"
+                  ref={trainersGridRef}
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                >
                   {displayTrainers.map((t, i) => (
                     <div
-                      key={i}
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat="true"
-                      className="fade-in-section"
-                      style={{ animationDelay: `${0.3 + i * 0.05}s` }}
+                      key={`${t.name}-${i}`}
+                      className="trainer-animate-item"
+                      /* We use a simple CSS delay based on index for the stagger effect */
+                      style={{ animationDelay: `${(i % 4) * 0.1}s` }}
                     >
                       <TrainerCard trainer={t} />
                     </div>
                   ))}
                 </div>
+                <div
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat="true"
+                  className="fade-in-section"
+                  style={{ animationDelay: "0.3s" }}
+                >
+                  {trainers.length > 10 && (
+                    !showAll ? (
+                      <button
+                        onClick={handleSeeMore}
+                        className="trainersSeeMore"
+                      >
+                        SEE MORE
+                      </button>
+                    ) : (
+                      <button
+                        onClick={handleSeeLess}
+                        className="trainersSeeLess"
+                      >
+                        SEE LESS
+                      </button>
+                    )
+                  )}
+                </div>
 
-                {trainers.length > 10 && (
-                  !showAll ? (
-                    <button
-                      onClick={handleSeeMore}
-                      className="trainersSeeMore"
-                    >
-                      SEE MORE
-                    </button>
-                  ) : (
-                    <button
-                      onClick={handleSeeLess}
-                      className="trainersSeeLess"
-                    >
-                      SEE LESS
-                    </button>
-                  )
-                )}
               </>
             )}
           </div>
