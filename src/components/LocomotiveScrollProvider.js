@@ -87,7 +87,7 @@ const LocomotiveScrollProvider = ({ children }) => {
 
             // On mobile, shrink the detection viewport by 15% on the top and bottom.
             // This creates a large, stable area where elements are considered "in-view."
-            const rootMarginValue = isMobileView ? '-15% 0px -15% 0px' : '0px';
+            const rootMarginValue = isMobileView ? '-5% 0px -5% 0px' : '0px';
 
             const scroll = new LocomotiveScroll({
                 el: scrollRef.current,
