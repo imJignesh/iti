@@ -234,6 +234,30 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
             }
 
             /* Responsive styles using custom class targeting */
+            @media (min-width: 350px) {
+                .custom-flag-container img {
+                    width:20px
+                }
+                .native-select-overlay {
+                    width: 25px;
+                    left:10px;
+                }
+                .custom-flag-container {
+                    width: 20px;
+                    justify-content: flex-start;
+                    left:10px
+                }
+                :global(.form-control){
+                    padding: 10px 0 10px 35px !important;
+                    font-size: .8rem !important;
+                }
+                :global(.form-control::placeholder) {
+                    color: #FFFFFF !important;
+                    font-size: .8rem !important;
+                }
+            }
+
+
             @media (min-width: 992px) {
                 :global(.react-tel-input .form-control) {
                     padding: 10px 15px 10px 60px !important;
