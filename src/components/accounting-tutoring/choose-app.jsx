@@ -5,6 +5,7 @@ const IBCurriculumStages = () => {
   return (
     <div>
 
+
       <section className="">
         <div className="container">
           <div className="achievementsHeadings">
