@@ -353,7 +353,11 @@ export default function InfoCard() {
                 At Ignite, we provide year-round academic support through engaging, concept-driven MYP tutoring & expertly designed study resources, empowering students to approach their MYP exams with clarity & confidence.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              >
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

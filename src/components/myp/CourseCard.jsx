@@ -57,17 +57,30 @@ function CourseCard() {
 
   return (
     <>
-      <div className="px-3 fade-in-section desktop-version">
-        <div className="container" style={{ maxWidth: "74.166vw" }}>
+      <div className="px-3 fade-in-section desktop-version"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true"
+      >
+        <div className="container" style={{ maxWidth: "74.166vw", animationDelay: "0.5s" }}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+        >
           {/* Header Section */}
-          <div className="text-center mb-5 fade-in-section">
+          <div className="text-center mb-5 fade-in-section"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+
+          >
             <div className="testHeadings">
               <div
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section"
-                style={{ animationDelay: "0.1s" }}
+
               >
                 <h2 className="SubHeading testSubheading">courses
                 </h2>
@@ -77,7 +90,7 @@ function CourseCard() {
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                style={{ fontSize: "2rem" }}
               >
                 Learning Starts Here With <br /><span className="highlight"> Tailored </span> MYP Courses
               </h3>
@@ -86,6 +99,10 @@ function CourseCard() {
 
           {/* Desktop Accordion */}
           <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
             style={{
               borderRadius: "30px",
               overflow: "hidden",
@@ -125,7 +142,7 @@ function CourseCard() {
                   onClick={() => toggleAccordion(index)}
                 >
                   <h3
-                    className="gradient-text py-3 text-uppercase mb-0"
+                    className="gradient-text mb-0 py-3 text-uppercase"
                     style={{
                       transform: hoveredIndex === index ? 'translateX(10px)' : 'translateX(0)',
                       transition: 'transform 0.3s ease-out',
@@ -153,7 +170,7 @@ function CourseCard() {
                     color: "#374151",
                     fontSize: "0.95rem",
                     overflow: "hidden",
-                    // Smooth transition properties (removed animation property)
+                    // Smooth transition properties
                     maxHeight: activeIndex === index ? "1000px" : "0", // Large max-height for open state
                     opacity: activeIndex === index ? 1 : 0,
                     transition: "max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-in-out",
@@ -232,7 +249,7 @@ function CourseCard() {
                       >
                         <img
                           src="/assets/corsebg.webp"
-                          alt="Students studying together"
+                          alt="ibdp tutor in dubai"
                           className="img-fluid image1"
                           style={{
                             height: "400px",
@@ -254,7 +271,11 @@ function CourseCard() {
       </div>
 
       {/* Mobile Version */}
-      <div className="mobile-version py-4 px-3">
+      <div className="mobile-version py-4 px-3 fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true"
+      >
         <div className="">
           {/* Mobile Header */}
           <div className="text-center mb-4">
@@ -285,6 +306,7 @@ function CourseCard() {
             {accordionItems.map((item, index) => (
               <div key={index} className="mb-3">
                 {/* Mobile Card Header */}
+                {/* Always render the header */}
                 <div
                   className="mobile-card-header d-flex justify-content-between align-items-center p-4"
                   style={{
@@ -365,7 +387,7 @@ function CourseCard() {
                   className="mobile-expanded-content"
                   style={{
                     overflow: "hidden",
-                    // Smooth transition properties (removed animation property)
+                    // Smooth transition properties
                     maxHeight: activeIndex === index ? "1200px" : "0", // Large max-height for open state
                     transition: "max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
                     marginTop: activeIndex === index ? "12px" : "0", // Add conditional margin-top
@@ -558,7 +580,7 @@ function CourseCard() {
         }
         
         /* --- REMOVED: slideDown, expandCard, slideInLeft/Right/Up, fadeInUp, expandWidth KEYFRAMES --- */
-        /* They are replaced by CSS transitions on max-height/opacity in the component */
+        /* They are replaced by CSS transitions on max-height */
 
         .image1{
           border-radius:30px !important;
@@ -608,15 +630,14 @@ function CourseCard() {
 
         /* Responsive adjustments */
         @media (max-width: 576px) {
-        .mobile-version {
-            padding-top:0 !important;
-            padding-bottom:0 !important;
-          }
           .mobile-card-header {
             padding: 1rem !important;
             min-height: 70px !important;
           }
-          
+          .mobile-version {
+            padding-top:0 !important;
+            padding-bottom:0 !important;
+          }
           .mobile-card-header span:first-child {
             font-size: 1.5rem !important;
           }

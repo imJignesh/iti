@@ -159,7 +159,10 @@ export default function IgniteAchievements() {
               </div>
 
               {/* CTA Button */}
-              <div className="mb-4">
+              <div className="mb-4 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <button
                   className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                   style={{
@@ -176,10 +179,7 @@ export default function IgniteAchievements() {
                 >
                   GET FREE DEMO
                   <div
-                    className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat
+                    className="custom-height rounded-circle d-flex align-items-center justify-content-center"
                     style={{
                       width: "2.5rem",
                       height: "2.5rem",
