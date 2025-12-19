@@ -6,14 +6,16 @@ export default function Accordion() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="card mx-auto">
+    <div className="card mx-auto fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat>
       {/* Header Row */}
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Expert English Tutor In Dubai UAE For Academic Confidence</h2>
-          <p className="subtitle">
-            At Ignite Training Institute, our expert English tutors in Dubai, UAE provide personalized learning that strengthens core language skills and boosts student confidence. Whether it’s grammar, comprehension, writing, or literature, we tailor lessons to suit each learner’s pace and goals. Our proven methods help students express themselves better, excel in school, and grow more confident in English. From international school support to entrance exam prep, we ensure high-quality outcomes.</p>
-        </div>
+          <h3 className="subtitle">
+            At Ignite Training Institute, our expert English tutors in Dubai, UAE provide personalized learning that strengthens core language skills and boosts student confidence. Whether it’s grammar, comprehension, writing, or literature, we tailor lessons to suit each learner’s pace and goals. Our proven methods help students express themselves better, excel in school, and grow more confident in English. From international school support to entrance exam prep, we ensure high-quality outcomes.</h3>        </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
 

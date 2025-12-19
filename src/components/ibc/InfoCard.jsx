@@ -330,7 +330,10 @@ export default function InfoCard() {
               </div>
 
               <p
-                className="text-white mb-4"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                className="text-white mb-4 fade-in-section"
                 style={{
                   maxWidth: "750px",
                   fontSize: "1.2rem",
@@ -343,7 +346,11 @@ export default function InfoCard() {
                 We provide comprehensive academic support through our customized IB curriculum courses, giving students access to high-end learning with experienced & certified IB tutors across various IB subjects.
               </p>
 
-              <div className="buttonf">
+              <div className="buttonf fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+              >
                 <a
                   href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai/"
                   style={{ textDecoration: "none" }}
@@ -605,7 +612,10 @@ export default function InfoCard() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    className="fade-in-section btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
                     style={{
                       background: "transparent",
                       color: "white",
@@ -614,6 +624,7 @@ export default function InfoCard() {
                       border: "1.5px solid rgba(255, 255, 255, 0.7)",
                       borderRadius: "40px",
                       transition: "all 0.3s ease",
+                      animationDelay: "0.85s"
                     }}
                   >
                     {loading ? 'SUBMITTING...' : 'SUBMIT'}
@@ -1145,8 +1156,8 @@ margin-block: 30px !important;
         @media (max-width: 991.98px) {
           .position-relative.overflow-hidden {
             position: relative;
-            background-image: url("/assets/moibrect1.png") !important;
-            background-size: contain !important;
+            background-image: url("/assets/ib-bg.webp") !important;
+            background-size: cover !important;
             background-position: top !important;
             background-repeat: no-repeat;
           }
@@ -1191,14 +1202,14 @@ margin-block: 30px !important;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.60);
+            //background: rgba(0, 0, 0, 0.60);
             z-index: 1;
           }
 
-.position-absolute.top-0.start-0.w-100.h-100 {
-  display: block !important;
-  background: transparent !important; /* no background */
-}
+        .position-absolute.top-0.start-0.w-100.h-100 {
+          display: block !important;
+          background: transparent !important; /* no background */
+        }
 
           .row.g-0.h-100 {
             flex-direction: column !important;

@@ -161,17 +161,21 @@ export default function Testimonial({ }) {
             src="/images/star-review.png"
             alt="ibdp tutor in dubai"
             data-scroll
-            data-scroll-class="is-clipped"
+            data-scroll-class="is-inview"
             data-scroll-repeat="true"
             data-scroll-offset="-10%"
-            className={styles.starReview}
+            className={`fade-in-section ${styles.starReview}`}
             style={{ animationDelay: "0.5s" }}
             width={250}
             height={80}
           />
         </div>
 
-        <div className={styles.testimonialSliderWrap}>
+        <div className={`fade-in-section ${styles.testimonialSliderWrap}`}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+        >
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             loop={true}

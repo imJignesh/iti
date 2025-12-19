@@ -6,7 +6,10 @@ export default function Accordion() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="card mx-auto">
+    <div className="card mx-auto fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat>
       {/* Header Row */}
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">

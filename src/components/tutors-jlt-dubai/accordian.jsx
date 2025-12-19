@@ -6,16 +6,18 @@ export default function Accordion() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="card mx-auto">
+    <div className="card mx-auto fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat>
       {/* Header Row */}
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Tutors In JLT Dubai For Academic Excellence & Exam Support</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             At Ignite Training Institute, our tutors in Dubai JLT provide targeted academic support tailored to each student’s learning style and pace.<br />
             Whether it’s bridging gaps in understanding or pushing for top scores, our experienced educators are committed to academic excellence. With a student-first approach, we help learners build strong subject foundations and critical thinking skills. Our tutors don’t just teach, they mentor, guide, and inspire. From homework help to exam prep, every session is designed for meaningful progress. Let your child thrive with the right academic backing.
-          </p>
-
+          </h3>
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
@@ -24,38 +26,34 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">Top-Rated Tuition Centre In JLT Dubai For IBDP, IB MYP, IGCSE, & A-Levels</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             As a top-rated tuition centre in JLT Dubai, Ignite offers expert tutoring across major curricula including IB, IGCSE, A-Levels, and more.<br />
             We understand that each academic path is unique, and our structured programs are designed to support students accordingly. With small class sizes and focused instruction, learners get the attention they deserve. Our holistic approach covers concept mastery, exam strategies, and academic confidence. Trusted by parents and loved by students, our centre is known for consistent performance improvements. Let us support your child through every academic milestone.
-          </p>
-
+          </h3>
           <br />
 
 
           <h2 className="title">Personalized Coaching Centre In JLT Dubai For Exam Prep & Success</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             Ignite’s coaching centre in JLT Dubai prioritizes personalised learning that adapts to each student’s academic strengths, challenges, and goals.<br />
             Our experienced faculty designs lesson plans around exam patterns and syllabus requirements, while also focusing on time management and stress reduction techniques. Whether your child needs intensive revision or ongoing academic support, we offer flexible coaching solutions that fit every need. Our sessions empower students to master their subjects and walk into exams with confidence. Experience the power of tutoring that’s truly student-focused.
-          </p>
-
+          </h3>
           <br />
 
 
           <h2 className="title">Trusted Tuition Center In Motor City For Assured Better Results</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             Ignite’s Motor City branch brings the same trusted educational support to a new location.<br />
             As a leading tuition center, we provide comprehensive tutoring solutions that drive real academic results. Our expert tutors understand curriculum demands and tailor lessons to suit different boards and levels. With interactive sessions, real-time progress tracking, and one-on-one attention, students stay motivated and on track. We focus not just on grades, but on helping students become independent, confident learners. For families in Motor City, academic excellence is now closer than ever.
-          </p>
-
+          </h3>
           <br />
 
 
           <h2 className="title">How Ignite’s Tutors In JLT Dubai Guide Students To Success</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             Ignite’s tutors in JLT Dubai play a key role in transforming student outcomes.<br />
             They begin by understanding the learner’s academic baseline, goals, and learning preferences. Using this insight, they create a roadmap for success, balancing academic rigor with empathetic mentorship. Regular assessments, engaging lessons, and feedback loops ensure steady progress. More than subject matter experts, our tutors are motivators who help students believe in their abilities. Whether it’s improving grades, tackling tough topics, or preparing for high-stakes exams, our tutors are with them every step of the way.
-          </p>
-
+          </h3>
           <br />
 
 

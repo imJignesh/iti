@@ -549,12 +549,12 @@ function CourseCard() {
       </div>
 
       <style jsx>{`
-        .fade-in-section {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-          animation: fadeIn 0.5s ease-out forwards;
-        }
+        // .fade-in-section {
+        //   opacity: 0;
+        //   transform: translateY(20px);
+        //   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        //   animation: fadeIn 0.5s ease-out forwards;
+        // }
                   @media (min-width: 1200px) and (max-width: 1919px) {
                   .gradient-text{
                             font-size:25px !important;

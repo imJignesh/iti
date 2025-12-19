@@ -187,7 +187,11 @@ export default function InfoCard() {
               </div>
 
               <p
-                className="text-white mb-4"
+
+                className="text-white mb-4 fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
                 style={{
                   maxWidth: "750px",
                   fontSize: "1.2rem",
@@ -916,8 +920,8 @@ margin-block: 30px !important;
         @media (max-width: 991.98px) {
           .position-relative.overflow-hidden {
             position: relative;
-            background-image: url("/assets/subject-tutoring.jpg") !important;
-            background-size: contain !important;
+            background-image: url("/assets/subject-tutoring-m.webp") !important;
+            background-size: cover !important;
             background-position: top !important;
             background-repeat: no-repeat;
           }
@@ -962,7 +966,7 @@ margin-block: 30px !important;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.60);
+            //background: rgba(0, 0, 0, 0.60);
             z-index: 1;
           }
 

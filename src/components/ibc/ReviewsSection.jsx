@@ -282,7 +282,7 @@ export default function Testimonial({ }) {
             data-scroll-repeat="true"
             // Apply local module class
             className={`fade-in-section ${styles.googleReview}`}
-            style={{ animationDelay: "0.4s" }}
+            style={{ animationDelay: "0.3s" }}
           >
             <span>4.9 </span>
             Google Reviews
@@ -292,11 +292,11 @@ export default function Testimonial({ }) {
             src="/images/star-review.png"
             alt="ib tutor in dubai"
             data-scroll
-            data-scroll-class="is-clipped"
+            data-scroll-class="is-inview"
             data-scroll-repeat="true"
             data-scroll-offset="-10%"
             // Apply local module class
-            className={styles.starReview}
+            className={`fade-in-section ${styles.starReview}`}
             style={{ animationDelay: "0.5s" }}
             width={250}
             height={80}
@@ -304,7 +304,11 @@ export default function Testimonial({ }) {
         </div>
 
         {/* Apply local module class */}
-        <div className={styles.testimonialSliderWrap}>
+        <div className={`fade-in-section ${styles.testimonialSliderWrap}`}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+        >
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             loop={true}

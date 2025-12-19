@@ -114,10 +114,7 @@ export default function IgniteAboutCard() {
             >
               GET IN TOUCH
               <div
-                className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+                className="custom-height rounded-circle d-flex align-items-center justify-content-center"
                 style={{
                   width: "2.5rem",
                   height: "2.5rem",

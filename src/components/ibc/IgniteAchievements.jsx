@@ -118,7 +118,10 @@ export default function IgniteAchievements() {
               <div className="mb-4">
                 <a href="/join-free-demo-class/">
                   <button
-                    className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
+                    className="btn cust-text fw-bold d-flex align-items-center rounded-pill fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
                     style={{
                       background: "linear-gradient(90deg,#161664, #3F88BA)",
                       color: 'white',
@@ -133,10 +136,8 @@ export default function IgniteAchievements() {
                   >
                     GET FREE DEMO
                     <div
-                      className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat
+                      className="custom-height rounded-circle d-flex align-items-center justify-content-center "
+
                       style={{
                         width: "2.5rem",
                         height: "2.5rem",

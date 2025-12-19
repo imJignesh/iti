@@ -78,10 +78,10 @@ const Blog = () => {
     }, []);
 
     useEffect(() => {
-        if (blogData.length > 0) {
-            scrollRef?.update();
+        if (blogData.length > 0 && scrollRef?.scroll) {
+            scrollRef.scroll.update();
         }
-    }, [blogData]);
+    }, [blogData, scrollRef]);
 
     return (
         <section className="blogSection">

@@ -166,6 +166,8 @@ export default function Trainers() {
 
   const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 
+
+
   // The new global container class from the provided code block
   const containerClass = 'trainers-global-container';
 
@@ -621,10 +623,8 @@ export default function Trainers() {
 
             {isTrainersSwiper ? (
               <div
-                className="trainersSwiperWrap fade-in-section"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
+                className="trainersSwiperWrap"
+
                 style={{ animationDelay: "0.3s" }}
               >
                 <Swiper
@@ -682,12 +682,10 @@ export default function Trainers() {
                 >
                   {displayTrainers.map((t, i) => (
                     <div
-                      key={i}
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat="true"
-                      className="fade-in-section"
-                      style={{ animationDelay: `${0.3 + i * 0.05}s` }}
+                      key={`${t.name}-${i}`}
+                      className="trainer-animate-item"
+                      /* We use a simple CSS delay based on index for the stagger effect */
+                      style={{ animationDelay: `${(i % 4) * 0.1}s` }}
                     >
                       <TrainerCard trainer={t} />
                     </div>

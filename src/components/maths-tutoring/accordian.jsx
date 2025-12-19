@@ -6,7 +6,10 @@ export default function Accordion() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="card mx-auto">
+    <div className="card mx-auto fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat>
       {/* Header Row */}
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
@@ -21,9 +24,8 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">Find The Best Mathematics Tutor In Dubai For You With Ignite Training Institute</h2>
-          <p className="subtitle">Struggling to find the right Maths tutor? Ignite Training Institute connects students with highly qualified Mathematics tutors in Dubai who understand different learning paces and goals. Whether it's IB, IGCSE, or A Levels, our tutors bring clarity and confidence to every lesson. We focus on foundational understanding, logical reasoning, and effective revision techniques. Flexible timing, in-person and online options, and personalized attention make it easy to stay on track. With our support, you’ll stop dreading Maths and start mastering it. Let us match you with the right tutor for your needs.
-          </p>
-          <br />
+          <h3 className="subtitle">Struggling to find the right Maths tutor? Ignite Training Institute connects students with highly qualified Mathematics tutors in Dubai who understand different learning paces and goals. Whether it's IB, IGCSE, or A Levels, our tutors bring clarity and confidence to every lesson. We focus on foundational understanding, logical reasoning, and effective revision techniques. Flexible timing, in-person and online options, and personalized attention make it easy to stay on track. With our support, you’ll stop dreading Maths and start mastering it. Let us match you with the right tutor for your needs.
+          </h3>          <br />
 
           <h2 className="title">Personalized Maths Tuition In Dubai For Every Student</h2>
           <h3 className="subtitle">At Ignite, we understand that no two students learn Maths the same way. Our personalized Maths tuition in Dubai is designed around your strengths, challenges, and academic goals. From homework help to exam prep, our tutors build a learning path that truly works. We ensure every concept is thoroughly explained and practiced so students feel more confident in class and during assessments. The result is a stronger grasp of topics and improved academic performance. Discover the power of custom learning with Ignite’s personalised tuition support.</h3>

@@ -31,7 +31,11 @@ const WhatWeOfferSection = () => {
 
                 {/* Container for the steps */}
                 <div className="container what-we-offer">
-                    <div className="step">
+                    <div
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        className="step fade-in-section">
                         <div className="icon-wrap" data-step="01">
                             <img src="images/school.png" alt="School Options" />
                         </div>
@@ -39,7 +43,10 @@ const WhatWeOfferSection = () => {
                         <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
                     </div>
 
-                    <div className="step">
+                    <div data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        className="step fade-in-section">
                         <div className="icon-wrap" data-step="02">
                             <img src="images/idealcur.png" alt="Ideal Curriculum" />
                         </div>
@@ -47,7 +54,10 @@ const WhatWeOfferSection = () => {
                         <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
                     </div>
 
-                    <div className="step">
+                    <div data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        className="step fade-in-section">
                         <div className="icon-wrap" data-step="03">
                             <img src="images/subject.png" alt="Subject Choices" />
                         </div>
@@ -55,7 +65,10 @@ const WhatWeOfferSection = () => {
                         <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
                     </div>
 
-                    <div className="step">
+                    <div data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        className="step fade-in-section">
                         <div className="icon-wrap" data-step="04">
                             <img src="images/universitypath.png" alt="University Pathways" />
                         </div>

@@ -248,7 +248,11 @@ export default function Testimonial({ }) {
           />
         </div>
 
-        <div className={styles.testimonialSliderWrap}>
+        <div className={`fade-in-section ${styles.testimonialSliderWrap}`}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+        >
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             loop={true}

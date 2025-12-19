@@ -22,8 +22,8 @@ const WhatWeOfferSection = () => {
                             className="fade-in-section"
                             style={{ animationDelay: "0.25s" }}
                         >
-                            <h3 className="achievementsTitle"> 
-                                 Comprehensive Guidance For Every IGCSE <span className="highlight">Milestone</span>
+                            <h3 className="achievementsTitle">
+                                Comprehensive Guidance For Every IGCSE <span className="highlight">Milestone</span>
                             </h3>
                         </div>
                     </div>
@@ -31,7 +31,12 @@ const WhatWeOfferSection = () => {
 
                 {/* Container for the steps */}
                 <div className="container what-we-offer">
-                    <div className="step">
+                    <div className="step fade-in-section"
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        style={{ animationDelay: "0.1s" }}
+                    >
                         <div className="icon-wrap" data-step="01">
                             <img src="/images/school.png" alt="School Options" />
                         </div>
@@ -39,7 +44,12 @@ const WhatWeOfferSection = () => {
                         <div className="step-desc">Find schools that fit your learning style & academic goals.</div>
                     </div>
 
-                    <div className="step">
+                    <div className="step fade-in-section"
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        style={{ animationDelay: "0.1s" }}
+                    >
                         <div className="icon-wrap" data-step="02">
                             <img src="/images/idealcur.png" alt="Ideal Curriculum" />
                         </div>
@@ -47,7 +57,12 @@ const WhatWeOfferSection = () => {
                         <div className="step-desc">Select the curriculum that best supports your future plans.</div>
                     </div>
 
-                    <div className="step">
+                    <div className="step fade-in-section"
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        style={{ animationDelay: "0.1s" }}
+                    >
                         <div className="icon-wrap" data-step="03">
                             <img src="/images/subject.png" alt="Subject Choices" />
                         </div>
@@ -55,7 +70,12 @@ const WhatWeOfferSection = () => {
                         <div className="step-desc">Choose subjects that align with your career & university path.</div>
                     </div>
 
-                    <div className="step">
+                    <div className="step fade-in-section"
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat="true"
+                        style={{ animationDelay: "0.1s" }}
+                    >
                         <div className="icon-wrap" data-step="04">
                             <img src="/images/universitypath.png" alt="University Pathways" />
                         </div>

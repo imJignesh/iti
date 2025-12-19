@@ -83,17 +83,30 @@ function CourseCard() {
 
   return (
     <>
-      <div className="px-3 fade-in-section desktop-version">
-        <div className="container" style={{ maxWidth: "74.166vw" }}>
+      <div className="px-3 fade-in-section desktop-version"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true"
+      >
+        <div className="container" style={{ maxWidth: "74.166vw", animationDelay: "0.5s" }}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+        >
           {/* Header Section */}
-          <div className="text-center mb-5 fade-in-section">
+          <div className="text-center mb-5 fade-in-section"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+
+          >
             <div className="testHeadings">
               <div
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section"
-                style={{ animationDelay: "0.1s" }}
+
               >
                 <h2 className="SubHeading testSubheading">courses
                 </h2>
@@ -103,7 +116,7 @@ function CourseCard() {
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                style={{ fontSize: "2rem" }}
               >
                 Learning Starts Here With <br /><span className="highlight"> Tailored </span> IBDP Courses
               </h3>
@@ -112,6 +125,10 @@ function CourseCard() {
 
           {/* Desktop Accordion */}
           <div
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section"
             style={{
               borderRadius: "30px",
               overflow: "hidden",
@@ -280,7 +297,11 @@ function CourseCard() {
       </div>
 
       {/* Mobile Version */}
-      <div className="mobile-version py-4 px-3">
+      <div className="mobile-version py-4 px-3 fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true"
+      >
         <div className="">
           {/* Mobile Header */}
           <div className="text-center mb-4">
@@ -549,12 +570,12 @@ function CourseCard() {
 
       <style jsx>{`
         /* --- KEEPING ONLY THE NECESSARY FADE-IN FOR HEADERS --- */
-        .fade-in-section {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-          animation: fadeIn 0.5s ease-out forwards;
-        }
+        // .fade-in-section {
+        //   opacity: 0;
+        //   transform: translateY(20px);
+        //   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        //   animation: fadeIn 0.5s ease-out forwards;
+        // }
               @media (min-width: 1200px) and (max-width: 1919px) {
               .gradient-text{
                     font-size:25px !important;

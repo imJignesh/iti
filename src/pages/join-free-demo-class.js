@@ -408,7 +408,12 @@ const FreeDemo = ({ headerHeight }) => {
                     </div>
                     {/* OPTIMIZATION: Corrected 'class' to 'className' in the following div */}
                     <div className="container what-we-offer">
-                        <div className="step">
+                        <div className="step fade-in-section"
+                            data-scroll
+                            data-scroll-class="is-inview"
+                            data-scroll-repeat="true"
+                            style={{ animationDelay: "0.1s" }}
+                        >
                             <div className="icon-wrap" data-step="01">
                                 <img src="/images/school.png" alt="School Options" />
                             </div>
@@ -416,7 +421,12 @@ const FreeDemo = ({ headerHeight }) => {
                             <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
                         </div>
 
-                        <div className="step">
+                        <div className="step fade-in-section"
+                            data-scroll
+                            data-scroll-class="is-inview"
+                            data-scroll-repeat="true"
+                            style={{ animationDelay: "0.1s" }}
+                        >
                             <div className="icon-wrap" data-step="02">
                                 <img src="/images/idealcur.png" alt="Ideal Curriculum" />
                             </div>
@@ -424,7 +434,12 @@ const FreeDemo = ({ headerHeight }) => {
                             <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
                         </div>
 
-                        <div className="step">
+                        <div className="step fade-in-section"
+                            data-scroll
+                            data-scroll-class="is-inview"
+                            data-scroll-repeat="true"
+                            style={{ animationDelay: "0.1s" }}
+                        >
                             <div className="icon-wrap" data-step="03">
                                 <img src="/images/subject.png" alt="Subject Choices" />
                             </div>
@@ -432,7 +447,12 @@ const FreeDemo = ({ headerHeight }) => {
                             <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
                         </div>
 
-                        <div className="step">
+                        <div className="step fade-in-section"
+                            data-scroll
+                            data-scroll-class="is-inview"
+                            data-scroll-repeat="true"
+                            style={{ animationDelay: "0.1s" }}
+                        >
                             <div className="icon-wrap" data-step="04">
                                 <img src="/images/universitypath.png" alt="University Pathways" />
                             </div>

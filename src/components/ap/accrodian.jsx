@@ -6,17 +6,19 @@ export default function Accordion() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="card mx-auto">
+    <div className="card mx-auto fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat>
       {/* Header Row */}
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Ignite Training Institute - Expert-Led AP Tuitions In Dubai, UAE For Academic Excellence</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             Ignite Training Institute offers expert-led AP tuitions in Dubai to help students build a strong academic foundation in college-level subjects. Our AP tutors are experienced in guiding students through the rigor of Advanced Placement courses across subjects like Calculus, Physics, Chemistry, and English.
             <br />
             Sessions are structured around concept mastery, problem-solving techniques, and exam strategies. Students benefit from regular assessments, past paper practice, and personalized feedback. Whether preparing for AP exams or aiming to earn college credits early, our tuition supports all academic goals. Flexible scheduling and online options ensure accessibility for learners across the UAE.
-          </p>
-
+          </h3>
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
@@ -25,57 +27,51 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">AP Tutoring In UAE With Subject-Specialist Support</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             Our AP tutoring program in the UAE is led by subject-specialist educators who are well-versed in the College Board curriculum. Students receive detailed explanations, practice materials, and individualized support tailored to their chosen AP subjects. Whether tackling complex AP Calculus questions or essay-based AP Literature prompts, students are equipped with the tools they need to succeed.
             <br />
             Tutors provide step-by-step guidance on multiple-choice questions and free-response sections. The program also includes timed mock exams and revision sessions to build exam stamina. Ignite’s approach ensures students gain clarity, confidence, and competitive AP scores.
-          </p>
-          <br />
+          </h3>          <br />
 
 
           <h2 className="title">Focused AP Classes In Dubai For Exam Readiness And Success</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             Ignite’s AP classes in Dubai are designed to maximize exam performance with a focus on skill development, critical thinking, and real exam conditions. Each session blends interactive teaching with targeted practice on AP-format questions. Students learn how to manage time effectively, structure responses, and avoid common mistakes.
             <br />
             With support for a wide range of subjects, our AP classes cater to diverse academic needs. We also provide resources aligned with the latest College Board updates and testing trends. By the end of the program, students feel well-prepared and confident heading into their AP exams.
-          </p>
-          <br />
+          </h3>          <br />
 
 
           <h2 className="title">Personalized AP Coaching In Dubai For High-Scoring Performance</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             Our personalized AP coaching in Dubai is tailored to each student’s strengths, weaknesses, and learning pace. Ignite’s tutors design individual learning plans based on diagnostic assessments and academic goals. Whether a student is aiming for a perfect 5 or needs help catching up, coaching sessions are built to deliver focused improvement.
             <br />
             Students receive one-on-one attention, strategic guidance, and regular feedback. We break down tough concepts and provide practice that matches the AP exam format. This customized coaching leads to deeper understanding, improved performance, and better test-day results.
-          </p>
-          <br />
+          </h3>          <br />
 
 
           <h2 className="title">Comprehensive Advanced Placements Tutoring In Dubai By Expert Educators</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             Ignite’s comprehensive AP tutoring covers every aspect of exam success from concept clarity to effective answering strategies. Our expert educators help students navigate the rigor of AP subjects while also preparing them for the expectations of college-level coursework. The program includes syllabus-aligned instruction, past paper analysis, mock testing, and time-bound assignments.
             <br />
             Tutors also mentor students on how to handle the pressure of AP exams with confidence. With both in-person and online options available, students across Dubai can access world-class support tailored to the AP framework.
-          </p>
-          <br />
+          </h3>          <br />
 
 
           <h2 className="title">Boost Your College Credits With Best-Suited AP Courses</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             With AP tutoring at Ignite, students can boost their college credit potential by choosing the right AP courses and excelling in them. Our team helps students identify AP subjects aligned with their strengths and university goals. Once enrolled, they receive intensive academic support to master each topic and earn top scores.
             <br />
             This not only strengthens college applications but also helps students place out of introductory college courses. Ignite ensures that each AP course is approached with clarity, structure, and long-term academic vision in mind.
-          </p>
-          <br />
+          </h3>          <br />
 
 
           <h2 className="title">Showcase Your Confidence At College-Level With Top AP Scores</h2>
-          <p className="subtitle">
+          <h3 className="subtitle">
             Top AP scores reflect a student’s readiness for college-level work, and Ignite prepares you to showcase that confidence. Through expert instruction, real AP exam practice, and guided feedback, students learn to approach exams with calm and clarity. We emphasize analytical thinking, precise writing, and problem-solving under pressure.
             <br />
             Whether it’s mastering FRQs or optimizing multiple-choice speed, Ignite’s students are coached to succeed. High AP scores help students stand out during college admissions and ease the transition to university-level academics.
-          </p>
-          <br />
+          </h3>          <br />
 
 
           <h2 className="title">How Ignite Supports Its AP Students To Shine?</h2>

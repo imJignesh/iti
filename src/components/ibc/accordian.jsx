@@ -6,14 +6,16 @@ export default function Accordion() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="card mx-auto">
+    <div className="card mx-auto fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat>
       {/* Header Row */}
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Ignite Training Institute - IB Tutoring In Dubai, UAE For Academic Excellence & Success</h2>
-          <p className="subtitle">At Ignite Training Institute, our IB tutoring in Dubai is designed to bring out the best in every student. The experienced IB tutors focus on building strong conceptual understanding and academic confidence across all subjects. We utilize proven teaching strategies and regular assessments to monitor progress and enhance outcomes.
-            <br />Whether students need support in challenging areas or wish to aim for top IB scores, we provide the right tools and techniques. Ignite’s personalized attention and structured study plans help students manage their workload efficiently. From internal assessments to final exams, we prepare learners for every academic challenge. Our goal is to empower students to achieve academic excellence and long-term success.</p>
-
+          <h3 className="subtitle">At Ignite Training Institute, our IB tutoring in Dubai is designed to bring out the best in every student. The experienced IB tutors focus on building strong conceptual understanding and academic confidence across all subjects. We utilize proven teaching strategies and regular assessments to monitor progress and enhance outcomes.
+            <br />Whether students need support in challenging areas or wish to aim for top IB scores, we provide the right tools and techniques. Ignite’s personalized attention and structured study plans help students manage their workload efficiently. From internal assessments to final exams, we prepare learners for every academic challenge. Our goal is to empower students to achieve academic excellence and long-term success.</h3>
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
@@ -22,50 +24,41 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">IB Tuitions In Dubai Tailored To Students' Individual Needs</h2>
-          <p className="subtitle">Ignite’s IB tuitions in Dubai are fully personalized to meet the unique learning needs of each student. We understand that no two learners are the same, which is why our sessions are flexible and goal-oriented! Whether a student needs help in understanding complex topics, organizing study schedules, or improving exam performance, our tutors adapt their approach accordingly.
-            <br />We work closely with students to identify their strengths and address gaps effectively. With a strong focus on clarity and confidence, our tuition programs support consistent progress. Small group and one-on-one formats ensure each student receives the right attention. Our aim is to nurture independent learners who are well-prepared for IB success.</p>
-          <br />
+          <h3 className="subtitle">Ignite’s IB tuitions in Dubai are fully personalized to meet the unique learning needs of each student. We understand that no two learners are the same, which is why our sessions are flexible and goal-oriented! Whether a student needs help in understanding complex topics, organizing study schedules, or improving exam performance, our tutors adapt their approach accordingly.
+            <br />We work closely with students to identify their strengths and address gaps effectively. With a strong focus on clarity and confidence, our tuition programs support consistent progress. Small group and one-on-one formats ensure each student receives the right attention. Our aim is to nurture independent learners who are well-prepared for IB success.</h3>          <br />
 
           <h2 className="title">IB Coaching Classes In Dubai To Boost Your Scores!</h2>
-          <p className="subtitle">Ignite’s IB coaching classes in Dubai are designed to help students maximize their academic potential and raise their scores. Our structured programs focus on syllabus mastery, effective revision, and exam technique. Students receive support from subject matter experts who understand the IB curriculum inside out. We conduct regular mock tests, timed assignments, and feedback sessions to improve performance under real exam conditions.
-            <br />Whether it is SL or HL subjects, we provide comprehensive coaching that ensures subject clarity and confidence. Our coaching classes offer a blend of theory, practice, and skill-building. The goal is simple – to boost student scores and academic standing within the IB framework.</p>
-          <br />
+          <h3 className="subtitle">Ignite’s IB coaching classes in Dubai are designed to help students maximize their academic potential and raise their scores. Our structured programs focus on syllabus mastery, effective revision, and exam technique. Students receive support from subject matter experts who understand the IB curriculum inside out. We conduct regular mock tests, timed assignments, and feedback sessions to improve performance under real exam conditions.
+            <br />Whether it is SL or HL subjects, we provide comprehensive coaching that ensures subject clarity and confidence. Our coaching classes offer a blend of theory, practice, and skill-building. The goal is simple – to boost student scores and academic standing within the IB framework.</h3>          <br />
 
           <h2 className="title">IB Classes In Dubai For Comprehensive Subject Support</h2>
-          <p className="subtitle">Ignite’s IB classes in Dubai cover all subjects with in-depth support tailored to students' needs. Whether it is Mathematics, Sciences, Languages, or Humanities, our tutors break down complex topics into understandable segments. We focus on building strong academic foundations while also helping students develop time management and critical thinking skills.
-            <br />Our lessons include past paper practice, assignment help, and exam-focused revision strategies. We offer both Standard and Higher Level support to suit individual subject choices. Small batch sizes and personalized guidance make our classes engaging and result-driven. At Ignite, we ensure that every student receives the comprehensive subject support they need to thrive in the IB curriculum.</p>
-          <br />
+          <h3 className="subtitle">Ignite’s IB classes in Dubai cover all subjects with in-depth support tailored to students' needs. Whether it is Mathematics, Sciences, Languages, or Humanities, our tutors break down complex topics into understandable segments. We focus on building strong academic foundations while also helping students develop time management and critical thinking skills.
+            <br />Our lessons include past paper practice, assignment help, and exam-focused revision strategies. We offer both Standard and Higher Level support to suit individual subject choices. Small batch sizes and personalized guidance make our classes engaging and result-driven. At Ignite, we ensure that every student receives the comprehensive subject support they need to thrive in the IB curriculum.</h3>          <br />
 
           <h2 className="title">IB Tuition For Middle Years Programme (MYP) – In-Person & Online Classes</h2>
-          <p className="subtitle">IB tuition for the Middle Years Programme supports students from Grade 8 to Grade 10 with both in-person and online classes. The MYP stage is crucial for developing inquiry-based learning and interdisciplinary thinking, and our tutors are skilled at nurturing these core skills. We provide guidance across all subject groups, including Language and Literature, Sciences, Individuals and Societies, Mathematics, and more.
-            <br />Our sessions are designed to help students understand the assessment criteria and build confidence in their ability to meet them. Whether your child needs homework help or exam preparation, our tutors are ready to provide structured, engaging, and supportive learning. Flexible class formats allow for convenience without compromising on quality. Ignite helps MYP students stay motivated and well-prepared for the DP journey ahead.</p>
-          <br />
+          <h3 className="subtitle">IB tuition for the Middle Years Programme supports students from Grade 8 to Grade 10 with both in-person and online classes. The MYP stage is crucial for developing inquiry-based learning and interdisciplinary thinking, and our tutors are skilled at nurturing these core skills. We provide guidance across all subject groups, including Language and Literature, Sciences, Individuals and Societies, Mathematics, and more.
+            <br />Our sessions are designed to help students understand the assessment criteria and build confidence in their ability to meet them. Whether your child needs homework help or exam preparation, our tutors are ready to provide structured, engaging, and supportive learning. Flexible class formats allow for convenience without compromising on quality. Ignite helps MYP students stay motivated and well-prepared for the DP journey ahead.</h3>          <br />
 
           <h2 className="title">IB Tuition For Diploma Programme (DP) – In-Person & Online Classes</h2>
-          <p className="subtitle">IB tuition for the Diploma Programme in Dubai is available both in-person and online to suit the busy schedules of high school students. The DP years are academically demanding, and our expert tutors provide focused support across all SL and HL subjects.
+          <h3 className="subtitle">IB tuition for the Diploma Programme in Dubai is available both in-person and online to suit the busy schedules of high school students. The DP years are academically demanding, and our expert tutors provide focused support across all SL and HL subjects.
             <br />We help students navigate their coursework, internal assessments, extended essay, and Theory of Knowledge requirements with confidence. Lessons are structured around the IB assessment objectives, helping students meet and exceed expectations.
-            <br />Regular revision, mock tests, and one-on-one sessions ensure that learners stay on track and improve steadily. Our goal is to make the DP journey manageable, less stressful, and more rewarding. Whether students aim for university placements or overall score improvement, our tuition offers the right academic edge.</p>
-          <br />
+            <br />Regular revision, mock tests, and one-on-one sessions ensure that learners stay on track and improve steadily. Our goal is to make the DP journey manageable, less stressful, and more rewarding. Whether students aim for university placements or overall score improvement, our tuition offers the right academic edge.</h3>          <br />
 
           <h2 className="title">Comprehensive IB Training In Dubai By Expert Tutors</h2>
-          <p className="subtitle">Stay ahead in the IB journey with comprehensive training designed and delivered by expert tutors in Dubai. Our programs follow a structured, syllabus-aligned approach that ensures complete topic coverage across all IB subjects. With a focus on concept clarity, time management, and academic consistency, students benefit from weekly classes and guided practice.
-            <br />Whether you are preparing for internal assessments or final exams, our expert-led training equips you with the right tools. Classes are interactive, personalised, and results-driven. The goal is to build a strong academic foundation and long-term IB success.</p>
-          <br />
+          <h3 className="subtitle">Stay ahead in the IB journey with comprehensive training designed and delivered by expert tutors in Dubai. Our programs follow a structured, syllabus-aligned approach that ensures complete topic coverage across all IB subjects. With a focus on concept clarity, time management, and academic consistency, students benefit from weekly classes and guided practice.
+            <br />Whether you are preparing for internal assessments or final exams, our expert-led training equips you with the right tools. Classes are interactive, personalised, and results-driven. The goal is to build a strong academic foundation and long-term IB success.</h3>          <br />
 
           <h2 className="title">Rigorous IB Testing To Sharpen Exam Readiness & Skills</h2>
-          <p className="subtitle">Sharpen your IB exam skills with our rigorous testing model that mirrors real exam conditions. Students undergo unit-wise tests, timed assessments, and full-length mock exams that simulate the actual IB exam environment. Each test is followed by detailed feedback and performance analysis to identify strengths and target weak areas.
-            <br />Our goal is to reduce exam anxiety and build confidence through repetition, practice, and review. These assessments help students understand marking schemes and improve answer structuring. With every test, students grow more exam-ready and academically resilient.</p>
-          <br />
+          <h3 className="subtitle">Sharpen your IB exam skills with our rigorous testing model that mirrors real exam conditions. Students undergo unit-wise tests, timed assessments, and full-length mock exams that simulate the actual IB exam environment. Each test is followed by detailed feedback and performance analysis to identify strengths and target weak areas.
+            <br />Our goal is to reduce exam anxiety and build confidence through repetition, practice, and review. These assessments help students understand marking schemes and improve answer structuring. With every test, students grow more exam-ready and academically resilient.</h3>          <br />
 
           <h2 className="title">Best IB Coaching Guidance In Dubai To Excel Academically</h2>
-          <p className="subtitle">Receive the best IB coaching guidance in Dubai through our expert-led, result-focused programs. From subject-wise clarity to smart study planning, we offer academic support that goes beyond the classroom. Our experienced IB tutors provide students with guidance tailored to their learning pace and academic goals.
-            <br />We help students excel in both internal assessments and external exams through regular reviews, feedback, and strategic preparation. With access to IB-style questions and carefully curated resources, students gain the skills needed to perform with confidence. Ignite is your trusted partner in academic excellence across the IB curriculum.</p>
-          <br />
+          <h3 className="subtitle">Receive the best IB coaching guidance in Dubai through our expert-led, result-focused programs. From subject-wise clarity to smart study planning, we offer academic support that goes beyond the classroom. Our experienced IB tutors provide students with guidance tailored to their learning pace and academic goals.
+            <br />We help students excel in both internal assessments and external exams through regular reviews, feedback, and strategic preparation. With access to IB-style questions and carefully curated resources, students gain the skills needed to perform with confidence. Ignite is your trusted partner in academic excellence across the IB curriculum.</h3>          <br />
 
           <h2 className="title">How Ignite’s IB Classes Guide Students To Success</h2>
-          <p className="subtitle">Our exceptional IB courses are built on years of experience and expertise, designed to bring out the best in every student. <br />
-            At the heart of our mission is the drive to shape future success, aligning students’ ambitions with global standards through world-class instruction in international curricula.</p>
-          <br />
+          <h3 className="subtitle">Our exceptional IB courses are built on years of experience and expertise, designed to bring out the best in every student. <br />
+            At the heart of our mission is the drive to shape future success, aligning students’ ambitions with global standards through world-class instruction in international curricula.</h3>          <br />
 
           <ul className="subtitle">
             <li><strong>IB Past Paper Solving:</strong> We provide regular practice with past IB papers to help students understand exam patterns, question styles, and marking criteria.</li>
@@ -78,9 +71,8 @@ export default function Accordion() {
           <br />
 
           <h2 className="title">Why Choose Ignite Training Institute To Guide Your IB Journey?</h2>
-          <p className="subtitle">At Ignite Training Institute, we specialize in delivering high-quality IB tutoring that leads to measurable academic progress and exam success. Our experienced tutors understand the demands of the IB curriculum and provide personalized support tailored to each learner’s needs. <br />
-            With structured classes, exam-focused training, and consistent mentorship, we help students build confidence, master subjects, and achieve top scores. Whether you need help with IAs, EE, TOK, or final exams, Ignite offers the complete support system to navigate your IB journey with success.</p>
-          <br />
+          <h3 className="subtitle">At Ignite Training Institute, we specialize in delivering high-quality IB tutoring that leads to measurable academic progress and exam success. Our experienced tutors understand the demands of the IB curriculum and provide personalized support tailored to each learner’s needs. <br />
+            With structured classes, exam-focused training, and consistent mentorship, we help students build confidence, master subjects, and achieve top scores. Whether you need help with IAs, EE, TOK, or final exams, Ignite offers the complete support system to navigate your IB journey with success.</h3>          <br />
 
           <h2 className="title">Exclusive IB Resources</h2>
           <br />
