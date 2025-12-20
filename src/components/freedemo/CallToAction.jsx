@@ -216,7 +216,11 @@ export default function CallToAction() {
 
     return (
         <div style={styles.mobileWrapper}>
-            <div style={styles.container}>
+            <div style={styles.container}
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat
+            className='fade-in-section'> 
                 <div style={styles.background} />
 
                 <div style={styles.content}>

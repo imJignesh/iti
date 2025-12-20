@@ -342,7 +342,11 @@ export default function InfoCard() {
               >
                 Experience customized, expert-led support across IGCSE, A-Levels, & AP as a private candidate. We offer flexible, high-quality education tailored to your goals, ensuring every learner feels seen & empowered.
               </p>
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
+              >
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

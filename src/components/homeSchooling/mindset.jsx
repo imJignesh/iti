@@ -89,7 +89,10 @@ export default function HomeschoolingMindset() {
       </div>
 
 
-      <div className="cards-container">
+      <div className="cards-container fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat>
         {cards.map((card, index) => (
           <div
             key={index}

@@ -288,7 +288,10 @@ const FreeDemo = ({ headerHeight }) => {
                             </div>
                         </div>
                     </div> */}
-                    <div className="container freedemo-curriculm">
+                    <div className="container freedemo-curriculm fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
                         <div className="column">
                             <div className="title">CURRICULUMS</div>
                             <div className="cards">

@@ -378,7 +378,10 @@ export default function InfoCard() {
                 Unlock your full potential with expert-led A-Level tutoring tailored for all major exam boards. With focused exam prep, we help students achieve top results & pursue admissions at top universities globally.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

@@ -87,7 +87,10 @@ const TrainersMessage = () => {
         </h3>
       </div>
 
-      <div className="trainers-container">
+      <div className="trainers-container fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat>
         {trainers.map((trainer, index) => (
           <div key={trainer.id} className="trainer-card">
             <div

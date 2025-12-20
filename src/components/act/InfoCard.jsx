@@ -350,7 +350,11 @@ export default function InfoCard() {
                 We offer personalized ACT tutoring tailored to each student's unique learning style. Our expert-led programs deliver targeted guidance & proven strategies to help students excel confidently in the ACT.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
+              >
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}
