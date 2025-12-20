@@ -323,7 +323,7 @@ function CourseCard() {
               className="fade-in-section testTitle"
               style={{ animationDelay: "0.2s" }}
             >
-              Learning Starts Here With <span className="highlight"> Tailored </span> AP Courses
+              Learning Starts Here With <span className="highlight"> Tailored </span> IBDP Courses
             </h2>
           </div>
 

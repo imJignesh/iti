@@ -57,7 +57,10 @@ export default function SubjectsCard1({ }) {
         </div>
       </div>
       <div className="container">
-        <div className="subjects-card1-inner">
+        <div className="subjects-card1-inner fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat>
           <img
             data-scroll
             data-scroll-class="is-clipped"

@@ -146,7 +146,11 @@ const AdvantagesCarousel = () => {
                 <div className="desktop-header">
                     <div className="desktop-content">
                         <div className="desktop-left">
-                            <div className="testimonialHeader" style={{ marginTop: "15%" }}>
+                            <div className="testimonialHeader fade-in-section" 
+                            data-scroll
+                            data-scroll-class="is-inview"
+                            data-scroll-repeat
+                            style={{ marginTop: "15%" }}>
                                 <h2 className="SubHeading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?</h2>
                             </div>
 
@@ -161,10 +165,17 @@ const AdvantagesCarousel = () => {
 
                             </h3>
 
-                            <p className="desktop-subtitle">
+                            <p className="desktop-subtitle fade-in-section"
+                            data-scroll
+                            data-scroll-class="is-inview"
+                            data-scroll-repeat>
+                            
                                 Empowering students with personalized learning pathways, flexible pacing, & tailored support to nurture individual aspirations.
                             </p>
-                            <div className="carousel-controls">
+                            <div className="carousel-controls fade-in-section"
+                            data-scroll
+                            data-scroll-class="is-inview"
+                            data-scroll-repeat>
                                 <button className="carousel-btn prev" onClick={prevSlide}>
                                     <img src="/assets/rigtarr2.png" alt="homeschooling & private candidates" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                                 </button>
@@ -174,7 +185,11 @@ const AdvantagesCarousel = () => {
                             </div>
                         </div>
                         <div className="desktop-right">
-                            <div className="desktop-cards-container">
+                            <div className="desktop-cards-container fade-in-section"
+                            data-scroll
+                            data-scroll-class="is-inview"
+                            data-scroll-repeat
+                            >
                                 <div
                                     className="desktop-cards"
                                     style={{ transform: `translateX(-${currentSlide * 25}%)` }}
@@ -198,7 +213,10 @@ const AdvantagesCarousel = () => {
                 </div>
 
                 {/* Centered dot indicators for desktop */}
-                <div className="desktop-carousel-dots">
+                <div className="desktop-carousel-dots fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
                     {advantages.map((_, index) => (
                         <div
                             key={index}

@@ -26,7 +26,11 @@ export default function Curriculum() {
         </h3>
       </div>
 
-      <div className="curriculum-container">
+      <div className="curriculum-container fade-in-section"
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat
+      >
         {/* IGCSE */}
         <div className="curriculum-card">
           <img

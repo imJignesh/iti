@@ -350,7 +350,10 @@ export default function InfoCard() {
                 Experience curriculum-aligned tutoring for IBDP, MYP, IGCSE, A-Levels, & AP delivered by expert educators who know the exams inside out, with a focus on clarity, measurable progress, & real academic results.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

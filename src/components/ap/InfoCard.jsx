@@ -361,7 +361,10 @@ export default function InfoCard() {
                 Experience result-driven AP tutoring with programs tailored to each student’s needs. Our AP courses build subject mastery & academic excellence in an interactive environment that prepares students for college.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

@@ -192,12 +192,12 @@ export default function Testimonial({ }) {
 
           <img
             src="/images/star-review.png"
-            alt="star review"
+            alt="ibdp tutor in dubai"
             data-scroll
-            data-scroll-class="is-clipped"
+            data-scroll-class="is-inview"
             data-scroll-repeat="true"
             data-scroll-offset="-10%"
-            className={styles.starReview}
+            className={`fade-in-section ${styles.starReview}`}
             style={{ animationDelay: "0.5s" }}
             width={250}
             height={80}

@@ -113,15 +113,19 @@ const FAQSection = () => {
             </h3>
 
             <p
+              className="fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
               style={{
-                color: "#64748b",
-                maxWidth: isMobile ? "100%" : "28rem",
-                fontSize: isHighDpi ? "16px" : isMobile ? "14px" : "20px",
-                lineHeight: isMobile ? "1.5" : "1.2",
-                margin: isMobile ? "0 auto" : "0",
-                paddingLeft: isMobile ? "0.5rem" : "0",
-                paddingRight: isMobile ? "0.5rem" : "0",
-                marginBottom: isMobile ? "15px" : "20px"
+              color: "#64748b",
+              maxWidth: isMobile ? "100%" : "28rem",
+              fontSize: isHighDpi ? "16px" : isMobile ? "14px" : "20px",
+              lineHeight: isMobile ? "1.5" : "1.2",
+              margin: isMobile ? "0 auto" : "0",
+              paddingLeft: isMobile ? "0.5rem" : "0",
+              paddingRight: isMobile ? "0.5rem" : "0",
+              marginBottom: isMobile ? "15px" : "20px"
               }}
             >
               Discover how Ignite’s expert tutors guide you toward better grades & deeper understanding.

@@ -145,7 +145,10 @@ export default function SubjectsCard() {
   const visibleItems = createInfiniteItems();
 
   return (
-    <div className={`subjectSection ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "10px" : "0px", marginBottom: isMobile ? "50px" : "0" }}>
+    <div className={`fade-in-section subjectSection ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "10px" : "0", marginBottom: isMobile ? "50px" : "0" }}
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat="true">
       <div className="subjectSectionInner">
         {/* Background decorative rectangles */}
         <div className="testimonialRect rect-1" style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '20px' }} />
