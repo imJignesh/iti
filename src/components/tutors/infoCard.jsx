@@ -347,7 +347,10 @@ export default function InfoCard() {
                 Take charge of your learning with Ignite's most trusted tutors in Dubai. Get personalized support from expert mentors across IB, IGCSE, A-Levels, & AP, carefully tailored to help you reach your full potential.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

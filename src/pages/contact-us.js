@@ -166,7 +166,10 @@ const Contact = ({ headerHeight }) => {
                     <ContactBanner />
                 </section>
 
-                <section className="highlight-banners" data-scroll-section>
+                <section className="highlight-banners fade-in-section" 
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
                     <h2 className="banner green-banner mb-0">
                         <span className="text-normal">WANNA EXCEL</span>
                         <span className="text-bold">ACADEMICALLY?</span>
@@ -177,7 +180,10 @@ const Contact = ({ headerHeight }) => {
                         <span className="text-bold">TO LEARN?</span>
                     </h3>
                 </section>
-                <section className="contact-form" data-scroll-section>
+                <section className="contact-form fade-in-section" 
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
                     {/* 💡 WRAP FORM IN onSubmit HANDLER */}
                     <form onSubmit={handleSubmit}>
                         {submissionStatus === 'error' && (
@@ -350,7 +356,10 @@ const Contact = ({ headerHeight }) => {
                         }
                     `}</style>
                 </section>
-                <section className="contact-container" data-scroll-section>
+                <section className="contact-container fade-in-section" 
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
 
                     <div className="contact-grid">
                         <div className="contact-card green">
@@ -380,7 +389,10 @@ const Contact = ({ headerHeight }) => {
 
                     </div>
                 </section>
-                <section className="map" data-scroll-section>
+                <section className="map fade-in-section" 
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
                     <iframe
                         // NOTE: Changed to a safe, valid Google Maps URL format for embedding if necessary
                         src="https://maps.google.com/maps?q=Al%20Moosa%20Tower%201,%20Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed"

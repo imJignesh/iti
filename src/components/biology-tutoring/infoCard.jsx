@@ -345,7 +345,10 @@ export default function InfoCard() {
                 Excel in biology with the guidance of Dubai’s finest Biology tutors. Our experts blend in-depth subject knowledge with personalized support to help you confidently understand & apply key biological concepts.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

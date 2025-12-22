@@ -126,7 +126,10 @@ const AdvantagesCarousel = () => {
                     </div>
                 </div>
 
-                <div className="mobile-cards">
+                <div className="mobile-cards fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
                     {advantages.map((item, index) => (
                         <div key={index} className="mobile-card">
                             <div className="mobile-icon-container">

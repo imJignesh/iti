@@ -177,27 +177,32 @@ const DelayedPopup = () => {
                         <p style={{ color: 'red', textAlign: 'center', fontWeight: 'bold' }}>Submission failed. Please try again.</p>
                     )}
 
-                    <label>Name</label>
-                    <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="Enter your name"
-                        className="formInput"
-                    />
-                    {errors.name && <p className="error-text">{errors.name}</p>}
-
-                    <label>Email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="Enter your email"
-                        className="formInput"
-                    />
-                    {errors.email && <p className="error-text">{errors.email}</p>}
+                    <div className="row g-2">
+                        <div className="col-6">
+                            <label>Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                placeholder="Enter your name"
+                                className="formInput"
+                            />
+                            {errors.name && <p className="error-text">{errors.name}</p>}
+                        </div>
+                        <div className="col-6">
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="Enter your email"
+                                className="formInput"
+                            />
+                            {errors.email && <p className="error-text">{errors.email}</p>}
+                        </div>
+                    </div>
 
                     {/* Updated Phone Field */}
                     <label>Phone</label>
@@ -227,15 +232,37 @@ const DelayedPopup = () => {
                     </select>
                     {errors.curriculum && <p className="error-text">{errors.curriculum}</p>}
 
-                    <button type="submit" className="formSubmitBtn buttonSkyBlue mainCardBtn" disabled={loading}>
-                        <em>{loading ? 'Submitting...' : 'Submit'}</em>
-                        <Image
-                            src="/images/right-arrow-blue.webp"
-                            width={40}
-                            height={40}
-                            quality={100}
-                        />
+                    <button type="submit" className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill " disabled={loading}
+                        style={{
+                            background: "linear-gradient(90deg,#161664, #3F88BA)",
+                            color: 'white',
+                            padding: '12px 14px 12px 20px',
+                            border: 'none',
+                            transition: 'opacity 0.3s ease',
+                            letterSpacing: "3px",
+                            fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
+                            margin: "15px auto 0 0",
+                            
+                        }}
+                        onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+                        onMouseLeave={(e) => e.target.style.opacity = "1"}
+                        >
+                        {loading ? 'Submitting...' : 'SUBMIT'}
+                        <div
+                            className="custom-height rounded-circle d-flex align-items-center justify-content-center"
+
+                            style={{
+                            width: "2.5rem",
+                            height: "2.5rem",
+                            background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                            animationDelay: "0.75s",
+                            marginLeft: "2.1rem "
+                            }}
+                        >
+                            <img src="/assets/arrowright.png" alt="ibdp tutor in dubai" width={16} height={16} />
+                        </div>
                     </button>
+
                 </form>
             </div>
         </div>

@@ -53,7 +53,10 @@ const IBCurriculumStages = () => {
           className="testimonialRect rect-3"
         />      </section>
       <section className="" style={{ position: 'relative' }}>
-        <div className="container">
+        <div className="container fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat>
           <div className="row pading-in gy-5">
             <div className="col-lg-6">
               <div

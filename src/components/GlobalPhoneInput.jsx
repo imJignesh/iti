@@ -224,6 +224,7 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
                 font-size: 1rem !important;
                 border-radius: 1rem;
                 border-color: rgba(0,0,0,1 ) !important;
+                padding: .375rem 0.75rem 0.375rem 3.75rem !important;
             }
                 
 
@@ -277,6 +278,7 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
                     font-size: 1rem !important;
                     border-radius: 1rem;
                     border-color: rgba(0,0,0,1 ) !important;
+                    padding: .375rem 0.75rem .375rem 2.75rem !important;
                 }
             }
 
@@ -299,6 +301,7 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
                     font-size: 1rem !important;
                     border-radius: 1rem;
                     border-color: rgba(0,0,0,1 ) !important;
+                    padding: .375rem 0.75rem .375rem 2.75rem !important;
                 }
             }
 
@@ -321,6 +324,7 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
                     font-size: 1rem !important;
                     border-radius: 1rem;
                     border-color: rgba(0,0,0,1 ) !important;
+                    padding: .375rem 0.75rem .375rem 2.75rem !important;
                 }
             }
 
@@ -344,6 +348,7 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
                     font-size: 1rem !important;
                     border-radius: 1rem;
                     border-color: rgba(0,0,0,1 ) !important;
+                    padding: .375rem 0.75rem .375rem 2.75rem !important;
                 }
             }
       `}</style>

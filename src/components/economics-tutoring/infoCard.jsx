@@ -348,7 +348,10 @@ export default function InfoCard() {
                 Unlock your potential with Dubai’s best Economics tutors. Our experts combine deep subject knowledge with tailored guidance to build a strong, confident understanding, driving you toward academic excellence.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

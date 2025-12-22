@@ -79,7 +79,10 @@ export default function IgniteAchievements() {
               {/* Desktop Header */}
               <div className="mb-4">
                 <div className="mb-3">
-                  <h2 className="SubHeading testSubheading">OUR ACHIEVEMENTS
+                  <h2 className="SubHeading testSubheading fade-in-section"
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat>OUR ACHIEVEMENTS
                   </h2>
                 </div>
 
@@ -89,7 +92,7 @@ export default function IgniteAchievements() {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className="fade-in-section testTitle"
-                  style={{ animationDelay: "0.2s" }}
+                
                 >
                   Milestones That Clearly
                   <span className="highlight"> Reflect </span>Our Impact
@@ -105,7 +108,7 @@ export default function IgniteAchievements() {
                     background: "#233467",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
-                    animationDelay: "0.45s",
+                    
                     fontSize: "1.2rem",
                     marginTop: "16px",
                   }}>
@@ -139,7 +142,7 @@ export default function IgniteAchievements() {
                       width: "2.5rem",
                       height: "2.5rem",
                       background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                      animationDelay: "0.75s",
+                      
                       marginLeft: "2.1rem"
                     }}
                   >
@@ -150,7 +153,10 @@ export default function IgniteAchievements() {
             </div>
 
             {/* Right Side - Stats Grid */}
-            <div className="stats-grid-desktop">
+            <div className="stats-grid-desktop fade-in-section"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat>
               {/* Top Row */}
               <div className="stats-row">
                 {/* Stat 1 */}

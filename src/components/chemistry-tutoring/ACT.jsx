@@ -96,7 +96,10 @@ const AchievementsCarousel = () => {
             </h3>
           </div>
         </div>
-        <div className="row gy-4 gy-sm-3">
+        <div className="row gy-4 gy-sm-3 fade-in-section"
+        data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat>
           {SUBJECTLIST.map((item, indx) => (
             <div className="col-6 col-lg-3">
               <div

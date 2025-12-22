@@ -80,6 +80,9 @@ export default function Usps({ }) {
         {/* Apply local module class */}
         <div
           className={`fade-in-section ${styles.uspSection}`}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
           style={{ animationDelay: "0.2s" }}
         >
           {/* Global Bootstrap classes */}
@@ -95,6 +98,9 @@ export default function Usps({ }) {
               >
                 <h2
                   className="fade-in-section SubHeading mb-0"
+                  data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
@@ -103,6 +109,9 @@ export default function Usps({ }) {
                 <h3
                   // Apply local module class
                   className={`fade-in-section ${styles.uspTitle} mb-0`}
+                  data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
                   style={{ animationDelay: "0.2s" }}
                 >
                   What Do Students Get From Ignite's Biology Support?
@@ -112,6 +121,9 @@ export default function Usps({ }) {
                   href="/about-us/"
                   // Apply local module class and global class
                   className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
+                  data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE ABOUT IGNITE{" "}
@@ -132,7 +144,10 @@ export default function Usps({ }) {
                   <div key={index} className={styles.uspSlide}>
                     {row.map((usp, i) => (
                       // Apply local module class
-                      <div key={i} className={`fade-in-section ${styles.uspItem}`}>
+                      <div key={i} className={`fade-in-section ${styles.uspItem}`}
+                      data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat>
                         <div className={styles.uspNumber}>{usp.number}</div>
                         <div className={styles.uspIconCircle}>
                           <img

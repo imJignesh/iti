@@ -608,8 +608,15 @@ export default function Trainers() {
 
       {/* Wrapping div with the new global class to scope the CSS */}
       <div className={containerClass}>
-        <section className="trainersSection" data-scroll-section>
-          <div className="container">
+        <section className="trainersSection"
+
+
+        >
+          <div className="container fade-in-section"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+          >
             <div>
               <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
             </div>
@@ -620,7 +627,11 @@ export default function Trainers() {
 
 
             {isTrainersSwiper ? (
-              <div className="trainersSwiperWrap">
+              <div className="trainersSwiperWrap fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+              >
                 <Swiper
                   modules={[Navigation, Pagination]}
                   spaceBetween={24}

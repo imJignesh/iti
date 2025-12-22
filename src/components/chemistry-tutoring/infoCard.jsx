@@ -345,7 +345,10 @@ export default function InfoCard() {
                 Get personalised guidance from expert Chemistry tutors who simplify complex topics with real-world examples. Build confidence, strengthen problem-solving skills, & achieve top results with our focused support.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

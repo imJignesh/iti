@@ -345,7 +345,10 @@ export default function InfoCard() {
                 Begin your journey to academic excellence with Dubai’s best Accounting tutors. Our experts pair in-depth subject mastery with personalized guidance to help you understand accounting concepts clearly & confidently.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}
