@@ -232,7 +232,7 @@ const DelayedPopup = () => {
                     </select>
                     {errors.curriculum && <p className="error-text">{errors.curriculum}</p>}
 
-                    <button type="submit" className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill " disabled={loading}
+                    <button type="submit" className="btn cust-text fw-bold d-flex align-items-center rounded-pill " disabled={loading}
                         style={{
                             background: "linear-gradient(90deg,#161664, #3F88BA)",
                             color: 'white',
