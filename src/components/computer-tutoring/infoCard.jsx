@@ -346,7 +346,10 @@ export default function InfoCard() {
                 Unlock the world of coding with Dubai’s leading Computer Science tutors. Our experts combine deep technical knowledge with personalized support to help you grasp programming concepts confidently & effectively.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

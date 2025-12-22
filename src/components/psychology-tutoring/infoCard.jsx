@@ -345,7 +345,10 @@ export default function InfoCard() {
                 Unlock your potential with Dubai’s leading Psychology tutors. With expert knowledge & tailored guidance, we help you understand core psychological concepts, apply theories effectively, & build the confidence to excel.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

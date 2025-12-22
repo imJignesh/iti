@@ -110,6 +110,10 @@ const FAQSection = () => {
             </h3>
 
             <p
+              className="fade-in-section"
+              data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
               style={{
                 color: "#64748b",
                 maxWidth: isMobile ? "100%" : "28rem",

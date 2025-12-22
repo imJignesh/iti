@@ -3,7 +3,10 @@ import { ArrowRight } from "lucide-react";
 
 export default function CallToAction() {
   return (
-    <div className="cta-wrapper">
+    <div className="cta-wrapper fade-in-section"
+    data-scroll
+    data-scroll-class="is-inview"
+    data-scroll-repeat>
       <div className="cta-container">
         <div className="cta-background" />
 

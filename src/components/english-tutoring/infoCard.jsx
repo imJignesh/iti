@@ -336,7 +336,10 @@ export default function InfoCard() {
                 Unlock excellence in English with Dubai’s top tutors. Our expert-led approach strengthens language skills & builds confidence for lasting success. Join us & master English with ease!
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

@@ -400,7 +400,10 @@ export default function CareerForm() {
           {errors.file && <div className="invalid-feedback d-block" style={{ marginTop: '5px' }}>{errors.file}</div>}
         </div>
 
-        <div className="text-center">
+        <div className="text-center fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat>
           <button
             type="submit"
             disabled={loading}

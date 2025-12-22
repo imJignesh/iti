@@ -81,6 +81,9 @@ export default function Usps({ }) {
         <div
           // Apply local module class: styles.uspSection
           className={`fade-in-section ${styles.uspSection}`}
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
           style={{ animationDelay: "0.2s" }}
         >
           <div className="row justify-content-between gx-5">
@@ -95,6 +98,9 @@ export default function Usps({ }) {
               >
                 <h2
                   className="fade-in-section SubHeading mb-0"
+                  data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
@@ -103,6 +109,9 @@ export default function Usps({ }) {
                 <h3
                   // Apply local module class: styles.uspTitle
                   className={`fade-in-section ${styles.uspTitle} mb-0`}
+                  data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
                   style={{ animationDelay: "0.2s" }}
                 >
                   What Do Students Get From Ignite's French Support?
@@ -115,6 +124,9 @@ export default function Usps({ }) {
                   href="/about-us/"
                   // Apply local module class: styles.uspBtn, and global class: buttonSkyBlue
                   className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
+                  data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE ABOUT IGNITE{" "}
@@ -136,7 +148,10 @@ export default function Usps({ }) {
                   <div key={index} className={styles.uspSlide}>
                     {row.map((usp, i) => (
                       // Apply local module class: styles.uspItem
-                      <div key={i} className={`fade-in-section ${styles.uspItem}`}>
+                      <div key={i} className={`fade-in-section ${styles.uspItem}`}
+                      data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat>
                         <div className={styles.uspNumber}>{usp.number}</div>
                         <div className={styles.uspIconCircle}>
                           <img

@@ -347,7 +347,10 @@ export default function InfoCard() {
                 Empower your learning journey with Dubai’s most trusted private tutors. Experience personalized one-on-one support that drives exam success & long-term achievement for IB, IGCSE, A-Levels, AP, & private candidates.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

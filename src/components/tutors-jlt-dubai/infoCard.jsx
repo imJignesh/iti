@@ -349,7 +349,10 @@ export default function InfoCard() {
                 We support students in discovering their strengths & building lasting academic confidence. Located in JLT Dubai, our mentors offer support for IB, IGCSE, A-Levels, & AP, helping them grow with clarity & purpose.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

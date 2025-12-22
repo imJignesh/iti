@@ -341,7 +341,10 @@ export default function InfoCard() {
                 Begin a rewarding linguistic journey with Dubai’s top French tutors. Our expert mentors combine in-depth language knowledge with personalized instruction to help you speak French with confidence & clarity.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

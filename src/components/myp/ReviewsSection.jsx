@@ -159,7 +159,7 @@ export default function Testimonial({ }) {
 
           <img
             src="/images/star-review.png"
-            alt="ibdp tutor in dubai"
+            alt="myp tutor in dubai"
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"

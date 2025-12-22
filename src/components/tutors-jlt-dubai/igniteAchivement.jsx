@@ -89,7 +89,7 @@ export default function IgniteAchievements() {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className="fade-in-section testTitle"
-                  style={{ animationDelay: "0.2s" }}
+                  
                 >
                   Success Built On Consistent
                   <span className="highlight"> Academic Progress </span>ADIPISCING
@@ -105,7 +105,7 @@ export default function IgniteAchievements() {
                     background: "#233467",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
-                    animationDelay: "0.45s",
+                    
                     fontSize: "1.2rem",
                     marginTop: "16px",
                   }}>
@@ -114,7 +114,11 @@ export default function IgniteAchievements() {
               </div>
 
               {/* CTA Button */}
-              <div className="mb-4">
+              <div className="mb-4 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
+              >
                 <button
                   className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                   style={{
@@ -131,15 +135,12 @@ export default function IgniteAchievements() {
                 >
                   GET FREE DEMO
                   <div
-                    className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat
+                    className="custom-height rounded-circle d-flex align-items-center justify-content-center"
                     style={{
                       width: "2.5rem",
                       height: "2.5rem",
                       background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                      animationDelay: "0.75s",
+                      
                       marginLeft: "2.1rem"
                     }}
                   >
@@ -150,7 +151,10 @@ export default function IgniteAchievements() {
             </div>
 
             {/* Right Side - Stats Grid */}
-            <div className="stats-grid-desktop">
+            <div className="stats-grid-desktop fade-in-section"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat>
               {/* Top Row */}
               <div className="stats-row">
                 {/* Stat 1 */}

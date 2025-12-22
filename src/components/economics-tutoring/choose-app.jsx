@@ -38,7 +38,10 @@ const IBCurriculumStages = () => {
               </h3>
             </div>
           </div>
-          <div className="row gy-5 curriculum-content">
+          <div className="row gy-5 curriculum-content fade-in-section"
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat>
             <div className="col-lg-6">
               <div
                 className="curriculum-col curriculum-col-left"

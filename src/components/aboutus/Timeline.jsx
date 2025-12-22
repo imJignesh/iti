@@ -112,7 +112,10 @@ export default function Timeline() {
         </div>
 
         {/* Timeline Content */}
-        <div className="timeline-content">
+        <div className="timeline-content fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat>
           {/* Background Years - Hidden on mobile */}
           <div className="background-years d-none d-md-block">
             <span className="bg-year left">{activeYear - 1}</span>

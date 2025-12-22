@@ -346,7 +346,10 @@ export default function InfoCard() {
                 Begin an enriching language journey with Dubai’s finest Spanish tutors. Our expert mentors combine in-depth knowledge with personalized guidance to help you build fluency & confidence in Spanish.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

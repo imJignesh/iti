@@ -100,7 +100,10 @@ export default function IgniteCareerCard() {
             {secondaryTitleContent}
           </h3>
 
-          <p className="ignite-short-description">
+          <p className="ignite-short-description fade-in-section"
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat>
             We empower passionate trainers to shape student journeys while growing through purpose-driven initiatives & a flexible teaching environment.
           </p>
         </div>

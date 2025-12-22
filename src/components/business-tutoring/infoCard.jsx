@@ -345,7 +345,10 @@ export default function InfoCard() {
                 Elevate your journey with Dubai’s top Business Studies tutors. Our experts blend in-depth subject knowledge with personalized, goal-oriented guidance to help you confidently master key business concepts.
               </p>
 
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
                   style={{ textDecoration: "none" }}

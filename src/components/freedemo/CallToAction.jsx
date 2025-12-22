@@ -287,7 +287,10 @@ export default function CallToAction() {
             </div>
 
             {/* Mobile Image - Outside container to overlay */}
-            <div style={styles.mobileImageContainer} className="mobile-only">
+            <div style={styles.mobileImageContainer} className="mobile-only fade-in-section"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat>
                 <Image
                     src="/assets/callto.webp"
                     alt="Tutoring team working together"

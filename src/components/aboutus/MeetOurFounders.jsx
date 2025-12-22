@@ -92,7 +92,10 @@ export default function MeetOurFounders() {
         </div>
 
         {/* First Founder */}
-        <div className="row align-items-start founder-row">
+        <div className="row align-items-start founder-row fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat>
           {/* Left side - Founder Image with Background */}
           <div className="col-lg-5 col-md-6 mb-4 mb-md-0 order-1 order-md-1">
             <div className="founder-image-container">
@@ -122,7 +125,10 @@ export default function MeetOurFounders() {
         </div>
 
         {/* Second Founder */}
-        <div className="row align-items-start founder-row">
+        <div className="row align-items-start founder-row fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat>
           <div className="col-lg-7 col-md-6 order-2 order-md-1">
             <div className="founder-content2">
               {/* Founder's Message */}

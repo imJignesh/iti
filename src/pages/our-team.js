@@ -435,13 +435,13 @@ const OurTeam = ({ headerHeight }) => {
 
                 {/* --- Section 4: CTA --- */}
                 <section className="cta-section" data-scroll-section>
-                    <div className="container call-to-action teams">
+                    <div className="container call-to-action teams fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
                         <div className="cta-container">
                             <div
-                                className="cta-content fade-in-section"
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
+                                className="cta-content"
                                 style={{ animationDelay: "0.1s" }}
                             >
 
