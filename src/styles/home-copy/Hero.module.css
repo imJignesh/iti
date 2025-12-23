@@ -659,7 +659,7 @@ body.is-bot-detected [data-scroll-section] {
 @media (max-width: 360px) {
 
   .hero {
-    background: url(/images/banner-bg-mobile.webp) right -2vh top -1% / 50vh 16vh no-repeat;
+    background: url(/images/banner-bg-mobile.webp) right -7vh top 1% / 50vh 16vh no-repeat;
   }
 
   .heroLeft {
@@ -697,5 +697,6 @@ body.is-bot-detected [data-scroll-section] {
     -webkit-mask: url(/images/banner-image-right-m.webp) no-repeat center top;
     -webkit-mask-size: 90%;
     mask-size: 100%;
+    width:92vw;
   }
 }

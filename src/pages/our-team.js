@@ -26,7 +26,7 @@ const trainersData = [
     {
         name: "SARANYA",
         experience: "8+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/saranya-team.webp",
         description:
             "Saranya, with 8 years of experience, specializes in Physics & Mathematics. She holds an MSc in Physics from the University of Calicut, along with a B.Ed. & a B.Sc. in Physics, & has enriched her expertise through an astrophysics project at the Indian Institute of Astrophysics, Bangalore, & a winter workshop at IIT Madras. Passionate about learning & sharing knowledge, she sees teaching as a way to shape future leaders. With strong interests in astrophysics & materials science, Saranya is recognized for her structured lessons & adaptability to each student’s learning style.",
     },
@@ -40,7 +40,7 @@ const trainersData = [
     {
         name: "IRTIQA",
         experience: "6+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/Irtiqa-team.webp",
         description:
             "Irtiqa, a B.Tech graduate in Computer Science & certified Web Developer, has 6 years of experience teaching Computer Science, ICT, & IT. With a student-centered approach, she simplifies complex concepts using real-world examples & interactive activities, fostering curiosity, critical thinking, & practical application. She strives to create an engaging environment where students feel confident exploring ideas. Outside the classroom, Irtiqa enjoys crocheting & knitting, hobbies that inspire her creative, detailed, & thoughtful teaching style.",
     },
@@ -61,7 +61,7 @@ const trainersData = [
     {
         name: "NAMRATA",
         experience: "10+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/namrata-team.webp",
         description:
             "Namrata, with over 10 years of teaching experience, specializes in Business Analytics, Mathematics, & Physics. She holds an MBA in Business Analytics & is currently pursuing a Postgraduate Certificate, along with certifications in data analysis, statistical modeling, & programming. Her teaching blends analytical thinking with creativity, using real-life examples & interactive methods to turn complex ideas into clear “aha!” moments. Passionate about making learning an engaging adventure, Namrata also enjoys reading, traveling, & hosting webinars on soft skills.",
     },
@@ -82,28 +82,28 @@ const trainersData = [
     {
         name: "IPSITA",
         experience: "7+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/ipsita-team.webp",
         description:
             "Ipsita, with 7 years of teaching experience, specializes in Biology and Environmental Management. She holds an M.Sc. in Zoology and is currently pursuing a B.Ed. Believing that learning should be enjoyable and engaging, she adopts a student-centric approach with interactive lessons that encourage curiosity and participation. Passionate about creating a positive classroom environment, Ipsita finds motivation in watching her students grow in confidence and understanding. Outside of teaching, she enjoys reading, painting, and traveling.",
     },
     {
         name: "FREEZY",
         experience: "4+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/freezy-team.webp",
         description:
             "Freezy, with over 4 years of teaching experience, is a passionate Science educator specializing in Biology, Chemistry, & Environmental Management. She holds a Master’s degree in Biotechnology & has further strengthened her expertise through workshops with IBICUS & Biotecnika. Known for making science engaging, interactive, & accessible, Freezy is dedicated to helping students build strong conceptual foundations & develop a deeper curiosity for the subject.",
     },
     {
         name: "AASHIMA",
         experience: "5+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/aashima-team.webp",
         description:
             "Aashima is a certified Spanish educator specializing in advanced language training. She has completed her C1.1 level from the Embassy of Spain – Instituto Cervantes & is a certified B2 DELE trainer. With strong technical expertise, she integrates modern tools, interactive software, & online resources into her lessons to make learning engaging & effective. Passionate about teaching, Aashima ensures her students gain not just fluency but also confidence in using the language in real-life contexts.",
     },
     {
         name: "ANUJA",
         experience: "10+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/Anuja-team.webp",
         description:
             "Ms. Anuja Agrawal brings over 10 years of rich teaching experience, specializing in English and French. With a BA in Psychology & Education, an MSc in Advanced Integrated Communications, & a PGDM in Business Management & Design Thinking, she blends academic depth with practical insights. Certified in Neuro-Linguistic Programming & Emotional Intelligence, she fosters impactful learning experiences. A passionate linguist with B2 French (Alliance Française) & A2 Spanish, Ms. Anuja also finds joy in traveling & exploring diverse cultures.",
     },
@@ -141,13 +141,13 @@ const coFoundersData = [
 const adminStaffData = [
     {
         name: "Saif",
-        image: "/images/saif.png",
+        image: "/images/saif.webp",
         description:
             "Saif, an ACCA-qualified professional, serves as the Student Coordinator & manages all student-related matters, from planning academic activities to ensuring smooth daily operations. With over 5 years of experience, Saif is committed to helping students achieve their goals & navigate the academic & admission process. Outside work, he enjoys reading, staying active through fitness routines, & pursuing his passion for house music by DJ’ing & mixing tracks, finding both creativity & relaxation in blending beats.",
     },
     {
         name: "Ahzeb",
-        image: "/images/ahzeb.png",
+        image: "/images/ahzeb.webp",
         description:
             "Ahzeb plays a key role by combining business development expertise with technical oversight. With over a decade of experience across diverse sales teams & cultures, he excels in crafting unique strategies, enrolling students in the right programs, coordinating schedules, providing tech support, & managing the company’s database. He works closely with teams, fosters partnerships, & contributes to performance reviews & new business initiatives. Outside of work, he’s a stand-up performer & avid writing enthusiast.",
     },
@@ -267,7 +267,7 @@ const OurTeam = ({ headerHeight }) => {
                                         style={{ animationDelay: `${0.3 + index * 0.1}s` }} // Staggered delay
                                     >
                                         <div className="team-card-image">
-                                            <img src={founder.image} alt={founder.name} />
+                                            <img src={founder.image} alt={`${founder.name} - Co-Founder Of Ignite Training Institute`} />
                                         </div>
                                         {/* ... rest of card content ... */}
                                         <div className="team-card-info">
@@ -332,7 +332,7 @@ const OurTeam = ({ headerHeight }) => {
                                         style={{ animationDelay: `${0.3 + index * 0.1}s` }} // Staggered delay
                                     >
                                         <div className="admin-card-image">
-                                            <img src={admin.image} alt={admin.name} />
+                                            <img src={admin.image} alt={`${admin.name} - Student Manager, Ignite Training Institute`} />
                                         </div>
                                         {/* ... rest of card content ... */}
                                         <div className="admin-card-info">

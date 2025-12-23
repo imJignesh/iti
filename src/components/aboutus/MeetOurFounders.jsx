@@ -102,7 +102,7 @@ export default function MeetOurFounders() {
               <div className="founder-image">
                 <img
                   src="/assets/founder1.webp"
-                  alt="about ignite"
+                  alt="Sumit Advani Co-Founder Of Ignite Training Institute"
                   className="founder-cutout"
                   width={508}
                   height={666}
@@ -146,7 +146,7 @@ export default function MeetOurFounders() {
               <div className="founder-image2">
                 <img
                   src="/assets/founder2.webp"
-                  alt="about ignite"
+                  alt="Mohnish Ahuja Co-Founder Of Ignite Training Institute"
                   className="founder-cutout2"
                   width={508}
                   height={666}

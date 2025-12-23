@@ -232,14 +232,12 @@ const DelayedPopup = () => {
                     </select>
                     {errors.curriculum && <p className="error-text">{errors.curriculum}</p>}
 
-                    <button type="submit" className="btn cust-text fw-bold d-flex align-items-center rounded-pill " disabled={loading}
+                    <button type="submit" className="btn popup-cust-text fw-bold d-flex align-items-center rounded-pill " disabled={loading}
                         style={{
                             background: "linear-gradient(90deg,#161664, #3F88BA)",
                             color: 'white',
-                            padding: '12px 14px 12px 20px',
                             border: 'none',
                             transition: 'opacity 0.3s ease',
-                            letterSpacing: "3px",
                             fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
                             margin: "15px auto 0 0",
                             
@@ -249,11 +247,9 @@ const DelayedPopup = () => {
                         >
                         {loading ? 'Submitting...' : 'SUBMIT'}
                         <div
-                            className="custom-height rounded-circle d-flex align-items-center justify-content-center"
+                            className="popup-custom-height rounded-circle d-flex align-items-center justify-content-center"
 
                             style={{
-                            width: "2.5rem",
-                            height: "2.5rem",
                             background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
                             animationDelay: "0.75s",
                             marginLeft: "2.1rem "

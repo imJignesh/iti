@@ -219,9 +219,9 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
                 /* Example: Different height or border for the popup version */
                 background: rgba(255, 255, 255, 0.1) !important;
                 border: 1px solid rgba(0, 0, 0, 1) !important;
-                height: 50px !important;
+                height: 34px !important;
                 color: #152f63 !important;
-                font-size: 1rem !important;
+                font-size: 0.8rem !important;
                 border-radius: 1rem;
                 border-color: rgba(0,0,0,1 ) !important;
                 padding: .375rem 0.75rem 0.375rem 3.75rem !important;
@@ -237,16 +237,16 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
             /* Responsive styles using custom class targeting */
             @media (min-width: 350px) {
                 .custom-flag-container img {
-                    width:20px
+                    width:40px
                 }
                 .native-select-overlay {
                     width: 25px;
                     left:10px;
                 }
                 .custom-flag-container {
-                    width: 20px;
+                    width: 40px;
                     justify-content: flex-start;
-                    left:10px
+                    left:17px;
                 }
                 :global(.form-control){
                     padding: 10px 0 10px 35px !important;

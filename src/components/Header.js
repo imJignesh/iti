@@ -159,16 +159,20 @@ const Header = ({ setHeaderHeight }) => {
                 </div>
                 <div className={`d-flex justify-content-end m-0 ${styles.header_right_content}`}>
                     <div className="col-auto p-0  d-sm-block">
-                        <button>
-                            <Image src="/images/mobile.png" width={25} height={25} quality={100} alt="Call" />
-                            Call
-                        </button>
+                        <a href="tel:+971568357374">
+                            <button>
+                                <Image src="/images/mobile.png" width={25} height={25} quality={100} alt="Call" />
+                                Call
+                            </button>
+                        </a>
                     </div>
                     <div className="col-auto p-0  d-sm-block">
-                        <button>
-                            <Image src="/images/whatsapp.png" width={25} height={25} quality={100} alt='Whatsapp' />
-                            Whatsapp
-                        </button>
+                        <a href="https://wa.me/+971568357374">
+                            <button>
+                                <Image src="/images/whatsapp.png" width={25} height={25} quality={100} alt='Whatsapp' />
+                                Whatsapp
+                            </button>
+                        </a>
                     </div>
                     {/* Hamburger toggle button for mobile/tablet */}
                     <button

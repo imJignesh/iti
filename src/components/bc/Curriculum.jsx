@@ -96,7 +96,13 @@ export default function IBCurriculumStages() {
                 <br />
                 <span className="program">IGCSE</span>
               </div>
-              <div className="divider"></div>
+              <div className="divider fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
+              style={{
+                  animationDelay: "0.25s",
+                }}></div>
               <div className="card-description">
                 Ignite’s expert British Curriculum tutors offer tailored support,
                 curated resources, & exam-focused strategies to help IGCSE
@@ -171,7 +177,13 @@ export default function IBCurriculumStages() {
                   A Levels
                 </span>
               </div>
-              <div className="divider"></div>
+              <div className="divider fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
+              style={{
+                  animationDelay: "0.25s",
+                }}></div>
               <div className="card-description">
                 At Ignite, our subject-specialist A-Level tutors offer expert
                 guidance, personalised strategies, & rigorous academic support to
