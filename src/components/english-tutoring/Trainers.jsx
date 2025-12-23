@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 const trainers = [
   {
     name: "ANUJA",
-    img: "/images/trainer2.png",
+    img: "/images/team/Anuja.webp",
     subtitle: "English",
     experience: "10+ YEARS",
     color: "green",
@@ -28,7 +28,7 @@ const TrainerCard = ({ trainer }) => (
     <div data-color={trainer.color} className="trainerCard">
       <div className="trainerName">{trainer.name}</div>
       <div className="trainerImgWrap">
-        <img src={trainer.img} alt={trainer.name} className="trainerImg" />
+        <img src={trainer.img} alt={`Trainer ${trainer.name} ignite training institute`} className="trainerImg" />
       </div>
       <div className="trainerSubtitle">{trainer.subtitle}</div>
       <div className="trainerExp">{trainer.experience}</div>

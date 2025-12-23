@@ -217,7 +217,13 @@ export default function InfoCard() {
                   </>
                 )}
               </h1>
-              <div className="divider"></div>
+              <div className="divider fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
+              style={{
+                  animationDelay: "0.25s",
+                }}></div>
 
               <h2
                 className="text-white fade-in-section fs-8 fs-md-10"
@@ -371,7 +377,7 @@ export default function InfoCard() {
                       marginTop: isMobile ? "auto" : "40px",
                     }}
                   >
-                    <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>
+                    <span style={{ letterSpacing: isMobile ? "0px" : "0px" }}>
                       Get A Free Demo
                     </span>
                     <img

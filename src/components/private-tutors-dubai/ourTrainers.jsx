@@ -38,7 +38,7 @@ const trainers = [
   },
   {
     name: "IRTIQA",
-    img: "/images/trainer1.png",
+    img: "/images/team/Irtiqa.webp",
     subtitle: "Computer Science, ICT",
     experience: "6+ YEARS",
     color: "blue",
@@ -59,7 +59,7 @@ const trainers = [
   },
   {
     name: "NAMRATA",
-    img: "/images/trainer2.png",
+    img: "/images/team/namrata.webp",
     subtitle: "Maths & Physics",
     experience: "10+ YEARS",
     color: "green",
@@ -80,28 +80,28 @@ const trainers = [
   },
   {
     name: "IPSITA",
-    img: "/images/trainer1.png",
+    img: "/images/team/ipsita.webp",
     subtitle: "Biology & EVM",
     experience: "7+ YEARS",
     color: "blue",
   },
   {
     name: "FREEZY",
-    img: "/images/trainer2.png",
+    img: "/images/team/freezy.webp",
     subtitle: "Biology, Chemistry",
     experience: "4+ YEARS",
     color: "green",
   },
   {
     name: "AASHIMA",
-    img: "/images/trainer1.png",
+    img: "/images/team/aashima.webp",
     subtitle: "Spanish",
     experience: "5+ YEARS",
     color: "blue",
   },
   {
     name: "ANUJA",
-    img: "/images/trainer2.png",
+    img: "/images/team/Anuja.webp",
     subtitle: "English & French",
     experience: "10+ YEARS",
     color: "green",
@@ -132,7 +132,7 @@ const TrainerCard = ({ trainer }) => (
     <div data-color={trainer.color} className="trainerCard">
       <div className="trainerName">{trainer.name}</div>
       <div className="trainerImgWrap">
-        <img src={trainer.img} alt={trainer.name} className="trainerImg" />
+        <img src={trainer.img} alt={`Trainer ${trainer.name} ignite training institute`} className="trainerImg" />
       </div>
       <div className="trainerSubtitle">{trainer.subtitle}</div>
       <div className="trainerExp">{trainer.experience}</div>

@@ -27,7 +27,7 @@ const trainers = [
   },
   {
     name: "SARANYA",
-    img: "/images/trainer33.png",
+    img: "/images/team/saranya.webp",
     subtitle: "Physics",
     experience: "8+ YEARS",
     color: "blue",
@@ -41,7 +41,7 @@ const trainers = [
   },
   {
     name: "IRTIQA",
-    img: "/images/trainer22.png",
+    img: "/images/team/Irtiqa.webp",
     subtitle: "Computer Science, ICT",
     experience: "6+ YEARS",
     color: "blue",
@@ -62,7 +62,7 @@ const trainers = [
   },
   {
     name: "NAMRATA",
-    img: "/images/trainer22.png",
+    img: "/images/team/namrata.webp",
     subtitle: "Maths & Physics",
     experience: "10+ YEARS",
     color: "green",
@@ -83,28 +83,28 @@ const trainers = [
   },
   {
     name: "IPSITA",
-    img: "/images/trainer11.png",
+    img: "/images/team/ipsita.webp",
     subtitle: "Biology & EVM",
     experience: "7+ YEARS",
     color: "blue",
   },
   {
     name: "FREEZY",
-    img: "/images/trainer22.png",
+    img: "/images/team/freezy.webp",
     subtitle: "Biology, Chemistry",
     experience: "4+ YEARS",
     color: "green",
   },
   {
     name: "AASHIMA",
-    img: "/images/trainer33.png",
+    img: "/images/team/aashima.webp",
     subtitle: "Spanish",
     experience: "5+ YEARS",
     color: "blue",
   },
   {
     name: "ANUJA",
-    img: "/images/trainer22.png",
+    img: "/images/team/Anuja.webp",
     subtitle: "English & French",
     experience: "10+ YEARS",
     color: "green",
@@ -135,7 +135,7 @@ const TrainerCard = ({ trainer }) => (
     <div className="trainerImgWrap">
       <Image
         src={trainer.img}
-        alt={trainer.name}
+        alt={`Trainer ${trainer.name} ignite training institute`} 
         className="trainerImg"
         width={300}
         height={300}
