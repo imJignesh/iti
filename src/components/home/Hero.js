@@ -93,7 +93,7 @@ const Hero = () => {
                                         playsInline
                                         poster="/images/banner-image-right.webp"
                                     >
-                                        <source src="/videos/education-video.mp4" type="video/mp4" />
+                                        <source src="/videos/hero-banner-video.mp4" type="video/mp4" />
                                         {/* Fallback image if video doesn't load */}
                                         <Image
                                             src="/images/banner-image-right.webp"
