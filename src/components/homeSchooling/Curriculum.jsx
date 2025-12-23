@@ -39,7 +39,7 @@ export default function Curriculum() {
             className="curriculum-img"
           />
           <a
-            href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/"
+            href="/courses/igcse-tutors-in-dubai/"
             className="curriculum-label"
             style={{ textDecoration: "none" }}
           >
@@ -55,7 +55,7 @@ export default function Curriculum() {
             className="curriculum-img"
           />
           <a
-            href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai/"
+            href="/courses/a-level-tutors-in-dubai/"
             className="curriculum-label"
             style={{ textDecoration: "none" }}
           >
@@ -71,7 +71,7 @@ export default function Curriculum() {
             className="curriculum-img"
           />
           <a
-            href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai/"
+            href="/advanced-placements-tutors-in-dubai/"
             className="curriculum-label"
             style={{ textDecoration: "none" }}
           >

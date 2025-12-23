@@ -54,7 +54,7 @@ const Blog = () => {
                             LOREM IPSUM DOLOR SIT AMET
                         </div>
                         <a
-                            href="https://ignitetraininginstitute.com/blog/"
+                            href="/blog/"
                             style={{ textDecoration: "none" }}
                         >
                             <button

@@ -2,28 +2,28 @@ import React, { useEffect, useState } from "react";
 
 const subjectRows = [
   [
-    { name: "Maths", url: "https://ignitetraininginstitute.com/maths-tutor-in-dubai/" },
+    { name: "Maths", url: "/maths-tutor-in-dubai/" },
   ],
   [
-    { name: "Physics", url: "https://ignitetraininginstitute.com/physics-tutor-in-dubai/" },
-    { name: "Chemistry", url: "https://ignitetraininginstitute.com/chemistry-tutor-in-dubai/" },
+    { name: "Physics", url: "/physics-tutor-in-dubai/" },
+    { name: "Chemistry", url: "/chemistry-tutor-in-dubai/" },
   ],
   [
-    { name: "Biology", url: "https://ignitetraininginstitute.com/biology-tutor-in-dubai/" },
-    { name: "Computer Science", url: "https://ignitetraininginstitute.com/computer-science-tutor-in-dubai/" },
-    { name: "French", url: "https://ignitetraininginstitute.com/french-tutor-in-dubai/" },
+    { name: "Biology", url: "/biology-tutor-in-dubai/" },
+    { name: "Computer Science", url: "/computer-science-tutor-in-dubai/" },
+    { name: "French", url: "/french-tutor-in-dubai/" },
   ],
   [
-    { name: "Economics", url: "https://ignitetraininginstitute.com/economics-tutor-in-dubai/" },
-    { name: "English", url: "https://ignitetraininginstitute.com/english-tutor-in-dubai/" },
-    { name: "Spanish", url: "https://ignitetraininginstitute.com/spanish-tutor-in-dubai/" },
+    { name: "Economics", url: "/economics-tutor-in-dubai/" },
+    { name: "English", url: "/english-tutor-in-dubai/" },
+    { name: "Spanish", url: "/spanish-tutor-in-dubai/" },
   ],
   [
-    { name: "Accounting", url: "https://ignitetraininginstitute.com/accounting-tutor-in-dubai/" },
-    { name: "Business Studies", url: "https://ignitetraininginstitute.com/business-studies-tutor-in-dubai/" },
+    { name: "Accounting", url: "/accounting-tutor-in-dubai/" },
+    { name: "Business Studies", url: "/business-studies-tutor-in-dubai/" },
   ],
   [
-    { name: "Psychology", url: "https://ignitetraininginstitute.com/psychology-tutor-in-dubai/" },
+    { name: "Psychology", url: "/psychology-tutor-in-dubai/" },
   ],
 ];
 

@@ -13,7 +13,7 @@ h1.main-title {
     -webkit-text-fill-color: transparent;
     position: relative;
     padding: 0 40px;
-    display: inline-block;
+    display: block;
     text-align: center;
     font-size: 40px;
     /* Default font size for larger screens */

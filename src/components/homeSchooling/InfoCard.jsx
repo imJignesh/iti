@@ -354,7 +354,7 @@ export default function InfoCard() {
               data-scroll-repeat
               >
                 <a
-                  href="https://ignitetraininginstitute.com/join-free-demo-class/"
+                  href="/join-free-demo-class/"
                   style={{ textDecoration: "none" }}
                 >
                   <button
