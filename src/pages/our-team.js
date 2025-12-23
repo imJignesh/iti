@@ -17,15 +17,15 @@ const trainersData = [
             "Masab, an ACCA member with a Bachelor’s in Commerce, brings over a decade of expertise in teaching Mathematics & Accounting. Known for his ability to simplify complex concepts, he inspires students to achieve academic excellence while fostering a genuine love for learning. Teaching is his true passion, & he approaches every lesson with energy & commitment. Beyond academics, Masab enjoys playing table tennis, a sport that reflects his focus, precision, & competitive spirit.",
     },
     {
-        name: "SADAF",
-        experience: "11+ Years",
+        name: "SHWETHA",
+        experience: "6+ Years",
         image: "/images/prakshi-trainer.png",
         description:
-            "Sadaf, a Chartered Accountant with a Bachelor’s in Commerce, brings 11 years of experience teaching Accounting, Business, & Economics across Cambridge, Edexcel, and IB curricula, as well as Finance, Marketing, & Cost Management at the university level. Inspired by her educator parents, she tailors her teaching style to each student, making even “boring” subjects engaging & enjoyable. Known for her approachable nature, Sadaf believes there are no bad students, only unique learning journeys. Outside the classroom, she’s a passionate dancer, traveler, movie lover, & avid reader.",
+            "Shwetha brings over six and a half years of teaching experience in Biology, backed by an M.Sc. and B.Ed. With a deep love for nature, books, & exploration, she blends curiosity & real-world wonder into her classroom. Her passion for trekking, quiet reflection, & travel fuels the creativity she brings to every lesson. Shwetha believes education goes beyond textbooks, it’s about inspiring growth, nurturing questions, & connecting learning to life. Known for her calm, thoughtful approach, she encourages students to discover meaning & enthusiasm in the world around them.",
     },
     {
         name: "SARANYA",
-        experience: "8+ Years",
+        experience: "8+ Years", 
         image: "/images/team/saranya-team.webp",
         description:
             "Saranya, with 8 years of experience, specializes in Physics & Mathematics. She holds an MSc in Physics from the University of Calicut, along with a B.Ed. & a B.Sc. in Physics, & has enriched her expertise through an astrophysics project at the Indian Institute of Astrophysics, Bangalore, & a winter workshop at IIT Madras. Passionate about learning & sharing knowledge, she sees teaching as a way to shape future leaders. With strong interests in astrophysics & materials science, Saranya is recognized for her structured lessons & adaptability to each student’s learning style.",
