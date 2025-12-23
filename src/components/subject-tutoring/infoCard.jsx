@@ -211,7 +211,7 @@ export default function InfoCard() {
 
               <div className="d-flex gap-3">
                 <a
-                  href="https://ignitetraininginstitute.com/join-free-demo-class/"
+                  href="/join-free-demo-class/"
                   style={{ textDecoration: "none" }}
                 >
                   <button

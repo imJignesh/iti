@@ -217,7 +217,7 @@ function UpsSection() {
           style={{ animationDelay: "0.7s" }}
         >
           <a
-            href="https://ignitetraininginstitute.com/about-us/"
+            href="/about-us/"
             style={{ textDecoration: "none" }}
           >
             <button

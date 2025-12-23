@@ -358,7 +358,7 @@ export default function InfoCard() {
                 data-scroll-repeat
               >
                 <a
-                  href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai/"
+                  href="/courses/ibdp-tutors-in-dubai/"
                   style={{ textDecoration: "none" }}
                 >
                   <button
@@ -387,7 +387,7 @@ export default function InfoCard() {
                 </a>
 
                 <a
-                  href="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai/"
+                  href="/courses/myp-tutors-in-dubai/"
                   style={{ textDecoration: "none" }}
                 >
                   <button

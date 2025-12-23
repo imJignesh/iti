@@ -88,7 +88,7 @@ const IBCurriculumStages = () => {
                     />{" "}
                     <h3>
                       <a
-                        href="https://ignitetraininginstitute.com/ib-curriculum-tutors-in-dubai/"
+                        href="/ib-curriculum-tutors-in-dubai/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
@@ -108,7 +108,7 @@ const IBCurriculumStages = () => {
                     />{" "}
                     <h3>
                       <a
-                        href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/"
+                        href="/courses/igcse-tutors-in-dubai/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
@@ -128,7 +128,7 @@ const IBCurriculumStages = () => {
                     />{" "}
                     <h3>
                       <a
-                        href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai/"
+                        href="/courses/a-level-tutors-in-dubai/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
@@ -148,7 +148,7 @@ const IBCurriculumStages = () => {
                     />{" "}
                     <h3>
                       <a
-                        href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/"
+                        href="/courses/igcse-tutors-in-dubai/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
@@ -194,7 +194,7 @@ const IBCurriculumStages = () => {
                     />{" "}
                     <h3>
                       <a
-                        href="https://ignitetraininginstitute.com/act-tutors-in-dubai/"
+                        href="/act-tutors-in-dubai/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
@@ -214,7 +214,7 @@ const IBCurriculumStages = () => {
                     />{" "}
                     <h3>
                       <a
-                        href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai/"
+                        href="/advanced-placements-tutors-in-dubai/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
@@ -234,7 +234,7 @@ const IBCurriculumStages = () => {
                     />{" "}
                     <h3>
                       <a
-                        href="https://ignitetraininginstitute.com/ucat-tutors-in-dubai/"
+                        href="/ucat-tutors-in-dubai/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}

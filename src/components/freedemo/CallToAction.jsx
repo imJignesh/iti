@@ -269,7 +269,7 @@ export default function CallToAction() {
                             </p>
 
                             <div style={styles.mobileButtonContainer}>
-                                <a href="https://ignitetraininginstitute.com/join-free-demo-class/" target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
+                                <a href="/join-free-demo-class/" target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
 
                                     <button
                                         style={{ ...styles.mobileButton }}
