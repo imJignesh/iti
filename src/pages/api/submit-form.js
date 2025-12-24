@@ -5,6 +5,8 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: 'Method Not Allowed' });
     }
 
+
+    
     // 💡 UPDATED: Destructure ALL fields, including new Career fields
     const {
         name, email, phone, grade, school, course, message, pageinfo, formType, curriculum,
