@@ -87,7 +87,7 @@ const About = () => {
                 />
               </div>
               <Image
-                src="/images/about-us-img.webp"
+                src="/images/home-about-us.webp"
                 alt="Teacher"
                 data-scroll
                 data-scroll-class="is-inview"
