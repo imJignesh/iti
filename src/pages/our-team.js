@@ -12,14 +12,14 @@ const trainersData = [
     {
         name: "MASAB",
         experience: "10+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/masab-team.webp",
         description:
             "Masab, an ACCA member with a Bachelor’s in Commerce, brings over a decade of expertise in teaching Mathematics & Accounting. Known for his ability to simplify complex concepts, he inspires students to achieve academic excellence while fostering a genuine love for learning. Teaching is his true passion, & he approaches every lesson with energy & commitment. Beyond academics, Masab enjoys playing table tennis, a sport that reflects his focus, precision, & competitive spirit.",
     },
     {
         name: "SHWETHA",
         experience: "6+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/shwetha-team.webp",
         description:
             "Shwetha brings over six and a half years of teaching experience in Biology, backed by an M.Sc. and B.Ed. With a deep love for nature, books, & exploration, she blends curiosity & real-world wonder into her classroom. Her passion for trekking, quiet reflection, & travel fuels the creativity she brings to every lesson. Shwetha believes education goes beyond textbooks, it’s about inspiring growth, nurturing questions, & connecting learning to life. Known for her calm, thoughtful approach, she encourages students to discover meaning & enthusiasm in the world around them.",
     },
@@ -33,7 +33,7 @@ const trainersData = [
     {
         name: "ASHWANI",
         experience: "7+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/ashwani-team.webp",
         description:
             "Ashwani, with 7 years of teaching experience, is a Mathematics educator holding an M.Ed degree. Initially skeptical about teaching, he discovered a true passion for guiding students and uncovering their hidden skills. Rather than simply delivering knowledge, he believes in working alongside students to solve problems, encouraging critical and logical thinking. For Ashwani, teaching is a lifelong journey that keeps him young, as he continues to learn and grow with his students.",
     },
@@ -47,14 +47,14 @@ const trainersData = [
     {
         name: "ABDUL",
         experience: "13+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/abdul-team.webp",
         description:
             "Abdul, with 13 years of teaching experience, holds a Master’s in Mathematics & is passionate about making the subject clear & approachable. Inspired by friends who recognized his strong explanation skills, he embraced teaching as a fulfilling career. By placing himself in the student’s shoes, Abdul creates a supportive learning environment that strengthens understanding & builds confidence. Outside the classroom, he enjoys playing carrom, traveling, & pursuing a balanced, independent life.",
     },
     {
         name: "HARSHA",
         experience: "10+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/harsha-team.webp",
         description:
             "Harsha, with over 10 years of teaching experience, is an Economics & Business Studies educator holding an M.Com, B.Com, B.Ed, & a Postgraduate Diploma in Banking Operations. She guides students from Year 10 to Year 13, guiding them toward top results while building real-world understanding. Known for her interactive, practical lessons enriched with discussions & problem-solving, Harsha connects classroom theory to real-life decisions. Her goal is to inspire curiosity, confidence, & skills that students carry well beyond school.",
     },
@@ -68,14 +68,14 @@ const trainersData = [
     {
         name: "KRITIKA",
         experience: "3+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/kritika-team.webp",
         description:
             "Kritika, with 3 years of teaching experience, is a passionate Mathematics educator holding a Bachelor’s in Physics (Honours) from Punjab University & a Bachelor of Education. She strives to make math engaging & empowering, connecting concepts to real-world applications through her physics background. Known for creating a supportive & motivating learning environment, Kritika encourages curiosity, confidence, & critical thinking. Outside the classroom, she enjoys stargazing & exploring innovative teaching methods to inspire a lifelong love for learning.",
     },
     {
         name: "RUSTHA",
         experience: "3+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/rustha-team.webp",
         description:
             "Rustha, with 3 years of teaching experience, specializes in Chemistry & Biology. She holds an M.Sc. in Forensic Science (with Advanced Practice) & a B.Sc. (Hons) in Forensic Science, with a strong background in Environmental Forensics. Having begun her career in forensic labs, she brings the same curiosity & analytical mindset into her classroom, helping students recognize patterns, think critically, & approach challenges with confidence. Rustha breaks down complex ideas into manageable steps, ensuring every student leaves with a deeper understanding & self-belief.",
     },
@@ -110,14 +110,14 @@ const trainersData = [
     {
         name: "DR. HAYA",
         experience: "9+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/dr-haya-team.webp",
         description:
             "Dr. Haya Khalid is a doctor by profession and a teacher by passion, with 9 years of teaching experience in Chemistry, Physics, & Biology. Holding an MBBS degree, her deep-rooted love for the sciences extends beyond medicine into inspiring young learners. During her academic journey, she discovered not only her affinity for the hard sciences but also her natural flair for teaching, igniting a career dedicated to shaping curious minds & guiding students toward academic excellence.",
     },
     {
         name: "DEEPAK",
         experience: "13+ Years",
-        image: "/images/prakshi-trainer.png",
+        image: "/images/team/deepak-team.webp",
         description:
             "Deepak Irukullawar has 13 years of experience teaching Physics & Mathematics for IB, A Levels, & IGCSE. With a Master’s in Structural Engineering & Construction and certifications in Child Protection & Safeguarding and Dealing with People of Determination, he ensures a safe & supportive learning environment. Passionate about research & industry collaboration, he brings real-world applications into his teaching, helping students connect theory with practice for stronger academic mastery.",
     },

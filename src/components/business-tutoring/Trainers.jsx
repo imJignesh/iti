@@ -19,7 +19,7 @@ const trainers = [
   // },
   {
     name: "HARSHA",
-    img: "/images/trainer1.png",
+    img: "/images/team/harsha.webp",
     subtitle: "Business",
     experience: "10+ YEARS",
     color: "blue",

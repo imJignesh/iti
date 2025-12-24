@@ -13,14 +13,14 @@ import Image from '@/components/CustomImageWrapper';
 const trainers = [
   {
     name: "MASAB",
-    img: "/images/trainer11.png",
+    img: "/images/team/masab.webp",
     subtitle: "Maths & Accounting",
     experience: "10+ YEARS",
     color: "blue",
   },
   {
     name: "SHWETHA",
-    img: "/images/trainer2.png",
+    img: "/images/team/shwetha.webp",
     subtitle: "Biology",
     experience: "6+ YEARS",
     color: "green",
@@ -34,7 +34,7 @@ const trainers = [
   },
   {
     name: "ASHWANI",
-    img: "/images/trainer11.png",
+    img: "/images/team/ashwani.webp",
     subtitle: "Maths",
     experience: "7+ YEARS",
     color: "green",
@@ -48,14 +48,14 @@ const trainers = [
   },
   {
     name: "ABDUL",
-    img: "/images/trainer33.png",
+    img: "/images/team/abdul.webp",
     subtitle: "Maths",
     experience: "13+ YEARS",
     color: "green",
   },
   {
     name: "HARSHA",
-    img: "/images/trainer11.png",
+    img: "/images/team/harsha.webp",
     subtitle: "Economics & Business",
     experience: "10+ YEARS",
     color: "blue",
@@ -69,14 +69,14 @@ const trainers = [
   },
   {
     name: "KRITIKA",
-    img: "/images/trainer33.png",
+    img: "/images/team/kritika.webp",
     subtitle: "Maths",
     experience: "3+ YEARS",
     color: "blue",
   },
   {
     name: "RUSTHA",
-    img: "/images/trainer22.png",
+    img: "/images/team/rustha.webp",
     subtitle: "Chemistry, Biology, & EVM",
     experience: "3+ YEARS",
     color: "green",
@@ -111,14 +111,14 @@ const trainers = [
   },
   {
     name: "DR. HAYA",
-    img: "/images/trainer11.png",
+    img: "/images/team/dr-haya.webp",
     subtitle: "Chemistry, Physics, Biology",
     experience: "9+ YEARS",
     color: "blue",
   },
   {
     name: "DEEPAK",
-    img: "/images/trainer22.png",
+    img: "/images/team/deepak.webp",
     subtitle: "Physics & Maths",
     experience: "13+ YEARS",
     color: "green",

@@ -12,14 +12,14 @@ import "swiper/css/pagination";
 const trainers = [
   {
     name: "ASHWANI",
-    img: "/images/trainer2.png",
+    img: "/images/team/ashwani.webp",
     subtitle: "Maths",
     experience: "7+ YEARS",
     color: "green",
   },
   {
     name: "ABDUL",
-    img: "/images/trainer2.png",
+    img: "/images/team/abdul.webp",
     subtitle: "Maths",
     experience: "13+ YEARS",
     color: "green",
@@ -33,14 +33,14 @@ const trainers = [
   },
   {
     name: "KRITIKA",
-    img: "/images/trainer1.png",
+    img: "/images/team/kritika.webp",
     subtitle: "Maths",
     experience: "3+ YEARS",
     color: "blue",
   },
   {
     name: "DEEPAK",
-    img: "/images/trainer2.png",
+    img: "/images/team/deepak.webp",
     subtitle: "Physics & Maths",
     experience: "13+ YEARS",
     color: "green",

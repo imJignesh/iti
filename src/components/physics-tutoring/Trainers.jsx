@@ -26,14 +26,14 @@ const trainers = [
   },
   {
     name: "DR. HAYA",
-    img: "/images/trainer1.png",
+    img: "/images/team/dr-haya.webp",
     subtitle: "Physics",
     experience: "9+ YEARS",
     color: "blue",
   },
   {
     name: "DEEPAK",
-    img: "/images/trainer2.png",
+    img: "/images/team/deepak.webp",
     subtitle: "Physics",
     experience: "13+ YEARS",
     color: "green",

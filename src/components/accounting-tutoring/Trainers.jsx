@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 const trainers = [
   {
     name: "MASAB",
-    img: "/images/trainer2.png",
+    img: "/images/team/masab.webp",
     subtitle: "Accounting",
     experience: "10+ YEARS",
     color: "green",
