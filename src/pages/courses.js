@@ -96,8 +96,7 @@ const About = ({ headerHeight }) => {
 
                 </section>
                 <section data-scroll-section>
-                    <Learning
-                    />
+                    <Learning/>
                 </section>
                 {/* <section data-scroll-section>
                 <MarqueeBanner />

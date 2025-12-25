@@ -61,7 +61,10 @@ export default function TutoringCourses() {
           </div>
         </section>
 
-        <section className="cards-grid">
+        <section className="cards-grid fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat>
           {!isMobile ? (
             <>
               <div className="top-row">

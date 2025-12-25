@@ -114,7 +114,11 @@ const Learning = () => {
               Here's How Our Approach Makes <span className="highlight"> All The </span> Difference
             </h3>
           </div>
-          <p className="mobile-subtitle">
+          <p className="mobile-subtitle fade-in-section"
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true"
+          style={{ animationDelay: "0.3s" }}>
             We blend expertise, structure, & care to help students thrive academically & personally, ensuring every learner gets the clarity & support they need.
           </p>
         </div>
@@ -122,7 +126,10 @@ const Learning = () => {
 
 
 
-        <div className="mobile-cards-container">
+        <div className="mobile-cards-container fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true">
           <div
             className="mobile-cards"
             style={{
@@ -148,7 +155,10 @@ const Learning = () => {
           </div>
         </div>
 
-        <div className="mobile-carousel-controls">
+        <div className="mobile-carousel-controls fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true">
           <button className="mobile-carousel-btn prev" onClick={prevSlide}>
             <Image
               src="/assets/rigtarr2.png"
@@ -162,7 +172,10 @@ const Learning = () => {
           </button>
         </div>
 
-        <div className="mobile-carousel-dots">
+        <div className="mobile-carousel-dots fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true">
           {Array.from({ length: getMaxSlides() + 1 }, (_, index) => (
             <div
               key={index}
@@ -177,7 +190,10 @@ const Learning = () => {
       {/* Desktop Layout */}
       <div className="desktop-layout">
         <div className="desktop-header">
-          <div className="desktop-content">
+          <div className="desktop-content fade-in-section"
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true">
             <div className="desktop-left">
               <div className="testimonialHeader" style={{ marginTop: "15%" }}>
                 <h2 className="SubHeading">HOW ARE WE DIFFERENT?

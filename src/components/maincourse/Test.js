@@ -97,7 +97,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
           // Apply local module class
-          className={styles.testMobileSwiper}
+          className={`${styles.testMobileSwiper} fade-in-section`}
           centeredSlides={true}
           loop={false}
           pagination={false}

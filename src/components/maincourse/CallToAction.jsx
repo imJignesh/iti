@@ -217,8 +217,11 @@ export default function CallToAction() {
 
     return (
         <div style={styles.mobileWrapper}>
-            <div style={styles.container}>
-                <div style={styles.background} />
+            <div style={styles.container} className='fade-in-section'
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true">
+                <div style={styles.background}/>
 
                 <div style={styles.content}>
                     {/* Desktop Layout */}

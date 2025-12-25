@@ -21,7 +21,7 @@ export default function CareersBanner() {
         >
           COURSES
         </h1>
-        <p className="subHeading">HOME // CAREERS</p>
+        <p className="subHeading">HOME // COURSES</p>
       </div>
 
       <style jsx>{`

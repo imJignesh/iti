@@ -6,7 +6,7 @@ import { PopupContext } from '../pages/_app';
 import Image from '@/components/CustomImageWrapper';
 import GlobalPhoneInput from './GlobalPhoneInput'; // Ensure the path to your new component is correct
 
-const POPUP_DELAY_MS = 10000;
+const POPUP_DELAY_MS = 15000;
 const HAS_SEEN_POPUP_KEY = 'hasSeenPopupSession';
 
 const DelayedPopup = () => {
