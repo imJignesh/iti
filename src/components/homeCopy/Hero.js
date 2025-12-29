@@ -93,7 +93,7 @@ const Hero = () => {
                             >
                                 <div className={styles.heroParagraph}>
                                     {/* These are global elements, their styles are handled via :global() in CSS */}
-                                    <h3>Improve Your Grades Today!</h3>
+                                    <h3>Improve Your Grades Today!.</h3>
                                     <b>
                                         We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, & more through our curriculum-specific approach & expert tutors in Dubai, guiding them toward a stronger understanding & lasting growth.
                                     </b>
