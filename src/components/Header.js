@@ -34,14 +34,18 @@ const Header = ({ setHeaderHeight }) => {
             <header ref={headerRef} className={`${styles.header}`}>
                 <div className={`d-flex w-100 m-0 ${styles.header_left_content}`}>
                     <div className={`col-auto ${styles.logo}`}>
-                        <a href='/'><Image
-                            src="/images/logo.svg"
-                            width={200}
-                            height={80}
-                            quality={100}
-                            alt='Ignited Training Institute'
-                            priority
-                        /></a>
+                        <a href='/'>
+                            <Image
+                                src="/images/logo.svg"
+                                width={200}
+                                height={80}
+                                alt='Ignited Training Institute'
+                                priority // Critical: Forces high priority and preloading
+                                loading="eager" // Ensures it doesn't wait for scroll
+                                decoding="sync" // Speeds up the visual paint
+                                quality={100}
+                            />
+                        </a>
                     </div>
                     {/* Nav links: hidden on mobile/tablet unless toggled, always visible on lg+ */}
 
