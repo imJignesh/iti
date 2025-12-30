@@ -78,10 +78,78 @@ const CATEGORY_SLUGS = [
 ];
 
 // ========================================
-// NEXT.JS CONFIG
+// NEXT.JS CONFIG - OPTIMIZED FOR PERFORMANCE
 // ========================================
 const nextConfig = {
   reactStrictMode: true,
+
+  // Optimize images
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'inline',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+
+  // Compression
+  compress: true,
+
+  // Generate ETags for better caching
+  generateEtags: true,
+
+  // Production-only optimizations
+  ...(process.env.NODE_ENV === 'production' && {
+    // Remove console logs in production
+    compiler: {
+      removeConsole: {
+        exclude: ['error', 'warn'],
+      },
+    },
+  }),
+
+  // Performance headers
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on'
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+        ],
+      },
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
 
   async redirects() {
     const redirects = [];
@@ -90,47 +158,41 @@ const nextConfig = {
     // RULE 1: Redirect specific categories from root to /category/slug
     // ========================================
     CATEGORY_SLUGS.forEach((slug) => {
-      // Skip if it's also a static page (static pages take priority)
       if (!STATIC_ROOT_PAGES.includes(slug) && !STATIC_COURSES_PAGES.includes(slug)) {
         redirects.push({
           source: `/${slug}`,
           destination: `/category/${slug}`,
-          permanent: true, // 301 redirect
+          permanent: true,
         });
       }
     });
 
     // ========================================
     // RULE 2: Catch-all for root slugs (redirect to /blog/slug)
-    // Exclude: static pages, categories, Next.js internals, and static assets
     // ========================================
-
-    // Build comprehensive exclude list
     const excludedSlugs = [
       ...STATIC_ROOT_PAGES,
       ...STATIC_COURSES_PAGES,
       ...CATEGORY_SLUGS,
-      '_next',        // Next.js internal routes
-      'api',          // API routes
-      'category',     // Category routes
-      'images',       // Static images folder
-      'videos',       // Static videos folder
-      'fonts',        // Static fonts folder
-      'styles',       // Static styles folder
-      'public',       // Public folder
-      'favicon.ico',  // Favicon
-      'robots.txt',   // Robots file
-      'sitemap.xml',  // Sitemap
+      '_next',
+      'api',
+      'category',
+      'images',
+      'videos',
+      'fonts',
+      'styles',
+      'public',
+      'favicon.ico',
+      'robots.txt',
+      'sitemap.xml',
     ];
 
-    // Create regex pattern to exclude all these
     const excludePattern = excludedSlugs.join('|');
 
-    // Catch-all redirect: any slug not matching excluded patterns → /blog/:slug
     redirects.push({
-      source: `/:slug((?!${excludePattern})[^.]+)`, // [^.]+ ensures no file extensions
+      source: `/:slug((?!${excludePattern})[^.]+)`,
       destination: '/blog/:slug',
-      permanent: true, // 301 redirect
+      permanent: true,
     });
 
     // ========================================
@@ -140,7 +202,7 @@ const nextConfig = {
       redirects.push({
         source: `/blog/${slug}`,
         destination: `/category/${slug}`,
-        permanent: true, // 301 redirect
+        permanent: true,
       });
     });
 

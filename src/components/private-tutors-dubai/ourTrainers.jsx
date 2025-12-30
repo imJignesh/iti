@@ -17,7 +17,7 @@ const trainers = [
   },
   {
     name: "SADAF",
-    img: "/images/trainer2.png",
+    img: "/images/trainer2.webp",
     subtitle: "Accounting, Economics & Business",
     experience: "11+ YEARS",
     color: "green",

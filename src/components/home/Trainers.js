@@ -13,7 +13,7 @@ const trainers = [
   },
   {
     name: "PRAKSHI SHARMA",
-    img: "/images/trainer2.png",
+    img: "/images/trainer2.webp",
     subtitle: "Lorem ipsum dolor sit",
     experience: "12+ YEARS",
     color: "green",
@@ -27,7 +27,7 @@ const trainers = [
   },
   {
     name: "PRAKSHI SHARMA",
-    img: "/images/trainer2.png",
+    img: "/images/trainer2.webp",
     subtitle: "Lorem ipsum dolor sit",
     experience: "12+ YEARS",
     color: "green",
@@ -41,7 +41,7 @@ const trainers = [
   },
   {
     name: "PRAKSHI SHARMA",
-    img: "/images/trainer2.png",
+    img: "/images/trainer2.webp",
     subtitle: "Lorem ipsum dolor sit",
     experience: "12+ YEARS",
     color: "green",
@@ -55,7 +55,7 @@ const trainers = [
   },
   {
     name: "PRAKSHI SHARMA",
-    img: "/images/trainer2.png",
+    img: "/images/trainer2.webp",
     subtitle: "Lorem ipsum dolor sit",
     experience: "12+ YEARS",
     color: "green",
@@ -69,7 +69,7 @@ const trainers = [
   },
   {
     name: "PRAKSHI SHARMA",
-    img: "/images/trainer2.png",
+    img: "/images/trainer2.webp",
     subtitle: "Lorem ipsum dolor sit",
     experience: "12+ YEARS",
     color: "green",

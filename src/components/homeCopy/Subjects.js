@@ -51,16 +51,12 @@ const mobileSubjectRows = [
     { name: "French", link: "/french-tutor-in-dubai/" },
   ],
   [
-
     { name: "Computer Science", link: "/computer-science-tutor-in-dubai/" },
     { name: "Maths", link: "/maths-tutor-in-dubai/" },
-
   ],
   [
     { name: "Economics", link: "/economics-tutor-in-dubai/" },
     { name: "Accounting", link: "/accounting-tutor-in-dubai/" },
-
-
   ],
   [
     { name: "Chemistry", link: "/chemistry-tutor-in-dubai/" },
@@ -71,14 +67,12 @@ const mobileSubjectRows = [
   [
     { name: "Psychology", link: "/psychology-tutor-in-dubai/" },
     { name: "Biology", link: "/biology-tutor-in-dubai/" },
-
   ],
 ];
 
 export default function Subjects({ }) {
   const isMobile = useIsMobile();
   const subjectRows = isMobile ? mobileSubjectRows : desktopSubjectRows;
-  // CORRECTED: Access the scoped names from the styles object
   const bubbleClass = isMobile ? styles.subjectBubblesSingleColumn : styles.subjectBubblesGrid;
 
   return (
@@ -90,7 +84,6 @@ export default function Subjects({ }) {
       style={{ animationDelay: "0.2s" }}
     >
       <div className="container">
-        {/* Combine module classes. 'blue' is defined in the module CSS. */}
         <div className={`${styles.subjectSectionInner} ${styles.blue}`}>
           <img
             data-scroll
@@ -100,6 +93,7 @@ export default function Subjects({ }) {
             src="/images/rectangle-bg4.webp"
             alt="bg-shape"
             className={styles.bgRect}
+            loading="lazy"
           />
           <img
             data-scroll
@@ -109,6 +103,7 @@ export default function Subjects({ }) {
             src="/images/rectangle-bg5.webp"
             alt="bg-shape"
             className={styles.bgRect}
+            loading="lazy"
           />
           <img
             data-scroll
@@ -117,8 +112,8 @@ export default function Subjects({ }) {
             src="/images/rectangle-bg4.webp"
             alt="bg-shape"
             className={styles.bgRect}
+            loading="lazy"
           />
-          {/* Global Bootstrap class used as string, local class used with styles */}
           <div className={`col-4 ${styles.subjectLeft}`}>
             <h2
               data-scroll
@@ -137,7 +132,6 @@ export default function Subjects({ }) {
               style={{ animationDelay: "0.2s" }}
             >
               Expert Guidance For Every Subject In Every{" "}
-              {/* Apply local module class */}
               <span className={styles.subjectHighlight}>Way</span>
             </h3>
             <p
@@ -150,13 +144,11 @@ export default function Subjects({ }) {
               We help students strengthen subject knowledge, choose the right curriculum path, & build the academic confidence needed to excel.
             </p>
           </div>
-          {/* Global Bootstrap class used as string, local class used with styles */}
           <div className={`col-8 ${styles.subjectRight}`}>
-            {/* Apply the bubbleClass variable, which now holds the scoped name */}
             <div className={bubbleClass}>
               {subjectRows.map((row, rowIdx) => (
                 <div
-                  key={rowIdx}
+                  key={`subject-row-${rowIdx}`}
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
@@ -164,8 +156,8 @@ export default function Subjects({ }) {
                   style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
                 >
                   {row.map((subj) => (
-                    <h3>
-                      <a key={subj.name} href={subj.link} className={`${styles.subjectBubble} nodecoration`}>
+                    <h3 key={subj.name}>
+                      <a href={subj.link} className={`${styles.subjectBubble} nodecoration`}>
                         {subj.name}
                       </a>
                     </h3>
@@ -174,10 +166,8 @@ export default function Subjects({ }) {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
   );
 }

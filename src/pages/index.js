@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import SEO from "@/components/SEO";
+import SEOHead from "@/components/SEOHead"; // ADD THIS LINE
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -17,7 +18,6 @@ import Trainers from "@/components/homeCopy/Trainers";
 import Testimonial from "@/components/homeCopy/Testimonial";
 import MarqueeBanner from '@/components/homeCopy/MarqueeBanner';
 import Blog from "@/components/homeCopy/Blog";
-import Head from 'next/head';
 
 function useInViewAnimation(threshold = 0.3) {
     const [inView, setInView] = useState(false);
@@ -43,7 +43,6 @@ function useInViewAnimation(threshold = 0.3) {
 const HomeCopy = ({ headerHeight }) => {
     const [active, setActive] = useState(1);
     const [activeIndex, setActiveIndex] = React.useState(1);
-    // Removed scrollRef and scrollInstanceRef
     const [courseHeadingRef, courseHeadingInView] = useInViewAnimation();
     const [isMobile, setIsMobile] = useState(false);
     const [isMobileSwiper, setIsMobileSwiper] = useState(false);
@@ -60,61 +59,43 @@ const HomeCopy = ({ headerHeight }) => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    // Removed the conflicting useEffect block for scroll initialization/destruction.
-
     return (
         <>
-            <Head> {/* <--- Add Head component */}
-                <link rel="preload" as="image" href="/images/banner-image-right.webp" />
-                <link rel="preload" as="image" href="https://ignite.amigosserver.com/images/course-bg1.webp"></link>
-            </Head>
+            <SEOHead
+                title="Ignite Training Institute - Tutors In UAE For Exam Success"
+                description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
+                preloadImages={[
+                    { src: '/images/banner-image-right.webp', type: 'image/webp' },
+                    { src: '/images/banner-image-right.avif', type: 'image/avif' },
+                    { src: 'https://ignite.amigosserver.com/images/course-bg1.webp', type: 'image/webp' }
+                ]}
+            />
             <SEO
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
             />
             <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
-                {/* Banner Section */}
                 <div className={isMobile ? "hero-section-mobile" : "hero-section-desktop"}>
                     <Hero />
                 </div>
-                {/* Course Section  */}
                 <Course />
-
-                {/* Moving Banner Section */}
                 <section data-scroll-section>
                     <MarqueeBanner />
                 </section>
-
-                {/* About US Section  */}
                 <About />
-                {/* Test Section  */}
                 <Test
                     setActive={setActive}
                     isMobileSwiper={isMobileSwiper}
                     active={active}
                 />
-
-                {/* Subject Section */}
                 <Subjects />
-
-                {/* Alumni Section */}
-                {/* <Alumni setActiveIndex={setActiveIndex} /> */}
-
-                {/* Our USPs */}
                 <section data-scroll-section>
                     <Usps />
                 </section>
-
-                {/* Trainers Section */}
                 <section data-scroll-section>
                     <Trainers />
                 </section>
-
-                {/* Testimonial Section */}
                 <Testimonial />
-
-
-                {/* Blogs Section  */}
                 <Blog />
             </div>
         </>

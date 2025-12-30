@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "update-categories": "node scripts/update-categories.js"
+    "update-categories": "node scripts/update-categories.js",
+    "optimize-images": "node src/scripts/optimize-images.js"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
@@ -24,5 +25,8 @@
     "react-phone-input-2": "^2.15.1",
     "swiper": "^11.2.8",
     "swr": "^2.2.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }
