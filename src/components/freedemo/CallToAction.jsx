@@ -110,7 +110,7 @@ export default function CallToAction() {
             position: 'absolute',
             top: '-12vh',
             left: '50%',
-            transform: 'translateX(-50%)',
+            transform: 'translateX(-50%) !important',
             width: '70%',
             zIndex: 5,
         },
@@ -217,10 +217,10 @@ export default function CallToAction() {
     return (
         <div style={styles.mobileWrapper}>
             <div style={styles.container}
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            className='fade-in-section'> 
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                className='fade-in-section'>
                 <div style={styles.background} />
 
                 <div style={styles.content}>
@@ -287,10 +287,10 @@ export default function CallToAction() {
             </div>
 
             {/* Mobile Image - Outside container to overlay */}
-            <div style={styles.mobileImageContainer} className="mobile-only fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat>
+            <div style={styles.mobileImageContainer} className="mobile-only mobile-fixed-image fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
                 <Image
                     src="/assets/callto.webp"
                     alt="Tutoring team working together"
@@ -311,6 +311,9 @@ export default function CallToAction() {
           .desktop-only {
             display: none !important;
           }
+            .mobile-fixed-image {
+                transform: translateX(-50%) !important;
+            }
         }
 
         @media (max-width: 1024px) {

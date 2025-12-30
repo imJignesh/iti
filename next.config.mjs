@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-// ========================================
 // STATIC PAGES LIST (Root Level - 34 pages)
-// ========================================
 const STATIC_ROOT_PAGES = [
   'about-us',
   'accounting-tutor-in-dubai',
@@ -42,9 +40,7 @@ const STATIC_ROOT_PAGES = [
   'tutors-in-jlt-dubai',
 ];
 
-// ========================================
 // STATIC PAGES LIST (Courses Folder - 5 pages)
-// ========================================
 const STATIC_COURSES_PAGES = [
   'a-level-tutors-in-dubai',
   'homeschooling-tutors-in-dubai',
@@ -53,10 +49,7 @@ const STATIC_COURSES_PAGES = [
   'myp-tutors-in-dubai',
 ];
 
-// ========================================
 // CATEGORY SLUGS (17 categories)
-// Update this list every hour via your cron job/script
-// ========================================
 const CATEGORY_SLUGS = [
   'a-levels',
   'advanced-placements',
@@ -77,18 +70,16 @@ const CATEGORY_SLUGS = [
   'universities',
 ];
 
-// ========================================
-// NEXT.JS CONFIG - OPTIMIZED FOR PERFORMANCE
-// ========================================
+// NEXT.JS 16 COMPATIBLE CONFIG - OPTIMIZED FOR PERFORMANCE
 const nextConfig = {
   reactStrictMode: true,
 
-  // Optimize images
+  // Optimize images (Next.js 16 compatible)
   images: {
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    minimumCacheTTL: 31536000,
     dangerouslyAllowSVG: true,
     contentDispositionType: 'inline',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
@@ -97,18 +88,63 @@ const nextConfig = {
   // Compression
   compress: true,
 
-  // Generate ETags for better caching
+  // Generate ETags
   generateEtags: true,
 
-  // Production-only optimizations
+  // Production optimizations
   ...(process.env.NODE_ENV === 'production' && {
-    // Remove console logs in production
     compiler: {
       removeConsole: {
         exclude: ['error', 'warn'],
       },
+      reactRemoveProperties: true,
     },
   }),
+
+  // Experimental features for optimization
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'react-phone-input-2'],
+  },
+  turbopack: {},
+  // Webpack optimization
+  webpack: (config, { dev, isServer }) => {
+    if (!dev) {
+      config.optimization = {
+        ...config.optimization,
+        moduleIds: 'deterministic',
+        runtimeChunk: 'single',
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            default: false,
+            vendors: false,
+            vendor: {
+              name: 'vendor',
+              chunks: 'all',
+              test: /node_modules/,
+              priority: 20,
+            },
+            common: {
+              name: 'common',
+              minChunks: 2,
+              chunks: 'all',
+              priority: 10,
+              reuseExistingChunk: true,
+              enforce: true,
+            },
+            react: {
+              test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
+              name: 'react',
+              chunks: 'all',
+              priority: 30,
+            },
+          },
+        },
+      };
+    }
+
+    return config;
+  },
 
   // Performance headers
   async headers() {
@@ -128,10 +164,23 @@ const nextConfig = {
             key: 'X-Content-Type-Options',
             value: 'nosniff'
           },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY'
+          },
         ],
       },
       {
         source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/videos/:path*',
         headers: [
           {
             key: 'Cache-Control',
@@ -148,15 +197,21 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/',
+        headers: [
+          {
+            key: 'Link',
+            value: '<https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://www.googletagmanager.com>; rel=dns-prefetch'
+          },
+        ],
+      },
     ];
   },
 
   async redirects() {
     const redirects = [];
 
-    // ========================================
-    // RULE 1: Redirect specific categories from root to /category/slug
-    // ========================================
     CATEGORY_SLUGS.forEach((slug) => {
       if (!STATIC_ROOT_PAGES.includes(slug) && !STATIC_COURSES_PAGES.includes(slug)) {
         redirects.push({
@@ -167,9 +222,6 @@ const nextConfig = {
       }
     });
 
-    // ========================================
-    // RULE 2: Catch-all for root slugs (redirect to /blog/slug)
-    // ========================================
     const excludedSlugs = [
       ...STATIC_ROOT_PAGES,
       ...STATIC_COURSES_PAGES,
@@ -195,9 +247,6 @@ const nextConfig = {
       permanent: true,
     });
 
-    // ========================================
-    // RULE 3: Redirect /blog/category-slug to /category/category-slug
-    // ========================================
     CATEGORY_SLUGS.forEach((slug) => {
       redirects.push({
         source: `/blog/${slug}`,

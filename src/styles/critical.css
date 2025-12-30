@@ -82,7 +82,7 @@ body {
     width: auto;
 }
 
-.col-4 {
+/* .col-4 {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
 }
@@ -90,7 +90,7 @@ body {
 .col-8 {
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
-}
+} */
 
 /* Header visibility classes */
 .d-none {
@@ -122,5 +122,5 @@ body {
 
 /* Hide content initially to prevent FOUC */
 main {
-    min-height: 100vh;
+    min-height: auto;
 }

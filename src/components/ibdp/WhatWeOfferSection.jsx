@@ -5,24 +5,31 @@ const WhatWeOfferSection = () => {
         <>
             <section className="what-we-offer-section" data-scroll-section>
                 <div className="container">
-                    <div className="achievementsHeadings">
-                        <div
-                            data-scroll
-                            data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
-                            className="fade-in-section"
-                            style={{ animationDelay: "0.1s" }}
-                        >
-                            <h2 className="SubHeading">WHAT MORE DO WE OFFER?</h2>
-                        </div>
-                        <div
-                            data-scroll
-                            data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
-                            className="fade-in-section"
-                            style={{ animationDelay: "0.25s" }}
-                        >
-                            <h3 className="achievementsTitle">
+
+                    <div className="text-center mb-md-5 mb-4 fade-in-section"
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat
+                        style={{ animationDelay: "0.2s" }}>
+                        <div className="testHeadings">
+                            <div
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="fade-in-section"
+                                style={{ animationDelay: "0.1s" }}
+                            >
+                                <h2 className="SubHeading testSubheading">WHAT MORE DO WE OFFER?
+                                </h2>
+                            </div>
+                            <h3
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="fade-in-section testTitle"
+                                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                            >
+
                                 Comprehensive Guidance For Every IBDP <span className="highlight">Milestone</span>
                             </h3>
                         </div>
@@ -86,13 +93,95 @@ const WhatWeOfferSection = () => {
             </section>
             <style jsx>{`
             @media (max-width: 575px) {
-            .what-we-offer-section{
-                padding:80px 0;
-            }
                 .what-we-offer-section .SubHeading { 
                     margin: 0;
                 }
             }
+                                .what-we-offer {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+                max-width: 1500px;
+                margin: auto;
+                text-align: center;
+                }
+
+                .what-we-offer .step {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                }
+
+                .what-we-offer .icon-wrap {
+                position: relative;
+                display: inline-block;
+                }
+
+                .what-we-offer .icon-wrap img {
+                max-width: 100px;
+                }
+
+                /* Number comes from data-step */
+                .what-we-offer .icon-wrap::after {
+                content: attr(data-step);
+                position: absolute;
+                font-size: 70px;
+                font-weight: bold;
+                color: rgba(0, 163, 144, 0.15);
+                bottom: 20px;
+                right: -20px;
+                transform: translate(50%, 50%);
+                z-index: -1;
+                /* keeps it behind the icon */
+                }
+
+                .what-we-offer .step-title {
+                font-weight: bold;
+                font-size: 18px;
+                margin-top: 20px;
+                color: #152f63;
+                }
+
+                .what-we-offer .step-desc {
+                margin-top: 10px;
+                font-size: 15px;
+                color: #808c9c;
+                }
+
+                /* Responsive */
+                @media (max-width: 900px) {
+                .what-we-offer {
+                    grid-template-columns: 1fr 1fr;
+                }
+                }
+
+                @media (max-width: 600px) {
+                .what-we-offer {
+                    grid-template-columns: 1fr;
+                }
+
+                .what-we-offer .icon-wrap img {
+                    max-width: 60px;
+                }
+
+                .what-we-offer .step {
+                    padding: 0;
+                }
+
+                .what-we-offer .icon-wrap::after {
+                    bottom: 10px;
+                    right: -10px;
+                    font-size: 40px;
+                }
+
+                .what-we-offer .step-desc {
+                    margin-top: 0;
+                    font-size: 15px;
+
+                    line-height: 1.2;
+                }
+                }
         `}</style>
         </>
     );

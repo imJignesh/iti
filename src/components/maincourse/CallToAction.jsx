@@ -221,7 +221,7 @@ export default function CallToAction() {
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true">
-                <div style={styles.background}/>
+                <div style={styles.background} />
 
                 <div style={styles.content}>
                     {/* Desktop Layout */}
@@ -287,7 +287,7 @@ export default function CallToAction() {
             </div>
 
             {/* Mobile Image - Outside container to overlay */}
-            <div style={styles.mobileImageContainer} className="mobile-only">
+            <div style={styles.mobileImageContainer} className="mobile-only mobile-fixed-image">
                 <Image
                     src="/assets/callto.webp"
                     alt="Tutoring team working together"
@@ -302,12 +302,16 @@ export default function CallToAction() {
           .mobile-only {
             display: none !important;
           }
+            
         }
         
         @media (max-width: 767px) {
           .desktop-only {
             display: none !important;
           }
+        .mobile-fixed-image {
+                transform: translateX(-50%) !important;
+            }
         }
 
         @media (max-width: 1024px) {

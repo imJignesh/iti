@@ -61,7 +61,7 @@ const trainers = [
   },
   {
     name: "NAMRATA",
-    img: "//images/team/namrata.webp",
+    img: "/images/team/namrata.webp",
     subtitle: "Maths & Physics",
     experience: "10+ YEARS",
     color: "green",

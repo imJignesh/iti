@@ -10,7 +10,7 @@ import InfoCard from '@/components/homeSchooling/InfoCard';
 import LifeAtIgniteCarousel from '@/components/homeSchooling/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/homeSchooling/MarqueeBanner';
 import HomeschoolingMindset from '@/components/homeSchooling/mindset';
-import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
+import WhatWeOfferSection from '@/components/homeschooling/WhatWeOfferSection';
 import Accordion from '@/components/homeSchooling/accrodian';
 import Blog from "@/components/homeSchooling/Blog";
 import ReviewsSection from '@/components/homeSchooling/ReviewsSection';
@@ -198,9 +198,7 @@ const HomeSchooling = ({ headerHeight }) => {
           <InfoCard />
         </section>
 
-        {/* <section data-scroll-section>
-            <StudentAchievements />
-          </section> */}
+
         <section data-scroll-section>
           <Curriculum />
         </section>
@@ -223,14 +221,8 @@ const HomeSchooling = ({ headerHeight }) => {
           <ReviewsSection />
         </section>
 
-        {/* what we offer Start */}
         <WhatWeOfferSection />
 
-        {/* What We Offer End */}
-
-        {/* <section data-scroll-section>
-            <LifeAtIgniteCarousel />
-          </section> */}
 
         <section data-scroll-section>
           <FAQSection />
