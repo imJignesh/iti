@@ -10,7 +10,7 @@ import InfoCard from '@/components/homeSchooling/InfoCard';
 import LifeAtIgniteCarousel from '@/components/homeSchooling/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/homeSchooling/MarqueeBanner';
 import HomeschoolingMindset from '@/components/homeSchooling/mindset';
-import WhatWeOfferSection from '@/components/homeschooling/WhatWeOfferSection';
+import WhatWeOfferSection from '@/components/homeSchooling/WhatWeOfferSection';
 import Accordion from '@/components/homeSchooling/accrodian';
 import Blog from "@/components/homeSchooling/Blog";
 import ReviewsSection from '@/components/homeSchooling/ReviewsSection';

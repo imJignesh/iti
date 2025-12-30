@@ -34,8 +34,8 @@ const WhatWeOfferSection = () => {
                     </div>
                 </div>
 
-                {/* Steps Container using Module Styles */}
                 <div className={`${styles.container} ${styles['what-we-offer']}`}>
+                    {/* Step 01 */}
                     <div className={`${styles.step} fade-in-section`}
                         data-scroll
                         data-scroll-class="is-inview"
@@ -43,12 +43,13 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.1s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="01">
-                            <img src="/images/school.png" alt="Ideal Curriculum" />
+                            <img src="/images/idealcur.png" alt="Ideal Curriculum" />
                         </div>
-                        <h3 className={`${styles['step-title']} mb-0`}>Ideal Curriculum</h3>
+                        <h3 className={`${styles['step-title']} mb-0`}>IDEAL CURRICULUM</h3>
                         <div className={styles['step-desc']}>Choose IGCSE, A-Levels, or AP to match your academic pathway.</div>
                     </div>
 
+                    {/* Step 02 */}
                     <div className={`${styles.step} fade-in-section`}
                         data-scroll
                         data-scroll-class="is-inview"
@@ -56,12 +57,13 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.2s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="02">
-                            <img src="/images/idealcur.png" alt="Subject Choices" />
+                            <img src="/images/subject.png" alt="Subject Choices" />
                         </div>
-                        <h3 className={`${styles['step-title']} mb-0`}>Subject Choices</h3>
+                        <h3 className={`${styles['step-title']} mb-0`}>SUBJECT CHOICES</h3>
                         <div className={styles['step-desc']}>Select subjects that fit your aspirations & university goals.</div>
                     </div>
 
+                    {/* Step 03 */}
                     <div className={`${styles.step} fade-in-section`}
                         data-scroll
                         data-scroll-class="is-inview"
@@ -69,12 +71,13 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.3s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="03">
-                            <img src="/images/subject.png" alt="Subject Choices" />
+                            <img src="/images/school.png" alt="Registration Support" />
                         </div>
-                        <h3 className={`${styles['step-title']} mb-0`}>Registration Support</h3>
-                        <div className={styles['step-desc']}>Get complete registration guidance for IGCSE, A-Levels, & AP.</div>
+                        <h3 className={`${styles['step-title']} mb-0`}>REGISTRATION SUPPORT</h3>
+                        <div className={styles['step-desc']}>Get complete registration guidance for IGCSE, A-Levels, & AP exams.</div>
                     </div>
 
+                    {/* Step 04 */}
                     <div className={`${styles.step} fade-in-section`}
                         data-scroll
                         data-scroll-class="is-inview"
@@ -92,7 +95,6 @@ const WhatWeOfferSection = () => {
 
             <style jsx>{`
                 @media (max-width: 575px) {
-                    /* targeting global SubHeading if not in module */
                     :global(.SubHeading) { 
                         margin: 0 !important;
                     }
