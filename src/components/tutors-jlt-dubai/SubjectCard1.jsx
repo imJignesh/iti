@@ -54,36 +54,38 @@ export default function SubjectsCard1({ }) {
         data-scroll-repeat
         style={{ animationDelay: "0.2s" }}>
 
-        <div className="achievementsHeadings">
-          <div
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <h2 className="SubHeading">
-              SUBJECTS WE SUPPORT
-            </h2>
-          </div>
-          <div
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section"
-            style={{ animationDelay: "0.25s" }}
-          >
-            <h3 className="achievementsTitle">
-              Tutoring In JLT Dubai That Makes  {isMobile ? "" : <br />} Every <span className="highlight"> Subject </span>
-              Clear
+
+        <div className="text-center mb-md-5 mb-4 fade-in-section"
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
+          style={{ animationDelay: "0.2s" }}>
+          <div className="testHeadings">
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <h2 className="SubHeading testSubheading">SUBJECTS WE SUPPORT</h2>
+            </div>
+            <h3
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle"
+              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+            >
+              Tutoring In JLT Dubai That Makes  {isMobile ? "" : <br />} Every <span className="highlight"> Subject</span> Clear
             </h3>
           </div>
         </div>
       </div>
       <div className="container fade-in-section"
-      data-scroll
-      data-scroll-class="is-inview"
-      data-scroll-repeat>
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat>
         <div className="subjects-card1-inner">
           <img
             data-scroll

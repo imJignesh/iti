@@ -15,6 +15,7 @@
   gap: 60px;
   align-items: center;
   justify-content: center;
+  flex-wrap: nowrap !important;
 }
 
 .aboutLeft {
@@ -267,6 +268,7 @@ a.aboutBtn {
 @media (max-width: 991px) {
   .aboutSectionInner {
     gap: 30px;
+    flex-wrap: wrap !important;
   }
 
   .aboutImageWrap {

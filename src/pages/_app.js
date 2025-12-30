@@ -21,9 +21,9 @@ const loadStyles = () => {
     import("@/styles/slug/slug.css");
     import("@/styles/ibdp/Ibdp.css");
     import("@/styles/bloginnerpage.css");
-    import("@/styles/freedemo/freedemo.css");
-    import("@/styles/freedemo/Acheivements.css");
-    import("@/styles/freedemo/Subjects.css");
+    // import("@/styles/freedemo/freedemo.css");
+    // import("@/styles/freedemo/Acheivements.css");
+    // import("@/styles/freedemo/Subjects.css");
     import("@/styles/team/team.css");
     import("@/styles/contact/contact.css");
     import("@/styles/DelayedPopup.css");
