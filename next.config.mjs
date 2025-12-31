@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-
 // STATIC PAGES LIST (Root Level - 34 pages)
 const STATIC_ROOT_PAGES = [
   'about-us',
@@ -39,7 +38,6 @@ const STATIC_ROOT_PAGES = [
   'tutors-in-dubai',
   'tutors-in-jlt-dubai',
 ];
-
 // STATIC PAGES LIST (Courses Folder - 5 pages)
 const STATIC_COURSES_PAGES = [
   'a-level-tutors-in-dubai',
@@ -48,7 +46,6 @@ const STATIC_COURSES_PAGES = [
   'igcse-tutors-in-dubai',
   'myp-tutors-in-dubai',
 ];
-
 // CATEGORY SLUGS (17 categories)
 const CATEGORY_SLUGS = [
   'a-levels',
@@ -69,19 +66,9 @@ const CATEGORY_SLUGS = [
   'tutoring',
   'universities',
 ];
-
 // NEXT.JS 16 COMPATIBLE CONFIG - OPTIMIZED FOR PERFORMANCE
 const nextConfig = {
   reactStrictMode: true,
-
-  // Asset prefix for CDN - loads all _next/static/* files from S3
-  // Use environment variable for flexibility
-  assetPrefix: process.env.NEXT_PUBLIC_CDN_URL || 'https://iticdn.s3-accelerate.amazonaws.com/',
-
-  // Base path for public folder assets (images, videos, etc.)
-  // Leave empty to serve from same domain, or set to CDN URL
-  // basePath: '', // Uncomment and set if needed
-
   // Optimize images (Next.js 16 compatible)
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -91,24 +78,11 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'inline',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    // Allow loading images from S3 CDN
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'iticdn.s3.ap-south-1.amazonaws.com',
-        pathname: '/**',
-      },
-    ],
-    // Disable image optimization for external CDN images
-    unoptimized: process.env.NEXT_PUBLIC_CDN_IMAGES === 'true',
   },
-
   // Compression
   compress: true,
-
   // Generate ETags
   generateEtags: true,
-
   // Production optimizations
   ...(process.env.NODE_ENV === 'production' && {
     compiler: {
@@ -118,7 +92,6 @@ const nextConfig = {
       reactRemoveProperties: true,
     },
   }),
-
   // Experimental features for optimization
   experimental: {
     optimizePackageImports: ['lucide-react', 'react-phone-input-2'],
@@ -133,9 +106,6 @@ const nextConfig = {
         runtimeChunk: 'single',
         splitChunks: {
           chunks: 'all',
-          maxInitialRequests: 25,
-          minSize: 20000,
-          maxSize: 90000, // Target 90KB max chunk size
           cacheGroups: {
             default: false,
             vendors: false,
@@ -163,10 +133,8 @@ const nextConfig = {
         },
       };
     }
-
     return config;
   },
-
   // Performance headers
   async headers() {
     return [
@@ -229,10 +197,8 @@ const nextConfig = {
       },
     ];
   },
-
   async redirects() {
     const redirects = [];
-
     CATEGORY_SLUGS.forEach((slug) => {
       if (!STATIC_ROOT_PAGES.includes(slug) && !STATIC_COURSES_PAGES.includes(slug)) {
         redirects.push({
@@ -242,7 +208,6 @@ const nextConfig = {
         });
       }
     });
-
     const excludedSlugs = [
       ...STATIC_ROOT_PAGES,
       ...STATIC_COURSES_PAGES,
@@ -259,15 +224,12 @@ const nextConfig = {
       'robots.txt',
       'sitemap.xml',
     ];
-
     const excludePattern = excludedSlugs.join('|');
-
     redirects.push({
       source: `/:slug((?!${excludePattern})[^.]+)`,
       destination: '/blog/:slug',
       permanent: true,
     });
-
     CATEGORY_SLUGS.forEach((slug) => {
       redirects.push({
         source: `/blog/${slug}`,
@@ -275,9 +237,7 @@ const nextConfig = {
         permanent: true,
       });
     });
-
     return redirects;
   },
 };
-
 export default nextConfig;

@@ -12,8 +12,7 @@
     "optimize-images": "node src/scripts/optimize-images.js",
     "extract-poster": "bash src/scripts/extract-poster.sh",
     "optimize-all": "npm run optimize-images && npm run extract-poster",
-    "test-production": "npm run build && npm run start",
-    "deploy:cdn": "bash deploy-cdn.sh"
+    "test-production": "npm run build && npm run start"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
