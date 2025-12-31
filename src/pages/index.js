@@ -78,7 +78,7 @@ const HomeCopy = ({ headerHeight }) => {
                 <div className={isMobile ? "hero-section-mobile" : "hero-section-desktop"}>
                     <Hero />
                 </div>
-                <Course />
+                {/* <Course />
                 <section data-scroll-section>
                     <MarqueeBanner />
                 </section>
@@ -96,7 +96,7 @@ const HomeCopy = ({ headerHeight }) => {
                     <Trainers />
                 </section>
                 <Testimonial />
-                <Blog />
+                <Blog /> */}
             </div>
         </>
     );
