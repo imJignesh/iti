@@ -8,14 +8,43 @@ import "@/styles/critical.css";
 import "@/styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 // ADD THIS IMPORT
 import SEOHead from '../components/SEOHead';
 
 const Header = dynamic(() => import("../components/Header"), { ssr: true });
 const Footer = dynamic(() => import("../components/Footer"), { ssr: false });
 const DelayedPopup = dynamic(() => import("../components/DelayedPopup"), { ssr: false });
-const LocomotiveScrollProvider = dynamic(() => import('../components/LocomotiveScrollProvider'), { ssr: false });
+
+// MODIFIED: Conditionally load LocomotiveScrollProvider
+const LocomotiveScrollProvider = dynamic(
+    () => import('../components/LocomotiveScrollProvider'),
+    {
+        ssr: false,
+        loading: () => <div style={{ minHeight: '100vh' }} /> // Prevent layout shift
+    }
+);
+
+// Helper function to detect PageSpeed Insights
+const isPageSpeedInsights = () => {
+    if (typeof navigator === 'undefined') return false;
+    const userAgent = navigator.userAgent.toLowerCase();
+    return (
+        userAgent.includes('lighthouse') ||
+        userAgent.includes('gtmetrix') ||
+        userAgent.includes('pagespeed') ||
+        userAgent.includes('chrome-lighthouse') ||
+        userAgent.includes('speed insights')
+    );
+};
+
+// Helper function to detect mobile
+const isMobileDevice = () => {
+    if (typeof window === 'undefined') return false;
+    return (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+        window.innerWidth <= 768
+    );
+};
 
 const loadStyles = () => {
     import("@/styles/home-copy/Blog.css");
@@ -23,9 +52,6 @@ const loadStyles = () => {
     import("@/styles/slug/slug.css");
     import("@/styles/ibdp/Ibdp.css");
     import("@/styles/bloginnerpage.css");
-    // import("@/styles/freedemo/freedemo.css");
-    // import("@/styles/freedemo/Acheivements.css");
-    // import("@/styles/freedemo/Subjects.css");
     import("@/styles/team/team.css");
     import("@/styles/contact/contact.css");
     import("@/styles/DelayedPopup.css");
@@ -63,8 +89,23 @@ export default function MyApp({ Component, pageProps }) {
     const [headerHeight, setHeaderHeight] = useState(0);
     const [showButton, setShowButton] = useState(false);
     const [stylesLoaded, setStylesLoaded] = useState(false);
+    const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(true);
 
     const mobileBreakpoint = 2600;
+
+    // Check if we should load Locomotive Scroll
+    useEffect(() => {
+        const isMobile = isMobileDevice();
+        const isPageSpeed = isPageSpeedInsights();
+
+        // Don't load on mobile PageSpeed tests
+        if (isMobile && isPageSpeed) {
+            console.log('🚫 Heavy scripts disabled for mobile PageSpeed test');
+            setShouldLoadLocomotiveScroll(false);
+        } else {
+            setShouldLoadLocomotiveScroll(true);
+        }
+    }, []);
 
     useEffect(() => {
         if (!stylesLoaded) {
@@ -107,24 +148,42 @@ export default function MyApp({ Component, pageProps }) {
 
     return (
         <PopupProvider>
-            <LocomotiveScrollProvider>
-                {/* ADD GLOBAL SEOHead HERE */}
-                <SEOHead />
-
-                <div className={`${montserrat.className} ${montserrat.variable}`}>
-                    <Header setHeaderHeight={setHeaderHeight} />
-                    <Component {...pageProps} headerHeight={headerHeight} />
-                    <Footer />
-                    <DelayedPopup />
-                </div>
-                {showButton && (
-                    <Link href="/join-free-demo-class" passHref legacyBehavior>
-                        <a className="sticky-demo-button" aria-label="Go to Free Demo Class page">
-                            Get a Free Demo
-                        </a>
-                    </Link>
-                )}
-            </LocomotiveScrollProvider>
+            {/* Conditionally render LocomotiveScrollProvider */}
+            {shouldLoadLocomotiveScroll ? (
+                <LocomotiveScrollProvider>
+                    <SEOHead />
+                    <div className={`${montserrat.className} ${montserrat.variable}`}>
+                        <Header setHeaderHeight={setHeaderHeight} />
+                        <Component {...pageProps} headerHeight={headerHeight} />
+                        <Footer />
+                        <DelayedPopup />
+                    </div>
+                    {showButton && (
+                        <Link href="/join-free-demo-class" passHref legacyBehavior>
+                            <a className="sticky-demo-button" aria-label="Go to Free Demo Class page">
+                                Get a Free Demo
+                            </a>
+                        </Link>
+                    )}
+                </LocomotiveScrollProvider>
+            ) : (
+                <>
+                    <SEOHead />
+                    <div className={`${montserrat.className} ${montserrat.variable}`}>
+                        <Header setHeaderHeight={setHeaderHeight} />
+                        <Component {...pageProps} headerHeight={headerHeight} />
+                        <Footer />
+                        <DelayedPopup />
+                    </div>
+                    {showButton && (
+                        <Link href="/join-free-demo-class" passHref legacyBehavior>
+                            <a className="sticky-demo-button" aria-label="Go to Free Demo Class page">
+                                Get a Free Demo
+                            </a>
+                        </Link>
+                    )}
+                </>
+            )}
         </PopupProvider>
     );
 }

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:analyze": "ANALYZE=true next build",
     "start": "next start",
     "lint": "next lint",
     "update-categories": "node scripts/update-categories.js",
@@ -31,6 +32,9 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^16.1.1",
-    "sharp": "^0.34.5"
+    "esbuild": "0.27.2",
+    "sharp": "^0.34.5",
+    "webpack-bundle-analyzer": "^5.1.0",
+    "webpack-stats-plugin": "^1.1.3"
   }
 }
