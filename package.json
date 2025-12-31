@@ -7,13 +7,13 @@
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
     "start": "next start",
-    "deploy:cdn": "bash deploy-cdn.sh",
     "lint": "next lint",
     "update-categories": "node scripts/update-categories.js",
     "optimize-images": "node src/scripts/optimize-images.js",
     "extract-poster": "bash src/scripts/extract-poster.sh",
     "optimize-all": "npm run optimize-images && npm run extract-poster",
-    "test-production": "npm run build && npm run start"
+    "test-production": "npm run build && npm run start",
+    "deploy:cdn": "bash deploy-cdn.sh"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",

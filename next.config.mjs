@@ -76,7 +76,7 @@ const nextConfig = {
 
   // Asset prefix for CDN - loads all _next/static/* files from S3
   // Use environment variable for flexibility
-  assetPrefix: process.env.NEXT_PUBLIC_CDN_URL || 'https://iticdn.s3.ap-south-1.amazonaws.com',
+  assetPrefix: process.env.NEXT_PUBLIC_CDN_URL || 'https://iticdn.s3-accelerate.amazonaws.com/',
 
   // Base path for public folder assets (images, videos, etc.)
   // Leave empty to serve from same domain, or set to CDN URL

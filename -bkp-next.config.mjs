@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-
 // STATIC PAGES LIST (Root Level - 34 pages)
 const STATIC_ROOT_PAGES = [
   'about-us',
@@ -39,7 +38,6 @@ const STATIC_ROOT_PAGES = [
   'tutors-in-dubai',
   'tutors-in-jlt-dubai',
 ];
-
 // STATIC PAGES LIST (Courses Folder - 5 pages)
 const STATIC_COURSES_PAGES = [
   'a-level-tutors-in-dubai',
@@ -48,7 +46,6 @@ const STATIC_COURSES_PAGES = [
   'igcse-tutors-in-dubai',
   'myp-tutors-in-dubai',
 ];
-
 // CATEGORY SLUGS (17 categories)
 const CATEGORY_SLUGS = [
   'a-levels',
@@ -69,12 +66,9 @@ const CATEGORY_SLUGS = [
   'tutoring',
   'universities',
 ];
-
 // NEXT.JS 16 COMPATIBLE CONFIG - OPTIMIZED FOR PERFORMANCE
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: process.env.NEXT_PUBLIC_CDN_URL || 'https://iticdn.s3.ap-south-1.amazonaws.com',
-
   // Optimize images (Next.js 16 compatible)
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -85,23 +79,10 @@ const nextConfig = {
     contentDispositionType: 'inline',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  remotePatterns: [
-    {
-      protocol: 'https',
-      hostname: 'iticdn.s3.ap-south-1.amazonaws.com',
-      pathname: '/**',
-    },
-  ],
-
-  // Disable image optimization for external CDN images
-  unoptimized: process.env.NEXT_PUBLIC_CDN_IMAGES === 'true',
-
   // Compression
   compress: true,
-
   // Generate ETags
   generateEtags: true,
-
   // Production optimizations
   ...(process.env.NODE_ENV === 'production' && {
     compiler: {
@@ -111,17 +92,11 @@ const nextConfig = {
       reactRemoveProperties: true,
     },
   }),
-
   // Experimental features for optimization
   experimental: {
     optimizePackageImports: ['lucide-react', 'react-phone-input-2'],
-    // Increase concurrent requests for faster builds and data fetching
-    workerThreads: true,
-    cpus: 8, // Adjust based on your system's CPU cores
   },
-
   turbopack: {},
-
   // Webpack optimization
   webpack: (config, { dev, isServer }) => {
     if (!dev) {
@@ -157,14 +132,9 @@ const nextConfig = {
           },
         },
       };
-
-      // Increase webpack parallelism for faster builds
-      config.parallelism = 100; // Default is 100, increase if needed
     }
-
     return config;
   },
-
   // Performance headers
   async headers() {
     return [
@@ -227,10 +197,8 @@ const nextConfig = {
       },
     ];
   },
-
   async redirects() {
     const redirects = [];
-
     CATEGORY_SLUGS.forEach((slug) => {
       if (!STATIC_ROOT_PAGES.includes(slug) && !STATIC_COURSES_PAGES.includes(slug)) {
         redirects.push({
@@ -240,7 +208,6 @@ const nextConfig = {
         });
       }
     });
-
     const excludedSlugs = [
       ...STATIC_ROOT_PAGES,
       ...STATIC_COURSES_PAGES,
@@ -257,15 +224,12 @@ const nextConfig = {
       'robots.txt',
       'sitemap.xml',
     ];
-
     const excludePattern = excludedSlugs.join('|');
-
     redirects.push({
       source: `/:slug((?!${excludePattern})[^.]+)`,
       destination: '/blog/:slug',
       permanent: true,
     });
-
     CATEGORY_SLUGS.forEach((slug) => {
       redirects.push({
         source: `/blog/${slug}`,
@@ -273,9 +237,7 @@ const nextConfig = {
         permanent: true,
       });
     });
-
     return redirects;
   },
 };
-
 export default nextConfig;
