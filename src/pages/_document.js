@@ -68,7 +68,7 @@ export default function Document() {
         ></script>
 
         {/* CRITICAL CHANGE: Delay GTM load until after window load + 3 seconds */}
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -110,7 +110,7 @@ export default function Document() {
               })();
             `,
           }}
-        />
+        /> */}
       </body>
     </Html>
   );
