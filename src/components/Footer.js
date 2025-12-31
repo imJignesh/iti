@@ -1,8 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Footer.module.css';
 import Image from '@/components/CustomImageWrapper';
 
 const Footer = () => {
+  // --- START: Newsletter Integration ---
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setLoading(true);
+    setStatus(null);
+
+    try {
+      const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email,
+          formType: 'NEWSLETTER',
+          pageinfo: `URL: ${window.location.href} | Newsletter Subscription`
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        // Direct redirection without showing success message
+        if (result.redirectUrl) {
+          window.location.href = result.redirectUrl;
+        }
+      } else {
+        setLoading(false);
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error("Newsletter error:", error);
+      setLoading(false);
+      setStatus('error');
+    }
+  };
+  // --- END: Newsletter Integration ---
+
   return (
     <footer
       data-scroll
@@ -17,16 +59,11 @@ const Footer = () => {
         data-scroll-repeat="true"
         style={{ animationDelay: "0.1s" }}
       >
-        {/* <div className={styles.footerContactRow}>
-          <span className="SubHeading">CONTACT US</span>
-        </div> */}
         <h3 className={styles.footerTitle}>
           REVOLUTIONIZING THE WAY STUDENTS LEARN
         </h3>
         <div className={styles.footerMainRow}>
-          <div
-            className={styles.footerTop}
-          >
+          <div className={styles.footerTop}>
             <Image
               src="/images/footerImage.jpg"
               data-scroll
@@ -43,7 +80,6 @@ const Footer = () => {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-
             className={`fade-in-section ${styles.footerTop}`}
             style={{ animationDelay: "0.3s" }}
           >
@@ -51,39 +87,45 @@ const Footer = () => {
               Stay updated with the latest study tips, exam strategies, & academic insights. Join our mailing list & fuel your journey to success.
             </div>
             <div className={styles.socialmediafooter}>
-              <a href="https://www.facebook.com/ignitetraininginstitute" target="_blank" rel="noopener noreferrer">
-                <img src="/images/fb-footer.png" alt="Facebook" width={36} height={36} />
+              <a href="https://www.facebook.com/ignitetraininginstitute" target="_blank">
+                <img src="/images/fb-footer.png" alt="" width={36} height={36} />
               </a>
-              <a href="https://www.instagram.com/ignitetraininginstitute/?hl=en" target="_blank" rel="noopener noreferrer">
-                <img src="/images/insta-footer.png" alt="Instagram" width={36} height={36} />
+              <a href="https://www.instagram.com/ignitetraininginstitute/?hl=en" target="_blank">
+                <img src="/images/insta-footer.png" alt="" width={36} height={36} />
               </a>
-              <a href="https://www.linkedin.com/company/ignite-training-institute" target="_blank" rel="noopener noreferrer">
-                <img src="/images/linkedin-footer.png" alt="LinkedIn" width={36} height={36} />
+              <a href="https://www.linkedin.com/company/ignite-training-institute" target="_blank">
+                <img src="/images/linkedin-footer.png" alt="" width={36} height={36} />
               </a>
-
             </div>
+
             <div className={styles.footerNewsletterWrap}>
               <div className={styles.footerNewsletterLabel}>SUBSCRIBE TO OUR NEWSLETTER</div>
-              <form className={styles.footerNewsletterForm} onSubmit={e => e.preventDefault()}>
-                <input type="email" placeholder="Email" className={styles.footerNewsletterInput} />
-                <button className={styles.footerNewsletterBtn} type="submit">
-                  <img src="/images/right-arrow-blue.webp" alt="Subscribe" width={28} height={28} />
+              <form className={styles.footerNewsletterForm} onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  placeholder={loading ? "Subscribing..." : "Email"}
+                  className={styles.footerNewsletterInput}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <button className={styles.footerNewsletterBtn} type="submit" disabled={loading}>
+                  <img src="/images/right-arrow-blue.webp" alt="" width={28} height={28} />
                 </button>
               </form>
+              {status === 'error' && <p style={{ color: '#ff6b6b', fontSize: '0.8rem', marginTop: '5px' }}>Something went wrong. Please try again.</p>}
             </div>
           </div>
         </div>
       </div>
+
       <div className={styles.footerLinksRow}>
-        {/* Menu 1 */}
         <div
-          key={0}
+          className={`fade-in-section ${styles.footerTop}`}
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
-
-          className={`fade-in-section ${styles.footerTop}`}
-          style={{ animationDelay: `${0.4 + 0 * 0.1}s` }}
+          style={{ animationDelay: "0.4s" }}
         >
           <div className={styles.footerLinksCol}>
             <div className={styles.footerLinksTitle}>COURSES</div>
@@ -112,15 +154,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Menu 2 */}
         <div
-          key={1}
+          className={`fade-in-section ${styles.footerTop}`}
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
-
-          className={`fade-in-section ${styles.footerTop}`}
-          style={{ animationDelay: `${0.4 + 1 * 0.1}s` }}
+          style={{ animationDelay: "0.5s" }}
         >
           <div className={styles.footerLinksCol}>
             <div className={styles.footerLinksTitle}>SUBJECTS</div>
@@ -141,15 +180,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Menu 3 */}
         <div
-          key={2}
+          className={`fade-in-section ${styles.footerTop}`}
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
-
-          className={`fade-in-section ${styles.footerTop}`}
-          style={{ animationDelay: `${0.4 + 2 * 0.1}s` }}
+          style={{ animationDelay: "0.6s" }}
         >
           <div className={styles.footerLinksCol}>
             <div className={styles.footerLinksTitle}>ABOUT IGNITE</div>
@@ -165,14 +201,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       <div className={styles.footerBottomRow}>
         <div
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
           className="fade-in-section"
-          style={{ animationDelay: "0.7s" }}
-        >
+          style={{ animationDelay: "0.7s" }}>
           <div className={styles.footerAddressLabel}>ADDRESS</div>
           <div className={styles.footerAddress}>1503, Al Moosa Tower 1, Sheikh Zayed Road, Near Emirates Towers Metro (Sea Side), Dubai</div>
           <div className={styles.footerAddress}>Tiffany Tower - Level 11 Cluster W - Jumeirah Lake Towers - Dubai - United Arab Emirates</div>
@@ -182,13 +218,13 @@ const Footer = () => {
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
           className="fade-in-section"
-          style={{ animationDelay: "0.8s" }}
-        >
+          style={{ animationDelay: "0.8s" }}>
           <div className={styles.footerContactLabel}>CONTACT</div>
           <div className={styles.footerContact}>
             <span>+971568357374</span>
             <br />
-            <span>hello@ignitetraininginstitute.com</span></div>
+            <span>hello@ignitetraininginstitute.com</span>
+          </div>
         </div>
       </div>
     </footer>

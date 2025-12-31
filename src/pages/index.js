@@ -8,11 +8,11 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/scrollbar";
 import Hero from "@/components/homeCopy/Hero";
 import Course from "@/components/homeCopy/Course";
-import MovingBanner from "@/components/homeCopy/MovingBanner";
+
 import About from "@/components/homeCopy/About";
 import Test from "@/components/homeCopy/Test";
 import Subjects from "@/components/homeCopy/Subjects";
-import Alumni from "@/components/homeCopy/Alumni";
+
 import Usps from "@/components/homeCopy/Usps";
 import Trainers from "@/components/homeCopy/Trainers";
 import Testimonial from "@/components/homeCopy/Testimonial";
@@ -78,7 +78,7 @@ const HomeCopy = ({ headerHeight }) => {
                 <div className={isMobile ? "hero-section-mobile" : "hero-section-desktop"}>
                     <Hero />
                 </div>
-                {/* <Course />
+                <Course />
                 <section data-scroll-section>
                     <MarqueeBanner />
                 </section>
@@ -96,7 +96,7 @@ const HomeCopy = ({ headerHeight }) => {
                     <Trainers />
                 </section>
                 <Testimonial />
-                <Blog /> */}
+                <Blog />
             </div>
         </>
     );

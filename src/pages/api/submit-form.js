@@ -24,6 +24,14 @@ export default async function handler(req, res) {
 
     // --- 2. CONFIGURATION ---
     const FORM_CONFIGS = [
+        // Add this inside the FORM_CONFIGS array in submit-form.js
+        {
+            type: 'NEWSLETTER',
+            slugs: [],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Newsletter/formperma/SllpnKEoYnsphGyGPZQ-ZFV4xNvQE0MU9hiSCzjd2vo/htmlRecords/submit',
+            fieldMap: { email: 'Email', name: 'Firstname' }, // Mapping 'email' from frontend to 'Email' in Zoho
+            redirectUrl: '/thank-you-newsletter',
+        },
         {
             type: 'POPUP_FORM',
             slugs: [],
@@ -120,7 +128,7 @@ export default async function handler(req, res) {
                     FIRSTNAME: name || '',
                     // SMS: cleanPhone
                 },
-                listIds: [14],
+                listIds: [12],
                 updateEnabled: true
             };
 
