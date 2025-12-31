@@ -13,7 +13,7 @@ export default function Document() {
         {/* DNS prefetch for less critical resources */}
         <link rel="dns-prefetch" href="https://scripts.clarity.ms" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="preload" href="/_next/static/css/bootstrap.min.css" as="style" />
+        {/* <link rel="preload" href="/_next/static/css/bootstrap.min.css" as="style" /> */}
 
         {/* CRITICAL: Preload logo (LCP candidate) */}
         <link

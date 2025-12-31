@@ -8,6 +8,7 @@ import "@/styles/critical.css";
 import "@/styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 // ADD THIS IMPORT
 import SEOHead from '../components/SEOHead';
 
@@ -28,7 +29,6 @@ const loadStyles = () => {
     import("@/styles/team/team.css");
     import("@/styles/contact/contact.css");
     import("@/styles/DelayedPopup.css");
-
 };
 
 const montserrat = Montserrat({
