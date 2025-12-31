@@ -129,7 +129,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                     data-scroll-offset="-10%"
                     // Apply local module classes
                     className={`${styles.testCardImageWrap} ${isCardActive ? styles.mobileActiveImageArea : ""}`}
-                    style={{ backgroundImage: `url(${card.img})` }}
+                    style={{ backgroundImage: `url(https://iticdn.s3.ap-south-1.amazonaws.com/${card.img})` }}
                   >
                     {/* Apply local module classes */}
                     <span className={`${styles.testCardNumber} ${isCardActive ? styles.mobileActiveNumber : ""}`}>{card.number}</span>
