@@ -74,6 +74,14 @@ const CATEGORY_SLUGS = [
 const nextConfig = {
   reactStrictMode: true,
 
+  // Asset prefix for CDN - loads all _next/static/* files from S3
+  // Use environment variable for flexibility
+  assetPrefix: process.env.NEXT_PUBLIC_CDN_URL || 'https://iticdn.s3.ap-south-1.amazonaws.com',
+
+  // Base path for public folder assets (images, videos, etc.)
+  // Leave empty to serve from same domain, or set to CDN URL
+  // basePath: '', // Uncomment and set if needed
+
   // Optimize images (Next.js 16 compatible)
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -83,6 +91,16 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'inline',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Allow loading images from S3 CDN
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'iticdn.s3.ap-south-1.amazonaws.com',
+        pathname: '/**',
+      },
+    ],
+    // Disable image optimization for external CDN images
+    unoptimized: process.env.NEXT_PUBLIC_CDN_IMAGES === 'true',
   },
 
   // Compression

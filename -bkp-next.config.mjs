@@ -70,13 +70,12 @@ const CATEGORY_SLUGS = [
   'universities',
 ];
 
+// NEXT.JS 16 COMPATIBLE CONFIG - OPTIMIZED FOR PERFORMANCE
 const nextConfig = {
   reactStrictMode: true,
-  
-  // CRITICAL: Output standalone for faster cold starts
-  output: 'standalone',
+  assetPrefix: process.env.NEXT_PUBLIC_CDN_URL || 'https://iticdn.s3.ap-south-1.amazonaws.com',
 
-  // Optimize images aggressively
+  // Optimize images (Next.js 16 compatible)
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
@@ -85,14 +84,17 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'inline',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    // Add quality settings
-    quality: 85,
-    // Enable loader optimization
-    loader: 'default',
   },
+  remotePatterns: [
+    {
+      protocol: 'https',
+      hostname: 'iticdn.s3.ap-south-1.amazonaws.com',
+      pathname: '/**',
+    },
+  ],
 
-  // Enable SWC minification (faster than Terser)
-  swcMinify: true,
+  // Disable image optimization for external CDN images
+  unoptimized: process.env.NEXT_PUBLIC_CDN_IMAGES === 'true',
 
   // Compression
   compress: true,
@@ -106,26 +108,23 @@ const nextConfig = {
       removeConsole: {
         exclude: ['error', 'warn'],
       },
-      // Remove React Dev Overlay
       reactRemoveProperties: true,
     },
   }),
 
-  // Experimental features for better performance
+  // Experimental features for optimization
   experimental: {
-    // Enable optimistic client cache
-    optimisticClientCache: true,
-    // Optimize CSS
-    optimizeCss: true,
-    // Optimize package imports
     optimizePackageImports: ['lucide-react', 'react-phone-input-2'],
+    // Increase concurrent requests for faster builds and data fetching
+    workerThreads: true,
+    cpus: 8, // Adjust based on your system's CPU cores
   },
+
+  turbopack: {},
 
   // Webpack optimization
   webpack: (config, { dev, isServer }) => {
-    // Production optimizations only
     if (!dev) {
-      // Aggressive code splitting
       config.optimization = {
         ...config.optimization,
         moduleIds: 'deterministic',
@@ -135,14 +134,12 @@ const nextConfig = {
           cacheGroups: {
             default: false,
             vendors: false,
-            // Vendor chunk for node_modules
             vendor: {
               name: 'vendor',
               chunks: 'all',
               test: /node_modules/,
               priority: 20,
             },
-            // Common chunk for shared code
             common: {
               name: 'common',
               minChunks: 2,
@@ -151,7 +148,6 @@ const nextConfig = {
               reuseExistingChunk: true,
               enforce: true,
             },
-            // React chunk
             react: {
               test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
               name: 'react',
@@ -161,6 +157,9 @@ const nextConfig = {
           },
         },
       };
+
+      // Increase webpack parallelism for faster builds
+      config.parallelism = 100; // Default is 100, increase if needed
     }
 
     return config;
@@ -190,7 +189,6 @@ const nextConfig = {
           },
         ],
       },
-      // Aggressive caching for static assets
       {
         source: '/images/:path*',
         headers: [
@@ -218,7 +216,6 @@ const nextConfig = {
           },
         ],
       },
-      // Preconnect to critical origins
       {
         source: '/',
         headers: [
