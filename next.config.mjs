@@ -133,6 +133,9 @@ const nextConfig = {
         runtimeChunk: 'single',
         splitChunks: {
           chunks: 'all',
+          maxInitialRequests: 25,
+          minSize: 20000,
+          maxSize: 90000, // Target 90KB max chunk size
           cacheGroups: {
             default: false,
             vendors: false,

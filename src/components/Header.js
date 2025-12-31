@@ -34,7 +34,7 @@ const Header = ({ setHeaderHeight }) => {
                 <div className={`d-flex w-100 m-0 ${styles.header_left_content}`}>
                     <div className={`col-auto ${styles.logo}`}>
                         <a href='/'>
-                            <img
+                            {/* <img
                                 src="https://iticdn.s3.ap-south-1.amazonaws.com/images/logo.svg"
                                 width={200}
                                 height={80}
@@ -42,7 +42,7 @@ const Header = ({ setHeaderHeight }) => {
                                 priority
                                 fetchPriority="high"
                             // sizes="(max-width: 768px) 150px, 200px"
-                            />
+                            /> */}
                         </a>
                     </div>
 
