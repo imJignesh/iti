@@ -40,7 +40,8 @@ header .header_left_content {
   flex: 1 0 70%;
 }
 
-header .header_left_content .logo img {
+header .header_left_content .logo img,
+header .header_left_content .logo svg {
   width: 6.5vw;
   object-fit: contain;
 }
@@ -481,7 +482,8 @@ header .toggleButton img {
     gap: 30px;
   }
 
-  header .header_left_content .logo img {
+  header .header_left_content .logo img,
+  header .header_left_content .logo svg {
     width: 120px;
   }
 
@@ -592,7 +594,9 @@ header .toggleButton img {
 }
 
 @media (max-width: 767px) {
-  header .header_left_content .logo img {
+
+  header .header_left_content .logo img,
+  header .header_left_content .logo svg {
     width: 100px;
   }
 
@@ -627,7 +631,9 @@ header .toggleButton img {
 }
 
 @media (max-width: 575px) {
-  header .header_left_content .logo img {
+
+  header .header_left_content .logo img,
+  header .header_left_content .logo svg {
     width: 100px;
     height: auto;
   }
@@ -665,7 +671,8 @@ header .toggleButton img {
     gap: 10px;
   }
 
-  header .header_left_content .logo img {
+  header .header_left_content .logo img,
+  header .header_left_content .logo svg {
     width: 80px;
   }
 
