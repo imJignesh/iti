@@ -19,7 +19,7 @@ const fetcher = async (url) => {
 
 const CategoriesIndexPage = ({ headerHeight }) => {
     // Fetch up to 100 categories (adjust per_page if needed)
-    const apiUrl = 'https://ignitetraininginstitute.com/wp-json/wp/v2/categories?per_page=100&_embed';
+    const apiUrl = 'https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories?per_page=100&_embed';
 
     const { data: categories, error, isLoading } = useSWR(apiUrl, fetcher);
 

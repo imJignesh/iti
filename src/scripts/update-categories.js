@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const WP_API_URL = 'https://ignitetraininginstitute.com/wp-json/wp/v2/categories?per_page=100&_fields=slug';
+const WP_API_URL = 'https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories?per_page=100&_fields=slug';
 const CONFIG_FILE_PATH = path.join(__dirname, '../next.config.mjs');
 
 async function fetchCategories() {

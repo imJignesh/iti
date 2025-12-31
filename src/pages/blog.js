@@ -97,7 +97,7 @@ const Blogpg = ({ headerHeight }) => {
         };
     }, [searchTerm]);
 
-    const postsApiUrl = `https://ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=9&page=${page}&_embed${selectedCategories.length > 0 ? `&categories=${selectedCategories.join(',')}` : ''}${debouncedSearchTerm ? `&search=${debouncedSearchTerm}` : ''}`;
+    const postsApiUrl = `https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=9&page=${page}&_embed${selectedCategories.length > 0 ? `&categories=${selectedCategories.join(',')}` : ''}${debouncedSearchTerm ? `&search=${debouncedSearchTerm}` : ''}`;
 
     const { data, error, isLoading, isValidating } = useSWR(postsApiUrl, fetcher);
 
@@ -117,7 +117,7 @@ const Blogpg = ({ headerHeight }) => {
     useEffect(() => {
         const fetchTags = async () => {
             try {
-                const res = await fetch('https://ignitetraininginstitute.com/wp-json/wp/v2/tags?per_page=100');
+                const res = await fetch('https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags?per_page=100');
                 const tags = await res.json();
                 const map = {};
                 tags.forEach(tag => (map[tag.id] = tag.name));
@@ -133,7 +133,7 @@ const Blogpg = ({ headerHeight }) => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const res = await fetch('https://ignitetraininginstitute.com/wp-json/wp/v2/categories?per_page=100');
+                const res = await fetch('https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories?per_page=100');
                 const cats = await res.json();
                 setCategories(cats);
             } catch (err) {

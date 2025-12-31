@@ -135,7 +135,7 @@ const CategoryPage = ({ headerHeight }) => {
 
     // 1. Fetch the category object (and ID) based on the slug
     const categoryApiUrl = categorySlug
-        ? `https://ignitetraininginstitute.com/wp-json/wp/v2/categories?slug=${categorySlug}`
+        ? `https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories?slug=${categorySlug}`
         : null;
 
     const { data: categoryData, error: categoryError } = useSWR(categoryApiUrl, categoryFetcher);
@@ -169,7 +169,7 @@ const CategoryPage = ({ headerHeight }) => {
     // Construct the API URL for posts, now including the category ID
     const categoryId = currentCategory?.id;
     const postsApiUrl = categoryId
-        ? `https://ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=9&page=${page}&_embed&categories=${categoryId}${debouncedSearchTerm ? `&search=${debouncedSearchTerm}` : ''}`
+        ? `https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=9&page=${page}&_embed&categories=${categoryId}${debouncedSearchTerm ? `&search=${debouncedSearchTerm}` : ''}`
         : null;
 
     const { data, error: postsError, isLoading, isValidating } = useSWR(postsApiUrl, fetcher);
@@ -190,7 +190,7 @@ const CategoryPage = ({ headerHeight }) => {
     useEffect(() => {
         const fetchTags = async () => {
             try {
-                const res = await fetch('https://ignitetraininginstitute.com/wp-json/wp/v2/tags?per_page=100');
+                const res = await fetch('https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags?per_page=100');
                 const tags = await res.json();
                 const map = {};
                 tags.forEach(tag => (map[tag.id] = tag.name));
@@ -203,7 +203,7 @@ const CategoryPage = ({ headerHeight }) => {
 
         const fetchCategories = async () => {
             try {
-                const res = await fetch('https://ignitetraininginstitute.com/wp-json/wp/v2/categories?per_page=100');
+                const res = await fetch('https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories?per_page=100');
                 const cats = await res.json();
                 setCategories(cats);
             } catch (err) {

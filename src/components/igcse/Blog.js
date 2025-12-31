@@ -5,7 +5,7 @@ import { useScroll } from "../LocomotiveScrollProvider";
 
 const fetchBlogs = async () => {
     const res = await fetch(
-        "https://ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=3&_embed"
+        "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=3&_embed"
     );
     const data = await res.json();
     return data;

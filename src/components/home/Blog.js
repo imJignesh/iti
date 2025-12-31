@@ -12,7 +12,7 @@ const Blog = ({ locoScroll }) => {
         const fetchBlogs = async () => {
             try {
                 // Fetch posts from the WordPress API
-                const response = await fetch("https://ignitetraininginstitute.com/wp-json/wp/v2/posts?_embed&per_page=3");
+                const response = await fetch("https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?_embed&per_page=3");
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
                 }

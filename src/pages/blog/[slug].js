@@ -14,9 +14,9 @@ import { PopupContext } from '../../pages/_app';
 // to your `pages/_app.js` file to avoid a build error.
 
 // --- API Endpoints ---
-const VOTE_API_URL = 'https://ignitetraininginstitute.com/wp-json/mpl/v1/vote';
+const VOTE_API_URL = 'https://api.ignitetraininginstitute.com/wp-json/mpl/v1/vote';
 // --- NEW API Endpoint ---
-const POSTS_API_BASE_URL = 'https://ignitetraininginstitute.com/wp-json/wp/v2/posts';
+const POSTS_API_BASE_URL = 'https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts';
 
 // Fetcher function for SWR to handle API requests
 const fetcher = async (url) => {
@@ -291,7 +291,7 @@ export default function PostDetail() {
     const [relatedPosts, setRelatedPosts] = useState(null);
     // ------------------------------------
 
-    const postApiUrl = slug ? `https://ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed` : null;
+    const postApiUrl = slug ? `https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed` : null;
     const { data, error, isLoading } = useSWR(postApiUrl, fetcher);
 
     const scrollInstanceRef = useRef(null);
