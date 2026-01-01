@@ -130,20 +130,24 @@ const trainers = [
 // ----------------------------------------------------------------------
 
 const TrainerCard = ({ trainer }) => (
-  <div data-color={trainer.color} className="trainerCard">
-    <div className="trainerName">{trainer.name}</div>
-    <div className="trainerImgWrap">
-      <Image
-        src={trainer.img}
-        alt={`Trainer ${trainer.name} ignite training institute`} 
-        className="trainerImg"
-        width={300}
-        height={300}
-      />
+  <a href="/our-team" className="nodecoration">
+    <div data-color={trainer.color} className="trainerCard">
+
+      <div className="trainerName">{trainer.name}</div>
+      <div className="trainerImgWrap">
+        <Image
+          src={trainer.img}
+          alt={`Trainer ${trainer.name} ignite training institute`}
+          className="trainerImg"
+          width={300}
+          height={300}
+        />
+      </div>
+      <div className="trainerSubtitle">{trainer.subtitle}</div>
+      <div className="trainerExp">{trainer.experience}</div>
+
     </div>
-    <div className="trainerSubtitle">{trainer.subtitle}</div>
-    <div className="trainerExp">{trainer.experience}</div>
-  </div>
+  </a>
 );
 
 // ----------------------------------------------------------------------

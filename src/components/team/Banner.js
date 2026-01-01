@@ -3,7 +3,7 @@
 export default function TeamBanner() {
   return (
     <section
-      className="careers-banner fade-in-section"
+      className="careers-banner team fade-in-section"
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
