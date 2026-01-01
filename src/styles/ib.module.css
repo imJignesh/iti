@@ -5,10 +5,10 @@
   position: relative;
   overflow: visible;
   /* background: linear-gradient(270deg, rgba(0, 0, 0, 0) 9.03%, rgba(0, 0, 0, 0.8) 98.82%); */
-  /* background: url(/images/ib-hero2.jpg); */
+  /* background: url(/images/ib-hero2.webp); */
   background-image:
     linear-gradient(270deg, rgba(0, 0, 0, 0) 9.03%, rgba(0, 0, 0, 0.8) 98.82%),
-    url(/images/ib-hero2.jpg);
+    url(/images/ib-hero2.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,6 +21,7 @@
   display: flex;
   justify-content: space-evenly
 }
+
 .leftContent {
   width: 75vw;
   position: relative;
@@ -87,6 +88,7 @@
 .featureCardInnerLast {
   border: 0
 }
+
 .cardImage {
   width: 60px;
   min-width: 60px;
@@ -267,6 +269,7 @@
   .mainHeading {
     font-size: 4.5vw;
   }
+
   .descriptionText {
     font-size: 1.8vw;
   }
@@ -280,10 +283,10 @@
     position: relative;
     overflow: visible;
     /* background: linear-gradient(270deg, rgba(0, 0, 0, 0) 9.03%, rgba(0, 0, 0, 0.8) 98.82%); */
-    /* background: url(/images/ib-hero2.jpg); */
+    /* background: url(/images/ib-hero2.webp); */
     background-image:
       linear-gradient(0deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.8) 73.82%),
-      url(/images/ib-hero2.jpg);
+      url(/images/ib-hero2.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -291,6 +294,7 @@
     margin-bottom: 40px;
     margin-top: 40px;
   }
+
   .contentInner {
     position: absolute;
     top: 0;
@@ -299,6 +303,7 @@
     z-index: 2;
     max-width: 100%;
   }
+
   .mainHeading {
     font-weight: 700;
     font-style: ☞;
@@ -310,6 +315,7 @@
     text-transform: uppercase;
     margin-top: 40px;
   }
+
   .subHeading {
     font-size: 0.9rem;
     font-weight: 500;
@@ -324,6 +330,7 @@
     font-size: 1.5rem;
     max-width: 100%;
   }
+
   .leftContent {
     width: 85vw;
     margin: auto;
@@ -335,6 +342,7 @@
     display: flex;
     flex-direction: row;
   }
+
   .formContainer {
     margin: 10px;
     padding: 25px;
@@ -348,6 +356,7 @@
     object-fit: contain;
     padding: 0px;
   }
+
   .featureCards {
     /* flex-direction: column; */
     padding: 15px;
@@ -360,27 +369,32 @@
     letter-spacing: 0.5px;
     line-height: 1.1;
   }
+
   .ctaButtons {
     /* flex-direction: column; */
     width: 85%;
     margin: auto;
     text-align: center;
   }
+
   .ctaButton {
     width: 100%;
   }
+
   .descriptionText {
     font-size: 0.8rem;
     text-align: center;
   }
-.universityRow {
-  display: flex;
+
+  .universityRow {
+    display: flex;
     flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 50px 0px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 0px;
   }
-.section-heading {
-  font-size: 1.5rem !important;
-}
+
+  .section-heading {
+    font-size: 1.5rem !important;
+  }
 }

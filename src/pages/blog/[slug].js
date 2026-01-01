@@ -44,7 +44,7 @@ const getSidebarHtmlImage = () => {
     return `
         <div class="sidebar-image mb-3">
             <img
-                src="/images/blog-sidebar.png"
+                src="/images/blog-sidebar.webp"
                 alt="Get a Free Counseling"
                 class="img-fluid w-100 rounded"
             />
@@ -72,7 +72,7 @@ const getSidebarHtmlStaticMobile = () => {
                     <div class="form-group">
                         <label htmlFor="phone">Phone Number</label>
                         <div class="phone-input">
-                            <img src="https://flagcdn.com/w40/ae.png" alt="UAE Flag" class="flag" />
+                            <img src="https://flagcdn.com/w40/ae.webp" alt="UAE Flag" class="flag" />
                             <input type="text" id="phone" placeholder="+971" />
                         </div>
                     </div>
@@ -840,7 +840,7 @@ export default function PostDetail() {
                                                                             rel="noopener noreferrer"
                                                                             className="text-muted social-icon-hover"
                                                                         >
-                                                                            <img src="/images/facebk.png" width="18" height="18" alt="Facebook" />
+                                                                            <img src="/images/facebk.webp" width="18" height="18" alt="Facebook" />
                                                                         </a>
 
                                                                         <a
@@ -849,14 +849,14 @@ export default function PostDetail() {
                                                                             rel="noopener noreferrer"
                                                                             className="text-muted social-icon-hover"
                                                                         >
-                                                                            <img src="/images/x.png" width="18" height="18" alt="Twitter/X" />
+                                                                            <img src="/images/x.webp" width="18" height="18" alt="Twitter/X" />
                                                                         </a>
 
                                                                         <a
                                                                             href={`mailto:?subject=${postTitle}&body=${postLink}`}
                                                                             className="text-muted social-icon-hover"
                                                                         >
-                                                                            <img src="/images/mail.png" width="18" height="18" alt="Email" />
+                                                                            <img src="/images/mail.webp" width="18" height="18" alt="Email" />
                                                                         </a>
                                                                     </div>
                                                                 </div>

@@ -101,9 +101,9 @@ export default function IgniteCareerCard() {
           </h3>
 
           <p className="ignite-short-description fade-in-section"
-          data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat>
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat>
             We empower passionate trainers to shape student journeys while growing through purpose-driven initiatives & a flexible teaching environment.
           </p>
         </div>
@@ -117,7 +117,7 @@ export default function IgniteCareerCard() {
               animationDelay: "0.3s",
             }}>
             <img
-              src="/assets/person1.jpg"
+              src="/assets/person1.webp"
               alt="Two professionals working together on laptop"
               className="main-image"
             />
@@ -135,13 +135,13 @@ export default function IgniteCareerCard() {
 
               {/* First item */}
               <div className="d-flex align-items-center gap-3">
-                <img src="/assets/check.png" alt="career at ignite" className="icon-height" />
+                <img src="/assets/check.webp" alt="career at ignite" className="icon-height" />
                 <h3>Empowering students & educators alike</h3>
               </div>
 
               {/* Second item */}
               <div className="d-flex align-items-center gap-3">
-                <img src="/assets/check.png" alt="career at ignite" className="icon-height" />
+                <img src="/assets/check.webp" alt="career at ignite" className="icon-height" />
                 <h3 className="spanText">Igniting great teaching & deeper learning</h3>
               </div>
 

@@ -123,7 +123,7 @@ export default function IgniteAboutCard() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="act tutoring" width={16} height={14} />
+                <img src="/assets/arrowright.webp" alt="act tutoring" width={16} height={14} />
               </div>
             </button>
           </a>

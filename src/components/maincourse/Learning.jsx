@@ -4,42 +4,42 @@ import Image from '@/components/CustomImageWrapper';
 const advantages = [
   {
     title: "Subject Experts Who Truly Understand the Curriculum",
-    icon: "/assets/union3.png",
+    icon: "/assets/union3.webp",
     text: "Our tutors aren't generalists, they're specialists with deep expertise in subjects across IB, IGCSE, & A-Levels, bringing clarity & confidence to every session.",
   },
   {
     title: "Small Groups, Big Focus",
-    icon: "/assets/Union1.png",
+    icon: "/assets/Union1.webp",
     text: "We keep learning groups intentionally small, so each student receives personalised attention, space to ask questions, & the support to learn at their own pace.",
   },
   {
     title: "Measured By Real Academic Progress",
-    icon: "/assets/unioun.png",
+    icon: "/assets/unioun.webp",
     text: "Improving grades isn't a by-product, it's our priority. We track progress through meaningful feedback, visible improvement, & consistent academic results.",
   },
   {
     title: "Ready For Every Exam, Every Time",
-    icon: "/assets/heartg.png",
+    icon: "/assets/heartg.webp",
     text: "We go beyond covering the syllabus, equipping students with strategies, timed practice, & revision techniques to approach any exam with confidence.",
   },
   {
     title: "Strong Foundations That Last",
-    icon: "/assets/union3.png",
+    icon: "/assets/union3.webp",
     text: "Rather than rote learning, we focus on building a solid understanding of fundamental concepts, ensuring students can apply knowledge in any context.",
   },
   {
     title: "Consistent Motivation & Accountability",
-    icon: "/assets/Union1.png",
+    icon: "/assets/Union1.webp",
     text: "We create a focused learning environment that nurtures discipline, encourages curiosity, & helps students stay committed to their academic goals.",
   },
   {
     title: "Real Practice, Real Thinking",
-    icon: "/assets/unioun.png",
+    icon: "/assets/unioun.webp",
     text: "Sessions are built around active problem-solving using real exam-style questions, so students learn by thinking, not just by listening.",
   },
   {
     title: "Practice Exams That Prepare You For The Real One",
-    icon: "/assets/heartg.png",
+    icon: "/assets/heartg.webp",
     text: "Our mock exams simulate actual exam conditions, building familiarity, managing time pressure, & helping students walk into the real test fully prepared.",
   },
 ];
@@ -115,10 +115,10 @@ const Learning = () => {
             </h3>
           </div>
           <p className="mobile-subtitle fade-in-section"
-          data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat="true"
-          style={{ animationDelay: "0.3s" }}>
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            style={{ animationDelay: "0.3s" }}>
             We blend expertise, structure, & care to help students thrive academically & personally, ensuring every learner gets the clarity & support they need.
           </p>
         </div>
@@ -127,9 +127,9 @@ const Learning = () => {
 
 
         <div className="mobile-cards-container fade-in-section"
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat="true">
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true">
           <div
             className="mobile-cards"
             style={{
@@ -156,26 +156,26 @@ const Learning = () => {
         </div>
 
         <div className="mobile-carousel-controls fade-in-section"
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat="true">
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true">
           <button className="mobile-carousel-btn prev" onClick={prevSlide}>
             <Image
-              src="/assets/rigtarr2.png"
+              src="/assets/rigtarr2.webp"
               alt="previous"
               width={isMobile ? 25 : 50}
               height={isMobile ? 25 : 50}
             />
           </button>
           <button className="mobile-carousel-btn next" onClick={nextSlide}>
-            <Image src="/assets/leftarr2.png" alt="next" width={isMobile ? 25 : 50} height={isMobile ? 25 : 50} />
+            <Image src="/assets/leftarr2.webp" alt="next" width={isMobile ? 25 : 50} height={isMobile ? 25 : 50} />
           </button>
         </div>
 
         <div className="mobile-carousel-dots fade-in-section"
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat="true">
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat="true">
           {Array.from({ length: getMaxSlides() + 1 }, (_, index) => (
             <div
               key={index}
@@ -191,9 +191,9 @@ const Learning = () => {
       <div className="desktop-layout">
         <div className="desktop-header">
           <div className="desktop-content fade-in-section"
-          data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat="true">
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true">
             <div className="desktop-left">
               <div className="testimonialHeader" style={{ marginTop: "15%" }}>
                 <h2 className="SubHeading">HOW ARE WE DIFFERENT?
@@ -239,10 +239,10 @@ const Learning = () => {
               </p>
               <div className="carousel-controls">
                 <button className="carousel-btn prev" onClick={prevSlide}>
-                  <Image src="/assets/rigtarr2.png" alt="previous" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
+                  <Image src="/assets/rigtarr2.webp" alt="previous" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                 </button>
                 <button className="carousel-btn next" onClick={nextSlide}>
-                  <Image src="/assets/leftarr2.png" alt="next" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
+                  <Image src="/assets/leftarr2.webp" alt="next" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                 </button>
               </div>
             </div>
@@ -402,11 +402,11 @@ const Learning = () => {
         }
 
         .mobile-blue-card {
-          background-image: url("/assets/bluebg.png");
+          background-image: url("/assets/bluebg.webp");
         }
 
         .mobile-green-card {
-          background-image: url("/assets/greenbg.png");
+          background-image: url("/assets/greenbg.webp");
         }
 
         .mobile-card-icon {
@@ -547,14 +547,14 @@ const Learning = () => {
 
             
           .blueBg {
-            background-image: url("/assets/bluebg.png");
+            background-image: url("/assets/bluebg.webp");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
           }
 
           .greenBg {
-            background-image: url("/assets/greenbg.png");
+            background-image: url("/assets/greenbg.webp");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;

@@ -10,7 +10,7 @@ const testData = [
   {
     number: "01.",
     title: "ACT",
-    img: "/images/test-section1.jpg",
+    img: "/images/test-section1.webp",
     label: "ACT",
     details: ["Total Courses: 3", "Online & In-Person"],
     btn: "VIEW TUTORING COURSE",
@@ -18,7 +18,7 @@ const testData = [
   {
     number: "02.",
     title: "AP",
-    img: "/images/test-section2.jpg",
+    img: "/images/test-section2.webp",
     label: "ADVANCED PLACEMENTS",
     details: ["Total Courses: 2", "Online & In-Person"],
     btn: "VIEW TUTORING COURSE",
@@ -26,7 +26,7 @@ const testData = [
   {
     number: "03.",
     title: "UCAT",
-    img: "/images/test-section3.jpg",
+    img: "/images/test-section3.webp",
     label: "UCAT",
     details: ["Total Courses: 1", "Online & In-Person"],
     btn: "VIEW TUTORING COURSE",

@@ -240,22 +240,22 @@ const DelayedPopup = () => {
                             transition: 'opacity 0.3s ease',
                             fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
                             margin: "15px auto 0 0",
-                            
+
                         }}
                         onMouseEnter={(e) => e.target.style.opacity = "0.9"}
                         onMouseLeave={(e) => e.target.style.opacity = "1"}
-                        >
+                    >
                         {loading ? 'Submitting...' : 'SUBMIT'}
                         <div
                             className="popup-custom-height rounded-circle d-flex align-items-center justify-content-center"
 
                             style={{
-                            background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                            animationDelay: "0.75s",
-                            marginLeft: "2.1rem "
+                                background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                                animationDelay: "0.75s",
+                                marginLeft: "2.1rem "
                             }}
                         >
-                            <img src="/assets/arrowright.png" alt="ibdp tutor in dubai" width={16} height={16} />
+                            <img src="/assets/arrowright.webp" alt="ibdp tutor in dubai" width={16} height={16} />
                         </div>
                     </button>
 

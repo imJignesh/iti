@@ -63,11 +63,11 @@ export default function SubjectsCard1({ }) {
         </div>
       </div>
       <div className="container">
-        <div 
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat
-        className="subjects-card1-inner fade-in-section">
+        <div
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
+          className="subjects-card1-inner fade-in-section">
           <img
             data-scroll
             data-scroll-class="is-clipped"
@@ -78,7 +78,7 @@ export default function SubjectsCard1({ }) {
             className="subjects-card1-bg-rect"
           />
           <img
-            src="/assets/lb.png"
+            src="/assets/lb.webp"
             alt="bg-shape"
             className="subjects-card1-bg-rect"
           />
@@ -86,7 +86,7 @@ export default function SubjectsCard1({ }) {
             data-scroll
             data-scroll-class="is-clipped"
             data-scroll-offset="-10%"
-            src={isMobile ? "/assets/lb.png" : "/assets/rm.png"}
+            src={isMobile ? "/assets/lb.webp" : "/assets/rm.webp"}
             alt="bg-shape"
             className="subjects-card1-bg-rect"
           />

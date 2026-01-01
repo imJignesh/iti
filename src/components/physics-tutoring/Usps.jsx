@@ -18,49 +18,49 @@ import styles from '@/styles/home-copy/Usps.module.css';
 const uspData = [
   {
     number: "01",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Profound Expertise",
     desc: "Learn from expert Physics tutors with in-depth subject mastery.",
   },
   {
     number: "02",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Applicable Insights",
     desc: "Relate Physics concepts to real-world situations and problems.",
   },
   {
     number: "03",
-    icon: "/images/usp-icon3.png",
+    icon: "/images/usp-icon3.webp",
     title: "Proven Success",
     desc: "Consistent track record of top scores in the Physics examinations.",
   },
   {
     number: "04",
-    icon: "/images/usp-icon4.png",
+    icon: "/images/usp-icon4.webp",
     title: "Clear Concepts",
     desc: "Understand challenging theories through simplified step-by-step teaching.",
   },
   {
     number: "05",
-    icon: "/images/usp-icon5.png",
+    icon: "/images/usp-icon5.webp",
     title: "Personalized Learning",
     desc: "Custom lessons designed around your goals and curriculum.",
   },
   {
     number: "06",
-    icon: "/images/usp-icon6.png",
+    icon: "/images/usp-icon6.webp",
     title: "Exam Excellence",
     desc: "Strategic preparation focused on scoring high in assessments.",
   },
   {
     number: "07",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Flexible Tutoring",
     desc: "Sessions planned to match your availability and learning pace.",
   },
   {
     number: "08",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Boosted Confidence",
     desc: "Strengthen understanding to approach Physics with clarity and ease.",
   },
@@ -95,8 +95,8 @@ export default function Usps({ }) {
                 <h2
                   className="fade-in-section SubHeading mb-0"
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
@@ -105,8 +105,8 @@ export default function Usps({ }) {
                 <h3
                   className={`fade-in-section ${styles.uspTitle} mb-0`}
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.2s" }}
                 >
                   What Do Students Get From Ignite's Physics Support?
@@ -116,8 +116,8 @@ export default function Usps({ }) {
                   href="/about-us/"
                   className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE ABOUT IGNITE{" "}
@@ -137,9 +137,9 @@ export default function Usps({ }) {
                   <div key={index} className={styles.uspSlide}>
                     {row.map((usp, i) => (
                       <div key={i} className={`fade-in-section ${styles.uspItem}`}
-                      data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat>
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat>
                         <div className={styles.uspNumber}>{usp.number}</div>
                         <div className={styles.uspIconCircle}>
                           <img

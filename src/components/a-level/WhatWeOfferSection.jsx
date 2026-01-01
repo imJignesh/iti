@@ -45,7 +45,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.1s" }}
                     >
                         <div className="icon-wrap" data-step="01">
-                            <img src="/images/school.png" alt="School Options" />
+                            <img src="/images/school.webp" alt="School Options" />
                         </div>
                         <h3 className="step-title mb-0">SCHOOL OPTIONS</h3>
                         <div className="step-desc">Find schools that fit your learning style & academic goals.</div>
@@ -58,7 +58,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.1s" }}
                     >
                         <div className="icon-wrap" data-step="02">
-                            <img src="/images/idealcur.png" alt="Ideal Curriculum" />
+                            <img src="/images/idealcur.webp" alt="Ideal Curriculum" />
                         </div>
                         <h3 className="step-title mb-0">IDEAL CURRICULUM</h3>
                         <div className="step-desc">Select the curriculum that best supports your future plans.</div>
@@ -71,7 +71,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.1s" }}
                     >
                         <div className="icon-wrap" data-step="03">
-                            <img src="/images/subject.png" alt="Subject Choices" />
+                            <img src="/images/subject.webp" alt="Subject Choices" />
                         </div>
                         <h3 className="step-title mb-0">SUBJECT CHOICES</h3>
                         <div className="step-desc">Choose subjects that align with your career & university path.</div>
@@ -84,7 +84,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.1s" }}
                     >
                         <div className="icon-wrap" data-step="04">
-                            <img src="/images/universitypath.png" alt="University Pathways" />
+                            <img src="/images/universitypath.webp" alt="University Pathways" />
                         </div>
                         <h3 className="step-title mb-0">UNIVERSITY PATHWAYS</h3>
                         <div className="step-desc">MPlan a step-by-step route toward top global universities.</div>

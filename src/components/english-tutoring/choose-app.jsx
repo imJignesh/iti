@@ -38,9 +38,9 @@ const IBCurriculumStages = () => {
             </div>
           </div>
           <div className="row gy-5 fade-in-section"
-          data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat>
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat>
             <div className="col-lg-6">
               <div
                 className="curriculum-col curriculum-col-left"
@@ -253,7 +253,7 @@ const IBCurriculumStages = () => {
 
 /* Card */
 .achievements-slideCard {
-  background-image: url("/images/uni-subtract.png");
+  background-image: url("/images/uni-subtract.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

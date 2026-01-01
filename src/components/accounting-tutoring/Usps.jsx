@@ -18,49 +18,49 @@ import styles from '@/styles/home-copy/Usps.module.css';
 const uspData = [
   {
     number: "01",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Expert Guidance",
     desc: "Learn from skilled tutors with deep accounting expertise.",
   },
   {
     number: "02",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Practical Insights",
     desc: "Understand real-world accounting through applied learning methods.",
   },
   {
     number: "03",
-    icon: "/images/usp-icon3.png",
+    icon: "/images/usp-icon3.webp",
     title: "Proven Results",
     desc: "Consistent track record of top scores in Accounting assessments.",
   },
   {
     number: "04",
-    icon: "/images/usp-icon4.png",
+    icon: "/images/usp-icon4.webp",
     title: "Clear Concepts",
     desc: "Grasp complex accounting topics with simplified explanations.",
   },
   {
     number: "05",
-    icon: "/images/usp-icon5.png",
+    icon: "/images/usp-icon5.webp",
     title: "Flexible Sessions",
     desc: "Study efficiently on your terms with schedule-friendly classes..",
   },
   {
     number: "06",
-    icon: "/images/usp-icon6.png",
+    icon: "/images/usp-icon6.webp",
     title: "Tailored Learning",
     desc: "Accounting lessons expertly designed to match your style and goals.",
   },
   {
     number: "07",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Confidence Boost",
     desc: "Build lasting clarity and confidence through guided support.",
   },
   {
     number: "08",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Exam Strategies",
     desc: "Tackle exams with smart, targeted preparation techniques.",
   },
@@ -99,8 +99,8 @@ export default function Usps({ }) {
                 <h2
                   className="fade-in-section SubHeading mb-0"
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
@@ -110,8 +110,8 @@ export default function Usps({ }) {
                   // Apply local module class: styles.uspTitle
                   className={`fade-in-section ${styles.uspTitle} mb-0`}
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.2s" }}
                 >
                   What Do Students Get From Ignite's French Support?
@@ -125,8 +125,8 @@ export default function Usps({ }) {
                   // Apply local module class: styles.uspBtn, and global class: buttonSkyBlue
                   className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE ABOUT IGNITE{" "}
@@ -149,9 +149,9 @@ export default function Usps({ }) {
                     {row.map((usp, i) => (
                       // Apply local module class: styles.uspItem
                       <div key={i} className={`fade-in-section ${styles.uspItem}`}
-                      data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat>
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat>
                         <div className={styles.uspNumber}>{usp.number}</div>
                         <div className={styles.uspIconCircle}>
                           <img

@@ -24,7 +24,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -37,7 +37,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -50,7 +50,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -63,7 +63,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -76,7 +76,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -89,7 +89,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -102,7 +102,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -115,7 +115,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -128,7 +128,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -141,7 +141,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -154,7 +154,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -167,7 +167,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -238,7 +238,7 @@ export default function Testimonial({ }) {
           </p>
 
           <img
-            src="/images/star-review.png"
+            src="/images/star-review.webp"
             alt="ibdp tutor in dubai"
             data-scroll
             data-scroll-class="is-inview"

@@ -18,49 +18,49 @@ import styles from '@/styles/home-copy/Usps.module.css';
 const uspData = [
   {
     number: "01",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Expert Guidance",
     desc: "Get expert-led support to simplify complex coding topics.",
   },
   {
     number: "02",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Coding Excellence",
     desc: "Master programming languages with confidence and clarity.",
   },
   {
     number: "03",
-    icon: "/images/usp-icon3.png",
+    icon: "/images/usp-icon3.webp",
     title: "Flexible Approach",
     desc: "Learn at your pace with schedule-friendly coaching sessions.",
   },
   {
     number: "04",
-    icon: "/images/usp-icon4.png",
+    icon: "/images/usp-icon4.webp",
     title: "Proven Results",
     desc: "Track record of top scores in Computer Science examinations.",
   },
   {
     number: "05",
-    icon: "/images/usp-icon5.png",
+    icon: "/images/usp-icon5.webp",
     title: "Exam Success",
     desc: "Focused training to ace curriculum-specific coding assessments.",
   },
   {
     number: "06",
-    icon: "/images/usp-icon6.png",
+    icon: "/images/usp-icon6.webp",
     title: "Tailored Support",
     desc: "Personalized help aligned with your curriculum and goals.",
   },
   {
     number: "07",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Interactive Approach",
     desc: "Hands-on coding sessions that enhance real-world understanding.",
   },
   {
     number: "08",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Boosted Grades",
     desc: "Strategic guidance that improves academic performance consistently.",
   },
@@ -95,8 +95,8 @@ export default function Usps({ }) {
                 <h2
                   className="fade-in-section SubHeading mb-0"
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
@@ -105,8 +105,8 @@ export default function Usps({ }) {
                 <h3
                   className={`fade-in-section ${styles.uspTitle} mb-0`}
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.2s" }}
                 >
                   What Do Students Get From Ignite's French Support?
@@ -116,8 +116,8 @@ export default function Usps({ }) {
                   href="/about-us/"
                   className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE ABOUT IGNITE{" "}
@@ -137,9 +137,9 @@ export default function Usps({ }) {
                   <div key={index} className={styles.uspSlide}>
                     {row.map((usp, i) => (
                       <div key={i} className={`fade-in-section ${styles.uspItem}`}
-                      data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat>
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat>
                         <div className={styles.uspNumber}>{usp.number}</div>
                         <div className={styles.uspIconCircle}>
                           <img

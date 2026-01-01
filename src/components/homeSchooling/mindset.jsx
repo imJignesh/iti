@@ -26,18 +26,18 @@ export default function HomeschoolingMindset() {
       color: "blue",
       mobileTitle: "blue",
       mobileColor: "mobileBlue",
-      icon: "/assets/1setting.png",
+      icon: "/assets/1setting.webp",
       upbutton: "/assets/brup.svg",
-      downButton: "/assets/brdown.png",
+      downButton: "/assets/brdown.webp",
     },
     {
       title: "Create Your Own Processes",
       desc: "Private schooling allows students to move beyond rigid classroom routines & discover what truly works for them. By designing their schedules, setting goals, & embracing a results-driven mindset, they excel on their own terms.",
       color: "green",
       mobileTitle: "green",
-      icon: "/assets/2setting.png",
+      icon: "/assets/2setting.webp",
       upbutton: "/assets/grup.svg",
-      downButton: "/assets/grdown.png",
+      downButton: "/assets/grdown.webp",
       mobileColor: "mobileGreen",
     },
     {
@@ -45,18 +45,18 @@ export default function HomeschoolingMindset() {
       desc: "Success as private students hinges on managing time purposefully. We guide students to balance academic focus with extracurricular pursuits & personal growth. This harmony boosts performance, well-being, & lifelong learning skills.",
       color: "green",
       mobileTitle: "blue",
-      icon: "/assets/4setting.png",
+      icon: "/assets/4setting.webp",
       upbutton: "/assets/brup.svg",
-      downButton: "/assets/brdown.png",
+      downButton: "/assets/brdown.webp",
       mobileColor: "mobileBlue",
     },
     {
       title: "Take Ownership Of Actions",
       desc: "Private schooling teaches more than subjects; it instills accountability. Students learn to own their actions & recognize their efforts. This sense of ownership prepares them for the independent demands of university life & beyond.",
       color: "blue",
-      icon: "/assets/3setting.png",
+      icon: "/assets/3setting.webp",
       upbutton: "/assets/grup.svg",
-      downButton: "/assets/grdown.png",
+      downButton: "/assets/grdown.webp",
       mobileColor: "mobileGreen",
       mobileTitle: "green",
     },
@@ -90,9 +90,9 @@ export default function HomeschoolingMindset() {
 
 
       <div className="cards-container fade-in-section"
-      data-scroll
-      data-scroll-class="is-inview"
-      data-scroll-repeat>
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat>
         {cards.map((card, index) => (
           <div
             key={index}
@@ -278,23 +278,23 @@ export default function HomeschoolingMindset() {
         }
 
         .blue {
-          background: url("/assets/bluebg1.png") no-repeat center center;
+          background: url("/assets/bluebg1.webp") no-repeat center center;
           background-size: cover;
         }
 
         .green {
-          background: url("/assets/greenbg1.png") no-repeat center center;
+          background: url("/assets/greenbg1.webp") no-repeat center center;
           background-size: cover;
         }
         
 .mobileBlue {
-  background: url("/assets/bluebg2.png") no-repeat center center;
+  background: url("/assets/bluebg2.webp") no-repeat center center;
   background-size: cover;
   border: 2px solid rgba(163, 202, 245, 0.4); /* Blue border with opacity */
 }
 
 .mobileGreen {
-  background: url("/assets/greenbg2.png") no-repeat center center;
+  background: url("/assets/greenbg2.webp") no-repeat center center;
   background-size: cover;
   border: 2px solid rgba(166, 234, 199, 0.4); /* Green border with opacity */
 }

@@ -583,7 +583,7 @@ export default function Trainers() {
                 {/* Custom Navigation Buttons */}
                 <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
                   {/* Placeholder for actual image/icon */}
-                  <img src="/images/left-arrow-blue.png" alt="ibdp tutor in dubai" />
+                  <img src="/images/left-arrow-blue.webp" alt="ibdp tutor in dubai" />
                 </button>
                 <button ref={navNextRef} className="customNavBtn swiper-button-next">
                   {/* Placeholder for actual image/icon */}

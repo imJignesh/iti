@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react";
 export default function CallToAction() {
   return (
     <div className="cta-wrapper fade-in-section"
-    data-scroll
-    data-scroll-class="is-inview"
-    data-scroll-repeat>
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat>
       <div className="cta-container">
         <div className="cta-background" />
 
@@ -37,7 +37,7 @@ export default function CallToAction() {
 
             <div className="imageSection">
               <img
-                src="/assets/tutbg.jpg"
+                src="/assets/tutbg.webp"
                 alt="about ignite"
                 className="image"
               />
@@ -76,7 +76,7 @@ export default function CallToAction() {
       {/* Mobile Image overlay */}
       <div className="mobile-only mobileImageContainer">
         <img
-          src="/assets/tutbg.jpg"
+          src="/assets/tutbg.webp"
           alt="about ignite"
           className="mobileImage"
         />

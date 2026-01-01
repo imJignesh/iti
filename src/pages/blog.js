@@ -373,7 +373,7 @@ const Blogpg = ({ headerHeight }) => {
                                                                         className="text-muted social-icon-hover"
                                                                         aria-label="Share on Facebook"
                                                                     >
-                                                                        <img src="/images/facebk.png" alt="Facebook" width="18" height="18" />
+                                                                        <img src="/images/facebk.webp" alt="Facebook" width="18" height="18" />
 
                                                                     </a>
                                                                     <a
@@ -383,7 +383,7 @@ const Blogpg = ({ headerHeight }) => {
                                                                         className="text-muted social-icon-hover"
                                                                         aria-label="Share on X (Twitter)"
                                                                     >
-                                                                        <img src="/images/x.png" alt="X (Twitter)" width="18" height="18" />
+                                                                        <img src="/images/x.webp" alt="X (Twitter)" width="18" height="18" />
 
                                                                     </a>
                                                                     <a
@@ -391,7 +391,7 @@ const Blogpg = ({ headerHeight }) => {
                                                                         className="text-muted social-icon-hover"
                                                                         aria-label="Share via Email"
                                                                     >
-                                                                        <img src="/images/mail.png" alt="Email" width="18" height="18" />
+                                                                        <img src="/images/mail.webp" alt="Email" width="18" height="18" />
 
                                                                     </a>
 

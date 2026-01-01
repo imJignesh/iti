@@ -18,49 +18,49 @@ import styles from '@/styles/home-copy/Usps.module.css';
 const uspData = [
   {
     number: "01",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Expert Insight",
     desc: "Learn from Biology specialists with deep subject expertise.",
   },
   {
     number: "02",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Clear Concepts",
     desc: "Break down complex Biology topics into understandable concepts.",
   },
   {
     number: "03",
-    icon: "/images/usp-icon3.png",
+    icon: "/images/usp-icon3.webp",
     title: "Proven Results",
     desc: "Consistently high student scores in Biology exams.",
   },
   {
     number: "04",
-    icon: "/images/usp-icon4.png",
+    icon: "/images/usp-icon4.webp",
     title: "Flexible Approach",
     desc: "Customized learning schedules that suit your academic needs.",
   },
   {
     number: "05",
-    icon: "/images/usp-icon5.png",
+    icon: "/images/usp-icon5.webp",
     title: "Tailored Support",
     desc: "Personalized tutoring aligned to curriculum and learning goals.",
   },
   {
     number: "06",
-    icon: "/images/usp-icon6.png",
+    icon: "/images/usp-icon6.webp",
     title: "Practical Knowledge",
     desc: "Connect theory with real-world Biology applications and understanding.",
   },
   {
     number: "07",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Exam Excellence",
     desc: "Structured preparation to excel in Biology assessments.",
   },
   {
     number: "08",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Boosted Confidence",
     desc: "Build confidence through clarity, practice, and progress tracking.",
   },
@@ -99,8 +99,8 @@ export default function Usps({ }) {
                 <h2
                   className="fade-in-section SubHeading mb-0"
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
@@ -110,8 +110,8 @@ export default function Usps({ }) {
                   // Apply local module class
                   className={`fade-in-section ${styles.uspTitle} mb-0`}
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.2s" }}
                 >
                   What Do Students Get From Ignite's Biology Support?
@@ -122,8 +122,8 @@ export default function Usps({ }) {
                   // Apply local module class and global class
                   className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
                   data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE ABOUT IGNITE{" "}
@@ -145,9 +145,9 @@ export default function Usps({ }) {
                     {row.map((usp, i) => (
                       // Apply local module class
                       <div key={i} className={`fade-in-section ${styles.uspItem}`}
-                      data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat>
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat>
                         <div className={styles.uspNumber}>{usp.number}</div>
                         <div className={styles.uspIconCircle}>
                           <img

@@ -20,7 +20,7 @@ const Blog = ({ locoScroll }) => {
 
                 // Process the data to format it for the component
                 const formattedBlogs = data.map(post => {
-                    const featuredImage = post._embedded['wp:featuredmedia']?.[0]?.source_url || "/images/blog-placeholder.jpg";
+                    const featuredImage = post._embedded['wp:featuredmedia']?.[0]?.source_url || "/images/blog-placeholder.webp";
                     const title = post.title.rendered.replace(/<[^>]*>?/gm, '');
                     const description = post.excerpt.rendered.replace(/<[^>]*>?/gm, '');
 

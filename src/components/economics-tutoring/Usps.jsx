@@ -18,49 +18,49 @@ import styles from '@/styles/home-copy/Usps.module.css';
 const uspData = [
   {
     number: "01",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Expert Guidance",
     desc: "Gain deep subject insight from experienced Economics tutors.",
   },
   {
     number: "02",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Clear Concepts",
     desc: "Understand complex theories through simplified, clear explanations.",
   },
   {
     number: "03",
-    icon: "/images/usp-icon3.png",
+    icon: "/images/usp-icon3.webp",
     title: "Proven Results",
     desc: "Track record of consistently high Economics exam scores.",
   },
   {
     number: "04",
-    icon: "/images/usp-icon4.png",
+    icon: "/images/usp-icon4.webp",
     title: "Flexible Approach",
     desc: "Learn on your terms with schedule-friendly Economics sessions.",
   },
   {
     number: "05",
-    icon: "/images/usp-icon5.png",
+    icon: "/images/usp-icon5.webp",
     title: "Tailored Support",
     desc: "Personalized guidance aligned to your curriculum and goals.",
   },
   {
     number: "06",
-    icon: "/images/usp-icon6.png",
+    icon: "/images/usp-icon6.webp",
     title: "Practical Knowledge",
     desc: "Connect classroom theory with real-world economic applications.",
   },
   {
     number: "07",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Exam Excellence",
     desc: "Curriculum-focused prep to excel in Economics assessments.",
   },
   {
     number: "08",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Boosted Confidence",
     desc: "Build academic confidence through clarity and consistent support.",
   },
@@ -137,9 +137,9 @@ export default function Usps({ }) {
                   <div key={index} className={styles.uspSlide}>
                     {row.map((usp, i) => (
                       <div key={i} className={`fade-in-section ${styles.uspItem}`}
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat>
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat>
                         <div className={styles.uspNumber}>{usp.number}</div>
                         <div className={styles.uspIconCircle}>
                           <img

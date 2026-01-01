@@ -34,7 +34,7 @@ const createBlogData = async () => {
         return {
             img:
                 post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
-                "/images/blog-placeholder.jpg",
+                "/images/blog-placeholder.webp",
             title: decodedTitle,
             desc: trimmedExcerpt,
             link: post.slug,
@@ -46,19 +46,19 @@ const createBlogData = async () => {
 
 const staticBlogs = [
     {
-        img: "/images/blogImage1.jpg",
+        img: "/images/blogImage1.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
         link: "/blogs",
     },
     {
-        img: "/images/blogImage2.jpg",
+        img: "/images/blogImage2.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
         link: "/blogs",
     },
     {
-        img: "/images/blogImage3.jpg",
+        img: "/images/blogImage3.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
         link: "/blogs",

@@ -140,7 +140,7 @@ export default function SubjectsCard() {
 
   return (
     <div className={`fade-in-section subjectSection ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "10px" : "0px", marginBottom: isMobile ? "50px" : "0" }}
-    data-scroll
+      data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
     >
@@ -169,7 +169,7 @@ export default function SubjectsCard() {
             onClick={handlePrevious}
             aria-label="Previous subject"
           >
-            <img src="/assets/up.png" alt="ib myp tutor in dubai" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
+            <img src="/assets/up.webp" alt="ib myp tutor in dubai" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
           </button>
 
           <button
@@ -177,7 +177,7 @@ export default function SubjectsCard() {
             onClick={handleNext}
             aria-label="Next subject"
           >
-            <img src="/assets/down.png" alt="ib myp tutor in dubai" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
+            <img src="/assets/down.webp" alt="ib myp tutor in dubai" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
           </button>
 
           {/* Fixed Container for Infinite Scroll */}

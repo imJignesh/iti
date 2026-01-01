@@ -5,10 +5,10 @@
     position: relative;
     overflow: visible;
     /* background: linear-gradient(270deg, rgba(0, 0, 0, 0) 9.03%, rgba(0, 0, 0, 0.8) 98.82%); */
-    /* background: url(/images/ib-hero2.jpg); */
+    /* background: url(/images/ib-hero2.webp); */
     background-image:
         linear-gradient(270deg, rgba(0, 0, 0, 0) 9.03%, rgba(0, 0, 0, 0.8) 98.82%),
-        url(/images/ib-hero2.jpg);
+        url(/images/ib-hero2.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -283,10 +283,10 @@
         position: relative;
         overflow: visible;
         /* background: linear-gradient(270deg, rgba(0, 0, 0, 0) 9.03%, rgba(0, 0, 0, 0.8) 98.82%); */
-        /* background: url(/images/ib-hero2.jpg); */
+        /* background: url(/images/ib-hero2.webp); */
         background-image:
             linear-gradient(0deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.8) 73.82%),
-            url(/images/ib-hero2.jpg);
+            url(/images/ib-hero2.webp);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

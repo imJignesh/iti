@@ -16,7 +16,7 @@ const testimonialData = [
   // Placeholder Video 1
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -33,7 +33,7 @@ const testimonialData = [
   // Placeholder Video 2
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -50,7 +50,7 @@ const testimonialData = [
   // Placeholder Video 3
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -67,7 +67,7 @@ const testimonialData = [
   // Placeholder Video 4
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -84,7 +84,7 @@ const testimonialData = [
   // Placeholder Video 5
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -101,7 +101,7 @@ const testimonialData = [
   // Placeholder Video 6
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -118,7 +118,7 @@ const testimonialData = [
   // Placeholder Video 7
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -135,7 +135,7 @@ const testimonialData = [
   // Placeholder Video 8
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -152,7 +152,7 @@ const testimonialData = [
   // Placeholder Video 9
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -169,7 +169,7 @@ const testimonialData = [
   // Placeholder Video 10
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -186,7 +186,7 @@ const testimonialData = [
   // Placeholder Video 11
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -203,7 +203,7 @@ const testimonialData = [
   // Placeholder Video 12
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -288,7 +288,7 @@ export default function Testimonial({ }) {
           </p>
 
           <img
-            src="/images/star-review.png"
+            src="/images/star-review.webp"
             alt="british curriculum in dubai"
             data-scroll
             data-scroll-class="is-inview"

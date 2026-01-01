@@ -225,11 +225,11 @@ export default function CareerForm() {
 
         <label htmlFor="phone">CONTACT NO.*</label>
         <div className="phone-input">
-          <img src="/assets/uae.png" alt="career at ignite" width={25} height={35} />
+          <img src="/assets/uae.webp" alt="career at ignite" width={25} height={35} />
           <select>
             <option>+971</option>
           </select>
-          <img src="/assets/dropdown-arrow.png" alt="career at ignite" className="dropdown-arrow" />
+          <img src="/assets/dropdown-arrow.webp" alt="career at ignite" className="dropdown-arrow" />
           <input
             type="tel"
             id="phone"
@@ -401,9 +401,9 @@ export default function CareerForm() {
         </div>
 
         <div className="text-center fade-in-section"
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat>
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat>
           <button
             type="submit"
             disabled={loading}
@@ -431,7 +431,7 @@ export default function CareerForm() {
                 marginLeft: "2.5rem"
               }}
             >
-              <img src="/assets/arrowright.png" alt="career at ignite" width={16} height={16} />
+              <img src="/assets/arrowright.webp" alt="career at ignite" width={16} height={16} />
             </div>
           </button>
         </div>

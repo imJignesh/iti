@@ -77,7 +77,7 @@ export default function SubjectsCard1({ }) {
             className="subjects-card1-bg-rect"
           />
           <img
-            src="/assets/lb.png"
+            src="/assets/lb.webp"
             alt="ib tutor in dubai"
             className="subjects-card1-bg-rect"
           />
@@ -85,7 +85,7 @@ export default function SubjectsCard1({ }) {
             data-scroll
             data-scroll-class="is-clipped"
             data-scroll-offset="-10%"
-            src={isMobile ? "/assets/lb.png" : "/assets/rm.png"}
+            src={isMobile ? "/assets/lb.webp" : "/assets/rm.webp"}
             alt="ib tutor in dubai"
             className="subjects-card1-bg-rect"
           />

@@ -19,21 +19,21 @@ import achievementStyles from "@/styles/freedemo/Acheivements.module.css";
 const achievements = [
     {
         id: 1,
-        logo: "/images/achievements-1.png",
+        logo: "/images/achievements-1.webp",
         score: "98%",
         name: "TANIYA SHARMA",
         description: "LOREM IPSUM DOLOR SIT",
     },
     {
         id: 2,
-        logo: "/images/achievements-2.png",
+        logo: "/images/achievements-2.webp",
         score: "98%",
         name: "TANIYA SHARMA",
         description: "LOREM IPSUM DOLOR SIT",
     },
     {
         id: 3,
-        logo: "/images/achievements-3.png",
+        logo: "/images/achievements-3.webp",
         score: "98%",
         name: "TANIYA SHARMA",
         description: "LOREM IPSUM DOLOR SIT",
@@ -242,7 +242,7 @@ const FreeDemo = ({ headerHeight }) => {
                             style={{ animationDelay: "0.1s" }}
                         >
                             <div className={styles['icon-wrap']} data-step="01">
-                                <img src="/images/school.png" alt="School Options" />
+                                <img src="/images/school.webp" alt="School Options" />
                             </div>
                             <h3 className={`${styles['step-title']} mb-0`}>SCHOOL OPTIONS</h3>
                             <div className={styles['step-desc']}>Discover schools that align with your core strengths & goals.</div>
@@ -255,7 +255,7 @@ const FreeDemo = ({ headerHeight }) => {
                             style={{ animationDelay: "0.2s" }}
                         >
                             <div className={styles['icon-wrap']} data-step="02">
-                                <img src="/images/idealcur.png" alt="Ideal Curriculum" />
+                                <img src="/images/idealcur.webp" alt="Ideal Curriculum" />
                             </div>
                             <h3 className={`${styles['step-title']} mb-0`}>IDEAL CURRICULUM</h3>
                             <div className={styles['step-desc']}>Choose the right-fit curriculum for lasting academic success.</div>
@@ -268,7 +268,7 @@ const FreeDemo = ({ headerHeight }) => {
                             style={{ animationDelay: "0.3s" }}
                         >
                             <div className={styles['icon-wrap']} data-step="03">
-                                <img src="/images/subject.png" alt="Subject Choices" />
+                                <img src="/images/subject.webp" alt="Subject Choices" />
                             </div>
                             <h3 className={`${styles['step-title']} mb-0`}>SUBJECT CHOICES</h3>
                             <div className={styles['step-desc']}>Choose subjects that match your career & higher education goals.</div>
@@ -281,7 +281,7 @@ const FreeDemo = ({ headerHeight }) => {
                             style={{ animationDelay: "0.4s" }}
                         >
                             <div className={styles['icon-wrap']} data-step="04">
-                                <img src="/images/universitypath.png" alt="University Pathways" />
+                                <img src="/images/universitypath.webp" alt="University Pathways" />
                             </div>
                             <h3 className={`${styles['step-title']} mb-0`}>UNIVERSITY PATHWAYS</h3>
                             <div className={styles['step-desc']}>Map a clear, strategic path to top international universities.</div>

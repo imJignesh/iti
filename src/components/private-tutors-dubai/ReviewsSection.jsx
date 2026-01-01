@@ -16,7 +16,7 @@ import styles from "@/styles/home-copy/Testimonial.module.css";
 const testimonialData = [
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "GENESIS TECH",
   //   subtitle: "Parent",
@@ -29,7 +29,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "KABIR KOCHHAR",
   //   subtitle: "IB Student",
@@ -42,7 +42,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "NICOLE MORGAN",
   //   subtitle: "Parent",
@@ -55,7 +55,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "SARA KERR",
   //   subtitle: "Student",
@@ -68,7 +68,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "SHIVAM BAKHDA",
   //   subtitle: "A-Level Student",
@@ -81,7 +81,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "PRIYA NAIR",
   //   subtitle: "A-Level Student",
@@ -94,7 +94,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "TAMANNA IYYANI",
   //   subtitle: "A-Level Graduate",
@@ -107,7 +107,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "SARASWATHY RAMACHANDRAN",
   //   subtitle: "Parent",
@@ -120,7 +120,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "ZEYNEP INAN",
   //   subtitle: "IB & IGCSE Student",
@@ -133,7 +133,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "MAHAD WAHEED",
   //   subtitle: "IB Student",
@@ -146,7 +146,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "NIMIT DEDHIA",
   //   subtitle: "Student",
@@ -159,7 +159,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "BEN DUNATOV",
   //   subtitle: "GCSE Student",
@@ -237,7 +237,7 @@ export default function Testimonial({ }) {
           </p>
 
           <img
-            src="/images/star-review.png"
+            src="/images/star-review.webp"
             alt="private tutor in dubai"
             data-scroll
             data-scroll-class="is-inview"

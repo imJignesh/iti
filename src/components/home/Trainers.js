@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const trainers = [
   {
     name: "NIKHIL PAWAR",
-    img: "/images/trainer1.png",
+    img: "/images/trainer1.webp",
     subtitle: "Lorem ipsum dolor sit",
     experience: "12+ YEARS",
     color: "blue",
@@ -20,7 +20,7 @@ const trainers = [
   },
   {
     name: "NIKHIL PAWAR",
-    img: "/images/trainer1.png",
+    img: "/images/trainer1.webp",
     subtitle: "Lorem ipsum dolor sit",
     experience: "12+ YEARS",
     color: "blue",
@@ -34,7 +34,7 @@ const trainers = [
   },
   {
     name: "NIKHIL PAWAR",
-    img: "/images/trainer1.png",
+    img: "/images/trainer1.webp",
     subtitle: "Lorem ipsum dolor sit",
     experience: "12+ YEARS",
     color: "blue",
@@ -48,7 +48,7 @@ const trainers = [
   },
   {
     name: "NIKHIL PAWAR",
-    img: "/images/trainer1.png",
+    img: "/images/trainer1.webp",
     subtitle: "Lorem ipsum dolor sit",
     experience: "12+ YEARS",
     color: "blue",
@@ -62,7 +62,7 @@ const trainers = [
   },
   {
     name: "NIKHIL PAWAR",
-    img: "/images/trainer1.png",
+    img: "/images/trainer1.webp",
     subtitle: "Lorem ipsum dolor sit",
     experience: "12+ YEARS",
     color: "blue",

@@ -3,34 +3,34 @@ import React, { useEffect, useState } from 'react';
 const benefits = [
     {
         title: "Earn College Credits",
-        icon: "/assets/1lgo.png",
-        mobileIcon: "/assets/1lgo.png",
+        icon: "/assets/1lgo.webp",
+        mobileIcon: "/assets/1lgo.webp",
         upbutton: "/assets/brup.svg",
-        downButton: "/assets/brdown.png",
+        downButton: "/assets/brdown.webp",
         text: `Don't miss the opportunity to gain a real edge in college admissions. Strong AP scores can help you earn credits in advance, giving you a head start on your dream university journey.`,
     },
     {
         title: "University Ready Profiles",
-        icon: "/assets/2lgo.png",
-        mobileIcon: "/assets/moun2.png",
+        icon: "/assets/2lgo.webp",
+        mobileIcon: "/assets/moun2.webp",
         upbutton: "/assets/grup.svg",
-        downButton: "/assets/grdown.png",
+        downButton: "/assets/grdown.webp",
         text: `Studies show AP students are better prepared for university life, & we see that too. They enter with stronger skills, academic confidence, & real-world readiness that helps them thrive from day one.`,
     },
     {
         title: "Display Subject Proficiency",
-        icon: "/assets/3lgo.png",
-        mobileIcon: "/assets/3lgo.png",
+        icon: "/assets/3lgo.webp",
+        mobileIcon: "/assets/3lgo.webp",
         upbutton: "/assets/brup.svg",
-        downButton: "/assets/brdown.png",
+        downButton: "/assets/brdown.webp",
         text: `AP exams let students dive deep into subjects, building true mastery. This focused approach strengthens both academic confidence and career clarity, guiding smarter choices for the future.`,
     },
     {
         title: "Unique College Application",
-        icon: "/assets/4lgo.png",
-        mobileIcon: "/assets/moun4.png",
+        icon: "/assets/4lgo.webp",
+        mobileIcon: "/assets/moun4.webp",
         upbutton: "/assets/grup.svg",
-        downButton: "/assets/grdown.png",
+        downButton: "/assets/grdown.webp",
         text: `Including AP scores in your application showcases dedication and academic ambition. It helps you stand out and increases your chances of earning credit or advanced placement at top universities.`,
     }
 ];
@@ -58,16 +58,16 @@ const APBenefits = () => {
         <div className='mx-auto' style={{ maxWidth: "90vw", border: "none !important", overflow: "hidden !important", marginBlock: isMobile ? "auto" : "0", paddingBottom: isMobile ? "80px" : "0" }}>
             <div className="d-flex align-items-center justify-content-center mb-md-4 mb-3">
                 <div className="SubHeading testSubheading fade-in-section"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
-                style={{ fontSize: isMobile ? "17.5px" : "30px", marginBottom: isMobile ? "20px" : "20px" }}>WHY DO STUDENTS CHOOSE APS?
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{ fontSize: isMobile ? "17.5px" : "30px", marginBottom: isMobile ? "20px" : "20px" }}>WHY DO STUDENTS CHOOSE APS?
                 </div>
             </div>
             <div className="cards fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat>
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
                 {benefits.map((item, index) => (
                     <div
                         className={`card1 ${index % 2 === 1 ? 'greenBg' : 'blueBg'} ${openIndex === index ? 'open' : ''} `}
@@ -206,14 +206,14 @@ margin-block: 10px;
     }
 
     .blueBg {
-        background-image: url('/assets/bluebg.png');
+        background-image: url('/assets/bluebg.webp');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
 
     .greenBg {
-        background-image: url('/assets/greenbg.png');
+        background-image: url('/assets/greenbg.webp');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -357,7 +357,7 @@ margin-block: 10px;
         }
 
         .greenBg {
-            background-image: url('/assets/uniap.png') !important;
+            background-image: url('/assets/uniap.webp') !important;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;

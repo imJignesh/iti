@@ -166,10 +166,10 @@ const Contact = ({ headerHeight }) => {
                     <ContactBanner />
                 </section>
 
-                <section className="highlight-banners fade-in-section" 
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat>
+                <section className="highlight-banners fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
                     <h2 className="banner green-banner mb-0">
                         <span className="text-normal">WANNA EXCEL</span>
                         <span className="text-bold">ACADEMICALLY?</span>
@@ -180,10 +180,10 @@ const Contact = ({ headerHeight }) => {
                         <span className="text-bold">TO LEARN?</span>
                     </h3>
                 </section>
-                <section className="contact-form fade-in-section" 
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat>
+                <section className="contact-form fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
                     {/* 💡 WRAP FORM IN onSubmit HANDLER */}
                     <form onSubmit={handleSubmit}>
                         {submissionStatus === 'error' && (
@@ -356,21 +356,21 @@ const Contact = ({ headerHeight }) => {
                         }
                     `}</style>
                 </section>
-                <section className="contact-container fade-in-section" 
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat>
+                <section className="contact-container fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
 
                     <div className="contact-grid">
                         <div className="contact-card green">
-                            <img src="/images/email.png" alt="contact ignite training institute" />
+                            <img src="/images/email.webp" alt="contact ignite training institute" />
                             <h3>EMAIL US</h3>
                             <p>Email us now for expert tutoring and tailored growth solutions.</p>
                             <a href="mailto:hello@ignitetraininginstitute.com">hello@ignitetraininginstitute.com</a>
                         </div>
 
                         <div className="contact-card green">
-                            <img src="/images/call.png" alt="contact ignite training institute" />
+                            <img src="/images/call.webp" alt="contact ignite training institute" />
                             <h3>CALL US</h3>
                             <p>Call us today for personalised tutoring and transformative growth.</p>
                             <a href="tel:+971568357374">+971 56835 7374</a>
@@ -379,7 +379,7 @@ const Contact = ({ headerHeight }) => {
 
 
                     <div className="contact-visit blue">
-                        <img src="/images/location-map.png" alt="contact ignite training institute" />
+                        <img src="/images/location-map.webp" alt="contact ignite training institute" />
                         <h3>VISIT US</h3>
                         <p>Visit us for personalized coaching and guidance toward lasting success!</p>
                         <address>
@@ -389,10 +389,10 @@ const Contact = ({ headerHeight }) => {
 
                     </div>
                 </section>
-                <section className="map fade-in-section" 
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat>
+                <section className="map fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
                     <iframe
                         // NOTE: Changed to a safe, valid Google Maps URL format for embedding if necessary
                         src="https://maps.google.com/maps?q=Al%20Moosa%20Tower%201,%20Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed"

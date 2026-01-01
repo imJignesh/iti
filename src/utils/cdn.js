@@ -9,7 +9,7 @@ const USE_CDN = process.env.NEXT_PUBLIC_USE_CDN === 'true';
 
 /**
  * Get CDN URL for a public asset
- * @param {string} path - Path to asset (e.g., '/images/logo.png' or 'images/logo.png')
+ * @param {string} path - Path to asset (e.g., '/images/logo.webp' or 'images/logo.webp')
  * @returns {string} - Full URL to asset (CDN or local)
  */
 export function getCDNUrl(path) {

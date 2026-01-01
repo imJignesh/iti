@@ -5,21 +5,21 @@ import { BookOpen } from "lucide-react";
 const achievements = [
   {
     id: 1,
-    logo: "/assets/un1.png",
+    logo: "/assets/un1.webp",
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
   },
   {
     id: 2,
-    logo: "/assets/un2.png",
+    logo: "/assets/un2.webp",
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
   },
   {
     id: 3,
-    logo: "/assets/un3.png",
+    logo: "/assets/un3.webp",
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
@@ -34,29 +34,29 @@ export default function StudentAchievements() {
   const sliderRef = useRef(null);
   const [visibleCards, setVisibleCards] = useState(3);
   const [isMobile, setIsMobile] = useState(false);
-useEffect(() => {
-  const handleResize = () => {
-    const width = window.innerWidth;
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
 
-    if (width < 768) {
-      setIsMobile(true);
-      setVisibleCards(1);
-    } else if (width < 1367) {
-      setIsMobile(false);
-      setVisibleCards(2);
-    } else if (width < 1368) {
-      setIsMobile(false);
-      setVisibleCards(3);
-    } else {
-      setIsMobile(false);
-      setVisibleCards(3);
-    }
-  };
+      if (width < 768) {
+        setIsMobile(true);
+        setVisibleCards(1);
+      } else if (width < 1367) {
+        setIsMobile(false);
+        setVisibleCards(2);
+      } else if (width < 1368) {
+        setIsMobile(false);
+        setVisibleCards(3);
+      } else {
+        setIsMobile(false);
+        setVisibleCards(3);
+      }
+    };
 
-  handleResize(); // initial check
-  window.addEventListener('resize', handleResize);
-  return () => window.removeEventListener('resize', handleResize);
-}, []);
+    handleResize(); // initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
 
   const handlePrev = () => {
@@ -149,16 +149,16 @@ useEffect(() => {
           </div>
 
           {/* Main title */}
-                 <h2
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s" }}
-              >
-                LOREM IPSUM DOLOR SIT AMET,
-               <span className="highlight"> CONSECTETUR </span>ADIPISCING
-              </h2>
+          <h2
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+            className="fade-in-section testTitle"
+            style={{ animationDelay: "0.2s" }}
+          >
+            LOREM IPSUM DOLOR SIT AMET,
+            <span className="highlight"> CONSECTETUR </span>ADIPISCING
+          </h2>
         </div>
 
         {/* Slider Section */}
@@ -188,7 +188,7 @@ useEffect(() => {
             }}
           >
             <img
-              src="/assets/lar.png"
+              src="/assets/lar.webp"
               alt="rightarr"
               width={isMobile ? 32 : 40}
               height={isMobile ? 32 : 40}
@@ -235,7 +235,7 @@ useEffect(() => {
                   style={{
                     height: isMobile ? "256px" : "390px",
                     width: "100%",
-                    backgroundImage: "url('/assets/Subtract1.png')",
+                    backgroundImage: "url('/assets/Subtract1.webp')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -359,7 +359,7 @@ useEffect(() => {
             }}
           >
             <img
-              src="/assets/rar.png"
+              src="/assets/rar.webp"
               alt="rightarr"
               width={isMobile ? 32 : 40}
               height={isMobile ? 32 : 40}

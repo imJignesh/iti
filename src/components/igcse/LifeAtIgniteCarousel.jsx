@@ -7,19 +7,19 @@ export default function LifeAtIgniteCarousel() {
 
   const images = [
     {
-      url: "/assets/igncra.jpg",
+      url: "/assets/igncra.webp",
       alt: "Modern library with bookshelves and seating area",
     },
     {
-      url: "/assets/igncra.jpg",
+      url: "/assets/igncra.webp",
       alt: "Modern office workspace with computers",
     },
     {
-      url: "/assets/igncra.jpg",
+      url: "/assets/igncra.webp",
       alt: "Collaborative meeting room",
     },
     {
-      url: "/assets/igncra.jpg",
+      url: "/assets/igncra.webp",
       alt: "Creative workspace with plants",
     },
   ];
@@ -106,7 +106,7 @@ export default function LifeAtIgniteCarousel() {
               animationDelay: "0.45s"
             }}
           >
-            <img src="/assets/lar.png" alt="igcse tutor in dubai" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
+            <img src="/assets/lar.webp" alt="igcse tutor in dubai" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
           </button>
 
           {/* Stacked Images */}
@@ -153,7 +153,7 @@ export default function LifeAtIgniteCarousel() {
               animationDelay: "0.65s"
             }}
           >
-            <img src="/assets/rar.png" alt="igcse tutor in dubai" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
+            <img src="/assets/rar.webp" alt="igcse tutor in dubai" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
           </button>
         </div>
 

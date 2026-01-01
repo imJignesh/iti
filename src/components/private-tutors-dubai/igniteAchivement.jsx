@@ -78,9 +78,9 @@ export default function IgniteAchievements() {
               <div className="mb-4">
                 <div className="mb-3">
                   <h2 className="SubHeading testSubheading fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat="true">OUR ACHIEVEMENTS
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true">OUR ACHIEVEMENTS
                   </h2>
                 </div>
 
@@ -90,7 +90,7 @@ export default function IgniteAchievements() {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className="fade-in-section testTitle"
-                  
+
                 >
 
                   Progress Measured Through Steady
@@ -107,7 +107,7 @@ export default function IgniteAchievements() {
                     background: "#233467",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
-                    
+
                     fontSize: "1.2rem",
                     marginTop: "16px",
                   }}>
@@ -117,9 +117,9 @@ export default function IgniteAchievements() {
 
               {/* CTA Button */}
               <div className="mb-4 fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat="true">
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true">
                 <button
                   className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                   style={{
@@ -141,11 +141,11 @@ export default function IgniteAchievements() {
                       width: "2.5rem",
                       height: "2.5rem",
                       background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                      
+
                       marginLeft: "2.1rem"
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="private tutors in dubai" width={16} height={16} />
+                    <img src="/assets/arrowright.webp" alt="private tutors in dubai" width={16} height={16} />
                   </div>
                 </button>
               </div>
@@ -153,9 +153,9 @@ export default function IgniteAchievements() {
 
             {/* Right Side - Stats Grid */}
             <div className="stats-grid-desktop fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true">
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true">
               {/* Top Row */}
               <div className="stats-row">
                 {/* Stat 1 */}
@@ -238,7 +238,7 @@ export default function IgniteAchievements() {
                   marginLeft: "2.1rem"
                 }}
               >
-                <img src="/assets/arrowright.png" alt="private tutors in dubai" width={16} height={16} />
+                <img src="/assets/arrowright.webp" alt="private tutors in dubai" width={16} height={16} />
               </div>
             </button>
           </div>
@@ -330,7 +330,7 @@ export default function IgniteAchievements() {
         
         .stats-grid-desktop {
           flex: 1;
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
           display: flex;
@@ -396,7 +396,7 @@ export default function IgniteAchievements() {
 
         /* Mobile Layout */
         .stats-grid-mobile {
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
         }
@@ -492,7 +492,7 @@ export default function IgniteAchievements() {
         
         .stats-grid-desktop {
           flex: 1;
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
           display: flex;

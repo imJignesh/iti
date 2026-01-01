@@ -65,7 +65,7 @@ const Footer = () => {
         <div className={styles.footerMainRow}>
           <div className={styles.footerTop}>
             <Image
-              src="/images/footerImage.jpg"
+              src="/images/footerImage.webp"
               data-scroll
               data-scroll-class="is-clipped"
               data-scroll-repeat="true"
@@ -88,13 +88,13 @@ const Footer = () => {
             </div>
             <div className={styles.socialmediafooter}>
               <a href="https://www.facebook.com/ignitetraininginstitute" target="_blank">
-                <img src="/images/fb-footer.png" alt="" width={36} height={36} />
+                <img src="/images/fb-footer.webp" alt="" width={36} height={36} />
               </a>
               <a href="https://www.instagram.com/ignitetraininginstitute/?hl=en" target="_blank">
-                <img src="/images/insta-footer.png" alt="" width={36} height={36} />
+                <img src="/images/insta-footer.webp" alt="" width={36} height={36} />
               </a>
               <a href="https://www.linkedin.com/company/ignite-training-institute" target="_blank">
-                <img src="/images/linkedin-footer.png" alt="" width={36} height={36} />
+                <img src="/images/linkedin-footer.webp" alt="" width={36} height={36} />
               </a>
             </div>
 

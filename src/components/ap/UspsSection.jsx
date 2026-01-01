@@ -97,49 +97,49 @@ function UpsSection() {
   const uspItems = [
     {
       number: "01",
-      icon: <img src="/assets/01.png" alt="ap tutors in dubai" />,
+      icon: <img src="/assets/01.webp" alt="ap tutors in dubai" />,
       title: "Experienced AP Tutors",
       desc: "Highly qualified AP-specific tutors delivering all-round support.",
     },
     {
       number: "02",
-      icon: <img src="/assets/02.png" alt="ap tutors in dubai" />,
+      icon: <img src="/assets/02.webp" alt="ap tutors in dubai" />,
       title: "Individual Attention",
       desc: "Small group training (SGT) to focus individually on every student.",
     },
     {
       number: "03",
-      icon: <img src="/assets/03.png" alt="ap tutors in dubai" />,
+      icon: <img src="/assets/03.webp" alt="ap tutors in dubai" />,
       title: "Grade Improvement",
       desc: "Better results assurance with critical testing & review methods.",
     },
     {
       number: "04",
-      icon: <img src="/assets/04.png" alt="ap tutors in dubai" />,
+      icon: <img src="/assets/04.webp" alt="ap tutors in dubai" />,
       title: "Examination Prep",
       desc: "Full AP syllabus completion with weekly classes for concept training.",
     },
     {
       number: "05",
-      icon: <img src="/assets/05.png" alt="ap tutors in dubai" />,
+      icon: <img src="/assets/05.webp" alt="ap tutors in dubai" />,
       title: "Strong Foundation",
       desc: "Pre-AP foundation sessions for an exceptionally strong groundwork.",
     },
     {
       number: "06",
-      icon: <img src="/assets/06.png" alt="ap tutors in dubai" />,
+      icon: <img src="/assets/06.webp" alt="ap tutors in dubai" />,
       title: "Stimulating Environment",
       desc: "Result-oriented culture ensuring a fun & stimulating environment.",
     },
     {
       number: "07",
-      icon: <img src="/assets/07.png" alt="ap tutors in dubai" />,
+      icon: <img src="/assets/07.webp" alt="ap tutors in dubai" />,
       title: "Structured Learning",
       desc: "Problem-based learning covering practical aspects of the syllabus.",
     },
     {
       number: "08",
-      icon: <img src="/assets/08.png" alt="ap tutors in dubai" />,
+      icon: <img src="/assets/08.webp" alt="ap tutors in dubai" />,
       title: "Progress Tracking",
       desc: "Extensive practice with topic-wise AP worksheets & mock exam series.",
     },
@@ -233,7 +233,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="ap tutors in dubai" width={16} height={14} />
+                <img src="/assets/arrowright.webp" alt="ap tutors in dubai" width={16} height={14} />
               </div>
             </button>
           </a>

@@ -97,49 +97,49 @@ function UpsSection() {
   const uspItems = [
     {
       number: "01",
-      icon: <img src="/assets/01.png" alt="a level tutors in dubai" />,
+      icon: <img src="/assets/01.webp" alt="a level tutors in dubai" />,
       title: "A LEVEL-SPECIFIC TUTORS",
       desc: "Highly qualified A-Level tutors delivering all-around support.",
     },
     {
       number: "02",
-      icon: <img src="/assets/02.png" alt="a level tutors in dubai" />,
+      icon: <img src="/assets/02.webp" alt="a level tutors in dubai" />,
       title: "INDIVIDUAL ATTENTION",
       desc: "Small group training (SGT) to focus individually on every student.",
     },
     {
       number: "03",
-      icon: <img src="/assets/03.png" alt="a level tutors in dubai" />,
+      icon: <img src="/assets/03.webp" alt="a level tutors in dubai" />,
       title: "GRADE IMPROVEMENT",
       desc: "Better results assurance with critical testing and review methods.",
     },
     {
       number: "04",
-      icon: <img src="/assets/04.png" alt="a level tutors in dubai" />,
+      icon: <img src="/assets/04.webp" alt="a level tutors in dubai" />,
       title: "EXAMINATION PREP",
       desc: "Full A-Level exam preparation across all major examination boards.",
     },
     {
       number: "05",
-      icon: <img src="/assets/05.png" alt="a level tutors in dubai" />,
+      icon: <img src="/assets/05.webp" alt="a level tutors in dubai" />,
       title: "STRONG FOUNDATION",
       desc: "Emphasis on fundamentals for an exceptionally strong foundation.",
     },
     {
       number: "06",
-      icon: <img src="/assets/06.png" alt="a level tutors in dubai" />,
+      icon: <img src="/assets/06.webp" alt="a level tutors in dubai" />,
       title: "STIMULATING ENVIRONMENT",
       desc: "Result-oriented culture ensuring a fun and stimulating environment.",
     },
     {
       number: "07",
-      icon: <img src="/assets/07.png" alt="a level tutors in dubai" />,
+      icon: <img src="/assets/07.webp" alt="a level tutors in dubai" />,
       title: "STRUCTURED LEARNING",
       desc: "Problem-based learning covering practical aspects of the syllabus.",
     },
     {
       number: "08",
-      icon: <img src="/assets/08.png" alt="a level tutors in dubai" />,
+      icon: <img src="/assets/08.webp" alt="a level tutors in dubai" />,
       title: "PROGRESS TRACKING",
       desc: "Excel with unit tests and mock papers under exam-like conditions.",
     },
@@ -234,7 +234,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="arrright" width={16} height={14} />
+                <img src="/assets/arrowright.webp" alt="arrright" width={16} height={14} />
               </div>
             </button>
           </a>

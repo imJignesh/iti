@@ -111,12 +111,12 @@ const trainersData = [
 const coFoundersData = [
     {
         name: "Sumit Advani",
-        image: "/images/sumit.png",
+        image: "/images/sumit.webp",
         description: "Sumit, Co-Founder of Ignite Training Institute, holds a B.Sc. in IT along with a Diploma in Advertising & PR. With over 10 years of experience in the UAE’s education industry, he specializes in designing tailored academic programs that align with each student’s unique goals. Beyond academics, Sumit actively oversees the institute’s infrastructure & spearheads marketing initiatives, ensuring Ignite continues to deliver excellence both inside & outside the classroom.",
     },
     {
         name: "Mohnish Ahuja",
-        image: "/images/mohnish.png",
+        image: "/images/mohnish.webp",
         description: "Mohnish, Co-Founder of Ignite Training Institute, holds a BMS degree & serves as the Head of Academics. With over 12 years of expertise in education, standardized testing, & student profile development, he brings a wealth of knowledge to the classroom. An IB-certified trainer and experienced A-Level educator, Mohnish is passionate about guiding students toward academic excellence. Driven by his vision, he is dedicated to transforming Ignite into a global hub for world-class education.",
     },
 ];

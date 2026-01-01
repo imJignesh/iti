@@ -146,7 +146,7 @@ export default function IgniteAchievements() {
                         marginLeft: "2.1rem"
                       }}
                     >
-                      <img src="/assets/arrowright.png" alt="ib tutor in dubai" width={16} height={16} />
+                      <img src="/assets/arrowright.webp" alt="ib tutor in dubai" width={16} height={16} />
                     </div>
                   </button>
                 </a>
@@ -237,7 +237,7 @@ export default function IgniteAchievements() {
                   marginLeft: "2.1rem"
                 }}
               >
-                <img src="/assets/arrowright.png" alt="ib tutor in dubai" width={16} height={16} />
+                <img src="/assets/arrowright.webp" alt="ib tutor in dubai" width={16} height={16} />
               </div>
             </button>
           </div>
@@ -324,7 +324,7 @@ export default function IgniteAchievements() {
         
         .stats-grid-desktop {
           flex: 1;
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
           display: flex;
@@ -390,7 +390,7 @@ export default function IgniteAchievements() {
 
         /* Mobile Layout */
         .stats-grid-mobile {
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
         }
@@ -487,7 +487,7 @@ export default function IgniteAchievements() {
         
         .stats-grid-desktop {
           flex: 1;
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
           display: flex;

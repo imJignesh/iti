@@ -27,14 +27,14 @@ export default function Curriculum() {
       </div>
 
       <div className="curriculum-container fade-in-section"
-      data-scroll
-      data-scroll-class="is-inview"
-      data-scroll-repeat
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat
       >
         {/* IGCSE */}
         <div className="curriculum-card">
           <img
-            src="/assets/igcse.jpg"
+            src="/assets/igcse.webp"
             alt="IGCSE"
             className="curriculum-img"
           />
@@ -66,7 +66,7 @@ export default function Curriculum() {
         {/* AP */}
         <div className="curriculum-card">
           <img
-            src="/assets/ap1.jpg"
+            src="/assets/ap1.webp"
             alt="AP"
             className="curriculum-img"
           />

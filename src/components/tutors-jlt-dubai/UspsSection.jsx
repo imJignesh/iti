@@ -110,49 +110,49 @@ function UpsSection() {
   const uspItems = [
     {
       number: "01",
-      icon: <img src="/assets/01.png" alt="tutors in jlt dubai" />,
+      icon: <img src="/assets/01.webp" alt="tutors in jlt dubai" />,
       title: "Experienced Tutors",
       desc: "Curriculum-focused experts delivering complete academic support.",
     },
     {
       number: "02",
-      icon: <img src="/assets/02.png" alt="tutors in jlt dubai" />,
+      icon: <img src="/assets/02.webp" alt="tutors in jlt dubai" />,
       title: "Individual Attention",
       desc: "Small group training (SGT) tailored to each student’s unique needs.",
     },
     {
       number: "03",
-      icon: <img src="/assets/03.png" alt="tutors in jlt dubai" />,
+      icon: <img src="/assets/03.webp" alt="tutors in jlt dubai" />,
       title: "Grade Improvement",
       desc: "Achieve stronger results with regular test-based review techniques.",
     },
     {
       number: "04",
-      icon: <img src="/assets/04.png" alt="tutors in jlt dubai" />,
+      icon: <img src="/assets/04.webp" alt="tutors in jlt dubai" />,
       title: "Examination Prep",
       desc: "Comprehensive guidance across all key international curricula.",
     },
     {
       number: "05",
-      icon: <img src="/assets/05.png" alt="tutors in jlt dubai" />,
+      icon: <img src="/assets/05.webp" alt="tutors in jlt dubai" />,
       title: "Strong Foundation",
       desc: "Conceptual clarity to master all subject fundamentals with ease.",
     },
     {
       number: "06",
-      icon: <img src="/assets/06.png" alt="tutors in jlt dubai" />,
+      icon: <img src="/assets/06.webp" alt="tutors in jlt dubai" />,
       title: "Stimulating Environment",
       desc: "Goal-focused mentorship in an active, encouraging setting.",
     },
     {
       number: "07",
-      icon: <img src="/assets/07.png" alt="tutors in jlt dubai" />,
+      icon: <img src="/assets/07.webp" alt="tutors in jlt dubai" />,
       title: "Structured Learning",
       desc: "Real-world context through guided, problem-based modules.",
     },
     {
       number: "08",
-      icon: <img src="/assets/08.png" alt="tutors in jlt dubai" />,
+      icon: <img src="/assets/08.webp" alt="tutors in jlt dubai" />,
       title: "Progress Tracking",
       desc: "Track academic growth through regular mocks & assessments.",
     },
@@ -245,7 +245,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="tutors in jlt dubai" width={16} height={14} />
+                <img src="/assets/arrowright.webp" alt="tutors in jlt dubai" width={16} height={14} />
               </div>
             </button>
           </a>

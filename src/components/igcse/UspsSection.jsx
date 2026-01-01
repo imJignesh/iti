@@ -97,49 +97,49 @@ function UpsSection() {
   const uspItems = [
     {
       number: "01",
-      icon: <img src="/assets/01.png" alt="igcse tutor in dubai" />,
+      icon: <img src="/assets/01.webp" alt="igcse tutor in dubai" />,
       title: "IGCSE-SPECIFIC TUTORS",
       desc: "Highly qualified IGCSE-specific tutors delivering all-around support.",
     },
     {
       number: "02",
-      icon: <img src="/assets/02.png" alt="igcse tutor in dubai" />,
+      icon: <img src="/assets/02.webp" alt="igcse tutor in dubai" />,
       title: "INDIVIDUAL ATTENTION",
       desc: "Small group training (SGT) to focus individually on every student.",
     },
     {
       number: "03",
-      icon: <img src="/assets/03.png" alt="igcse tutor in dubai" />,
+      icon: <img src="/assets/03.webp" alt="igcse tutor in dubai" />,
       title: "GRADE IMPROVEMENT",
       desc: "Better results assurance with critical testing and review methods.",
     },
     {
       number: "04",
-      icon: <img src="/assets/04.png" alt="igcse tutor in dubai" />,
+      icon: <img src="/assets/04.webp" alt="igcse tutor in dubai" />,
       title: "EXAMINATION PREP",
       desc: "Full IGCSE exam preparation across all major examination boards.",
     },
     {
       number: "05",
-      icon: <img src="/assets/05.png" alt="igcse tutor in dubai" />,
+      icon: <img src="/assets/05.webp" alt="igcse tutor in dubai" />,
       title: "STRONG FOUNDATION",
       desc: "Focus on IGCSE fundamentals for lasting academic success.",
     },
     {
       number: "06",
-      icon: <img src="/assets/06.png" alt="igcse tutor in dubai" />,
+      icon: <img src="/assets/06.webp" alt="igcse tutor in dubai" />,
       title: "STIMULATING ENVIRONMENT",
       desc: "Result-oriented culture ensuring a fun and stimulating environment.",
     },
     {
       number: "07",
-      icon: <img src="/assets/07.png" alt="igcse tutor in dubai" />,
+      icon: <img src="/assets/07.webp" alt="igcse tutor in dubai" />,
       title: "STRUCTURED LEARNING",
       desc: "Problem-based learning covering integral aspects of the syllabus.",
     },
     {
       number: "08",
-      icon: <img src="/assets/08.png" alt="igcse tutor in dubai" />,
+      icon: <img src="/assets/08.webp" alt="igcse tutor in dubai" />,
       title: "PROGRESS TRACKING",
       desc: "Revise with unit tests and mock papers under exam-like conditions.",
     },
@@ -234,7 +234,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="igcse tutor in dubai" width={16} height={14} />
+                <img src="/assets/arrowright.webp" alt="igcse tutor in dubai" width={16} height={14} />
               </div>
             </button>
           </a>

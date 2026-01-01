@@ -83,11 +83,11 @@ export default function IgniteAboutCard() {
 
         {/* Right Content */}
         <div className="ignite-right fade-in-section"
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat>
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat>
           <img
-            src="/assets/arect.png"
+            src="/assets/arect.webp"
             alt="about ignite"
             className="testimonialRect rect-1"
           />
@@ -112,7 +112,7 @@ export default function IgniteAboutCard() {
             }}
           >
             <img
-              src="/assets/aboutbg.jpg"
+              src="/assets/aboutbg.webp"
               alt="about ignite"
               className="main-image"
             />
@@ -194,7 +194,7 @@ export default function IgniteAboutCard() {
                 marginLeft: "2.1rem",
               }}
             >
-              <img src="/assets/arrowright.png" alt="about ignite" width={16} height={14} />
+              <img src="/assets/arrowright.webp" alt="about ignite" width={16} height={14} />
             </div>
           </button>
         </a>

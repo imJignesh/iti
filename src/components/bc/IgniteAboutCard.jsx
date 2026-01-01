@@ -123,7 +123,7 @@ export default function IgniteAboutCard() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="british curriculum tutors in dubai" width={16} height={14} />
+                <img src="/assets/arrowright.webp" alt="british curriculum tutors in dubai" width={16} height={14} />
               </div>
             </button>
           </a>

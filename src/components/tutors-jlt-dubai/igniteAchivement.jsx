@@ -89,7 +89,7 @@ export default function IgniteAchievements() {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className="fade-in-section testTitle"
-                  
+
                 >
                   Success Built On Consistent
                   <span className="highlight"> Academic Progress </span>ADIPISCING
@@ -105,7 +105,7 @@ export default function IgniteAchievements() {
                     background: "#233467",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
-                    
+
                     fontSize: "1.2rem",
                     marginTop: "16px",
                   }}>
@@ -115,9 +115,9 @@ export default function IgniteAchievements() {
 
               {/* CTA Button */}
               <div className="mb-4 fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
               >
                 <button
                   className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
@@ -140,11 +140,11 @@ export default function IgniteAchievements() {
                       width: "2.5rem",
                       height: "2.5rem",
                       background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                      
+
                       marginLeft: "2.1rem"
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="tutors in jlt dubai" width={16} height={16} />
+                    <img src="/assets/arrowright.webp" alt="tutors in jlt dubai" width={16} height={16} />
                   </div>
                 </button>
               </div>
@@ -152,9 +152,9 @@ export default function IgniteAchievements() {
 
             {/* Right Side - Stats Grid */}
             <div className="stats-grid-desktop fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat>
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
               {/* Top Row */}
               <div className="stats-row">
                 {/* Stat 1 */}
@@ -237,7 +237,7 @@ export default function IgniteAchievements() {
                   marginLeft: "2.1rem"
                 }}
               >
-                <img src="/assets/arrowright.png" alt="tutors in jlt dubai" width={16} height={16} />
+                <img src="/assets/arrowright.webp" alt="tutors in jlt dubai" width={16} height={16} />
               </div>
             </button>
           </div>
@@ -329,7 +329,7 @@ export default function IgniteAchievements() {
         
         .stats-grid-desktop {
           flex: 1;
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
           display: flex;
@@ -395,7 +395,7 @@ export default function IgniteAchievements() {
 
         /* Mobile Layout */
         .stats-grid-mobile {
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
         }
@@ -491,7 +491,7 @@ export default function IgniteAchievements() {
         
         .stats-grid-desktop {
           flex: 1;
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
           display: flex;

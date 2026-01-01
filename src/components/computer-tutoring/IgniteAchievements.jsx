@@ -80,8 +80,8 @@ export default function IgniteAchievements() {
               <div className="mb-4">
                 <div className="mb-3">
                   <h2 className="SubHeading testSubheading fade-in-section" data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat>OUR ACHIEVEMENTS
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>OUR ACHIEVEMENTS
                   </h2>
                 </div>
 
@@ -91,7 +91,7 @@ export default function IgniteAchievements() {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className="fade-in-section testTitle"
-                 
+
                 >
                   Milestones That Clearly
                   <span className="highlight"> Reflect </span>Our Impact
@@ -116,9 +116,9 @@ export default function IgniteAchievements() {
 
               {/* CTA Button */}
               <div className="mb-4 fade-in-section"
-              data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat>
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
                 <button
                   className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                   style={{
@@ -136,7 +136,7 @@ export default function IgniteAchievements() {
                   GET A FREE DEMO
                   <div
                     className="custom-height rounded-circle d-flex align-items-center justify-content-center"
-                    
+
                     style={{
                       width: "2.5rem",
                       height: "2.5rem",
@@ -144,7 +144,7 @@ export default function IgniteAchievements() {
                       marginLeft: "2.1rem"
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="computer science tutor in dubai" width={16} height={16} />
+                    <img src="/assets/arrowright.webp" alt="computer science tutor in dubai" width={16} height={16} />
                   </div>
                 </button>
               </div>
@@ -152,9 +152,9 @@ export default function IgniteAchievements() {
 
             {/* Right Side - Stats Grid */}
             <div className="stats-grid-desktop fade-in-section"
-            data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat>
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat>
               {/* Top Row */}
               <div className="stats-row">
                 {/* Stat 1 */}
@@ -237,7 +237,7 @@ export default function IgniteAchievements() {
                   marginLeft: "2.1rem"
                 }}
               >
-                <img src="/assets/arrowright.png" alt="computer science tutor in dubai" width={16} height={16} />
+                <img src="/assets/arrowright.webp" alt="computer science tutor in dubai" width={16} height={16} />
               </div>
             </button>
           </div>
@@ -329,7 +329,7 @@ export default function IgniteAchievements() {
         
         .stats-grid-desktop {
           flex: 1;
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
           display: flex;
@@ -395,7 +395,7 @@ export default function IgniteAchievements() {
 
         /* Mobile Layout */
         .stats-grid-mobile {
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
         }
@@ -496,7 +496,7 @@ export default function IgniteAchievements() {
         
         .stats-grid-desktop {
           flex: 1;
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
           display: flex;

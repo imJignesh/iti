@@ -3,17 +3,17 @@ import React from "react";
 
 const blogData = [
     {
-        img: "/images/blogImage1.jpg",
+        img: "/images/blogImage1.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
     },
     {
-        img: "/images/blogImage2.jpg",
+        img: "/images/blogImage2.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
     },
     {
-        img: "/images/blogImage3.jpg",
+        img: "/images/blogImage3.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
     },

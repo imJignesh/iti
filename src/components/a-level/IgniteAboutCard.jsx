@@ -83,7 +83,7 @@ export default function IgniteAboutCard() {
         {/* Right Content */}
         {/* <div className="ignite-right">
           <img
-            src="/assets/arect.png"
+            src="/assets/arect.webp"
             alt="bg-shape"
             className="testimonialRect rect-1"
           />
@@ -108,7 +108,7 @@ export default function IgniteAboutCard() {
             }}
           >
             <img
-              src="/assets/aboutbg.jpg"
+              src="/assets/aboutbg.webp"
               alt="Two professionals working together on laptop"
               className="main-image"
             />
@@ -190,7 +190,7 @@ export default function IgniteAboutCard() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="arrright" width={16} height={14} />
+                <img src="/assets/arrowright.webp" alt="arrright" width={16} height={14} />
               </div>
             </button>
           </a>

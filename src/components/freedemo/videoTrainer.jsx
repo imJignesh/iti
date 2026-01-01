@@ -18,7 +18,7 @@ const TrainersMessage = () => {
       id: 1,
       name: "PRAKSHI\nSHARMA",
       experience: "5+ YEARS",
-      image: "/assets/person.jpg",
+      image: "/assets/person.webp",
       alt: "Woman trainer with arms crossed in office background",
       videoUrl: "#", // Add actual video URL here
     },
@@ -26,7 +26,7 @@ const TrainersMessage = () => {
       id: 2,
       name: "NIKHIL\nPARMAR",
       experience: "5+ YEARS",
-      image: "/assets/woman.jpg",
+      image: "/assets/woman.webp",
       alt: "Man trainer wearing glasses in classroom background",
       videoUrl: "#", // Add actual video URL here
     },
@@ -34,7 +34,7 @@ const TrainersMessage = () => {
       id: 3,
       name: "PRAKSHI\nSHARMA",
       experience: "5+ YEARS",
-      image: "/assets/person.jpg",
+      image: "/assets/person.webp",
       alt: "Woman trainer with arms crossed in office background",
       videoUrl: "#", // Add actual video URL here
     },
@@ -42,7 +42,7 @@ const TrainersMessage = () => {
       id: 4,
       name: "NIKHIL\nPARMAR",
       experience: "5+ YEARS",
-      image: "/assets/woman.jpg",
+      image: "/assets/woman.webp",
       alt: "Man trainer wearing glasses in classroom background",
       videoUrl: "#", // Add actual video URL here
     },
@@ -88,9 +88,9 @@ const TrainersMessage = () => {
       </div>
 
       <div className="trainers-container fade-in-section"
-      data-scroll
-      data-scroll-class="is-inview"
-      data-scroll-repeat>
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat>
         {trainers.map((trainer, index) => (
           <div key={trainer.id} className="trainer-card">
             <div
@@ -270,12 +270,12 @@ const TrainersMessage = () => {
         }
 
         .experience.green {
-          background: url("/assets/15bg.png") no-repeat center center;
+          background: url("/assets/15bg.webp") no-repeat center center;
           background-size: cover;
         }
 
         .experience.blue {
-          background: url("/assets/25bg.png") no-repeat center center;
+          background: url("/assets/25bg.webp") no-repeat center center;
           background-size: cover;
         }
 

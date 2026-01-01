@@ -97,49 +97,49 @@ function UpsSection() {
   const uspItems = [
     {
       number: "01",
-      icon: <img src="/assets/01.png" alt="act tutoring" />,
+      icon: <img src="/assets/01.webp" alt="act tutoring" />,
       title: "ACT-Specific Tutors",
       desc: "Highly qualified ACT-specific tutors delivering all-around support.",
     },
     {
       number: "02",
-      icon: <img src="/assets/02.png" alt="act tutoring" />,
+      icon: <img src="/assets/02.webp" alt="act tutoring" />,
       title: "Individual Attention",
       desc: "Small group training (SGT) to focus individually on every student.",
     },
     {
       number: "03",
-      icon: <img src="/assets/03.png" alt="act tutoring" />,
+      icon: <img src="/assets/03.webp" alt="act tutoring" />,
       title: "Grade Improvement",
       desc: "Better results assurance with critical testing & review methods.",
     },
     {
       number: "04",
-      icon: <img src="/assets/04.png" alt="act tutoring" />,
+      icon: <img src="/assets/04.webp" alt="act tutoring" />,
       title: "Examination Prep",
       desc: "Full ACT exam prep with tutoring, resources, testing, & review.",
     },
     {
       number: "05",
-      icon: <img src="/assets/05.png" alt="act tutoring" />,
+      icon: <img src="/assets/05.webp" alt="act tutoring" />,
       title: "Strong Foundation",
       desc: "Focus on fundamentals for an exceptionally strong foundation.",
     },
     {
       number: "06",
-      icon: <img src="/assets/06.png" alt="act tutoring" />,
+      icon: <img src="/assets/06.webp" alt="act tutoring" />,
       title: "Stimulating Environment",
       desc: "Result-oriented culture ensuring a fun & stimulating environment.",
     },
     {
       number: "07",
-      icon: <img src="/assets/07.png" alt="act tutoring" />,
+      icon: <img src="/assets/07.webp" alt="act tutoring" />,
       title: "Structured Learning",
       desc: "Comprehensive learning support for all the major ACT sections.",
     },
     {
       number: "08",
-      icon: <img src="/assets/08.png" alt="act tutoring" />,
+      icon: <img src="/assets/08.webp" alt="act tutoring" />,
       title: "Progress Tracking",
       desc: "Practice with unit tests & mock papers under exam-like conditions.",
     },
@@ -233,7 +233,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="act tutoring" width={16} height={14} />
+                <img src="/assets/arrowright.webp" alt="act tutoring" width={16} height={14} />
               </div>
             </button>
           </a>

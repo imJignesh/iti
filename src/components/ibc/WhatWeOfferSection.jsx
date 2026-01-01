@@ -44,7 +44,7 @@ const WhatWeOfferSection = () => {
                         data-scroll-repeat="true"
                         className="step fade-in-section">
                         <div className="icon-wrap" data-step="01">
-                            <img src="images/school.png" alt="School Options" />
+                            <img src="images/school.webp" alt="School Options" />
                         </div>
                         <h3 className="step-title mb-0">SCHOOL OPTIONS</h3>
                         <div className="step-desc">Discover schools that align with your core strengths & goals.</div>
@@ -55,7 +55,7 @@ const WhatWeOfferSection = () => {
                         data-scroll-repeat="true"
                         className="step fade-in-section">
                         <div className="icon-wrap" data-step="02">
-                            <img src="images/idealcur.png" alt="Ideal Curriculum" />
+                            <img src="images/idealcur.webp" alt="Ideal Curriculum" />
                         </div>
                         <h3 className="step-title mb-0">IDEAL CURRICULUM</h3>
                         <div className="step-desc">Choose the right-fit curriculum for lasting academic success.</div>
@@ -66,7 +66,7 @@ const WhatWeOfferSection = () => {
                         data-scroll-repeat="true"
                         className="step fade-in-section">
                         <div className="icon-wrap" data-step="03">
-                            <img src="images/subject.png" alt="Subject Choices" />
+                            <img src="images/subject.webp" alt="Subject Choices" />
                         </div>
                         <h3 className="step-title mb-0">SUBJECT CHOICES</h3>
                         <div className="step-desc">Choose subjects that match your career & higher education goals.</div>
@@ -77,7 +77,7 @@ const WhatWeOfferSection = () => {
                         data-scroll-repeat="true"
                         className="step fade-in-section">
                         <div className="icon-wrap" data-step="04">
-                            <img src="images/universitypath.png" alt="University Pathways" />
+                            <img src="images/universitypath.webp" alt="University Pathways" />
                         </div>
                         <h3 className="step-title mb-0">UNIVERSITY PATHWAYS</h3>
                         <div className="step-desc">Map a clear, strategic path to top international universities.</div>

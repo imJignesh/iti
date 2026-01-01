@@ -145,7 +145,7 @@ export default function SidebarForm({ pageInfo, formType }) {
                 <div className="form-group">
                     <label htmlFor="phone">Phone Number</label>
                     <div className="phone-input">
-                        <img src="https://flagcdn.com/w40/ae.png" alt="UAE Flag" className="flag" />
+                        <img src="https://flagcdn.com/w40/ae.webp" alt="UAE Flag" className="flag" />
                         <input
                             type="text"
                             id="phone"

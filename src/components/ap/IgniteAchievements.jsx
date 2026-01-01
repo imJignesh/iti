@@ -36,13 +36,13 @@ export default function IgniteAchievements() {
                 fontSize: "clamp(0.9rem, 3vw, 1.2rem)"
               }}>
               <img
-                src="/assets/3color.png"
+                src="/assets/3color.webp"
                 alt="act"
                 width={15}
                 height={18}
                 style={{ verticalAlign: "middle", marginLeft: "0.5rem" }}
               /> IGNITE ACHIEVEMENTS     <img
-                src="/assets/3color.png"
+                src="/assets/3color.webp"
                 alt="act"
                 width={15}
                 height={18}
@@ -188,7 +188,7 @@ export default function IgniteAchievements() {
                   <div
                     className="ms-3 rounded-circle d-flex align-items-center justify-content-center"
                   >
-                    <img src="/assets/colr.png" alt="rightar" style={{
+                    <img src="/assets/colr.webp" alt="rightar" style={{
                       width: '2rem',
                       height: '2rem',
                     }} />
@@ -270,7 +270,7 @@ export default function IgniteAchievements() {
               <div
                 className="ms-3 rounded-circle d-flex align-items-center justify-content-center"
               >
-                <img src="/assets/colr.png" alt="rightar" style={{
+                <img src="/assets/colr.webp" alt="rightar" style={{
                   width: '2rem',
                   height: '2rem',
                 }} />
@@ -356,7 +356,7 @@ export default function IgniteAchievements() {
         
  .stats-grid-desktop {
   flex: 1;
-  background: url("/assets/Rectangle125.png") no-repeat center/cover;
+  background: url("/assets/Rectangle125.webp") no-repeat center/cover;
   border-radius: 20px;
   padding: 3rem;
   display: flex;
@@ -407,7 +407,7 @@ export default function IgniteAchievements() {
 
         /* Mobile Layout */
         .stats-grid-mobile {
-  background: url("/assets/Rectangle125.png") no-repeat center/cover;
+  background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
         }

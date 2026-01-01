@@ -12,7 +12,7 @@ const testData = [
   {
     number: "01.",
     title: "ACT",
-    img: "/images/test-section1.jpg",
+    img: "/images/test-section1.webp",
     label: "ACT",
     details: ["Score higher on the ACT with personalized, proven preparation"],
     btn: "LEARN MORE",
@@ -20,7 +20,7 @@ const testData = [
   {
     number: "02.",
     title: "AP",
-    img: "/images/test-section2.jpg",
+    img: "/images/test-section2.webp",
     label: "ADVANCED PLACEMENTS",
     details: ["Targeted AP tutoring to strengthen concepts & exam readiness"],
     btn: "LEARN MORE",
@@ -28,7 +28,7 @@ const testData = [
   {
     number: "03.",
     title: "UCAT",
-    img: "/images/test-section3.jpg",
+    img: "/images/test-section3.webp",
     label: "UCAT",
     details: ["Master UCAT strategies with expert guidance & focused test prep"],
     btn: "LEARN MORE",

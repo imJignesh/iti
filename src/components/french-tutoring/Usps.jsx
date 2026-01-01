@@ -18,49 +18,49 @@ import styles from '@/styles/home-copy/Usps.module.css';
 const uspData = [
   {
     number: "01",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Language Mastery",
     desc: "Develop strong fluency and confidence in French communication.",
   },
   {
     number: "02",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Personalized Approach",
     desc: "Lessons tailored to your goals, pace, and strengths.",
   },
   {
     number: "03",
-    icon: "/images/usp-icon3.png",
+    icon: "/images/usp-icon3.webp",
     title: "Cultural Insights",
     desc: "Learn French with real-world cultural relevance and depth.",
   },
   {
     number: "04",
-    icon: "/images/usp-icon4.png",
+    icon: "/images/usp-icon4.webp",
     title: "Proven Results",
     desc: "Consistent track record of high grades in French exams.",
   },
   {
     number: "05",
-    icon: "/images/usp-icon5.png",
+    icon: "/images/usp-icon5.webp",
     title: "Interactive Learning",
     desc: "Lively & interactive sessions that enhance language retention.",
   },
   {
     number: "06",
-    icon: "/images/usp-icon6.png",
+    icon: "/images/usp-icon6.webp",
     title: "Flexible Sessions",
     desc: "Online or in-person classes that suit your schedule.",
   },
   {
     number: "07",
-    icon: "/images/usp-icon1.png",
+    icon: "/images/usp-icon1.webp",
     title: "Tailored Guidance",
     desc: "Curriculum-specific support to meet academic requirements.",
   },
   {
     number: "08",
-    icon: "/images/usp-icon2.png",
+    icon: "/images/usp-icon2.webp",
     title: "Exam Excellence",
     desc: "Thorough preparation for top performance in French assessments.",
   },
@@ -137,9 +137,9 @@ export default function Usps({ }) {
                   <div key={index} className={styles.uspSlide}>
                     {row.map((usp, i) => (
                       <div key={i} className={`fade-in-section ${styles.uspItem}`}
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat>
+                        data-scroll
+                        data-scroll-class="is-inview"
+                        data-scroll-repeat>
                         <div className={styles.uspNumber}>{usp.number}</div>
                         <div className={styles.uspIconCircle}>
                           <img

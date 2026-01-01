@@ -177,7 +177,7 @@ const Contact = ({ headerHeight }) => {
                 <label style={{ fontWeight: 700, color: "#1A2750", fontSize: 14 }}>CONTACT</label>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 4 }}>
                   <img
-                    src="/images/contact/flag.png"
+                    src="/images/contact/flag.webp"
                     alt="UAE Flag"
                     style={{
                       width: 34, height: 25, borderRadius: 3, border: "1px solid #eee", resize: 'cover'
@@ -511,7 +511,7 @@ const Contact = ({ headerHeight }) => {
       {/* Map Section */}
       <section data-scroll-section>
         <div style={{ padding: 60, borderRadius: 30 }}>
-          <img src={"/images/contactus-map.png"} height={600} width={"100%"} />
+          <img src={"/images/contactus-map.webp"} height={600} width={"100%"} />
         </div>
       </section>
     </div>

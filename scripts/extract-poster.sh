@@ -45,23 +45,23 @@ ffmpeg -i "$VIDEO_PATH" \
     -vframes 1 \
     -vf "scale=1920:-2" \
     -q:v 2 \
-    "$OUTPUT_DIR/${POSTER_NAME}.jpg" \
+    "$OUTPUT_DIR/${POSTER_NAME}.webp" \
     -y
 
 if [ $? -eq 0 ]; then
-    echo "Poster frame extracted: $OUTPUT_DIR/${POSTER_NAME}.jpg"
+    echo "Poster frame extracted: $OUTPUT_DIR/${POSTER_NAME}.webp"
     echo ""
     
     # Convert to WebP for better compression
     if command -v cwebp &> /dev/null; then
         echo "Converting to WebP format..."
-        cwebp -q 90 "$OUTPUT_DIR/${POSTER_NAME}.jpg" -o "$OUTPUT_DIR/${POSTER_NAME}.webp"
+        cwebp -q 90 "$OUTPUT_DIR/${POSTER_NAME}.webp" -o "$OUTPUT_DIR/${POSTER_NAME}.webp"
         
         if [ $? -eq 0 ]; then
             echo "WebP created: $OUTPUT_DIR/${POSTER_NAME}.webp"
             
             # Get file sizes
-            JPG_SIZE=$(du -h "$OUTPUT_DIR/${POSTER_NAME}.jpg" | cut -f1)
+            JPG_SIZE=$(du -h "$OUTPUT_DIR/${POSTER_NAME}.webp" | cut -f1)
             WEBP_SIZE=$(du -h "$OUTPUT_DIR/${POSTER_NAME}.webp" | cut -f1)
             
             echo ""
@@ -80,7 +80,7 @@ if [ $? -eq 0 ]; then
     echo "========================================="
     echo ""
     echo "Next steps:"
-    echo "1. Review the poster image at: $OUTPUT_DIR/${POSTER_NAME}.jpg"
+    echo "1. Review the poster image at: $OUTPUT_DIR/${POSTER_NAME}.webp"
     echo "2. If you want a different frame, edit this script and change '-ss 1' to '-ss 2' or '-ss 3'"
     echo "3. Use the optimized Hero component I created (Hero.optimized.js)"
     echo "4. The Hero component will use hero-poster.webp as the LCP element"

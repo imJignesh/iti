@@ -149,9 +149,9 @@ export default function SubjectsCard() {
 
   return (
     <div className={`subjectSection fade-in-section ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "10px" : "0px", marginBottom: isMobile ? "50px" : "0" }}
-    data-scroll
-    data-scroll-class="is-inview"
-    data-scroll-repeat>
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat>
       <div className="subjectSectionInner">
         {/* Background decorative rectangles */}
         <div className="testimonialRect rect-1" style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '20px' }} />
@@ -177,7 +177,7 @@ export default function SubjectsCard() {
             onClick={handlePrevious}
             aria-label="Previous subject"
           >
-            <img src="/assets/up.png" alt="ap tutors in dubai" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
+            <img src="/assets/up.webp" alt="ap tutors in dubai" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
           </button>
 
           <button
@@ -185,7 +185,7 @@ export default function SubjectsCard() {
             onClick={handleNext}
             aria-label="Next subject"
           >
-            <img src="/assets/down.png" alt="ap tutors in dubai" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
+            <img src="/assets/down.webp" alt="ap tutors in dubai" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
           </button>
 
           {/* Fixed Container for Infinite Scroll */}

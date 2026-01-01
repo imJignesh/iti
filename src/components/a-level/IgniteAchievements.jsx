@@ -80,7 +80,7 @@ export default function IgniteAchievements() {
             data-scroll-repeat
             style={{ animationDelay: "0.5s" }}>
             <div className="stat-card p-md-4 px-3 py-2 d-flex flex-md-row flex-column align-items-center" style={{
-              backgroundImage: "url('/assets/linear1.png')",
+              backgroundImage: "url('/assets/linear1.webp')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               borderRadius: '1.5rem',
@@ -132,7 +132,7 @@ export default function IgniteAchievements() {
             data-scroll-repeat
             style={{ animationDelay: "0.55s" }}>
             <div className="stat-card p-md-4 px-3 py-2 d-flex flex-md-row flex-column align-items-center" style={{
-              backgroundImage: "url('/assets/linear2.png')",
+              backgroundImage: "url('/assets/linear2.webp')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               borderRadius: '1.5rem',
@@ -185,7 +185,7 @@ export default function IgniteAchievements() {
             data-scroll-repeat
             style={{ animationDelay: "0.6s" }}>
             <div className="stat-card p-md-4 px-3 py-2 d-flex flex-md-row flex-column align-items-center" style={{
-              backgroundImage: "url('/assets/linear3.png')",
+              backgroundImage: "url('/assets/linear3.webp')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               borderRadius: '1.5rem',
@@ -239,7 +239,7 @@ export default function IgniteAchievements() {
             data-scroll-repeat
             style={{ animationDelay: "0.65s" }}>
             <div className="stat-card p-md-4 px-3 py-2 d-flex flex-md-row flex-column align-items-center" style={{
-              backgroundImage: "url('/assets/linear4.png')",
+              backgroundImage: "url('/assets/linear4.webp')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               borderRadius: '1.5rem',
@@ -320,7 +320,7 @@ export default function IgniteAchievements() {
                   marginLeft: "2.1rem "
                 }}
               >
-                <img src="/assets/arrowright.png" alt="a level tutors in dubai" width={16} height={16} />
+                <img src="/assets/arrowright.webp" alt="a level tutors in dubai" width={16} height={16} />
               </div>
             </button>
           </a>

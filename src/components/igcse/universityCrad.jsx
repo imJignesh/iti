@@ -17,9 +17,9 @@ const UniversityLogosCard = () => {
         {/* Desktop Layout - Horizontal */}
         <div className="d-none d-md-flex justify-content-between align-items-center w-100">
           {[
-            { src: "/assets/uni1.png", alt: "Pearson Edexcel" },
-            { src: "/assets/camb.png", alt: "University of Cambridge" },
-            { src: "/assets/uni3.png", alt: "AQA Realising Potential" },
+            { src: "/assets/uni1.webp", alt: "Pearson Edexcel" },
+            { src: "/assets/camb.webp", alt: "University of Cambridge" },
+            { src: "/assets/uni3.webp", alt: "AQA Realising Potential" },
           ].map((logo, index) => (
             <div
               key={index}
@@ -37,9 +37,9 @@ const UniversityLogosCard = () => {
         {/* Mobile Layout - Vertical Stack */}
         <div className="d-md-none w-100 d-flex flex-column align-items-center gap-4">
           {[
-            { src: "/assets/pea.png", alt: "Pearson Edexcel" },
-            { src: "/assets/camb.png", alt: "University of Cambridge" },
-            { src: "/assets/aqa.png", alt: "AQA Realising Potential" },
+            { src: "/assets/pea.webp", alt: "Pearson Edexcel" },
+            { src: "/assets/camb.webp", alt: "University of Cambridge" },
+            { src: "/assets/aqa.webp", alt: "AQA Realising Potential" },
           ].map((logo, index) => (
             <div
               key={index}

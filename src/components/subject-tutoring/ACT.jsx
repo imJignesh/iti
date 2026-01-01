@@ -185,7 +185,7 @@ const AchievementsCarousel = () => {
 
 /* Card */
 .achievements-slideCard {
-  background-image: url("/images/uni-subtract.png");
+  background-image: url("/images/uni-subtract.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

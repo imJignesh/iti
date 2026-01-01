@@ -43,18 +43,18 @@ const IBCurriculumStages = () => {
             </div>
           </div>
         </div>
-        <img src="/assets/bgrect25.png" alt="tutors in jlt dubai" className="testimonialRect rect-1" />
-        <img src="/assets/bgrect26.png" alt="tutors in jlt dubai" className="testimonialRect rect-2" />
+        <img src="/assets/bgrect25.webp" alt="tutors in jlt dubai" className="testimonialRect rect-1" />
+        <img src="/assets/bgrect26.webp" alt="tutors in jlt dubai" className="testimonialRect rect-2" />
         <img
-          src={isMobile ? "/assets/bgrect45.png" : "/assets/bgrect27.png"}
+          src={isMobile ? "/assets/bgrect45.webp" : "/assets/bgrect27.webp"}
           alt="bg-shape"
           className="testimonialRect rect-3"
         />      </section>
       <section className="" style={{ position: 'relative' }}>
         <div className="container fade-in-section"
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat>
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat>
           <div className="row pading-in gy-5">
             <div className="col-lg-6">
               <div
@@ -346,7 +346,7 @@ top: -53px;
 
 /* Card */
 .achievements-slideCard {
-  background-image: url("/images/uni-subtract.png");
+  background-image: url("/images/uni-subtract.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -853,12 +853,12 @@ padding-inline:0 !important;
   height: -webkit-fill-available;
 }
 .curriculum-col-left {
-  background: url("/assets/turg.png") no-repeat center center;
+  background: url("/assets/turg.webp") no-repeat center center;
   background-size: cover;
 }
 
 .curriculum-col-right {
-  background: url("/assets/turb.png") no-repeat center center;
+  background: url("/assets/turb.webp") no-repeat center center;
   background-size: cover;
 }
 

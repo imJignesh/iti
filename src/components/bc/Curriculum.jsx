@@ -97,10 +97,10 @@ export default function IBCurriculumStages() {
                 <span className="program">IGCSE</span>
               </div>
               <div className="divider fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                style={{
                   animationDelay: "0.25s",
                 }}></div>
               <div className="card-description">
@@ -142,7 +142,7 @@ export default function IBCurriculumStages() {
                     }}
                   >
                     <img
-                      src="/assets/arrowright.png"
+                      src="/assets/arrowright.webp"
                       alt="british curriculum tutors in dubai"
                       width={16}
                       height={16}
@@ -178,10 +178,10 @@ export default function IBCurriculumStages() {
                 </span>
               </div>
               <div className="divider fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                style={{
                   animationDelay: "0.25s",
                 }}></div>
               <div className="card-description">
@@ -223,7 +223,7 @@ export default function IBCurriculumStages() {
                     }}
                   >
                     <img
-                      src="/assets/arrowright.png"
+                      src="/assets/arrowright.webp"
                       alt="british curriculum tutors in dubai"
                       width={16}
                       height={16}
@@ -329,12 +329,12 @@ export default function IBCurriculumStages() {
 
         /* Card Background Colors - Matching your linear gradient style */
         .card-ibdp {
-          background: url("/assets/Rectangle102.png") no-repeat center center /
+          background: url("/assets/Rectangle102.webp") no-repeat center center /
             cover;
         }
 
         .card-myp {
-          background: url("/assets/Rectangle126.png") no-repeat center center /
+          background: url("/assets/Rectangle126.webp") no-repeat center center /
             cover;
         }
 

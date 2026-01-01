@@ -31,7 +31,7 @@ export default function InfoCard() {
       <div
         className="position-relative overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/subject-tutoring.jpg')",
+          backgroundImage: "url('/assets/subject-tutoring.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center 35%",
           borderRadius: "1.5rem",
@@ -71,10 +71,10 @@ export default function InfoCard() {
                 English Tutors In Dubai<br /> - IB, IGCSE, A-Levels, & AP
               </h1>
               <div className="divider fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                style={{
                   animationDelay: "0.25s",
                 }}></div>
 
@@ -132,7 +132,7 @@ export default function InfoCard() {
                 >
                   <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
-                      src="/assets/medal.png"
+                      src="/assets/medal.webp"
                       alt="Grade Support"
                       width={isMobile ? 20 : 32}
                       height={isMobile ? 30 : 45}
@@ -156,7 +156,7 @@ export default function InfoCard() {
                 >
                   <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
-                      src="/assets/person.png"
+                      src="/assets/person.webp"
                       alt="Learning Mode"
                       width={isMobile ? 20 : 30}
                       height={isMobile ? 30 : 45}
@@ -178,7 +178,7 @@ export default function InfoCard() {
                 >
                   <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
-                      src="/assets/location.png"
+                      src="/assets/location.webp"
                       alt="Location"
                       width={isMobile ? 22 : 32}
                       height={isMobile ? 30 : 42}
@@ -232,7 +232,7 @@ export default function InfoCard() {
                       Get A Free Demo
                     </span>
                     <img
-                      src="/assets/rar.png"
+                      src="/assets/rar.webp"
                       alt="right"
                       className="custom-height"
                       width={35}
@@ -273,7 +273,7 @@ export default function InfoCard() {
                 className="w-100 text-white form-container"
                 style={{
                   borderRadius: "40px",
-                  backgroundImage: "url('/assets/stuform.png')",
+                  backgroundImage: "url('/assets/stuform.webp')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -405,7 +405,7 @@ export default function InfoCard() {
                 >
                   SUBMIT
                   <img
-                    src={isMobile ? "/assets/mobilebutton.webp" : "/assets/rwb.png"}
+                    src={isMobile ? "/assets/mobilebutton.webp" : "/assets/rwb.webp"}
                     alt="right"
                     width={isMobile ? 35 : 40}
                     height={isMobile ? 35 : 40}

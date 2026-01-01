@@ -24,7 +24,7 @@ export default function SubjectsCard() {
       <h2
         className="fw-bold text-center mb-4"
         style={{
-           background: "linear-gradient(90deg,#161664, #3F88BA)",
+          background: "linear-gradient(90deg,#161664, #3F88BA)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
@@ -34,7 +34,7 @@ export default function SubjectsCard() {
         }}
       >
         <img
-          src="/assets/3color.png"
+          src="/assets/3color.webp"
           alt="act"
           width={15}
           height={18}
@@ -42,7 +42,7 @@ export default function SubjectsCard() {
         />
         ACT TEST OVERVIEW
         <img
-          src="/assets/3color.png"
+          src="/assets/3color.webp"
           alt="act"
           width={15}
           height={18}
@@ -50,8 +50,8 @@ export default function SubjectsCard() {
         />
       </h2>
 
-      <div style={{ 
-        overflowX: "auto", 
+      <div style={{
+        overflowX: "auto",
         borderRadius: "12px",
         overflow: "hidden",
         border: "1px solid #161664",
@@ -69,8 +69,8 @@ export default function SubjectsCard() {
               background: "linear-gradient(90deg, #93b3d6ff, #b4d3e7ff)",
             }}>
               <th style={{
-                padding: "0.75rem 1rem", 
-                 background: "linear-gradient(90deg,#161664, #3F88BA)",
+                padding: "0.75rem 1rem",
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -82,8 +82,8 @@ export default function SubjectsCard() {
                 ACT SECTION
               </th>
               <th style={{
-                padding: "0.75rem 1rem", 
-                 background: "linear-gradient(90deg,#161664, #3F88BA)",
+                padding: "0.75rem 1rem",
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -95,8 +95,8 @@ export default function SubjectsCard() {
                 NO. OF QUESTIONS
               </th>
               <th style={{
-                padding: "0.75rem 1rem", 
-                 background: "linear-gradient(90deg,#161664, #3F88BA)",
+                padding: "0.75rem 1rem",
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -108,8 +108,8 @@ export default function SubjectsCard() {
                 TIMES ALLOTED
               </th>
               <th style={{
-                padding: "0.75rem 1rem", 
-                 background: "linear-gradient(90deg,#161664, #3F88BA)",
+                padding: "0.75rem 1rem",
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -128,7 +128,7 @@ export default function SubjectsCard() {
                 style={{
                   background: index % 2 === 0
                     ? "none"
-                    : "url('/assets/Rectangle 149.png') no-repeat center / cover",
+                    : "url('/assets/Rectangle 149.webp') no-repeat center / cover",
                   color: "#0d2344",
                   fontWeight: 500,
                 }}

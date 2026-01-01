@@ -160,9 +160,9 @@ export default function IgniteAchievements() {
 
               {/* CTA Button */}
               <div className="mb-4 fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat>
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
                 <button
                   className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                   style={{
@@ -188,7 +188,7 @@ export default function IgniteAchievements() {
                       marginLeft: "2.1rem"
                     }}
                   >
-                    <img src="/assets/arrowright.png" alt="british curriculum tutors in dubai" width={16} height={16} />
+                    <img src="/assets/arrowright.webp" alt="british curriculum tutors in dubai" width={16} height={16} />
                   </div>
                 </button>
               </div>
@@ -279,7 +279,7 @@ export default function IgniteAchievements() {
                     marginLeft: "2.1rem"
                   }}
                 >
-                  <img src="/assets/arrowright.png" alt="british curriculum tutors in dubai" width={16} height={16} />
+                  <img src="/assets/arrowright.webp" alt="british curriculum tutors in dubai" width={16} height={16} />
                 </div>
               </button>
             </a>
@@ -380,7 +380,7 @@ export default function IgniteAchievements() {
         
         .stats-grid-desktop {
           flex: 1;
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
           display: flex;
@@ -446,7 +446,7 @@ export default function IgniteAchievements() {
 
         /* Mobile Layout */
         .stats-grid-mobile {
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
         }
@@ -540,7 +540,7 @@ export default function IgniteAchievements() {
         
         .stats-grid-desktop {
           flex: 1;
-          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
           display: flex;

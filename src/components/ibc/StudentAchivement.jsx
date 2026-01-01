@@ -5,21 +5,21 @@ import { BookOpen } from "lucide-react";
 const achievements = [
   {
     id: 1,
-    logo: "/assets/un1.png",
+    logo: "/assets/un1.webp",
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
   },
   {
     id: 2,
-    logo: "/assets/un2.png",
+    logo: "/assets/un2.webp",
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
   },
   {
     id: 3,
-    logo: "/assets/un3.png",
+    logo: "/assets/un3.webp",
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
@@ -188,7 +188,7 @@ export default function StudentAchievements() {
             }}
           >
             <img
-              src="/assets/lar.png"
+              src="/assets/lar.webp"
               alt="ib tutor in dubai"
               width={isMobile ? 32 : 40}
               height={isMobile ? 32 : 40}
@@ -235,7 +235,7 @@ export default function StudentAchievements() {
                   style={{
                     height: isMobile ? "256px" : "390px",
                     width: "100%",
-                    backgroundImage: "url('/assets/Subtract1.png')",
+                    backgroundImage: "url('/assets/Subtract1.webp')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -359,7 +359,7 @@ export default function StudentAchievements() {
             }}
           >
             <img
-              src="/assets/rar.png"
+              src="/assets/rar.webp"
               alt="ib tutor in dubai"
               width={isMobile ? 32 : 40}
               height={isMobile ? 32 : 40}

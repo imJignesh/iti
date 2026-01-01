@@ -15,18 +15,18 @@ import {
 const alumniData = [
   {
     name: "LOREM IPSUM DOLOR",
-    img: "/images/alumni-slider1.png",
-    logo: "/images/university_logo.png",
+    img: "/images/alumni-slider1.webp",
+    logo: "/images/university_logo.webp",
   },
   {
     name: "LOREM IPSUM DOLOR",
-    img: "/images/alumni-slider2.png",
-    logo: "/images/university_logo.png",
+    img: "/images/alumni-slider2.webp",
+    logo: "/images/university_logo.webp",
   },
   {
     name: "LOREM IPSUM DOLOR",
-    img: "/images/alumni-slider3.png",
-    logo: "/images/university_logo.png",
+    img: "/images/alumni-slider3.webp",
+    logo: "/images/university_logo.webp",
   },
 ];
 

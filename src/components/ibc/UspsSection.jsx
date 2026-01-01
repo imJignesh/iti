@@ -97,49 +97,49 @@ function UpsSection() {
   const uspItems = [
     {
       number: "01",
-      icon: <img src="/assets/01.png" alt="Icon 01" />,
+      icon: <img src="/assets/01.webp" alt="Icon 01" />,
       title: "IB-Specific Tutors",
       desc: "Highly qualified IB-specific tutors delivering all-around support.",
     },
     {
       number: "02",
-      icon: <img src="/assets/02.png" alt="Icon 02" />,
+      icon: <img src="/assets/02.webp" alt="Icon 02" />,
       title: "Individual Attention",
       desc: "Small group training (SGT) to focus individually on every student.",
     },
     {
       number: "03",
-      icon: <img src="/assets/03.png" alt="Icon 03" />,
+      icon: <img src="/assets/03.webp" alt="Icon 03" />,
       title: "Grade Improvement",
       desc: "Better results assured with critical testing & review methodology.",
     },
     {
       number: "04",
-      icon: <img src="/assets/04.png" alt="Icon 04" />,
+      icon: <img src="/assets/04.webp" alt="Icon 04" />,
       title: "Examination Prep",
       desc: "Full IB exam prep with tutoring, resources, testing, & review.",
     },
     {
       number: "05",
-      icon: <img src="/assets/05.png" alt="Icon 05" />,
+      icon: <img src="/assets/05.webp" alt="Icon 05" />,
       title: "Strong Foundation",
       desc: "Focus on fundamentals for an exceptionally strong foundation.",
     },
     {
       number: "06",
-      icon: <img src="/assets/06.png" alt="Icon 06" />,
+      icon: <img src="/assets/06.webp" alt="Icon 06" />,
       title: "Stimulating Environment",
       desc: "Result-oriented culture ensuring a fun & stimulating environment.",
     },
     {
       number: "07",
-      icon: <img src="/assets/07.png" alt="Icon 07" />,
+      icon: <img src="/assets/07.webp" alt="Icon 07" />,
       title: "Structured Learning",
       desc: "Problem-based learning covering practical aspects of all units.",
     },
     {
       number: "08",
-      icon: <img src="/assets/08.png" alt="Icon 08" />,
+      icon: <img src="/assets/08.webp" alt="Icon 08" />,
       title: "Progress Tracking",
       desc: "Train with unit tests & mock papers under exam-like conditions.",
     },
@@ -234,7 +234,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.png" alt="ib tutor in dubai" width={16} height={14} />
+                <img src="/assets/arrowright.webp" alt="ib tutor in dubai" width={16} height={14} />
               </div>
             </button>
           </a>

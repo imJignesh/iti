@@ -67,10 +67,10 @@ export default function IBCurriculumStages() {
                 <span className="program">IBDP</span>
               </h3>
               <div className="divider fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                style={{
                   animationDelay: "0.25s",
                 }}></div>
               <div className="card-description">
@@ -108,7 +108,7 @@ export default function IBCurriculumStages() {
                       marginLeft: "2.1rem",
                     }}
                   >
-                    <Image src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                    <Image src="/assets/arrowright.webp" alt="arrright" width={16} height={16} />
                   </div>
                 </button>
               </a>
@@ -145,10 +145,10 @@ export default function IBCurriculumStages() {
                 </span>
               </h3>
               <div className="divider fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                style={{
                   animationDelay: "0.25s",
                 }}></div>
               <div className="card-description">
@@ -186,7 +186,7 @@ export default function IBCurriculumStages() {
                       marginLeft: "2.1rem",
                     }}
                   >
-                    <Image src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                    <Image src="/assets/arrowright.webp" alt="arrright" width={16} height={16} />
                   </div>
                 </button>
               </a>
@@ -286,12 +286,12 @@ export default function IBCurriculumStages() {
 
         /* Card Background Colors - Matching your linear gradient style */
         .card-ibdp {
-          background: url("/assets/Rectangle102.png") no-repeat center center /
+          background: url("/assets/Rectangle102.webp") no-repeat center center /
             cover;
         }
 
         .card-myp {
-          background: url("/assets/Rectangle126.png") no-repeat center center /
+          background: url("/assets/Rectangle126.webp") no-repeat center center /
             cover;
         }
 

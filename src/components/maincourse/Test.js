@@ -13,7 +13,7 @@ const testData = [
   {
     number: "01.",
     title: "ADVANCED PLACEMENTS",
-    img: "/images/test-section1.jpg",
+    img: "/images/test-section1.webp",
     label: "Targeted AP tutoring to strengthen concepts & exam readiness",
     details: ["Total Courses: 2", "Online & In-Person"],
     btn: "VIEW COURSES",
@@ -22,7 +22,7 @@ const testData = [
   {
     number: "02.",
     title: "ACT",
-    img: "/images/test-section2.jpg",
+    img: "/images/test-section2.webp",
     label: "Score higher on the ACT with personalized, proven preparation",
     details: ["Total Courses: 2", "Online & In-Person"],
     btn: "VIEW COURSES",
@@ -31,7 +31,7 @@ const testData = [
   {
     number: "03.",
     title: "UCAT",
-    img: "/images/test-section3.jpg",
+    img: "/images/test-section3.webp",
     label: "Master UCAT strategies with expert guidance & focused test prep",
     details: ["Total Courses: 2", "Online & In-Person"],
     btn: "VIEW COURSES",

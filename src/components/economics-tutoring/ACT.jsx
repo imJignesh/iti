@@ -96,8 +96,8 @@ const AchievementsCarousel = () => {
             </h3>
           </div>
         </div>
-        <div className="row gy-4 gy-sm-3 fade-in-section" 
-        data-scroll
+        <div className="row gy-4 gy-sm-3 fade-in-section"
+          data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat>
           {SUBJECTLIST.map((item, indx) => (
@@ -188,7 +188,7 @@ const AchievementsCarousel = () => {
 
 /* Card */
 .achievements-slideCard {
-  background-image: url("/images/uni-subtract.png");
+  background-image: url("/images/uni-subtract.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

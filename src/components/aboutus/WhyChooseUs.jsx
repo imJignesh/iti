@@ -92,15 +92,15 @@ export default function WhyChooseUs() {
             <div className="row align-items-center">
               {/* Left side - Image */}
               <div className="col-lg-6 col-md-6 mb-4 mb-md-0 order-2 order-md-1 fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat>
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat>
                 <div className="image-container">
                   <div className="cutout-wrapper">
                     <img
                       src="/assets/Artboard.webp"
                       alt="about ignite"
-                      className="cutout-img"  
+                      className="cutout-img"
                     />
                   </div>
                 </div>
@@ -111,9 +111,9 @@ export default function WhyChooseUs() {
                 <div className="content-section">
                   <div className=" mb-3">
                     <h2 className="SubHeading testSubheading fade-in-section"
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat>
+                      data-scroll
+                      data-scroll-class="is-inview"
+                      data-scroll-repeat>
                       WHY CHOOSE US?
                     </h2>
                     <h3
@@ -129,17 +129,17 @@ export default function WhyChooseUs() {
                   </div>
 
                   <p className="description text-center text-md-start fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat>
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
                     With expert trainers & tailored methods, we help students grow with purpose & confidently excel in every step of their journey. We ensure every session drives clarity, progress, & measurable growth.
                   </p>
 
                   {/* Statistics */}
                   <div className="row mt-4 fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat>
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
                     <div className="col-6">
                       <div className="stat-card">
                         <div className="circular-progress">
@@ -442,7 +442,7 @@ export default function WhyChooseUs() {
                     <img
                       src={
                         isMobile
-                          ? "/assets/moabroad.png"
+                          ? "/assets/moabroad.webp"
                           : "/assets/Artboard.webp"
                       }
                       alt="about ignite"
@@ -457,9 +457,9 @@ export default function WhyChooseUs() {
                 <div className="content-section">
                   <div className="text-center mb-5">
                     <div className="SubHeading testSubheading fade-in-section"
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat>
+                      data-scroll
+                      data-scroll-class="is-inview"
+                      data-scroll-repeat>
                       WHY CHOOSE US?
                     </div>
                     <h2
@@ -467,7 +467,7 @@ export default function WhyChooseUs() {
                       data-scroll-class="is-inview"
                       data-scroll-repeat="true"
                       className="fade-in-section testTitle"
-                      // style={{ animationDelay: "0.2s" }}
+                    // style={{ animationDelay: "0.2s" }}
                     >
                       LOREM IPSUM DOLOR SIT AMET,
                       CONSECTETUR <span className="highlight">ADIPISCING</span>
@@ -475,9 +475,9 @@ export default function WhyChooseUs() {
                   </div>
 
                   <p className="description text-center text-md-start fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat>
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
                     Choosing us means partnering with experienced coaches who
                     are dedicated to unlocking your potential. We offer
                     personalized strategies, proven methods, and unwavering
@@ -489,9 +489,9 @@ export default function WhyChooseUs() {
                     className={`stats-container ${isMobile ? "d-none" : ""}`}
                   >
                     <div className="row mt-4 fade-in-section"
-                    data-scroll
-                    data-scroll-class="is-inview"
-                    data-scroll-repeat>
+                      data-scroll
+                      data-scroll-class="is-inview"
+                      data-scroll-repeat>
                       <div className="col-6">
                         <div className="stat-card">
                           <div className="circular-progress">

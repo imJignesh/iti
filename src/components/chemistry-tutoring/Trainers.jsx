@@ -527,100 +527,100 @@ export default function Trainers() {
 
       {/* Wrapping div with the new global class to scope the CSS */}
       <div className={containerClass}>
-              <section className="trainersSection"
-      
-      
-              >
-                <div className="container fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
-                >
-                  <div>
-                    <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
-                  </div>
-                  <h3 className="trainersTitle">
-                    {/* --- NEW: Use the conditionally chosen title here --- */}
-                    {currentTitle}
-                  </h3>
-      
-      
-                  {isTrainersSwiper ? (
-                    <div className="trainersSwiperWrap fade-in-section"
-                      data-scroll
-                      data-scroll-class="is-inview"
-                      data-scroll-repeat="true"
-                    >
-                      <Swiper
-                        modules={[Navigation, Pagination]}
-                        spaceBetween={24}
-                        slidesPerView={1}
-                        breakpoints={{
-                          700: {
-                            slidesPerView: 2,
-                            spaceBetween: 24,
-                          },
-                          991: {
-                            slidesPerView: 3,
-                            spaceBetween: 24,
-                          },
-                        }}
-                        navigation={{
-                          nextEl: ".swiper-button-next",
-                          prevEl: ".swiper-button-prev",
-                        }}
-                        pagination={{
-                          clickable: true,
-                          el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
-                        }}
-                        onBeforeInit={(swiper) => {
-                          if (swiper.params.navigation) {
-                            swiper.params.navigation.prevEl = navPrevRef.current;
-                            swiper.params.navigation.nextEl = navNextRef.current;
-                          }
-                        }}
-                      >
-                        {trainers.map((t, i) => (
-                          <SwiperSlide key={i}>
-                            <TrainerCard trainer={t} />
-                          </SwiperSlide>
-                        ))}
-                      </Swiper>
-                      {/* Custom Navigation Buttons */}
-                      <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
-                        {/* Placeholder for actual image/icon */}
-                        <img src="/images/left-arrow-blue.png" alt="ibdp tutor in dubai" />
-                      </button>
-                      <button ref={navNextRef} className="customNavBtn swiper-button-next">
-                        {/* Placeholder for actual image/icon */}
-                        <img src="/images/right-arrow-blue.webp" alt="ibdp tutor in dubai" />
-                      </button>
-                      {/* Custom Pagination Container */}
-                      <div className="trainersPagination"></div>
-                    </div>
-                  ) : (
-                    <>
-                      {/* Grid view for large screens */}
-                      <div className="trainersGrid" ref={trainersGridRef}>
-                        {displayTrainers.map((t, i) => (
-                          <TrainerCard key={i} trainer={t} />
-                        ))}
-                      </div>
-      
-                      {/* Combined SEE MORE / SEE LESS button logic */}
-                      {trainers.length > 10 && (
-                        <button
-                          onClick={() => setShowAll(!showAll)}
-                          className="trainersSeeMore"
-                        >
-                          {showAll ? "SEE LESS" : "SEE MORE"}
-                        </button>
-                      )}
-                    </>
-                  )}
-                </div>
-              </section>
+        <section className="trainersSection"
+
+
+        >
+          <div className="container fade-in-section"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat="true"
+          >
+            <div>
+              <h2 className="SubHeading trainersSubheading">OUR TUTORS</h2>
             </div>
+            <h3 className="trainersTitle">
+              {/* --- NEW: Use the conditionally chosen title here --- */}
+              {currentTitle}
+            </h3>
+
+
+            {isTrainersSwiper ? (
+              <div className="trainersSwiperWrap fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+              >
+                <Swiper
+                  modules={[Navigation, Pagination]}
+                  spaceBetween={24}
+                  slidesPerView={1}
+                  breakpoints={{
+                    700: {
+                      slidesPerView: 2,
+                      spaceBetween: 24,
+                    },
+                    991: {
+                      slidesPerView: 3,
+                      spaceBetween: 24,
+                    },
+                  }}
+                  navigation={{
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  }}
+                  pagination={{
+                    clickable: true,
+                    el: `.${containerClass} .trainersSection .trainersPagination`, // Use containerClass for unique selector
+                  }}
+                  onBeforeInit={(swiper) => {
+                    if (swiper.params.navigation) {
+                      swiper.params.navigation.prevEl = navPrevRef.current;
+                      swiper.params.navigation.nextEl = navNextRef.current;
+                    }
+                  }}
+                >
+                  {trainers.map((t, i) => (
+                    <SwiperSlide key={i}>
+                      <TrainerCard trainer={t} />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                {/* Custom Navigation Buttons */}
+                <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
+                  {/* Placeholder for actual image/icon */}
+                  <img src="/images/left-arrow-blue.webp" alt="ibdp tutor in dubai" />
+                </button>
+                <button ref={navNextRef} className="customNavBtn swiper-button-next">
+                  {/* Placeholder for actual image/icon */}
+                  <img src="/images/right-arrow-blue.webp" alt="ibdp tutor in dubai" />
+                </button>
+                {/* Custom Pagination Container */}
+                <div className="trainersPagination"></div>
+              </div>
+            ) : (
+              <>
+                {/* Grid view for large screens */}
+                <div className="trainersGrid" ref={trainersGridRef}>
+                  {displayTrainers.map((t, i) => (
+                    <TrainerCard key={i} trainer={t} />
+                  ))}
+                </div>
+
+                {/* Combined SEE MORE / SEE LESS button logic */}
+                {trainers.length > 10 && (
+                  <button
+                    onClick={() => setShowAll(!showAll)}
+                    className="trainersSeeMore"
+                  >
+                    {showAll ? "SEE LESS" : "SEE MORE"}
+                  </button>
+                )}
+              </>
+            )}
+          </div>
+        </section>
+      </div>
     </>
   );
 }

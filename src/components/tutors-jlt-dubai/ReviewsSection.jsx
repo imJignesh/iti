@@ -16,7 +16,7 @@ import styles from "@/styles/home-copy/Testimonial.module.css";
 const testimonialData = [
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "",
   //   subtitle: "Incredible coaching experience",
@@ -29,7 +29,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "",
   //   subtitle: "Best IB Business and Economics tutor",
@@ -42,7 +42,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "",
   //   subtitle: "Highly recommended for quick tutoring",
@@ -55,7 +55,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "",
   //   subtitle: "Excellent Economics tutoring",
@@ -68,7 +68,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "",
   //   subtitle: "A-level Economics success",
@@ -81,7 +81,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "Priya Nair",
   //   subtitle: "Structured and effective A-Level support",
@@ -94,7 +94,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "Tamanna Iyyani",
   //   subtitle: "Supportive environment for academic growth",
@@ -107,7 +107,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "Saraswathy Ramachandran",
   //   subtitle: "A-level Further Math support",
@@ -120,7 +120,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "Zeynep Inan",
   //   subtitle: "Top grades in IGCSE and IB",
@@ -133,7 +133,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "",
   //   subtitle: "Knowledgeable mentors for IB",
@@ -146,7 +146,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial1.jpg",
+  //   img: "/images/testimonial1.webp",
   //   video: true,
   //   name: "",
   //   subtitle: "Personalized approach to learning",
@@ -159,7 +159,7 @@ const testimonialData = [
   },
   // {
   //   type: "video",
-  //   img: "/images/testimonial2.jpg",
+  //   img: "/images/testimonial2.webp",
   //   video: true,
   //   name: "",
   //   subtitle: "Perfect for struggling GCSE students",
@@ -236,7 +236,7 @@ export default function Testimonial({ }) {
           </p>
 
           <img
-            src="/images/star-review.png"
+            src="/images/star-review.webp"
             alt="tutors in jlt dubai"
             data-scroll
             data-scroll-class="is-inview"

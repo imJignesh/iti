@@ -62,9 +62,9 @@ export default function TutoringCourses() {
         </section>
 
         <section className="cards-grid fade-in-section"
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat>
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat>
           {!isMobile ? (
             <>
               <div className="top-row">
@@ -88,7 +88,7 @@ export default function TutoringCourses() {
                     <button className="card-button">
                       LEARN MORE
                       <Image
-                        src="/assets/leftarr.png"
+                        src="/assets/leftarr.webp"
                         alt="leftarr"
                         width={32}
                         height={32}
@@ -117,7 +117,7 @@ export default function TutoringCourses() {
                     <button className="card-button">
                       LEARN MORE
                       <Image
-                        src="/assets/leftarr.png"
+                        src="/assets/leftarr.webp"
                         alt="leftarr"
                         width={32}
                         height={32}
@@ -146,7 +146,7 @@ export default function TutoringCourses() {
                     <button className="card-button">
                       LEARN MORE
                       <Image
-                        src="/assets/leftarr.png"
+                        src="/assets/leftarr.webp"
                         alt="leftarr"
                         width={32}
                         height={32}
@@ -177,7 +177,7 @@ export default function TutoringCourses() {
                     <button className="card-button">
                       LEARN MORE
                       <Image
-                        src="/assets/leftarr.png"
+                        src="/assets/leftarr.webp"
                         alt="leftarr"
                         width={32}
                         height={32}
@@ -206,7 +206,7 @@ export default function TutoringCourses() {
                     <button className="card-button">
                       LEARN MORE
                       <Image
-                        src="/assets/leftarr.png"
+                        src="/assets/leftarr.webp"
                         alt="leftarr"
                         width={32}
                         height={32}
@@ -237,7 +237,7 @@ export default function TutoringCourses() {
                   <button className="card-button">
                     LEARN MORE
                     <Image
-                      src="/assets/leftarr.png"
+                      src="/assets/leftarr.webp"
                       alt="leftarr"
                       width={16}
                       height={16}
@@ -266,7 +266,7 @@ export default function TutoringCourses() {
                   <button className="card-button">
                     LEARN MORE
                     <Image
-                      src="/assets/leftarr.png"
+                      src="/assets/leftarr.webp"
                       alt="leftarr"
                       width={16}
                       height={16}
@@ -295,7 +295,7 @@ export default function TutoringCourses() {
                   <button className="card-button">
                     LEARN MORE
                     <Image
-                      src="/assets/leftarr.png"
+                      src="/assets/leftarr.webp"
                       alt="leftarr"
                       width={16}
                       height={16}
@@ -325,7 +325,7 @@ export default function TutoringCourses() {
                   <button className="card-button">
                     LEARN MORE
                     <Image
-                      src="/assets/leftarr.png"
+                      src="/assets/leftarr.webp"
                       alt="leftarr"
                       width={16}
                       height={16}
@@ -354,7 +354,7 @@ export default function TutoringCourses() {
                   <button className="card-button">
                     LEARN MORE
                     <Image
-                      src="/assets/leftarr.png"
+                      src="/assets/leftarr.webp"
                       alt="leftarr"
                       width={16}
                       height={16}
@@ -441,7 +441,7 @@ export default function TutoringCourses() {
         }
 
         .card-gradient {
-          background: url("/assets/rectangle1392.png") no-repeat center center;
+          background: url("/assets/rectangle1392.webp") no-repeat center center;
           background-size: cover;
         }
 
@@ -459,7 +459,7 @@ export default function TutoringCourses() {
         }
 
         .icon-circle {
-          background: url("/assets/grbg.png") no-repeat center center;
+          background: url("/assets/grbg.webp") no-repeat center center;
           background-size: cover;
           border-radius: 50%;
           width: ${isMobile ? "2.5rem" : "5rem"};
@@ -654,7 +654,7 @@ export default function TutoringCourses() {
 //             <button className="card-button">
 //               LEARN MORE
 //               <img
-//                 src="/assets/leftarr.png"
+//                 src="/assets/leftarr.webp"
 //                 alt="leftarr"
 //                 width={isMobile ? 16 : 32}
 //                 height={isMobile ? 16 : 32}
@@ -682,7 +682,7 @@ export default function TutoringCourses() {
 //             <button className="card-button">
 //               LEARN MORE
 //               <img
-//                 src="/assets/leftarr.png"
+//                 src="/assets/leftarr.webp"
 //                 alt="leftarr"
 //                 width={isMobile ? 16 : 32}
 //                 height={isMobile ? 16 : 32}
@@ -710,7 +710,7 @@ export default function TutoringCourses() {
 //             <button className="card-button">
 //               LEARN MORE
 //               <img
-//                 src="/assets/leftarr.png"
+//                 src="/assets/leftarr.webp"
 //                 alt="leftarr"
 //                 width={isMobile ? 16 : 32}
 //                 height={isMobile ? 16 : 32}
@@ -737,7 +737,7 @@ export default function TutoringCourses() {
 //             <button className="card-button">
 //               LEARN MORE
 //               <img
-//                 src="/assets/leftarr.png"
+//                 src="/assets/leftarr.webp"
 //                 alt="leftarr"
 //                 width={isMobile ? 16 : 32}
 //                 height={isMobile ? 16 : 32}
@@ -765,7 +765,7 @@ export default function TutoringCourses() {
 //             <button className="card-button">
 //               LEARN MORE
 //               <img
-//                 src="/assets/leftarr.png"
+//                 src="/assets/leftarr.webp"
 //                 alt="leftarr"
 //                 width={isMobile ? 16 : 32}
 //                 height={isMobile ? 16 : 32}
@@ -835,7 +835,7 @@ export default function TutoringCourses() {
 //           left: 0;
 //           width: 100%;
 //           height: 100%;
-//           background: url("/assets/rectangle1392.png") no-repeat center center;
+//           background: url("/assets/rectangle1392.webp") no-repeat center center;
 //           background-size: cover;
 //           opacity: 0;
 //           transition: opacity 0.3s ease;
@@ -857,7 +857,7 @@ export default function TutoringCourses() {
 //         }
 
 //         .card-gradient {
-//           background: url("/assets/rectangle1392.png") no-repeat center center;
+//           background: url("/assets/rectangle1392.webp") no-repeat center center;
 //           background-size: cover;
 //         }
 
@@ -875,7 +875,7 @@ export default function TutoringCourses() {
 //         }
 
 //         .icon-circle {
-//           background: url("/assets/grbg.png") no-repeat center center;
+//           background: url("/assets/grbg.webp") no-repeat center center;
 //           background-size: cover;
 //           border-radius: 50%;
 //           width: ${isMobile ? "2.5rem" : "5rem"};

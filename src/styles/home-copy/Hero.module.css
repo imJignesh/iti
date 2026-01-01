@@ -29,7 +29,7 @@
 .homeherosection>div::after {
   content: "";
   z-index: 1;
-  background: url(/images/hero-bg-1.png) no-repeat;
+  background: url(/images/hero-bg-1.webp) no-repeat;
   width: 13%;
   position: absolute;
   bottom: 0;
@@ -697,6 +697,6 @@ body.is-bot-detected [data-scroll-section] {
     -webkit-mask: url(/images/banner-image-right-m.webp) no-repeat center top;
     -webkit-mask-size: 90%;
     mask-size: 100%;
-    width:92vw;
+    width: 92vw;
   }
 }

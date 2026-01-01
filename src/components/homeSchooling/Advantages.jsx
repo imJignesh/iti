@@ -3,32 +3,32 @@ import React, { useEffect, useState, useCallback } from 'react';
 const advantages = [
     {
         title: "Flexible Subjects & Curriculum Choices",
-        icon: "/assets/unioun.png",
+        icon: "/assets/unioun.webp",
         text: "Students can tailor subject combinations across IGCSE, A-Levels, or APs, aligning studies with career aspirations & university admission requirements, while benefiting from unparalleled flexibility & academic freedom.",
     },
     {
         title: "Independent & Accelerated Study",
-        icon: "/assets/heartg.png",
+        icon: "/assets/heartg.webp",
         text: "Private candidates enjoy the flexibility to progress at their own speed, whether catching up or advancing faster, making learning more personalized, efficient, & ideal for high performers balancing academics with other aspirations.",
     },
     {
         title: "Personalized Academic Focus",
-        icon: "/assets/unioun.png",
+        icon: "/assets/unioun.webp",
         text: "Private candidates can channel their efforts into the subjects that matter most, avoiding unnecessary workload and distractions, and maximizing preparation for future academic success and career pathways.",
     },
     {
         title: "Stronger College Readiness Pathway",
-        icon: "/assets/heartg.png",
+        icon: "/assets/heartg.webp",
         text: "A personalized private schooling approach equips students to stay academically ahead while preparing more effectively for standardized tests like the ACT, SAT, or AP, boosting their chances of success at top universities worldwide.",
     },
     {
         title: "Cost & Location Advantages",
-        icon: "/assets/unioun.png",
+        icon: "/assets/unioun.webp",
         text: "It is a cost-effective option that allows students to study from any location. It’s especially valuable for families moving countries or shifting curricula, ensuring accessibility, affordability, & uninterrupted global learning opportunities.",
     },
     {
         title: "Balanced Focus On Extracurriculars",
-        icon: "/assets/heartg.png",
+        icon: "/assets/heartg.webp",
         text: "Private students benefit from the freedom to dedicate meaningful time to extracurricular pursuits, enhancing creativity, leadership, & overall development. These well-rounded profiles add significant weight to college applications.",
     },
 ];
@@ -127,9 +127,9 @@ const AdvantagesCarousel = () => {
                 </div>
 
                 <div className="mobile-cards fade-in-section"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat>
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
                     {advantages.map((item, index) => (
                         <div key={index} className="mobile-card">
                             <div className="mobile-icon-container">
@@ -149,11 +149,11 @@ const AdvantagesCarousel = () => {
                 <div className="desktop-header">
                     <div className="desktop-content">
                         <div className="desktop-left">
-                            <div className="testimonialHeader fade-in-section" 
-                            data-scroll
-                            data-scroll-class="is-inview"
-                            data-scroll-repeat
-                            style={{ marginTop: "15%" }}>
+                            <div className="testimonialHeader fade-in-section"
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat
+                                style={{ marginTop: "15%" }}>
                                 <h2 className="SubHeading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?</h2>
                             </div>
 
@@ -169,29 +169,29 @@ const AdvantagesCarousel = () => {
                             </h3>
 
                             <p className="desktop-subtitle fade-in-section"
-                            data-scroll
-                            data-scroll-class="is-inview"
-                            data-scroll-repeat>
-                            
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat>
+
                                 Empowering students with personalized learning pathways, flexible pacing, & tailored support to nurture individual aspirations.
                             </p>
                             <div className="carousel-controls fade-in-section"
-                            data-scroll
-                            data-scroll-class="is-inview"
-                            data-scroll-repeat>
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat>
                                 <button className="carousel-btn prev" onClick={prevSlide}>
-                                    <img src="/assets/rigtarr2.png" alt="homeschooling & private candidates" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
+                                    <img src="/assets/rigtarr2.webp" alt="homeschooling & private candidates" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                                 </button>
                                 <button className="carousel-btn next" onClick={nextSlide}>
-                                    <img src="/assets/leftarr2.png" alt="homeschooling & private candidates" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
+                                    <img src="/assets/leftarr2.webp" alt="homeschooling & private candidates" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                                 </button>
                             </div>
                         </div>
                         <div className="desktop-right">
                             <div className="desktop-cards-container fade-in-section"
-                            data-scroll
-                            data-scroll-class="is-inview"
-                            data-scroll-repeat
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat
                             >
                                 <div
                                     className="desktop-cards"
@@ -217,9 +217,9 @@ const AdvantagesCarousel = () => {
 
                 {/* Centered dot indicators for desktop */}
                 <div className="desktop-carousel-dots fade-in-section"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat>
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat>
                     {advantages.map((_, index) => (
                         <div
                             key={index}
@@ -433,14 +433,14 @@ const AdvantagesCarousel = () => {
                     }
 
                     .blueBg {
-                        background-image: url('/assets/bluebg.png');
+                        background-image: url('/assets/bluebg.webp');
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-position: center;
                     }
 
                     .greenBg {
-                        background-image: url('/assets/greenbg.png');
+                        background-image: url('/assets/greenbg.webp');
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-position: center;
