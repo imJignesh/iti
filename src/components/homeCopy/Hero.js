@@ -169,9 +169,9 @@ const Hero = () => {
                                         src="/images/right-arrow-skyblue.webp"
                                         width={40}
                                         height={40}
-                                        quality={100}
+
                                         alt="Right arrow"
-                                        loading="lazy"
+                                        priority
                                     />
                                 </a>
                                 <a href="/courses/" className="buttonSkyBlue">
@@ -180,9 +180,9 @@ const Hero = () => {
                                         src="/images/right-arrow-blue.webp"
                                         width={40}
                                         height={40}
-                                        quality={100}
+
                                         alt="Right arrow"
-                                        loading="lazy"
+                                        priority
                                     />
                                 </a>
                             </div>

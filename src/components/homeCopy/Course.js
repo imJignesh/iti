@@ -122,10 +122,20 @@ const Course = () => {
                                 {/* Apply local module class */}
                                 <h3 className={styles.cardTitle}>{card.title}</h3>
                                 {/* Apply local module class */}
-                                <div
+                                {/* <div
                                     className={styles.cardBg}
                                     style={{ backgroundImage: `url('${card.img}')` }}
-                                />
+                                /> */}
+                                <div className={styles.cardBg}>
+                                    <Image
+                                        src={card.img}
+                                        alt={`${card.title} course background`}
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        loading="lazy"
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                </div>
                                 <div
                                     // Combine local module classes
                                     className={

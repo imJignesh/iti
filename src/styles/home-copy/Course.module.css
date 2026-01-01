@@ -175,13 +175,21 @@
 .cardBg {
   position: absolute;
   inset: 0;
+  z-index: 1;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* .cardBg {
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
   z-index: 1;
   border-radius: 30px;
   transition: filter 0.8s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .cardBg::before {
   content: "";

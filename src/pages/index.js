@@ -1,49 +1,29 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic"; // 1. Import dynamic
 import SEO from "@/components/SEO";
-import SEOHead from "@/components/SEOHead"; // ADD THIS LINE
+import SEOHead from "@/components/SEOHead";
+import Hero from "@/components/homeCopy/Hero"; // Keep Hero static (Critical for LCP)
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "swiper/css/scrollbar";
-import Hero from "@/components/homeCopy/Hero";
-import Course from "@/components/homeCopy/Course";
 
-import About from "@/components/homeCopy/About";
-import Test from "@/components/homeCopy/Test";
-import Subjects from "@/components/homeCopy/Subjects";
-
-import Usps from "@/components/homeCopy/Usps";
-import Trainers from "@/components/homeCopy/Trainers";
-import Testimonial from "@/components/homeCopy/Testimonial";
-import MarqueeBanner from '@/components/homeCopy/MarqueeBanner';
-import Blog from "@/components/homeCopy/Blog";
-
-function useInViewAnimation(threshold = 0.3) {
-    const [inView, setInView] = useState(false);
-    const ref = useRef(null);
-    useEffect(() => {
-        if (typeof window === "undefined") return;
-        const observer = new window.IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) setInView(true);
-                });
-            },
-            { threshold }
-        );
-        if (ref.current) observer.observe(ref.current);
-        return () => {
-            if (ref.current) observer.unobserve(ref.current);
-        };
-    }, [threshold]);
-    return [ref, inView];
-}
+// 2. Dynamically import components below the fold
+// loading: null removes the generic "loading..." text, preventing layout shifts
+const Course = dynamic(() => import("@/components/homeCopy/Course"), { loading: () => null });
+const MarqueeBanner = dynamic(() => import("@/components/homeCopy/MarqueeBanner"), { loading: () => null });
+const About = dynamic(() => import("@/components/homeCopy/About"), { loading: () => null });
+const Test = dynamic(() => import("@/components/homeCopy/Test"), { loading: () => null });
+const Subjects = dynamic(() => import("@/components/homeCopy/Subjects"), { loading: () => null });
+const Usps = dynamic(() => import("@/components/homeCopy/Usps"), { loading: () => null });
+const Trainers = dynamic(() => import("@/components/homeCopy/Trainers"), { loading: () => null });
+const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"), { loading: () => null });
+const Blog = dynamic(() => import("@/components/homeCopy/Blog"), { loading: () => null });
 
 const HomeCopy = ({ headerHeight }) => {
     const [active, setActive] = useState(1);
-    const [activeIndex, setActiveIndex] = React.useState(1);
-    const [courseHeadingRef, courseHeadingInView] = useInViewAnimation();
     const [isMobile, setIsMobile] = useState(false);
     const [isMobileSwiper, setIsMobileSwiper] = useState(false);
 
@@ -65,8 +45,10 @@ const HomeCopy = ({ headerHeight }) => {
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
                 preloadImages={[
+                    // Ensure these paths match exactly what is in your public folder
                     { src: '/images/banner-image-right.webp', type: 'image/webp' },
                     { src: '/images/banner-image-right.avif', type: 'image/avif' },
+                    // If this external URL is critical, keep it; otherwise consider serving locally
                     { src: 'https://ignite.amigosserver.com/images/course-bg1.webp', type: 'image/webp' }
                 ]}
             />
@@ -78,6 +60,8 @@ const HomeCopy = ({ headerHeight }) => {
                 <div className={isMobile ? "hero-section-mobile" : "hero-section-desktop"}>
                     <Hero />
                 </div>
+
+                {/* These will now load in separate chunks after the main page is interactive */}
                 <Course />
                 <section data-scroll-section>
                     <MarqueeBanner />
