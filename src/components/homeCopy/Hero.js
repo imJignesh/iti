@@ -1,29 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from '@/components/CustomImageWrapper';
-// Import styles as an object from the CSS Module file
 import styles from '@/styles/home-copy/Hero.module.css';
 
-const useDeviceCheck = (breakpoint = 992) => {
-    const [isMobile, setIsMobile] = useState(undefined);
-
-    useEffect(() => {
-        const checkDevice = () => {
-            if (typeof window !== 'undefined') {
-                setIsMobile(window.innerWidth < breakpoint);
-            }
-        };
-
-        checkDevice();
-        window.addEventListener('resize', checkDevice);
-
-        return () => window.removeEventListener('resize', checkDevice);
-    }, [breakpoint]);
-
-    return isMobile;
-};
-
 const Hero = () => {
-    const isMobile = useDeviceCheck();
     const videoRef = useRef(null);
     const [videoLoaded, setVideoLoaded] = useState(false);
 
@@ -51,91 +30,70 @@ const Hero = () => {
         const handleInteraction = () => {
             loadVideo();
             // Remove listeners after first interaction
-            document.removeEventListener('scroll', handleInteraction);
-            document.removeEventListener('touchstart', handleInteraction);
-            document.removeEventListener('mousedown', handleInteraction);
+            const events = ['scroll', 'touchstart', 'mousedown', 'keydown'];
+            events.forEach(ev => document.removeEventListener(ev, handleInteraction));
         };
 
-        document.addEventListener('scroll', handleInteraction, { passive: true, once: true });
-        document.addEventListener('touchstart', handleInteraction, { passive: true, once: true });
-        document.addEventListener('mousedown', handleInteraction, { passive: true, once: true });
+        const events = ['scroll', 'touchstart', 'mousedown', 'keydown'];
+        events.forEach(ev => document.addEventListener(ev, handleInteraction, { passive: true, once: true }));
 
         return () => {
-            document.removeEventListener('scroll', handleInteraction);
-            document.removeEventListener('touchstart', handleInteraction);
-            document.removeEventListener('mousedown', handleInteraction);
+            events.forEach(ev => document.removeEventListener(ev, handleInteraction));
         };
     }, [videoLoaded]);
 
-    const renderTitle = () => {
-        if (isMobile === undefined) {
-            return (
-                <h1 className={styles.heroTitleDesktop}>
-                    Ignite Your Path To Top <span className="highlight">Academic</span> Performance
-                </h1>
-            );
-        }
-
-        return isMobile ? (
-            <h1 className={styles.heroTitleMobile}>
-                Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
-            </h1>
-        ) : (
-            <h1 className={styles.heroTitleDesktop}>
-                Ignite Your Path To Top <span className="highlight">Academic</span> Performance
-            </h1>
-        );
-    };
-
-    let mobileClass = '';
-    if (isMobile) {
-        mobileClass = 'pt-3 pb-3';
-    }
-
-    // Define scroll attributes as variables, conditionally including them only when NOT mobile
-    const scrollSectionAttr = isMobile ? {} : { 'data-scroll-section': true };
-    const scrollRevealAttr = isMobile ? {} : {
-        'data-scroll': true,
-        'data-scroll-class': 'is-inview',
-        'data-scroll-repeat': 'true'
-    };
-    const visibilityClass = isMobile ? styles.mobileHeroVisible : "";
-    const fadeInClass = isMobile === false ? "fade-in-section" : "";
-
     return (
-        // Apply data-scroll-section conditionally
-        <section className={`${styles.hero} revealClipRightToLeft ${styles.homeherosection} `} {...scrollSectionAttr}>
+        <section
+            className={`${styles.hero} revealClipRightToLeft ${styles.homeherosection}`}
+            data-scroll-section
+        >
             <div className="container">
-                {/* Apply data-scroll attributes conditionally */}
                 <div
-                    {...scrollRevealAttr}
-                    className={`${fadeInClass} ${visibilityClass}`}
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat="true"
+                    className="fade-in-section"
                 >
                     <div className={`row ${styles.heroMain}`}>
-                        <div className={`col-12 col-lg-7 col-xl-7 ${!isMobile ? 'pe-5' : ''} ${styles.heroLeft} ${visibilityClass}`}>
+                        <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
                             <div
-                                {...scrollRevealAttr}
-                                className={`${fadeInClass} ${styles.heroMainHeading} ${mobileClass}`}
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className={`${styles.heroMainHeading}`}
                                 style={{ animationDelay: "0.4s" }}
                             >
                                 <h2 className={styles.SubHeading}>BEST TUTORS IN UAE</h2>
                             </div>
 
                             <div
-                                {...scrollRevealAttr}
-                                className={fadeInClass}
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
                                 style={{ animationDelay: "0.6s" }}
                             >
-                                {renderTitle()}
+                                {/* LCP OPTIMIZATION: Render BOTH titles and toggle via CSS.
+                                    This prevents hydration mismatch and layout shifts caused by JS checks.
+                                */}
+                                <div className="d-lg-none">
+                                    <h1 className={`${styles.heroTitleMobile} pt-3 pb-3`}>
+                                        Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
+                                    </h1>
+                                </div>
+                                <div className="d-none d-lg-block">
+                                    <h1 className={styles.heroTitleDesktop}>
+                                        Ignite Your Path To Top <span className="highlight">Academic</span> Performance
+                                    </h1>
+                                </div>
                             </div>
 
                             <div
-                                {...scrollRevealAttr}
-                                className={fadeInClass}
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
                                 style={{ animationDelay: "0.8s" }}
                             >
                                 <div className={styles.heroParagraph}>
-                                    {/* These are global elements, their styles are handled via :global() in CSS */}
                                     <h3>Improve Your Grades Today!</h3>
                                     <b>
                                         We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, & more through our curriculum-specific approach & expert tutors in Dubai, guiding them toward a stronger understanding & lasting growth.
@@ -146,22 +104,39 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
+
                         <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
-                            <div className={styles.videoContainer}>
-                                {/* OPTIMIZED: Video loads lazily, source added dynamically */}
+                            <div className={styles.videoContainer} style={{ position: 'relative', overflow: 'hidden' }}>
+                                {/* LCP CRITICAL: Explicitly render the poster image with priority.
+                                    This beats the <video poster> attribute and ensures the LCP element paints immediately.
+                                */}
+                                <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+                                    <Image
+                                        src="/images/banner-image-right.webp"
+                                        alt="Ignite Training Institute Student"
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        priority={true}
+                                        fetchPriority="high"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                    />
+                                </div>
+
                                 <video
                                     ref={videoRef}
                                     className={styles.heroVideo}
+                                    style={{ position: 'relative', zIndex: 1 }}
                                     autoPlay
                                     muted
                                     loop
                                     playsInline
-                                    poster="/images/banner-image-right.webp"
+                                    poster="/images/banner-image-right.webp" // Keep as fallback
                                     preload="none"
                                 >
-                                    {/* Source will be added dynamically via JavaScript */}
+                                    {/* Source added dynamically via JS */}
                                 </video>
                             </div>
+
                             <div className={styles.buttonGroup}>
                                 <a href="/join-free-demo-class/" className="buttonBlue">
                                     Get A Free Demo{" "}
@@ -169,7 +144,6 @@ const Hero = () => {
                                         src="/images/right-arrow-skyblue.webp"
                                         width={40}
                                         height={40}
-
                                         alt="Right arrow"
                                         priority
                                     />
@@ -180,7 +154,6 @@ const Hero = () => {
                                         src="/images/right-arrow-blue.webp"
                                         width={40}
                                         height={40}
-
                                         alt="Right arrow"
                                         priority
                                     />
@@ -189,8 +162,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-
-            </div >
+            </div>
         </section>
     );
 };
