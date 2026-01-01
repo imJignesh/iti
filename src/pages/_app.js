@@ -8,23 +8,20 @@ import "@/styles/critical.css";
 import "@/styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// ADD THIS IMPORT
 import SEOHead from '../components/SEOHead';
+import Header from "../components/Header";
 
-const Header = dynamic(() => import("../components/Header"), { ssr: true });
 const Footer = dynamic(() => import("../components/Footer"), { ssr: false });
 const DelayedPopup = dynamic(() => import("../components/DelayedPopup"), { ssr: false });
 
-// MODIFIED: Conditionally load LocomotiveScrollProvider
 const LocomotiveScrollProvider = dynamic(
     () => import('../components/LocomotiveScrollProvider'),
     {
         ssr: false,
-        loading: () => <div style={{ minHeight: '100vh' }} /> // Prevent layout shift
+        loading: () => <div style={{ minHeight: '100vh' }} />
     }
 );
 
-// Helper function to detect PageSpeed Insights
 const isPageSpeedInsights = () => {
     if (typeof navigator === 'undefined') return false;
     const userAgent = navigator.userAgent.toLowerCase();
@@ -37,7 +34,6 @@ const isPageSpeedInsights = () => {
     );
 };
 
-// Helper function to detect mobile
 const isMobileDevice = () => {
     if (typeof window === 'undefined') return false;
     return (
@@ -93,14 +89,12 @@ export default function MyApp({ Component, pageProps }) {
 
     const mobileBreakpoint = 2600;
 
-    // Check if we should load Locomotive Scroll
     useEffect(() => {
         const isMobile = isMobileDevice();
         const isPageSpeed = isPageSpeedInsights();
 
-        // Don't load on mobile PageSpeed tests
         if (isMobile && isPageSpeed) {
-            console.log('🚫 Heavy scripts disabled for mobile PageSpeed test');
+            console.log('Heavy scripts disabled for mobile PageSpeed test');
             setShouldLoadLocomotiveScroll(false);
         } else {
             setShouldLoadLocomotiveScroll(true);
@@ -148,7 +142,6 @@ export default function MyApp({ Component, pageProps }) {
 
     return (
         <PopupProvider>
-            {/* Conditionally render LocomotiveScrollProvider */}
             {shouldLoadLocomotiveScroll ? (
                 <LocomotiveScrollProvider>
                     <SEOHead />

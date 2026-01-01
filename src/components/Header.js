@@ -192,7 +192,7 @@ const Header = ({ setHeaderHeight }) => {
                     <div className="col-auto p-0 d-sm-block">
                         <a href="tel:+971568357374">
                             <button>
-                                <Image src="/images/mobile.webp" width={25} height={25} alt="Call" loading="lazy" />
+                                <Image src="/images/mobile.webp" width={25} height={25} alt="Call" priority />
                                 Call
                             </button>
                         </a>
@@ -200,7 +200,7 @@ const Header = ({ setHeaderHeight }) => {
                     <div className="col-auto p-0 d-sm-block">
                         <a href="https://wa.me/+971568357374">
                             <button>
-                                <Image src="/images/whatsapp.webp" width={25} height={25} alt='Whatsapp' loading="lazy" />
+                                <Image src="/images/whatsapp.webp" width={25} height={25} alt='Whatsapp' priority />
                                 Whatsapp
                             </button>
                         </a>
@@ -212,7 +212,7 @@ const Header = ({ setHeaderHeight }) => {
                         onClick={() => setNavOpen((open) => !open)}
                         style={{ border: 'none', background: 'transparent' }}
                     >
-                        <Image src="/images/hamburger.webp" width={35} height={35} alt='Hamburger' loading="lazy" />
+                        <Image src="/images/hamburger.webp" width={35} height={35} alt='Hamburger' priority />
                     </button>
                 </div>
             </header>
