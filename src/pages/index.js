@@ -11,7 +11,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/scrollbar";
 
 // 2. Dynamically import components below the fold
-// loading: null removes the generic "loading..." text, preventing layout shifts
 const Course = dynamic(() => import("@/components/homeCopy/Course"), { loading: () => null });
 const MarqueeBanner = dynamic(() => import("@/components/homeCopy/MarqueeBanner"), { loading: () => null });
 const About = dynamic(() => import("@/components/homeCopy/About"), { loading: () => null });

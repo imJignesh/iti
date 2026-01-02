@@ -18,10 +18,15 @@
 
   /* --- LCP FIX: DISABLE ANIMATION --- */
   /* This ensures the banner is visible immediately on page load */
-  clip-path: none !important;
-  animation: none !important;
+  /* -webkit-clip-path: inset(0 100% 0 0); */
+  /* clip-path: inset(0 100% 0 0); */
+  /* animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards; */
+
+  /* Force visibility */
   opacity: 1 !important;
   visibility: visible !important;
+  transform: none !important;
+  clip-path: none !important;
 }
 
 .homeherosection>div {
