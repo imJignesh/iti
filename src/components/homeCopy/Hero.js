@@ -8,7 +8,7 @@ const Hero = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
 
     useEffect(() => {
-        // OPTIMIZATION: Load video source only after page is interactive
+        // Load video source only after page is interactive
         const loadVideo = () => {
             if (videoRef.current && !videoLoaded) {
                 const source = document.createElement('source');
@@ -47,9 +47,8 @@ const Hero = () => {
     return (
         <>
             <Head>
-                {/* LCP OPTIMIZATION: Responsive Preloads 
-                    This ensures the correct image is fetched immediately based on device width.
-                */}
+                {/* --- LCP FIX: RESPONSIVE PRELOADING --- */}
+                {/* This forces mobile to download the small image, and desktop the large one. */}
                 <link
                     rel="preload"
                     as="image"
@@ -66,18 +65,18 @@ const Hero = () => {
                 />
             </Head>
 
-            {/* Removed dynamic classes dependent on JS state. Using static classes. */}
+            {/* No JS checks for classes here. Pure CSS handling via modules. */}
             <section className={`${styles.hero} ${styles.homeherosection}`}>
                 <div className="container">
                     <div>
                         <div className={`row ${styles.heroMain}`}>
-                            {/* Left Content */}
                             <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
                                 <div className={`${styles.heroMainHeading}`}>
                                     <h2 className={styles.SubHeading}>BEST TUTORS IN UAE</h2>
                                 </div>
 
-                                {/* TITLE OPTIMIZATION: Both titles exist, CSS toggles them. Zero JS delay. */}
+                                {/* --- LCP FIX: CSS-BASED RESPONSIVE TITLES --- */}
+                                {/* Both exist in DOM, CSS hides one. Zero hydration delay. */}
                                 <div className="d-lg-none">
                                     <h1 className={`${styles.heroTitleMobile} pt-3 pb-3`}>
                                         Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
@@ -102,13 +101,10 @@ const Hero = () => {
                                 </div>
                             </div>
 
-                            {/* Right Content (Video/Image) */}
                             <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
                                 <div className={styles.videoContainer}>
-                                    {/* LCP CRITICAL: 
-                                        1. No 'poster' attribute (prevents wrong image download).
-                                        2. CSS background-image handles the image display instantly.
-                                    */}
+                                    {/* --- LCP FIX: REMOVED POSTER --- */}
+                                    {/* We use CSS background-image in Hero.module.css instead. */}
                                     <video
                                         ref={videoRef}
                                         className={styles.heroVideo}

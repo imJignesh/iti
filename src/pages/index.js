@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import dynamic from "next/dynamic"; // 1. Import dynamic
+import dynamic from "next/dynamic";
 import SEO from "@/components/SEO";
 import SEOHead from "@/components/SEOHead";
 import Hero from "@/components/homeCopy/Hero"; // Keep Hero static (Critical for LCP)
@@ -44,13 +44,10 @@ const HomeCopy = ({ headerHeight }) => {
             <SEOHead
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
-                preloadImages={[
-                    // Ensure these paths match exactly what is in your public folder
-                    { src: '/images/banner-image-right.webp', type: 'image/webp' },
-                    { src: '/images/banner-image-right.avif', type: 'image/avif' },
-                    // If this external URL is critical, keep it; otherwise consider serving locally
-                    { src: 'https://ignite.amigosserver.com/images/course-bg1.webp', type: 'image/webp' }
-                ]}
+            /* LCP FIX: 'preloadImages' is deliberately REMOVED.
+               The Hero component now handles responsive preloading via <Head> internally.
+               Including it here would force mobile devices to download the desktop image, damaging LCP.
+            */
             />
             <SEO
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
@@ -61,7 +58,6 @@ const HomeCopy = ({ headerHeight }) => {
                     <Hero />
                 </div>
 
-                {/* These will now load in separate chunks after the main page is interactive */}
                 <Course />
                 <section data-scroll-section>
                     <MarqueeBanner />

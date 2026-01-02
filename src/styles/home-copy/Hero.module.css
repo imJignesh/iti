@@ -16,7 +16,8 @@
   background-size: 30vw;
   background-position: 6.5vw 1vw;
 
-  /* LCP CRITICAL: Animations disabled to ensure instant paint */
+  /* --- LCP FIX: DISABLE ANIMATION --- */
+  /* This ensures the banner is visible immediately on page load */
   clip-path: none !important;
   animation: none !important;
   opacity: 1 !important;
@@ -39,9 +40,16 @@
   background-size: cover;
 }
 
-/* ... (Keep global bot detection styles) ... */
+/* Keyframes kept in case used elsewhere, but disabled on Hero */
+@keyframes revealClipLeftToRight {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
 
-/* ... (Keep Keyframes if needed elsewhere, but not used on hero anymore) ... */
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
 
 .heroMain {
   display: flex;
@@ -52,7 +60,7 @@
   margin-top: -1vw;
 }
 
-/* Renamed to camelCase */
+/* Renamed to camelCase: heroTitle-desktop -> heroTitleDesktop */
 .heroTitleDesktop {
   font-size: 2rem;
   font-weight: 700;
@@ -62,8 +70,9 @@
   color: var(--blue-color);
 }
 
+/* Renamed to camelCase: heroTitle-mobile -> heroTitleMobile */
 .heroTitleMobile {
-  /* No display:none here, handled by global d-lg-none class */
+  /* display: none; <-- Handled by global utility classes now */
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
@@ -118,14 +127,14 @@
   object-position: right;
   border-radius: 10px;
 
-  /* MASKING */
+  /* MASKING: Keeps the student shape */
   mask: url("/images/banner-image-right.webp") no-repeat center;
   mask-size: contain;
   -webkit-mask: url("/images/banner-image-right.webp") no-repeat center;
   -webkit-mask-size: contain;
 
-  /* LCP FIX: Desktop Background Image */
-  /* This ensures the image paints instantly */
+  /* --- LCP FIX: DESKTOP BACKGROUND IMAGE --- */
+  /* The image appears instantly behind the video, respecting the mask */
   background-image: url("/images/banner-image-right.webp");
   background-size: cover;
   background-position: right;
@@ -143,7 +152,24 @@
   display: none;
 }
 
-/* ... (Keep buttonGroup styles) ... */
+.maskImage {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  object-position: right;
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  object-position: right;
+}
+
 .buttonGroup {
   position: absolute;
   top: 0vw;
@@ -157,11 +183,13 @@
   width: 17.5vw;
 }
 
+/* Use :global() for child elements and utility classes */
 .buttonGroup :global(img) {
   width: 1.7vw;
   height: auto;
 }
 
+/* Use :global() for global classes used inside a module class */
 .buttonGroup :global(.buttonBlue),
 .buttonGroup :global(.buttonSkyBlue) {
   text-transform: uppercase;
@@ -193,7 +221,6 @@
   width: 40px;
 }
 
-/* ... (Keep SubHeading styles) ... */
 .SubHeading {
   font-size: 28px;
   font-weight: 600;
@@ -212,6 +239,7 @@
   content: "";
   width: 14px;
   height: 100%;
+  /* full height on desktop */
   position: absolute;
   top: 0;
   display: flex;
@@ -235,6 +263,7 @@
   }
 }
 
+/* Mobile (No changes needed for SubHeading) */
 @media (max-width: 575px) {
   .SubHeading {
     font-size: 15px;
@@ -244,14 +273,18 @@
   .SubHeading:before,
   .SubHeading:after {
     width: 14px;
+    /* fixed size on mobile */
     height: 24px;
+    /* instead of 100% */
     top: 50%;
     transform: translateY(-50%);
+    /* center vertically */
   }
 }
 
 /* --- Media Queries --- */
 
+/* Removed .homeCopy prefix */
 @media (max-width: 1800px) {
   .hero {
     background-size: 28vw;
@@ -259,6 +292,7 @@
   }
 }
 
+/* Removed .homeCopy prefix */
 @media (max-width: 1500px) {
   .hero {
     background-position: top 10% left;
@@ -269,6 +303,7 @@
   }
 }
 
+/* Removed .homeCopy prefix */
 @media (max-width: 1280px) {
   .heroRight .buttonGroup {
     gap: 0.8vw;
@@ -281,6 +316,7 @@
   }
 }
 
+/* Removed .homeCopy prefix */
 @media (max-width: 1024px) {
   .heroLeft .heroTitle {
     font-size: 35px;
@@ -295,6 +331,7 @@
   }
 }
 
+/* Removed .homeCopy prefix */
 @media (max-width: 991px) {
   .hero {
     padding-bottom: 30px;
@@ -304,6 +341,7 @@
     opacity: 1 !important;
     visibility: visible !important;
     transform: none !important;
+    /* Ensure the clip-path animation still runs */
     transition: opacity 0.5s ease-in !important;
   }
 
@@ -347,6 +385,7 @@
   }
 }
 
+/* Mobile Fixes - use :global() for Bootstrap utility classes */
 @media (max-width: 767px) {
   .heroLeft {
     padding: inherit !important;
@@ -359,9 +398,19 @@
     background-position: top right;
     padding: 20px 0 0 0;
 
-    /* LCP FIX: Ensure animations are OFF */
+    /* --- LCP FIX: Ensure animations are OFF on mobile too --- */
     clip-path: none !important;
     animation: none !important;
+  }
+
+  @keyframes revealClipRightToLeft {
+    from {
+      clip-path: inset(0 0 0 100%);
+    }
+
+    to {
+      clip-path: inset(0 0 0 0);
+    }
   }
 
   .heroRight .buttonGroup {
@@ -374,7 +423,7 @@
   }
 
   .heroLeft .heroTitleMobile {
-    /* display: block; -- handled by d-block */
+    display: block;
     margin: 0 auto;
     max-width: 90vw;
     line-height: 23px;
@@ -403,6 +452,7 @@
   }
 }
 
+/* Continued mobile fixes */
 @media (max-width: 700px) {
   .hero {
     background-position: top -1% right;
@@ -433,8 +483,8 @@
     -webkit-mask: url("/images/banner-image-right-m.webp") no-repeat center;
     mask-size: 90%;
 
-    /* LCP FIX: Mobile Background Image */
-    /* Mobile devices download ONLY this image via CSS */
+    /* --- LCP FIX: MOBILE BACKGROUND IMAGE --- */
+    /* This ensures mobile devices download and show the SMALL image instantly */
     background-image: url("/images/banner-image-right-m.webp");
     background-size: 90%;
     background-position: center;
@@ -459,6 +509,7 @@
   }
 
   .heroLeft .heroTitle {
+    /* Assuming this refers to desktop or mobile title */
     font-size: 25px;
     margin: 15px auto;
     max-width: 70%;
