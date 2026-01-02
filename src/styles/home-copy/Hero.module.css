@@ -14,9 +14,10 @@
   background-repeat: no-repeat;
   background-size: 30vw;
 
-  /* -webkit-clip-path: inset(0 100% 0 0);
-  clip-path: inset(0 100% 0 0);
-  animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards; */
+  /* LCP FIX: Removed animation to prevent render delay */
+  /* -webkit-clip-path: inset(0 100% 0 0); */
+  /* clip-path: inset(0 100% 0 0); */
+  /* animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards; */
 
   background-position: 6.5vw 1vw;
 }
@@ -101,16 +102,6 @@ body.is-bot-detected [data-scroll-section] {
   color: var(--blue-color);
 }
 
-/* The .highlight class is likely a global utility class used in the <span> */
-/* :global(.highlight) {
-  background: linear-gradient(to left,
-      var(--green-color),
-      var(--lightgreen-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-} */
-
 .heroParagraph {
   padding-top: 30px;
   font-size: 1vw;
@@ -159,10 +150,18 @@ body.is-bot-detected [data-scroll-section] {
   object-fit: cover;
   object-position: right;
   border-radius: 10px;
+
+  /* Masking */
   mask: url("/images/banner-image-right.webp") no-repeat center;
   mask-size: contain;
   -webkit-mask: url("/images/banner-image-right.webp") no-repeat center;
   -webkit-mask-size: contain;
+
+  /* LCP FIX: Desktop Background Image */
+  background-image: url("/images/banner-image-right.webp");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 .videoMask {
@@ -423,8 +422,10 @@ body.is-bot-detected [data-scroll-section] {
     background-size: 85%;
     background-position: top right;
     padding: 20px 0 0 0;
-    clip-path: inset(0 0 0 100%);
-    animation: revealClipRightToLeft 1.8s 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+
+    /* LCP FIX: Ensure animation is disabled */
+    clip-path: none !important;
+    animation: none !important;
   }
 
   @keyframes revealClipRightToLeft {
@@ -503,6 +504,17 @@ body.is-bot-detected [data-scroll-section] {
     width: 95vw;
     object-fit: cover;
     object-position: 100% 0;
+
+    /* Mobile Mask */
+    mask: url("/images/banner-image-right-m.webp") no-repeat center;
+    -webkit-mask: url("/images/banner-image-right-m.webp") no-repeat center;
+    mask-size: 90%;
+
+    /* LCP FIX: Mobile Background Image */
+    background-image: url("/images/banner-image-right-m.webp");
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .heroRight .buttonGroup {
@@ -560,12 +572,6 @@ body.is-bot-detected [data-scroll-section] {
 
   .heroRight .buttonGroup :global(button) {
     padding: 10px 25px;
-  }
-
-  .heroVideo {
-    mask: url("/images/banner-image-right-m.webp") no-repeat center;
-    -webkit-mask: url("/images/banner-image-right-m.webp") no-repeat center;
-    mask-size: 90%;
   }
 
   .heroRight .buttonGroup :global(.buttonBlue),
