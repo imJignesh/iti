@@ -408,7 +408,7 @@
     animation: none !important;
   }
 
-  @keyframes revealClipRightToLeft {
+  /* @keyframes revealClipRightToLeft {
     from {
       clip-path: inset(0 0 0 100%);
     }
@@ -416,7 +416,7 @@
     to {
       clip-path: inset(0 0 0 0);
     }
-  }
+  } */
 
   .heroRight .buttonGroup {
     left: 40%;

@@ -8,7 +8,6 @@ const Hero = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
 
     useEffect(() => {
-        // Load video source only after page is interactive
         const loadVideo = () => {
             if (videoRef.current && !videoLoaded) {
                 const source = document.createElement('source');
@@ -47,8 +46,7 @@ const Hero = () => {
     return (
         <>
             <Head>
-                {/* --- LCP FIX: RESPONSIVE PRELOADING --- */}
-                {/* This forces mobile to download the small image, and desktop the large one. */}
+                {/* Responsive Preload: Helps mobile fetch the SMALL image immediately */}
                 <link
                     rel="preload"
                     as="image"
@@ -65,7 +63,6 @@ const Hero = () => {
                 />
             </Head>
 
-            {/* No JS checks for classes here. Pure CSS handling via modules. */}
             <section className={`${styles.hero} ${styles.homeherosection}`}>
                 <div className="container">
                     <div>
@@ -75,8 +72,6 @@ const Hero = () => {
                                     <h2 className={styles.SubHeading}>BEST TUTORS IN UAE</h2>
                                 </div>
 
-                                {/* --- LCP FIX: CSS-BASED RESPONSIVE TITLES --- */}
-                                {/* Both exist in DOM, CSS hides one. Zero hydration delay. */}
                                 <div className="d-lg-none">
                                     <h1 className={`${styles.heroTitleMobile} pt-3 pb-3`}>
                                         Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
@@ -103,8 +98,9 @@ const Hero = () => {
 
                             <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
                                 <div className={styles.videoContainer}>
-                                    {/* --- LCP FIX: REMOVED POSTER --- */}
-                                    {/* We use CSS background-image in Hero.module.css instead. */}
+                                    {/* CRITICAL CHANGE: 'poster' removed. 
+                                        Your CSS background-image will now show immediately. 
+                                    */}
                                     <video
                                         ref={videoRef}
                                         className={styles.heroVideo}
@@ -114,7 +110,7 @@ const Hero = () => {
                                         playsInline
                                         preload="none"
                                     >
-                                        {/* Source added dynamically via JS */}
+                                        {/* Source added via JS */}
                                     </video>
                                 </div>
 

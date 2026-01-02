@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import SEO from "@/components/SEO";
 import SEOHead from "@/components/SEOHead";
-import Hero from "@/components/homeCopy/Hero"; // Keep Hero static (Critical for LCP)
+import Hero from "@/components/homeCopy/Hero";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "swiper/css/scrollbar";
 
-// 2. Dynamically import components below the fold
+// Dynamic imports
 const Course = dynamic(() => import("@/components/homeCopy/Course"), { loading: () => null });
 const MarqueeBanner = dynamic(() => import("@/components/homeCopy/MarqueeBanner"), { loading: () => null });
 const About = dynamic(() => import("@/components/homeCopy/About"), { loading: () => null });
@@ -43,9 +43,8 @@ const HomeCopy = ({ headerHeight }) => {
             <SEOHead
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
-            /* LCP FIX: 'preloadImages' is deliberately REMOVED.
-               The Hero component now handles responsive preloading via <Head> internally.
-               Including it here would force mobile devices to download the desktop image, damaging LCP.
+            /* CRITICAL CHANGE: preloadImages prop REMOVED. 
+               We now rely on Hero.js <Head> for responsive preloading. 
             */
             />
             <SEO
