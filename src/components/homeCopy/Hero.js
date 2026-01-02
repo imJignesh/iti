@@ -1,15 +1,35 @@
 import React, { useState, useEffect, useRef } from "react";
-import Head from "next/head"; // Import Head for LCP optimization
+import Head from "next/head";
 import Image from '@/components/CustomImageWrapper';
+// Import styles as an object from the CSS Module file
 import styles from '@/styles/home-copy/Hero.module.css';
 
+const useDeviceCheck = (breakpoint = 992) => {
+    const [isMobile, setIsMobile] = useState(undefined);
+
+    useEffect(() => {
+        const checkDevice = () => {
+            if (typeof window !== 'undefined') {
+                setIsMobile(window.innerWidth < breakpoint);
+            }
+        };
+
+        checkDevice();
+        window.addEventListener('resize', checkDevice);
+
+        return () => window.removeEventListener('resize', checkDevice);
+    }, [breakpoint]);
+
+    return isMobile;
+};
+
 const Hero = () => {
+    const isMobile = useDeviceCheck();
     const videoRef = useRef(null);
     const [videoLoaded, setVideoLoaded] = useState(false);
 
     useEffect(() => {
-        // OPTIMIZATION: Load video source only after page is interactive
-        // This keeps the initial bundle light
+        // OPTIMIZATION: Load video after page is interactive
         const loadVideo = () => {
             if (videoRef.current && !videoLoaded) {
                 const source = document.createElement('source');
@@ -31,82 +51,106 @@ const Hero = () => {
         // Also load on user interaction
         const handleInteraction = () => {
             loadVideo();
-            const events = ['scroll', 'touchstart', 'mousedown', 'keydown'];
-            events.forEach(ev => document.removeEventListener(ev, handleInteraction));
+            document.removeEventListener('scroll', handleInteraction);
+            document.removeEventListener('touchstart', handleInteraction);
+            document.removeEventListener('mousedown', handleInteraction);
         };
 
-        const events = ['scroll', 'touchstart', 'mousedown', 'keydown'];
-        events.forEach(ev => document.addEventListener(ev, handleInteraction, { passive: true, once: true }));
+        document.addEventListener('scroll', handleInteraction, { passive: true, once: true });
+        document.addEventListener('touchstart', handleInteraction, { passive: true, once: true });
+        document.addEventListener('mousedown', handleInteraction, { passive: true, once: true });
 
         return () => {
-            events.forEach(ev => document.removeEventListener(ev, handleInteraction));
+            document.removeEventListener('scroll', handleInteraction);
+            document.removeEventListener('touchstart', handleInteraction);
+            document.removeEventListener('mousedown', handleInteraction);
         };
     }, [videoLoaded]);
 
+    const renderTitle = () => {
+        if (isMobile === undefined) {
+            return (
+                <h1 className={styles.heroTitleDesktop}>
+                    Ignite Your Path To Top <span className="highlight">Academic</span> Performance
+                </h1>
+            );
+        }
+
+        return isMobile ? (
+            <h1 className={styles.heroTitleMobile}>
+                Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
+            </h1>
+        ) : (
+            <h1 className={styles.heroTitleDesktop}>
+                Ignite Your Path To Top <span className="highlight">Academic</span> Performance
+            </h1>
+        );
+    };
+
+    let mobileClass = '';
+    if (isMobile) {
+        mobileClass = 'pt-3 pb-3';
+    }
+
+    // Define scroll attributes as variables, conditionally including them only when NOT mobile
+    const scrollSectionAttr = isMobile ? {} : { 'data-scroll-section': true };
+    const scrollRevealAttr = isMobile ? {} : {
+        'data-scroll': true,
+        'data-scroll-class': 'is-inview',
+        'data-scroll-repeat': 'true'
+    };
+    const visibilityClass = isMobile ? styles.mobileHeroVisible : "";
+    const fadeInClass = isMobile === false ? "fade-in-section" : "";
+
     return (
         <>
-            {/* LCP CRITICAL: Preload the poster image. 
-                This forces the browser to fetch the image immediately, 
-                fixing LCP without adding extra DOM elements that break the design mask. 
-            */}
             <Head>
+                {/* --- LCP FIX: RESPONSIVE PRELOADING --- */}
+                {/* Tells mobile to download the small image, and desktop the large one. */}
                 <link
                     rel="preload"
                     as="image"
                     href="/images/banner-image-right.webp"
                     fetchPriority="high"
+                    media="(min-width: 576px)"
+                />
+                <link
+                    rel="preload"
+                    as="image"
+                    href="/images/banner-image-right-m.webp"
+                    fetchPriority="high"
+                    media="(max-width: 575px)"
                 />
             </Head>
 
-            <section
-                className={`${styles.hero} revealClipRightToLeft ${styles.homeherosection}`}
-                data-scroll-section
-            >
+            <section className={`${styles.hero} ${styles.homeherosection}`} {...scrollSectionAttr}>
                 <div className="container">
+                    {/* Apply data-scroll attributes conditionally */}
                     <div
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat="true"
-                        className="fade-in-section"
+                        {...scrollRevealAttr}
+                        className={`${fadeInClass} ${visibilityClass}`}
                     >
                         <div className={`row ${styles.heroMain}`}>
-                            <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
+                            <div className={`col-12 col-lg-7 col-xl-7 ${!isMobile ? 'pe-5' : ''} ${styles.heroLeft} ${visibilityClass}`}>
                                 <div
-                                    data-scroll
-                                    data-scroll-class="is-inview"
-                                    data-scroll-repeat="true"
-                                    className={`${styles.heroMainHeading}`}
+                                    {...scrollRevealAttr}
+                                    className={`${fadeInClass} ${styles.heroMainHeading} ${mobileClass}`}
                                     style={{ animationDelay: "0.4s" }}
                                 >
                                     <h2 className={styles.SubHeading}>BEST TUTORS IN UAE</h2>
                                 </div>
 
                                 <div
-                                    data-scroll
-                                    data-scroll-class="is-inview"
-                                    data-scroll-repeat="true"
+                                    {...scrollRevealAttr}
+                                    className={fadeInClass}
                                     style={{ animationDelay: "0.6s" }}
                                 >
-                                    {/* TEXT OPTIMIZATION:
-                                        Using CSS classes (d-lg-none) instead of JS state (isMobile) 
-                                        ensures the text paints immediately, reducing Render Delay.
-                                    */}
-                                    <div className="d-lg-none">
-                                        <h1 className={`${styles.heroTitleMobile} pt-3 pb-3`}>
-                                            Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
-                                        </h1>
-                                    </div>
-                                    <div className="d-none d-lg-block">
-                                        <h1 className={styles.heroTitleDesktop}>
-                                            Ignite Your Path To Top <span className="highlight">Academic</span> Performance
-                                        </h1>
-                                    </div>
+                                    {renderTitle()}
                                 </div>
 
                                 <div
-                                    data-scroll
-                                    data-scroll-class="is-inview"
-                                    data-scroll-repeat="true"
+                                    {...scrollRevealAttr}
+                                    className={fadeInClass}
                                     style={{ animationDelay: "0.8s" }}
                                 >
                                     <div className={styles.heroParagraph}>
@@ -120,13 +164,10 @@ const Hero = () => {
                                     </div>
                                 </div>
                             </div>
-
                             <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
                                 <div className={styles.videoContainer}>
-                                    {/* Restored original structure. 
-                                        The <video> tag has the 'styles.heroVideo' class which applies the CSS Mask correctly.
-                                        The poster loads fast because of the <link rel="preload"> in Head above.
-                                    */}
+                                    {/* --- LCP FIX: REMOVED POSTER --- */}
+                                    {/* We use CSS background-image instead. This stops the wrong image from loading. */}
                                     <video
                                         ref={videoRef}
                                         className={styles.heroVideo}
@@ -134,13 +175,11 @@ const Hero = () => {
                                         muted
                                         loop
                                         playsInline
-                                        poster="/images/banner-image-right.webp"
                                         preload="none"
                                     >
-                                        {/* Source added dynamically via JS to save bandwidth */}
+                                        {/* Source will be added dynamically via JavaScript */}
                                     </video>
                                 </div>
-
                                 <div className={styles.buttonGroup}>
                                     <a href="/join-free-demo-class/" className="buttonBlue">
                                         Get A Free Demo{" "}
@@ -148,6 +187,7 @@ const Hero = () => {
                                             src="/images/right-arrow-skyblue.webp"
                                             width={40}
                                             height={40}
+
                                             alt="Right arrow"
                                             priority
                                         />
@@ -158,6 +198,7 @@ const Hero = () => {
                                             src="/images/right-arrow-blue.webp"
                                             width={40}
                                             height={40}
+
                                             alt="Right arrow"
                                             priority
                                         />
@@ -166,7 +207,8 @@ const Hero = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+
+                </div >
             </section>
         </>
     );

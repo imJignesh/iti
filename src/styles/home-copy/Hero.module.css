@@ -14,7 +14,8 @@
   background-repeat: no-repeat;
   background-size: 30vw;
 
-  /* LCP FIX: Removed animation to prevent render delay */
+  /* --- LCP FIX: DISABLE ANIMATION --- */
+  /* This was hiding the content for 1 second. We comment it out so paint is instant. */
   /* -webkit-clip-path: inset(0 100% 0 0); */
   /* clip-path: inset(0 100% 0 0); */
   /* animation: revealClipLeftToRight 2s 1s cubic-bezier(0.4, 0, 0.8, 1) forwards; */
@@ -24,7 +25,6 @@
 
 .homeherosection>div {
   position: relative;
-
 }
 
 .homeherosection>div::after {
@@ -151,13 +151,14 @@ body.is-bot-detected [data-scroll-section] {
   object-position: right;
   border-radius: 10px;
 
-  /* Masking */
+  /* Keep Masking */
   mask: url("/images/banner-image-right.webp") no-repeat center;
   mask-size: contain;
   -webkit-mask: url("/images/banner-image-right.webp") no-repeat center;
   -webkit-mask-size: contain;
 
-  /* LCP FIX: Desktop Background Image */
+  /* --- LCP FIX: DESKTOP BACKGROUND IMAGE --- */
+  /* This ensures the image shows up instantly before the video loads */
   background-image: url("/images/banner-image-right.webp");
   background-size: cover;
   background-position: right;
@@ -423,7 +424,7 @@ body.is-bot-detected [data-scroll-section] {
     background-position: top right;
     padding: 20px 0 0 0;
 
-    /* LCP FIX: Ensure animation is disabled */
+    /* --- LCP FIX: DISABLE MOBILE ANIMATION --- */
     clip-path: none !important;
     animation: none !important;
   }
@@ -510,7 +511,8 @@ body.is-bot-detected [data-scroll-section] {
     -webkit-mask: url("/images/banner-image-right-m.webp") no-repeat center;
     mask-size: 90%;
 
-    /* LCP FIX: Mobile Background Image */
+    /* --- LCP FIX: MOBILE BACKGROUND IMAGE --- */
+    /* This ensures mobile gets the SMALL image instantly */
     background-image: url("/images/banner-image-right-m.webp");
     background-size: 90%;
     background-position: center;
