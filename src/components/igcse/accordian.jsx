@@ -78,6 +78,7 @@ export default function Accordion() {
           color: white;
           padding: 24px;
           transition: all 0.3s ease;
+          margin:0 auto !important;
         }
 
         .header {
