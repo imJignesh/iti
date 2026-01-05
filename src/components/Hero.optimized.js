@@ -7,7 +7,7 @@ const Hero = () => {
     const videoRef = useRef(null);
 
     useEffect(() => {
-        // Only load video after page is interactive
+
         if ('requestIdleCallback' in window) {
             requestIdleCallback(() => {
                 loadVideo();
