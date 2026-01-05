@@ -296,5 +296,3 @@ const bundleAnalyzer = withBundleAnalyzer({
 });
 
 export default bundleAnalyzer(nextConfig);
-
-//Removed mux video
