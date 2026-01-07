@@ -604,6 +604,10 @@
     display: inline-block;
   }
 
+  .videoContainer {
+    height: 90vw;
+  }
+
   /* .heroRight .buttonGroup {
     gap: 5vw;
     padding-bottom: 50px;
