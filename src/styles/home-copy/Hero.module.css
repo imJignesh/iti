@@ -645,6 +645,9 @@
     margin-top: -3vw;
   }
 
+  .videoContainer {
+    height: 85vw;
+  }
 
   /* .videoContainer,
   .heroVideo {
