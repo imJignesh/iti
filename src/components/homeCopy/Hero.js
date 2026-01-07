@@ -47,7 +47,7 @@ const Hero = () => {
         <>
             <Head>
                 {/* Responsive Preload: Helps mobile fetch the SMALL image immediately */}
-                <link
+                {/* <link
                     rel="preload"
                     as="image"
                     href="/images/banner-image-right.webp"
@@ -60,7 +60,7 @@ const Hero = () => {
                     href="/images/banner-image-right-m.webp"
                     fetchPriority="high"
                     media="(max-width: 575px)"
-                />
+                /> */}
             </Head>
 
             <section className={`${styles.hero} ${styles.homeherosection}`}>
