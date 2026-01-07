@@ -521,7 +521,7 @@
     font-size: 15px;
     max-width: 95vw;
     display: inline-block;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   .heroRight .buttonGroup {
@@ -605,7 +605,16 @@
   }
 
   .videoContainer {
-    height: 90vw;
+    height: 88vw;
+  }
+
+  .heroRight .buttonGroup {
+    justify-content: flex-end;
+    gap: 1vw;
+    width: 53vw;
+    bottom: 0;
+    left: auto;
+    right: 8vw;
   }
 
   /* .heroRight .buttonGroup {
@@ -659,9 +668,12 @@
   } */
 
   /* .heroRight .buttonGroup {
-    width: 55vw;
-    top: 63%;
-    right: 20%;
+    justify-content: flex-end;
+        gap: 1vw;
+        width: 53vw;
+        bottom: 0;
+        left: auto;
+        right: 8vw;
   } */
 
   .heroLeft :global(div) {
