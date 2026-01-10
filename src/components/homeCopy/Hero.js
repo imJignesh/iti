@@ -46,7 +46,7 @@ const Hero = () => {
     return (
         <>
             <Head>
-                <link rel="preload" as="image" href="/images/video-cover.webp" />
+                {/* <link rel="preload" as="image" href="/images/video-cover.webp" /> */}
                 {/* Responsive Preload: Helps mobile fetch the SMALL image immediately */}
                 {/* <link
                     rel="preload"
@@ -97,7 +97,7 @@ const Hero = () => {
                                 </div>
                             </div>
 
-                            <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
+                            {/* <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
                                 <div className={styles.videoContainer}>
 
                                     <video
@@ -136,7 +136,7 @@ const Hero = () => {
                                         />
                                     </a>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
