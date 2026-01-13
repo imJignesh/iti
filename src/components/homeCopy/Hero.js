@@ -97,7 +97,7 @@ const Hero = () => {
                                 </div>
                             </div>
 
-                            {/* <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
+                            <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
                                 <div className={styles.videoContainer}>
 
                                     <video
@@ -136,7 +136,7 @@ const Hero = () => {
                                         />
                                     </a>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
