@@ -65,9 +65,11 @@ export default function SubjectsCard1({ }) {
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section testTitle"
-            style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+            style={{ animationDelay: "0.2s", fontSize: "2rem", padding: isMobile ? "0 10px" : "0" }}
           >
-            In-Depth Tutoring That Makes Every<br /> <span className="highlight"> Subject</span> Clear
+            In-Depth Tutoring That Makes Every
+            {isMobile ? " " : <br />}
+            <span className="highlight"> Subject</span> Clear
           </h3>
         </div>
       </div>

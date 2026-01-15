@@ -237,16 +237,16 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
             /* Responsive styles using custom class targeting */
             @media (min-width: 350px) {
                 .custom-flag-container img {
-                    width:40px
+                    width:25px
                 }
                 .native-select-overlay {
                     width: 25px;
                     left:10px;
                 }
                 .custom-flag-container {
-                    width: 40px;
+                    width: 25px;
                     justify-content: flex-start;
-                    left:17px;
+                    left:9px;
                 }
                 :global(.form-control){
                     padding: 10px 0 10px 35px !important;
