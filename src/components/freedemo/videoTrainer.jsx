@@ -71,7 +71,7 @@ const TrainersMessage = () => {
           className="fade-in-section"
           style={{ animationDelay: "0.1s" }}
         >
-          <h2 className="SubHeading mb-0" style={{ fontSize: "28px" }}>TRAINERS MESSAGE</h2>
+          <h2 className="SubHeading testSubheading">TRAINERS MESSAGE</h2>
         </div>
 
         {/* Main title */}
@@ -86,6 +86,7 @@ const TrainersMessage = () => {
           What Our Trainers Want <br /><span className="highlight"> Every Student </span> To Know
         </h3>
       </div>
+
 
       <div className="trainers-container fade-in-section"
         data-scroll

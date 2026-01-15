@@ -251,6 +251,7 @@
 @media (max-width: 600px) {
   .what-we-offer {
     grid-template-columns: 1fr;
+    padding: 0 15px;
   }
 
   .what-we-offer .icon-wrap img {
