@@ -473,8 +473,6 @@
     background-position: top 0vh right -2vh;
   }
 
-
-
   .videoContainer {
     height: 95vw;
   }
@@ -485,6 +483,7 @@
     width: 100%;
     text-align: center;
   }
+
 
 
 
@@ -529,7 +528,7 @@
     justify-content: flex-end;
     gap: 3vw;
     width: 55vw;
-    bottom: 0;
+    bottom: 10vw;
     left: auto;
     right: 5vw;
   }
@@ -613,7 +612,7 @@
     justify-content: flex-end;
     gap: 1vw;
     width: 53vw;
-    bottom: 0;
+    bottom: 5vw;
     left: auto;
     right: 8vw;
   }
@@ -650,7 +649,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 350px) {
   .hero {
     background: url(/images/banner-bg-mobile.webp) right -7vh top 1% / 50vh 16vh no-repeat;
   }
