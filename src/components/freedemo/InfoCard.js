@@ -1138,7 +1138,13 @@ margin-block: 30px !important;
         @media (max-width: 576px) {
           .info-row {
             font-size: 0.75rem !important;
+            margin-top: 1rem !important;
+            
           }
+            .col-lg-8 .text-white.mb-4:last-of-type {
+              padding: 1rem !important;
+                      line-height: 1.6 !important;
+            }
           .icon-img {
             width: 20px !important;
             height: 20px !important;
