@@ -525,6 +525,10 @@
 }
 
 @media (max-width: 575px) {
+    .searchBox {
+        margin-top: 10px;
+    }
+
     .card .card-text {
         width: 80%;
     }

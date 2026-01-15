@@ -100,7 +100,8 @@ const About = ({ headerHeight }) => {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <h3 class="courseTitle">Thank you for your message. We have received your email.</h3>
+                <h3 class="courseTitle">Thank you for filling out the contact form. Our team will get in touch with you within 24 hours.</h3>
+                <h3 class="courseTitle">For any urgency, please feel free to Call / WhatsApp us.</h3>
               </div>
             </div>
           </div>
