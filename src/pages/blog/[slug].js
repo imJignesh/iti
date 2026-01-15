@@ -6,7 +6,7 @@ import useSWR from 'swr';
 import { useEffect, useRef, useState, useContext } from 'react';
 import Head from 'next/head';
 import SidebarForm from '@/components/SidebarForm';
-import { useMemo } from "react";
+// import { useMemo } from "react";
 import { PopupContext } from '../../pages/_app';
 import styles from '@/styles/slug/slug.module.css';
 
@@ -41,22 +41,24 @@ const slugify = (text) => {
         .replace(/-+$/, '');
 };
 
-const getSidebarHtmlImage = () => {
-    return `
-        <div class="sidebar-image mb-3">
-            <img
-                src="/images/blog-sidebar.webp"
-                alt="Get a Free Counseling"
-                class="img-fluid w-100 rounded"
-            />
-        </div>
-    `;
-};
+const SidebarImage = () => (
+    <div className="sidebar-image mb-3">
+        <Image
+            src="/images/blog-sidebar.webp"
+            alt="Get a Free Counseling"
+            width={400}
+            height={300}
+            loading="lazy"
+            className="img-fluid w-100 rounded"
+        />
+    </div>
+);
+
 
 const getSidebarHtmlStaticMobile = () => {
     return `
         <div class="sticky-sidebar-wrapper">
-            ${getSidebarHtmlImage()}
+            <SidebarImage />
             <div class="form-container blog-container">
                 <h2>Get a Free Demo Class +<br />Free Study Resources</h2>
                 <form>

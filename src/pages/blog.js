@@ -244,7 +244,7 @@ const Blogpg = ({ headerHeight }) => {
             {/* 3. Apply the headerHeight as paddingTop to the main scroll container. */}
             <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }} >
                 <section
-                    className="blog-banner fade-in-section"
+                    className={`${styles.blogBanner} fade-in-section`}
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat
@@ -253,9 +253,9 @@ const Blogpg = ({ headerHeight }) => {
                     }}
                 >
                     {/* Dark overlay */}
-                    <div className="dark-overlay"></div>
+                    <div className={styles.darkOverlay}></div>
 
-                    <div className="overlay">
+                    <div className={styles.overlay}>
                         <h1
                             className="heading"
                             style={{
@@ -263,11 +263,24 @@ const Blogpg = ({ headerHeight }) => {
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
                                 backgroundClip: "text",
+                                fontSize: "50px",
+                                fontWeight: "700",
+                                lineHeight: "1",
+                                textTransform: "uppercase",
                             }}
                         >
-                            BlOG
+                            BLOG
                         </h1>
-                        <p className="subHeading">HOME // Blog</p>
+                        <p
+                            className="subHeading"
+                            style={{
+                                fontSize: "20px",
+                                fontWeight: "600",
+                                color: "#fff",
+                            }}
+                        >
+                            HOME // Blog
+                        </p>
                     </div>
                 </section>
                 <section className="ibdpBanner container" data-scroll data-scroll-section>

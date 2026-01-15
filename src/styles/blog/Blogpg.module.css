@@ -1,4 +1,4 @@
-/* Custom CSS for WordPress Posts Component - CSS Module Version */
+/* Custom CSS for WordPress Posts Component - CSS Module Version - OPTIMIZED */
 
 /* --- General Layout & Loading --- */
 .minHeight300px {
@@ -8,6 +8,41 @@
 /* --- Search Section --- */
 .searchBox {
     margin-top: 100px;
+}
+
+.blogBanner {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    max-width: 90vw;
+    width: 100%;
+    height: calc(90vw / 2.98);
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background-image: url("/images/blog-banner.webp");
+    background-size: cover;
+    background-position: center;
+    /* Performance optimizations */
+    will-change: transform;
+    contain: layout style paint;
+}
+
+.darkOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    color: white;
+    z-index: 1;
 }
 
 .searchBox .searchbar {
@@ -153,6 +188,10 @@
 .card .cardImgTop {
     width: 100%;
     border-radius: 1rem;
+    /* Add aspect ratio to prevent layout shift */
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    height: auto;
 }
 
 .card .cardBodyText {
@@ -221,6 +260,7 @@
     background: linear-gradient(to left, #EDFFF4, #A6EAC7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     display: inline-block;
 }
 
@@ -328,6 +368,28 @@
     top: 10px;
 }
 
+/* Loading Skeleton Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loadingSkeleton {
+    background: linear-gradient(90deg,
+            #f0f0f0 25%,
+            #e0e0e0 50%,
+            #f0f0f0 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+    border-radius: 1rem;
+    height: 400px;
+}
+
 /* Responsive Styles */
 @media(max-width: 1200px) {
     .card a.btnPrimary {
@@ -356,6 +418,15 @@
 }
 
 @media(max-width: 767px) {
+    .blogBanner {
+        height: 90vw;
+    }
+
+    .overlay {
+        bottom: 10px;
+        left: 20px;
+    }
+
     .postsList {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -368,6 +439,7 @@
 
     .card .cardImgTop {
         height: auto;
+        aspect-ratio: 3 / 2;
     }
 
     .card .cardTitle {
@@ -435,5 +507,13 @@
 @media (max-width: 400px) {
     .categoryButtonsContainer {
         margin-left: 0;
+    }
+
+    .overlay h1 {
+        font-size: 35px !important;
+    }
+
+    .overlay p {
+        font-size: 16px !important;
     }
 }
