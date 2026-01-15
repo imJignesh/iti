@@ -473,6 +473,8 @@
     background-position: top 0vh right -2vh;
   }
 
+
+
   .videoContainer {
     height: 95vw;
   }
@@ -483,7 +485,6 @@
     width: 100%;
     text-align: center;
   }
-
 
 
 
@@ -627,7 +628,7 @@
   }
 
   .heroLeft :global(div) {
-    padding-top: 0px;
+    padding-top: 7px;
   }
 
   .heroRight .buttonGroup :global(.buttonBlue),
