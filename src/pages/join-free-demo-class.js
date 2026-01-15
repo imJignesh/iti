@@ -107,10 +107,10 @@ const FreeDemo = ({ headerHeight }) => {
                 description="Book a free demo class with Ignite Training Institute in Dubai, UAE. Experience our personalized tutoring for IB, IGCSE, A-Levels, & AP before enrolling."
             />
             <div
-                ref={scrollRef}
-                data-scroll-container
+                // Removed: ref={scrollRef}
+                className='overflow-hidden innerpage'
+                // Removed: data-scroll-container
                 style={{ paddingTop: `${headerHeight}px` }}
-                className={styles.innerpage}
             >
                 <section data-scroll-section>
                     <InfoCard />
