@@ -473,6 +473,8 @@
     background-position: top 0vh right -2vh;
   }
 
+
+
   .videoContainer {
     height: 95vw;
   }
@@ -483,7 +485,6 @@
     width: 100%;
     text-align: center;
   }
-
 
 
 
@@ -528,7 +529,7 @@
     justify-content: flex-end;
     gap: 3vw;
     width: 55vw;
-    bottom: 10vw;
+    bottom: 0;
     left: auto;
     right: 5vw;
   }
@@ -564,6 +565,10 @@
   .hero {
     padding: 10px 0 0 0;
     background-size: 90%;
+  }
+
+  .heroRight {
+    padding-top: 20px;
   }
 
   .heroRight .buttonGroup :global(button) {
@@ -612,7 +617,7 @@
     justify-content: flex-end;
     gap: 1vw;
     width: 53vw;
-    bottom: 5vw;
+    bottom: 0;
     left: auto;
     right: 8vw;
   }
@@ -649,7 +654,7 @@
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 360px) {
   .hero {
     background: url(/images/banner-bg-mobile.webp) right -7vh top 1% / 50vh 16vh no-repeat;
   }

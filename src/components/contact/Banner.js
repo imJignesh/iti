@@ -1,23 +1,22 @@
 "use client";
 
-import styles from "@/styles/contact/contact.module.css";
-
 export default function ContactBanner() {
   return (
     <section
-      className={`${styles.careersBanner} ${styles.fadeInSection}`}
+      className="careers-banner fade-in-section"
       data-scroll
-      data-scroll-class={styles.isInview}
+      data-scroll-class="is-inview"
       data-scroll-repeat
       style={{
         animationDelay: "0.3s",
       }}
     >
-      <div className={styles.darkOverlay}></div>
+      {/* Dark overlay */}
+      <div className="dark-overlay"></div>
 
-      <div className={styles.overlay}>
+      <div className="overlay">
         <h1
-          className={styles.heading}
+          className="heading"
           style={{
             background: "linear-gradient(90deg, #EDFFF4, #A6EAC7)",
             WebkitBackgroundClip: "text",
@@ -27,8 +26,10 @@ export default function ContactBanner() {
         >
           CONTACT US
         </h1>
-        <p className={styles.subHeading}>HOME // CONTACT</p>
+        <p className="subHeading">HOME // CONTACT</p>
       </div>
+
+
     </section>
   );
 }

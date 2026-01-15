@@ -1231,6 +1231,7 @@ export default function InfoCard() {
               order: 1 !important;
               margin-top: 3rem !important;
               padding: 2rem 2.3rem 0 1.5rem!important;
+                           gap:0.5rem;
             }
 
             .col-lg-4 {

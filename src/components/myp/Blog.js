@@ -1,28 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import he from "he";
+import { useEffect } from "react";
 import { useScroll } from "../LocomotiveScrollProvider";
-import styles from "@/styles/bloginnerpage.module.css";
 
 const fetchBlogs = async () => {
     const res = await fetch(
         "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=3&_embed"
     );
-    return res.json();
+    const data = await res.json();
+    return data;
 };
 
+// create javascript object for blog data
 const createBlogData = async () => {
     const data = await fetchBlogs();
 
-    return data.map((post) => {
+    const formattedBlogs = data.map((post) => {
+        // Strip HTML tags
         const rawExcerpt = post.excerpt.rendered.replace(/<[^>]*>?/gm, "");
         const rawTitle = post.title.rendered.replace(/<[^>]*>?/gm, "");
 
+        // Decode HTML entities (&amp;, &#8217;, etc.)
         const decodedExcerpt = he.decode(rawExcerpt);
         const decodedTitle = he.decode(rawTitle);
 
+        // Trim to ~100 chars without cutting words
         const trimmedExcerpt =
             decodedExcerpt.length > 80
-                ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 80)) + "..."
+                ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 80)) +
+                "..."
                 : decodedExcerpt;
 
         return {
@@ -34,6 +40,8 @@ const createBlogData = async () => {
             link: post.slug,
         };
     });
+
+    return formattedBlogs;
 };
 
 const staticBlogs = [
@@ -58,56 +66,62 @@ const staticBlogs = [
 ];
 
 const Blog = () => {
-    const [blogData, setBlogData] = useState(staticBlogs);
+    const [blogData, setBlogData] = React.useState(staticBlogs);
     const scrollRef = useScroll();
 
     useEffect(() => {
-        createBlogData().then(setBlogData);
+        const fetchData = async () => {
+            const data = await createBlogData();
+            setBlogData(data);
+        };
+        fetchData();
     }, []);
 
     useEffect(() => {
-        if (blogData.length && scrollRef?.scroll) {
+        if (blogData.length > 0 && scrollRef?.scroll) {
             scrollRef.scroll.update();
         }
     }, [blogData, scrollRef]);
 
     return (
-        <section className={styles.blogSection}>
+        <section className="blogSection">
             <div className="container">
                 <div className="row gap-5 gap-lg-0">
-                    <div className={`col-12 col-lg-5 ${styles.blogLeft}`}>
+                    <div className="col-12 col-lg-5 blogLeft">
                         <div
-                            className={`fade-in-section ${styles.blogHeadingRow}`}
+                            className="fade-in-section blogHeadingRow"
                             data-scroll
                             data-scroll-class="is-inview"
+                            data-scroll-repeat="true"
                             style={{ animationDelay: "0.1s" }}
                         >
                             <h2 className="SubHeading">BLOGS</h2>
                         </div>
-
                         <h3
-                            className={`fade-in-section ${styles.blogTitle}`}
                             data-scroll
                             data-scroll-class="is-inview"
+                            data-scroll-repeat="true"
+                            className="fade-in-section blogTitle"
                             style={{ animationDelay: "0.2s" }}
                         >
-                            Insights to Help You Understand, Improve, &amp; Succeed
+                            Insights to Help You Understand, Improve, & Succeed
+                            {/* <span className="blogHighlight"> ADIPISCING</span> */}
                         </h3>
-
                         <div
-                            className={`fade-in-section ${styles.blogSubtitle}`}
                             data-scroll
                             data-scroll-class="is-inview"
+                            data-scroll-repeat="true"
+                            className="fade-in-section blogSubtitle"
                             style={{ animationDelay: "0.3s" }}
                         >
                             Dive Into Our Signature Blogs
                         </div>
-
                         <a href="/blog" className="nodecoration">
                             <button
-                                className={`${styles.blogAllBtn} buttonBlue fade-in-section`}
                                 data-scroll
                                 data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="blogAllBtn buttonBlue fade-in-section"
                                 style={{ animationDelay: "0.4s" }}
                             >
                                 VIEW ALL BLOGS
@@ -121,56 +135,54 @@ const Blog = () => {
                         </a>
                     </div>
 
-                    <div className={`col-12 col-lg-7 ${styles.blogRight}`}>
-                        {blogData.map((blog, i) => (
-                            <div
-                                key={i}
-                                className={`fade-in-section ${styles.blogCard}`}
-                                data-scroll
-                                data-scroll-class="is-inview"
-                                style={{ animationDelay: "0.2s" }}
-                            >
-                                <a href={`/blog/${blog.link}`} className="nodecoration">
-                                    <img
+                    <div className="col-12 col-lg-7 blogRight">
+                        {blogData &&
+                            blogData.map((blog, i) => (
+                                <div
+                                    key={i}
+                                    data-scroll
+                                    data-scroll-class="is-inview"
+                                    data-scroll-repeat="true"
+                                    className="fade-in-section blogCard"
+                                    style={{ animationDelay: "0.2s" }}
+                                >
+                                    <a href={`/blog/${blog.link}`} className="nodecoration"><img
                                         src={blog.img}
                                         alt="blog"
-                                        className={styles.blogImg}
                                         data-scroll
                                         data-scroll-class="is-clipped"
+                                        data-scroll-repeat="true"
                                         data-scroll-offset="-10%"
-                                    />
-                                </a>
-
-                                <div className={styles.blogCardContent}>
-                                    <div className={styles.blogCardTitle}>{blog.title}</div>
-                                    <div className={styles.blogCardDesc}>{blog.desc}</div>
-                                    <span className={styles.blogCardLine}></span>
-
-                                    <a href={`/blog/${blog.link}`} className="nodecoration">
-                                        <button
-                                            className={`${styles.blogReadMoreBtn} buttonSkyBlue`}
-                                        >
-                                            READ MORE
-                                            <span className={styles.blogReadMoreArrow}>
-                                                <img
-                                                    src="/images/right-arrow-blue.webp"
-                                                    alt="arrow"
-                                                    width={20}
-                                                    height={20}
-                                                />
-                                            </span>
-                                        </button>
-                                    </a>
+                                        className="blogImg"
+                                    /></a>
+                                    <div className="blogCardContent">
+                                        <div className="blogCardTitle">{blog.title}</div>
+                                        <div className="blogCardDesc">{blog.desc}</div>
+                                        <span className="blogCardLine"></span>
+                                        <a href={`/blog/${blog.link}`} className="nodecoration">
+                                            <button className="blogReadMoreBtn buttonSkyBlue">
+                                                READ MORE
+                                                <span className="blogReadMoreArrow">
+                                                    <img
+                                                        src="/images/right-arrow-blue.webp"
+                                                        alt="arrow"
+                                                        width={20}
+                                                        height={20}
+                                                    />
+                                                </span>
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
                     </div>
 
                     <a href="/blog" className="nodecoration d-lg-none">
                         <button
-                            className={`${styles.blogAllBtnmobile} buttonBlue fade-in-section`}
                             data-scroll
                             data-scroll-class="is-inview"
+                            data-scroll-repeat="true"
+                            className="blogAllBtnmobile buttonBlue fade-in-section"
                             style={{ animationDelay: "0.4s" }}
                         >
                             VIEW ALL BLOGS

@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 import Image from 'next/image';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
-import styles from '@/styles/blog/Blogpg.module.css';
+
 
 /**
  * Truncates a string to a specified number of characters.
@@ -244,7 +244,7 @@ const Blogpg = ({ headerHeight }) => {
             {/* 3. Apply the headerHeight as paddingTop to the main scroll container. */}
             <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }} >
                 <section
-                    className={`${styles.blogBanner} fade-in-section`}
+                    className="blog-banner fade-in-section"
                     data-scroll
                     data-scroll-class="is-inview"
                     data-scroll-repeat
@@ -253,9 +253,9 @@ const Blogpg = ({ headerHeight }) => {
                     }}
                 >
                     {/* Dark overlay */}
-                    <div className={styles.darkOverlay}></div>
+                    <div className="dark-overlay"></div>
 
-                    <div className={styles.overlay}>
+                    <div className="overlay">
                         <h1
                             className="heading"
                             style={{
@@ -263,24 +263,11 @@ const Blogpg = ({ headerHeight }) => {
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
                                 backgroundClip: "text",
-                                fontSize: "50px",
-                                fontWeight: "700",
-                                lineHeight: "1",
-                                textTransform: "uppercase",
                             }}
                         >
-                            BLOG
+                            BlOG
                         </h1>
-                        <p
-                            className="subHeading"
-                            style={{
-                                fontSize: "20px",
-                                fontWeight: "600",
-                                color: "#fff",
-                            }}
-                        >
-                            HOME // Blog
-                        </p>
+                        <p className="subHeading">HOME // Blog</p>
                     </div>
                 </section>
                 <section className="ibdpBanner container" data-scroll data-scroll-section>
@@ -290,7 +277,7 @@ const Blogpg = ({ headerHeight }) => {
 
                     {/* Loading spinner always within the container */}
                     {isLoading && posts.length === 0 && (
-                        <div className={`d-flex justify-content-center align-items-center py-5 ${styles.minHeight300px}`}>
+                        <div className="d-flex justify-content-center align-items-center py-5" style={{ minHeight: '300px' }}>
                             <div className="spinner-border text-primary" role="status">
                                 <span className="visually-hidden">Loading...</span>
                             </div>
@@ -301,12 +288,12 @@ const Blogpg = ({ headerHeight }) => {
                     {(!isLoading || posts.length > 0) && (
                         <>
                             {/* Blog Search */}
-                            <div className={`mb-4 p-4 bg-white rounded ${styles.searchBox}`}>
+                            <div className="mb-4 p-4 bg-white searchBox rounded ">
                                 <div className="input-group mb-3">
                                     <input
                                         type="text"
                                         placeholder="SEARCH"
-                                        className={`form-control rounded-pill pe-5 ${styles.searchbar}`}
+                                        className="form-control rounded-pill pe-5 searchbar"
                                         value={searchTerm}
                                         onChange={handleSearchChange}
                                     />
@@ -323,10 +310,10 @@ const Blogpg = ({ headerHeight }) => {
                             </div>
 
                             {/* Category List */}
-                            <div className={`p-4 bg-white rounded ${styles.categoryList}`}>
-                                <div className={`d-flex flex-wrap justify-content-center gap-3 ${styles.categoryButtonsContainer}`}>
+                            <div className=" p-4 bg-white rounded categoryList ">
+                                <div className="d-flex flex-wrap category-buttons-container justify-content-center gap-3">
                                     <button
-                                        className={`btn ${styles.categoryButton} ${selectedCategories.length === 0 && !searchTerm ? styles.categoryButtonSelected : ''}`}
+                                        className={`btn category-button ${selectedCategories.length === 0 && !searchTerm ? 'category-button-selected' : ''}`}
                                         onClick={() => handleAllCategoriesClick()}
                                     >
                                         All Categories
@@ -334,7 +321,7 @@ const Blogpg = ({ headerHeight }) => {
                                     {categories.map((category) => (
                                         <button
                                             key={category.id}
-                                            className={`btn ${styles.categoryButton} ${selectedCategories.includes(category.id) ? styles.categoryButtonSelected : ''}`}
+                                            className={`btn category-button ${selectedCategories.includes(category.id) ? 'category-button-selected' : ''}`}
                                             onClick={() => handleCategoryClick(category.id)}
                                         >
                                             {category.name}
@@ -347,7 +334,7 @@ const Blogpg = ({ headerHeight }) => {
                             {posts.length === 0 && !isValidating && !isLoading ? (
                                 <div className="text-center text-muted h4 py-5">No posts found for this category or search term.</div>
                             ) : (
-                                <div className={`mb-4 p-4 ${styles.postsList}`}>
+                                <div className="mb-4 p-4 postsList ">
                                     {posts.map((post) => {
                                         const featuredImage = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
                                         const postTags = post.tags.map(tagId => tagsMap[tagId]).filter(Boolean);
@@ -356,26 +343,26 @@ const Blogpg = ({ headerHeight }) => {
                                         const postTitle = encodeURIComponent(post.title.rendered);
 
                                         return (
-                                            <div className={styles.col} key={post.id}>
-                                                <div className={`${styles.card} border-0 position-relative`}>
+                                            <div className="col" key={post.id}>
+                                                <div className="card border-0 position-relative">
                                                     <div className="p-3 position-relative">
 
                                                         {featuredImage && (
                                                             <a href={`/blog/${postSlug}`} rel="noopener noreferrer">
                                                                 <img
                                                                     src={featuredImage}
-                                                                    className={styles.cardImgTop}
+                                                                    className="card-img-top"
                                                                     alt={post.title.rendered}
                                                                     style={{ objectFit: 'cover', objectPosition: 'center' }}
                                                                     onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/600x400/E0F2F7/333333?text=No+Image`; }}
                                                                 />
                                                             </a>
                                                         )}
-                                                        <div className={`${styles.cardBodyText} d-flex flex-column`}>
+                                                        <div className="card-body-text d-flex flex-column">
 
 
                                                             <div className="d-flex justify-content-between align-items-center mb-3">
-                                                                <p className={styles.cardSubtitle}>
+                                                                <p className="card-subtitle">
                                                                     {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}
                                                                 </p>
                                                                 <div className="d-flex gap-2">
@@ -383,7 +370,7 @@ const Blogpg = ({ headerHeight }) => {
                                                                         href={`https://www.facebook.com/sharer/sharer.php?u=${postLink}`}
                                                                         target="_blank"
                                                                         rel="noopener noreferrer"
-                                                                        className={`text-muted ${styles.socialIconHover}`}
+                                                                        className="text-muted social-icon-hover"
                                                                         aria-label="Share on Facebook"
                                                                     >
                                                                         <img src="/images/facebk.webp" alt="Facebook" width="18" height="18" />
@@ -393,7 +380,7 @@ const Blogpg = ({ headerHeight }) => {
                                                                         href={`https://twitter.com/intent/tweet?url=${postLink}&text=${postTitle}`}
                                                                         target="_blank"
                                                                         rel="noopener noreferrer"
-                                                                        className={`text-muted ${styles.socialIconHover}`}
+                                                                        className="text-muted social-icon-hover"
                                                                         aria-label="Share on X (Twitter)"
                                                                     >
                                                                         <img src="/images/x.webp" alt="X (Twitter)" width="18" height="18" />
@@ -401,7 +388,7 @@ const Blogpg = ({ headerHeight }) => {
                                                                     </a>
                                                                     <a
                                                                         href={`mailto:?subject=${postTitle}&body=Check out this blog post: ${postLink}`}
-                                                                        className={`text-muted ${styles.socialIconHover}`}
+                                                                        className="text-muted social-icon-hover"
                                                                         aria-label="Share via Email"
                                                                     >
                                                                         <img src="/images/mail.webp" alt="Email" width="18" height="18" />
@@ -412,12 +399,12 @@ const Blogpg = ({ headerHeight }) => {
                                                             </div>
                                                             <a href={`/blog/${postSlug}`} rel="noopener noreferrer">
                                                                 <h5
-                                                                    className={styles.cardTitle}
+                                                                    className="card-title"
                                                                     dangerouslySetInnerHTML={{ __html: post.title.rendered }}
                                                                 />
                                                             </a>
                                                             <div
-                                                                className={styles.cardText}
+                                                                className="card-text"
                                                                 dangerouslySetInnerHTML={{
                                                                     __html: limitChars(
                                                                         post.excerpt.rendered.replace(/<[^>]*>/g, ''),
@@ -428,7 +415,7 @@ const Blogpg = ({ headerHeight }) => {
 
                                                             <a
                                                                 href={`/blog/${postSlug}`}
-                                                                className={`btn ${styles.btnPrimary} rounded-circle position-absolute m-4 d-flex align-items-center justify-content-center`}
+                                                                className="btn btn-primary rounded-circle position-absolute m-4 d-flex align-items-center justify-content-center"
                                                                 rel="noopener noreferrer"
                                                                 aria-label="Read More"
                                                                 style={{}}
