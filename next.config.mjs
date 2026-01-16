@@ -74,11 +74,9 @@ const CATEGORY_SLUGS = [
   'universities',
 ];
 
-// NEXT.JS 16 COMPATIBLE CONFIG - OPTIMIZED FOR PERFORMANCE
 const nextConfig = {
   reactStrictMode: true,
 
-  // Optimize images (Next.js 16 compatible)
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
@@ -89,13 +87,9 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Compression
   compress: true,
-
-  // Generate ETags
   generateEtags: true,
 
-  // Production optimizations
   ...(process.env.NODE_ENV === 'production' && {
     compiler: {
       removeConsole: {
@@ -105,14 +99,12 @@ const nextConfig = {
     },
   }),
 
-  // Experimental features for optimization
   experimental: {
     optimizePackageImports: ['lucide-react', 'react-phone-input-2'],
   },
 
   turbopack: {},
 
-  // Webpack optimization
   webpack: (config, { dev, isServer }) => {
     if (!dev) {
       config.optimization = {
@@ -124,14 +116,12 @@ const nextConfig = {
           cacheGroups: {
             default: false,
             vendors: false,
-            // Vendor chunk
             vendor: {
               name: 'vendor',
               chunks: 'all',
               test: /node_modules/,
               priority: 20,
             },
-            // Common code
             common: {
               name: 'common',
               minChunks: 2,
@@ -140,28 +130,24 @@ const nextConfig = {
               reuseExistingChunk: true,
               enforce: true,
             },
-            // React core libraries
             react: {
               test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
               name: 'react',
               chunks: 'all',
               priority: 30,
             },
-            // SEPARATE CHUNK FOR SWIPER (can be lazy loaded)
             swiper: {
               test: /[\\/]node_modules[\\/]swiper[\\/]/,
               name: 'swiper',
               chunks: 'async',
               priority: 25,
             },
-            // SEPARATE CHUNK FOR LOCOMOTIVE SCROLL (can be lazy loaded)
             locomotiveScroll: {
               test: /[\\/]node_modules[\\/]locomotive-scroll[\\/]/,
               name: 'locomotive-scroll',
               chunks: 'async',
               priority: 25,
             },
-            // Bootstrap separate chunk
             bootstrap: {
               test: /[\\/]node_modules[\\/](bootstrap|@popperjs)[\\/]/,
               name: 'bootstrap',
@@ -176,56 +162,28 @@ const nextConfig = {
     return config;
   },
 
-  // Performance headers
   async headers() {
     return [
       {
         source: '/:path*',
         headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
-          },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY'
-          },
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
         ],
       },
       {
         source: '/images/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
         source: '/videos/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
         source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
         source: '/',
@@ -235,6 +193,20 @@ const nextConfig = {
             value: '<https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://www.googletagmanager.com>; rel=dns-prefetch'
           },
         ],
+      },
+    ];
+  },
+
+  // ADD REWRITES FOR DYNAMIC ROBOTS AND SITEMAP
+  async rewrites() {
+    return [
+      {
+        source: '/robots.txt',
+        destination: '/robots.txt.js',
+      },
+      {
+        source: '/sitemap.xml',
+        destination: '/sitemap.xml.js',
       },
     ];
   },
@@ -289,7 +261,6 @@ const nextConfig = {
   },
 };
 
-// Wrap config with bundle analyzer (only runs when ANALYZE=true)
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
   openAnalyzer: true,
