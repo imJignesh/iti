@@ -28,7 +28,13 @@ export default function InfoCard() {
   const scrollToForm = () => {
     const formElement = document.querySelector('.right-form');
     if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Adding a slight delay ensures any keyboard or layout shifts are settled
+      setTimeout(() => {
+        formElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 100);
     }
   };
 
@@ -377,7 +383,12 @@ export default function InfoCard() {
                 data-scroll-class="is-inview"
                 data-scroll-repeat>
                 <button
-                  onClick={scrollToForm}
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToForm();
+                  }}
+
                   style={{ textDecoration: "none", border: "none", background: "transparent", padding: 0 }}
                 >
                   <div
