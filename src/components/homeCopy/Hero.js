@@ -48,6 +48,7 @@ const Hero = () => {
             <Head>
                 {/* <link rel="preload" as="image" href="/images/video-cover.webp" /> */}
                 {/* Responsive Preload: Helps mobile fetch the SMALL image immediately */}
+
                 {/* <link
                     rel="preload"
                     as="image"
@@ -55,6 +56,7 @@ const Hero = () => {
                     fetchPriority="high"
                     media="(min-width: 576px)"
                 />
+
                 <link
                     rel="preload"
                     as="image"
