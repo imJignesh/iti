@@ -70,7 +70,7 @@ const Hero = () => {
                         <div className={`row ${styles.heroMain}`}>
                             <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
                                 <div className={`${styles.heroMainHeading}`}>
-                                    <h2 className={styles.SubHeading}>BEST TUTORS IN UAE</h2>
+                                    <h2 className={styles.SubHeading}>BEST TUTORS IN UAE.</h2>
                                 </div>
 
                                 <div className="d-lg-none">
