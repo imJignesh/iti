@@ -3,13 +3,13 @@ import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation } from "swiper/modules";
 import InfoCard from '@/components/freedemo/InfoCard';
 import SubjectsCard from '@/components/freedemo/SubjectCard';
 import MarqueeBanner from '@/components/freedemo/MarqueeBanner';
 import Testimonial from "@/components/freedemo/Testimonial";
-import TrainersMessage from "@/components/freedemo/videoTrainer";
+// import TrainersMessage from "@/components/freedemo/videoTrainer";
 import CallToAction from "@/components/freedemo/CallToAction";
 import SEO from "@/components/SEO";
 
@@ -295,9 +295,9 @@ const FreeDemo = ({ headerHeight }) => {
 
                 <Testimonial />
 
-                <section data-scroll-section>
+                {/* <section data-scroll-section>
                     <TrainersMessage />
-                </section>
+                </section> */}
 
                 <section data-scroll-section>
                     <CallToAction />
