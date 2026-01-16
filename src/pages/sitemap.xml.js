@@ -30,7 +30,6 @@ async function fetchAllWordPressData(endpoint) {
 
             if (Array.isArray(data) && data.length > 0) {
                 allItems = [...allItems, ...data]
-                // If we got 100 items, there might be more on the next page
                 if (data.length === 100) {
                     page++
                 } else {
@@ -50,28 +49,50 @@ async function fetchAllWordPressData(endpoint) {
 function generateSiteMap(posts, categories) {
     return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     ${STATIC_ROOT_PAGES.map((page) => `<url><loc>${BASE_URL}${page ? `/${page}` : ''}</loc></url>`).join('')}
-     ${STATIC_COURSES_PAGES.map((page) => `<url><loc>${BASE_URL}/courses/${page}</loc></url>`).join('')}
-     ${categories.map(({ slug }) => `<url><loc>${BASE_URL}/category/${slug}</loc></url>`).join('')}
-     ${posts.map(({ slug, modified }) => `
+     ${STATIC_ROOT_PAGES.map((page) => {
+        const isTutorPage = page.includes('tutor') || page.includes('curriculum')
+        return `
+       <url>
+           <loc>${BASE_URL}${page ? `/${page}` : ''}</loc>
+           ${isTutorPage ? '<priority>0.9</priority>' : ''}
+       </url>`
+    }).join('')}
+     
+     ${STATIC_COURSES_PAGES.map((page) => `
+       <url>
+           <loc>${BASE_URL}/courses/${page}</loc>
+           <priority>0.9</priority>
+       </url>`).join('')}
+
+     ${categories.map(({ slug }) => `
+       <url>
+           <loc>${BASE_URL}/category/${slug}</loc>
+       </url>`).join('')}
+
+     ${posts.map(({ slug }) => `
        <url>
            <loc>${BASE_URL}/blog/${slug}</loc>
-           <lastmod>${new Date(modified).toISOString()}</lastmod>
        </url>`).join('')}
    </urlset>`
 }
 
 export async function getServerSideProps({ res }) {
-    const [posts, categories] = await Promise.all([
-        fetchAllWordPressData('posts'),
-        fetchAllWordPressData('categories')
-    ])
+    try {
+        const [posts, categories] = await Promise.all([
+            fetchAllWordPressData('posts'),
+            fetchAllWordPressData('categories')
+        ])
 
-    const sitemap = generateSiteMap(posts, categories)
+        const sitemap = generateSiteMap(posts, categories)
 
-    res.setHeader('Content-Type', 'text/xml')
-    res.write(sitemap)
-    res.end()
+        res.setHeader('Content-Type', 'text/xml')
+        res.write(sitemap)
+        res.end()
+    } catch (e) {
+        console.error(e)
+        res.statusCode = 500
+        res.end()
+    }
 
     return { props: {} }
 }
