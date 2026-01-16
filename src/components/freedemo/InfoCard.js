@@ -393,6 +393,7 @@ export default function InfoCard() {
                       marginTop: isMobile ? "auto" : "40px",
                     }}
                   >
+
                     <span style={{ letterSpacing: isMobile ? "0px" : "0px" }}>
                       Get A Free Demo
                     </span>
