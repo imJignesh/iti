@@ -1,9 +1,15 @@
 "use client";
+
 import Image from "next/image";
+
 import { useEffect, useState } from "react";
+
 import GlobalPhoneInput from '../GlobalPhoneInput';
 
+
+
 export default function InfoCard() {
+
   const handlePhoneChange = (value) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -14,8 +20,18 @@ export default function InfoCard() {
       setErrors(prevErrors => ({ ...prevErrors, phone: '' }));
     }
   };
+
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileButton, setIsMobileButton] = useState(false);
+
+  // Function to scroll to form on mobile
+  const scrollToForm = () => {
+    const formElement = document.querySelector('.right-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   // --- START: Zoho Integration State ---
   const [pageInfo, setPageInfo] = useState('');
   // Form Data (course is included for consistency/future use, but optional for this form's validation)
@@ -356,15 +372,15 @@ export default function InfoCard() {
                 Experience curriculum-aligned tutoring for IBDP, MYP, IGCSE, A-Levels, & AP delivered by expert educators who know the exams inside out, with a focus on clarity, measurable progress, & real academic results.
               </p>
 
-              <div className="d-flex gap-3 fade-in-section"
+              <div className="d-flex gap-3 fade-in-section d-lg-none"
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat>
-                <a
-                  href="/join-free-demo-class/"
-                  style={{ textDecoration: "none" }}
+                <button
+                  onClick={scrollToForm}
+                  style={{ textDecoration: "none", border: "none", background: "transparent", padding: 0 }}
                 >
-                  <button
+                  <div
                     className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
                     style={{
                       background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
@@ -387,8 +403,8 @@ export default function InfoCard() {
                       width={35}
                       height={35}
                     />
-                  </button>
-                </a>
+                  </div>
+                </button>
               </div>
 
             </div>
