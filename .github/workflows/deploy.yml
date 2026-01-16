@@ -3,12 +3,12 @@ name: Deploy to AWS CloudPanel
 on:
   push:
     branches:
-      - dev  # Triggers when code is pushed to dev branch
+      - dev
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Deploy to server
       uses: appleboy/ssh-action@master
@@ -18,4 +18,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /home/click4demos-ignite/htdocs/ignite.click4demos.co.in
-          ./deploy.sh
+          bash deploy.sh
