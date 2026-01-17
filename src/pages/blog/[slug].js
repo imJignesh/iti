@@ -46,7 +46,7 @@ const getSidebarHtmlImage = () => {
             <img
                 src="/images/blog-sidebar.webp"
                 alt="Get a Free Counseling"
-                class="img-fluid w-100 rounded"
+                class="img-fluid gif-3 w-100 rounded"
             />
         </div>
     `;
@@ -153,14 +153,14 @@ const TOCPostContent = ({ content, toc }) => {
 
     const gif1Html = `
         <div class="blog-gif-wrapper my-5">
-            <a href="/join-free-demo-class/"><img src="/images/blog-gif-1.gif" alt="Illustrative GIF 1" class="img-fluid w-100 rounded" /></a>
+            <a href="/join-free-demo-class/"><img src="/images/blog-gif-1.gif" alt="Illustrative GIF 1" class="img-fluid gif-1 w-100 rounded" /></a>
         </div>
     `;
     const video1Html = `
         <div class="blog-video-wrapper my-5">
             <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
                 <video
-                    class="img-fluid w-100 rounded"
+                    class="img-fluid gif-1 w-100 rounded"
                     autoPlay
                     muted
                     loop
@@ -181,7 +181,7 @@ const TOCPostContent = ({ content, toc }) => {
             <img 
                 src="/images/blog-gif-2.gif" 
                 alt="Illustrative GIF 2 (Click to open popup)" 
-                class="img-fluid w-100 rounded" 
+                class="img-fluid gif-2 w-100 rounded" 
             />
         </div>
     `;
@@ -189,7 +189,7 @@ const TOCPostContent = ({ content, toc }) => {
         <div class="blog-video-wrapper my-5">
             <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
                 <video
-                    class="img-fluid w-100 rounded"
+                    class="img-fluid gif-2 w-100 rounded"
                     autoPlay
                     muted
                     loop
@@ -632,7 +632,7 @@ export default function PostDetail() {
                             <img
                                 src={featuredImage}
                                 alt={post.title.rendered}
-                                className="img-fluid"
+                                className="img-fluid gif-4"
                                 style={{ objectFit: 'cover' }}
                             />
                         </div>
