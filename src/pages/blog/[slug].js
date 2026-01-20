@@ -42,14 +42,12 @@ const slugify = (text) => {
 
 const getSidebarHtmlImage = () => {
     return `
-        <div class="sidebar-image mb-3 sticky-gif">
-        <a href="/join-free-demo-class/">
+        <div class="sidebar-image mb-3">
             <img
                 src="/images/blog-sidebar.webp"
                 alt="Get a Free Counseling"
                 class="img-fluid gif-3 w-100 rounded"
             />
-        </a>
         </div>
     `;
 };
@@ -722,7 +720,7 @@ export default function PostDetail() {
                                             data-scroll
                                             data-scroll-class="is-inview"
                                             data-scroll-repeat="true"
-                                            className="buttonBlue author-section-cta"
+                                            className="buttonBlue"
                                             style={{ animationDelay: "0.4s" }}
                                         >
                                             Get Tutor Help
