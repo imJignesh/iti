@@ -219,12 +219,17 @@
 }
 
 .footerWrap .footerAddress,
-.footerWrap .footerContact {
+.footerWrap .footerContact,
+.footerWrap .footerContact a {
   font-size: 1rem;
   margin-bottom: 10px;
   opacity: 0.9;
   color: var(--white-color);
   opacity: 0.7;
+}
+
+.footerWrap .footerContact a:hover {
+  opacity: 1;
 }
 
 .socialmediafooter {
