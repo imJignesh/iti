@@ -14,11 +14,11 @@ export default function Accordion() {
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Ignite Training Institute - IGCSE Tuition In Dubai, UAE For A Focused Academic Success</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite Training Institute offers IGCSE tuition in Dubai and across the UAE to help students build strong academic foundations. Our experienced tutors provide structured lessons aligned with major boards like Edexcel, Cambridge, and Oxford AQA.
             <br />
             Students receive step-by-step support in subjects like Math, Sciences, English, and Business Studies. Tuition sessions focus on concept clarity, application, and exam preparation. Regular practice with past papers and targeted revision builds student confidence. With Ignite’s expert guidance, academic success becomes a realistic goal.
-          </h3>
+          </p>
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
@@ -27,27 +27,27 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">IGCSE Tutoring In Dubai With Expert Subject Support</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             At Ignite, students benefit from expert-led IGCSE tutoring in Dubai across all core and elective subjects. Our subject specialists offer in-depth explanations, practice questions, and assessment strategies tailored to individual needs. Each session is interactive and goal-oriented, focusing on helping students overcome their learning gaps.
             <br />
             Whether your child needs help with Physics calculations or English essay writing, we offer structured support. Tutors also guide students on how to approach different paper formats. This focused tutoring helps students stay on track and perform better.
-          </h3>          <br />
+          </p>          <br />
 
 
           <h2 className="title">GCSE Tutors In Dubai For Personalized Learning & Real Results</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite’s GCSE tutors in Dubai provide personalized learning plans that cater to each student’s academic goals and challenges. Whether your child is preparing for final exams or catching up on tricky topics, our tutors are here to help. We support students in Math, English, Sciences, and more, following UK curriculum standards.
             <br />
             Sessions include skill-building, exam techniques, and consistent feedback to ensure steady progress. With both in-person and online options available, students receive flexible and focused academic support. The result is improved understanding, confidence, and grades.
-          </h3>          <br />
+          </p>          <br />
 
 
           <h2 className="title">IGCSE Coaching That Builds Confidence, Clarity & Top Exam Scores</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite’s IGCSE coaching program is designed to help students succeed through clear instruction, practice, and expert feedback. We break down complex concepts, teach smart problem-solving strategies, and help students master exam formats. Coaching includes targeted revision, timed practice, and personalized tips for improvement.
             <br />
             Tutors ensure students feel confident in both their understanding and performance. From subject knowledge to exam technique, our coaching covers it all. With Ignite, students are empowered to aim for top scores in their IGCSE exams.
-          </h3>          <br />
+          </p>          <br />
 
 
           <h2 className="title">How Ignite’s IGCSE Classes Guide Students To Success?</h2>

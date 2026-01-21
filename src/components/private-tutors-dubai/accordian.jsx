@@ -14,11 +14,10 @@ export default function Accordion() {
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Ignite Training Institute – Expert Private Tutor In Dubai For Academic Support</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             At Ignite, we understand that every learner is unique.<br />
             Our expert private tutors in Dubai offer personalized academic support tailored to individual learning needs and pace. With deep subject knowledge and proven teaching strategies, we guide students through challenging topics and concepts. Whether your child needs help staying ahead or catching up, our tutors provide consistent mentorship and clarity. We nurture curiosity, boost motivation, and ensure steady academic progress. With Ignite, students don’t just learn — they thrive.
-          </h3>
-        </div>
+          </p>        </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
 
@@ -26,59 +25,52 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">Private Tuition Centre In Dubai For All Subjects & Future Readiness</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite’s private tuition centre in Dubai supports students across all major subjects from Math and Science to English and Business Studies.<br />
             Our goal goes beyond grades; we prepare students for the demands of future learning and life. Through focused academic support and skill-building, we help learners develop confidence, discipline, and critical thinking. Each session is designed to empower students with independent learning techniques. Our tutors act as both mentors and motivators, enabling holistic growth. At Ignite, future readiness begins today.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Top-Rated Private Tutoring Centre With Flexible Learning Options</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite offers flexible tutoring options that fit seamlessly into a student’s academic and personal schedule.<br />
             Whether it’s one-on-one sessions, small group lessons, or online classes, our approach adapts to what works best for each learner. Students benefit from individualized attention and uninterrupted focus, ideal for deeper learning and better retention. With a reputation built on results and trust, we’re proud to be a top-rated private tutoring centre in Dubai. Convenience and quality go hand in hand at Ignite.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Skilled Private Tutor In UAE For International Curricula – IB, IGCSE, & A-Levels</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Our experienced private tutors in the UAE specialize in international curricula such as IB, IGCSE, and A-Levels.<br />
             We understand the structure, marking schemes, and assessment strategies needed to excel in each system. Through tailored lesson plans and focused guidance, we help students build strong academic foundations and master curriculum-specific requirements. Whether it’s IA support, past paper practice, or concept reinforcement, we ensure students feel confident and prepared. With Ignite, global academic excellence is within reach.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Qualified Private IB Tutor In Dubai, UAE For Exam Prep & Success</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Preparing for IB exams can be overwhelming, but our qualified IB tutors in Dubai make the journey smoother.<br />
             With subject-specific expertise and exam-oriented strategies, we help students navigate HL and SL courses effectively. We also guide students in tackling IA, EE, and TOK requirements with clarity and structure. Our tutoring fosters time management, analytical skills, and deep understanding, all essential for IB success. Ignite’s IB support is rigorous, focused, and results-driven.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Dedicated Private IGCSE Tutor In Dubai, UAE For Core Subjects</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite’s IGCSE tutors in Dubai provide focused guidance across core subjects like Maths, English, Physics, Chemistry, and Biology.<br />
             We break down complex topics, strengthen foundational concepts, and ensure consistent exam readiness. Using past paper practice and active learning methods, our tutoring enhances understanding and recall. With flexible scheduling and personalized attention, students can work at their own pace while aiming for top grades. Our IGCSE tutors are committed to helping every learner perform at their best.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Expert Private A Level Tutor In Dubai, UAE For Grade Improvement</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             A-Levels demand depth of knowledge and exam precision, and our expert tutors help students rise to the challenge.<br />
             With subject mastery and tailored instruction, we guide learners to bridge gaps, deepen their understanding, and improve exam performance. From structured revision to time-efficient problem-solving techniques, our A-Level support is results-oriented. Whether you're aiming for top university placements or need a performance boost, Ignite’s private tutors offer the expertise and encouragement to achieve your goals.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">How Ignite’s Private Tutors In Dubai Guide Students To Success</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Our private tutors follow a student-centered philosophy that nurtures academic growth and self-belief.<br />
             We begin with diagnostic assessments to understand each student’s strengths and challenges. Then, we create personalized learning plans that focus on clarity, consistency, and confidence-building. Through engaging lessons, frequent feedback, and emotional support, students learn how to manage pressure and stay motivated. At Ignite, tutoring is not just about instruction — it’s about mentorship, mindset, and meaningful progress.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Exclusive IB Resources</h2>

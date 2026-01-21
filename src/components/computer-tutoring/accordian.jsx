@@ -14,8 +14,7 @@ export default function Accordion() {
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Expert Computer Science Tutor In Dubai UAE, For Academic Confidence</h2>
-          <h3 className="subtitle">Unlock your full potential in tech with our expert Computer Science tutors in Dubai. Whether you're tackling basic programming or advanced algorithms, our experienced team provides personalized guidance tailored to your learning style. We help you strengthen your concepts, boost confidence, and excel academically. Ignite Training Institute ensures every session adds value to your academic journey. Build a strong foundation in CS today.</h3>
-
+          <p className="subtitle">Unlock your full potential in tech with our expert Computer Science tutors in Dubai. Whether you're tackling basic programming or advanced algorithms, our experienced team provides personalized guidance tailored to your learning style. We help you strengthen your concepts, boost confidence, and excel academically. Ignite Training Institute ensures every session adds value to your academic journey. Build a strong foundation in CS today.</p>
 
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
@@ -25,56 +24,43 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">Find The Best Computer Tutor In Dubai For You With Ignite Training Institute</h2>
-          <h3 className="subtitle">Struggling to find the right Computer tutor in Dubai? Ignite Training Institute connects you with highly qualified professionals who align with your goals. Our tutors bring real-world experience and academic know-how to help you grasp tough subjects with ease. Discover engaging lessons, one-on-one attention, and results-driven support. Let’s help you find your ideal tutor today.</h3>
-          <br />
+          <p className="subtitle">Struggling to find the right Computer tutor in Dubai? Ignite Training Institute connects you with highly qualified professionals who align with your goals. Our tutors bring real-world experience and academic know-how to help you grasp tough subjects with ease. Discover engaging lessons, one-on-one attention, and results-driven support. Let’s help you find your ideal tutor today.</p>          <br />
 
           <h2 className="title">Personalized Computer Science Tuition In Dubai For Every Student</h2>
-          <h3 className="subtitle">No two learners are alike, so why should tuition be the same? At Ignite, we offer customized Computer Science tuition in Dubai that caters to individual needs. Whether you're preparing for an exam or need concept clarity, our tutors tailor sessions just for you. Learn at your pace, your way. See the difference a personalized approach makes.</h3>
-          <br />
+          <p className="subtitle">No two learners are alike, so why should tuition be the same? At Ignite, we offer customized Computer Science tuition in Dubai that caters to individual needs. Whether you're preparing for an exam or need concept clarity, our tutors tailor sessions just for you. Learn at your pace, your way. See the difference a personalized approach makes.</p>          <br />
 
           <h2 className="title">Score Higher With Targeted Computer Science Coaching In Dubai Today</h2>
-          <h3 className="subtitle">Boost your grades with focused, strategic Computer Science coaching from Dubai’s top educators. Our tutors use proven methods and adaptive tools to ensure students gain clarity, solve problems efficiently, and approach exams confidently. Whether you're in school or preparing for competitive exams, we’ve got you covered. Let’s aim higher together.</h3>
-          <br />
+          <p className="subtitle">Boost your grades with focused, strategic Computer Science coaching from Dubai’s top educators. Our tutors use proven methods and adaptive tools to ensure students gain clarity, solve problems efficiently, and approach exams confidently. Whether you're in school or preparing for competitive exams, we’ve got you covered. Let’s aim higher together.</p>          <br />
 
           <h2 className="title">Computer Science Classes In Dubai For Academic Excellence & Exam Support</h2>
-          <h3 className="subtitle">Our Computer Science classes in Dubai are designed to equip students with practical and theoretical knowledge. Taught by skilled educators, our sessions cover essential topics, exam techniques, and problem-solving strategies. Get the edge you need in both school assessments and board exams. Join a class that delivers results.</h3>
-          <br />
+          <p className="subtitle">Our Computer Science classes in Dubai are designed to equip students with practical and theoretical knowledge. Taught by skilled educators, our sessions cover essential topics, exam techniques, and problem-solving strategies. Get the edge you need in both school assessments and board exams. Join a class that delivers results.</p>          <br />
 
           <h2 className="title">Top-Notch Computer Science Tutoring In Dubai For Stronger Skills</h2>
-          <h3 className="subtitle">From Python basics to data structures and algorithms, our top-notch tutoring in Dubai helps students strengthen their coding and computational thinking skills. We ensure conceptual clarity through interactive sessions, hands-on tasks, and personalized attention. Experience tutoring that’s one step ahead and truly impactful.</h3>
-          <br />
+          <p className="subtitle">From Python basics to data structures and algorithms, our top-notch tutoring in Dubai helps students strengthen their coding and computational thinking skills. We ensure conceptual clarity through interactive sessions, hands-on tasks, and personalized attention. Experience tutoring that’s one step ahead and truly impactful.</p>          <br />
 
           <h2 className="title">Online Computer Tutor In Dubai Helping Students Build Confidence</h2>
-          <h3 className="subtitle">No matter where you are in Dubai, our online Computer tutors bring world-class instruction straight to your screen. Flexible timings, engaging lessons, and real-time feedback make it easy to learn and grow confidently. Whether you're revising for finals or need consistent academic support, we’ve got your back, online and always available.</h3>
-          <br />
+          <p className="subtitle">No matter where you are in Dubai, our online Computer tutors bring world-class instruction straight to your screen. Flexible timings, engaging lessons, and real-time feedback make it easy to learn and grow confidently. Whether you're revising for finals or need consistent academic support, we’ve got your back, online and always available.</p>          <br />
 
           <h2 className="title">Trusted Computer Science Learning Centre In Dubai For Exam Success</h2>
-          <h3 className="subtitle">Ignite Training Institute is your go-to learning centre for Computer Science success in Dubai. With a track record of top-performing students, our focused approach ensures better understanding and improved scores. We support IGCSE, IB, A-Level, and school curriculum needs. Trust us to guide your academic journey.</h3>
-          <br />
+          <p className="subtitle">Ignite Training Institute is your go-to learning centre for Computer Science success in Dubai. With a track record of top-performing students, our focused approach ensures better understanding and improved scores. We support IGCSE, IB, A-Level, and school curriculum needs. Trust us to guide your academic journey.</p>          <br />
 
           <h2 className="title">Looking For A Computer Science Tutor Near Me In Dubai? Get Help Today!</h2>
-          <h3 className="subtitle">Searching “Computer Science tutor near me” in Dubai? Your search ends here. Ignite Training Institute connects students with expert tutors in their vicinity or online. From beginner-level help to exam prep, we offer comprehensive support. Start your learning journey with someone nearby and dependable.</h3>
-          <br />
+          <p className="subtitle">Searching “Computer Science tutor near me” in Dubai? Your search ends here. Ignite Training Institute connects students with expert tutors in their vicinity or online. From beginner-level help to exam prep, we offer comprehensive support. Start your learning journey with someone nearby and dependable.</p>          <br />
 
           <h2 className="title">Get Better Results With An IB Computer Science Tutor In Dubai Support</h2>
-          <h3 className="subtitle">Our IB Computer Science tutors in Dubai are experts in the IB curriculum, ensuring students get targeted guidance across SL and HL topics. We cover IA planning, exam techniques, and real-world coding scenarios. With us, you'll not just meet the IB standards, you’ll exceed them.</h3>
-          <br />
+          <p className="subtitle">Our IB Computer Science tutors in Dubai are experts in the IB curriculum, ensuring students get targeted guidance across SL and HL topics. We cover IA planning, exam techniques, and real-world coding scenarios. With us, you'll not just meet the IB standards, you’ll exceed them.</p>          <br />
 
           <h2 className="title">Experienced IGCSE Computer Science Tutor In Dubai For Exam Prep</h2>
-          <h3 className="subtitle">Get ready for your IGCSE exams with experienced Computer Science tutors in Dubai. We break down complex topics, practice past papers, and build strong exam strategies. Whether you’re with Edexcel or Cambridge, our expert guidance ensures top results. Start prepping smart today.</h3>
-          <br />
+          <p className="subtitle">Get ready for your IGCSE exams with experienced Computer Science tutors in Dubai. We break down complex topics, practice past papers, and build strong exam strategies. Whether you’re with Edexcel or Cambridge, our expert guidance ensures top results. Start prepping smart today.</p>          <br />
 
           <h2 className="title">Achieve More With A Levels Computer Science Tutor In Dubai Help</h2>
-          <h3 className="subtitle">Need help navigating A Levels Computer Science? Our tutors in Dubai are well-versed with curriculum demands and exam formats. From programming to system architecture, we simplify learning and focus on scoring techniques. Achieve more and stress less with expert support tailored for A Level success.</h3>
-          <br />
+          <p className="subtitle">Need help navigating A Levels Computer Science? Our tutors in Dubai are well-versed with curriculum demands and exam formats. From programming to system architecture, we simplify learning and focus on scoring techniques. Achieve more and stress less with expert support tailored for A Level success.</p>          <br />
 
           <h2 className="title">One-On-One AS Levels Computer Science Tutor In Dubai For Assured Improvement</h2>
-          <h3 className="subtitle">Personalized, one-on-one AS Level Computer Science tutoring in Dubai ensures focused attention where you need it most. Our expert tutors work closely with you to bridge gaps, refine skills, and maximize performance. From theoretical concepts to practical programming, we help you improve, guaranteed.</h3>
-          <br />
+          <p className="subtitle">Personalized, one-on-one AS Level Computer Science tutoring in Dubai ensures focused attention where you need it most. Our expert tutors work closely with you to bridge gaps, refine skills, and maximize performance. From theoretical concepts to practical programming, we help you improve, guaranteed.</p>          <br />
 
           <h2 className="title">AP Computer Science Tutor In Dubai, Helping Students Excel with Confidence</h2>
-          <h3 className="subtitle">AP Computer Science requires logic, coding skills, and analytical thinking. Ignite’s AP Computer Science tutors in Dubai guide students through programming fundamentals, data structures, algorithms, and problem-solving techniques. Our sessions focus on making coding concepts easier to understand and apply. With practice-based learning, students gain the confidence to approach both theory and coding challenges. Personalized guidance and exam-focused preparation ensure better results in the AP exam. Ignite helps students strengthen computational skills that are valuable for both academics and future tech careers.</h3>
-
+          <p className="subtitle">AP Computer Science requires logic, coding skills, and analytical thinking. Ignite’s AP Computer Science tutors in Dubai guide students through programming fundamentals, data structures, algorithms, and problem-solving techniques. Our sessions focus on making coding concepts easier to understand and apply. With practice-based learning, students gain the confidence to approach both theory and coding challenges. Personalized guidance and exam-focused preparation ensure better results in the AP exam. Ignite helps students strengthen computational skills that are valuable for both academics and future tech careers.</p>
           <br /><br />
           <h2><strong>Ignite's Exclusive Learning Resources </strong></h2>
           <h3><strong>IB Resources</strong></h3>

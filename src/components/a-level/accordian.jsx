@@ -14,9 +14,8 @@ export default function Accordion() {
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Ignite Training Institute - Expert Tutors For A Levels Across All Subjects Online And In Person</h2>
-          <h3 className="subtitle">Ignite Training Institute provides expert A Level tutors across all major subjects, including Math, Biology, Chemistry, Physics, Economics, and English. Whether online or in person, our sessions are designed to match individual learning styles and exam board requirements. Students receive structured lessons, past paper practice, and targeted feedback. <br />
-            Our experienced tutors ensure concept clarity and exam readiness. We support Edexcel, Cambridge, Oxford AQA boards. Flexible scheduling and consistent guidance help students stay on track for top scores.</h3>
-
+          <p className="subtitle">Ignite Training Institute provides expert A Level tutors across all major subjects, including Math, Biology, Chemistry, Physics, Economics, and English. Whether online or in person, our sessions are designed to match individual learning styles and exam board requirements. Students receive structured lessons, past paper practice, and targeted feedback. <br />
+            Our experienced tutors ensure concept clarity and exam readiness. We support Edexcel, Cambridge, Oxford AQA boards. Flexible scheduling and consistent guidance help students stay on track for top scores.</p>
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
@@ -25,43 +24,35 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">A Levels Tuitions In Dubai, UAE For Academic Excellence</h2>
-          <h3 className="subtitle">Ignite’s A Levels tuitions in Dubai provide academic support tailored to help students reach their full potential. Our subject-specialist tutors guide learners through complex topics, helping them build strong foundations. We offer in-depth sessions that focus on both understanding and application. <br />
-            Students also get regular practice through past papers and mock exams. With personalized feedback and exam strategies, we help students aim for top results. Our tuition is ideal for students targeting academic excellence in the British curriculum.</h3>
-          <br />
+          <p className="subtitle">Ignite’s A Levels tuitions in Dubai provide academic support tailored to help students reach their full potential. Our subject-specialist tutors guide learners through complex topics, helping them build strong foundations. We offer in-depth sessions that focus on both understanding and application. <br />
+            Students also get regular practice through past papers and mock exams. With personalized feedback and exam strategies, we help students aim for top results. Our tuition is ideal for students targeting academic excellence in the British curriculum.</p>          <br />
 
           <h2 className="title">A Levels Tutoring In Dubai With Personalized Support</h2>
-          <h3 className="subtitle">Our A Levels tutoring in Dubai offers personalized academic support designed to meet each student’s unique needs. Tutors at Ignite create custom study plans based on strengths and improvement areas. We help students stay aligned with syllabus goals and prepare strategically for final exams. <br />
-            Sessions include concept reinforcement, writing practice, and real-time feedback. Whether online or in person, students receive the same level of focused support. With our guidance, learners become more confident and performance-driven.</h3>
-          <br />
+          <p className="subtitle">Our A Levels tutoring in Dubai offers personalized academic support designed to meet each student’s unique needs. Tutors at Ignite create custom study plans based on strengths and improvement areas. We help students stay aligned with syllabus goals and prepare strategically for final exams. <br />
+            Sessions include concept reinforcement, writing practice, and real-time feedback. Whether online or in person, students receive the same level of focused support. With our guidance, learners become more confident and performance-driven.</p>          <br />
 
           <h2 className="title">AS Levels Tutors In Dubai For Focused Academic Help</h2>
-          <h3 className="subtitle">Ignite provides skilled AS-Level tutors in Dubai who offer focused academic assistance across all core and elective subjects. Our tutors help simplify advanced topics and provide clear explanations tailored to each student’s pace. We support learners through challenging coursework, assignments, and exam prep. <br />
-            Tutors also train students in effective time management and exam techniques. This focused help is key to building academic strength early in the A Level journey. Our goal is to prepare students for long-term success.</h3>
-          <br />
+          <p className="subtitle">Ignite provides skilled AS-Level tutors in Dubai who offer focused academic assistance across all core and elective subjects. Our tutors help simplify advanced topics and provide clear explanations tailored to each student’s pace. We support learners through challenging coursework, assignments, and exam prep. <br />
+            Tutors also train students in effective time management and exam techniques. This focused help is key to building academic strength early in the A Level journey. Our goal is to prepare students for long-term success.</p>          <br />
 
           <h2 className="title">AS Level Tuitions Designed To Boost Exam Performance</h2>
-          <h3 className="subtitle">Our AS Level tuitions are designed to enhance subject understanding and improve exam results. Ignite’s expert tutors guide students through past paper practice, assessment criteria, and syllabus-based instruction. We focus on helping students write well-structured answers, apply concepts accurately, and manage exam stress. <br />
-            Each session is aligned with the requirements of Edexcel, Cambridge, Oxford AQA boards. Students receive regular progress updates and revision tools. With the right support, they build momentum and achieve better scores.</h3>
-          <br />
+          <p className="subtitle">Our AS Level tuitions are designed to enhance subject understanding and improve exam results. Ignite’s expert tutors guide students through past paper practice, assessment criteria, and syllabus-based instruction. We focus on helping students write well-structured answers, apply concepts accurately, and manage exam stress. <br />
+            Each session is aligned with the requirements of Edexcel, Cambridge, Oxford AQA boards. Students receive regular progress updates and revision tools. With the right support, they build momentum and achieve better scores.</p>          <br />
 
           <h2 className="title">AS Level Tutoring For Concept Clarity And Exam Success</h2>
-          <h3 className="subtitle">Ignite offers AS Level tutoring that emphasizes concept clarity and confident exam performance. Students learn through guided sessions that focus on understanding theory and applying it in exams. The expert tutors at Ignite also provide strategies for tackling difficult questions, organizing answers, and managing time. <br />
-            We support all major British curriculum boards and adapt lessons to suit individual learning needs. Visual aids, practice questions, and regular feedback ensure students stay on track. This approach helps learners feel prepared and capable ahead of exams.</h3>
-          <br />
+          <p className="subtitle">Ignite offers AS Level tutoring that emphasizes concept clarity and confident exam performance. Students learn through guided sessions that focus on understanding theory and applying it in exams. The expert tutors at Ignite also provide strategies for tackling difficult questions, organizing answers, and managing time. <br />
+            We support all major British curriculum boards and adapt lessons to suit individual learning needs. Visual aids, practice questions, and regular feedback ensure students stay on track. This approach helps learners feel prepared and capable ahead of exams.</p>          <br />
 
           <h2 className="title">Ignite Training Institute Best Tutors For Cambridge, Edexcel, Oxford International AQA</h2>
-          <h3 className="subtitle">Ignite Training Institute is home to some of the best tutors for the British curriculum, including Cambridge, Edexcel, and Oxford International AQA. Our faculty is trained to teach according to board-specific requirements while offering individual attention to each student. We guide learners across subjects like Math, Science, Business Studies, English, & more. <br />
-            With a focus on accuracy, application, and exam preparation, our tutors help students meet and exceed academic goals. Both online and in-person options are available for flexibility. Ignite’s proven approach ensures high student success rates.</h3>
-          <br />
+          <p className="subtitle">Ignite Training Institute is home to some of the best tutors for the British curriculum, including Cambridge, Edexcel, and Oxford International AQA. Our faculty is trained to teach according to board-specific requirements while offering individual attention to each student. We guide learners across subjects like Math, Science, Business Studies, English, & more. <br />
+            With a focus on accuracy, application, and exam preparation, our tutors help students meet and exceed academic goals. Both online and in-person options are available for flexibility. Ignite’s proven approach ensures high student success rates.</p>          <br />
 
           <h2 className="title">Expert Support For British Curriculum Based AS And A Levels Coaching</h2>
-          <h3 className="subtitle">Ignite provides expert coaching support for students following the British curriculum in AS and A Levels. We help learners understand complex subject material, develop critical thinking, and prepare effectively for final exams. Our coaching style includes lesson planning, timed practice, and targeted revision. <br />
-            Students are supported throughout their academic journey with consistent feedback and mentorship. Whether your goal is to improve scores or deepen subject knowledge, we offer the tools and guidance needed. Our coaching empowers students to perform at their best.</h3>
-          <br />
+          <p className="subtitle">Ignite provides expert coaching support for students following the British curriculum in AS and A Levels. We help learners understand complex subject material, develop critical thinking, and prepare effectively for final exams. Our coaching style includes lesson planning, timed practice, and targeted revision. <br />
+            Students are supported throughout their academic journey with consistent feedback and mentorship. Whether your goal is to improve scores or deepen subject knowledge, we offer the tools and guidance needed. Our coaching empowers students to perform at their best.</p>          <br />
 
           <h2 className="title">How Ignite’s A Level Classes Guide Students To Success?</h2>
-          <h3 className="subtitle">At Ignite Training Institute, our A Level classes are designed to build academic confidence, boost performance, and help students reach their target scores. Here's how we guide students step by step toward success in their A Level journey.</h3>
-          <br />
+          <p className="subtitle">At Ignite Training Institute, our A Level classes are designed to build academic confidence, boost performance, and help students reach their target scores. Here's how we guide students step by step toward success in their A Level journey.</p>          <br />
 
           <ul className="subtitle">
             <li><strong>A Levels Past Paper Solving:</strong> Students regularly practice past papers to understand question patterns, improve accuracy, and build confidence under timed conditions.</li>

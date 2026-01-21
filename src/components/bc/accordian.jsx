@@ -14,9 +14,8 @@ export default function Accordion() {
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Ignite Training Institute - British Curriculum Tuition In Dubai, UAE For Academic Success</h2>
-          <h3 className="subtitle">Ignite Training Institute provides expert British curriculum tuition in Dubai and across the UAE to help students achieve academic success in IGCSE and A Levels. Our tutors are subject specialists who understand exam board expectations and tailor instruction accordingly. We focus on concept clarity, exam technique, and performance improvement. <br />
-            Whether students need help with Math, Sciences, English, or Economics, support is personalized. Regular assessments and feedback help track progress and strengthen weak areas. With structured guidance, students build confidence and improve steadily.</h3>
-
+          <p className="subtitle">Ignite Training Institute provides expert British curriculum tuition in Dubai and across the UAE to help students achieve academic success in IGCSE and A Levels. Our tutors are subject specialists who understand exam board expectations and tailor instruction accordingly. We focus on concept clarity, exam technique, and performance improvement. <br />
+            Whether students need help with Math, Sciences, English, or Economics, support is personalized. Regular assessments and feedback help track progress and strengthen weak areas. With structured guidance, students build confidence and improve steadily.</p>
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
@@ -25,33 +24,27 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">British Curriculum Classes Tailored To Student Needs</h2>
-          <h3 className="subtitle">At Ignite, British curriculum classes are customized to suit each student’s academic level, subject requirements, and learning pace. Whether a student is preparing for IGCSE or A Levels, our approach ensures focused attention and measurable progress. Classes are available in one-on-one or small group formats for better engagement and support. <br />
-            We reinforce concepts, prepare students for exams, and assist with assignments and projects. From core subjects to optional ones, every class is aligned with the curriculum. Our goal is to help students stay ahead with clarity and confidence.</h3>
-          <br />
+          <p className="subtitle">At Ignite, British curriculum classes are customized to suit each student’s academic level, subject requirements, and learning pace. Whether a student is preparing for IGCSE or A Levels, our approach ensures focused attention and measurable progress. Classes are available in one-on-one or small group formats for better engagement and support. <br />
+            We reinforce concepts, prepare students for exams, and assist with assignments and projects. From core subjects to optional ones, every class is aligned with the curriculum. Our goal is to help students stay ahead with clarity and confidence.</p>          <br />
 
           <h2 className="title">British Curriculum Coaching For IGCSE & A Levels Excellence</h2>
-          <h3 className="subtitle">Ignite offers specialized coaching for IGCSE and A Levels under the British curriculum, helping students aim for top grades. Our coaching goes beyond just covering the syllabus; we help students master exam strategies, tackle past papers, and understand how to answer questions with precision. <br />
-            Every session is structured to match the student’s academic goals. With subject-specific focus and expert mentoring, we help learners overcome challenges and improve performance. Students receive ongoing feedback to track growth and stay exam-ready.</h3>
-          <br />
+          <p className="subtitle">Ignite offers specialized coaching for IGCSE and A Levels under the British curriculum, helping students aim for top grades. Our coaching goes beyond just covering the syllabus; we help students master exam strategies, tackle past papers, and understand how to answer questions with precision. <br />
+            Every session is structured to match the student’s academic goals. With subject-specific focus and expert mentoring, we help learners overcome challenges and improve performance. Students receive ongoing feedback to track growth and stay exam-ready.</p>          <br />
 
           <h2 className="title">Best Tuition For IGCSE / GCSE - Both In Person And Online Classes</h2>
-          <h3 className="subtitle">Ignite provides the best tuition support for IGCSE and GCSE students through both in-person and online formats. Students can choose what suits their schedule while receiving the same high-quality academic guidance. Our experienced tutors simplify complex topics, guide students through past papers, and provide support across subjects. <br />
-            Lessons are interactive, goal-focused, and designed to improve grades. We offer flexibility without compromising on academic depth. Whether online or in the center, students receive full attention and academic care.</h3>
-          <br />
+          <p className="subtitle">Ignite provides the best tuition support for IGCSE and GCSE students through both in-person and online formats. Students can choose what suits their schedule while receiving the same high-quality academic guidance. Our experienced tutors simplify complex topics, guide students through past papers, and provide support across subjects. <br />
+            Lessons are interactive, goal-focused, and designed to improve grades. We offer flexibility without compromising on academic depth. Whether online or in the center, students receive full attention and academic care.</p>          <br />
 
           <h2 className="title">Best Tuition For AS & A Levels - Both In Person And Online Classes</h2>
-          <h3 className="subtitle">Ignite’s AS and A Level tuition is available in both in-person and online formats to ensure accessibility for all learners. Our experienced faculty helps students grasp advanced topics, master exam techniques, and manage coursework effectively. We support a wide range of subjects, including Math, Biology, Physics, Business, and more. <br />
-            Sessions are tailored to the student's needs and aligned with their exam board requirements. With flexible scheduling and focused mentoring, students get the academic edge they need to excel in AS and A Levels.</h3>
-          <br />
+          <p className="subtitle">Ignite’s AS and A Level tuition is available in both in-person and online formats to ensure accessibility for all learners. Our experienced faculty helps students grasp advanced topics, master exam techniques, and manage coursework effectively. We support a wide range of subjects, including Math, Biology, Physics, Business, and more. <br />
+            Sessions are tailored to the student's needs and aligned with their exam board requirements. With flexible scheduling and focused mentoring, students get the academic edge they need to excel in AS and A Levels.</p>          <br />
 
           <h2 className="title">How Ignite’s British Curriculum Classes Guide Students To Success</h2>
-          <h3 className="subtitle">Ignite’s British curriculum classes are structured to build subject mastery, improve exam skills, and develop academic confidence. Our tutors personalize learning based on each student’s strengths and areas that need improvement. Through consistent practice, targeted revision, and one-on-one attention, we help students perform at their best in IGCSE and A Levels. <br />
-            Regular feedback, mock tests, and progress tracking keep students motivated and on track. Whether preparing for exams or reinforcing daily lessons, Ignite provides the support students need to succeed.</h3>
-          <br />
+          <p className="subtitle">Ignite’s British curriculum classes are structured to build subject mastery, improve exam skills, and develop academic confidence. Our tutors personalize learning based on each student’s strengths and areas that need improvement. Through consistent practice, targeted revision, and one-on-one attention, we help students perform at their best in IGCSE and A Levels. <br />
+            Regular feedback, mock tests, and progress tracking keep students motivated and on track. Whether preparing for exams or reinforcing daily lessons, Ignite provides the support students need to succeed.</p>          <br />
 
           <h2 className="title">Why Join Ignite Training Institute Ahead Of Your British Curriculum Journey?</h2>
-          <h3 className="subtitle">Start your British curriculum journey with the right academic foundation and expert support at Ignite Training Institute.</h3>
-          <br />
+          <p className="subtitle">Start your British curriculum journey with the right academic foundation and expert support at Ignite Training Institute.</p>          <br />
 
           <ul className="subtitle">
             <li><strong>British Curriculum Past Paper Solving:</strong> Students regularly solve past papers to get familiar with question patterns, improve accuracy, and build exam confidence across subjects.</li>

@@ -14,11 +14,10 @@ export default function Accordion() {
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Ignite Training Institute – Private Candidacy Support For IGCSE, A Levels, & AP</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite Training Institute offers expert tutoring support for students appearing as private candidates for IGCSE, A Levels, and Advanced Placements.<br />
             Our subject-specialist tutors help you prepare with focused, curriculum-aligned lessons, exam strategy sessions, and past paper practice. Whether you’re homeschooling, switching schools, or need flexible academic support, our team ensures you're exam-ready. Students also receive guidance on syllabus planning, coursework support (where applicable), and mock assessments. Ignite is the trusted academic partner for private candidates across Dubai.
-          </h3>
-
+          </p>
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
@@ -27,59 +26,52 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">Get Academic Support For IGCSE Private Candidates</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Preparing for IGCSE as a private candidate?<br />
             Ignite’s tutoring support ensures you cover your subject syllabus thoroughly and stay on track. We offer targeted lessons, past paper sessions, and exam technique coaching tailored to your exam board, Cambridge or Edexcel. Our experienced tutors guide you through key concepts, manage your progress, and help you build confidence. Whether you’re homeschooled or retaking, we provide the structure and clarity you need to succeed.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Get Academic Support For A Levels Private Candidates</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             A Level private candidates at Ignite receive personalized academic guidance designed for independent learners.<br />
             We align our tutoring with the Edexcel, Cambridge, and AQA exam boards, focusing on building strong subject knowledge and exam technique. From intensive revision to coursework help (where applicable), we ensure every student is well-prepared for AS and A2 components. Flexible schedules and one-on-one support make it easy for private candidates to achieve high academic outcomes.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Get Academic Support For AP Private Candidates</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite offers focused tutoring support for AP private candidates aiming to earn college credits through high-scoring performances on the AP exams.<br />
             Our AP specialists coach students across subjects like Calculus, Physics, Chemistry, Economics, and more. Lessons are tailored to the College Board’s AP syllabus and include test prep strategies, concept deep dives, and mock testing. Whether you’re self-studying or combining AP with other curricula, Ignite helps you prepare with confidence.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Homeschooling In Dubai With Expert Academic Guidance</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite Training Institute supports homeschooling families in Dubai with structured tutoring programs across IGCSE, A Levels, IB, and AP.<br />
             Our experienced tutors work with students to build a strong academic foundation, provide one-on-one instruction, and help with exam readiness. We ensure students follow a clear learning path that matches their goals. With flexible schedules and expert tracking, Ignite makes homeschooling in Dubai both effective and enriching for learners.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Homeschooling In UAE For British Curriculum Success</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Our British curriculum homeschooling support in the UAE helps students succeed in IGCSE and A Level pathways through guided learning, expert tutors, and structured content delivery.<br />
             Whether you're registered as a private candidate or following an online school, our tutors align their sessions to Edexcel and Cambridge standards. Ignite ensures that each student is fully supported, academically challenged, and confident for their exams and assessments.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Homeschooling Tutors Offering Personalized Learning Support</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite’s homeschooling tutors bring subject expertise and teaching flexibility to support students' learning at home.<br />
             We personalize each session based on the student’s pace, curriculum, and academic needs. From foundational concepts to advanced topics, our tutors provide clarity and engagement across subjects. Whether you're preparing for exams or building day-to-day academic skills, our team ensures a smooth homeschooling journey with measurable progress.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Online Homeschooling In Dubai With Flexible Scheduling</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Ignite’s online homeschooling support allows students in Dubai to learn from anywhere with flexible, high-quality tutoring.<br />
             Ideal for learners who need customized schedules, our online classes are live, interactive, and curriculum-aligned. Tutors cover core subjects, exam preparation, and skill-building, all while keeping learners engaged and on track. We support British, IB, and American curriculum homeschooling pathways with complete academic assistance.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Exclusive Homeschooling Resources</h2>

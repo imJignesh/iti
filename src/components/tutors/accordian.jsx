@@ -14,11 +14,10 @@ export default function Accordion() {
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
           <h2 className="title">Ignite Training Institute – Trusted Tutors In Dubai For Academic Excellence</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             At Ignite Training Institute, we believe that academic excellence is not just about high scores, it's about nurturing curious minds and building a solid foundation for future success.<br />
             Our tutors are carefully selected for their subject expertise and ability to inspire students. Whether your child is aiming for better grades or a deeper understanding, our approach blends academic rigor with personalized mentorship to unlock their full potential.
-          </h3>
-        </div>
+          </p>        </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
 
@@ -26,74 +25,66 @@ export default function Accordion() {
       {open && (
         <div className="expanded">
           <h2 className="title">Personalized Tuitions In Dubai For All Curricula – IB, IGCSE, A Levels, & AP</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Every curriculum has its unique demands, and every student has a unique learning style.<br />
             At Ignite, we offer tailored tutoring programs that align with the specific requirements of IB, IGCSE, A Levels, and AP. From reinforcing fundamental concepts to advanced exam strategies, we provide structured, goal-oriented sessions that help students stay ahead. Our tutors adapt to each learner’s pace, ensuring both confidence and competence grow hand-in-hand.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Expert Tutoring In Dubai, UAE To Boost Student Confidence</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             True learning begins when students feel confident in their abilities.<br />
             Our expert tutors foster an encouraging environment where questions are welcomed, mistakes are embraced, and progress is celebrated. Through ongoing assessments, timely feedback, and personalized attention, we help students overcome academic anxieties and step into their full potential with renewed self-belief and enthusiasm for learning.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Leading Tuition Centre In Dubai For IGCSE, A-Levels & More</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             With years of experience and a proven track record, Ignite stands out as a leading tuition provider for international and British curricula.<br />
             Our structured programs for IGCSE, A-Levels, and more are designed not just to prepare students for exams, but to cultivate analytical thinking, problem-solving abilities, and academic independence. We work closely with families and schools to ensure holistic progress and long-term achievement.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Comprehensive Coaching In Dubai For Exam Prep & Success</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Exam time can be overwhelming, but with the right preparation, students can perform with confidence and clarity.<br />
             Ignite offers specialized coaching programs that focus on effective study techniques, past paper practice, time management, and stress-reduction strategies. Our tutors guide students through rigorous exam prep, helping them sharpen their skills and maximize their scores in every subject.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Find The Best Tuition Centre Near Me With Proven Methods & Real Results</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Looking for a trusted tuition centre nearby?<br />
             Ignite’s combination of expert tutors, personalized plans, and results-oriented methods makes us the preferred choice for thousands of families in Dubai. Our students consistently achieve top grades and gain admission into leading universities. Whether it's subject support or full academic guidance, we deliver measurable results backed by real success stories.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Tutoring Near Me That Aligns With Student Academic Goals</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             At Ignite, we begin with one key question: What does success look like for you?<br />
             Whether it’s acing a particular subject, improving overall academic performance, or preparing for competitive entrance exams, our tutoring programs are fully aligned with individual goals. Each student receives a learning plan tailored to their aspirations, helping them stay focused, motivated, and on track for success.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Top Coaching Institute In Dubai With Subject-Specific Support</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Different subjects require different approaches.<br />
             That’s why Ignite offers specialized support across a wide range of subjects, including Mathematics, Sciences, English, Business, Economics, and more. Our tutors bring deep subject knowledge and customized teaching techniques that cater to various learning needs. Whether your child needs help in a challenging topic or is ready to explore advanced material, we provide the right support at the right time.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">Experienced Dubai Tutors For One-On-One & Group Learning</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Our team of experienced tutors understands that every student learns differently.<br />
             At Ignite, we offer both one-on-one sessions for personalized attention and small group classes that foster peer learning and collaboration. This flexible model allows students to thrive in the environment that suits them best, while still receiving the expert guidance needed to reach their academic goals.
-          </h3>
-          <br />
+          </p>          <br />
 
 
           <h2 className="title">How Ignite’s Tutors In Dubai Guide Students To Success</h2>
-          <h3 className="subtitle">
+          <p className="subtitle">
             Our tutors do more than just teach; they become mentors and role models who guide students through their academic journey.<br />
             From setting achievable goals to developing smart study routines, they provide ongoing encouragement and structure. Through a combination of subject expertise, emotional support, and continuous monitoring, our tutors ensure that each student stays on the path to success both in and out of the classroom.
-          </h3>          <br />
+          </p>          <br />
 
           <h2 className="title">Exclusive IB Resources</h2>
           <div class="schemalinks">
