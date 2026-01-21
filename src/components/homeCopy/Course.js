@@ -53,7 +53,7 @@ const courseData = [
 ];
 
 const Course = () => {
-    const [hovered, setHovered] = useState(1);
+    const [hovered, setHovered] = useState(3);
 
     return (
         // Apply local module class

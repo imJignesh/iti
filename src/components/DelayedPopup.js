@@ -22,7 +22,7 @@ const DelayedPopup = () => {
         name: "",
         email: "",
         phone: "",
-        curriculum: "IB Diploma",
+        curriculum: "-Select-",
     });
 
     const [errors, setErrors] = useState({});
@@ -213,23 +213,26 @@ const DelayedPopup = () => {
                     />
 
                     <label>Curriculum</label>
-                    <select
-                        name="curriculum"
-                        value={formData.curriculum}
-                        onChange={handleChange}
-                        className="formInput"
-                    >
-                        <option value="IB Diploma">IB Diploma</option>
-                        <option value="IB MYP">IB MYP</option>
-                        <option value="IGCSE/GCSE">IGCSE/GCSE</option>
-                        <option value="A Levels">A Levels</option>
-                        <option value="Homeschooling">Homeschooling</option>
-                        <option value="ACT">ACT</option>
-                        <option value="UCAT">UCAT</option>
-                        <option value="Advanced Placements">Advanced Placements</option>
-                        <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
-                        <option value="STEM (Others)">STEM (Others)</option>
-                    </select>
+                    <div className="selectWrapper">
+                        <select
+                            name="curriculum"
+                            value={formData.curriculum}
+                            onChange={handleChange}
+                            className="formInput"
+                        >
+                            <option value="-Select-">-Select-</option>
+                            <option value="IB Diploma">IB Diploma</option>
+                            <option value="IB MYP">IB MYP</option>
+                            <option value="IGCSE/GCSE">IGCSE/GCSE</option>
+                            <option value="A Levels">A Levels</option>
+                            <option value="Homeschooling">Homeschooling</option>
+                            <option value="ACT">ACT</option>
+                            <option value="UCAT">UCAT</option>
+                            <option value="Advanced Placements">Advanced Placements</option>
+                            <option value="STEM (Undergraduate)">STEM (Undergraduate)</option>
+                            <option value="STEM (Others)">STEM (Others)</option>
+                        </select>
+                    </div>
                     {errors.curriculum && <p className="error-text">{errors.curriculum}</p>}
 
                     <button type="submit" className="btn popup-cust-text fw-bold d-flex align-items-center rounded-pill " disabled={loading}
