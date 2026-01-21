@@ -6,8 +6,16 @@ import styles from '@/styles/home-copy/Hero.module.css';
 const Hero = () => {
     const videoRef = useRef(null);
     const [videoLoaded, setVideoLoaded] = useState(false);
+    const [isMobile, setIsMobile] = useState(null);
 
     useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 992);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
         const loadVideo = () => {
             if (videoRef.current && !videoLoaded) {
                 const source = document.createElement('source');
@@ -37,6 +45,7 @@ const Hero = () => {
         document.addEventListener('mousedown', handleInteraction, { passive: true, once: true });
 
         return () => {
+            window.removeEventListener('resize', handleResize);
             document.removeEventListener('scroll', handleInteraction);
             document.removeEventListener('touchstart', handleInteraction);
             document.removeEventListener('mousedown', handleInteraction);
@@ -46,98 +55,77 @@ const Hero = () => {
     return (
         <>
             <Head>
-                {/* <link rel="preload" as="image" href="/images/video-cover.webp" /> */}
-                {/* Responsive Preload: Helps mobile fetch the SMALL image immediately */}
-
-                {/* <link
-                    rel="preload"
-                    as="image"
-                    href="/images/banner-image-right.webp"
-                    fetchPriority="high"
-                    media="(min-width: 576px)"
-                />
-
-                <link
-                    rel="preload"
-                    as="image"
-                    href="/images/banner-image-right-m.webp"
-                    fetchPriority="high"
-                    media="(max-width: 575px)"
-                /> */}
+                <link rel="preload" as="image" href="/images/video-cover.webp" />
             </Head>
 
             <section className={`${styles.hero} ${styles.homeherosection}`}>
                 <div className="container">
-                    <div>
-                        <div className={`row ${styles.heroMain}`}>
-                            <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
-                                <div className={`${styles.heroMainHeading}`}>
-                                    <h2 className={styles.SubHeading}>BEST TUTORS IN UAE</h2>
-                                </div>
-
-                                <div className="d-lg-none">
-                                    <h1 className={`${styles.heroTitleMobile} pt-3 pb-3`}>
-                                        Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
-                                    </h1>
-                                </div>
-                                <div className="d-none d-lg-block">
-                                    <h1 className={styles.heroTitleDesktop}>
-                                        Ignite Your Path To Top <span className="highlight">Academic</span> Performance
-                                    </h1>
-                                </div>
-
-                                <div>
-                                    <div className={styles.heroParagraph}>
-                                        <h3>Improve Your Grades Today!</h3>
-                                        <b>
-                                            We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, & more through our curriculum-specific approach & expert tutors in Dubai, guiding them toward a stronger understanding & lasting growth.
-                                        </b>
-                                        <strong>
-                                            Ignite's experienced tutors in Dubai help students thrive in IBDP, IB MYP, IGCSE, A-Levels, AP, & more with personalized support & structured programs.
-                                        </strong>
-                                    </div>
-                                </div>
+                    <div className={`row ${styles.heroMain}`}>
+                        <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
+                            <div className={`${styles.heroMainHeading}`}>
+                                <h2 className={styles.SubHeading}>BEST TUTORS IN UAE</h2>
                             </div>
 
-                            <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
-                                <div className={styles.videoContainer}>
+                            {isMobile !== null && (
+                                <>
+                                    {isMobile ? (
+                                        <h1 className={`${styles.heroTitleMobile} pt-3 pb-3`}>
+                                            Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
+                                        </h1>
+                                    ) : (
+                                        <h1 className={styles.heroTitleDesktop}>
+                                            Ignite Your Path To Top <span className="highlight">Academic</span> Performance
+                                        </h1>
+                                    )}
+                                </>
+                            )}
 
-                                    <video
-                                        ref={videoRef}
-                                        className={styles.heroVideo}
-                                        autoPlay
-                                        muted
-                                        loop
-                                        playsInline
-                                        preload="metadata"
-                                        poster="/images/video-cover.webp"
-                                    >
+                            <div className={styles.heroParagraph}>
+                                <h3>Improve Your Grades Today!</h3>
+                                <b>
+                                    We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, & more through our curriculum-specific approach & expert tutors in Dubai, guiding them toward a stronger understanding & lasting growth.
+                                </b>
+                                <strong>
+                                    Ignite's experienced tutors in Dubai help students thrive in IBDP, IB MYP, IGCSE, A-Levels, AP, & more with personalized support & structured programs.
+                                </strong>
+                            </div>
+                        </div>
 
-                                    </video>
-                                </div>
+                        <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
+                            <div className={styles.videoContainer}>
+                                <video
+                                    ref={videoRef}
+                                    className={styles.heroVideo}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    preload="metadata"
+                                    poster="/images/video-cover.webp"
+                                ></video>
+                            </div>
 
-                                <div className={styles.buttonGroup}>
-                                    <a href="/join-free-demo-class/" className="buttonBlue">
-                                        Get A Free Demo{" "}
-                                        <Image
-                                            src="/images/right-arrow-skyblue.webp"
-                                            width={40}
-                                            height={40}
-                                            alt="Right arrow"
-                                            priority
-                                        />
-                                    </a>
-                                    <a href="/courses/" className="buttonSkyBlue">
-                                        Explore Classes{" "}
-                                        <Image
-                                            src="/images/right-arrow-blue.webp"
-                                            width={40}
-                                            height={40}
-                                            alt="Right arrow"
-                                            priority
-                                        />
-                                    </a>
-                                </div>
+                            <div className={styles.buttonGroup}>
+                                <a href="/join-free-demo-class/" className="buttonBlue">
+                                    Get A Free Demo{" "}
+                                    <Image
+                                        src="/images/right-arrow-skyblue.webp"
+                                        width={40}
+                                        height={40}
+                                        alt="Right arrow"
+                                        priority
+                                    />
+                                </a>
+                                <a href="/courses/" className="buttonSkyBlue">
+                                    Explore Classes{" "}
+                                    <Image
+                                        src="/images/right-arrow-blue.webp"
+                                        width={40}
+                                        height={40}
+                                        alt="Right arrow"
+                                        priority
+                                    />
+                                </a>
                             </div>
                         </div>
                     </div>
