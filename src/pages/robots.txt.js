@@ -1,54 +1,56 @@
 const BASE_URL = 'https://ignitetraininginstitute.com'
 
 const robotsContent = `User-agent: *
+Allow: /*.js
+Allow: /*.css
+Allow: /wp-content/uploads/
+Allow: /
 Disallow: /wp-admin/
 Disallow: /wp-includes/
 Disallow: /wp-content/cache/
 Disallow: /wp-content/upgrade/
 Disallow: */feed/
 Disallow: /xmlrpc.php
-Allow: /*.js
-Allow: /*.css
-Allow: /wp-content/uploads/
-Allow: /
 
 User-agent: GPTBot
-Disallow:
+Allow: /
 
 User-agent: OAI-SearchBot
-Disallow:
+Allow: /
 
 User-agent: Google-Extended
-Disallow:
+Allow: /
 
 User-agent: ClaudeBot
-Disallow:
+Allow: /
 
 User-agent: PerplexityBot
-Disallow:
+Allow: /
 
 User-agent: Amazonbot
-Disallow:
+Allow: /
 
 User-agent: Applebot-Extended
-Disallow:
+Allow: /
 
 User-agent: meta-externalagent
-Disallow:
+Allow: /
 
 User-agent: Bytespider
-Disallow:
+Allow: /
 
 User-agent: CCBot
-Disallow:
+Allow: /
 
 User-agent: DuckDuckBot
-Disallow:
+Allow: /
 
 Sitemap: ${BASE_URL}/sitemap.xml`
 
 export async function getServerSideProps({ res }) {
     res.setHeader('Content-Type', 'text/plain')
+    // Tells Cloudflare and Browsers to check for a new version frequently
+    res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=59')
     res.write(robotsContent)
     res.end()
 

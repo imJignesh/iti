@@ -165,12 +165,20 @@ const nextConfig = {
   async headers() {
     return [
       {
+        // Global headers - Simplified to avoid Cloudflare conflicts
         source: '/:path*',
         headers: [
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' },
+          // Removed duplicate X-Content-Type-Options and X-Frame-Options as Cloudflare provides them
+        ],
+      },
+      {
+        // Explicitly ensure robots.txt has the correct type and no framing restrictions
+        source: '/robots.txt',
+        headers: [
+          { key: 'Content-Type', value: 'text/plain' },
+          { key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=59' },
         ],
       },
       {
