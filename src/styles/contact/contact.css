@@ -34,7 +34,7 @@
      margin: auto;
      border-radius: 12px;
      overflow: hidden;
-     background-image: url("/images/blog-banner.webp");
+     background-image: url("/images/blog-banner-desktop.webp");
      background-size: cover;
      background-position: center;
  }
@@ -74,11 +74,76 @@
      opacity: 0.8;
  }
 
+ .contact-banner {
+     font-family: "Montserrat", sans-serif;
+     position: relative;
+     max-width: 90vw;
+     width: 100%;
+     height: calc(90vw / 2.98);
+     margin: auto;
+     border-radius: 12px;
+     overflow: hidden;
+     background-image: url("/images/contactus-banner-desktop.webp");
+     background-size: cover;
+     background-position: center;
+ }
+
+ @media (max-width: 768px) {
+     .contact-banner {
+         height: 90vw;
+         background-image: url("/images/contactus-banner-mobile.webp");
+     }
+
+     .contact-banner .heading {
+         font-size: 6.33vw !important;
+         line-height: 36px !important;
+         margin: 0 !important;
+     }
+
+     .contact-banner .subHeading {
+         font-size: 4.08vw !important;
+         margin: 0 !important;
+     }
+ }
+
+ .team-banner {
+     font-family: "Montserrat", sans-serif;
+     position: relative;
+     max-width: 90vw;
+     width: 100%;
+     height: calc(90vw / 2.98);
+     margin: auto;
+     border-radius: 12px;
+     overflow: hidden;
+     background-image: url("/images/ourteam-desktop.webp");
+     background-size: cover;
+     background-position: center;
+ }
+
+ @media (max-width: 768px) {
+     .team-banner {
+         height: 90vw;
+         background-image: url("/images/ourteam-mobile.webp");
+     }
+
+     .team-banner .heading {
+         font-size: 6.33vw !important;
+         line-height: 36px !important;
+         margin: 0 !important;
+     }
+
+     .team-banner .subHeading {
+         font-size: 4.08vw !important;
+         margin: 0 !important;
+     }
+ }
+
  @media (max-width: 768px) {
 
      .careers-banner,
      .blog-banner {
          height: 90vw;
+         background-image: url("/images/blog-banner-mobile.webp");
          /* square card on mobile */
      }
 

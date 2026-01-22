@@ -40,15 +40,14 @@ export default function CareersBanner() {
             max-width: 90vw;
             margin: 0 auto;
             width: 100%;
-            height: calc(90vw / 2.98); /* desktop aspect ratio */
+            height: calc(90vw / 2.98);
             border-radius: 12px;
             overflow: hidden;
-            background-image: url("/assets/aboutbanner.webp");
+            background-image: url("/assets/about-us-desktop.webp");
             background-size: cover;
             background-position: center;
           }
 
-          /* Dark overlay */
           .dark-overlay {
             position: absolute;
             top: 0;
@@ -77,37 +76,39 @@ export default function CareersBanner() {
 
           .subHeading {
             margin: 0px 0px 0px 70px;
-font-size: 1.35vw;
+            font-size: 1.35vw;
             font-weight:800;
             opacity: 0.8;
           }
 
           @media (max-width: 768px) {
             .careers-banner {
-              height: 90vw; /* square card on mobile */
+              height: 90vw;
               margin: 0 auto;
+              background-image: url("/assets/about-us-mobile.webp");
             }
             h2 {
-            margin:0 !important;
+              margin:0 !important;
               font-size: 6.33vw !important;
               font-weight: 800 !important;
               line-height: 36px !important;
-                        }
+            }
             p {
               margin: 0 !important;
               font-size: 4.08vw !important;
               font-weight: 800 !important;
-            opacity: 0.8 !important;            }
-          }
-            @media (max-width: 575px) {
-              .heading {
-                font-size:2rem;
-                margin:0;
-              }
-                p {
-                  font-size:15px;
-                }
+              opacity: 0.8 !important;
             }
+          }
+          @media (max-width: 575px) {
+            .heading {
+              font-size:2rem;
+              margin:0;
+            }
+            p {
+              font-size:15px;
+            }
+          }
       `}</style>
     </section>
   );
