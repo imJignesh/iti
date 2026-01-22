@@ -13,37 +13,37 @@ Allow: /wp-content/uploads/
 Allow: /
 
 User-agent: GPTBot
-Disallow: /
+Disallow:
 
 User-agent: OAI-SearchBot
-Disallow: /
+Disallow:
 
 User-agent: Google-Extended
-Disallow: /
+Disallow:
 
 User-agent: ClaudeBot
-Disallow: /
+Disallow:
 
 User-agent: PerplexityBot
-Disallow: /
+Disallow:
 
 User-agent: Amazonbot
-Disallow: /
+Disallow:
 
 User-agent: Applebot-Extended
-Disallow: /
+Disallow:
 
 User-agent: meta-externalagent
-Disallow: /
+Disallow:
 
 User-agent: Bytespider
-Disallow: /
+Disallow:
 
 User-agent: CCBot
-Disallow: /
+Disallow:
 
 User-agent: DuckDuckBot
-Disallow: /
+Disallow:
 
 Sitemap: ${BASE_URL}/sitemap.xml`
 

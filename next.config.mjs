@@ -244,7 +244,7 @@ const nextConfig = {
     const excludePattern = excludedSlugs.join('|');
 
     redirects.push({
-      source: `/:slug((?!${excludePattern})[^.]+)`,
+      source: `/:slug((?!(?:${excludePattern})$)[^/.]+)`,
       destination: '/blog/:slug',
       permanent: true,
     });
