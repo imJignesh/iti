@@ -9,7 +9,7 @@ export default function SEOHead({
     return (
         <Head>
             <title>{title}</title>
-            <meta name="description" content={description} />
+            <meta name="description" content={description} key="desc" />
 
             {/* REMOVED: Preconnects moved to _document.js for better performance */}
 
