@@ -2,7 +2,6 @@ import { Montserrat } from 'next/font/google';
 import { useRouter } from "next/router";
 import { useState, createContext, useEffect } from "react";
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 
 import "@/styles/critical.css";
 import "@/styles/globals.css";
@@ -10,17 +9,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import SEOHead from '../components/SEOHead';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import DelayedPopup from "../components/DelayedPopup";
 
-const Footer = dynamic(() => import("../components/Footer"), { ssr: false });
-const DelayedPopup = dynamic(() => import("../components/DelayedPopup"), { ssr: false });
-
-const LocomotiveScrollProvider = dynamic(
-    () => import('../components/LocomotiveScrollProvider'),
-    {
-        ssr: false,
-        loading: () => <div style={{ minHeight: '100vh' }} />
-    }
-);
+import LocomotiveScrollProvider from '../components/LocomotiveScrollProvider';
 
 const isPageSpeedInsights = () => {
     if (typeof navigator === 'undefined') return false;

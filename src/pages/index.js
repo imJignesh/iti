@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
+
 import SEO from "@/components/SEO";
 import SEOHead from "@/components/SEOHead";
 import Hero from "@/components/homeCopy/Hero";
@@ -11,15 +11,16 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/scrollbar";
 
 // Dynamic imports
-const Course = dynamic(() => import("@/components/homeCopy/Course"), { loading: () => null });
-const MarqueeBanner = dynamic(() => import("@/components/homeCopy/MarqueeBanner"), { loading: () => null });
-const About = dynamic(() => import("@/components/homeCopy/About"), { loading: () => null });
-const Test = dynamic(() => import("@/components/homeCopy/Test"), { loading: () => null });
-const Subjects = dynamic(() => import("@/components/homeCopy/Subjects"), { loading: () => null });
-const Usps = dynamic(() => import("@/components/homeCopy/Usps"), { loading: () => null });
-const Trainers = dynamic(() => import("@/components/homeCopy/Trainers"), { loading: () => null });
-const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"), { loading: () => null });
-const Blog = dynamic(() => import("@/components/homeCopy/Blog"), { loading: () => null });
+// Dynamic imports switched to static for SSR
+import Course from "@/components/homeCopy/Course";
+import MarqueeBanner from "@/components/homeCopy/MarqueeBanner";
+import About from "@/components/homeCopy/About";
+import Test from "@/components/homeCopy/Test";
+import Subjects from "@/components/homeCopy/Subjects";
+import Usps from "@/components/homeCopy/Usps";
+import Trainers from "@/components/homeCopy/Trainers";
+import Testimonial from "@/components/homeCopy/Testimonial";
+import Blog from "@/components/homeCopy/Blog";
 
 const HomeCopy = ({ headerHeight }) => {
     const [active, setActive] = useState(1);
