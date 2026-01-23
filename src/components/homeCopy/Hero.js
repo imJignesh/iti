@@ -63,19 +63,19 @@ const Hero = () => {
                     <div className={`row ${styles.heroMain}`}>
                         <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
                             <div className={`${styles.heroMainHeading}`}>
-                                <h2 className={styles.SubHeading}>BEST TUTORS IN UAE</h2>
+                                <h1 className={styles.SubHeading}>BEST TUTORS IN UAE</h1>
                             </div>
 
                             {isMobile !== null && (
                                 <>
                                     {isMobile ? (
-                                        <h1 className={`${styles.heroTitleMobile} pt-3 pb-3`}>
+                                        <h2 className={`${styles.heroTitleMobile} pt-3 pb-3`}>
                                             Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
-                                        </h1>
+                                        </h2>
                                     ) : (
-                                        <h1 className={styles.heroTitleDesktop}>
+                                        <h2 className={styles.heroTitleDesktop}>
                                             Ignite Your Path To Top <span className="highlight">Academic</span> Performance
-                                        </h1>
+                                        </h2>
                                     )}
                                 </>
                             )}

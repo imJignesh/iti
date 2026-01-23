@@ -336,7 +336,7 @@ const CategoryPage = ({ headerHeight }) => {
                     <div className="dark-overlay"></div>
 
                     <div className="overlay">
-                        <h2
+                        <h1
                             className="heading"
                             style={{
                                 background: "linear-gradient(90deg, #EDFFF4, #A6EAC7)",
@@ -345,8 +345,8 @@ const CategoryPage = ({ headerHeight }) => {
                                 backgroundClip: "text",
                             }}
                         >
-                            {currentCategoryName.toUpperCase()}
-                        </h2>
+                            {currentCategoryName.toUpperCase()} BLOGS
+                        </h1>
                         {/* Dynamic Breadcrumb based on the path */}
                         <p className="subHeading">
                             {breadcrumbPath.map((item, index) => (
