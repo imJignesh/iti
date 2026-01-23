@@ -69,6 +69,7 @@ const IBCurriculumStages = () => {
                   <div className="col-lg-6">
                     <div className="curriculum-info">
                       <Image
+                        alt='IB Maths Tutors in Dubai'
                         src="/assets/check-inactive-blue.webp"
                         width={30}
                         height={30}
@@ -80,6 +81,7 @@ const IBCurriculumStages = () => {
                   <div className="col-lg-6">
                     <div className="curriculum-info">
                       <Image
+                        alt='IB Maths Tutors in Dubai'
                         src="/assets/check-inactive-blue.webp"
                         width={30}
                         height={30}
@@ -91,6 +93,7 @@ const IBCurriculumStages = () => {
                   <div className="col-lg-6">
                     <div className="curriculum-info">
                       <Image
+                        alt='IB Maths Tutors in Dubai'
                         src="/assets/check-inactive-blue.webp"
                         width={30}
                         height={30}
@@ -102,6 +105,7 @@ const IBCurriculumStages = () => {
                   <div className="col-lg-6">
                     <div className="curriculum-info">
                       <Image
+                        alt='IB Maths Tutors in Dubai'
                         src="/assets/check-inactive-blue.webp"
                         width={30}
                         height={30}
@@ -141,6 +145,7 @@ const IBCurriculumStages = () => {
                   <div className="col-lg-6">
                     <div className="curriculum-info">
                       <Image
+                        alt='IB Maths Tutors in Dubai'
                         src="/assets/check-inactive-blue.webp"
                         width={30}
                         height={30}
@@ -152,6 +157,7 @@ const IBCurriculumStages = () => {
                   <div className="col-lg-6">
                     <div className="curriculum-info">
                       <Image
+                        alt='IB Maths Tutors in Dubai'
                         src="/assets/check-inactive-blue.webp"
                         width={30}
                         height={30}

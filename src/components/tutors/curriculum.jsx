@@ -82,11 +82,12 @@ const IBCurriculumStages = () => {
                 <div className="curriculum-content">
                   <div className="curriculum-info">
                     <Image
+                      alt="Tutors in Dubai"
                       src="/assets/check-inactive-blue.webp"
                       width={isMobile ? 20 : 30}
                       height={isMobile ? 20 : 30}
                       quality={100}
-                      alt="Check icon"
+
                     />{" "}
                     <h3>
                       <a
@@ -106,7 +107,7 @@ const IBCurriculumStages = () => {
                       width={isMobile ? 20 : 30}
                       height={isMobile ? 20 : 30}
                       quality={100}
-                      alt="Check icon"
+                      alt="Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -126,7 +127,7 @@ const IBCurriculumStages = () => {
                       width={isMobile ? 20 : 30}
                       height={isMobile ? 20 : 30}
                       quality={100}
-                      alt="Check icon"
+                      alt="Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -146,7 +147,7 @@ const IBCurriculumStages = () => {
                       width={isMobile ? 20 : 30}
                       height={isMobile ? 20 : 30}
                       quality={100}
-                      alt="Check icon"
+                      alt="Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -203,7 +204,7 @@ const IBCurriculumStages = () => {
                       width={isMobile ? 20 : 30}
                       height={isMobile ? 20 : 30}
                       quality={100}
-                      alt="Check icon"
+                      alt="Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -223,7 +224,7 @@ const IBCurriculumStages = () => {
                       width={isMobile ? 20 : 30}
                       height={isMobile ? 20 : 30}
                       quality={100}
-                      alt="Check icon"
+                      alt="Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -243,7 +244,7 @@ const IBCurriculumStages = () => {
                       width={isMobile ? 20 : 30}
                       height={isMobile ? 20 : 30}
                       quality={100}
-                      alt="Check icon"
+                      alt="Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
