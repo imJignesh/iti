@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
-import MovingBanner from '@/components/home/MovingBanner';
-import Testimonial from '@/components/home/Testimonial';
+// import MovingBanner from '@/components/home/MovingBanner';
+// import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/igcse/accordian';
 import Blog from "@/components/igcse/Blog";
 import CourseCard from '@/components/igcse/CourseCard';

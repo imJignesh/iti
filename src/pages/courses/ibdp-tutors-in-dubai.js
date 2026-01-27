@@ -1,5 +1,5 @@
-import MovingBanner from '@/components/home/MovingBanner';
-import Testimonial from '@/components/home/Testimonial';
+// import MovingBanner from '@/components/home/MovingBanner';
+// import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/ibdp/accordian';
 import Blog from "@/components/ibdp/Blog";
 import CourseCard from '@/components/ibdp/CourseCard';

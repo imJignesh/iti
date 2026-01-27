@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
-import MovingBanner from '@/components/home/MovingBanner';
-import Testimonial from '@/components/home/Testimonial';
+// import MovingBanner from '@/components/home/MovingBanner';
+// import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/myp/accordian';
 import Blog from "@/components/myp/Blog";
 import CourseCard from '@/components/myp/CourseCard';
