@@ -88,13 +88,13 @@ const Footer = () => {
             </div>
             <div className={styles.socialmediafooter}>
               <a href="https://www.facebook.com/ignitetraininginstitute" target="_blank">
-                <img src="/images/fb-footer.webp" alt="" width={36} height={36} />
+                <img src="/images/fb-footer.webp" alt="Facebook" width={36} height={36} />
               </a>
               <a href="https://www.instagram.com/ignitetraininginstitute/?hl=en" target="_blank">
-                <img src="/images/insta-footer.webp" alt="" width={36} height={36} />
+                <img src="/images/insta-footer.webp" alt="Instagram" width={36} height={36} />
               </a>
               <a href="https://www.linkedin.com/company/ignite-training-institute" target="_blank">
-                <img src="/images/linkedin-footer.webp" alt="" width={36} height={36} />
+                <img src="/images/linkedin-footer.webp" alt="LinkedIn" width={36} height={36} />
               </a>
             </div>
 
@@ -110,7 +110,7 @@ const Footer = () => {
                   required
                 />
                 <button className={styles.footerNewsletterBtn} type="submit" disabled={loading}>
-                  <img src="/images/right-arrow-blue.webp" alt="" width={28} height={28} />
+                  <img src="/images/right-arrow-blue.webp" alt="Footer Arrow" width={28} height={28} />
                 </button>
               </form>
               {status === 'error' && <p style={{ color: '#ff6b6b', fontSize: '0.8rem', marginTop: '5px' }}>Something went wrong. Please try again.</p>}
