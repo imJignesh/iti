@@ -181,8 +181,8 @@ const HomeSchooling = ({ headerHeight }) => {
   return (
     <>
       <SEO
-        title="Homeschooling Support In Dubai | Private Candidate Tutors"
-        description="Ignite provides full homeschooling support in Dubai for private candidates taking IB, IGCSE, A-Levels, & AP exams. Get tailored tutoring and curriculum guidance."
+        title="Homeschooling In Dubai | Support For Private Candidates"
+        description="Join homeschooling in Dubai, UAE for IGCSE, A-Levels & AP as private candidates. Get personalized learning support to excel academically & beyond"
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={homeschoolingSchema} />

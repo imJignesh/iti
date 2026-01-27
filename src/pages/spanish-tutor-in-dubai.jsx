@@ -153,8 +153,8 @@ const SpanishTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
-                title="Spanish Tutors In Dubai - IB, IGCSE, A-Levels Support"
-                description="Achieve fluency and top scores with Spanish tutors in Dubai for IB, IGCSE, & A-Levels. Personalized instruction to excel in the language and culture curriculum."
+                title="Best Spanish Tutors In Dubai - IB, IGCSE, A-Level Support"
+                description="We provide expert Spanish coaching in Dubai for IB, IGCSE, & A-Levels, helping students master the language & achieve top exam results"
             />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
             <JsonLd schema={spanishTutorsSchema} />

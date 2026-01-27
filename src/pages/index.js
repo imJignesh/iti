@@ -41,13 +41,7 @@ const HomeCopy = ({ headerHeight }) => {
 
     return (
         <>
-            <SEOHead
-                title="Ignite Training Institute - Tutors In UAE For Exam Success"
-                description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
-            /* CRITICAL CHANGE: preloadImages prop REMOVED. 
-               We now rely on Hero.js <Head> for responsive preloading. 
-            */
-            />
+
             <SEO
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"

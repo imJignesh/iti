@@ -236,8 +236,8 @@ const Blogpg = ({ headerHeight }) => {
 
     return (
         <>
-            <SEO title="Academic Blog - IB, IGCSE, A-Level, AP & Test Prep Tips"
-                description="Explore the latest academic tips, study guides, and subject insights for IB, IGCSE, A-Levels, AP, and entrance exams from Ignite Training Institute experts."
+            <SEO title="Blogs - Expert Tips, Exam Strategies & Curricula Insights"
+                description="Explore Ignite’s blog for expert study tips, exam strategies, & guidance on IB, IGCSE, A-Levels, AP & more. Stay ahead with academic insights"
                 url="https://ignitetraininginstitute.com/blog"
             />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the data as a prop */}

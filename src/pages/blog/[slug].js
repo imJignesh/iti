@@ -123,123 +123,98 @@ const TOCPostContent = ({ content, toc }) => {
     const { openManualPopup } = useContext(PopupContext);
     const contentRef = useRef(null);
 
-    if (!content) return null;
+    const [displayContent, setDisplayContent] = useState(content);
 
-    // --- DOM Manipulation ---
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = content;
-    const allH2s = tempDiv.querySelectorAll('h2');
+    useEffect(() => {
+        if (!content) return;
 
-    const firstH2 = allH2s[0];
-    if (firstH2) {
-        const tocWrapper = document.createElement('div');
-        tocWrapper.id = 'toc-container';
-        firstH2.parentNode.insertBefore(tocWrapper, firstH2);
-    }
+        // --- DOM Manipulation (Client-Side Only) ---
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = content;
+        const allH2s = tempDiv.querySelectorAll('h2');
 
-    const tocHtml = `
-        <div class="my-4">
-            <div class="card-body">
-                <h5 class="toc-title">Table of Contents</h5>
-                <nav>
-                    <ul class="list-unstyled mb-0 toc-list">
-                        ${toc.map(({ text, id }) => `<li class="toc-item py-1"><a href="#${id}" class="text-decoration-none">${text}</a></li>`).join('')}
-                    </ul>
-                </nav>
+        const firstH2 = allH2s[0];
+        if (firstH2) {
+            const tocWrapper = document.createElement('div');
+            tocWrapper.id = 'toc-container';
+            firstH2.parentNode.insertBefore(tocWrapper, firstH2);
+        }
+
+        const tocHtml = `
+            <div class="my-4">
+                <div class="card-body">
+                    <h5 class="toc-title">Table of Contents</h5>
+                    <nav>
+                        <ul class="list-unstyled mb-0 toc-list">
+                            ${toc.map(({ text, id }) => `<li class="toc-item py-1"><a href="#${id}" class="text-decoration-none">${text}</a></li>`).join('')}
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </div>
-        <div class="d-lg-none">
-            ${getSidebarHtmlStaticMobile()}
-        </div>
-    `;
+            <div class="d-lg-none">
+                ${getSidebarHtmlStaticMobile()}
+            </div>
+        `;
 
-    const gif1Html = `
-        <div class="blog-gif-wrapper my-5">
-            <a href="/join-free-demo-class/"><img src="/images/blog-gif-1.gif" alt="Illustrative GIF 1" class="img-fluid gif-1 w-100 rounded" /></a>
-        </div>
-    `;
-    const video1Html = `
-        <div class="blog-video-wrapper my-5">
-            <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
-                <video
-                    class="img-fluid gif-1 w-100 rounded"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-          
-                    style="object-fit: cover;"
-                >
-                    <source src="/videos/blog-gif1.mp4" type="video/mp4" />
-                </video>
-            </a>
-        </div>
-    `;
+        const video1Html = `
+            <div class="blog-video-wrapper my-5">
+                <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
+                    <video
+                        class="img-fluid gif-1 w-100 rounded"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+              
+                        style="object-fit: cover;"
+                    >
+                        <source src="/videos/blog-gif1.mp4" type="video/mp4" />
+                    </video>
+                </a>
+            </div>
+        `;
 
-    // Define unique class for targeting the 2nd GIF WRAPPER
-    const gif2PlaceholderClass = 'gif-popup-trigger-2';
-    const gif2Html = `
-        <div class="blog-gif-wrapper my-5 ${gif2PlaceholderClass}" style="cursor: pointer;">
-            <img 
-                src="/images/blog-gif-2.gif" 
-                alt="Illustrative GIF 2 (Click to open popup)" 
-                class="img-fluid gif-2 w-100 rounded" 
-            />
-        </div>
-    `;
-    const video2Html = `
-        <div class="blog-video-wrapper my-5">
-            <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
-                <video
-                    class="img-fluid gif-2 w-100 rounded"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-          
-                    style="object-fit: cover;"
-                >
-                    <source src="/videos/blog-gif-2.mp4" type="video/mp4" />
-                </video>
-            </a>
-        </div>
-    `;
+        const video2Html = `
+            <div class="blog-video-wrapper my-5">
+                <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
+                    <video
+                        class="img-fluid gif-2 w-100 rounded"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+              
+                        style="object-fit: cover;"
+                    >
+                        <source src="/videos/blog-gif-2.mp4" type="video/mp4" />
+                    </video>
+                </a>
+            </div>
+        `;
 
-    // Insert GIF 2 before the 4th H2 (index 3)
-    // const fourthH2 = allH2s[3];
-    // if (fourthH2) {
-    //     const gif2TempDiv = document.createElement('div');
-    //     gif2TempDiv.innerHTML = gif2Html.trim();
-    //     fourthH2.parentNode.insertBefore(gif2TempDiv.firstChild, fourthH2);
-    // }
-    const fourthH2 = allH2s[3];
-    if (fourthH2) {
-        const gif2TempDiv = document.createElement('div');
-        gif2TempDiv.innerHTML = video2Html.trim();
-        fourthH2.parentNode.insertBefore(gif2TempDiv.firstChild, fourthH2);
-    }
+        const fourthH2 = allH2s[3];
+        if (fourthH2) {
+            const gif2TempDiv = document.createElement('div');
+            gif2TempDiv.innerHTML = video2Html.trim();
+            fourthH2.parentNode.insertBefore(gif2TempDiv.firstChild, fourthH2);
+        }
 
+        const thirdH2 = allH2s[2];
+        if (thirdH2) {
+            const video1TempDiv = document.createElement('div');
+            video1TempDiv.innerHTML = video1Html.trim();
+            thirdH2.parentNode.insertBefore(video1TempDiv.firstChild, thirdH2);
+        }
 
-    // Insert GIF 1 before the 3rd H2 (index 2)
-    // const thirdH2 = allH2s[2];
-    // if (thirdH2) {
-    //     const gif1TempDiv = document.createElement('div');
-    //     gif1TempDiv.innerHTML = gif1Html.trim();
-    //     thirdH2.parentNode.insertBefore(gif1TempDiv.firstChild, thirdH2);
-    // }
-    const thirdH2 = allH2s[2];
-    if (thirdH2) {
-        const video1TempDiv = document.createElement('div');
-        // --- USE THE NEW video1Html HERE ---
-        video1TempDiv.innerHTML = video1Html.trim();
-        thirdH2.parentNode.insertBefore(video1TempDiv.firstChild, thirdH2);
-    }
+        let newContent = tempDiv.innerHTML;
+        if (firstH2) {
+            const tocPlaceholder = `<div id="toc-container"></div>`;
+            newContent = newContent.replace(tocPlaceholder, tocHtml);
+        }
 
-    let newContent = tempDiv.innerHTML;
-    if (firstH2) {
-        const tocPlaceholder = `<div id="toc-container"></div>`;
-        newContent = newContent.replace(tocPlaceholder, tocHtml);
-    }
+        setDisplayContent(newContent);
+
+    }, [content, toc]);
 
     // --- Event Delegation Logic ---
     useEffect(() => {
@@ -271,13 +246,34 @@ const TOCPostContent = ({ content, toc }) => {
         <div ref={contentRef}>
             <div
                 className="post-content lh-lg text-secondary"
-                dangerouslySetInnerHTML={{ __html: newContent }}
+                dangerouslySetInnerHTML={{ __html: displayContent }}
             />
         </div>
     );
 };
 
-export default function PostDetail() {
+export async function getServerSideProps(context) {
+    const { slug } = context.params;
+    // Fetch the post data on the server
+    const res = await fetch(`https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed`);
+    const data = await res.json();
+
+    // If no post found, return 404
+    if (!data || !data.length) {
+        return {
+            notFound: true,
+        };
+    }
+
+    // Return the post data as props
+    return {
+        props: {
+            initialPost: data[0],
+        },
+    };
+}
+
+export default function PostDetail({ initialPost }) {
     const router = useRouter();
     const [pageInfo, setPageInfo] = useState('');
     const { slug } = router.query;
@@ -294,10 +290,13 @@ export default function PostDetail() {
     // ------------------------------------
 
     const postApiUrl = slug ? `https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed` : null;
-    const { data, error, isLoading } = useSWR(postApiUrl, fetcher);
+    const { data, error } = useSWR(postApiUrl, fetcher, { fallbackData: [initialPost] });
 
     const scrollInstanceRef = useRef(null);
-    const post = data?.[0]; // Define post once here
+    const post = data?.[0] || initialPost; // Define post once here
+
+
+
 
 
     // --- Function to handle the vote submission ---
@@ -508,7 +507,7 @@ export default function PostDetail() {
     // --------------------------------------------------------------------
 
 
-    if (router.isFallback || isLoading) {
+    if (router.isFallback) {
         return (
             <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '300px' }}>
                 <div className="spinner-border text-primary" role="status">
@@ -603,7 +602,7 @@ export default function PostDetail() {
                         <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(postTitle)}`} target="_blank" rel="noopener noreferrer">
 
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_7_16)">
+                                <g clipPath="url(#clip0_7_16)">
                                     <path d="M24 0C10.7456 0 0 10.7456 0 24C0 37.2544 10.7456 48 24 48C37.2544 48 48 37.2544 48 24C48 10.7456 37.2544 0 24 0Z" fill="black" />
                                     <path d="M26.6257 21.8281L36.8998 9.88525H34.4652L25.5441 20.2551L18.419 9.88525H10.2009L20.9756 25.5662L10.2009 38.0901H12.6357L22.0565 27.1392L29.5812 38.0901H37.7993L26.6251 21.8281H26.6257ZM13.513 11.7181H17.2526L34.4663 36.3406H30.7266L13.513 11.7181Z" fill="white" />
                                 </g>
@@ -618,7 +617,7 @@ export default function PostDetail() {
                         <a href={`mailto:?subject=${encodeURIComponent(postTitle)}&body=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer">
 
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_7_13)">
+                                <g clipPath="url(#clip0_7_13)">
                                     <path fillRule="evenodd" clipRule="evenodd" d="M24.008 0.0078125C37.2627 0.0078125 48.008 10.7503 48.008 24.0111C48.008 37.2652 37.2628 48.0077 24.008 48.0077C10.7531 48.0077 0.00805664 37.2657 0.00805664 24.0111C0.00805664 10.7503 10.7532 0.0078125 24.008 0.0078125ZM38.8883 14.8716L25.7709 25.7709C25.2776 26.1868 24.6531 26.4149 24.0078 26.4149C23.3626 26.4149 22.7381 26.1868 22.2447 25.7709L9.1274 14.8716C9.04812 15.0744 9.00761 15.2904 9.00796 15.5082V32.5071C9.00903 32.9736 9.19478 33.4208 9.52461 33.7507C9.85444 34.0806 10.3015 34.2666 10.768 34.2678H37.2476C37.7142 34.2666 38.1613 34.0808 38.4912 33.7508C38.8211 33.4208 39.0069 32.9737 39.008 32.5071V15.5082C39.0082 15.2904 38.9676 15.0744 38.8883 14.8716Z" fill="#4CAF50" />
                                 </g>
                                 <defs>

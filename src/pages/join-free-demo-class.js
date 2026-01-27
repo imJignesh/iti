@@ -103,8 +103,8 @@ const FreeDemo = ({ headerHeight }) => {
     return (
         <>
             <SEO
-                title="Free Demo Class | Ignite Training Institute In UAE"
-                description="Book a free demo class with Ignite Training Institute in Dubai, UAE. Experience our personalized tutoring for IB, IGCSE, A-Levels, & AP before enrolling."
+                title="Free Demo Class At Ignite Training Institute | Join Today"
+                description="Experience Ignite’s expert tutoring with a free demo class. Explore IB, IGCSE, A-Levels, AP & more with certified trainers in Dubai, UAE"
             />
             <div
                 // Removed: ref={scrollRef}

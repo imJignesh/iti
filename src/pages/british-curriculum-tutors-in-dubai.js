@@ -181,7 +181,7 @@ const BC = ({ headerHeight }) => {
     <>
       <SEO
         title="British Curriculum Tutors For IGCSE/GCSE & AS & A-Levels"
-        description="Seek full academic guidance for IGCSE/GCSE, AS & A-Levels from certified tutors. Our programs ensure better grades and effective exam preparation in the UAE."
+        description="Seek full guidance for the British Curriculum in the UAE. Learn from expert A-Level & IGCSE tutors to strengthen academics & boost performance"
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={bcSchema} />

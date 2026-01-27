@@ -155,8 +155,8 @@ const Contact = ({ headerHeight }) => {
 
     return (
         <>
-            <SEO title="Contact Ignite Training Institute In Dubai, UAE"
-                description="Contact Ignite Training Institute in Dubai, UAE, for expert tutoring in IB, IGCSE, A-Levels, AP, & test prep. Get personalized academic counseling today." />
+            <SEO title="Contact Us"
+                description="Get in touch with our academic experts to clearly understand the tutoring process & successfully kickstart your academic journey today!" />
             {/* 燥 SCHEMA INJECTION: Use the reusable component here */}
             <JsonLd schema={educationalOrganizationSchema} />
 

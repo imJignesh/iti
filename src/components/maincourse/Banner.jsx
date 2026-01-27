@@ -20,9 +20,6 @@ export default function TutoringCourses() {
   return (
     <div className="container mx-auto" style={{ marginBlock: isMobile ? "2.5rem" : "0" }}>
       <Head>
-        <title>Tutoring Courses</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           rel="stylesheet"

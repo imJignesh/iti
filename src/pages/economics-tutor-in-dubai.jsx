@@ -153,8 +153,8 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
-                title="Economics Tutors In Dubai - IB, IGCSE, A-Levels, & AP Support"
-                description="Excel in Economics with expert tutors in Dubai, specializing in IB, IGCSE, A-Levels, & AP. Personalized coaching for micro, macro, and quantitative skills."
+                title="Economics Tutors In Dubai For IB, IGCSE, A-Level, & AP"
+                description="Boost your exam grades with the best Economics tutors in Dubai, specializing in IB, IGCSE, A-Levels, & AP. Get expert guidance now"
             />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
             <JsonLd schema={economicsTutorsSchema} />

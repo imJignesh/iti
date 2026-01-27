@@ -154,8 +154,8 @@ const ChemistryTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
-                title="Best Chemistry Tutors In Dubai - IB, IGCSE, & A-Level Support"
-                description="Ace your exams with the best Chemistry tutors in Dubai, offering support for IB, IGCSE, & A-Level. Get subject-specific tutoring, revision classes, & test prep." />
+                title="Chemistry Tutors In Dubai - IB, IGCSE, A-Level, & AP"
+                description="Learn with Chemistry tutors in Dubai, offering expertise in IB, IGCSE, A-Level, & AP. Elevate your exam performance with 1K+ curated study resources" />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
             <JsonLd schema={chemistryTutorsSchema} />
 

@@ -154,8 +154,8 @@ const PhysicsTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
-                title="Physics Tutors In Dubai - IB, IGCSE, & A-Level Coaching"
-                description="Find top Physics tutors in Dubai, specializing in IB, IGCSE, & A-Level. Get comprehensive coaching, test prep, and tailored study materials for exam excellence." />
+                title="Physics Tutors In Dubai For IB, IGCSE, A-Level, & AP"
+                description="Excel with the best Physics tutors in Dubai, specializing in IB, IGCSE, A-Level, & AP. Build strong concepts & achieve top exam results" />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
             <JsonLd schema={physicsTutorsSchema} />
 

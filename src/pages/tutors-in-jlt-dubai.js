@@ -146,7 +146,7 @@ const Tutors = ({ headerHeight }) => {
     <>
       <SEO
         title="Best Tutors In JLT, Dubai - IB, IGCSE, A-Levels, AP Support"
-        description="Enhance your learning with expert tutors in JLT Dubai for IB, IGCSE, A-Levels, AP, & more. Get personalized study plans, test prep, & one-on-one sessions."
+        description="Enhance your learning with expert tutors in JLT Dubai for IB, IGCSE, A-Levels, & AP. Get dedicated support tailored to help students achieve their goals"
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={jltTutorsSchema} />

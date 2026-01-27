@@ -175,8 +175,8 @@ const ap = ({ headerHeight }) => {
   return (
     <>
       <SEO
-        title="AP Tutors In Dubai, UAE | Advanced Placement Coaching"
-        description="Excel in your Advanced Placement exams with AP tutors in Dubai. Our personalized coaching programs cover all subjects and ensure a 5-score goal."
+        title="AP Tutors In Dubai | Best AP Prep Classes In UAE"
+        description="Experience result-driven AP tutoring with programs tailored to match each student’s learning needs. Get practice tests, tailored strategies, & resources"
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={apSchema} />

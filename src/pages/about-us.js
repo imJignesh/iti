@@ -83,8 +83,8 @@ const About = ({ headerHeight }) => {
 
   return (
     <>
-      <SEO title="About Ignite Training Institute: Expert Tutors In Dubai"
-        description="Learn about Ignite Training Institute, Dubai's leading tutoring center for IB, IGCSE, A-Levels, & AP. Our experienced tutors and proven methodology ensure academic success." />
+      <SEO title="About Us - Best Training Institute In The UAE"
+        description="Ignite Training Institute is the leading training center in the UAE, providing guidance in IB, IGCSE, A-Level, & AP to help students excel academically" />
       {/* 2. RENDER the JsonLd component and pass the schema data */}
       <JsonLd schema={educationalOrganizationSchema} />
 

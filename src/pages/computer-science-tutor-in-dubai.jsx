@@ -153,8 +153,8 @@ const ComputerTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
-                title="Computer Science Tutors In Dubai - IB, IGCSE, A-Levels & AP"
-                description="Find expert Computer Science tutors in Dubai for IB, IGCSE, A-Levels, & AP. Get personalized coding support, conceptual clarity, and project guidance for top grades."
+                title="Computer Science Tutors In Dubai - IB, IGCSE, A-Level, & AP"
+                description="Upgrade your grades with the best Computer Science tutors in Dubai. We specialize in IB, IGCSE, A-Levels, & AP, offering thorough preparation"
             />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
             <JsonLd schema={computerTutorsSchema} />

@@ -188,8 +188,8 @@ const act = ({ headerHeight }) => {
         <link rel="preload" as="image" href="/assets/act.webp" />
       </Head>
       <SEO
-        title="ACT Tutors In Dubai | ACT Exam Preparation Classes In UAE"
-        description="Score high on the ACT with expert ACT tutors in Dubai. Our comprehensive ACT exam preparation classes offer strategies, practice tests, and personalized support."
+        title="ACT Subject Tests Prep With Focused Courses & Tutors In UAE"
+        description="Ignite Training Institute can support you as the best ACT tutors in Dubai through our comprehensive guidance & ACT-specific tutoring strategies"
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={actSchema} />

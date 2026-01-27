@@ -5,8 +5,7 @@ const SEO = ({ title, description, url, image }) => {
     // 1. We use the provided title directly (no global site name appended).
     const pageTitle = title || 'Ignite Training Institute';
 
-    // 2. Use a unique, consistent key for the description to force replacement.
-    const descriptionKey = 'main-page-desc';
+
 
     return (
         <Head>
@@ -17,7 +16,7 @@ const SEO = ({ title, description, url, image }) => {
             <meta
                 name="description"
                 content={description || "Discover the best courses and expert trainers for your career growth."}
-                key={descriptionKey}
+                key="desc"
             />
 
             {/* Canonical URL (Highly Recommended) */}

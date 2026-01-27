@@ -154,7 +154,7 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
-                title="Biology Tutors In Dubai - IB, IGCSE, A-Levels, & AP Support"
+                title="Biology Tutors In Dubai For IB, IGCSE, A-Level, & AP"
                 description="Get expert Biology tutoring in Dubai from highly qualified tutors specializing in IB, IGCSE, A-Levels, & AP. Achieve confidence & academic excellence"
             />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
