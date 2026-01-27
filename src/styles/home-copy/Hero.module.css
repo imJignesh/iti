@@ -563,7 +563,7 @@
 
 @media (max-width: 425px) {
   .hero {
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0 !important;
     background-size: 90%;
   }
 
@@ -587,6 +587,7 @@
 
   .heroLeft .heroTitleMobile {
     font-size: 1.2rem;
+    text-align: center;
   }
 
   .heroLeft .heroTitleMobile :global(span) {
