@@ -181,7 +181,6 @@ const IBC = ({ headerHeight }) => {
       <SEO
         title="IB Tutors In Dubai For Exam Success I IB Coaching In UAE"
         description="Get dedicated learning support for IB coaching in Dubai. Our expert IB tutors in the UAE are equipped with the right approach, strategies & resources"
-        url="https://ignitetraininginstitute.com/ib-curriculum-tutors-in-dubai/"
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       {/* The JsonLd component will correctly stringify and inject this valid JSON-LD array */}

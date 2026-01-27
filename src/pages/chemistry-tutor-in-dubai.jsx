@@ -155,8 +155,7 @@ const ChemistryTutorsInDubai = ({ headerHeight }) => {
         <>
             <SEO
                 title="Chemistry Tutors In Dubai - IB, IGCSE, A-Level, & AP"
-                description="Learn with Chemistry tutors in Dubai, offering expertise in IB, IGCSE, A-Level, & AP. Elevate your exam performance with 1K+ curated study resources"
-                url="https://ignitetraininginstitute.com/chemistry-tutor-in-dubai/" />
+                description="Learn with Chemistry tutors in Dubai, offering expertise in IB, IGCSE, A-Level, & AP. Elevate your exam performance with 1K+ curated study resources" />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
             <JsonLd schema={chemistryTutorsSchema} />
 

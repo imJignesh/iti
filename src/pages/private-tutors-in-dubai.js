@@ -148,7 +148,6 @@ const PrivateTutorsDubai = ({ headerHeight }) => {
       <SEO
         title="Best Private Tutors In Dubai, UAE - IB, IGCSE, A-Levels, & AP"
         description="Achieve academic excellence with Ignite’s private tutors in Dubai, UAE, offering support for IB, IGCSE, A-Level, AP, & Homeschooling (private candidates)"
-        url="https://ignitetraininginstitute.com/private-tutors-in-dubai/"
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={privateTutorsSchema} />

@@ -180,7 +180,6 @@ const IGCSE = ({ headerHeight }) => {
       <SEO
         title="IGCSE Tutors In Dubai, UAE | Expert Coaching & Guidance"
         description="Achieve success with top IGCSE tutors in UAE. Get full prep support for IGCSE with syllabus coverage, past paper practice & exam strategies"
-        url="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/"
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={igcseSchema} />

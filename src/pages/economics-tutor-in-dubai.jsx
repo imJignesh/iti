@@ -155,7 +155,6 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
             <SEO
                 title="Economics Tutors In Dubai For IB, IGCSE, A-Level, & AP"
                 description="Boost your exam grades with the best Economics tutors in Dubai, specializing in IB, IGCSE, A-Levels, & AP. Get expert guidance now"
-                url="https://ignitetraininginstitute.com/economics-tutor-in-dubai/"
             />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
             <JsonLd schema={economicsTutorsSchema} />
