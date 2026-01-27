@@ -454,7 +454,7 @@ export default function InfoCard() {
                 {/* --- START: FORM IMPLEMENTATION --- */}
                 <form onSubmit={handleSubmit}>
                   <input type="hidden" name="pageinfo" value="" />
-                  <h2
+                  <p
                     className="fw-bold text-uppercase mb-4 fade-in-section text-center form-heading"
                     data-scroll
                     data-scroll-class="is-inview"
@@ -462,7 +462,7 @@ export default function InfoCard() {
                     style={{ animationDelay: "0.65s" }}
                   >
                     GET A FREE DEMO CLASS +  FREE STUDY RESOURCES
-                  </h2>
+                  </p>
 
                   {submissionStatus === 'success' && (
                     <div className="alert alert-success text-center">

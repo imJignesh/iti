@@ -238,7 +238,7 @@ const Blogpg = ({ headerHeight }) => {
         <>
             <SEO title="Blogs - Expert Tips, Exam Strategies & Curricula Insights"
                 description="Explore Ignite’s blog for expert study tips, exam strategies, & guidance on IB, IGCSE, A-Levels, AP & more. Stay ahead with academic insights"
-                url="https://ignitetraininginstitute.com/blog"
+                url="https://ignitetraininginstitute.com/blog/"
             />
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the data as a prop */}
             <JsonLd schema={blogSchema} />

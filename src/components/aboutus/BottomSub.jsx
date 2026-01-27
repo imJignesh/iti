@@ -47,9 +47,9 @@ export default function CallToAction() {
           {/* Mobile Layout */}
           <div className="mobile-only mobileLayout text-uppercase">
             <div className="mobileTextSection">
-              <h1 className="mobileHeading">
+              <p className="mobileHeading">
                 Discover Courses That Support Every Step Of Learning
-              </h1>
+              </p>
 
               <p className="mobileParagraph">
                 Explore our wide range of tutoring programs, each designed to

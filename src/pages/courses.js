@@ -73,6 +73,7 @@ const About = ({ headerHeight }) => {
             <SEO
                 title="Top Courses In UAE For IB, IGCSE, A Levels, & AP Tutoring"
                 description="Learn with certified tutors for IB, IGCSE, A-Levels, AP, ACT & UCAT. Get expert coaching with personalized support & proven strategies. Enroll today"
+                url="https://ignitetraininginstitute.com/courses/"
             />
             <div
                 ref={scrollRef}
@@ -96,7 +97,7 @@ const About = ({ headerHeight }) => {
 
                 </section>
                 <section data-scroll-section>
-                    <Learning/>
+                    <Learning />
                 </section>
                 {/* <section data-scroll-section>
                 <MarqueeBanner />

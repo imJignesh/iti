@@ -59,7 +59,7 @@ const getSidebarHtmlStaticMobile = () => {
         <div class="sticky-sidebar-wrapper">
             ${getSidebarHtmlImage()}
             <div class="form-container blog-container">
-                <h2>Get a Free Demo Class +<br />Free Study Resources</h2>
+                <p>Get a Free Demo Class +<br />Free Study Resources</p>
                 <form>
                     <div class="form-row">
                         <div class="form-group">

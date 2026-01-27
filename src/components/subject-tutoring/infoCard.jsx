@@ -285,7 +285,7 @@ export default function InfoCard() {
                   justifyContent: "center",
                 }}
               >
-                <h2
+                <p
                   className="fw-bold text-uppercase mb-4 fade-in-section text-center form-heading"
                   data-scroll
                   data-scroll-class="is-inview"
@@ -293,7 +293,7 @@ export default function InfoCard() {
                   style={{ animationDelay: "0.65s" }}
                 >
                   GET A FREE DEMO CLASS +  FREE STUDY RESOURCES
-                </h2>
+                </p>
 
                 <div
                   className="mb-3 fade-in-section"
