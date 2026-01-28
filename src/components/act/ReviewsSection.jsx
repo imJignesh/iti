@@ -152,9 +152,9 @@ export default function Testimonial({ }) {
           style={{ animationDelay: "0.2s" }}
         >
           {/* Decorative rectangles */}
-          <img src="/images/rectangle-bg4.webp" alt="act tutoring" className={styles.testimonialRect} />
-          <img src="/images/rectangle-bg4.webp" alt="act tutoring" className={styles.testimonialRect} />
-          <img src="/images/rectangle-bg4.webp" alt="act tutoring" className={styles.testimonialRect} />
+          <img src="/images/rectangle-bg4.webp" alt="act tutoring" className={styles.testimonialRect} width={585} height={120} />
+          <img src="/images/rectangle-bg4.webp" alt="act tutoring" className={styles.testimonialRect} width={585} height={120} />
+          <img src="/images/rectangle-bg4.webp" alt="act tutoring" className={styles.testimonialRect} width={585} height={120} />
 
           <img
             src="/images/google-logo.webp"
