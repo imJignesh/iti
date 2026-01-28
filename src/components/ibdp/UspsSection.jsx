@@ -97,25 +97,25 @@ function UpsSection() {
   const uspItems = [
     {
       number: "01",
-      icon: <img src="/assets/01.webp" alt="Icon 01" />,
+      icon: <img src="/assets/01.webp" alt="Icon 01" width={205} height={134} />,
       title: "IB-SPECIFIC TUTORS",
       desc: "Highly qualified IB-specific tutors delivering all-around support.",
     },
     {
       number: "02",
-      icon: <img src="/assets/02.webp" alt="Icon 02" />,
+      icon: <img src="/assets/02.webp" alt="Icon 02" width={221} height={134} />,
       title: "INDIVIDUAL ATTENTION",
       desc: "Small group training (SGT) to focus individually on every student.",
     },
     {
       number: "03",
-      icon: <img src="/assets/03.webp" alt="Icon 03" />,
+      icon: <img src="/assets/03.webp" alt="Icon 03" width={221} height={134} />,
       title: "GRADE ASSURANCE",
       desc: "Better results assurance with rigorous testing & review methods.",
     },
     {
       number: "04",
-      icon: <img src="/assets/04.webp" alt="Icon 04" />,
+      icon: <img src="/assets/04.webp" alt="Icon 04" width={226} height={134} />,
       title: "EXAMINATION PREP",
       desc: "Full-scale IBDP exam prep with tutoring, resources, testing, & review.",
     },

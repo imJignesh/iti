@@ -18,6 +18,8 @@ const testimonialData = [
   // {
   //   type: "video",
   //   img: "/images/testimonial1.webp",
+  //   width: 1920,
+  //   height: 2880,
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",
@@ -35,6 +37,8 @@ const testimonialData = [
   // {
   //   type: "video",
   //   img: "/images/testimonial2.webp",
+  //   width: 2000,
+  //   height: 3028,
   //   video: true,
   //   name: "LOREM IPSUM",
   //   subtitle: "Lorem ipsum dolor sit",

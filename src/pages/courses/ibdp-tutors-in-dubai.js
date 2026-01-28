@@ -3,17 +3,17 @@
 import Accordion from '@/components/ibdp/accordian';
 import Blog from "@/components/ibdp/Blog";
 import CourseCard from '@/components/ibdp/CourseCard';
-import OurTrainers from '@/components/tutors-jlt-dubai/ourTrainers';
+//import OurTrainers from '@/components/tutors-jlt-dubai/ourTrainers';
 import FAQSection from '@/components/ibdp/FaqSection';
 import IgniteAchievements from '@/components/ibdp/IgniteAchievements';
 import InfoCard from '@/components/ibdp/InfoCard';
 import IgniteAboutCard from "@/components/ibdp/IgniteAboutCard";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 import Trainers from "@/components/ibdp/Trainers";
-import LifeAtIgniteCarousel from '@/components/ibdp/LifeAtIgniteCarousel';
+// import LifeAtIgniteCarousel from '@/components/ibdp/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
 import ReviewsSection from '@/components/ibdp/ReviewsSection';
-import StudentAchievements from '@/components/ibdp/StudentAchivement';
+// import StudentAchievements from '@/components/ibdp/StudentAchivement';
 import SubjectsCard from '@/components/ibdp/SubjectCard';
 import UspsSection from '@/components/ibdp/UspsSection';
 // Removed: { useEffect, useRef }
