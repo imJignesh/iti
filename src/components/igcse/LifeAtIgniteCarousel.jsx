@@ -106,7 +106,7 @@ export default function LifeAtIgniteCarousel() {
               animationDelay: "0.45s"
             }}
           >
-            <img src="/assets/lar.webp" alt="igcse tutor in dubai" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
+            <img src="/assets/lar.webp" alt="igcse tutor in dubai" width={isMobile ? 32 : 106} height={isMobile ? 32 : 106} />
           </button>
 
           {/* Stacked Images */}
@@ -118,6 +118,8 @@ export default function LifeAtIgniteCarousel() {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
+              width={820}
+              height={520}
             />
             <img
               src={images[getNextIndex()].url}
@@ -126,6 +128,8 @@ export default function LifeAtIgniteCarousel() {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
+              width={820}
+              height={520}
             />
             <img
               src={images[currentImageIndex].url}
@@ -134,6 +138,8 @@ export default function LifeAtIgniteCarousel() {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
+              width={820}
+              height={520}
             />
           </div>
 
@@ -153,7 +159,7 @@ export default function LifeAtIgniteCarousel() {
               animationDelay: "0.65s"
             }}
           >
-            <img src="/assets/rar.webp" alt="igcse tutor in dubai" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
+            <img src="/assets/rar.webp" alt="igcse tutor in dubai" width={isMobile ? 32 : 106} height={isMobile ? 32 : 106} />
           </button>
         </div>
 

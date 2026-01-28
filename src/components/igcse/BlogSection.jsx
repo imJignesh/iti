@@ -6,16 +6,22 @@ const blogData = [
         img: "/images/blogImage1.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
+        width: 500,
+        height: 750,
     },
     {
         img: "/images/blogImage2.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
+        width: 1200,
+        height: 673,
     },
     {
         img: "/images/blogImage3.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
+        width: 1200,
+        height: 800,
     },
 ];
 
@@ -89,6 +95,8 @@ const BlogSection = () => {
                                     data-scroll-repeat="true"
                                     data-scroll-offset="-10%"
                                     className="blogImg"
+                                    width={blog.width}
+                                    height={blog.height}
                                 />
                                 <div className="blogCardContent">
                                     <div className="blogCardTitle">{blog.title}</div>

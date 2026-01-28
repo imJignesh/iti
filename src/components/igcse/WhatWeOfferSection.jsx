@@ -45,7 +45,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.1s" }}
                     >
                         <div className="icon-wrap" data-step="01">
-                            <img src="/images/school.webp" alt="School Options" />
+                            <img src="/images/school.webp" alt="School Options" width={134} height={134} />
                         </div>
                         <h3 className="step-title mb-0">SCHOOL OPTIONS</h3>
                         <div className="step-desc">Explore schools that align with your strengths & aspirations.</div>
@@ -58,7 +58,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.1s" }}
                     >
                         <div className="icon-wrap" data-step="02">
-                            <img src="/images/idealcur.webp" alt="Ideal Curriculum" />
+                            <img src="/images/idealcur.webp" alt="Ideal Curriculum" width={134} height={134} />
                         </div>
                         <h3 className="step-title mb-0">IDEAL CURRICULUM</h3>
                         <div className="step-desc">Choose a curriculum designed for lasting academic success.</div>
@@ -71,7 +71,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.1s" }}
                     >
                         <div className="icon-wrap" data-step="03">
-                            <img src="/images/subject.webp" alt="Subject Choices" />
+                            <img src="/images/subject.webp" alt="Subject Choices" width={134} height={134} />
                         </div>
                         <h3 className="step-title mb-0">SUBJECT CHOICES</h3>
                         <div className="step-desc">Select subjects that support your career & higher education.</div>
@@ -84,7 +84,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.1s" }}
                     >
                         <div className="icon-wrap" data-step="04">
-                            <img src="/images/universitypath.webp" alt="University Pathways" />
+                            <img src="/images/universitypath.webp" alt="University Pathways" width={134} height={134} />
                         </div>
                         <h3 className="step-title mb-0">UNIVERSITY PATHWAYS</h3>
                         <div className="step-desc">Create a clear, strategic pathway to international universities.</div>
@@ -121,6 +121,7 @@ const WhatWeOfferSection = () => {
 
                 .what-we-offer .icon-wrap img {
                 max-width: 100px;
+                height: auto;
                 }
 
                 /* Number comes from data-step */
@@ -164,6 +165,7 @@ const WhatWeOfferSection = () => {
 
                 .what-we-offer .icon-wrap img {
                     max-width: 60px;
+                    height: auto;
                 }
 
                 .what-we-offer .step {

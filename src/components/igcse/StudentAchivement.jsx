@@ -9,6 +9,8 @@ const achievements = [
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
+    width: 500,
+    height: 500,
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ const achievements = [
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
+    width: 500,
+    height: 500,
   },
   {
     id: 3,
@@ -23,6 +27,8 @@ const achievements = [
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
+    width: 1600,
+    height: 900,
   },
 ];
 
@@ -258,6 +264,8 @@ export default function StudentAchievements() {
                       src={achievement.logo}
                       alt="University Logo"
                       className="logo-img"
+                      width={achievement.width}
+                      height={achievement.height}
                       style={{
                         width: isMobile ? "90%" : "100%",
                         height: isMobile ? "90%" : "100%",
