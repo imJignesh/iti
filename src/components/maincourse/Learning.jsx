@@ -6,41 +6,57 @@ const advantages = [
     title: "Subject Experts Who Truly Understand the Curriculum",
     icon: "/assets/union3.webp",
     text: "Our tutors aren't generalists, they're specialists with deep expertise in subjects across IB, IGCSE, & A-Levels, bringing clarity & confidence to every session.",
+    width: 98,
+    height: 135,
   },
   {
     title: "Small Groups, Big Focus",
     icon: "/assets/Union1.webp",
     text: "We keep learning groups intentionally small, so each student receives personalised attention, space to ask questions, & the support to learn at their own pace.",
+    width: 146,
+    height: 101,
   },
   {
     title: "Measured By Real Academic Progress",
     icon: "/assets/unioun.webp",
     text: "Improving grades isn't a by-product, it's our priority. We track progress through meaningful feedback, visible improvement, & consistent academic results.",
+    width: 136,
+    height: 129,
   },
   {
     title: "Ready For Every Exam, Every Time",
     icon: "/assets/heartg.webp",
     text: "We go beyond covering the syllabus, equipping students with strategies, timed practice, & revision techniques to approach any exam with confidence.",
+    width: 109,
+    height: 133,
   },
   {
     title: "Strong Foundations That Last",
     icon: "/assets/union3.webp",
     text: "Rather than rote learning, we focus on building a solid understanding of fundamental concepts, ensuring students can apply knowledge in any context.",
+    width: 98,
+    height: 135,
   },
   {
     title: "Consistent Motivation & Accountability",
     icon: "/assets/Union1.webp",
     text: "We create a focused learning environment that nurtures discipline, encourages curiosity, & helps students stay committed to their academic goals.",
+    width: 146,
+    height: 101,
   },
   {
     title: "Real Practice, Real Thinking",
     icon: "/assets/unioun.webp",
     text: "Sessions are built around active problem-solving using real exam-style questions, so students learn by thinking, not just by listening.",
+    width: 136,
+    height: 129,
   },
   {
     title: "Practice Exams That Prepare You For The Real One",
     icon: "/assets/heartg.webp",
     text: "Our mock exams simulate actual exam conditions, building familiarity, managing time pressure, & helping students walk into the real test fully prepared.",
+    width: 109,
+    height: 133,
   },
 ];
 
@@ -262,7 +278,7 @@ const Learning = () => {
                         }`}
                     >
                       <div className="desktop-card-icon">
-                        <img src={item.icon} alt="ignite's tutoring courses" />
+                        <img src={item.icon} alt="ignite's tutoring courses" width={item.width} height={item.height} />
                       </div>
                       <h3 className="desktop-card-title">{item.title}</h3>
                       <p className="desktop-card-text">{item.text}</p>
