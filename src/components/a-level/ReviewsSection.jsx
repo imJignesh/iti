@@ -118,9 +118,9 @@ export default function Testimonial({ }) {
           style={{ animationDelay: "0.2s" }}
         >
           {/* Decorative rectangles */}
-          <img src="/images/rectangle-bg4.webp" alt="a level tutors in dubai" className={styles.testimonialRect} />
-          <img src="/images/rectangle-bg4.webp" alt="a level tutors in dubai" className={styles.testimonialRect} />
-          <img src="/images/rectangle-bg4.webp" alt="a level tutors in dubai" className={styles.testimonialRect} />
+          <img src="/images/rectangle-bg4.webp" alt="a level tutors in dubai" className={styles.testimonialRect} width={585} height={120} />
+          <img src="/images/rectangle-bg4.webp" alt="a level tutors in dubai" className={styles.testimonialRect} width={585} height={120} />
+          <img src="/images/rectangle-bg4.webp" alt="a level tutors in dubai" className={styles.testimonialRect} width={585} height={120} />
 
           <img
             src="/images/google-logo.webp"
@@ -165,8 +165,8 @@ export default function Testimonial({ }) {
             data-scroll-offset="-10%"
             className={`fade-in-section ${styles.starReview}`}
             style={{ animationDelay: "0.5s" }}
-            width={250}
-            height={80}
+            width={350}
+            height={58}
           />
         </div>
 

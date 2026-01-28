@@ -9,6 +9,8 @@ const achievements = [
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
+    width: 500,
+    height: 500,
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ const achievements = [
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "LOREM IPSUM DOLOR SIT",
+    width: 500,
+    height: 500,
   },
   {
     id: 3,
@@ -23,6 +27,8 @@ const achievements = [
     percentage: "98%",
     studentName: "TANIYA SHARMA",
     course: "Ongoing assessments & mocks to fine-tune exam strategies.",
+    width: 1600,
+    height: 900,
   },
 ];
 
@@ -266,6 +272,8 @@ export default function StudentAchievements() {
                         marginBottom: isMobile ? "24px" : "24px",
                         mixBlendMode: "multiply",
                       }}
+                      width={achievement.width}
+                      height={achievement.height}
                     />
                   </div>
 

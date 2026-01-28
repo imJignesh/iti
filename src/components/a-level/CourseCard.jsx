@@ -274,6 +274,8 @@ function CourseCard() {
                             transform: hoveredIndex === index ? 'scale(1.02)' : 'scale(1)',
                             transition: 'transform 0.4s ease-out',
                           }}
+                          width={1500}
+                          height={1000}
                         />
                       </div>
                     </div>

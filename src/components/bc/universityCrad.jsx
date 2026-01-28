@@ -16,15 +16,15 @@ const UniversityLogosCard = () => {
           animationDelay: "0.3s",
         }}
       >
-        <div className="d-flex flex-column flex-md-row justify-content-between align-items-center w-100 gap-4 gap-md-0">
+        <div className="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 gap-4 gap-md-0">
           <div className="logo-wrapper fade-in-section" data-scroll data-scroll-class="is-inview" data-scroll-repeat style={{ animationDelay: "0.2s" }}>
-            <Image src="/assets/uni1.webp" alt="Pearson Edexcel" width={504} height={245} className="logo-img" style={{ maxWidth: "100%", height: "auto" }} />
+            <Image src="/assets/uni1.webp" alt="Pearson Edexcel" width={500} height={342} className="logo-img" style={{ maxWidth: "100%", height: "auto" }} />
           </div>
           <div className="logo-wrapper fade-in-section" data-scroll data-scroll-class="is-inview" data-scroll-repeat style={{ animationDelay: "0.3s" }}>
-            <Image src="/assets/uni2.webp" alt="University of Cambridge" width={1011} height={491} className="logo-img" style={{ maxWidth: "100%", height: "auto" }} />
+            <Image src="/assets/uni2.webp" alt="University of Cambridge" width={500} height={243} className="logo-img" style={{ maxWidth: "100%", height: "auto" }} />
           </div>
           <div className="logo-wrapper fade-in-section" data-scroll data-scroll-class="is-inview" data-scroll-repeat style={{ animationDelay: "0.4s" }}>
-            <Image src="/assets/uni3.webp" alt="AQA Realising Potential" width={503} height={245} className="logo-img" style={{ maxWidth: "100%", height: "auto" }} />
+            <Image src="/assets/uni3.webp" alt="AQA Realising Potential" width={500} height={243} className="logo-img" style={{ maxWidth: "100%", height: "auto" }} />
           </div>
         </div>
 
@@ -71,18 +71,7 @@ const UniversityLogosCard = () => {
             padding:0 0 0 0 !important; 
             }
         }
-//           @media (min-width: 1536px) and (max-width: 1919px) {
-//   .desktop-logo{
-//     width: 390px;
-//     height: 300px;
-// }
-}
-//           @media (min-width: 1200px) and (max-width: 1535px) {
-//   .desktop-logo{
-//     width: 350px;
-//     height: 280px;
-// }
-// }
+
       `}</style>
     </>
   );
