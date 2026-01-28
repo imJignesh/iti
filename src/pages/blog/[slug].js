@@ -565,7 +565,7 @@ export default function PostDetail({ initialPost }) {
         <>
             {/* Always render canonical tag */}
             <Head>
-                <link rel="canonical" href={`https://ignitetraininginstitute.com/blog/${post.slug}/`} />
+                <link rel="canonical" href={`https://ignitetraininginstitute.com/blog/${post.slug}`} />
             </Head>
 
             {yoastData && (
