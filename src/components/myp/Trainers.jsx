@@ -16,6 +16,8 @@ const trainers = [
     subtitle: "Maths & Accounting",
     experience: "10+ YEARS",
     color: "blue",
+    width: 812,
+    height: 1017,
   },
   {
     name: "SHWETHA",
@@ -23,6 +25,8 @@ const trainers = [
     subtitle: "Biology",
     experience: "6+ YEARS",
     color: "green",
+    width: 812,
+    height: 1017,
   },
   {
     name: "SARANYA",
@@ -30,6 +34,8 @@ const trainers = [
     subtitle: "Physics",
     experience: "8+ YEARS",
     color: "blue",
+    width: 960,
+    height: 960,
   },
   {
     name: "ASHWANI",
@@ -37,6 +43,8 @@ const trainers = [
     subtitle: "Maths",
     experience: "7+ YEARS",
     color: "green",
+    width: 812,
+    height: 1017,
   },
   {
     name: "IRTIQA",
@@ -44,6 +52,8 @@ const trainers = [
     subtitle: "Computer Science, ICT",
     experience: "6+ YEARS",
     color: "blue",
+    width: 960,
+    height: 960,
   },
   {
     name: "ABDUL",
@@ -51,6 +61,8 @@ const trainers = [
     subtitle: "Maths",
     experience: "13+ YEARS",
     color: "green",
+    width: 812,
+    height: 1017,
   },
   {
     name: "HARSHA",
@@ -58,6 +70,8 @@ const trainers = [
     subtitle: "Economics & Business",
     experience: "10+ YEARS",
     color: "blue",
+    width: 812,
+    height: 1017,
   },
   {
     name: "NAMRATA",
@@ -65,6 +79,8 @@ const trainers = [
     subtitle: "Maths & Physics",
     experience: "10+ YEARS",
     color: "green",
+    width: 960,
+    height: 960,
   },
   {
     name: "KRITIKA",
@@ -72,6 +88,8 @@ const trainers = [
     subtitle: "Maths",
     experience: "3+ YEARS",
     color: "blue",
+    width: 812,
+    height: 1017,
   },
   {
     name: "RUSTHA",
@@ -79,6 +97,8 @@ const trainers = [
     subtitle: "Chemistry, Biology, & EVM",
     experience: "3+ YEARS",
     color: "green",
+    width: 812,
+    height: 1017,
   },
   {
     name: "IPSITA",
@@ -86,6 +106,8 @@ const trainers = [
     subtitle: "Biology & EVM",
     experience: "7+ YEARS",
     color: "blue",
+    width: 960,
+    height: 960,
   },
   {
     name: "FREEZY",
@@ -93,6 +115,8 @@ const trainers = [
     subtitle: "Biology, Chemistry",
     experience: "4+ YEARS",
     color: "green",
+    width: 960,
+    height: 960,
   },
   {
     name: "AASHIMA",
@@ -100,6 +124,8 @@ const trainers = [
     subtitle: "Spanish",
     experience: "5+ YEARS",
     color: "blue",
+    width: 960,
+    height: 960,
   },
   {
     name: "ANUJA",
@@ -107,6 +133,8 @@ const trainers = [
     subtitle: "English & French",
     experience: "10+ YEARS",
     color: "green",
+    width: 960,
+    height: 960,
   },
   {
     name: "DR. HAYA",
@@ -114,6 +142,8 @@ const trainers = [
     subtitle: "Chemistry, Physics, Biology",
     experience: "9+ YEARS",
     color: "blue",
+    width: 812,
+    height: 1017,
   },
   {
     name: "DEEPAK",
@@ -121,6 +151,8 @@ const trainers = [
     subtitle: "Physics & Maths",
     experience: "13+ YEARS",
     color: "green",
+    width: 812,
+    height: 1017,
   },
 ];
 
@@ -134,7 +166,7 @@ const TrainerCard = ({ trainer }) => (
       <div className="trainerName">{trainer.name}</div>
       <div className="trainerImgWrap">
         {/* NOTE: Assuming Image component is used, replacing with generic <img> based on current file structure */}
-        <img src={trainer.img} alt={`Trainer ${trainer.name} ignite training institute`} className="trainerImg" />
+        <img src={trainer.img} alt={`Trainer ${trainer.name} ignite training institute`} className="trainerImg" width={trainer.width} height={trainer.height} />
       </div>
       <div className="trainerSubtitle">{trainer.subtitle}</div>
       <div className="trainerExp">{trainer.experience}</div>
@@ -670,11 +702,11 @@ export default function Trainers() {
                 {/* Custom Navigation Buttons */}
                 <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
                   {/* Placeholder for actual image/icon */}
-                  <img src="/images/left-arrow-blue.webp" alt="ibdp tutor in dubai" />
+                  <img src="/images/left-arrow-blue.webp" alt="ibdp tutor in dubai" width={57} height={57} />
                 </button>
                 <button ref={navNextRef} className="customNavBtn swiper-button-next">
                   {/* Placeholder for actual image/icon */}
-                  <img src="/images/right-arrow-blue.webp" alt="ibdp tutor in dubai" />
+                  <img src="/images/right-arrow-blue.webp" alt="ibdp tutor in dubai" width={57} height={57} />
                 </button>
                 {/* Custom Pagination Container */}
                 <div className="trainersPagination"></div>
