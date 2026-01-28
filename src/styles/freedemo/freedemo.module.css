@@ -212,6 +212,7 @@
 
 .what-we-offer .icon-wrap img {
   max-width: 100px;
+  height: auto;
 }
 
 /* Number comes from data-step */
@@ -256,6 +257,7 @@
 
   .what-we-offer .icon-wrap img {
     max-width: 60px;
+    height: auto;
   }
 
   .what-we-offer .step {

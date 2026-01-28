@@ -37,6 +37,8 @@ export default function Curriculum() {
             src="/assets/igcse.webp"
             alt="IGCSE"
             className="curriculum-img"
+            width={600}
+            height={400}
           />
           <a
             href="/courses/igcse-tutors-in-dubai/"
@@ -53,6 +55,8 @@ export default function Curriculum() {
             src="/assets/alevel.webp"
             alt="A-Levels"
             className="curriculum-img"
+            width={600}
+            height={900}
           />
           <a
             href="/courses/a-level-tutors-in-dubai/"
@@ -69,6 +73,8 @@ export default function Curriculum() {
             src="/assets/ap1.webp"
             alt="AP"
             className="curriculum-img"
+            width={600}
+            height={400}
           />
           <a
             href="/advanced-placements-tutors-in-dubai/"

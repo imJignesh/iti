@@ -702,11 +702,11 @@ export default function Trainers() {
                 {/* Custom Navigation Buttons */}
                 <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
                   {/* Placeholder for actual image/icon */}
-                  <img src="/images/left-arrow-blue.webp" alt="ibdp tutor in dubai" />
+                  <img src="/images/left-arrow-blue.webp" alt="ibdp tutor in dubai" width={57} height={57} />
                 </button>
                 <button ref={navNextRef} className="customNavBtn swiper-button-next">
                   {/* Placeholder for actual image/icon */}
-                  <img src="/images/right-arrow-blue.webp" alt="ibdp tutor in dubai" />
+                  <img src="/images/right-arrow-blue.webp" alt="ibdp tutor in dubai" width={57} height={57} />
                 </button>
                 {/* Custom Pagination Container */}
                 <div className="trainersPagination"></div>

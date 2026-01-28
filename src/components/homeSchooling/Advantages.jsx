@@ -5,31 +5,43 @@ const advantages = [
         title: "Flexible Subjects & Curriculum Choices",
         icon: "/assets/unioun.webp",
         text: "Students can tailor subject combinations across IGCSE, A-Levels, or APs, aligning studies with career aspirations & university admission requirements, while benefiting from unparalleled flexibility & academic freedom.",
+        width: 136,
+        height: 129,
     },
     {
         title: "Independent & Accelerated Study",
         icon: "/assets/heartg.webp",
         text: "Private candidates enjoy the flexibility to progress at their own speed, whether catching up or advancing faster, making learning more personalized, efficient, & ideal for high performers balancing academics with other aspirations.",
+        width: 109,
+        height: 133,
     },
     {
         title: "Personalized Academic Focus",
         icon: "/assets/unioun.webp",
         text: "Private candidates can channel their efforts into the subjects that matter most, avoiding unnecessary workload and distractions, and maximizing preparation for future academic success and career pathways.",
+        width: 136,
+        height: 129,
     },
     {
         title: "Stronger College Readiness Pathway",
         icon: "/assets/heartg.webp",
         text: "A personalized private schooling approach equips students to stay academically ahead while preparing more effectively for standardized tests like the ACT, SAT, or AP, boosting their chances of success at top universities worldwide.",
+        width: 109,
+        height: 133,
     },
     {
         title: "Cost & Location Advantages",
         icon: "/assets/unioun.webp",
         text: "It is a cost-effective option that allows students to study from any location. It’s especially valuable for families moving countries or shifting curricula, ensuring accessibility, affordability, & uninterrupted global learning opportunities.",
+        width: 136,
+        height: 129,
     },
     {
         title: "Balanced Focus On Extracurriculars",
         icon: "/assets/heartg.webp",
         text: "Private students benefit from the freedom to dedicate meaningful time to extracurricular pursuits, enhancing creativity, leadership, & overall development. These well-rounded profiles add significant weight to college applications.",
+        width: 109,
+        height: 133,
     },
 ];
 
@@ -133,7 +145,7 @@ const AdvantagesCarousel = () => {
                     {advantages.map((item, index) => (
                         <div key={index} className="mobile-card">
                             <div className="mobile-icon-container">
-                                <img src={item.icon} alt="homeschooling & private candidates" className="mobile-icon" />
+                                <img src={item.icon} alt="homeschooling & private candidates" className="mobile-icon" width={item.width} height={item.height} />
                             </div>
                             <div className='divider'></div>
                             <div className="mobile-content">
@@ -203,7 +215,7 @@ const AdvantagesCarousel = () => {
                                             className={`desktop-card ${index % 2 === 1 ? 'greenBg' : 'blueBg'}`}
                                         >
                                             <div className="desktop-card-icon">
-                                                <img src={item.icon} alt="homeschooling & private candidates" />
+                                                <img src={item.icon} alt="homeschooling & private candidates" width={item.width} height={item.height} />
                                             </div>
                                             <h3 className="desktop-card-title">{item.title}</h3>
                                             <p className="desktop-card-text">{item.text}</p>

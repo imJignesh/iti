@@ -43,7 +43,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.1s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="01">
-                            <img src="/images/idealcur.webp" alt="Ideal Curriculum" />
+                            <img src="/images/idealcur.webp" alt="Ideal Curriculum" width={134} height={134} />
                         </div>
                         <h3 className={`${styles['step-title']} mb-0`}>IDEAL CURRICULUM</h3>
                         <div className={styles['step-desc']}>Choose IGCSE, A-Levels, or AP to match your academic pathway.</div>
@@ -57,7 +57,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.2s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="02">
-                            <img src="/images/subject.webp" alt="Subject Choices" />
+                            <img src="/images/subject.webp" alt="Subject Choices" width={134} height={134} />
                         </div>
                         <h3 className={`${styles['step-title']} mb-0`}>SUBJECT CHOICES</h3>
                         <div className={styles['step-desc']}>Select subjects that fit your aspirations & university goals.</div>
@@ -71,7 +71,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.3s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="03">
-                            <img src="/images/school.webp" alt="Registration Support" />
+                            <img src="/images/school.webp" alt="Registration Support" width={134} height={134} />
                         </div>
                         <h3 className={`${styles['step-title']} mb-0`}>REGISTRATION SUPPORT</h3>
                         <div className={styles['step-desc']}>Get complete registration guidance for IGCSE, A-Levels, & AP exams.</div>
@@ -85,7 +85,7 @@ const WhatWeOfferSection = () => {
                         style={{ animationDelay: "0.4s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="04">
-                            <img src="/images/universitypath.webp" alt="University Pathways" />
+                            <img src="/images/universitypath.webp" alt="University Pathways" width={134} height={134} />
                         </div>
                         <h3 className={`${styles['step-title']} mb-0`}>UNIVERSITY PATHWAYS</h3>
                         <div className={styles['step-desc']}>Plan a clear route from homeschooling to top global schools.</div>
