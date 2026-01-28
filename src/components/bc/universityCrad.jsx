@@ -1,5 +1,7 @@
 import React from "react";
 
+import Image from "next/image";
+
 const UniversityLogosCard = () => {
   return (
     <>
@@ -14,45 +16,18 @@ const UniversityLogosCard = () => {
           animationDelay: "0.3s",
         }}
       >
-        {/* Desktop Layout - Horizontal */}
-        <div className="d-none d-md-flex justify-content-between align-items-center w-100">
-          {[
-            { src: "/assets/uni1.webp", alt: "Pearson Edexcel" },
-            { src: "/assets/camb.webp", alt: "University of Cambridge" },
-            { src: "/assets/uni3.webp", alt: "AQA Realising Potential" },
-          ].map((logo, index) => (
-            <div
-              key={index}
-              className="logo-wrapper desktop-logo fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{ animationDelay: `${0.2 + index * 0.1}s` }}
-            >
-              <img src={logo.src} alt={logo.alt} className="logo-img" />
-            </div>
-          ))}
+        <div className="d-flex flex-column flex-md-row justify-content-between align-items-center w-100 gap-4 gap-md-0">
+          <div className="logo-wrapper fade-in-section" data-scroll data-scroll-class="is-inview" data-scroll-repeat style={{ animationDelay: "0.2s" }}>
+            <Image src="/assets/uni1.webp" alt="Pearson Edexcel" width={504} height={245} className="logo-img" style={{ maxWidth: "100%", height: "auto" }} />
+          </div>
+          <div className="logo-wrapper fade-in-section" data-scroll data-scroll-class="is-inview" data-scroll-repeat style={{ animationDelay: "0.3s" }}>
+            <Image src="/assets/uni2.webp" alt="University of Cambridge" width={1011} height={491} className="logo-img" style={{ maxWidth: "100%", height: "auto" }} />
+          </div>
+          <div className="logo-wrapper fade-in-section" data-scroll data-scroll-class="is-inview" data-scroll-repeat style={{ animationDelay: "0.4s" }}>
+            <Image src="/assets/uni3.webp" alt="AQA Realising Potential" width={503} height={245} className="logo-img" style={{ maxWidth: "100%", height: "auto" }} />
+          </div>
         </div>
 
-        {/* Mobile Layout - Vertical Stack */}
-        <div className="d-md-none w-100 d-flex flex-column align-items-center gap-4">
-          {[
-            { src: "/assets/pea.webp", alt: "Pearson Edexcel" },
-            { src: "/assets/camb.webp", alt: "University of Cambridge" },
-            { src: "/assets/aqa.webp", alt: "AQA Realising Potential" },
-          ].map((logo, index) => (
-            <div
-              key={index}
-              className="logo-wrapper mobile-logo fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{ animationDelay: `${0.2 + index * 0.1}s` }}
-            >
-              <img src={logo.src} alt={logo.alt} className="logo-img" />
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* ✅ Scoped responsive styles */}
@@ -72,39 +47,29 @@ const UniversityLogosCard = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-        }
-
-        /* Desktop sizes */
-        .desktop-logo {
-          width: 280px;
-          
-        }
-
-        /* Mobile sizes */
-        .mobile-logo {
-          width: 200px;
-          height: 100px;
+          width: 280px; /* Default desktop width */
         }
 
         /* Image scaling */
         .logo-img {
-          
-          max-width: 200px;
           object-fit: contain;
         }
 
         .university-logos-container {
-          height: auto; /* Desktop */
+          height: auto;
         }
-          @media (max-width: 575px) {
+
+        @media (max-width: 767px) {
+          .logo-wrapper {
+            width: 100%; /* Full width on mobile to allow centering/scaling */
+            max-width: 250px; /* Limit max width on mobile */
+          }
+        }
+        
+        @media (max-width: 575px) {
             .university-logos-container{
             padding:0 0 0 0 !important; 
             }
-          }
-        @media (max-width: 767px) {
-          .university-logos-container {
-            height: auto; /* Mobile */
-          }
         }
 //           @media (min-width: 1536px) and (max-width: 1919px) {
 //   .desktop-logo{
