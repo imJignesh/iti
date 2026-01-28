@@ -94,6 +94,8 @@ export default function Subjects({ }) {
             alt="bg-shape"
             className={styles.bgRect}
             loading="lazy"
+            width={585}
+            height={120}
           />
           <img
             data-scroll
@@ -104,6 +106,8 @@ export default function Subjects({ }) {
             alt="bg-shape"
             className={styles.bgRect}
             loading="lazy"
+            width={85}
+            height={120}
           />
           <img
             data-scroll
@@ -113,6 +117,8 @@ export default function Subjects({ }) {
             alt="bg-shape"
             className={styles.bgRect}
             loading="lazy"
+            width={585}
+            height={120}
           />
           <div className={`col-4 ${styles.subjectLeft}`}>
             <h2

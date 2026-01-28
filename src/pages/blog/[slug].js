@@ -563,12 +563,15 @@ export default function PostDetail({ initialPost }) {
 
     return (
         <>
+            {/* Always render canonical tag */}
+            <Head>
+                <link rel="canonical" href={`https://ignitetraininginstitute.com/blog/${post.slug}/`} />
+            </Head>
+
             {yoastData && (
                 <Head>
                     <title>{yoastData.title}</title>
                     <meta name="description" content={yoastData.description} key="desc" />
-                    {/* Add canonical tag using the post slug */}
-                    <link rel="canonical" href={`https://ignitetraininginstitute.com/blog/${post.slug}`} />
                     {yoastData.og_image && (
                         <meta property="og:image" content={yoastData.og_image[0].url} />
                     )}

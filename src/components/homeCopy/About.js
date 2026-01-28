@@ -60,6 +60,8 @@ const About = () => {
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg1.webp"
                   alt="Teacher"
+                  width={265}
+                  height={102}
                 />
                 <img
                   data-scroll
@@ -68,6 +70,8 @@ const About = () => {
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.webp"
                   alt="Teacher"
+                  width={265}
+                  height={102}
                 />
                 <img
                   data-scroll
@@ -76,6 +80,8 @@ const About = () => {
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.webp"
                   alt="Teacher"
+                  width={265}
+                  height={102}
                 />
                 <img
                   data-scroll
@@ -84,6 +90,8 @@ const About = () => {
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.webp"
                   alt="Teacher"
+                  width={265}
+                  height={102}
                 />
               </div>
               <Image

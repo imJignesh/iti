@@ -125,6 +125,8 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
                 <img
                     src={`https://flagcdn.com/${flagIso}.svg`}
                     alt="flag"
+                    height={50}
+                    width={100}
                 />
             </div>
 
