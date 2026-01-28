@@ -191,7 +191,7 @@ export default function IgniteAchievements() {
                     <img src="/assets/colr.webp" alt="rightar" style={{
                       width: '2rem',
                       height: '2rem',
-                    }} />
+                    }} width={36} height={36} />
                   </div>
                 </button>
               </div>

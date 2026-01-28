@@ -35,6 +35,8 @@ const createBlogData = async () => {
             img:
                 post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
                 "/images/blog-placeholder.webp",
+            width: post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.width,
+            height: post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.height,
             title: decodedTitle,
             desc: trimmedExcerpt,
             link: post.slug,
@@ -50,18 +52,24 @@ const staticBlogs = [
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
         link: "/blogs",
+        width: 500,
+        height: 750
     },
     {
         img: "/images/blogImage2.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
         link: "/blogs",
+        width: 1200,
+        height: 673
     },
     {
         img: "/images/blogImage3.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
         link: "/blogs",
+        width: 1200,
+        height: 800
     },
 ];
 
@@ -154,6 +162,9 @@ const Blog = () => {
                                         data-scroll-repeat="true"
                                         data-scroll-offset="-10%"
                                         className="blogImg"
+                                        width={blog.width}
+                                        height={blog.height}
+                                        style={{ width: "100%", height: "auto" }}
                                     /></a>
                                     <div className="blogCardContent">
                                         <div className="blogCardTitle">{blog.title}</div>

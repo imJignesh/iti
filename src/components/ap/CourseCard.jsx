@@ -251,6 +251,8 @@ function CourseCard() {
                           src="/assets/corsebg.webp"
                           alt="ibdp tutor in dubai"
                           className="img-fluid image1"
+                          width={1500}
+                          height={1000}
                           style={{
                             height: "400px",
                             width: "500px",

@@ -292,7 +292,7 @@ export default function InfoCard() {
                       src="/assets/medal.webp"
                       alt="Grade Support"
                       width={isMobile ? 20 : 32}
-                      height={isMobile ? 30 : 45}
+                      height={isMobile ? 28 : 45}
                       className="icon-img"
                     />
                   </span>
@@ -418,16 +418,22 @@ export default function InfoCard() {
                 src="/assets/rect1.webp"
                 alt="bg-shape"
                 className="testimonialRect rect-1"
+                width={321}
+                height={170}
               />
               <img
                 src="/assets/rect2.webp"
                 alt="bg-shape"
                 className="testimonialRect rect-2"
+                width={539}
+                height={170}
               />
               <img
                 src="/assets/rect3.webp"
                 alt="bg-shape"
                 className="testimonialRect rect-3"
+                width={309}
+                height={170}
               />
 
               <div

@@ -8,6 +8,8 @@ const benefits = [
         upbutton: "/assets/brup.svg",
         downButton: "/assets/brdown.webp",
         text: `Don't miss the opportunity to gain a real edge in college admissions. Strong AP scores can help you earn credits in advance, giving you a head start on your dream university journey.`,
+        width: 110,
+        height: 127
     },
     {
         title: "University Ready Profiles",
@@ -16,6 +18,10 @@ const benefits = [
         upbutton: "/assets/grup.svg",
         downButton: "/assets/grdown.webp",
         text: `Studies show AP students are better prepared for university life, & we see that too. They enter with stronger skills, academic confidence, & real-world readiness that helps them thrive from day one.`,
+        width: 109,
+        height: 103,
+        mobileWidth: 125,
+        mobileHeight: 119
     },
     {
         title: "Display Subject Proficiency",
@@ -24,6 +30,8 @@ const benefits = [
         upbutton: "/assets/brup.svg",
         downButton: "/assets/brdown.webp",
         text: `AP exams let students dive deep into subjects, building true mastery. This focused approach strengthens both academic confidence and career clarity, guiding smarter choices for the future.`,
+        width: 104,
+        height: 99
     },
     {
         title: "Unique College Application",
@@ -32,6 +40,10 @@ const benefits = [
         upbutton: "/assets/grup.svg",
         downButton: "/assets/grdown.webp",
         text: `Including AP scores in your application showcases dedication and academic ambition. It helps you stand out and increases your chances of earning credit or advanced placement at top universities.`,
+        width: 79,
+        height: 123,
+        mobileWidth: 79,
+        mobileHeight: 124
     }
 ];
 
@@ -78,6 +90,8 @@ const APBenefits = () => {
                                 src={isMobile ? item.mobileIcon : item.icon}
                                 alt="icon"
                                 className="icon"
+                                width={isMobile && item.mobileWidth ? item.mobileWidth : item.width}
+                                height={isMobile && item.mobileHeight ? item.mobileHeight : item.height}
                             />                        </div>
                         <h3 className={`title ${isMobile && index % 2 === 1 ? 'mobile-even' : ''}`}>
                             {item.title}</h3>
@@ -93,6 +107,8 @@ const APBenefits = () => {
                                 src={openIndex === index ? item.upbutton : item.downButton}
                                 alt="Toggle Icon"
                                 className="toggle-icon"
+                                width={40}
+                                height={22}
                             />
                         </button>
                     </div>
