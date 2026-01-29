@@ -38,3 +38,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+
+## WordPress Category Reflection & Maintenance
+
+The following is a summary of how WordPress categories are reflected in this React/Next.js website:
+
+1. **Automatic UI Reflection**: New categories added to WordPress will show up automatically in the "All Categories" list and category filters on the Blog page. This is because the code fetches categories dynamically from the WordPress API.
+2. **Dynamic Category Pages**: Navigating to a category via `example.com/category/new-category-slug` will work automatically and display the correct posts.
+3. **Sitemap Updates**: The `sitemap.xml` is fully dynamic and will automatically include new categories and their posts.
+4. **Short URLs & Redirects**: Shorthand URLs (e.g., `example.com/new-category` instead of `example.com/category/new-category`) will **NOT** reflect automatically. These depend on the `CATEGORY_SLUGS` list in `next.config.mjs`.
+5. **Update Script**: To sync short URLs, you must run `npm run update-categories`. This script fetches the latest slugs and updates your config file, which then requires a server restart/redeploy.
+6. **SEO Data**: New categories will use fallback SEO settings (WordPress description + generic title) unless you manually add them to the `categorySeoMap` in `src/pages/category/[category-slug].js`.
+
+In summary: Main content and sitemaps reflect automatically, but shorthand redirects and optimized SEO require manual updates or running the update script.
