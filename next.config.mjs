@@ -175,7 +175,7 @@ const nextConfig = {
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://ignitetraininginstitute.com https://api.ignitetraininginstitute.com https://flagcdn.com; connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://api.ignitetraininginstitute.com; frame-src 'self' https://www.youtube.com https://www.google.com;"
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://ignitetraininginstitute.com https://api.ignitetraininginstitute.com https://flagcdn.com; connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://api.ignitetraininginstitute.com https://cdn.jsdelivr.net; frame-src 'self' https://www.youtube.com https://www.google.com;"
           },
         ],
       },
