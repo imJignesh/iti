@@ -8,20 +8,32 @@ import Link from 'next/link';
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 
-// Fetcher function for SWR to get all categories
+// Robust fetcher function
 const fetcher = async (url) => {
-    const res = await fetch(url);
-    if (!res.ok) {
-        throw new Error('Failed to fetch categories');
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            const error = new Error('Failed to fetch categories');
+            error.status = res.status;
+            throw error;
+        }
+        return await res.json();
+    } catch (err) {
+        if (err instanceof TypeError && err.message === "Failed to fetch") {
+            console.warn("Suppressing fetch overlay for category list.");
+            const silentError = new Error("Categories API Offline");
+            silentError.status = 503;
+            throw silentError;
+        }
+        throw err;
     }
-    return res.json();
 };
 
 const CategoriesIndexPage = ({ headerHeight }) => {
     // Fetch up to 100 categories (adjust per_page if needed)
-    const apiUrl = 'https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories?per_page=100&_embed';
+    const apiUrl = '/api/wp/categories?per_page=100&_embed';
 
-    const { data: categories, error, isLoading } = useSWR(apiUrl, fetcher);
+    const { data: categories, error, isLoading, mutate } = useSWR(apiUrl, fetcher);
 
     // Filter out the "Uncategorized" category (ID 1 is standard in WP)
     const validCategories = categories
@@ -101,8 +113,10 @@ const CategoriesIndexPage = ({ headerHeight }) => {
                     )}
 
                     {error && (
-                        <div className="alert alert-danger text-center my-5">
-                            Failed to load blog categories.
+                        <div className="alert alert-danger my-5 p-4 text-center mx-auto" style={{ maxWidth: '600px' }}>
+                            <h4>Oops! We couldn't load the categories.</h4>
+                            <p>Please check your internet connection or try again later.</p>
+                            <button onClick={() => mutate()} className="btn btn-primary mt-3">Retry</button>
                         </div>
                     )}
 

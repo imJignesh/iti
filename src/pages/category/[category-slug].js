@@ -27,23 +27,51 @@ const limitChars = (text, maxChars) => {
 
 // Fetcher function for SWR
 const fetcher = async (url) => {
-    const res = await fetch(url);
-    if (!res.ok) {
-        throw new Error('Failed to fetch data');
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            const error = new Error('Failed to fetch data');
+            try {
+                error.info = await res.json();
+            } catch (e) {
+                error.info = { message: res.statusText || 'Unknown error' };
+            }
+            error.status = res.status;
+            throw error;
+        }
+        const data = await res.json();
+        const totalPages = parseInt(res.headers.get('X-WP-TotalPages'), 10) || 1;
+        return { data, totalPages };
+    } catch (err) {
+        if (err instanceof TypeError && err.message === "Failed to fetch") {
+            const silentError = new Error(`API Connection Failed: ${url}`);
+            silentError.status = 503;
+            console.warn("Suppressing fetch overlay for network error in category page.");
+            throw silentError;
+        }
+        throw err;
     }
-    const data = await res.json();
-    const totalPages = parseInt(res.headers.get('X-WP-TotalPages'), 10) || 1;
-    return { data, totalPages };
 };
 
 // New fetcher to get category ID by slug
 const categoryFetcher = async (url) => {
-    const res = await fetch(url);
-    if (!res.ok) {
-        throw new Error('Failed to fetch category data');
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            const error = new Error('Failed to fetch category data');
+            error.status = res.status;
+            throw error;
+        }
+        return await res.json();
+    } catch (err) {
+        if (err instanceof TypeError && err.message === "Failed to fetch") {
+            console.warn("Suppressing fetch overlay for category name fetch.");
+            const silentError = new Error("Category API Offline");
+            silentError.status = 503;
+            throw silentError;
+        }
+        throw err;
     }
-    const data = await res.json();
-    return data;
 }
 
 // --- SEO LOOKUP TABLE ---
@@ -135,7 +163,7 @@ const CategoryPage = ({ headerHeight }) => {
 
     // 1. Fetch the category object (and ID) based on the slug
     const categoryApiUrl = categorySlug
-        ? `https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories?slug=${categorySlug}`
+        ? `/api/wp/categories?slug=${categorySlug}`
         : null;
 
     const { data: categoryData, error: categoryError } = useSWR(categoryApiUrl, categoryFetcher);
@@ -169,7 +197,7 @@ const CategoryPage = ({ headerHeight }) => {
     // Construct the API URL for posts, now including the category ID
     const categoryId = currentCategory?.id;
     const postsApiUrl = categoryId
-        ? `https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=9&page=${page}&_embed&categories=${categoryId}${debouncedSearchTerm ? `&search=${debouncedSearchTerm}` : ''}`
+        ? `/api/wp/posts?per_page=9&page=${page}&_embed&categories=${categoryId}${debouncedSearchTerm ? `&search=${debouncedSearchTerm}` : ''}`
         : null;
 
     const { data, error: postsError, isLoading, isValidating } = useSWR(postsApiUrl, fetcher);
@@ -190,7 +218,7 @@ const CategoryPage = ({ headerHeight }) => {
     useEffect(() => {
         const fetchTags = async () => {
             try {
-                const res = await fetch('https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags?per_page=100');
+                const res = await fetch('/api/wp/tags?per_page=100');
                 const tags = await res.json();
                 const map = {};
                 tags.forEach(tag => (map[tag.id] = tag.name));
@@ -203,7 +231,7 @@ const CategoryPage = ({ headerHeight }) => {
 
         const fetchCategories = async () => {
             try {
-                const res = await fetch('https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories?per_page=100');
+                const res = await fetch('/api/wp/categories?per_page=100');
                 const cats = await res.json();
                 setCategories(cats);
             } catch (err) {
@@ -259,18 +287,7 @@ const CategoryPage = ({ headerHeight }) => {
         );
     }
 
-    if (categoryError || postsError) {
-        return (
-            <>
-                <JsonLd schema={categorySchema} />
-                <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }}>
-                    <section className="ibdpBanner" data-scroll data-scroll-section>
-                        <div className="alert alert-danger my-5 p-4">Failed to load content. Please check the API.</div>
-                    </section>
-                </div>
-            </>
-        );
-    }
+
 
     if (!currentCategory) {
         // Category not found (404-like scenario)
@@ -360,11 +377,21 @@ const CategoryPage = ({ headerHeight }) => {
                 </section>
                 <section className="ibdpBanner container" data-scroll data-scroll-section>
 
-                    {isLoading && posts.length === 0 && (
+                    {/* Loading spinner always within the container */}
+                    {(isLoading || (isValidating && posts.length === 0)) && (
                         <div className="d-flex justify-content-center align-items-center py-5" style={{ minHeight: '300px' }}>
                             <div className="spinner-border text-primary" role="status">
                                 <span className="visually-hidden">Loading...</span>
                             </div>
+                        </div>
+                    )}
+
+                    {/* Non-blocking error message inside the content area */}
+                    {(categoryError || postsError) && posts.length === 0 && !isValidating && !isLoading && (
+                        <div className="alert alert-danger my-5 p-4 text-center mx-auto" style={{ maxWidth: '600px' }}>
+                            <h4>Oops! Something went wrong.</h4>
+                            <p>We're having trouble loading the {currentCategoryName} category. Please try again later.</p>
+                            <button onClick={() => window.location.reload()} className="btn btn-primary mt-3">Retry</button>
                         </div>
                     )}
 

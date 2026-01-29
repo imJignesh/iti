@@ -36,7 +36,7 @@ const Blog = ({ locoScroll }) => {
                 setIsLoading(false);
 
             } catch (error) {
-                console.error("Failed to fetch blog posts:", error);
+                console.warn("Failed to fetch blog posts (Home):", error.message);
                 setIsLoading(false);
             }
         };

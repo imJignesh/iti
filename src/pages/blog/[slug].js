@@ -2,31 +2,49 @@
 // 'use client';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
-import { useEffect, useRef, useState, useContext } from 'react';
+import { useRef, useState, useContext, useEffect } from 'react';
 import Head from 'next/head';
 import SidebarForm from '@/components/SidebarForm';
 import { useMemo } from "react";
 import { PopupContext } from '../../pages/_app';
+import SEO from "@/components/SEO";
 
 
 // You must add 'import "locomotive-scroll/dist/locomotive-scroll.css";'
 // to your `pages/_app.js` file to avoid a build error.
 
 // --- API Endpoints ---
-const VOTE_API_URL = 'https://api.ignitetraininginstitute.com/wp-json/mpl/v1/vote';
+const VOTE_API_URL = '/api/mpl/vote';
 // --- NEW API Endpoint ---
-const POSTS_API_BASE_URL = 'https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts';
+// --- NEW API Endpoint ---
+const POSTS_API_BASE_URL = '/api/wp/posts';
 
 // Fetcher function for SWR to handle API requests
 const fetcher = async (url) => {
-    const res = await fetch(url);
-    if (!res.ok) {
-        const error = new Error('Failed to fetch data');
-        error.info = await res.json();
-        error.status = res.status;
-        throw error;
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            const error = new Error('Failed to fetch data');
+            try {
+                error.info = await res.json();
+            } catch (e) {
+                error.info = { message: res.statusText || 'Unknown error' };
+            }
+            error.status = res.status;
+            throw error;
+        }
+        return res.json();
+    } catch (err) {
+        // In development environments like Turbopack, throwing "TypeError: Failed to fetch"
+        // often triggers a blocking overlay. We wrap it to stay silent but functional.
+        if (err instanceof TypeError && err.message === "Failed to fetch") {
+            const silentError = new Error(`API Connection Failed: ${url}`);
+            silentError.status = 503;
+            console.warn("Suppressing fetch overlay for network error.");
+            throw silentError;
+        }
+        throw err;
     }
-    return res.json();
 };
 
 
@@ -121,6 +139,7 @@ const getClientUUID = () => {
 const TOCPostContent = ({ content, toc }) => {
     const { openManualPopup } = useContext(PopupContext);
     const contentRef = useRef(null);
+    const gif2PlaceholderClass = 'gif2-placeholder'; // Define the placeholder class
 
     const [displayContent, setDisplayContent] = useState(content);
 
@@ -174,7 +193,7 @@ const TOCPostContent = ({ content, toc }) => {
         `;
 
         const video2Html = `
-            <div class="blog-video-wrapper my-5">
+            <div class="blog-video-wrapper my-5 ${gif2PlaceholderClass}">
                 <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
                     <video
                         class="img-fluid gif-2 w-100 rounded"
@@ -253,23 +272,41 @@ const TOCPostContent = ({ content, toc }) => {
 
 export async function getServerSideProps(context) {
     const { slug } = context.params;
-    // Fetch the post data on the server
-    const res = await fetch(`https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed`);
-    const data = await res.json();
+    try {
+        // Fetch the post data on the server
+        const res = await fetch(`https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed`);
 
-    // If no post found, return 404
-    if (!data || !data.length) {
+        if (!res.ok) {
+            // If API returns 500 or other errors, handle gracefully
+            console.error(`Post fetch failed for slug: ${slug}, status: ${res.status}`);
+            return {
+                notFound: true,
+            };
+        }
+
+        const data = await res.json();
+
+        // If no post found, return 404
+        if (!data || !data.length) {
+            return {
+                notFound: true,
+            };
+        }
+
+        // Return the post data as props
+        return {
+            props: {
+                initialPost: data[0],
+            },
+        };
+    } catch (error) {
+        console.error(`Server-side error fetching post for slug ${slug}:`, error);
+        // Fallback to 404 or a custom error page prop if preferred. 
+        // Returning notFound: true is the safest specific failure mode.
         return {
             notFound: true,
         };
     }
-
-    // Return the post data as props
-    return {
-        props: {
-            initialPost: data[0],
-        },
-    };
 }
 
 export default function PostDetail({ initialPost }) {
@@ -288,7 +325,7 @@ export default function PostDetail({ initialPost }) {
     const [relatedPosts, setRelatedPosts] = useState(null);
     // ------------------------------------
 
-    const postApiUrl = slug ? `https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed` : null;
+    const postApiUrl = slug ? `/api/wp/posts?slug=${slug}&_embed` : null;
     const { data, error } = useSWR(postApiUrl, fetcher, { fallbackData: [initialPost] });
 
     const scrollInstanceRef = useRef(null);
@@ -361,69 +398,80 @@ export default function PostDetail({ initialPost }) {
 
     // --- NEW: Helper function to fetch related posts based on categories ---
     const fetchRelatedPosts = async (currentPost, categoriesArray) => {
-        // categoriesArray is the array of category objects: e.g., [{id: 1, ...}, {id: 2, ...}]
+        try {
+            const postId = currentPost?.id;
+            if (!postId) return;
 
-        const postId = currentPost.id;
-        const related = [];
-        const excludedPostIds = [postId]; // Start exclusion list with the current post ID
-        const MAX_POSTS = 3;
+            const related = [];
+            const excludedPostIds = [postId];
+            const MAX_POSTS = 3;
 
-        const primaryCategory = categoriesArray[0];
-        const secondaryCategory = categoriesArray[1];
+            const primaryCategory = Array.isArray(categoriesArray) ? categoriesArray[0] : null;
+            const secondaryCategory = Array.isArray(categoriesArray) ? categoriesArray[1] : null;
 
-        // Helper to fetch posts and update state
-        const fetchPostsAndAppend = async (categoryId, limit) => {
-            if (!categoryId || related.length >= MAX_POSTS || limit <= 0) return;
+            const fetchPostsAndAppend = async (categoryId, limit) => {
+                if (!categoryId || related.length >= MAX_POSTS || limit <= 0) return;
 
-            const excludeList = excludedPostIds.join(',');
-            // Fetch posts by category, exclude current and already found posts
-            const categoryUrl = `${POSTS_API_BASE_URL}?categories=${categoryId}&exclude=${excludeList}&per_page=${limit}&_embed`;
+                const excludeList = excludedPostIds.join(',');
+                const categoryUrl = `${POSTS_API_BASE_URL}?categories=${categoryId}&exclude=${excludeList}&per_page=${limit}&_embed`;
 
-            try {
-                const data = await fetcher(categoryUrl);
-                data.forEach(p => {
-                    if (related.length < MAX_POSTS && !excludedPostIds.includes(p.id)) {
-                        related.push(p);
-                        excludedPostIds.push(p.id);
+                try {
+                    const res = await fetch(categoryUrl);
+                    if (!res.ok) {
+                        console.warn(`Category fetch failed with status: ${res.status}`);
+                        return;
                     }
-                });
-            } catch (err) {
-                console.error(`Failed to fetch from category ${categoryId}:`, err);
-            }
-        };
-
-        // --- Step 1: Fetch from Primary Category (up to 3 posts) ---
-        if (primaryCategory) {
-            await fetchPostsAndAppend(primaryCategory.id, MAX_POSTS);
-        }
-
-        // --- Step 2: Fetch from Secondary Category (if needed) ---
-        if (related.length < MAX_POSTS && secondaryCategory) {
-            const limit = MAX_POSTS - related.length;
-            await fetchPostsAndAppend(secondaryCategory.id, limit);
-        }
-
-        // --- Step 3: Fetch Latest Posts (as a fallback) ---
-        if (related.length < MAX_POSTS) {
-            const limit = MAX_POSTS - related.length;
-            const excludeList = excludedPostIds.join(',');
-
-            // Fetch the latest posts, excluding any we already found and the current post.
-            const latestUrl = `${POSTS_API_BASE_URL}?per_page=${limit}&orderby=date&order=desc&exclude=${excludeList}&_embed`;
-            try {
-                const latestData = await fetcher(latestUrl);
-                latestData.forEach(p => {
-                    if (related.length < MAX_POSTS && !excludedPostIds.includes(p.id)) {
-                        related.push(p);
-                        excludedPostIds.push(p.id);
+                    const data = await res.json();
+                    if (Array.isArray(data)) {
+                        data.forEach(p => {
+                            if (related.length < MAX_POSTS && !excludedPostIds.includes(p.id)) {
+                                related.push(p);
+                                excludedPostIds.push(p.id);
+                            }
+                        });
                     }
-                });
-            } catch (err) {
-                console.error('Failed to fetch latest posts:', err);
-            }
-        }
+                } catch (err) {
+                    console.warn(`Silently skipped category ${categoryId} due to network error:`, err.message);
+                }
+            };
 
-        setRelatedPosts(related);
+            if (primaryCategory) {
+                await fetchPostsAndAppend(primaryCategory.id, MAX_POSTS);
+            }
+
+            if (related.length < MAX_POSTS && secondaryCategory) {
+                const limit = MAX_POSTS - related.length;
+                await fetchPostsAndAppend(secondaryCategory.id, limit);
+            }
+
+            if (related.length < MAX_POSTS) {
+                const limit = MAX_POSTS - related.length;
+                const excludeList = excludedPostIds.join(',');
+                const latestUrl = `${POSTS_API_BASE_URL}?per_page=${limit}&orderby=date&order=desc&exclude=${excludeList}&_embed`;
+                try {
+                    const res = await fetch(latestUrl);
+                    if (!res.ok) {
+                        console.warn(`Latest posts fetch failed with status: ${res.status}`);
+                    } else {
+                        const latestData = await res.json();
+                        if (Array.isArray(latestData)) {
+                            latestData.forEach(p => {
+                                if (related.length < MAX_POSTS && !excludedPostIds.includes(p.id)) {
+                                    related.push(p);
+                                    excludedPostIds.push(p.id);
+                                }
+                            });
+                        }
+                    }
+                } catch (err) {
+                    console.warn('Silently skipped latest posts due to network error:', err.message);
+                }
+            }
+
+            setRelatedPosts(related);
+        } catch (globalErr) {
+            console.warn("Silent error in fetchRelatedPosts:", globalErr.message);
+        }
     };
     // --------------------------------------------------------------------------------
 
@@ -493,12 +541,14 @@ export default function PostDetail({ initialPost }) {
             }
 
             // --- RELATED POSTS FETCH START ---
-            const postCategories = post._embedded?.['wp:term']?.find(term => term[0]?.taxonomy === 'category') || [];
-            if (postCategories.length > 0) {
-                fetchRelatedPosts(post, postCategories);
-            } else {
-                // If no categories, rely entirely on the latest posts fallback
-                fetchRelatedPosts(post, []);
+            if (typeof window !== 'undefined') {
+                const postCategories = post._embedded?.['wp:term']?.find(term => term[0]?.taxonomy === 'category') || [];
+                if (postCategories.length > 0) {
+                    fetchRelatedPosts(post, postCategories).catch(err => console.warn("Background fetchRelatedPosts failed:", err.message));
+                } else {
+                    // If no categories, rely entirely on the latest posts fallback
+                    fetchRelatedPosts(post, []).catch(err => console.warn("Background fetchRelatedPosts (fallback) failed:", err.message));
+                }
             }
             // --- RELATED POSTS FETCH END ---
         }
@@ -506,17 +556,9 @@ export default function PostDetail({ initialPost }) {
     // --------------------------------------------------------------------
 
 
-    if (router.isFallback) {
-        return (
-            <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '300px' }}>
-                <div className="spinner-border text-primary" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>
-        );
-    }
 
-    if (error) {
+
+    if (error && !post) {
         return <div className="alert alert-danger my-5 p-4">Failed to load post. Please try again later.</div>;
     }
 
@@ -560,22 +602,25 @@ export default function PostDetail({ initialPost }) {
     const dislikeIconColor = userVoteStatus === 'dislike' ? '#fff' : '#1c3664';
     // -----------------------------------
 
+    // Prepare SEO data
+    const seoTitle = yoastData?.title || postTitle;
+    const seoDesc = yoastData?.description || post.excerpt.rendered.replace(/<[^>]*>/g, "").slice(0, 160);
+    const seoUrl = `https://ignitetraininginstitute.com/blog/${post.slug}`;
+    const seoImage = yoastData?.og_image?.[0]?.url || featuredImage;
+
     return (
         <>
-            {/* Always render canonical tag */}
+            {/* Standardized SEO Component */}
+            <SEO
+                title={seoTitle}
+                description={seoDesc}
+                url={seoUrl}
+                image={seoImage}
+            />
+            {/* Additional manual tags if needed (e.g. article specific) */}
             <Head>
-                <link rel="canonical" href={`https://ignitetraininginstitute.com/blog/${post.slug}`} />
+                <meta property="og:type" content="article" key="og-type" />
             </Head>
-
-            {yoastData && (
-                <Head>
-                    <title>{yoastData.title}</title>
-                    <meta name="description" content={yoastData.description} key="desc" />
-                    {yoastData.og_image && (
-                        <meta property="og:image" content={yoastData.og_image[0].url} />
-                    )}
-                </Head>
-            )}
 
             <section className="post-detail-section py-5" data-scroll data-scroll-section>
                 <div className="container blog-detail-container" >
