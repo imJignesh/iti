@@ -1,6 +1,5 @@
 // pages/[slug].js
-'use client';
-
+// 'use client';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useRef, useState, useContext } from 'react';
