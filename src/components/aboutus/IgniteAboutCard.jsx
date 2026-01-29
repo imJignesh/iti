@@ -90,16 +90,22 @@ export default function IgniteAboutCard() {
             src="/assets/arect.webp"
             alt="about ignite"
             className="testimonialRect rect-1"
+            width={479}
+            height={102}
           />
           <img
             src="/assets/arect1.webp"
             alt="about ignite"
             className="testimonialRect rect-2"
+            width={211}
+            height={102}
           />
           <img
             src="/assets/arect2.webp"
             alt="about ignite"
             className="testimonialRect rect-3"
+            width={724}
+            height={102}
           />
 
           <div
@@ -115,6 +121,8 @@ export default function IgniteAboutCard() {
               src="/assets/aboutbg.webp"
               alt="about ignite"
               className="main-image"
+              width={700}
+              height={466}
             />
           </div>
         </div>

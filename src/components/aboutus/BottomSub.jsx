@@ -40,6 +40,8 @@ export default function CallToAction() {
                 src="/assets/tutbg.webp"
                 alt="about ignite"
                 className="image"
+                width={600}
+                height={317}
               />
             </div>
           </div>
@@ -79,6 +81,8 @@ export default function CallToAction() {
           src="/assets/tutbg.webp"
           alt="about ignite"
           className="mobileImage"
+          width={600}
+          height={317}
         />
       </div>
 

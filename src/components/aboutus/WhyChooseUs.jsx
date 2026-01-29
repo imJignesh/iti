@@ -101,6 +101,8 @@ export default function WhyChooseUs() {
                       src="/assets/Artboard.webp"
                       alt="about ignite"
                       className="cutout-img"
+                      width={1476}
+                      height={1476}
                     />
                   </div>
                 </div>
@@ -447,6 +449,8 @@ export default function WhyChooseUs() {
                       }
                       alt="about ignite"
                       className="cutout-img"
+                      width={isMobile ? 2073 : 1476}
+                      height={isMobile ? 2532 : 1476}
                     />
                   </div>
                 </div>
