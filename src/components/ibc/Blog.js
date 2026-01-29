@@ -50,8 +50,8 @@ const staticBlogs = [
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
         link: "/blogs",
-        width: 500,
-        height: 750,
+        width: 1200,
+        height: 800,
     },
     {
         img: "/images/blogImage2.webp",
@@ -204,6 +204,26 @@ const Blog = () => {
                     </a>
                 </div>
             </div>
+            <style jsx>{`
+                .blogImg {
+                    width: 300px !important;
+                    height: 200px !important;
+                    object-fit: cover;
+                    border-radius: 24px;
+                }
+                @media (max-width: 991px) {
+                    .blogImg {
+                        width: 250px !important;
+                        height: 180px !important;
+                    }
+                }
+                @media (max-width: 767px) {
+                    .blogImg {
+                        width: 100% !important;
+                        height: 220px !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };
