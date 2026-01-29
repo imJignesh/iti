@@ -334,7 +334,7 @@ const Contact = ({ headerHeight }) => {
                             <button type="submit" className="submit-btn" disabled={loading}>
                                 {loading ? 'SUBMITTING...' : 'SUBMIT'}
                                 <span className="arrow">
-                                    <img src="/images/right-arrow-skyblue.webp" alt="contact ignite training institute" />
+                                    <img src="/images/right-arrow-skyblue.webp" alt="contact ignite training institute" width={57} height={57} />
                                 </span>
                             </button>
                         </div>
@@ -363,14 +363,14 @@ const Contact = ({ headerHeight }) => {
 
                     <div className="contact-grid">
                         <div className="contact-card green">
-                            <img src="/images/email.webp" alt="contact ignite training institute" />
+                            <img src="/images/email.webp" alt="contact ignite training institute" width={117} height={117} />
                             <h3>EMAIL US</h3>
                             <p>Email us now for expert tutoring and tailored growth solutions.</p>
                             <a href="mailto:hello@ignitetraininginstitute.com">hello@ignitetraininginstitute.com</a>
                         </div>
 
                         <div className="contact-card green">
-                            <img src="/images/call.webp" alt="contact ignite training institute" />
+                            <img src="/images/call.webp" alt="contact ignite training institute" width={117} height={117} />
                             <h3>CALL US</h3>
                             <p>Call us today for personalised tutoring and transformative growth.</p>
                             <a href="tel:+971568357374">+971 56835 7374</a>
@@ -379,7 +379,7 @@ const Contact = ({ headerHeight }) => {
 
 
                     <div className="contact-visit blue">
-                        <img src="/images/location-map.webp" alt="contact ignite training institute" />
+                        <img src="/images/location-map.webp" alt="contact ignite training institute" width={99} height={99} />
                         <h3>VISIT US</h3>
                         <p>Visit us for personalized coaching and guidance toward lasting success!</p>
                         <address>

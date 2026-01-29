@@ -420,6 +420,7 @@
  .contact-visit img {
      max-width: 80px;
      margin-bottom: 15px;
+     height: auto;
  }
 
  .contact-card h3,
