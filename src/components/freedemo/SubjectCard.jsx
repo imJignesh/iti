@@ -86,11 +86,15 @@ export default function SubjectsCard1({ }) {
             src="/images/rectangle-bg4.webp"
             alt="ib tutor in dubai"
             className="subjects-card1-bg-rect"
+            width={585}
+            height={120}
           />
           <img
             src="/assets/lb.webp"
             alt="ib tutor in dubai"
             className="subjects-card1-bg-rect"
+            width={383}
+            height={108}
           />
           <img
             data-scroll
@@ -99,6 +103,8 @@ export default function SubjectsCard1({ }) {
             src={isMobile ? "/assets/lb.webp" : "/assets/rm.webp"}
             alt="ib tutor in dubai"
             className="subjects-card1-bg-rect"
+            width={isMobile ? 383 : 444}
+            height={108}
           />
           <div className="subjects-card1-right">
             <div className="subjects-card1-bubbles-grid">
