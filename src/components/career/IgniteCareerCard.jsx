@@ -120,6 +120,8 @@ export default function IgniteCareerCard() {
               src="/assets/person1.webp"
               alt="Two professionals working together on laptop"
               className="main-image"
+              width={600}
+              height={400}
             />
           </div>
 
@@ -135,13 +137,13 @@ export default function IgniteCareerCard() {
 
               {/* First item */}
               <div className="d-flex align-items-center gap-3">
-                <img src="/assets/check.webp" alt="career at ignite" className="icon-height" />
+                <img src="/assets/check.webp" alt="career at ignite" className="icon-height" width={35} height={35} />
                 <h3>Empowering students & educators alike</h3>
               </div>
 
               {/* Second item */}
               <div className="d-flex align-items-center gap-3">
-                <img src="/assets/check.webp" alt="career at ignite" className="icon-height" />
+                <img src="/assets/check.webp" alt="career at ignite" className="icon-height" width={35} height={35} />
                 <h3 className="spanText">Igniting great teaching & deeper learning</h3>
               </div>
 

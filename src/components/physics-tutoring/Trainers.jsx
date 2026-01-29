@@ -16,6 +16,8 @@ const trainers = [
     subtitle: "Physics",
     experience: "8+ YEARS",
     color: "blue",
+    width: 960,
+    height: 960,
   },
   {
     name: "NAMRATA",
@@ -23,6 +25,8 @@ const trainers = [
     subtitle: "Physics",
     experience: "10+ YEARS",
     color: "green",
+    width: 960,
+    height: 960,
   },
   {
     name: "DR. HAYA",
@@ -30,6 +34,8 @@ const trainers = [
     subtitle: "Physics",
     experience: "9+ YEARS",
     color: "blue",
+    width: 812,
+    height: 1017,
   },
   {
     name: "DEEPAK",
@@ -37,6 +43,8 @@ const trainers = [
     subtitle: "Physics",
     experience: "13+ YEARS",
     color: "green",
+    width: 812,
+    height: 1017,
   },
 ];
 
@@ -49,7 +57,7 @@ const TrainerCard = ({ trainer }) => (
     <div data-color={trainer.color} className="trainerCard">
       <div className="trainerName">{trainer.name}</div>
       <div className="trainerImgWrap">
-        <img src={trainer.img} alt={`Trainer ${trainer.name} ignite training institute`} className="trainerImg" />
+        <img src={trainer.img} alt={`Trainer ${trainer.name} ignite training institute`} className="trainerImg" width={trainer.width} height={trainer.height} />
       </div>
       <div className="trainerSubtitle">{trainer.subtitle}</div>
       <div className="trainerExp">{trainer.experience}</div>
@@ -597,11 +605,11 @@ export default function Trainers() {
                 {/* Custom Navigation Buttons */}
                 <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
                   {/* Placeholder for actual image/icon */}
-                  <img src="/images/left-arrow-blue.webp" alt="ibdp tutor in dubai" />
+                  <img src="/images/left-arrow-blue.webp" alt="ibdp tutor in dubai" width={57} height={57} />
                 </button>
                 <button ref={navNextRef} className="customNavBtn swiper-button-next">
                   {/* Placeholder for actual image/icon */}
-                  <img src="/images/right-arrow-blue.webp" alt="ibdp tutor in dubai" />
+                  <img src="/images/right-arrow-blue.webp" alt="ibdp tutor in dubai" width={57} height={57} />
                 </button>
                 {/* Custom Pagination Container */}
                 <div className="trainersPagination"></div>

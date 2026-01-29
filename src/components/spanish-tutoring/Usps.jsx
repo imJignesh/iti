@@ -21,48 +21,64 @@ const uspData = [
     icon: "/images/usp-icon1.webp",
     title: "Language Mastery",
     desc: "Build fluency and accuracy in Spanish communication skills.",
+    width: 77,
+    height: 67,
   },
   {
     number: "02",
     icon: "/images/usp-icon2.webp",
     title: "Personalized Approach",
     desc: "Lessons tailored to your learning pace, goals, and level.",
+    width: 67,
+    height: 63,
   },
   {
     number: "03",
     icon: "/images/usp-icon3.webp",
     title: "Cultural Insights",
     desc: "Learn Spanish with cultural depth and real-world relevance.",
+    width: 76,
+    height: 69,
   },
   {
     number: "04",
     icon: "/images/usp-icon4.webp",
     title: "Proven Results",
     desc: "Track record of high scores in the Spanish examinations.",
+    width: 66,
+    height: 71,
   },
   {
     number: "05",
     icon: "/images/usp-icon5.webp",
     title: "Interactive Learning",
     desc: "Engaging, dynamic lessons that boost language retention.",
+    width: 78,
+    height: 74,
   },
   {
     number: "06",
     icon: "/images/usp-icon6.webp",
     title: "Flexible Sessions",
     desc: "In-person or online classes that suit your class schedule.",
+    width: 76,
+    height: 78,
   },
   {
     number: "07",
     icon: "/images/usp-icon1.webp",
     title: "Tailored Guidance",
     desc: "Curriculum-specific tutoring aligned with academic expectations.",
+    width: 77,
+    height: 67,
   },
   {
     number: "08",
     icon: "/images/usp-icon2.webp",
     title: "Exam Excellence",
     desc: "Focused strategies for success in Spanish language assessments.",
+    width: 67,
+    height: 63,
   },
 ];
 
@@ -146,6 +162,8 @@ export default function Usps({ }) {
                             src={usp.icon}
                             alt={usp.title}
                             className={styles.uspIcon}
+                            width={usp.width}
+                            height={usp.height}
                           />
                         </div>
                         <div className={styles.uspContent}>

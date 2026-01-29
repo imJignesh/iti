@@ -75,6 +75,8 @@ export default function SubjectsCard1({ }) {
             src="/images/rectangle-bg4.webp"
             alt="ib tutor in dubai"
             className="subjects-card1-bg-rect"
+            width={585}
+            height={120}
           />
           <img
             src="/assets/lb.webp"

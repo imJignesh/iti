@@ -21,48 +21,64 @@ const uspData = [
     icon: "/images/usp-icon1.webp",
     title: "Profound Expertise",
     desc: "Learn from expert Physics tutors with in-depth subject mastery.",
+    width: 77,
+    height: 67,
   },
   {
     number: "02",
     icon: "/images/usp-icon2.webp",
     title: "Applicable Insights",
     desc: "Relate Physics concepts to real-world situations and problems.",
+    width: 67,
+    height: 63,
   },
   {
     number: "03",
     icon: "/images/usp-icon3.webp",
     title: "Proven Success",
     desc: "Consistent track record of top scores in the Physics examinations.",
+    width: 76,
+    height: 69,
   },
   {
     number: "04",
     icon: "/images/usp-icon4.webp",
     title: "Clear Concepts",
     desc: "Understand challenging theories through simplified step-by-step teaching.",
+    width: 66,
+    height: 71,
   },
   {
     number: "05",
     icon: "/images/usp-icon5.webp",
     title: "Personalized Learning",
     desc: "Custom lessons designed around your goals and curriculum.",
+    width: 78,
+    height: 74,
   },
   {
     number: "06",
     icon: "/images/usp-icon6.webp",
     title: "Exam Excellence",
     desc: "Strategic preparation focused on scoring high in assessments.",
+    width: 76,
+    height: 78,
   },
   {
     number: "07",
     icon: "/images/usp-icon1.webp",
     title: "Flexible Tutoring",
     desc: "Sessions planned to match your availability and learning pace.",
+    width: 77,
+    height: 67,
   },
   {
     number: "08",
     icon: "/images/usp-icon2.webp",
     title: "Boosted Confidence",
     desc: "Strengthen understanding to approach Physics with clarity and ease.",
+    width: 67,
+    height: 63,
   },
 ];
 
@@ -146,6 +162,8 @@ export default function Usps({ }) {
                             src={usp.icon}
                             alt={usp.title}
                             className={styles.uspIcon}
+                            width={usp.width}
+                            height={usp.height}
                           />
                         </div>
                         <div className={styles.uspContent}>

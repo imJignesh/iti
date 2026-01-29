@@ -25,6 +25,12 @@ export default function CareerForm() {
     experience: "",
   });
 
+  const [redirectUrl, setRedirectUrl] = useState("");
+
+  useEffect(() => {
+    setRedirectUrl(window.location.origin + '/thank-you-career');
+  }, []);
+
   // --- VALIDATION LOGIC ---
   const validate = () => {
     const newErrors = {};
@@ -99,68 +105,16 @@ export default function CareerForm() {
     setFormData(prev => ({ ...prev, job_type: type }));
   };
 
-  // --- SUBMISSION LOGIC (DIRECT TO ZOHO) ---
-  const handleSubmit = async (e) => {
+  // --- SUBMISSION LOGIC (Native Form Submit) ---
+  const handleSubmit = (e) => {
     e.preventDefault();
     setSubmissionStatus(null);
 
     if (!validate()) return;
-
     setLoading(true);
 
-    try {
-      // Build FormData for DIRECT submission to Zoho
-      const zohoFormData = new FormData();
-
-      // Hidden fields required by Zoho
-      zohoFormData.append('zf_referrer_name', '');
-      zohoFormData.append('zf_redirect_url', window.location.origin + '/thank-you-career');
-      zohoFormData.append('zc_gad', '');
-
-      // Map to Zoho field names
-      zohoFormData.append('SingleLine', formData.name);
-      zohoFormData.append('Email', formData.email);
-      zohoFormData.append('PhoneNumber_countrycode', `+971${formData.phone}`);
-      zohoFormData.append('SingleLine1', formData.location);
-      zohoFormData.append('SingleLine2', formData.position);
-      zohoFormData.append('SingleLine3', formData.department);
-      zohoFormData.append('Radio', formData.job_type);
-      zohoFormData.append('SingleLine4', formData.notice_period);
-      zohoFormData.append('SingleLine5', formData.experience);
-      zohoFormData.append('SingleLine6', formData.subjects);
-
-      // Append file (Zoho field name is 'FileUpload')
-      if (file) {
-        zohoFormData.append('FileUpload', file);
-      }
-
-      console.log('📤 Submitting directly to Zoho...');
-
-      // Submit directly to Zoho
-      const response = await fetch(
-        'https://forms.zohopublic.com/sumitignitetrain1/form/Career/formperma/5MGjIF4X7ef6W9KUqep6lOshMxA11LSyAx7Ub7300E4/htmlRecords/submit',
-        {
-          method: 'POST',
-          body: zohoFormData,
-          mode: 'no-cors', // Required for cross-origin Zoho submission
-        }
-      );
-
-      // With no-cors mode, we can't read the response, but if no error was thrown, assume success
-      console.log('✅ Submitted to Zoho');
-      setSubmissionStatus('success');
-
-      // Redirect after a short delay
-      setTimeout(() => {
-        window.location.href = '/thank-you-career';
-      }, 1000);
-
-    } catch (error) {
-      console.error('❌ Submission Error:', error);
-      setSubmissionStatus('error');
-    } finally {
-      setLoading(false);
-    }
+    // Submit the form natively
+    formRef.current.submit();
   };
 
   return (
@@ -193,12 +147,29 @@ export default function CareerForm() {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
+        action='https://forms.zohopublic.com/sumitignitetrain1/form/Career/formperma/5MGjIF4X7ef6W9KUqep6lOshMxA11LSyAx7Ub7300E4/htmlRecords/submit'
+        method='POST'
+        encType='multipart/form-data'
         className="career-form fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
         style={{ animationDelay: "0.2s" }}
       >
+        {/* Hidden Fields for Zoho */}
+        <input type="hidden" name="zf_referrer_name" value="" />
+        <input type="hidden" name="zf_redirect_url" value={redirectUrl} />
+        <input type="hidden" name="zc_gad" value="" />
+        <input type="hidden" name="SingleLine" value={formData.name} />
+        <input type="hidden" name="Email" value={formData.email} />
+        <input type="hidden" name="PhoneNumber_countrycode" value={`+971${formData.phone}`} />
+        <input type="hidden" name="SingleLine1" value={formData.location} />
+        <input type="hidden" name="SingleLine2" value={formData.position} />
+        <input type="hidden" name="SingleLine3" value={formData.department} />
+        <input type="hidden" name="Radio" value={formData.job_type} />
+        <input type="hidden" name="SingleLine4" value={formData.notice_period} />
+        <input type="hidden" name="SingleLine5" value={formData.experience} />
+        <input type="hidden" name="SingleLine6" value={formData.subjects} />
         <label htmlFor="name">NAME*</label>
         <input
           type="text"
@@ -229,7 +200,7 @@ export default function CareerForm() {
           <select>
             <option>+971</option>
           </select>
-          <img src="/assets/dropdown-arrow.webp" alt="career at ignite" className="dropdown-arrow" />
+          <img src="/assets/dropdown-arrow.webp" alt="career at ignite" className="dropdown-arrow" width={27} height={15} />
           <input
             type="tel"
             id="phone"
@@ -391,7 +362,7 @@ export default function CareerForm() {
           <input
             type="file"
             ref={fileInputRef}
-            name="cv_file"
+            name="FileUpload"
             onChange={handleFileChange}
             accept=".pdf,.doc,.docx"
             style={{ display: "none" }}

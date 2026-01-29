@@ -50,18 +50,24 @@ const staticBlogs = [
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
         link: "/blogs",
+        width: 500,
+        height: 750,
     },
     {
         img: "/images/blogImage2.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
         link: "/blogs",
+        width: 1200,
+        height: 673,
     },
     {
         img: "/images/blogImage3.webp",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
         desc: "Choosing us means partnering with experienced coaches who are...",
         link: "/blogs",
+        width: 1200,
+        height: 800,
     },
 ];
 
@@ -154,6 +160,8 @@ const Blog = () => {
                                         data-scroll-repeat="true"
                                         data-scroll-offset="-10%"
                                         className="blogImg"
+                                        width={blog.width || 1200}
+                                        height={blog.height || 800}
                                     /></a>
                                     <div className="blogCardContent">
                                         <div className="blogCardTitle">{blog.title}</div>

@@ -118,6 +118,8 @@ export default function LifeAtIgniteCarousel() {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
+              width={4096}
+              height={2734}
             />
             <img
               src={images[getNextIndex()].url}
@@ -126,6 +128,8 @@ export default function LifeAtIgniteCarousel() {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
+              width={4096}
+              height={2734}
             />
             <img
               src={images[currentImageIndex].url}
@@ -134,6 +138,8 @@ export default function LifeAtIgniteCarousel() {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
+              width={4096}
+              height={2734}
             />
           </div>
 

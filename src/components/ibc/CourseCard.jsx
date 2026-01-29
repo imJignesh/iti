@@ -262,6 +262,8 @@ function CourseCard() {
                           src="/assets/corsebg.webp"
                           alt="ib tutor in dubai"
                           className="img-fluid image1"
+                          width={500}
+                          height={400}
                           style={{
                             height: "400px",
                             width: "500px",

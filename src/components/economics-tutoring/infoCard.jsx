@@ -405,16 +405,22 @@ export default function InfoCard() {
                 src="/assets/rect1.webp"
                 alt="bg-shape"
                 className="testimonialRect rect-1"
+                width={321}
+                height={170}
               />
               <img
                 src="/assets/rect2.webp"
                 alt="bg-shape"
                 className="testimonialRect rect-2"
+                width={539}
+                height={170}
               />
               <img
                 src="/assets/rect3.webp"
                 alt="bg-shape"
                 className="testimonialRect rect-3"
+                width={309}
+                height={170}
               />
 
               <div

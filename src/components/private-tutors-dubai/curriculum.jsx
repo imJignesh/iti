@@ -43,12 +43,14 @@ const IBCurriculumStages = () => {
             </div>
           </div>
         </div>
-        <img src="/assets/bgrect25.webp" alt="private tutors in dubai" className="testimonialRect rect-1" />
-        <img src="/assets/bgrect26.webp" alt="private tutors in dubai" className="testimonialRect rect-2" />
+        <img src="/assets/bgrect25.webp" alt="private tutors in dubai" className="testimonialRect rect-1" width={598} height={120} />
+        <img src="/assets/bgrect26.webp" alt="private tutors in dubai" className="testimonialRect rect-2" width={428} height={120} />
         <img
           src={isMobile ? "/assets/bgrect45.webp" : "/assets/bgrect27.webp"}
           alt="bg-shape"
           className="testimonialRect rect-3"
+          width={isMobile ? 185 : 811}
+          height={isMobile ? 133 : 120}
         />      </section>
       <section className="" style={{ position: 'relative' }}>
         <div className="container fade-in-section"

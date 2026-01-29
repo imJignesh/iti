@@ -258,6 +258,8 @@ export default function StudentAchievements() {
                       src={achievement.logo}
                       alt="ib tutor in dubai"
                       className="logo-img"
+                      width={500}
+                      height={500}
                       style={{
                         width: isMobile ? "90%" : "100%",
                         height: isMobile ? "90%" : "100%",

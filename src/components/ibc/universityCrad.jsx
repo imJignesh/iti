@@ -29,7 +29,7 @@ const UniversityLogosCard = () => {
               data-scroll-repeat
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
-              <img src={logo.src} alt={logo.alt} className="logo-img" />
+              <img src={logo.src} alt={logo.alt} className="logo-img" width={1011} height={491} />
             </div>
           ))}
         </div>
@@ -49,7 +49,7 @@ const UniversityLogosCard = () => {
               data-scroll-repeat
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
-              <img src={logo.src} alt={logo.alt} className="logo-img" />
+              <img src={logo.src} alt={logo.alt} className="logo-img" width={218} height={116} />
             </div>
           ))}
         </div>
