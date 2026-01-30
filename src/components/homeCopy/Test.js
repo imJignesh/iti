@@ -58,7 +58,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
           <div
             data-scroll
             data-scroll-class="is-inview"
-            data-scroll-repeat="true"
+
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
@@ -68,7 +68,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
           <h3
             data-scroll
             data-scroll-class="is-inview"
-            data-scroll-repeat="true"
+
             // Apply local module class. Global class used as string
             className={`fade-in-section ${styles.testTitle}`}
             style={{ animationDelay: "0.2s" }}
@@ -80,7 +80,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
           <div
             data-scroll
             data-scroll-class="is-inview"
-            data-scroll-repeat="true"
+
             className="fade-in-section"
             style={{ animationDelay: "0.4s" }}
           >
@@ -90,13 +90,11 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
           </div>
         </div>
       </div>
-      {/* Conditional Rendering: Swiper for Mobile (outside container), Static Cards for Desktop (inside container) */}
-      {isMobileSwiper ? (
+      <div className={styles.testMobileWrapper}>
         <Swiper
           data-scroll
           data-scroll-class="is-inview"
-          data-scroll-repeat="true"
-          // Apply local module class
+
           className={styles.testMobileSwiper}
           centeredSlides={true}
           loop={false}
@@ -120,29 +118,23 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             const isCardActive = active === idx;
             return (
               <SwiperSlide key={idx}>
-                {/* Apply local module class */}
                 <div className={styles.testCardMobile}>
-                  {/* Apply local module class */}
                   <div
                     data-scroll
                     data-scroll-class="is-clipped"
                     data-scroll-offset="-10%"
-                    // Apply local module classes
                     className={`${styles.testCardImageWrap} ${isCardActive ? styles.mobileActiveImageArea : ""}`}
                     style={{ backgroundImage: `url(${card.img})` }}
                   >
-                    {/* Apply local module classes */}
                     <span className={`${styles.testCardNumber} ${isCardActive ? styles.mobileActiveNumber : ""}`}>{card.number}</span>
                     <h3 className={`${styles.testCardTitle} ${isCardActive ? styles.mobileActiveTitle : ""}`}>{card.title}</h3>
                   </div>
-                  {/* Apply local module classes */}
                   <div className={`${styles.testCardDetailsWrap} ${isCardActive ? styles.mobileShowContent : styles.mobileHideContent}`}>
                     <h3 className={styles.testCardLabel}>{card.label}</h3>
                     <div className={styles.testCardDetails}>
                       {card.details &&
                         card.details.map((d, i) => <span key={i}>{d}</span>)}
                     </div>
-                    {/* Apply local module class and global class */}
                     <a href={card.link} className={`${styles.testCardBtnMobile} buttonSkyBlue`} type="button">
                       {card.btn}
                       <span className={styles.btnArrow}>
@@ -161,10 +153,10 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             );
           })}
         </Swiper>
-      ) : (
-        // Desktop Version: Remains inside container
+      </div>
+
+      <div className={styles.testDesktopWrapper}>
         <div className="container">
-          {/* Apply local module class */}
           <div className={`row ${styles.testCardsRow}`}>
             {testData.slice(0, 3).map((card, idx) => {
               const isCardActive = active === idx;
@@ -173,8 +165,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                   key={idx}
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
-                  // Apply local module class and global classes
+
                   className={`fade-in-section col-4 px-3 ${styles.testCard}`}
                   style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
                   onMouseEnter={() => setActive(idx)}
@@ -184,18 +175,15 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                     data-scroll
                     data-scroll-class="is-clipped"
                     data-scroll-offset="-10%"
-                    data-scroll-repeat="true"
-                    // Apply local module classes
+
                     className={`${styles.cardImageArea} ${isCardActive ? styles.activeImageArea : ""}`}
                     style={{ backgroundImage: `url('${card.img}')` }}
                   >
-                    {/* Apply local module classes */}
                     <div className={styles.imageOverlay}></div>
                     <span className={styles.cardNumber}>{card.number}</span>
                     <h3 className={styles.cardTitle}>{card.title}</h3>
                   </div>
                   <div
-                    // Apply local module classes
                     className={`${styles.cardContentArea} ${isCardActive ? styles.showContent : styles.hideContent}`}
                   >
                     <h3 className={styles.cardLabel}>{card.label}</h3>
@@ -205,7 +193,6 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                           <p key={i} className="m-0">{d}</p>
                         ))}
                     </div>
-                    {/* Apply local module class and global class */}
                     <a href={card.link} className={`${styles.cardBtn} buttonSkyBlue`} type="button">
                       {card.btn}{" "}
                       <Image
@@ -222,7 +209,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             })}
           </div>
         </div>
-      )}
+      </div>
     </section>
   );
 };

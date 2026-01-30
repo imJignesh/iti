@@ -261,9 +261,6 @@
     display: none;
   }
 
-  .homeCopy .blogSection .container>div {
-    gap: 0 !important;
-  }
 }
 
 @media (max-width: 440px) {

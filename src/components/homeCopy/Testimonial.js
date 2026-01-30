@@ -184,7 +184,7 @@ export default function Testimonial({ }) {
         <div
           data-scroll
           data-scroll-class="is-inview"
-          data-scroll-repeat="true"
+
           className="fade-in-section"
           style={{ animationDelay: "0.1s" }}
         >
@@ -197,7 +197,7 @@ export default function Testimonial({ }) {
         <div
           data-scroll
           data-scroll-class="is-inview"
-          data-scroll-repeat="true"
+
           // Apply local module class
           className={`fade-in-section ${styles.testimonialBgBox}`}
           style={{ animationDelay: "0.2s" }}
@@ -213,7 +213,7 @@ export default function Testimonial({ }) {
             alt="google logo"
             data-scroll
             data-scroll-class="is-clipped"
-            data-scroll-repeat="true"
+
             data-scroll-offset="-10%"
             // Apply local module class
             className={styles.googlelogo}
@@ -225,7 +225,7 @@ export default function Testimonial({ }) {
           <h2
             data-scroll
             data-scroll-class="is-inview"
-            data-scroll-repeat="true"
+
             // Apply local module class
             className={`fade-in-section ${styles.testimonialTitle}`}
             style={{ animationDelay: "0.3s" }}
@@ -236,7 +236,7 @@ export default function Testimonial({ }) {
           <p
             data-scroll
             data-scroll-class="is-inview"
-            data-scroll-repeat="true"
+
             // Apply local module class
             className={`fade-in-section ${styles.googleReview}`}
             style={{ animationDelay: "0.4s" }}
@@ -250,7 +250,7 @@ export default function Testimonial({ }) {
             alt="star review"
             data-scroll
             data-scroll-class="is-inview"
-            data-scroll-repeat="true"
+
             data-scroll-offset="-10%"
             // Apply local module class
             className={`fade-in-section ${styles.starReview}`}
@@ -264,7 +264,7 @@ export default function Testimonial({ }) {
         <div
           data-scroll
           data-scroll-class="is-inview"
-          data-scroll-repeat="true"
+
           // Apply local module class
           className={`fade-in-section ${styles.testimonialSliderWrap}`}
         >

@@ -79,7 +79,7 @@ export default function Subjects({ }) {
     <section
       data-scroll
       data-scroll-class="is-inview"
-      data-scroll-repeat="true"
+
       className={`fade-in-section ${styles.subjectSection}`}
       style={{ animationDelay: "0.2s" }}
     >
@@ -88,7 +88,7 @@ export default function Subjects({ }) {
           <img
             data-scroll
             data-scroll-class="is-clipped"
-            data-scroll-repeat="true"
+
             data-scroll-offset="-10%"
             src="/images/rectangle-bg4.webp"
             alt="bg-shape"
@@ -100,7 +100,7 @@ export default function Subjects({ }) {
           <img
             data-scroll
             data-scroll-class="is-clipped"
-            data-scroll-repeat="true"
+
             data-scroll-offset="-10%"
             src="/images/rectangle-bg5.webp"
             alt="bg-shape"
@@ -124,7 +124,7 @@ export default function Subjects({ }) {
             <h2
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className="fade-in-section SubHeading"
               style={{ animationDelay: "0.1s" }}
             >
@@ -133,7 +133,7 @@ export default function Subjects({ }) {
             <h3
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className={`fade-in-section ${styles.subjectTitle}`}
               style={{ animationDelay: "0.2s" }}
             >
@@ -143,7 +143,7 @@ export default function Subjects({ }) {
             <p
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className={`fade-in-section ${styles.subjectDesc}`}
               style={{ animationDelay: "0.3s" }}
             >
@@ -157,7 +157,7 @@ export default function Subjects({ }) {
                   key={`subject-row-${rowIdx}`}
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   className={`fade-in-section ${styles.subjectBubbleRow}`}
                   style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
                 >

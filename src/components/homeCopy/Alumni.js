@@ -62,7 +62,7 @@ export default function Alumni({ setActiveIndex }) {
             <div
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
@@ -74,7 +74,7 @@ export default function Alumni({ setActiveIndex }) {
             <h2
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className="fade-in-section testTitle"
               style={{ animationDelay: "0.2s" }}
             >
@@ -160,7 +160,7 @@ export default function Alumni({ setActiveIndex }) {
                     <div
                       data-scroll
                       data-scroll-class="is-inview"
-                      data-scroll-repeat="true"
+
                       className="fade-in-section alumniCard"
                       style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
                     >
@@ -172,7 +172,7 @@ export default function Alumni({ setActiveIndex }) {
                           alt={alumni.name}
                           data-scroll
                           data-scroll-class="is-inview"
-                          data-scroll-repeat="true"
+
                           className="alumniImage"
                         />
                         {/* <div className="alumniLogoBox">

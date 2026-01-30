@@ -29,7 +29,7 @@ const BlogSection = () => {
                             className="fade-in-section blogHeadingRow"
                             data-scroll
                             data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
+
                             style={{ animationDelay: "0.1s" }}
                         >
                             <span className="SubHeading">BLOGS</span>
@@ -37,7 +37,7 @@ const BlogSection = () => {
                         <h2
                             data-scroll
                             data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
+
                             className="fade-in-section blogTitle"
                             style={{ animationDelay: "0.2s" }}
                         >
@@ -48,7 +48,7 @@ const BlogSection = () => {
                         <div
                             data-scroll
                             data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
+
                             className="fade-in-section blogSubtitle"
                             style={{ animationDelay: "0.3s" }}
                         >
@@ -57,7 +57,7 @@ const BlogSection = () => {
                         <button
                             data-scroll
                             data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
+
                             className="blogAllBtn buttonBlue fade-in-section"
                             style={{ animationDelay: "0.4s" }}
                         >
@@ -77,7 +77,7 @@ const BlogSection = () => {
                                 key={i}
                                 data-scroll
                                 data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
+
                                 className="fade-in-section blogCard"
                                 style={{ animationDelay: "0.2s" }}
                             >
@@ -86,7 +86,7 @@ const BlogSection = () => {
                                     alt="blog"
                                     data-scroll
                                     data-scroll-class="is-clipped"
-                                    data-scroll-repeat="true"
+
                                     data-scroll-offset="-10%"
                                     className="blogImg"
                                 />
@@ -113,7 +113,7 @@ const BlogSection = () => {
                     <button
                         data-scroll
                         data-scroll-class="is-inview"
-                        data-scroll-repeat="true"
+
                         className="blogAllBtnmobile buttonBlue fade-in-section"
                         style={{ animationDelay: "0.4s" }}
                     >

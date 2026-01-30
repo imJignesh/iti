@@ -185,18 +185,16 @@ export default function Trainers() {
     }
   };
 
-  const desktopTitle = (
-    <>
-      The Best <span className="highlight">Trainers</span> For Your<br />Success Journey
-    </>
+  const currentTitle = (
+    <span className="trainersTitleInner">
+      <span className="trainersTitleDesktop">
+        The Best <span className="highlight">Trainers</span> For Your<br />Success Journey
+      </span>
+      <span className="trainersTitleMobile">
+        The Best <span className="highlight">Trainers</span> For Your Success Journey
+      </span>
+    </span>
   );
-
-  const mobileTitle = (
-    <>
-      The Best <span className="highlight">Trainers</span> For Your Success Journey
-    </>
-  );
-  const currentTitle = isTrainersSwiper ? mobileTitle : desktopTitle;
 
 
   return (
@@ -231,6 +229,12 @@ export default function Trainers() {
             text-transform: uppercase;
             color: var(--blue-color);
           }
+
+          .trainersTitleDesktop { display: block; }
+          .trainersTitleMobile { display: none; }
+
+          .trainersSwiperWrapper { display: none; }
+          .trainersGridWrapper { display: block; }
 
           .trainersSection .trainersHighlight {
             background: linear-gradient(
@@ -615,6 +619,11 @@ export default function Trainers() {
             .trainersSection .trainersTitle {
               font-size: 2rem;
             }
+            .trainersTitleDesktop { display: none; }
+            .trainersTitleMobile { display: block; }
+            
+            .trainersSwiperWrapper { display: block; }
+            .trainersGridWrapper { display: none; }
 
             .trainersSection .trainerName,
             .trainersSection .trainerExp,
@@ -680,7 +689,7 @@ export default function Trainers() {
               className="SubHeading trainersSubheading fade-in-section"
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               style={{ animationDelay: "0.1s" }}
             >
               OUR TUTORS
@@ -691,7 +700,7 @@ export default function Trainers() {
             className="trainersTitle fade-in-section"
             data-scroll
             data-scroll-class="is-inview"
-            data-scroll-repeat="true"
+
             style={{ animationDelay: "0.2s" }}
           >
             {currentTitle}
@@ -700,11 +709,11 @@ export default function Trainers() {
           <div
             data-scroll
             data-scroll-class="is-inview"
-            data-scroll-repeat="true"
+
             className="fade-in-section"
             style={{ animationDelay: "0.3s" }}
           >
-            {isTrainersSwiper ? (
+            <div className="trainersSwiperWrapper">
               <div className="trainersSwiperWrap">
                 <Swiper
                   modules={[Navigation, Pagination]}
@@ -745,54 +754,53 @@ export default function Trainers() {
                 </button>
                 <div className="trainersPagination"></div>
               </div>
-            ) : (
-              <>
-                <div
-                  className="trainersGrid"
-                  ref={trainersGridRef}
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
-                >
-                  {displayTrainers.map((t, i) => (
-                    <div
-                      key={`${t.name}-${i}`}
-                      className="trainer-animate-item"
-                      /* We use a simple CSS delay based on index for the stagger effect */
-                      style={{ animationDelay: `${(i % 4) * 0.1}s` }}
-                    >
-                      <TrainerCard trainer={t} />
-                    </div>
-                  ))}
-                </div>
-                <div
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
-                  className="fade-in-section"
-                  style={{ animationDelay: "0.3s" }}
-                >
-                  {trainers.length > 10 && (
-                    !showAll ? (
-                      <button
-                        onClick={handleSeeMore}
-                        className="trainersSeeMore"
-                      >
-                        SEE MORE
-                      </button>
-                    ) : (
-                      <button
-                        onClick={handleSeeLess}
-                        className="trainersSeeLess"
-                      >
-                        SEE LESS
-                      </button>
-                    )
-                  )}
-                </div>
+            </div>
 
-              </>
-            )}
+            <div className="trainersGridWrapper">
+              <div
+                className="trainersGrid"
+                ref={trainersGridRef}
+                data-scroll
+                data-scroll-class="is-inview"
+
+              >
+                {displayTrainers.map((t, i) => (
+                  <div
+                    key={`${t.name}-${i}`}
+                    className="trainer-animate-item"
+                    /* We use a simple CSS delay based on index for the stagger effect */
+                    style={{ animationDelay: `${(i % 4) * 0.1}s` }}
+                  >
+                    <TrainerCard trainer={t} />
+                  </div>
+                ))}
+              </div>
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+
+                className="fade-in-section"
+                style={{ animationDelay: "0.3s" }}
+              >
+                {trainers.length > 10 && (
+                  !showAll ? (
+                    <button
+                      onClick={handleSeeMore}
+                      className="trainersSeeMore"
+                    >
+                      SEE MORE
+                    </button>
+                  ) : (
+                    <button
+                      onClick={handleSeeLess}
+                      className="trainersSeeLess"
+                    >
+                      SEE LESS
+                    </button>
+                  )
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </section>

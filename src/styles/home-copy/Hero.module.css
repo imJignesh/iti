@@ -65,19 +65,21 @@
   margin-top: -1vw;
 }
 
-/* Renamed to camelCase: heroTitle-desktop -> heroTitleDesktop */
+.heroTitle {
+  margin: 40px 0 50px 0;
+}
+
 .heroTitleDesktop {
+  display: block;
   font-size: 2rem;
   font-weight: 700;
-  margin: 40px 0 50px 0;
   line-height: 1.1;
   text-transform: uppercase;
   color: var(--blue-color);
 }
 
-/* Renamed to camelCase: heroTitle-mobile -> heroTitleMobile */
 .heroTitleMobile {
-  /* display: none; <-- Handled by global utility classes now */
+  display: none;
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
@@ -233,6 +235,7 @@
   text-transform: uppercase;
   background: linear-gradient(285.71deg, #3f88ba -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   padding: 0 40px;
@@ -423,18 +426,21 @@
     right: 15%;
   }
 
-  .heroLeft .heroTitleDesktop {
+  .heroTitle {
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #CCCCCC;
+    max-width: 90vw;
+  }
+
+  .heroTitleDesktop {
     display: none;
   }
 
-  .heroLeft .heroTitleMobile {
+  .heroTitleMobile {
     display: block;
-    margin: 0 auto;
-    max-width: 90vw;
     line-height: 23px;
     font-size: 20.4px;
-    border-bottom: 1px solid #CCCCCC;
-    padding: 20px 0 20px 0;
   }
 
   .heroLeft .heroTitleMobile :global(span) {

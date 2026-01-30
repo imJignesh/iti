@@ -66,19 +66,14 @@ const Hero = () => {
                                 <h1 className={styles.SubHeading}>BEST TUTORS IN UAE</h1>
                             </div>
 
-                            {isMobile !== null && (
-                                <>
-                                    {isMobile ? (
-                                        <h2 className={`${styles.heroTitleMobile} pt-3 pb-3`}>
-                                            Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
-                                        </h2>
-                                    ) : (
-                                        <h2 className={styles.heroTitleDesktop}>
-                                            Ignite Your Path To Top <span className="highlight">Academic</span> Performance
-                                        </h2>
-                                    )}
-                                </>
-                            )}
+                            <h2 className={styles.heroTitle}>
+                                <span className={styles.heroTitleDesktop}>
+                                    Ignite Your Path To Top <span className="highlight">Academic</span> Performance
+                                </span>
+                                <span className={styles.heroTitleMobile}>
+                                    Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
+                                </span>
+                            </h2>
 
                             <div className={styles.heroParagraph}>
                                 <h3>Improve Your Grades Today!</h3>

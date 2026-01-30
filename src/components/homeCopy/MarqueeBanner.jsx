@@ -27,7 +27,7 @@ const MarqueeBanner = () => {
       <div
         data-scroll
         data-scroll-class="is-inview"
-        data-scroll-repeat="true"
+
         className="fade-in-section bannerScroll1"
         style={{ animationDelay: "0.4s", marginBottom: isMobile ? "100px" : "0" }}
       >

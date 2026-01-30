@@ -74,7 +74,7 @@ const PopupProvider = ({ children }) => {
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
-    const [headerHeight, setHeaderHeight] = useState(0);
+    const [headerHeight, setHeaderHeight] = useState(100);
     const [showButton, setShowButton] = useState(false);
     const [stylesLoaded, setStylesLoaded] = useState(false);
     const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(true);
@@ -95,12 +95,8 @@ export default function MyApp({ Component, pageProps }) {
 
     useEffect(() => {
         if (!stylesLoaded) {
-            const timer = setTimeout(() => {
-                loadStyles();
-                setStylesLoaded(true);
-            }, 100);
-
-            return () => clearTimeout(timer);
+            loadStyles();
+            setStylesLoaded(true);
         }
     }, [stylesLoaded]);
 

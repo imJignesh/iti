@@ -9,6 +9,14 @@
   margin-bottom: 40px;
 }
 
+.testMobileWrapper {
+  display: none;
+}
+
+.testDesktopWrapper {
+  display: block;
+}
+
 .testSubheading {
   font-weight: 600;
   letter-spacing: normal;
@@ -250,6 +258,14 @@
 
 /* Mobile Specific Styles (Swiper) */
 @media (max-width: 991px) {
+  .testMobileWrapper {
+    display: block;
+  }
+
+  .testDesktopWrapper {
+    display: none;
+  }
+
   .testSection1 {
     padding: 0 0 30px 0;
   }

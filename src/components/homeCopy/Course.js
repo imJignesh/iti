@@ -64,7 +64,7 @@ const Course = () => {
                     <div
                         data-scroll
                         data-scroll-class="is-inview"
-                        data-scroll-repeat="true"
+
                         className="fade-in-section"
                         style={{ animationDelay: "0.1s" }}
                     >
@@ -74,7 +74,7 @@ const Course = () => {
                     <div
                         data-scroll
                         data-scroll-class="is-inview"
-                        data-scroll-repeat="true"
+
                         className="fade-in-section"
                         style={{ animationDelay: "0.25s" }}
                     >
@@ -86,7 +86,7 @@ const Course = () => {
                     <div
                         data-scroll
                         data-scroll-class="is-inview"
-                        data-scroll-repeat="true"
+
                         className="fade-in-section"
                         style={{ animationDelay: "0.4s" }}
                     >
@@ -100,7 +100,7 @@ const Course = () => {
                 <div
                     data-scroll
                     data-scroll-class="is-inview"
-                    data-scroll-repeat="true"
+
                     className={`fade-in-section ${styles.courseInner}`}
                     style={{ animationDelay: "0.4s" }}
                 >
@@ -110,7 +110,7 @@ const Course = () => {
                             <div
                                 data-scroll
                                 data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
+
                                 // Apply local module classes
                                 className={isActive ? styles.mainCard : styles.sideCard}
                                 style={{ animationDelay: `${0.3 + idx * 0.25}s`, background: "none" }}

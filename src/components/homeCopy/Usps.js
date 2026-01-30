@@ -109,7 +109,7 @@ export default function Usps({ }) {
           // Apply local module class
           data-scroll
           data-scroll-class="is-inview"
-          data-scroll-repeat="true"
+
           className={`fade-in-section ${styles.uspSection}`}
           style={{ animationDelay: "0.2s" }}
         >
@@ -125,7 +125,7 @@ export default function Usps({ }) {
                   className="fade-in-section SubHeading"
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   style={{ animationDelay: "0.1s" }}
                 >
                   OUR PROMISE
@@ -136,7 +136,7 @@ export default function Usps({ }) {
                   className={`fade-in-section ${styles.uspTitle}`}
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   style={{ animationDelay: "0.2s" }}
                 >
                   Here's Why Ignite Is The UAE's First Choice
@@ -148,7 +148,7 @@ export default function Usps({ }) {
                   className={`fade-in-section ${styles.uspSubtitle}`}
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   style={{ animationDelay: "0.3s" }}
                 >
                   Real Support, Real Progress
@@ -160,7 +160,7 @@ export default function Usps({ }) {
                   className={`fade-in-section ${styles.uspDesc} d-none d-lg-block`}
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   style={{ animationDelay: "0.4s" }}
                 >
                   We go beyond just tutoring and focus on personalised learning, proven methods, and expert guidance that drive real results. Discover what makes us the trusted choice for students and parents alike.
@@ -172,7 +172,7 @@ export default function Usps({ }) {
                   className={`fade-in-section ${styles.uspDesc} d-lg-none`}
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   style={{ animationDelay: "0.4s" }}
                 >
                   We go beyond just tutoring with personalised learning, proven methods, and expert support that deliver real results.
@@ -184,7 +184,7 @@ export default function Usps({ }) {
                   className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   style={{ animationDelay: "0.5s" }}
                 >
                   KNOW MORE{" "}
@@ -212,7 +212,7 @@ export default function Usps({ }) {
                         className={`fade-in-section ${styles.uspItem}`}
                         data-scroll
                         data-scroll-class="is-inview"
-                        data-scroll-repeat="true"
+
                         style={{ animationDelay: `${0.6 + i * 0.15}s` }}
                       >
                         {/* Apply local module classes */}

@@ -83,11 +83,7 @@ const LocomotiveScrollProvider = ({ children }) => {
             if (!scrollRef.current) return;
 
             // --- FIX: Use large negative rootMargin for mobile/tablet to stabilize detection ---
-            const isMobileView = window.innerWidth <= 991;
-
-            // On mobile, shrink the detection viewport by 15% on the top and bottom.
-            // This creates a large, stable area where elements are considered "in-view."
-            const rootMarginValue = isMobileView ? '-5% 0px -5% 0px' : '0px';
+            const rootMarginValue = '0px';
 
             const scroll = new LocomotiveScroll({
                 el: scrollRef.current,

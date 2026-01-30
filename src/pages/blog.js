@@ -122,8 +122,13 @@ const Blogpg = ({ headerHeight, ...props }) => {
         revalidateOnFocus: false
     });
 
+    // --- FIX: Add isClient state to prevent hydration mismatch ---
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => { setIsClient(true); }, []);
+
     // Helper to determine if we should show the spinner (loading, validating, or masking a soft error)
-    const showSpinner = (isLoading || isValidating || (error && error.message?.includes('API Connection Failed'))) && posts.length === 0;
+    // We strictly use isClient to ensure we don't render this on the server or initial hydration pass if the server rendered content.
+    const showSpinner = isClient && (isLoading || isValidating || (error && error.message?.includes('API Connection Failed'))) && posts.length === 0;
 
     // Helper to determine if we should show the hard error
     const showError = error && !showSpinner && posts.length === 0;

@@ -34,7 +34,7 @@ const About = () => {
         <div
           data-scroll
           data-scroll-class="is-inview"
-          data-scroll-repeat="true"
+
           style={{ animationDelay: "0.1s" }}
           className={`${styles.aboutHeading} fade-in-section`}
 
@@ -48,7 +48,7 @@ const About = () => {
             <div
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className={`fade-in-section ${styles.aboutImageWrap}`}
             >
               <div>
@@ -56,7 +56,7 @@ const About = () => {
                 <img
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg1.webp"
                   alt="Teacher"
@@ -66,7 +66,7 @@ const About = () => {
                 <img
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.webp"
                   alt="Teacher"
@@ -76,7 +76,7 @@ const About = () => {
                 <img
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.webp"
                   alt="Teacher"
@@ -86,7 +86,7 @@ const About = () => {
                 <img
                   data-scroll
                   data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
+
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.webp"
                   alt="Teacher"
@@ -99,7 +99,7 @@ const About = () => {
                 alt="Teacher"
                 data-scroll
                 data-scroll-class="is-inview"
-                data-scroll-repeat="true"
+
                 className={`fade-in-section ${styles.aboutImage}`}
                 width={500}
                 height={400}
@@ -108,7 +108,7 @@ const About = () => {
               <div
                 // data-scroll
                 // data-scroll-class="is-clipped"
-                // data-scroll-repeat="true"
+                // 
                 // data-scroll-offset="-10%"
                 className={`${styles.statCard} ${styles.statCardYears}`}
               >
@@ -121,7 +121,7 @@ const About = () => {
               <div
                 // data-scroll
                 // data-scroll-class="is-clipped"
-                // data-scroll-repeat="true"
+                // 
                 // data-scroll-offset="-10%"
                 className={`${styles.statCard} ${styles.statCardResources}`}
               >
@@ -135,7 +135,7 @@ const About = () => {
               <div
                 // data-scroll
                 // data-scroll-class="is-inview"
-                // data-scroll-repeat="true"
+                // 
                 className={`${styles.verticalLabel} `}
                 style={{ animationDelay: "0.8s" }}
               >
@@ -149,7 +149,7 @@ const About = () => {
             <div
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
@@ -162,7 +162,7 @@ const About = () => {
             <h3
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className={`fade-in-section ${styles.aboutTitle}`}
               style={{ animationDelay: "0.2s" }}
             >
@@ -174,7 +174,7 @@ const About = () => {
             <p
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className={`fade-in-section ${styles.aboutDesc}`}
               style={{ animationDelay: "0.3s" }}
             >
@@ -184,7 +184,7 @@ const About = () => {
             <div
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className="fade-in-section w-100"
               style={{ animationDelay: "0.4s" }}
             >
@@ -216,7 +216,7 @@ const About = () => {
             <span
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat="true"
+
               className={`fade-in-section ${styles.aboutDesc}`}
               style={{ animationDelay: "0.3s", paddingTop: isMobile ? '20px' : '' }}
             >

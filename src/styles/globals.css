@@ -171,19 +171,13 @@ option {
 .fade-in-section {
   opacity: 0;
   visibility: hidden;
-  /* <--- Crucial: Stops the element from appearing before JS is ready */
-  transform: translateY(80px);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 0.8s;
+  transform: translateY(30px);
 }
 
 /* Your existing Mobile Override */
 @media (max-width: 575px) {
   .fade-in-section {
-    transform: translateY(20px);
-    /* Keep visibility hidden here too */
-    visibility: hidden;
+    transform: translateY(10px);
   }
 }
 
@@ -206,6 +200,7 @@ option {
   background: linear-gradient(285.71deg, #3f88ba -4.32%, #161664 106.53%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   padding: 0 40px;
@@ -413,7 +408,7 @@ option {
 
 /* When Locomotive Scroll adds the is-inview class, the animation starts */
 .is-inview.fade-in-section {
-  animation: fadeInUp 0.8s 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation: fadeInUp 0.6s 0.1s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
 @keyframes fadeInUp {

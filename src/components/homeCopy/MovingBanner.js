@@ -6,7 +6,7 @@ const MovingBanner = () => {
       <div
         data-scroll
         data-scroll-class="is-inview"
-        data-scroll-repeat="true"
+
         className="fade-in-section bannerScroll"
         style={{ animationDelay: "0.4s" }}
       >
