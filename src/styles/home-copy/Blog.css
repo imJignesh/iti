@@ -217,6 +217,7 @@
   .homeCopy .blogSection .blogAllBtnmobile {
     display: flex;
     margin: 0 auto;
+    gap: 15px;
   }
 
   .homeCopy .blogSection .blogCard {

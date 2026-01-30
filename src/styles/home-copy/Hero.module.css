@@ -1,10 +1,15 @@
-.heroSectionDesktop {
+.heroSectionWrapper {
   padding: 10vh 0;
 }
 
-/* Specificity hack maintained using :global() for external classes */
-:global(.homeCopy) :global(.hero-section-mobile) .hero {
-  padding-top: 20px !important;
+@media (max-width: 991px) {
+  .heroSectionWrapper {
+    padding: 0;
+  }
+
+  .heroSectionWrapper .hero {
+    padding-top: 20px !important;
+  }
 }
 
 /* Removed redundant .homeCopy prefix */
@@ -379,6 +384,7 @@
     display: none;
   }
 
+
   .heroParagraph :global(strong) {
     display: block;
     opacity: 0.6;
@@ -441,6 +447,7 @@
     display: block;
     line-height: 23px;
     font-size: 20.4px;
+    text-align: center;
   }
 
   .heroLeft .heroTitleMobile :global(span) {
@@ -507,7 +514,7 @@
     /* Assuming this refers to desktop or mobile title */
     font-size: 25px;
     margin: 15px auto;
-    max-width: 70%;
+    max-width: 85%;
     line-height: 1.2;
   }
 
