@@ -170,7 +170,7 @@
   }
 
   .homeCopy .blogSection .blogAllBtn {
-    margin: 0 auto;
+    display: none;
   }
 
   .homeCopy .blogSection .blogCard {
@@ -204,8 +204,7 @@
 
 @media (max-width: 767px) {
 
-  .homeCopy .blogSection .blogSubtitle,
-  .homeCopy .blogSection .blogAllBtn {
+  .homeCopy .blogSection .blogSubtitle {
     display: block;
   }
 
@@ -261,7 +260,6 @@
   .mobile-hide {
     display: none;
   }
-
 }
 
 @media (max-width: 440px) {
