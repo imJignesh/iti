@@ -55,7 +55,7 @@ const Hero = () => {
     return (
         <>
             <Head>
-                <link rel="preload" as="image" href="/images/video-cover.webp" />
+                <link rel="preload" as="image" href="/images/video-cover.webp" fetchPriority="high" />
             </Head>
 
             <section className={`${styles.hero} ${styles.homeherosection}`}>
@@ -97,6 +97,7 @@ const Hero = () => {
                                     playsInline
                                     preload="metadata"
                                     poster="/images/video-cover.webp"
+                                    fetchPriority="high"
                                 ></video>
                             </div>
 
