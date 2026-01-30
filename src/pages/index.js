@@ -43,6 +43,18 @@ const HomeCopy = ({ headerHeight }) => {
             <SEO
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
+                preloadImages={[
+                    {
+                        src: "/images/banner-bg-mobile.webp",
+                        type: "image/webp",
+                        media: "(max-width: 767px)"
+                    },
+                    {
+                        src: "/images/banner-bg.webp",
+                        type: "image/webp",
+                        media: "(min-width: 768px)"
+                    }
+                ]}
             />
             <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
                 <Hero />

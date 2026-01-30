@@ -22,6 +22,7 @@ export default function SEOHead({
                     as="image"
                     type={img.type || "image/webp"}
                     fetchPriority={idx === 0 ? "high" : "low"}
+                    media={img.media || undefined}
                 />
             ))}
 

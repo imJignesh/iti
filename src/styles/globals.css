@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: var(--font-monstserrat) !important;
+  /* font-family: var(--font-montserrat) !important; */
 }
 
 body.is-bot-detected * {
@@ -36,7 +36,7 @@ body a {
   --white-color: #f8fbff;
   --white-bg: #ffffff;
   --black-color: #000000;
-  --font-monstserrat: "Montserrat", sans-serif;
+  /* --font-montserrat: "Montserrat", sans-serif; */
 }
 
 * {
