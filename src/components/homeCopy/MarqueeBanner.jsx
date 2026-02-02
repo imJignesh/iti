@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const items = [
   "WHERE GRADE IMPROVEMENT BEGINS",
@@ -10,18 +10,7 @@ const items = [
 
 
 const MarqueeBanner = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 1100);
-    };
-
-    checkDevice();
-    window.addEventListener('resize', checkDevice);
-
-    return () => window.removeEventListener('resize', checkDevice);
-  }, []);
+  /* Refactored to use CSS media queries */
   return (
     <section>
       <div
@@ -29,7 +18,7 @@ const MarqueeBanner = () => {
         data-scroll-class="is-inview"
 
         className="fade-in-section bannerScroll1"
-        style={{ animationDelay: "0.4s", marginBottom: isMobile ? "100px" : "0" }}
+        style={{ animationDelay: "0.4s" }}
       >
         <div className="scrollContent1">
           {/* Repeat twice for infinite effect */}
@@ -143,6 +132,12 @@ const MarqueeBanner = () => {
                   gap: 0.3rem !important;
                   /* equal space between items */
               }
+          }
+
+          @media (max-width: 1100px) {
+            .bannerScroll1 {
+              margin-bottom: 100px;
+            }
           }
 
           @media (max-width: 768px) {

@@ -11,31 +11,22 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/scrollbar";
 
 // Dynamic imports
-// Dynamic imports switched to static for SSR
+// Dynamic imports switched to static for SSR (kept static for LCP/ATF components)
 import Course from "@/components/homeCopy/Course";
 import MarqueeBanner from "@/components/homeCopy/MarqueeBanner";
 import About from "@/components/homeCopy/About";
 import Test from "@/components/homeCopy/Test";
 import Subjects from "@/components/homeCopy/Subjects";
-import Usps from "@/components/homeCopy/Usps";
-import Trainers from "@/components/homeCopy/Trainers";
-import Testimonial from "@/components/homeCopy/Testimonial";
-import Blog from "@/components/homeCopy/Blog";
+
+// Dynamic imports for below-the-fold components
+import dynamic from "next/dynamic";
+const Usps = dynamic(() => import("@/components/homeCopy/Usps"));
+const Trainers = dynamic(() => import("@/components/homeCopy/Trainers"));
+const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"));
+const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
 
 const HomeCopy = ({ headerHeight }) => {
     const [active, setActive] = useState(1);
-    const [isMobileSwiper, setIsMobileSwiper] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            const mobile = window.innerWidth <= 991;
-            setIsMobileSwiper(mobile);
-        };
-
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
 
     return (
         <>
@@ -66,7 +57,6 @@ const HomeCopy = ({ headerHeight }) => {
                 <About />
                 <Test
                     setActive={setActive}
-                    isMobileSwiper={isMobileSwiper}
                     active={active}
                 />
                 <Subjects />

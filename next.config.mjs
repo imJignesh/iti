@@ -234,7 +234,13 @@ const nextConfig = {
   },
 
   async redirects() {
-    const redirects = [];
+    const redirects = [
+      {
+        source: '/blog/emsat-tutors-in-dubai',
+        destination: '/',
+        permanent: true,
+      },
+    ];
 
     CATEGORY_SLUGS.forEach((slug) => {
       if (!STATIC_ROOT_PAGES.includes(slug) && !STATIC_COURSES_PAGES.includes(slug)) {

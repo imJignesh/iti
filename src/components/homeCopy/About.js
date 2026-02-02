@@ -11,18 +11,8 @@ const About = () => {
   const targetRate = 89;
   const duration = 2000;
   const steps = 50;
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 991);
-    };
-
-    checkDevice();
-    window.addEventListener("resize", checkDevice);
-
-    return () => window.removeEventListener("resize", checkDevice);
-  }, []);
+  /* Removed JS resize listener for performance */
+  /* const [isMobile, setIsMobile] = useState(false); ... */
 
   // --- Omitted Count Animation Logic ---
 
@@ -217,8 +207,8 @@ const About = () => {
               data-scroll
               data-scroll-class="is-inview"
 
-              className={`fade-in-section ${styles.aboutDesc}`}
-              style={{ animationDelay: "0.3s", paddingTop: isMobile ? '20px' : '' }}
+              className={`fade-in-section ${styles.aboutDesc} ${styles.mobilePaddingTop}`}
+              style={{ animationDelay: "0.3s" }}
             >
               <a href="/join-free-demo-class/" className="nodecoration mobile-mt-2">
                 {/* Global classes used as strings */}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -155,21 +155,13 @@ const TrainerCard = ({ trainer }) => (
 // ----------------------------------------------------------------------
 
 export default function Trainers() {
-  const [isTrainersSwiper, setIsTrainersSwiper] = useState(false);
+  // const [isTrainersSwiper, setIsTrainersSwiper] = useState(false); // Removed unused state
   const [showAll, setShowAll] = useState(false);
   const trainersGridRef = useRef(null);
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
 
-  useEffect(() => {
-    const handleResize = () => {
-      // Swiper active below 1199px
-      setIsTrainersSwiper(window.innerWidth <= 1199);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  /* Removed unused resize effect */
 
   const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 

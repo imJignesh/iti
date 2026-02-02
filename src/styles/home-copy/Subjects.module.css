@@ -6,6 +6,26 @@
   padding: 160px 0 80px 0;
 }
 
+.desktopView {
+  display: block;
+  width: 100%;
+}
+
+.mobileView {
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .desktopView {
+    display: none;
+  }
+
+  .mobileView {
+    display: block;
+  }
+}
+
 /* Global utility classes successfully removed/commented out for purity */
 
 .subjectSectionInner.blue {

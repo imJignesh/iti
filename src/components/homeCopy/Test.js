@@ -39,15 +39,10 @@ const testData = [
   },
 ];
 
-const Test = ({ isMobileSwiper, active, setActive }) => {
-  // Set initial active slide for mobile, and initial active card for desktop
+const Test = ({ active, setActive }) => {
   useEffect(() => {
-    if (isMobileSwiper && setActive) {
-      setActive(1); // Set the second slide (index 1) as active initially for mobile
-    } else if (!isMobileSwiper && setActive) {
-      setActive(1); // Set the second card (index 1) as active initially for desktop
-    }
-  }, [isMobileSwiper, setActive]);
+    setActive(1);
+  }, [setActive]);
 
   return (
     // Apply local module class

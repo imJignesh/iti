@@ -1,24 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 // Import the CSS Module
 import styles from '@/styles/home-copy/Subjects.module.css';
 
-const useIsMobile = (breakpoint = 768) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < breakpoint);
-    };
-
-    checkMobile();
-
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, [breakpoint]);
-
-  return isMobile;
-};
+// const useIsMobile = (breakpoint = 768) => { ... } // Removed for performance
 
 const desktopSubjectRows = [
   [
@@ -71,9 +55,9 @@ const mobileSubjectRows = [
 ];
 
 export default function Subjects({ }) {
-  const isMobile = useIsMobile();
-  const subjectRows = isMobile ? mobileSubjectRows : desktopSubjectRows;
-  const bubbleClass = isMobile ? styles.subjectBubblesSingleColumn : styles.subjectBubblesGrid;
+  // const isMobile = useIsMobile();
+  // const subjectRows = isMobile ? mobileSubjectRows : desktopSubjectRows;
+  // const bubbleClass = isMobile ? styles.subjectBubblesSingleColumn : styles.subjectBubblesGrid;
 
   return (
     <section
@@ -151,26 +135,54 @@ export default function Subjects({ }) {
             </p>
           </div>
           <div className={`col-8 ${styles.subjectRight}`}>
-            <div className={bubbleClass}>
-              {subjectRows.map((row, rowIdx) => (
-                <div
-                  key={`subject-row-${rowIdx}`}
-                  data-scroll
-                  data-scroll-class="is-inview"
 
-                  className={`fade-in-section ${styles.subjectBubbleRow}`}
-                  style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
-                >
-                  {row.map((subj) => (
-                    <h3 key={subj.name}>
-                      <a href={subj.link} className={`${styles.subjectBubble} nodecoration`}>
-                        {subj.name}
-                      </a>
-                    </h3>
-                  ))}
-                </div>
-              ))}
+            {/* Desktop View */}
+            {/* Desktop View */}
+            <div className={styles.desktopView}>
+              <div className={styles.subjectBubblesGrid}>
+                {desktopSubjectRows.map((row, rowIdx) => (
+                  <div
+                    key={`subject-row-desktop-${rowIdx}`}
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    className={`fade-in-section ${styles.subjectBubbleRow}`}
+                    style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
+                  >
+                    {row.map((subj) => (
+                      <h3 key={subj.name}>
+                        <a href={subj.link} className={`${styles.subjectBubble} nodecoration`}>
+                          {subj.name}
+                        </a>
+                      </h3>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
+
+            {/* Mobile View */}
+            <div className={styles.mobileView}>
+              <div className={styles.subjectBubblesSingleColumn}>
+                {mobileSubjectRows.map((row, rowIdx) => (
+                  <div
+                    key={`subject-row-mobile-${rowIdx}`}
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    className={`fade-in-section ${styles.subjectBubbleRow}`}
+                    style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
+                  >
+                    {row.map((subj) => (
+                      <h3 key={subj.name}>
+                        <a href={subj.link} className={`${styles.subjectBubble} nodecoration`}>
+                          {subj.name}
+                        </a>
+                      </h3>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

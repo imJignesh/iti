@@ -301,6 +301,10 @@ a.aboutBtn {
     display: none;
   }
 
+  .mobilePaddingTop {
+    padding-top: 20px !important;
+  }
+
   .aboutRight,
   .aboutStatsRow,
   .aboutStatBlock {
