@@ -81,7 +81,7 @@ export default function MyApp({ Component, pageProps }) {
     const [headerHeight, setHeaderHeight] = useState(100);
     const [showButton, setShowButton] = useState(false);
     const [stylesLoaded, setStylesLoaded] = useState(false);
-    const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(true);
+    const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(false);
 
     const mobileBreakpoint = 2600;
 
