@@ -47,7 +47,7 @@ const Hero = () => {
     return (
         <>
             <Head>
-                <link rel="preload" as="image" href="/images/video-cover.webp" fetchPriority="high" />
+                <link rel="preload" as="image" href="/images/video-cover.webp" fetchPriority="high" media="(min-width: 992px)" />
             </Head>
 
             <div className={styles.heroSectionWrapper}>

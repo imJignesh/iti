@@ -1,7 +1,7 @@
 // src/components/SEO.js
 import Head from 'next/head';
 
-const SEO = ({ title, description, url, image }) => {
+const SEO = ({ title, description, url, image, preloadImages }) => {
     // 1. We use the provided title directly (no global site name appended).
     const pageTitle = title || 'Ignite Training Institute';
 
@@ -11,6 +11,19 @@ const SEO = ({ title, description, url, image }) => {
         <Head>
             {/* Primary SEO Tags */}
             <title>{pageTitle}</title>
+
+            {/* Critical LCP Preloading */}
+            {preloadImages && preloadImages.map((img, index) => (
+                <link
+                    key={index}
+                    rel="preload"
+                    as="image"
+                    href={img.src}
+                    type={img.type}
+                    media={img.media}
+                    fetchPriority="high"
+                />
+            ))}
 
             {/* 🚨 CRITICAL: The 'key' prop forces replacement of any default meta tag */}
             <meta
