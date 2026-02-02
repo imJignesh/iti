@@ -4,11 +4,7 @@ import SEO from "@/components/SEO";
 import SEOHead from "@/components/SEOHead";
 import Hero from "@/components/homeCopy/Hero";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
-import "swiper/css/scrollbar";
+
 
 // Dynamic imports
 // Dynamic imports switched to static for SSR (kept static for LCP/ATF components)
