@@ -13,13 +13,14 @@ import "swiper/css/scrollbar";
 // Dynamic imports
 // Dynamic imports switched to static for SSR (kept static for LCP/ATF components)
 import Course from "@/components/homeCopy/Course";
-import MarqueeBanner from "@/components/homeCopy/MarqueeBanner";
-import About from "@/components/homeCopy/About";
-import Test from "@/components/homeCopy/Test";
-import Subjects from "@/components/homeCopy/Subjects";
+// Dynamic imports moved below
 
 // Dynamic imports for below-the-fold components
 import dynamic from "next/dynamic";
+const MarqueeBanner = dynamic(() => import("@/components/homeCopy/MarqueeBanner"));
+const About = dynamic(() => import("@/components/homeCopy/About"));
+const Test = dynamic(() => import("@/components/homeCopy/Test"));
+const Subjects = dynamic(() => import("@/components/homeCopy/Subjects"));
 const Usps = dynamic(() => import("@/components/homeCopy/Usps"));
 const Trainers = dynamic(() => import("@/components/homeCopy/Trainers"));
 const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"));
