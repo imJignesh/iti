@@ -69,9 +69,10 @@ function generateSiteMap(posts, categories) {
            <loc>${BASE_URL}/category/${slug}</loc>
        </url>`).join('')}
 
-     ${posts.map(({ slug }) => `
+     ${posts.map(({ slug, modified_gmt }) => `
        <url>
            <loc>${BASE_URL}/blog/${slug}</loc>
+           <!-- <lastmod>${modified_gmt}+00:00</lastmod> -->
        </url>`).join('')}
    </urlset>`
 }
@@ -86,6 +87,8 @@ export async function getServerSideProps({ res }) {
         const sitemap = generateSiteMap(posts, categories)
 
         res.setHeader('Content-Type', 'text/xml')
+        // Cache for 1 hour, serve stale for 1 minute while revalidating
+        res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=59')
         res.write(sitemap)
         res.end()
     } catch (e) {
