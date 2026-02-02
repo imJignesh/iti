@@ -1,5 +1,6 @@
 import { Montserrat } from 'next/font/google';
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
 import { useState, createContext, useEffect } from "react";
 import Link from 'next/link';
 
@@ -12,7 +13,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import DelayedPopup from "../components/DelayedPopup";
 
-import LocomotiveScrollProvider from '../components/LocomotiveScrollProvider';
+import "@/styles/DelayedPopup.css";
+
+const LocomotiveScrollProvider = dynamic(() => import('../components/LocomotiveScrollProvider'), {
+    ssr: false,
+});
 
 const isPageSpeedInsights = () => {
     if (typeof navigator === 'undefined') return false;
@@ -42,7 +47,6 @@ const loadStyles = () => {
     import("@/styles/bloginnerpage.css");
     import("@/styles/team/team.css");
     import("@/styles/contact/contact.css");
-    import("@/styles/DelayedPopup.css");
 };
 
 const montserrat = Montserrat({
@@ -83,10 +87,11 @@ export default function MyApp({ Component, pageProps }) {
 
     useEffect(() => {
         const isMobile = isMobileDevice();
-        const isPageSpeed = isPageSpeedInsights();
+        // const isPageSpeed = isPageSpeedInsights(); // Only needed if you have special logic for bots
 
-        if (isMobile && isPageSpeed) {
-            console.log('Heavy scripts disabled for mobile PageSpeed test');
+        // Ensure Locomotive Scroll is disabled for ALL mobile devices
+        if (isMobile) {
+            console.log('Locomotive Scroll disabled for mobile');
             setShouldLoadLocomotiveScroll(false);
         } else {
             setShouldLoadLocomotiveScroll(true);

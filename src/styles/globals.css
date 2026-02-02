@@ -181,6 +181,15 @@ option {
   }
 }
 
+/* --- FALLBACK FOR MOBILE (No Locomotive Scroll) --- */
+@media (max-width: 768px) {
+  .fade-in-section {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+}
+
 /* --- TRIGGER STATE --- */
 .is-inview.fade-in-section {
   opacity: 1;
