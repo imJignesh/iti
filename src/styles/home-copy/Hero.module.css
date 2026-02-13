@@ -14,7 +14,7 @@
 
 /* Removed redundant .homeCopy prefix */
 .hero {
-  padding: 3rem 0;
+  padding: 3rem 0 !important;
   /* LCP FIX: Desktop Background - Loads instantly */
   background: url(/images/banner-bg.webp);
   background-repeat: no-repeat;
@@ -126,6 +126,7 @@
   width: 30vw;
   height: 33vw;
   object-fit: fill;
+  display: block;
   /* max-height: 700px;
   object-position: right;
   border-radius: 10px; */

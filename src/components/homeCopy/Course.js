@@ -101,7 +101,7 @@ const Course = () => {
                     data-scroll
                     data-scroll-class="is-inview"
 
-                    className={`fade-in-section ${styles.courseInner}`}
+                    className={styles.courseInner}
                     style={{ animationDelay: "0.4s" }}
                 >
                     {courseData.map((card, idx) => {

@@ -78,7 +78,7 @@ const PopupProvider = ({ children }) => {
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
-    const [headerHeight, setHeaderHeight] = useState(0); // Default to 0 since header is removed
+    const [headerHeight, setHeaderHeight] = useState(102); // Default to approx header height to prevent CLS
     const [showButton, setShowButton] = useState(false);
     const [stylesLoaded, setStylesLoaded] = useState(false);
     const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(false);
