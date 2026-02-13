@@ -125,8 +125,8 @@
 .heroVideo {
   width: 30vw;
   height: 33vw;
+  object-fit: fill;
   /* max-height: 700px;
-  object-fit: cover;
   object-position: right;
   border-radius: 10px; */
 
@@ -690,6 +690,7 @@
 
 
 }
+
 /* Responsive Poster Overlay */
 .posterOverlay {
   position: absolute;
@@ -697,7 +698,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2; /* Sit above video but below interactive elements if any */
+  z-index: 2;
+  /* Sit above video but below interactive elements if any */
   pointer-events: none;
   transition: opacity 0.5s ease-out;
 }
@@ -709,7 +711,8 @@
 .posterImage {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure it covers the container like the video */
+  object-fit: fill;
+  /* Ensure it covers the container like the video */
   display: block;
 }
 

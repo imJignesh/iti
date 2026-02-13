@@ -187,6 +187,7 @@ option {
     opacity: 1 !important;
     visibility: visible !important;
     transform: none !important;
+    animation: none !important;
   }
 }
 
