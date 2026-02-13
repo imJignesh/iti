@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-// 1. Import the reusable schema component
+import React, { useRef, useEffect } from 'react';
+import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
+import LazySection from "@/components/LazySection"
 // import MovingBanner from '@/components/home/MovingBanner';
 // import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/a-level/accordian';
@@ -176,85 +177,181 @@ const ALEVEL = ({ headerHeight }) => {
 
   return (
     <>
+
       <SEO
         title="UAE's Leading A-Level, AS-Level Tutors For All Subjects"
-        description="Learn from the best A-Level tutors In UAE with assured grade improvement. Choose a personalized tutoring plan with subjects of your choice."
+        description="Learn from the best A-Level tutors In UAE with assured grade improvement. Choose a personalized tutoring plan with subjects of your choice"
+        url="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai"
       />
+
+      <Head>
+        <link
+          rel="preload"
+          href="/assets/alevel_bg_main.webp"
+          as="image"
+          type="image/webp"
+          media="(max-width: 768px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/assets/alevel_bg_main.webp"
+          as="image"
+          type="image/webp"
+          media="(min-width: 769px)"
+          fetchPriority="high"
+        />
+      </Head>
+
+
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={aLevelSchema} />
 
       {/* 3. APPLY the style for paddingTop */}
       <div
         ref={scrollRef}
-        className='overflow-hidden innerpage'
+        className='overflow-hidden innerpage page-content-padding'
         data-scroll-container
-        style={{ paddingTop: `${headerHeight}px` }} // <--- THE FIX
       >
-        <section data-scroll-section>
-          <InfoCard />
+        <section data-scroll-section className="hero-section">
+          <div className="hero-container">
+            {/* LCP Image moved here for immediate painting (SSR) */}
+            <picture className="hero-bg">
+              <source media="(max-width: 768px)" srcSet="/assets/alevel.webp" />
+              <img
+                src="/assets/alevel_bg_main.webp"
+                alt="A Level Tutors Background"
+                fetchPriority="high"
+                width="1200"
+                height="800"
+                className="hero-img"
+                style={{ opacity: 1, visibility: 'visible' }}
+              />
+            </picture>
+
+            <InfoCard />
+          </div>
         </section>
 
-        <section data-scroll-section>
-          <IgniteAboutCard />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <IgniteAboutCard />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <UniImagesCard />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <UniImagesCard />
+          </section>
+        </LazySection>
 
         {/* <section data-scroll-section>
             <StudentAchievements />
           </section> */}
 
-        <section data-scroll-section>
-          <CourseCard />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <CourseCard />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <SubjectsCard />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <SubjectsCard />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <ReviewsSection />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <ReviewsSection />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <Trainers />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <Trainers />
+          </section>
+        </LazySection>
 
         {/* what we offer Start */}
-        <WhatWeOfferSection />
+        <LazySection>
+          <WhatWeOfferSection />
+        </LazySection>
 
 
         {/* What We Offer End */}
 
-        <section data-scroll-section>
-          <IgniteAchievements />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <IgniteAchievements />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <MarqueeBanner />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <MarqueeBanner />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <UspsSection />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <UspsSection />
+          </section>
+        </LazySection>
 
         {/* <section data-scroll-section>
             <LifeAtIgniteCarousel />
           </section> */}
 
-        <section data-scroll-section>
-          <FAQSection />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <FAQSection />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <Blog />
-        </section>
-        <section data-scroll-section>
-          <Accordion />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <Blog />
+          </section>
+        </LazySection>
+        <LazySection>
+          <section data-scroll-section>
+            <Accordion />
+          </section>
+        </LazySection>
       </div>
+      <style jsx>{`
+            .hero-container {
+              position: relative;
+              max-width: 90vw;
+              margin-inline: auto;
+              margin-block: 0;
+              min-height: 750px;
+              border-radius: 1.5rem;
+              overflow: hidden;
+              isolation: isolate;
+            }
+            .hero-bg {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+            }
+            .hero-img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+            @media (max-width: 768px) {
+              .hero-container {
+                max-width: 95vw;
+                min-height: 650px;
+              }
+            }
+      `}</style>
     </>
   );
 };

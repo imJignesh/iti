@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import LazySection from "@/components/LazySection";
 // 1. Import the reusable JsonLd component
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
@@ -84,7 +85,8 @@ const About = ({ headerHeight }) => {
   return (
     <>
       <SEO title="About Us - Best Training Institute In The UAE"
-        description="Ignite Training Institute is the leading training center in the UAE, providing guidance in IB, IGCSE, A-Level, & AP to help students excel academically" />
+        description="Ignite Training Institute is the leading training center in the UAE, providing guidance in IB, IGCSE, A-Level, & AP to help students excel academically"
+        url="https://ignitetraininginstitute.com/about-us" />
       {/* 2. RENDER the JsonLd component and pass the schema data */}
       <JsonLd schema={educationalOrganizationSchema} />
 
@@ -98,27 +100,44 @@ const About = ({ headerHeight }) => {
         <section data-scroll-section>
           <AboutBanner />
         </section>
-        <section data-scroll-section>
-          <IgniteAboutCard />
-        </section>
-        <section data-scroll-section>
-          <WhyChooseUs />
-        </section>
-        <section data-scroll-section>
-          <Timeline />
-        </section>
-        <section data-scroll-section>
-          <MeetOurFounders />
-        </section>
-        <section data-scroll-section>
-          <MarqueeBanner />
-        </section>
+
+        <LazySection>
+          <section data-scroll-section>
+            <IgniteAboutCard />
+          </section>
+        </LazySection>
+
+        <LazySection>
+          <section data-scroll-section>
+            <WhyChooseUs />
+          </section>
+        </LazySection>
+
+        <LazySection>
+          <section data-scroll-section>
+            <Timeline />
+          </section>
+        </LazySection>
+
+        <LazySection>
+          <section data-scroll-section>
+            <MeetOurFounders />
+          </section>
+        </LazySection>
+
+        <LazySection>
+          <section data-scroll-section>
+            <MarqueeBanner />
+          </section>
+        </LazySection>
         {/* <section data-scroll-section>
           <LifeAtIgniteCarousel />
         </section> */}
-        <section data-scroll-section>
-          <TutoringHeroSection />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <TutoringHeroSection />
+          </section>
+        </LazySection>
       </div>
     </>
   );

@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import LazySection from "@/components/LazySection";
+import Head from "next/head";
 // 1. Import the reusable schema component
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
@@ -152,63 +154,148 @@ const EnglishTutorsInDubai = ({ headerHeight }) => {
 
     return (
         <>
-            <SEO title="Best English Tutors In Dubai - IB, IGCSE, A-Level, & AP" description="Acquire language efficiency with top-rated English tutors in Dubai for IB, IGCSE, A-Level, & AP exam prep. Learn with 1K+ advanced resources" />
+            <SEO title="Best English Tutors In Dubai - IB, IGCSE, A-Level, & AP" description="Acquire language efficiency with top-rated English tutors in Dubai for IB, IGCSE, A-Level, & AP exam prep. Learn with 1K+ advanced resources" url="https://ignitetraininginstitute.com/english-tutor-in-dubai" />
+            <Head>
+                <link
+                    rel="preload"
+                    href="/assets/subject-tutoring-m.webp"
+                    as="image"
+                    type="image/webp"
+                    media="(max-width: 768px)"
+                    fetchPriority="high"
+                />
+                <link
+                    rel="preload"
+                    href="/assets/subject-tutoring.webp"
+                    as="image"
+                    type="image/webp"
+                    media="(min-width: 769px)"
+                    fetchPriority="high"
+                />
+            </Head>
             {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
             <JsonLd schema={englishTutorsSchema} />
 
             <div
                 ref={scrollRef}
+                className="overflow-hidden innerpage page-content-padding"
                 data-scroll-container
-                style={{ paddingTop: `${headerHeight}px` }}
-                className=" innerpage"
             >
-                <section data-scroll-section>
-                    <EnglishTutorsInfoCard />
+                <section className="hero-section" data-scroll-section>
+                    <div className="hero-container">
+                        {/* LCP Image moved here for immediate painting (SSR) */}
+                        <picture className="hero-bg">
+                            <source media="(max-width: 768px)" srcSet="/assets/subject-tutoring-m.webp" />
+                            <img
+                                src="/assets/subject-tutoring.webp"
+                                alt="English Tutors Background"
+                                fetchPriority="high"
+                                decoding="sync"
+                                width="1200"
+                                height="800"
+                                className="hero-img"
+                                style={{ opacity: 1, visibility: 'visible' }}
+                            />
+                        </picture>
+
+                        {/* Interactive Content */}
+                        <EnglishTutorsInfoCard />
+                    </div>
+
+                    <style jsx>{`
+            .hero-container {
+              position: relative;
+              max-width: 90vw;
+              margin-inline: auto;
+              margin-block: 0;
+              min-height: 750px;
+              border-radius: 1.5rem;
+              overflow: hidden;
+              isolation: isolate; /* Creates stacking context */
+            }
+            .hero-bg {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+            }
+            .hero-img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+            @media (max-width: 1100px) {
+              .hero-container {
+                max-width: 95vw;
+              }
+            }
+          `}</style>
                 </section>
 
                 {/* <section data-scroll-section>
                     <EnglishTutorsStudentAchievements />
                 </section> */}
 
-                <section data-scroll-section>
-                    <MarqueeBanner />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <MarqueeBanner />
+                    </section>
+                </LazySection>
 
-                <section data-scroll-section>
-                    <EnglishTutorsChooseApp />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <EnglishTutorsChooseApp />
+                    </section>
+                </LazySection>
 
-                <section data-scroll-section>
-                    <EnglishTutorsACT />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <EnglishTutorsACT />
+                    </section>
+                </LazySection>
 
-                <section data-scroll-section>
-                    <ReviewsSection />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <ReviewsSection />
+                    </section>
+                </LazySection>
 
-                <section data-scroll-section>
-                    <Trainers />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <Trainers />
+                    </section>
+                </LazySection>
 
-                <section data-scroll-section>
-                    <EnglishTutorsIgniteAchievements />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <EnglishTutorsIgniteAchievements />
+                    </section>
+                </LazySection>
 
-                <section data-scroll-section>
-                    <EnglishTutorsUsps />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <EnglishTutorsUsps />
+                    </section>
+                </LazySection>
 
                 {/* <section data-scroll-section>
                     <EnglishTutorsLifeAtIgniteCarousel />
                 </section> */}
 
-                <section data-scroll-section>
-                    <EnglishTutorsFAQSection />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <EnglishTutorsFAQSection />
+                    </section>
+                </LazySection>
 
-                <section data-scroll-section>
-                    <Accordion />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <Accordion />
+                    </section>
+                </LazySection>
             </div>
         </>
     );

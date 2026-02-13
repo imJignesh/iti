@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
@@ -185,11 +186,27 @@ const act = ({ headerHeight }) => {
       <Head>
         <link rel="stylesheet" href="/styles/home/MovingBanner.css" />
         <link rel="stylesheet" href="/styles/home/Subjects.css" />
-        <link rel="preload" as="image" href="/assets/act.webp" />
+        <link
+          rel="preload"
+          href="/assets/mobileact.webp"
+          as="image"
+          type="image/webp"
+          media="(max-width: 768px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/assets/act_bg_main.webp"
+          as="image"
+          type="image/webp"
+          media="(min-width: 769px)"
+          fetchPriority="high"
+        />
       </Head>
       <SEO
         title="ACT Subject Tests Prep With Focused Courses & Tutors In UAE"
         description="Ignite Training Institute can support you as the best ACT tutors in Dubai through our comprehensive guidance & ACT-specific tutoring strategies"
+        url="https://ignitetraininginstitute.com/act-tutors-in-dubai"
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={actSchema} />
@@ -197,57 +214,124 @@ const act = ({ headerHeight }) => {
       {/* 3. APPLY the style for paddingTop to the scroll container */}
       <div
         ref={scrollRef}
-        className='overflow-hidden innerpage'
+        className='overflow-hidden innerpage page-content-padding'
         data-scroll-container
-        style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
       >
-        <section data-scroll-section>
-          <InfoCard />
+        <section data-scroll-section className="hero-section">
+          <div className="hero-container">
+            {/* LCP Image moved here for immediate painting (SSR) */}
+            <picture className="hero-bg">
+              <source media="(max-width: 768px)" srcSet="/assets/mobileact.webp" />
+              <img
+                src="/assets/act_bg_main.webp"
+                alt="ACT Tutors Background"
+                fetchPriority="high"
+                width="1200"
+                height="800"
+                className="hero-img"
+                style={{ opacity: 1, visibility: 'visible' }}
+              />
+            </picture>
+
+            <InfoCard />
+          </div>
+
+          <style jsx>{`
+            .hero-container {
+              position: relative;
+              max-width: 90vw;
+              margin-inline: auto;
+              margin-block: 0;
+              min-height: 750px;
+              border-radius: 1.5rem;
+              overflow: hidden;
+              isolation: isolate;
+            }
+            .hero-bg {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+            }
+            .hero-img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+            @media (max-width: 1100px) {
+              .hero-container {
+                max-width: 95vw;
+              }
+            }
+          `}</style>
         </section>
 
-        <section data-scroll-section>
-          <IgniteAboutCard />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <IgniteAboutCard />
+          </section>
+        </LazySection>
         {/* <section data-scroll-section>
             <StudentAchievements />
           </section> */}
 
-        <section data-scroll-section>
-          <CourseCard />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <CourseCard />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <SubjectsCard />
-        </section>
-        <section data-scroll-section>
-          <SubjectsCard1 />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <SubjectsCard />
+          </section>
+        </LazySection>
+        <LazySection>
+          <section data-scroll-section>
+            <SubjectsCard1 />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <UspsSection />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <UspsSection />
+          </section>
+        </LazySection>
 
         {/* <section data-scroll-section>
             <LifeAtIgniteCarousel />
           </section> */}
 
-        <section data-scroll-section>
-          <ReviewsSection />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <ReviewsSection />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <FAQSection />
-        </section>
-        <section data-scroll-section>
-          <MarqueeBanner />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <FAQSection />
+          </section>
+        </LazySection>
+        <LazySection>
+          <section data-scroll-section>
+            <MarqueeBanner />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section className='actblogs'>
-          <Blog />
-        </section>
-        <section data-scroll-section>
-          <Accordion />
-        </section>
+        <LazySection>
+          <section data-scroll-section className='actblogs'>
+            <Blog />
+          </section>
+        </LazySection>
+        <LazySection>
+          <section data-scroll-section>
+            <Accordion />
+          </section>
+        </LazySection>
       </div>
     </>
   );

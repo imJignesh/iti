@@ -602,6 +602,11 @@ export default function PostDetail({ initialPost }) {
     const dislikeIconColor = userVoteStatus === 'dislike' ? '#fff' : '#1c3664';
     // -----------------------------------
 
+    const postTags = post._embedded?.['wp:term']?.find(term => term[0]?.taxonomy === 'post_tag') || [];
+    const keywordsArray = postTags.map(tag => tag.name);
+    if (yoastData?.focuskw) keywordsArray.unshift(yoastData.focuskw);
+    const seoKeywords = keywordsArray.join(', ');
+
     // Prepare SEO data
     const seoTitle = yoastData?.title || postTitle;
     const seoDesc = yoastData?.description || post.excerpt.rendered.replace(/<[^>]*>/g, "").slice(0, 160);
@@ -616,6 +621,7 @@ export default function PostDetail({ initialPost }) {
                 description={seoDesc}
                 url={seoUrl}
                 image={seoImage}
+                keywords={seoKeywords}
             />
             {/* Additional manual tags if needed (e.g. article specific) */}
             <Head>
@@ -755,7 +761,7 @@ export default function PostDetail({ initialPost }) {
                             {/* --- END UPDATED: Like/Dislike Block --- */}
                             <div className="author-bio-section">
                                 <div className="author-bio-image">
-                                    <img src="/images/Sumit.webp" alt="Author image" />
+                                    <img src="/images/sumit.webp" alt="Author image" />
                                 </div>
 
                                 <div className="author-bio-content">

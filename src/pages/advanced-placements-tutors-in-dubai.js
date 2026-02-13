@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import Head from 'next/head';
+import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
@@ -177,78 +179,168 @@ const ap = ({ headerHeight }) => {
       <SEO
         title="AP Tutors In Dubai | Best AP Prep Classes In UAE"
         description="Experience result-driven AP tutoring with programs tailored to match each student’s learning needs. Get practice tests, tailored strategies, & resources"
+        url="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai"
       />
+      <Head>
+        <link
+          rel="preload"
+          href="/assets/homeschooling-bg.webp"
+          as="image"
+          type="image/webp"
+          media="(max-width: 768px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/assets/ap_bg_main.webp"
+          as="image"
+          type="image/webp"
+          media="(min-width: 769px)"
+          fetchPriority="high"
+        />
+      </Head>
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={apSchema} />
 
       {/* 3. APPLY the style for paddingTop to the scroll container */}
       <div
         ref={scrollRef}
-        className='overflow-hidden innerpage'
+        className='overflow-hidden innerpage page-content-padding'
         data-scroll-container
-        style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
       >
-        <section data-scroll-section>
-          <InfoCard />
+        <section data-scroll-section className="hero-section">
+          <div className="hero-container">
+            {/* LCP Image moved here for immediate painting (SSR) */}
+            <picture className="hero-bg">
+              <source media="(max-width: 768px)" srcSet="/assets/homeschooling-bg.webp" />
+              <img
+                src="/assets/ap_bg_main.webp"
+                alt="Advanced Placements Background"
+                fetchPriority="high"
+                width="1200"
+                height="800"
+                className="hero-img"
+                style={{ opacity: 1, visibility: 'visible' }}
+              />
+            </picture>
+
+            <InfoCard />
+          </div>
+
+          <style jsx>{`
+            .hero-container {
+              position: relative;
+              max-width: 90vw;
+              margin-inline: auto;
+              margin-block: 0;
+              min-height: 750px;
+              border-radius: 1.5rem;
+              overflow: hidden;
+              isolation: isolate;
+            }
+            .hero-bg {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+            }
+            .hero-img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+            @media (max-width: 1100px) {
+              .hero-container {
+                max-width: 95vw;
+              }
+            }
+          `}</style>
         </section>
 
-        <section data-scroll-section>
-          <IgniteAboutCard />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <IgniteAboutCard />
+          </section>
+        </LazySection>
 
         {/* <section data-scroll-section>
             <StudentAchievements />
           </section> */}
 
-        <section data-scroll-section>
-          <CourseCard />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <CourseCard />
+          </section>
+        </LazySection>
 
         {/* <section data-scroll-section>
             <SubjectsCard />
           </section> */}
-        <section data-scroll-section>
-          <SubjectsCard1 />
-        </section>
-        <section data-scroll-section>
-          <APBenefits />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <SubjectsCard1 />
+          </section>
+        </LazySection>
+        <LazySection>
+          <section data-scroll-section>
+            <APBenefits />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <ReviewsSection />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <ReviewsSection />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <Trainers />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <Trainers />
+          </section>
+        </LazySection>
 
         {/* what we offer Start */}
-        <WhatWeOfferSection />
+        <LazySection>
+          <WhatWeOfferSection />
+        </LazySection>
 
         {/* What We Offer End */}
 
-        <section data-scroll-section>
-          <MarqueeBanner />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <MarqueeBanner />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <UspsSection />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <UspsSection />
+          </section>
+        </LazySection>
 
         {/* <section data-scroll-section>
             <LifeAtIgniteCarousel />
           </section> */}
 
-        <section data-scroll-section>
-          <FAQSection />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <FAQSection />
+          </section>
+        </LazySection>
 
-        <section data-scroll-section>
-          <Blog />
-        </section>
-        <section data-scroll-section>
-          <Accordion />
-        </section>
+        <LazySection>
+          <section data-scroll-section>
+            <Blog />
+          </section>
+        </LazySection>
+        <LazySection>
+          <section data-scroll-section>
+            <Accordion />
+          </section>
+        </LazySection>
       </div>
     </>
   );

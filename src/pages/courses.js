@@ -1,4 +1,5 @@
 import AboutBanner from "@/components/aboutus/Banner";
+import LazySection from "@/components/LazySection";
 import IgniteAboutCard from "@/components/aboutus/IgniteAboutCard";
 import WhyChooseUs from "@/components/aboutus/WhyChooseUs";
 import Timeline from "@/components/aboutus/Timeline";
@@ -73,6 +74,7 @@ const About = ({ headerHeight }) => {
             <SEO
                 title="Top Courses In UAE For IB, IGCSE, A Levels, & AP Tutoring"
                 description="Learn with certified tutors for IB, IGCSE, A-Levels, AP, ACT & UCAT. Get expert coaching with personalized support & proven strategies. Enroll today"
+                url="https://ignitetraininginstitute.com/courses"
             />
             <div
                 ref={scrollRef}
@@ -83,21 +85,27 @@ const About = ({ headerHeight }) => {
                 <section data-scroll-section>
                     <MainBanner />
                 </section>
-                <section data-scroll-section>
-                    <TutoringCourses />
-                </section>
-                <section data-scroll-section className="padding-0">
-                    <Test
-                        setActive={setActive}
-                        isMobileSwiper={isMobileSwiper}
-                        active={active}
-                    />
+                <LazySection>
+                    <section data-scroll-section>
+                        <TutoringCourses />
+                    </section>
+                </LazySection>
+                <LazySection>
+                    <section data-scroll-section className="padding-0">
+                        <Test
+                            setActive={setActive}
+                            isMobileSwiper={isMobileSwiper}
+                            active={active}
+                        />
 
 
-                </section>
-                <section data-scroll-section>
-                    <Learning />
-                </section>
+                    </section>
+                </LazySection>
+                <LazySection>
+                    <section data-scroll-section>
+                        <Learning />
+                    </section>
+                </LazySection>
                 {/* <section data-scroll-section>
                 <MarqueeBanner />
             </section> */}
@@ -105,15 +113,19 @@ const About = ({ headerHeight }) => {
                 <TrainersMessage />
             </section> */}
 
-                <section data-scroll-section>
-                    <Testimonial />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <Testimonial />
+                    </section>
+                </LazySection>
                 {/* <section data-scroll-section>
                 <LifeAtIgniteCarousel />
             </section> */}
-                <section data-scroll-section>
-                    <CallToAction />
-                </section>
+                <LazySection>
+                    <section data-scroll-section>
+                        <CallToAction />
+                    </section>
+                </LazySection>
             </div>
         </>
     );
