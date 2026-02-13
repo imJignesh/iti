@@ -12,6 +12,7 @@ const STATIC_ROOT_PAGES = [
   'biology-tutor-in-dubai',
   'blog',
   'british-curriculum-tutors-in-dubai',
+  'british-curriculum-tutors-in-dubai-copy',
   'business-studies-tutor-in-dubai',
   'career',
   'chemistry-tutor-in-dubai',

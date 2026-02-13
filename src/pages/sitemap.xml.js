@@ -4,7 +4,7 @@ const BASE_URL = 'https://ignitetraininginstitute.com'
 const STATIC_ROOT_PAGES = [
     '', 'about-us', 'accounting-tutor-in-dubai', 'act-tutors-in-dubai',
     'advanced-placements-tutors-in-dubai', 'biology-tutor-in-dubai', 'blog',
-    'british-curriculum-tutors-in-dubai', 'business-studies-tutor-in-dubai',
+    'british-curriculum-tutors-in-dubai', 'british-curriculum-tutors-in-dubai-copy', 'business-studies-tutor-in-dubai',
     'career', 'chemistry-tutor-in-dubai', 'computer-science-tutor-in-dubai',
     'contact-us', 'courses', 'economics-tutor-in-dubai', 'english-tutor-in-dubai',
     'french-tutor-in-dubai', 'ib-curriculum-tutors-in-dubai', 'join-free-demo-class',
