@@ -8,14 +8,16 @@ const STATIC_ROOT_PAGES = [
     'career', 'chemistry-tutor-in-dubai', 'computer-science-tutor-in-dubai',
     'contact-us', 'courses', 'economics-tutor-in-dubai', 'english-tutor-in-dubai',
     'french-tutor-in-dubai', 'ib-curriculum-tutors-in-dubai', 'join-free-demo-class',
+    'join-free-demo-class-copy',
     'maths-tutor-in-dubai', 'our-team', 'physics-tutor-in-dubai',
     'private-tutors-in-dubai', 'psychology-tutor-in-dubai', 'spanish-tutor-in-dubai',
     'tutors-in-dubai', 'tutors-in-jlt-dubai'
 ]
 
 const STATIC_COURSES_PAGES = [
-    'a-level-tutors-in-dubai', 'homeschooling-tutors-in-dubai',
-    'ibdp-tutors-in-dubai', 'igcse-tutors-in-dubai', 'myp-tutors-in-dubai'
+    'a-level-tutors-in-dubai', 'a-level-tutors-in-dubai-copy', 'homeschooling-tutors-in-dubai',
+    'ibdp-tutors-in-dubai', 'ibdp-tutors-in-dubai-copy', 'igcse-tutors-in-dubai', 'igcse-tutors-in-dubai-copy', 'myp-tutors-in-dubai',
+    'myp-tutors-in-dubai-copy'
 ]
 
 async function fetchAllWordPressData(endpoint) {
