@@ -18,7 +18,7 @@ export default function InfoCardForm() {
         grade: "", // Preserved (Mapped to SCHOOL input)
         course: "", // Preserved
         message: "",
-        formType: "Freedemo", // Preserved from original
+        formType: "Freedemo-copy", // Preserved from original
     });
 
     // Validation errors

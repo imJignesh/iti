@@ -18,7 +18,7 @@ export default function InfoCardForm() {
         school: "",
         grade: "",
         message: "",
-        formType: "Organic_Curriculum",
+        formType: "British_Curriculum-Copy", // Changed to BC-Copy formType
     });
 
     // New state for validation errors

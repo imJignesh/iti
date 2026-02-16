@@ -23,7 +23,7 @@ export default function InfoCardForm() {
         school: "",
         grade: "",
         message: "",
-        formType: "Organic_Curriculum",
+        formType: "IBDP-Copy",
     });
 
     // New state for validation errors

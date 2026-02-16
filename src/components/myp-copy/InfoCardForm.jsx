@@ -18,7 +18,7 @@ export default function InfoCardForm() {
         school: "",
         grade: "",
         message: "",
-        formType: "Organic_Curriculum", // Kept original formType
+        formType: "MYP-Copy", // Kept original formType
     });
 
     // New state for validation errors

@@ -18,7 +18,7 @@ export default function InfoCardForm() {
         school: "",
         grade: "",
         message: "",
-        formType: "Organic_Curriculum", // Standard formType for IGCSE
+        formType: "IGCSE-Copy", // Standard formType for IGCSE
     });
 
     // New state for validation errors
