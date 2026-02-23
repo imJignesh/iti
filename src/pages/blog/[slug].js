@@ -175,7 +175,7 @@ const TOCPostContent = ({ content, toc }) => {
         `;
 
         const video1Html = `
-            <div class="blog-video-wrapper my-5">
+            <div class="blog-video-wrapper my-5 highlight-on-scroll" data-scroll data-scroll-call="video-highlight" data-scroll-repeat="true">
                 <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
                     <video
                         class="img-fluid gif-1 w-100 rounded"
@@ -193,7 +193,7 @@ const TOCPostContent = ({ content, toc }) => {
         `;
 
         const video2Html = `
-            <div class="blog-video-wrapper my-5 ${gif2PlaceholderClass}">
+            <div class="blog-video-wrapper my-5 ${gif2PlaceholderClass} highlight-on-scroll" data-scroll data-scroll-call="video-highlight" data-scroll-repeat="true">
                 <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
                     <video
                         class="img-fluid gif-2 w-100 rounded"
@@ -233,6 +233,60 @@ const TOCPostContent = ({ content, toc }) => {
         setDisplayContent(newContent);
 
     }, [content, toc]);
+
+    // --- BoundingClientRect Polling Logic for Spotlight ---
+    useEffect(() => {
+        let animationFrameId;
+
+        const checkHighlight = () => {
+            const wrapperElements = contentRef.current?.querySelectorAll('.highlight-on-scroll');
+            let currentlyHighlightedCount = 0;
+
+            if (wrapperElements) {
+                const wh = window.innerHeight;
+
+                wrapperElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    // Check if the center of the element is within the middle 60% of the screen
+                    const elementCenter = rect.top + (rect.height / 2);
+                    const isVisible = elementCenter > (wh * 0.2) && elementCenter < (wh * 0.8);
+
+                    if (isVisible) {
+                        if (!el.classList.contains('is-highlighted')) {
+                            el.classList.add('is-highlighted');
+                        }
+                        currentlyHighlightedCount++;
+                    } else {
+                        if (el.classList.contains('is-highlighted')) {
+                            el.classList.remove('is-highlighted');
+                        }
+                    }
+                });
+            }
+
+            if (currentlyHighlightedCount > 0) {
+                document.body.classList.add('has-highlighted-video');
+            } else {
+                document.body.classList.remove('has-highlighted-video');
+            }
+
+            animationFrameId = requestAnimationFrame(checkHighlight);
+        };
+
+        // Start polling
+        animationFrameId = requestAnimationFrame(checkHighlight);
+
+        return () => {
+            cancelAnimationFrame(animationFrameId);
+            document.body.classList.remove('has-highlighted-video');
+
+            if (contentRef.current) {
+                const highlighted = contentRef.current.querySelectorAll('.is-highlighted');
+                highlighted.forEach(el => el.classList.remove('is-highlighted'));
+            }
+        };
+
+    }, [displayContent]);
 
     // --- Event Delegation Logic ---
     useEffect(() => {
@@ -488,6 +542,7 @@ export default function PostDetail({ initialPost }) {
                 lerp: 0.1,
             });
             scrollInstanceRef.current = scroll;
+            window.locomotiveScrollInstance = scroll; // Make scroll instance globally available for the inner component
         };
 
         if (typeof window !== "undefined") {
@@ -497,6 +552,9 @@ export default function PostDetail({ initialPost }) {
         return () => {
             scrollInstanceRef.current?.destroy();
             scrollInstanceRef.current = null;
+            if (typeof window !== "undefined") {
+                delete window.locomotiveScrollInstance;
+            }
         };
     }, []);
 
