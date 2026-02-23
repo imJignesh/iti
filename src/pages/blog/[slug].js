@@ -57,26 +57,27 @@ const slugify = (text) => {
         .replace(/-+$/, '');
 };
 
-const getSidebarHtmlImage = () => {
-    return `
-        <div class="sidebar-image mb-3 sticky-gif">
-        <a href="/join-free-demo-class/">
-            <img
-                src="/images/blog-sidebar.webp"
-                alt="Get a Free Counseling"
-                class="img-fluid gif-3 w-100 rounded"
-            />
-        </a>
-        </div>
-    `;
-};
+// const getSidebarHtmlImage = () => {
+//     return `
+//         <div class="sidebar-image mb-3 sticky-gif">
+//         <a href="/join-free-demo-class/">
+//             <img
+//                 src="/images/blog-sidebar.webp"
+//                 alt="Get a Free Counseling"
+//                 class="img-fluid gif-3 w-100 rounded"
+//             />
+//         </a>
+//         </div>
+//     `;
+// };
 
 const getSidebarHtmlStaticMobile = () => {
     return `
         <div class="sticky-sidebar-wrapper">
-            ${getSidebarHtmlImage()}
-            <div class="form-container blog-container">
-                <p>Get a Free Demo Class +<br />Free Study Resources</p>
+            <!-- \${getSidebarHtmlImage()} --> 
+            <div class="form-container blog-container blog-sidebar-form-mobile">
+               <p class="pre-h"><strong>Ignite Brings Dubai’s Best Tutors To You</strong></p>
+                <p class="main-h">Get a Free Demo Class +Free Study Resources</p>
                 <form>
                     <div class="form-row">
                         <div class="form-group">
@@ -113,6 +114,7 @@ const getSidebarHtmlStaticMobile = () => {
                     <button type="submit" class="submit-btn blog-submit-btn">
                         Submit
                         <span class="blogReadMoreArrow"><img alt="arrow" width="20" height="20" src="/images/right-arrow-blue.webp"></span>
+                        
                     </button>
                 </form>
             </div>
@@ -158,15 +160,30 @@ const TOCPostContent = ({ content, toc }) => {
             firstH2.parentNode.insertBefore(tocWrapper, firstH2);
         }
 
+        const needsCollapse = toc.length > 3;
+        const initialListClass = needsCollapse ? 'toc-list collapsed' : 'toc-list';
+
+        const tocToggleBtnHtml = needsCollapse ? `
+            <div class="toc-toggle-wrapper">
+                <button type="button" class="toc-toggle-btn m-0 p-0 border-0 bg-transparent d-flex align-items-center justify-content-end w-100 mt-2">
+                    <span class="btn-text" style="font-weight:600; font-size: 16px; color:#161616;">Open</span>
+                    <svg class="btn-icon ms-1" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+                        <path d="M2.5 4.5L6 8L9.5 4.5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        ` : '';
+
         const tocHtml = `
-            <div class="my-4">
+            <div class="my-4 toc-outer-container">
                 <div class="card-body">
                     <h5 class="toc-title">Table of Contents</h5>
                     <nav>
-                        <ul class="list-unstyled mb-0 toc-list">
+                        <ul class="list-unstyled mb-0 ${initialListClass}">
                             ${toc.map(({ text, id }) => `<li class="toc-item py-1"><a href="#${id}" class="text-decoration-none">${text}</a></li>`).join('')}
                         </ul>
                     </nav>
+                    ${tocToggleBtnHtml}
                 </div>
             </div>
             <div class="d-lg-none">
@@ -288,20 +305,41 @@ const TOCPostContent = ({ content, toc }) => {
 
     }, [displayContent]);
 
-    // --- Event Delegation Logic ---
+    // --- Event Delegation Logic for GIF Popup & TOC Toggle ---
     useEffect(() => {
         const rootElement = contentRef.current;
-        if (!rootElement || !openManualPopup) return;
+        if (!rootElement) return;
 
         // Use event delegation on the root element
         const handleClick = (event) => {
-            // Check if the clicked element (or an ancestor) has the trigger class
-            const triggerElement = event.target.closest(`.${gif2PlaceholderClass}`);
-
-            if (triggerElement) {
+            // Check for GIF popup click
+            const gifElement = event.target.closest(`.${gif2PlaceholderClass}`);
+            if (openManualPopup && gifElement) {
                 console.log('Popup: Delegated click caught. Opening popup.');
                 event.preventDefault(); // Stop any default link behavior
                 openManualPopup();
+                return;
+            }
+
+            // Check for TOC Toggle button click
+            const toggleElement = event.target.closest('.toc-toggle-btn');
+            if (toggleElement) {
+                const navElement = toggleElement.closest('.card-body').querySelector('nav');
+                const listElement = navElement.querySelector('.toc-list');
+                const textSpan = toggleElement.querySelector('.btn-text');
+                const iconSvg = toggleElement.querySelector('.btn-icon');
+
+                if (listElement && listElement.classList.contains('collapsed')) {
+                    // Expand
+                    listElement.classList.remove('collapsed');
+                    textSpan.textContent = 'Close';
+                    iconSvg.style.transform = 'rotate(180deg)';
+                } else if (listElement) {
+                    // Collapse
+                    listElement.classList.add('collapsed');
+                    textSpan.textContent = 'Open';
+                    iconSvg.style.transform = 'rotate(0deg)';
+                }
             }
         };
 
@@ -689,21 +727,28 @@ export default function PostDetail({ initialPost }) {
             <section className="post-detail-section py-5" data-scroll data-scroll-section>
                 <div className="container blog-detail-container" >
                     <h1 className="mb-4 display-4 main-title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                    <div className="post-meta-wrapper d-flex flex-column flex-md-row justify-content-md-center align-items-start align-items-md-center mb-4">
-                        <div className="post-date d-flex flex-wrap align-items-start align-items-md-center justify-content-start justify-content-md-center mb-0">
-                            <span>Published on {publishedDate}</span>
-                            <span className="post-date-separator mx-1 mx-md-2">|</span>
+                    <div className="post-meta-wrapper mb-4">
+                        <div className="meta-col-left">
+                            <div className="meta-item meta-published">
+                                <span>Published on {publishedDate}</span>
+                            </div>
                             {updatedDate && (
-                                <span>Updated on {updatedDate}</span>
+                                <>
+                                    <span className="post-date-separator mx-2 d-none d-md-inline">|</span>
+                                    <div className="meta-item meta-updated">
+                                        <span>Updated on {updatedDate}</span>
+                                    </div>
+                                </>
                             )}
                         </div>
+                        <span className="post-date-separator mx-2 d-none d-md-inline">|</span>
 
-                        <div className="post-author-share d-flex align-items-start align-items-md-center justify-content-start justify-content-md-center mt-2 mt-md-0">
-                            <div className="post-author mb-0 ms-md-2 text-start">
+                        <div className="meta-col-right">
+                            <div className="meta-item meta-author">
                                 <span>By {authorName}</span>
                             </div>
 
-                            <div className="post-share-icons mb-0 ms-3 d-flex align-items-center gap-2">
+                            <div className="meta-item meta-share d-flex align-items-center gap-2">
                                 {/* ... (Existing share icons) ... */}
                                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`} target="_blank" rel="noopener noreferrer">
 
@@ -884,7 +929,7 @@ export default function PostDetail({ initialPost }) {
                             <div className="sticky-sidebar-wrapper">
 
                                 {/* 1. RENDER STATIC IMAGE PART */}
-                                <div dangerouslySetInnerHTML={{ __html: getSidebarHtmlImage() }} />
+                                {/* <div dangerouslySetInnerHTML={{ __html: getSidebarHtmlImage() }} /> */}
 
                                 {/* 2. RENDER FUNCTIONAL REACT FORM (replaces the old static form HTML) */}
                                 <SidebarForm

@@ -57,7 +57,7 @@ h1.main-title {
 }
 
 .post-content img {
-    max-width: 100%;
+    max-width: 400px;
 }
 
 .post-content .wp-block-list,
@@ -377,7 +377,7 @@ button.dislike {
 @media (max-width: 768px) {
     h1.main-title {
         font-size: 32px;
-        padding: 0 10px;
+        padding: 0;
         text-align: left;
     }
 
@@ -393,7 +393,7 @@ button.dislike {
 
     .post-author {
         justify-content: flex-start;
-        padding: 0 10px;
+        padding: 0;
         line-height: 30px;
     }
 
@@ -401,7 +401,7 @@ button.dislike {
         flex-direction: column;
         align-items: left;
         gap: 5px;
-        padding: 0 10px;
+        padding: 0;
     }
 
     .post-date-separator {
@@ -457,8 +457,8 @@ button.dislike {
     }
 
     .post-share-icons svg {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -526,6 +526,18 @@ button.dislike {
 
     .sticky-sidebar-wrapper {
         padding-bottom: 20px;
+    }
+
+    .blog-sidebar-form-mobile p.pre-h {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .blog-sidebar-form-mobile p.main-h {
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        font-weight: 800;
     }
 
 }
@@ -608,6 +620,7 @@ body.has-highlighted-video::before {
     z-index: 9999;
     /* Above the dark overlay */
 }
+
 /* Expandable Table of Contents Styles */
 .toc-react-container {
     background: #fff;
@@ -649,7 +662,7 @@ body.has-highlighted-video::before {
     content: "•";
     color: #94a3b8;
     font-weight: bold;
-    display: inline-block; 
+    display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
@@ -703,3 +716,130 @@ body.has-highlighted-video::before {
     transform: rotate(180deg);
 }
 
+
+/* --- Table of Contents Expand/Collapse Styles --- */
+
+.toc-outer-container nav {
+    position: relative;
+}
+
+.toc-list {
+    overflow: hidden;
+    /* transition: max-height 0.3s ease-out; */
+    max-height: 2000px;
+    /* A safe max-height for expanded state to animate to */
+    transition: max-height 0.4s ease-in-out;
+}
+
+/* Base collapsed state max height to fit ~3 elements perfectly */
+/* Each element is standard padding + text height, approx ~60px each */
+.toc-list.collapsed {
+    max-height: 160px;
+}
+
+/* Gradient Fade Effect */
+/* When it's collapsed, create a pseudo-element overlay on the nav */
+/* that fades from transparent (top) to the background color (bottom) */
+.toc-list.collapsed::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Gradient height covers the last visible item */
+    height: 60px;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(243, 250, 255, 0) 0%,
+            rgba(215, 233, 251, 1) 100%);
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+}
+
+.toc-list:not(.collapsed)::after {
+    opacity: 0;
+}
+
+.toc-toggle-btn {
+    cursor: pointer;
+}
+
+.toc-toggle-btn:hover .btn-text {
+    opacity: 0.8;
+}
+
+@media (max-width: 575px) {
+    .toc-list.collapsed {
+        max-height: 140px;
+    }
+}
+
+/* --- Responsive Meta Flex Layout --- */
+.post-meta-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.meta-col-left,
+.meta-col-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.meta-col-right {
+    gap: 16px;
+}
+
+.meta-item {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.meta-author {
+    font-weight: 600;
+}
+
+.meta-share svg {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 767px) {
+    .post-meta-wrapper {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 5px;
+        gap: 10px;
+    }
+
+    .meta-col-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding-top: 7px;
+    }
+
+    .meta-col-right {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 12px;
+    }
+
+    .meta-item {
+        font-size: 13px;
+        margin: 0 !important;
+        white-space: nowrap;
+    }
+
+    .post-date-separator {
+        display: none !important;
+    }
+}
