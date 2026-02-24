@@ -799,7 +799,7 @@ export default function PostDetail({ initialPost }) {
                     )}
 
                     {featuredImage && (
-                        <div className="text-center mb-5 image-feature">
+                        <div className="text-center image-feature">
                             <img
                                 src={featuredImage}
                                 alt={post.title.rendered}

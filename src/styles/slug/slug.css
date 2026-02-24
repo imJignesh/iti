@@ -386,6 +386,10 @@ button.dislike {
         font-size: 14px;
     }
 
+    .post-content img {
+        max-width: 90%;
+    }
+
     .image-feature img {
         height: auto;
         border-radius: 20px;
@@ -799,6 +803,7 @@ body.has-highlighted-video::before {
     display: flex;
     align-items: center;
     font-weight: 500;
+    font-weight: 600;
 }
 
 .meta-author {
@@ -834,7 +839,7 @@ body.has-highlighted-video::before {
     }
 
     .meta-item {
-        font-size: 13px;
+        font-size: 12px;
         margin: 0 !important;
         white-space: nowrap;
     }
