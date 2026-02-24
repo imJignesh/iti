@@ -741,6 +741,9 @@ export default function PostDetail({ initialPost }) {
                                     </div>
                                 </>
                             )}
+                            <div className="meta-item d-md-none meta-author mt-2">
+                                <span>By <a href="#author-part" style={{ color: "#233467", textDecoration: "underline" }}>{authorName}</a></span>
+                            </div>
                         </div>
                         <span className="post-date-separator mx-2 d-none d-md-inline">|</span>
 
@@ -751,10 +754,16 @@ export default function PostDetail({ initialPost }) {
                         )}
                         <span className="post-date-separator mx-2 d-none d-md-inline">|</span>
 
-                        <div className="meta-col-right">
-                            <div className="meta-item meta-author">
+                        <div className="meta-col-right flex-md-row align-items-md-center">
+                            <div className="meta-item meta-author d-none d-md-block">
                                 <span>By <a href="#author-part" style={{ color: "#233467", textDecoration: "underline" }}>{authorName}</a></span>
                             </div>
+
+                            {post.reading_time && (
+                                <div className="post-reading-time d-block d-md-none mb-2" style={{ fontSize: "12px", fontWeight: "600", color: "#233467" }}>
+                                    <span style={{ textTransform: 'capitalize' }}>⏱ {post.reading_time}</span>
+                                </div>
+                            )}
 
                             <div className="meta-item meta-share d-flex align-items-center gap-2">
                                 {/* ... (Existing share icons) ... */}
@@ -799,11 +808,7 @@ export default function PostDetail({ initialPost }) {
                         </div>
                     </div>
 
-                    {post.reading_time && (
-                        <div className="post-reading-time mb-4 mobile-only text-start text-md-center" style={{ fontSize: "18px", fontWeight: "600", color: "#233467" }}>
-                            <span style={{ textTransform: 'capitalize' }}>⏱ {post.reading_time}</span>
-                        </div>
-                    )}
+
 
                     {featuredImage && (
                         <div className="text-center image-feature">
