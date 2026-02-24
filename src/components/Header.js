@@ -9,6 +9,17 @@ const Header = ({ setHeaderHeight }) => {
     const currentPath = router.pathname;
     const headerRef = useRef(null);
 
+    const copyPages = [
+        '/courses/ibdp-tutors-in-dubai-copy',
+        '/british-curriculum-tutors-in-dubai-copy',
+        '/courses/myp-tutors-in-dubai-copy',
+        '/courses/igcse-tutors-in-dubai-copy',
+        '/courses/a-level-tutors-in-dubai-copy',
+        '/join-free-demo-class-copy'
+    ];
+    const isCopyPage = copyPages.includes(currentPath);
+    const phoneNumber = isCopyPage ? '+971588589958' : '+971568357374';
+
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 992) setNavOpen(false);
@@ -154,7 +165,7 @@ const Header = ({ setHeaderHeight }) => {
 
                 <div className={`d-flex justify-content-end m-0 ${styles.header_right_content}`}>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href="tel:+971568357374">
+                        <a href={`tel:${phoneNumber}`}>
                             <button>
                                 <Image src="/images/mobile.webp" width={25} height={25} alt="Call" priority />
                                 Call
@@ -162,7 +173,7 @@ const Header = ({ setHeaderHeight }) => {
                         </a>
                     </div>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href="https://wa.me/+971568357374">
+                        <a href={`https://wa.me/${phoneNumber}`}>
                             <button>
                                 <Image src="/images/whatsapp.webp" width={25} height={25} alt='Whatsapp' priority />
                                 Whatsapp
