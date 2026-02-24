@@ -4,6 +4,10 @@
     margin-top: 4vw;
 }
 
+.post-detail-section {
+    padding-bottom: 0 !important;
+}
+
 h1.main-title {
     font-weight: 700 !important;
     line-height: 1;
@@ -815,6 +819,10 @@ body.has-highlighted-video::before {
     height: 32px;
 }
 
+.mobile-only {
+    display: none;
+}
+
 @media (max-width: 767px) {
     .post-meta-wrapper {
         display: flex !important;
@@ -846,5 +854,13 @@ body.has-highlighted-video::before {
 
     .post-date-separator {
         display: none !important;
+    }
+
+    .mobile-only {
+        display: flex;
+    }
+
+    .desktop-only {
+        display: none;
     }
 }

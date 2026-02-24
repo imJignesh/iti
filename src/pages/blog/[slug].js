@@ -744,6 +744,13 @@ export default function PostDetail({ initialPost }) {
                         </div>
                         <span className="post-date-separator mx-2 d-none d-md-inline">|</span>
 
+                        {post.reading_time && (
+                            <div className="post-reading-time desktop-only text-start text-md-center" style={{ fontSize: "18px", fontWeight: "600", color: "#233467" }}>
+                                <span style={{ textTransform: 'capitalize' }}>⏱ {post.reading_time}</span>
+                            </div>
+                        )}
+                        <span className="post-date-separator mx-2 d-none d-md-inline">|</span>
+
                         <div className="meta-col-right">
                             <div className="meta-item meta-author">
                                 <span>By {authorName}</span>
@@ -793,7 +800,7 @@ export default function PostDetail({ initialPost }) {
                     </div>
 
                     {post.reading_time && (
-                        <div className="post-reading-time mb-4 text-start text-md-center" style={{ fontSize: "18px", fontWeight: "600", color: "#233467" }}>
+                        <div className="post-reading-time mb-4 mobile-only text-start text-md-center" style={{ fontSize: "18px", fontWeight: "600", color: "#233467" }}>
                             <span style={{ textTransform: 'capitalize' }}>⏱ {post.reading_time}</span>
                         </div>
                     )}
