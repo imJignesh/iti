@@ -99,7 +99,7 @@ export default function SidebarForm({ pageInfo, formType }) {
     return (
         // Uses the exact containers and classes from your original HTML
         <div className="form-container blog-container">
-            <p className="text-center" style={{ color: '#161664', fontSize: '14px' }}><strong>Ignite Brings Dubai’s Best Tutors To You</strong></p>
+            <p className="text-center" style={{ color: '#161664', fontSize: '12px' }}><strong>Ignite Brings Dubai’s Best Tutors To You</strong></p>
             <h2>Get a Free Demo Class +<br />Free Study Resources</h2>
 
             {/* Submission Status Feedback */}
