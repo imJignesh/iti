@@ -745,7 +745,7 @@ export default function PostDetail({ initialPost }) {
                         <span className="post-date-separator mx-2 d-none d-md-inline">|</span>
 
                         {post.reading_time && (
-                            <div className="post-reading-time desktop-only text-start text-md-center" style={{ fontSize: "18px", fontWeight: "600", color: "#233467" }}>
+                            <div className="post-reading-time desktop-only text-start text-md-center" style={{ fontWeight: "600", color: "#233467" }}>
                                 <span style={{ textTransform: 'capitalize' }}>⏱ {post.reading_time}</span>
                             </div>
                         )}
@@ -753,7 +753,7 @@ export default function PostDetail({ initialPost }) {
 
                         <div className="meta-col-right">
                             <div className="meta-item meta-author">
-                                <span>By {authorName}</span>
+                                <span>By <a href="#author-part" style={{ color: "#233467", textDecoration: "underline" }}>{authorName}</a></span>
                             </div>
 
                             <div className="meta-item meta-share d-flex align-items-center gap-2">
@@ -829,7 +829,7 @@ export default function PostDetail({ initialPost }) {
                             <TOCPostContent content={post.content.rendered} toc={toc} />
 
                             {/* --- UPDATED: Like/Dislike Block --- */}
-                            <div className="helpful-block d-flex align-items-center flex-wrap mt-4 mb-4 gap-3 bg-light p-3 rounded shadow-sm border">
+                            <div className="helpful-block d-flex align-items-center flex-wrap mt-4 mb-4 gap-3 bg-light p-3 rounded shadow-sm border" id='author-part'>
                                 <span className="fw-bold text-dark me-2" style={{ fontSize: '18px' }}>Was This Page Helpful?</span>
 
                                 {/* Like Button */}
@@ -883,7 +883,7 @@ export default function PostDetail({ initialPost }) {
                                 )}
                             </div>
                             {/* --- END UPDATED: Like/Dislike Block --- */}
-                            <div className="author-bio-section">
+                            <div className="author-bio-section" >
                                 <div className="author-bio-image">
                                     <img src="/images/sumit.webp" alt="Author image" />
                                 </div>

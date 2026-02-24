@@ -354,6 +354,26 @@ button.dislike {
     color: #0f2d75;
 }
 
+.key-features {
+    padding: 15px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(163, 202, 245, 1) 0%, rgba(231, 246, 255, 1) 100%);
+    margin-bottom: 20px;
+}
+
+.key-features h3 {
+    text-transform: uppercase;
+    background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    padding: 10px 0;
+    font-size: 32px;
+    line-height: 1.2;
+
+    font-weight: 700 !important;
+}
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 1400px) {
@@ -548,6 +568,10 @@ button.dislike {
         font-weight: 800;
     }
 
+    .post-content .key-features h3 {
+        font-size: 22px;
+        ;
+    }
 }
 
 @media (max-width: 480px) {
