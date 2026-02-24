@@ -110,6 +110,7 @@ const FreeDemo = ({ headerHeight }) => {
                 url="https://ignitetraininginstitute.com/join-free-demo-class"
             />
             <Head>
+                <meta name="robots" content="noindex" />
                 <link
                     rel="preload"
                     href="/assets/mobileact.webp"

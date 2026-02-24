@@ -186,6 +186,7 @@ const IBDP = ({ headerHeight }) => {
       />
 
       <Head>
+        <meta name="robots" content="noindex" />
         <link
           rel="preload"
           href="/assets/myp_bg_main.webp"

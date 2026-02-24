@@ -32,6 +32,7 @@ const IBDP = ({ headerHeight }) => {
         url="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai-copy"
       />
       <Head>
+        <meta name="robots" content="noindex" />
         <link
           rel="preload"
           href="/assets/ib-bg.webp"

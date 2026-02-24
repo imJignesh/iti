@@ -185,6 +185,7 @@ const ALEVEL = ({ headerHeight }) => {
       />
 
       <Head>
+        <meta name="robots" content="noindex" />
         <link
           rel="preload"
           href="/assets/alevel_bg_main.webp"

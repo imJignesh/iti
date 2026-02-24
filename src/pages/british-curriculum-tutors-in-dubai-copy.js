@@ -188,6 +188,7 @@ const BC = ({ headerHeight }) => {
       />
 
       <Head>
+        <meta name="robots" content="noindex" />
         <link
           rel="preload"
           href="/assets/ib-bg.webp"
