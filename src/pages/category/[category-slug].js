@@ -226,7 +226,7 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
     const [searchTerm, setSearchTerm] = useState('');
     const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
     const [hasMore, setHasMore] = useState((initialTotalPages || 1) > 1);
-    
+
     // Using server-provided category
     const currentCategory = fallbackCategory;
     const categoryError = null;
@@ -264,11 +264,11 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
         if (data && data.data) {
             // Check if page === 1 and no search: data is already initialPosts
             if (page === 1 && !debouncedSearchTerm) {
-                 // We already have initialPosts, but update SWR cache if divergent
-                 setPosts(data.data);
+                // We already have initialPosts, but update SWR cache if divergent
+                setPosts(data.data);
             } else if (page === 1) {
-                 // When search term changes
-                 setPosts(data.data);
+                // When search term changes
+                setPosts(data.data);
             } else {
                 setPosts(prevPosts => {
                     // prevent duplicating data on react strict mode
@@ -442,7 +442,7 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
                                 backgroundClip: "text",
                             }}
                         >
-                            {currentCategoryName.toUpperCase()} BLOGS
+                            {`${currentCategoryName.toUpperCase()} BLOGS`}
                         </h1>
                         {/* Dynamic Breadcrumb based on the path */}
                         <p className="subHeading">
