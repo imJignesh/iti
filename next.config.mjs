@@ -35,16 +35,15 @@ const STATIC_ROOT_PAGES = [
   'thank-you-blog',
   'thank-you-career',
   'thank-you-contact',
-  'thank-you-curriculum',
-  'thank-you-freedemo',
   'thank-you-homeschooling',
+  'thank-you-newsletter',
+  'thank-you-organic',
+  'thank-you-organic-copy',
   'thank-you-popup',
   'thank-you-subject',
   'thank-you-tutor',
   'tutors-in-dubai',
   'tutors-in-jlt-dubai',
-  'thank-you-newsletter',
-  'thank-you-organic-copy',
 ];
 
 // STATIC PAGES LIST (Courses Folder - 5 pages)

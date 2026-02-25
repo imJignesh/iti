@@ -65,6 +65,29 @@ const Footer = () => {
   };
   // --- END: Newsletter Integration ---
 
+  // --- Google Ads Click Conversion Tracking for "Call" Contact Link ---
+  const handleCallClick = (e) => {
+    e.preventDefault();
+    const url = phoneNumberObj.href;
+
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-844959495/LGsACP7qiP4bEIee9JID',
+        'event_callback': function () {
+          window.location.href = url;
+        }
+      });
+
+      // Fallback in case the callback doesn't fire
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500);
+    } else {
+      // If gtag isn't loaded, just perform the regular navigation
+      window.location.href = url;
+    }
+  };
+
   return (
     <footer
       data-scroll
@@ -241,7 +264,7 @@ const Footer = () => {
           style={{ animationDelay: "0.8s" }}>
           <div className={styles.footerContactLabel}>CONTACT</div>
           <div className={styles.footerContact}>
-            <span><a href={phoneNumberObj.href}>{phoneNumberObj.display}</a></span>
+            <span><a href={phoneNumberObj.href} onClick={handleCallClick}>{phoneNumberObj.display}</a></span>
             <br />
             <span><a href={emailObj.href}>{emailObj.display}</a></span>
           </div>

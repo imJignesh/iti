@@ -39,6 +39,52 @@ const Header = ({ setHeaderHeight }) => {
         return pathsToCheck.some(path => currentPath.startsWith(path));
     };
 
+    // --- Google Ads Click Conversion Tracking for "Call" Button ---
+    const handleCallClick = (e) => {
+        e.preventDefault();
+        const url = `tel:${phoneNumber}`;
+
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            window.gtag('event', 'conversion', {
+                'send_to': 'AW-844959495/LGsACP7qiP4bEIee9JID',
+                'event_callback': function () {
+                    window.location.href = url;
+                }
+            });
+
+            // Fallback in case the callback doesn't fire
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500);
+        } else {
+            // If gtag isn't loaded, just perform the regular navigation
+            window.location.href = url;
+        }
+    };
+
+    // --- Google Ads Click Conversion Tracking for WhatsApp Button ---
+    const handleWhatsappClick = (e) => {
+        e.preventDefault();
+        const url = `https://wa.me/${phoneNumber}`;
+
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            window.gtag('event', 'conversion', {
+                'send_to': 'AW-844959495/qUVOCIHriP4bEIee9JID',
+                'event_callback': function () {
+                    window.location.href = url;
+                }
+            });
+
+            // Fallback in case the callback doesn't fire
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500);
+        } else {
+            // If gtag isn't loaded, just perform the regular navigation
+            window.location.href = url;
+        }
+    };
+
     return (
         <div className={styles.headerWrapper}>
             <header ref={headerRef} className={`${styles.header}`}>
@@ -165,7 +211,7 @@ const Header = ({ setHeaderHeight }) => {
 
                 <div className={`d-flex justify-content-end m-0 ${styles.header_right_content}`}>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href={`tel:${phoneNumber}`}>
+                        <a href={`tel:${phoneNumber}`} onClick={handleCallClick}>
                             <button>
                                 <Image src="/images/mobile.webp" width={25} height={25} alt="Call" priority />
                                 Call
@@ -173,7 +219,7 @@ const Header = ({ setHeaderHeight }) => {
                         </a>
                     </div>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href={`https://wa.me/${phoneNumber}`}>
+                        <a href={`https://wa.me/${phoneNumber}`} onClick={handleWhatsappClick}>
                             <button>
                                 <Image src="/images/whatsapp.webp" width={25} height={25} alt='Whatsapp' priority />
                                 Whatsapp

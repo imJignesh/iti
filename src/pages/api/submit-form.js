@@ -51,7 +51,7 @@ export default async function handler(req, res) {
             slugs: ["/ib-curriculum-tutors-in-dubai", "/courses/ibdp-tutors-in-dubai", "/courses/myp-tutors-in-dubai", "/courses/igcse-tutors-in-dubai", "/courses/a-level-tutors-in-dubai", "/british-curriculum-tutors-in-dubai", "/act-tutors-in-dubai", "/advanced-placements-tutors-in-dubai"],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/IgniteCourses/formperma/58L0c_DIb7n5At6RTaPaWpu0ymjyqTDe2O7brKyZl2c/htmlRecords/submit',
             fieldMap: { name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode', grade: 'SingleLine3', school: 'SingleLine1', message: 'MultiLine', pageinfo: 'SingleLine2' },
-            redirectUrl: '/thank-you-curriculum',
+            redirectUrl: '/thank-you-organic',
         },
         {
             type: 'Tutor',
@@ -65,7 +65,7 @@ export default async function handler(req, res) {
             slugs: ["/join-free-demo-class"],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Freedemo/formperma/KAwVRrjBN9gUy9u3j43gxKyKXGIc9361RYMOFY1MlcI/htmlRecords/submit',
             fieldMap: { name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode', grade: 'SingleLine1', course: 'SingleLine3', message: 'MultiLine', pageinfo: 'SingleLine2' },
-            redirectUrl: '/thank-you-freedemo',
+            redirectUrl: '/thank-you-organic',
         },
         {
             type: 'Freedemo-copy',
