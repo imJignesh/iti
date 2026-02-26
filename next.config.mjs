@@ -87,6 +87,14 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'inline',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.ignitetraininginstitute.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 
   compress: true,

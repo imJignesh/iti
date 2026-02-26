@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useRef, useState, useContext, useEffect } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import SidebarForm from '@/components/SidebarForm';
 import { useMemo } from "react";
 import { PopupContext } from '../../pages/_app';
@@ -723,7 +724,6 @@ export default function PostDetail({ initialPost }) {
             {/* Additional manual tags if needed (e.g. article specific) */}
             <Head>
                 <meta property="og:type" content="article" key="og-type" />
-                {featuredImage && <link rel="preload" as="image" href={featuredImage} fetchPriority="high" />}
             </Head>
 
             <section className="post-detail-section py-5" data-scroll data-scroll-section>
@@ -812,13 +812,15 @@ export default function PostDetail({ initialPost }) {
 
 
                     {featuredImage && (
-                        <div className="text-center image-feature">
-                            <img
+                        <div className="text-center image-feature w-100" style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '8px' }}>
+                            <Image
                                 src={featuredImage}
                                 alt={post.title.rendered}
                                 className="img-fluid gif-4"
                                 style={{ objectFit: 'cover' }}
-                                fetchPriority="high"
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 800px"
+                                priority
                             />
                         </div>
                     )}
