@@ -812,14 +812,21 @@ export default function PostDetail({ initialPost }) {
 
 
                     {featuredImage && (
-                        <div className="text-center image-feature w-100" style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '8px' }}>
+                        <div className="text-center image-feature w-100">
                             <Image
                                 src={featuredImage}
                                 alt={post.title.rendered}
                                 className="img-fluid gif-4"
-                                style={{ objectFit: 'cover' }}
-                                fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 800px"
+                                style={{
+                                    width: 'auto',
+                                    height: 'auto',
+                                    maxHeight: '800px',
+                                    maxWidth: '100%',
+                                    borderRadius: '8px'
+                                }}
+                                width={1200}
+                                height={800}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 1200px"
                                 priority
                             />
                         </div>
