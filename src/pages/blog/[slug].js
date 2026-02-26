@@ -75,7 +75,7 @@ const slugify = (text) => {
 const getSidebarHtmlStaticMobile = () => {
     return `
         <div class="sticky-sidebar-wrapper">
-            <!-- \${getSidebarHtmlImage()} --> 
+ 
             <div class="form-container blog-container blog-sidebar-form-mobile">
                <p class="pre-h"><strong>Ignite Brings Dubai’s Best Tutors To You</strong></p>
                 <p class="main-h">Get a Free Demo Class +Free Study Resources</p>
@@ -723,6 +723,7 @@ export default function PostDetail({ initialPost }) {
             {/* Additional manual tags if needed (e.g. article specific) */}
             <Head>
                 <meta property="og:type" content="article" key="og-type" />
+                {featuredImage && <link rel="preload" as="image" href={featuredImage} fetchPriority="high" />}
             </Head>
 
             <section className="post-detail-section py-5" data-scroll data-scroll-section>
@@ -817,6 +818,7 @@ export default function PostDetail({ initialPost }) {
                                 alt={post.title.rendered}
                                 className="img-fluid gif-4"
                                 style={{ objectFit: 'cover' }}
+                                fetchPriority="high"
                             />
                         </div>
                     )}
