@@ -1,6 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import Head from "next/head";
-import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 import LazySection from "@/components/LazySection";
@@ -15,10 +13,10 @@ import InfoCard from '@/components/igcse/InfoCard';
 import IgniteAboutCard from "@/components/igcse/IgniteAboutCard";
 import Trainers from '@/components/igcse/Trainers';
 import WhatWeOfferSection from '@/components/igcse/WhatWeOfferSection';
-import LifeAtIgniteCarousel from '@/components/igcse/LifeAtIgniteCarousel';
+// import LifeAtIgniteCarousel from '@/components/igcse/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/igcse/MarqueeBanner';
 import ReviewsSection from '@/components/igcse/ReviewsSection';
-import StudentAchievements from '@/components/igcse/StudentAchivement';
+// import StudentAchievements from '@/components/igcse/StudentAchivement';
 import SubjectsCard from '@/components/igcse/SubjectCard';
 import UspsSection from '@/components/igcse/UspsSection';
 import UniImagesCard from '@/components/igcse/universityCrad';
@@ -152,26 +150,21 @@ const IGCSE = ({ headerHeight }) => {
         title="IGCSE Tutors In Dubai, UAE | Expert Coaching & Guidance"
         description="Achieve success with top IGCSE tutors in UAE. Get full prep support for IGCSE with syllabus coverage, past paper practice & exam strategies"
         url="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai"
+        preloadImages={[
+          {
+            src: "/assets/ib-bg.webp",
+            type: "image/webp",
+            media: "(max-width: 767px)"
+          },
+          {
+            src: "/assets/myp_bg_main.webp",
+            type: "image/webp",
+            media: "(min-width: 768px)"
+          }
+        ]}
       />
 
-      <Head>
-        <link
-          rel="preload"
-          href="/assets/ib-bg.webp"
-          as="image"
-          type="image/webp"
-          media="(max-width: 768px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          href="/assets/myp_bg_main.webp"
-          as="image"
-          type="image/webp"
-          media="(min-width: 769px)"
-          fetchPriority="high"
-        />
-      </Head>
+
 
       {/* <Head>
         <link
@@ -198,31 +191,18 @@ const IGCSE = ({ headerHeight }) => {
       <div className='overflow-hidden innerpage page-content-padding'>
         <section className="hero-section">
           <div className="hero-container">
-            {/* LCP Image optimized for Next.js (SSR) */}
-            <div className="hero-bg">
-              {/* Mobile Image */}
-              <div className="d-block d-md-none w-100 h-100 position-relative">
-                <Image
-                  src="/assets/ib-bg.webp"
-                  alt="IGCSE Tutors Background Mobile"
-                  fill
-                  priority
-                  sizes="100vw"
-                  style={{ objectFit: 'cover', objectPosition: 'center' }}
-                />
-              </div>
-              {/* Desktop Image */}
-              <div className="d-none d-md-block w-100 h-100 position-relative">
-                <Image
-                  src="/assets/myp_bg_main.webp"
-                  alt="IGCSE Tutors Background"
-                  fill
-                  priority
-                  sizes="100vw"
-                  style={{ objectFit: 'cover', objectPosition: 'center' }}
-                />
-              </div>
-            </div>
+            <picture className="hero-bg">
+              <source media="(max-width: 767px)" srcSet="/assets/ib-bg.webp" />
+              <img
+                src="/assets/myp_bg_main.webp"
+                alt="IGCSE Tutors Background"
+                fetchPriority="high"
+                width="1200"
+                height="800"
+                className="hero-img"
+                style={{ opacity: 1, visibility: 'visible' }}
+              />
+            </picture>
 
             <InfoCard />
           </div>
