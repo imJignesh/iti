@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Head from "next/head";
+import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 import LazySection from "@/components/LazySection";
@@ -143,38 +144,7 @@ const IGCSE = ({ headerHeight }) => {
   // ----------------------------------------------------
 
 
-  const scrollRef = useRef(null);
-  const scrollInstanceRef = useRef(null);
 
-  useEffect(() => {
-    let scroll;
-
-    const initScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      if (!scrollRef.current) return;
-
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1,
-        // optional:
-        getDirection: true,
-        getSpeed: true,
-        multiplier: 1,
-      });
-
-      scrollInstanceRef.current = scroll;
-    };
-
-    if (typeof window !== "undefined") {
-      initScroll();
-    }
-
-    return () => {
-      scrollInstanceRef.current?.destroy();
-      scrollInstanceRef.current = null;
-    };
-  }, []);
 
   return (
     <>
@@ -225,26 +195,34 @@ const IGCSE = ({ headerHeight }) => {
       <JsonLd schema={igcseSchema} />
 
       {/* 3. APPLY the style for paddingTop */}
-      <div
-        ref={scrollRef}
-        className='overflow-hidden innerpage page-content-padding'
-        data-scroll-container
-      >
-        <section data-scroll-section className="hero-section">
+      <div className='overflow-hidden innerpage page-content-padding'>
+        <section className="hero-section">
           <div className="hero-container">
-            {/* LCP Image moved here for immediate painting (SSR) */}
-            <picture className="hero-bg">
-              <source media="(max-width: 768px)" srcSet="/assets/ib-bg.webp" />
-              <img
-                src="/assets/myp_bg_main.webp"
-                alt="IGCSE Tutors Background"
-                fetchPriority="high"
-                width="1200"
-                height="800"
-                className="hero-img"
-                style={{ opacity: 1, visibility: 'visible' }}
-              />
-            </picture>
+            {/* LCP Image optimized for Next.js (SSR) */}
+            <div className="hero-bg">
+              {/* Mobile Image */}
+              <div className="d-block d-md-none w-100 h-100 position-relative">
+                <Image
+                  src="/assets/ib-bg.webp"
+                  alt="IGCSE Tutors Background Mobile"
+                  fill
+                  priority
+                  sizes="100vw"
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
+              </div>
+              {/* Desktop Image */}
+              <div className="d-none d-md-block w-100 h-100 position-relative">
+                <Image
+                  src="/assets/myp_bg_main.webp"
+                  alt="IGCSE Tutors Background"
+                  fill
+                  priority
+                  sizes="100vw"
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
+              </div>
+            </div>
 
             <InfoCard />
           </div>

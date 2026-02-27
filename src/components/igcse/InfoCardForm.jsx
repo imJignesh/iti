@@ -151,10 +151,7 @@ export default function InfoCardForm() {
 
     return (
         <div
-            className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center fade-in-section position-relative right-form"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
+            className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center  position-relative right-form"
             style={{ animationDelay: "0.6s" }}
         >
             <div className="w-100 text-white form-container">
@@ -162,10 +159,7 @@ export default function InfoCardForm() {
 
                     <input type="hidden" name="pageinfo" value="" />
                     <p
-                        className="fw-bold text-uppercase mb-4 fade-in-section text-center form-heading"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
+                        className="fw-bold text-uppercase mb-4  text-center form-heading"
                         style={{ animationDelay: "0.65s" }}
                     >
                         GET A FREE DEMO CLASS+ FREE STUDY RESOURCES
@@ -182,10 +176,7 @@ export default function InfoCardForm() {
                     )}
 
                     <div
-                        className="mb-3 fade-in-section"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
+                        className="mb-3 "
                         style={{ animationDelay: "0.7s" }}
                     >
                         <input
@@ -206,10 +197,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="row g-2 mb-3 fade-in-section"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
+                        className="row g-2 mb-3 "
                         style={{ animationDelay: "0.75s" }}
                     >
                         <div className="col-6">
@@ -239,10 +227,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-3 fade-in-section"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
+                        className="mb-3 "
                         style={{ animationDelay: "0.77s" }}
                     >
                         <input
@@ -263,10 +248,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-3 fade-in-section"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
+                        className="mb-3 "
                         style={{ animationDelay: "0.8s" }}
                     >
                         <input
@@ -287,10 +269,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-4 fade-in-section"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
+                        className="mb-4 "
                         style={{ animationDelay: "0.85s" }}
                     >
                         <textarea
@@ -313,10 +292,7 @@ export default function InfoCardForm() {
                     <button
                         type="submit"
                         disabled={loading}
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
-                        className="fade-in-section btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
+                        className=" btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
                         style={{
                             background: "transparent",
                             color: "white",
@@ -351,12 +327,12 @@ export default function InfoCardForm() {
           box-shadow: none !important;
           color: white !important;
         }
-        .fade-in-section {
+        . {
           opacity: 0;
           transform: translateY(20px);
           transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
-        .fade-in-section.is-inview {
+        ..is-inview {
           opacity: 1;
           transform: translateY(0);
         }
@@ -521,7 +497,7 @@ export default function InfoCardForm() {
         }
         
          @media (max-width: 1100px) {
-           .fade-in-section {
+           . {
              opacity: 1 !important;
              visibility: visible !important;
              transform: none !important;
