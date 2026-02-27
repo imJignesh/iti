@@ -152,7 +152,7 @@ export default function InfoCardForm() {
     return (
         <div
             className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center  position-relative right-form"
-            style={{ animationDelay: "0.6s" }}
+            style={{  }}
         >
             <div className="w-100 text-white form-container">
                 <form onSubmit={handleSubmit}>
@@ -160,7 +160,7 @@ export default function InfoCardForm() {
                     <input type="hidden" name="pageinfo" value="" />
                     <p
                         className="fw-bold text-uppercase mb-4  text-center form-heading"
-                        style={{ animationDelay: "0.65s" }}
+                        style={{  }}
                     >
                         GET A FREE DEMO CLASS+ FREE STUDY RESOURCES
                     </p>
@@ -177,7 +177,7 @@ export default function InfoCardForm() {
 
                     <div
                         className="mb-3 "
-                        style={{ animationDelay: "0.7s" }}
+                        style={{  }}
                     >
                         <input
                             type="text"
@@ -198,7 +198,7 @@ export default function InfoCardForm() {
 
                     <div
                         className="row g-2 mb-3 "
-                        style={{ animationDelay: "0.75s" }}
+                        style={{  }}
                     >
                         <div className="col-6">
                             <input
@@ -228,7 +228,7 @@ export default function InfoCardForm() {
 
                     <div
                         className="mb-3 "
-                        style={{ animationDelay: "0.77s" }}
+                        style={{  }}
                     >
                         <input
                             type="text"
@@ -249,7 +249,7 @@ export default function InfoCardForm() {
 
                     <div
                         className="mb-3 "
-                        style={{ animationDelay: "0.8s" }}
+                        style={{  }}
                     >
                         <input
                             type="text"
@@ -270,7 +270,7 @@ export default function InfoCardForm() {
 
                     <div
                         className="mb-4 "
-                        style={{ animationDelay: "0.85s" }}
+                        style={{  }}
                     >
                         <textarea
                             name="message"
@@ -301,7 +301,7 @@ export default function InfoCardForm() {
                             border: "1.5px solid rgba(255, 255, 255, 0.7)",
                             borderRadius: "40px",
                             transition: "all 0.3s ease",
-                            animationDelay: "0.85s"
+                            
                         }}
                     >
                         {loading ? 'SUBMITTING...' : 'SUBMIT'}
@@ -327,12 +327,12 @@ export default function InfoCardForm() {
           box-shadow: none !important;
           color: white !important;
         }
-        . {
+        .removed-class {
           opacity: 0;
           transform: translateY(20px);
           transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
-        ..is-inview {
+        .removed-is-inview {
           opacity: 1;
           transform: translateY(0);
         }
@@ -497,7 +497,7 @@ export default function InfoCardForm() {
         }
         
          @media (max-width: 1100px) {
-           . {
+           .removed-class {
              opacity: 1 !important;
              visibility: visible !important;
              transform: none !important;

@@ -11,7 +11,7 @@ export default function InfoCardLeft() {
             </h1>
             <div className="divider "
                 style={{
-                    animationDelay: "0.25s",
+                    
                 }}></div>
 
             <h2
@@ -29,7 +29,7 @@ export default function InfoCardLeft() {
                     borderRadius: "100px",
                     maxWidth: "823px",
                     fontSize: "0.9rem",
-                    animationDelay: "0.3s",
+                    
                     border: "1px solid rgba(255, 255, 255, 0.30)",
                 }}
             >
@@ -45,7 +45,7 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image
+                        <Image loading="lazy"
                             src="/assets/medal.webp"
                             alt="Grade Support"
                             width={32}
@@ -69,7 +69,7 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image
+                        <Image loading="lazy"
                             src="/assets/person.webp"
                             alt="Learning Mode"
                             width={30}
@@ -91,7 +91,7 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image
+                        <Image loading="lazy"
                             src="/assets/location.webp"
                             alt="Location"
                             width={32}
@@ -168,12 +168,12 @@ export default function InfoCardLeft() {
         }
 
         @media (min-width: 1101px) {
-          . {
+          .removed-class {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease-out, transform 0.5s ease-out;
           }
-          ..is-inview {
+          .removed-is-inview {
             opacity: 1;
             transform: translateY(0);
           }

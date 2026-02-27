@@ -184,6 +184,7 @@ const IGCSE = ({ headerHeight }) => {
           fetchPriority="high"
         />
       </Head> */}
+
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={igcseSchema} />
 
@@ -197,6 +198,8 @@ const IGCSE = ({ headerHeight }) => {
                 src="/assets/myp_bg_main.webp"
                 alt="IGCSE Tutors Background"
                 fetchPriority="high"
+                decoding="sync"
+                loading="eager"
                 width="1200"
                 height="800"
                 className="hero-img"
