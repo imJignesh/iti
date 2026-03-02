@@ -7,13 +7,10 @@ import JsonLd from "@/components/JsonLd";
 // import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/bc/accordian';
 import Blog from "@/components/bc/Blog";
-import CourseCard from '@/components/bc/CourseCard';
 import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
 import FAQSection from '@/components/bc/FaqSection';
 import IgniteAchievements from '@/components/bc/IgniteAchievements';
 import dynamic from "next/dynamic";
-import InfoCardLeft from "../components/bc/InfoCardLeft";
-import InfoCardForm from "../components/bc/InfoCardForm";
 // Dynamically import InfoCard so it doesn't block the hero LCP painting
 const InfoCard = dynamic(() => import("../components/bc/InfoCard"), {
   ssr: true, // Keep SSR so it renders on server, but defer hydration priority
@@ -28,9 +25,7 @@ import StudentAchievements from '@/components/bc/StudentAchivement';
 import SubjectsCard from '@/components/bc/SubjectCard';
 import UniImagesCard from '@/components/bc/universityCrad';
 import UspsSection from '@/components/bc/UspsSection';
-import { University } from 'lucide-react';
 import SEO from "@/components/SEO";
-import Image from "next/image";
 
 
 // 1. ACCEPT the headerHeight prop
@@ -172,7 +167,8 @@ const BC = ({ headerHeight }) => {
         ]}
       />
 
-      {/* Removed <Head> block as preloads are handled by <SEO> */}
+      {/* Inject SEO Schema */}
+      <JsonLd data={bcSchema} />
 
       {/* LCP Optimization: Lifted Image and removed data-scroll-container */}
       <div className='overflow-hidden innerpage page-content-padding'>
