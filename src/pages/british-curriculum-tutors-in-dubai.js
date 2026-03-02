@@ -11,7 +11,13 @@ import CourseCard from '@/components/bc/CourseCard';
 import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
 import FAQSection from '@/components/bc/FaqSection';
 import IgniteAchievements from '@/components/bc/IgniteAchievements';
-import InfoCard from '@/components/bc/InfoCard';
+import dynamic from "next/dynamic";
+import InfoCardLeft from "../components/bc/InfoCardLeft";
+import InfoCardForm from "../components/bc/InfoCardForm";
+// Dynamically import InfoCard so it doesn't block the hero LCP painting
+const InfoCard = dynamic(() => import("../components/bc/InfoCard"), {
+  ssr: true, // Keep SSR so it renders on server, but defer hydration priority
+});
 import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
 import Trainers from "@/components/bc/Trainers";
 import WhatWeOfferSection from '@/components/bc/WhatWeOfferSection';
@@ -24,6 +30,7 @@ import UniImagesCard from '@/components/bc/universityCrad';
 import UspsSection from '@/components/bc/UspsSection';
 import { University } from 'lucide-react';
 import SEO from "@/components/SEO";
+import Image from "next/image";
 
 
 // 1. ACCEPT the headerHeight prop
@@ -172,20 +179,32 @@ const BC = ({ headerHeight }) => {
         <section className="hero-section">
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}
-            <picture className="hero-bg">
-              <source media="(max-width: 768px)" srcSet="/assets/ib-bg.webp" />
-              <img
-                src="/assets/bc_bg_main.webp"
-                alt="British Curriculum Tutors Background"
-                fetchPriority="high"
-                decoding="sync"
-                loading="eager"
-                width="1200"
-                height="800"
-                className="hero-img"
-                style={{ opacity: 1, visibility: 'visible' }}
-              />
-            </picture>
+            <div className="hero-bg">
+              {/* Desktop Image */}
+              <div className="d-none d-md-block" style={{ position: 'absolute', width: '100%', height: '100%' }}>
+                <Image
+                  src="/assets/bc_bg_main.webp"
+                  alt="British Curriculum Tutors Background"
+                  fill
+                  priority
+                  sizes="100vw"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  quality={85}
+                />
+              </div>
+              {/* Mobile Image */}
+              <div className="d-block d-md-none" style={{ position: 'absolute', width: '100%', height: '100%' }}>
+                <Image
+                  src="/assets/ib-bg.webp"
+                  alt="British Curriculum Tutors Background (Mobile)"
+                  fill
+                  priority
+                  sizes="100vw"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  quality={85}
+                />
+              </div>
+            </div>
 
             <InfoCard />
           </div>
