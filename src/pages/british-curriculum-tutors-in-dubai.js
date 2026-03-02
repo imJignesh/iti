@@ -10,6 +10,7 @@ import Blog from "@/components/bc/Blog";
 import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
 import FAQSection from '@/components/bc/FaqSection';
 import IgniteAchievements from '@/components/bc/IgniteAchievements';
+import Image from "next/image";
 import dynamic from "next/dynamic";
 // Dynamically import InfoCard so it doesn't block the hero LCP painting
 const InfoCard = dynamic(() => import("../components/bc/InfoCard"), {
@@ -175,21 +176,34 @@ const BC = ({ headerHeight }) => {
         <section className="hero-section">
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}
-            <picture className="hero-bg">
+            <div className="hero-bg">
+              {/* Desktop Image */}
+              <div className="d-none d-md-block" style={{ position: 'absolute', width: '100%', height: '100%' }}>
+                <Image
+                  src="/assets/bc_bg_main.webp"
+                  alt="British Curriculum Tutors Background"
+                  fill
+                  priority
+                  sizes="100vw"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  quality={85}
+                  unoptimized={true}
+                />
+              </div>
               {/* Mobile Image */}
-              <source media="(max-width: 768px)" srcSet="/assets/ib-bg.webp" />
-              {/* Desktop Base Image */}
-              <img
-                src="/assets/bc_bg_main.webp"
-                alt="British Curriculum Tutors Background"
-                fetchPriority="high"
-                decoding="sync"
-                loading="eager"
-                width="1200"
-                height="800"
-                className="hero-img"
-              />
-            </picture>
+              <div className="d-block d-md-none" style={{ position: 'absolute', width: '100%', height: '100%' }}>
+                <Image
+                  src="/assets/ib-bg.webp"
+                  alt="British Curriculum Tutors Background (Mobile)"
+                  fill
+                  priority
+                  sizes="100vw"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  quality={85}
+                  unoptimized={true}
+                />
+              </div>
+            </div>
 
             <InfoCard />
           </div>
