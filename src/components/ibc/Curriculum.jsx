@@ -54,7 +54,7 @@ export default function IBCurriculumStages() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.45s" }}
+
           >
             <div>
               <h3 className="card-title card-title-ibdp">
@@ -119,6 +119,7 @@ export default function IBCurriculumStages() {
           {/* MYP Card */}
           <div
             className="card1 card-myp"
+
           >
             <div>
               <h3 className="card-title2 card-title-myp">

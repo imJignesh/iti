@@ -11,8 +11,9 @@ const LazySection = ({ children, threshold = 0.1, rootMargin = "200px" }) => {
         if (typeof window === 'undefined') return false;
         const userAgent = navigator.userAgent.toLowerCase();
 
-        // Comprehensive regex for Search Engines, AI Bots, Performance Tools, and Social Previews
-        const botPattern = /googlebot|bingbot|applebot|slurp|baiduspider|duckduckbot|google-inspectiontool|chrome-lighthouse|lighthouse|gtmetrix|pagespeed|headlesschrome|gptbot|oai-searchbot|claudebot|perplexitybot|amazonbot|bytespider|ccbot|facebookexternalhit|twitterbot|linkedinbot|slackbot|discordbot|whatsapp/;
+        // Comprehensive regex for Search Engines, AI Bots, and Social Previews.
+        // Note: Removed performance tools (lighthouse, pagespeed, gtmetrix) so they measure actual user experience.
+        const botPattern = /googlebot|bingbot|applebot|slurp|baiduspider|duckduckbot|google-inspectiontool|headlesschrome|gptbot|oai-searchbot|claudebot|perplexitybot|amazonbot|bytespider|ccbot|facebookexternalhit|twitterbot|linkedinbot|slackbot|discordbot|whatsapp/;
 
         return botPattern.test(userAgent);
     };
@@ -64,7 +65,7 @@ const LazySection = ({ children, threshold = 0.1, rootMargin = "200px" }) => {
     }, [isVisible, scroll]);
 
     return (
-        <div ref={ref} style={{ minHeight: '100px' }}>
+        <div ref={ref} style={{ minHeight: '50vh' }}>
             {isVisible ? children : null}
         </div>
     );
