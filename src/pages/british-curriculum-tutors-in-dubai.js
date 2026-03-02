@@ -179,32 +179,21 @@ const BC = ({ headerHeight }) => {
         <section className="hero-section">
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}
-            <div className="hero-bg">
-              {/* Desktop Image */}
-              <div className="d-none d-md-block" style={{ position: 'absolute', width: '100%', height: '100%' }}>
-                <Image
-                  src="/assets/bc_bg_main.webp"
-                  alt="British Curriculum Tutors Background"
-                  fill
-                  priority
-                  sizes="100vw"
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                  quality={85}
-                />
-              </div>
+            <picture className="hero-bg">
               {/* Mobile Image */}
-              <div className="d-block d-md-none" style={{ position: 'absolute', width: '100%', height: '100%' }}>
-                <Image
-                  src="/assets/ib-bg.webp"
-                  alt="British Curriculum Tutors Background (Mobile)"
-                  fill
-                  priority
-                  sizes="100vw"
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                  quality={85}
-                />
-              </div>
-            </div>
+              <source media="(max-width: 768px)" srcSet="/assets/ib-bg.webp" />
+              {/* Desktop Base Image */}
+              <img
+                src="/assets/bc_bg_main.webp"
+                alt="British Curriculum Tutors Background"
+                fetchPriority="high"
+                decoding="sync"
+                loading="eager"
+                width="1200"
+                height="800"
+                className="hero-img"
+              />
+            </picture>
 
             <InfoCard />
           </div>
