@@ -145,40 +145,6 @@ const BC = ({ headerHeight }) => {
   // 👆 END OF SCHEMA DEFINITION
   // ----------------------------------------------------
 
-
-  const scrollRef = useRef(null);
-  const scrollInstanceRef = useRef(null);
-
-  useEffect(() => {
-    let scroll;
-
-    const initScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      if (!scrollRef.current) return;
-
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1,
-        // optional:
-        getDirection: true,
-        getSpeed: true,
-        multiplier: 1,
-      });
-
-      scrollInstanceRef.current = scroll;
-    };
-
-    if (typeof window !== "undefined") {
-      initScroll();
-    }
-
-    return () => {
-      scrollInstanceRef.current?.destroy();
-      scrollInstanceRef.current = null;
-    };
-  }, []);
-
   return (
     <>
       <SEO
@@ -201,12 +167,8 @@ const BC = ({ headerHeight }) => {
 
       {/* Removed <Head> block as preloads are handled by <SEO> */}
 
-      {/* LCP Optimization: Lifted Image */}
-      <div
-        ref={scrollRef}
-        className='overflow-hidden innerpage page-content-padding'
-        data-scroll-container
-      >
+      {/* LCP Optimization: Lifted Image and removed data-scroll-container */}
+      <div className='overflow-hidden innerpage page-content-padding'>
         <section className="hero-section">
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}

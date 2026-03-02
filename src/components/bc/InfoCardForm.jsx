@@ -151,7 +151,7 @@ export default function InfoCardForm() {
 
     return (
         <div
-            className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center removed-class position-relative right-form"
+            className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center  position-relative right-form"
 
 
 
@@ -162,7 +162,7 @@ export default function InfoCardForm() {
 
                     <input type="hidden" name="pageinfo" value="" />
                     <p
-                        className="fw-bold text-uppercase mb-4 removed-class text-center form-heading"
+                        className="fw-bold text-uppercase mb-4  text-center form-heading"
 
 
 
@@ -182,7 +182,7 @@ export default function InfoCardForm() {
                     )}
 
                     <div
-                        className="mb-3 removed-class"
+                        className="mb-3 "
 
 
 
@@ -206,7 +206,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="row g-2 mb-3 removed-class"
+                        className="row g-2 mb-3 "
 
 
 
@@ -239,7 +239,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-3 removed-class"
+                        className="mb-3 "
 
 
 
@@ -263,7 +263,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-3 removed-class"
+                        className="mb-3 "
 
 
 
@@ -287,7 +287,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-4 removed-class"
+                        className="mb-4 "
 
 
 
@@ -316,7 +316,7 @@ export default function InfoCardForm() {
 
 
 
-                        className="removed-class btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
+                        className=" btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
                         style={{
                             background: "transparent",
                             color: "white",
@@ -351,15 +351,7 @@ export default function InfoCardForm() {
           box-shadow: none !important;
           color: white !important;
         }
-        .removed-class {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-        .removed-class.is-inview {
-          opacity: 1;
-          transform: translateY(0);
-        }
+
 
         /* Desktop form styling */
         .form-container {
@@ -521,13 +513,7 @@ export default function InfoCardForm() {
              }
         }
         
-        .removed-class {
-          opacity: 1 !important;
-          visibility: visible !important;
-          transform: none !important;
-          transition: none !important;
-          animation: none !important;
-        }
+
          @media (max-width: 1100px) {
            /* Keeping media query for potential future use */
          }
