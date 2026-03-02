@@ -185,26 +185,21 @@ const BC = ({ headerHeight }) => {
         title="British Curriculum Tutors For IGCSE/GCSE & AS & A-Levels"
         description="Seek full guidance for the British Curriculum in the UAE. Learn from expert A-Level & IGCSE tutors to strengthen academics & boost performance"
         url="https://ignitetraininginstitute.com/british-curriculum-tutors-in-dubai"
+        preloadImages={[
+          {
+            src: "/assets/ib-bg.webp",
+            type: "image/webp",
+            media: "(max-width: 768px)"
+          },
+          {
+            src: "/assets/bc_bg_main.webp",
+            type: "image/webp",
+            media: "(min-width: 769px)"
+          }
+        ]}
       />
 
-      <Head>
-        <link
-          rel="preload"
-          href="/assets/ib-bg.webp"
-          as="image"
-          type="image/webp"
-          media="(max-width: 768px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          href="/assets/bc_bg_main.webp"
-          as="image"
-          type="image/webp"
-          media="(min-width: 769px)"
-          fetchPriority="high"
-        />
-      </Head>
+      {/* Removed <Head> block as preloads are handled by <SEO> */}
 
       {/* LCP Optimization: Lifted Image */}
       <div
@@ -212,7 +207,7 @@ const BC = ({ headerHeight }) => {
         className='overflow-hidden innerpage page-content-padding'
         data-scroll-container
       >
-        <section data-scroll-section className="hero-section">
+        <section className="hero-section">
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}
             <picture className="hero-bg">
@@ -221,6 +216,8 @@ const BC = ({ headerHeight }) => {
                 src="/assets/bc_bg_main.webp"
                 alt="British Curriculum Tutors Background"
                 fetchPriority="high"
+                decoding="sync"
+                loading="eager"
                 width="1200"
                 height="800"
                 className="hero-img"
