@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function IgniteAchievements() {
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -12,6 +13,7 @@ export default function IgniteAchievements() {
     };
 
     handleResize();
+    setMounted(true);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -20,11 +22,11 @@ export default function IgniteAchievements() {
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{ animationDelay: "0.1s" }}>
-      <div className="fade-in-section "
+      <div className="fade-in-section achievements-container"
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: isMobile ? "95vw" : '70vw', animationDelay: "0.15s", margin: "0 auto", padding: isMobile ? "0px 0px 5px 0px" : "0", }}>
+        style={{ animationDelay: "0.15s", margin: "0 auto" }}>
 
         {/* Header Section */}
         <div className="text-center mb-md-5 mb-4 fade-in-section"
@@ -336,6 +338,16 @@ export default function IgniteAchievements() {
         .fade-in-section.is-inview {
           opacity: 1;
           transform: translateY(0);
+        }
+        .achievements-container {
+          max-width: 70vw;
+          padding: 0;
+        }
+        @media (max-width: 767px) {
+          .achievements-container {
+            max-width: 95vw;
+            padding: 0px 0px 5px 0px;
+          }
         }
         
         .custom-gap {
