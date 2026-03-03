@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-// import Head from "next/head";
+import Head from "next/head";
 import LazySection from "@/components/LazySection";
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
@@ -27,6 +27,11 @@ import SEO from "@/components/SEO";
 
 // 1. ACCEPT the headerHeight prop
 const BC = ({ headerHeight }) => {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // ----------------------------------------------------
   // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
@@ -150,19 +155,13 @@ const BC = ({ headerHeight }) => {
         title="British Curriculum Tutors For IGCSE/GCSE & AS & A-Levels"
         description="Seek full guidance for the British Curriculum in the UAE. Learn from expert A-Level & IGCSE tutors to strengthen academics & boost performance"
         url="https://ignitetraininginstitute.com/british-curriculum-tutors-in-dubai"
-        preloadImages={[
-          {
-            src: "/assets/ib-bg.webp",
-            type: "image/webp",
-            media: "(max-width: 768px)"
-          },
-          {
-            src: "/assets/bc_bg_main.webp",
-            type: "image/webp",
-            media: "(min-width: 769px)"
-          }
-        ]}
       />
+
+      <Head>
+        {/* Explicitly hardcode preloads to override any component-level ambiguity */}
+        <link rel="preload" href="/assets/ib-bg.webp" as="image" type="image/webp" media="(max-width: 768px)" fetchPriority="high" />
+        <link rel="preload" href="/assets/bc_bg_main.webp" as="image" type="image/webp" media="(min-width: 769px)" fetchPriority="high" />
+      </Head>
 
       {/* Inject SEO Schema */}
       <JsonLd data={bcSchema} />
@@ -171,15 +170,16 @@ const BC = ({ headerHeight }) => {
       <div className='overflow-hidden innerpage page-content-padding'>
         <section className="hero-section">
           <div className="hero-container">
-            {/* LCP Image moved here for immediate painting (SSR) */}
-            <div className="hero-bg">
-              <picture style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }}>
+            {/* LCP Image moved here for immediate painting (SSR) - No hydration check here */}
+            <div className="hero-bg" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
+              <picture>
                 {/* Mobile Source */}
                 <source media="(max-width: 768px)" srcSet="/assets/ib-bg.webp" />
                 {/* Desktop Source / Fallback */}
                 <img
                   src="/assets/bc_bg_main.webp"
                   alt="British Curriculum Tutors Background"
+                  fetchPriority="high"
                   style={{
                     width: '100%',
                     height: "100%",
@@ -191,40 +191,41 @@ const BC = ({ headerHeight }) => {
               </picture>
             </div>
 
-            <InfoCard />
+            {/* Content wrapped in mounted check to prevent Hydration Failure (which resets LCP timer) */}
+            {mounted && <InfoCard />}
           </div>
 
           <style jsx>{`
-            .hero-container {
-              position: relative;
-              max-width: 90vw;
-              margin-inline: auto;
-              margin-block: 0;
-              min-height: 750px;
-              border-radius: 1.5rem;
-              overflow: hidden;
-              isolation: isolate;
-            }
+  .hero-container {
+  position: relative;
+  max-width: 90vw;
+  margin-inline: auto;
+  margin-block: 0;
+  min-height: 750px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  isolation: isolate;
+}
             .hero-bg {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              z-index: -1;
-            }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
             .hero-img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              object-position: center;
-            }
-            @media (max-width: 1100px) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media(max-width: 1100px) {
               .hero-container {
-                max-width: 95vw;
-              }
-            }
-          `}</style>
+    max-width: 95vw;
+  }
+}
+`}</style>
         </section>
 
         <LazySection>
