@@ -11,11 +11,7 @@ import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
 import FAQSection from '@/components/bc/FaqSection';
 import IgniteAchievements from '@/components/bc/IgniteAchievements';
 import Image from "next/image";
-import dynamic from "next/dynamic";
-// Dynamically import InfoCard so it doesn't block the hero LCP painting
-const InfoCard = dynamic(() => import("../components/bc/InfoCard"), {
-  ssr: true, // Keep SSR so it renders on server, but defer hydration priority
-});
+import InfoCard from "@/components/bc/InfoCard";
 import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
 import Trainers from "@/components/bc/Trainers";
 import WhatWeOfferSection from '@/components/bc/WhatWeOfferSection';
