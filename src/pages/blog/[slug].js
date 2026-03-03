@@ -828,6 +828,7 @@ export default function PostDetail({ initialPost }) {
                                 height={800}
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 1200px"
                                 priority
+                                unoptimized={true}
                             />
                         </div>
                     )}

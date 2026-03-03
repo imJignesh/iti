@@ -251,6 +251,121 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/blog/a-levels-qualifications',
+        destination: '/blog/a-level-qualifications',
+        permanent: true,
+      },
+      {
+        source: '/blog/advanced-placements-ap',
+        destination: '/category/advanced-placements',
+        permanent: true,
+      },
+      {
+        source: '/blog/advanced-placements-tutors',
+        destination: '/advanced-placements-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/blog/british-curriculum-a-levels',
+        destination: '/blog/a-level-qualifications',
+        permanent: true,
+      },
+      {
+        source: '/blog/british-curriculum-tutors',
+        destination: '/british-curriculum-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/blog/contact-us-3',
+        destination: '/contact-us',
+        permanent: true,
+      },
+      {
+        source: '/blog/free-consultation',
+        destination: '/join-free-demo-class',
+        permanent: true,
+      },
+      {
+        source: '/blog/high-school-british-curriculum',
+        destination: '/blog/british-curriculum-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/ib-curriculum-1',
+        destination: '/blog/ib-curriculum-blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/ib-curriculum-schools-in-dubai',
+        destination: '/blog/ib-schools-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/blog/ib-curriculum-tutors',
+        destination: '/ib-curriculum-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/blog/ib-tutors',
+        destination: '/ib-curriculum-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/blog/ibdp-curriculum-components-requirements',
+        destination: '/blog/ibdp-curriculum',
+        permanent: true,
+      },
+      {
+        source: '/blog/ibdp-subjects',
+        destination: '/blog/ibdp-subjects-2',
+        permanent: true,
+      },
+      {
+        source: '/blog/maths-tutors-in-dubai',
+        destination: '/maths-tutor-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/blog/myp-programme-guide',
+        destination: '/blog/ib-myp-programme',
+        permanent: true,
+      },
+      {
+        source: '/blog/private-tutor-in-dubai',
+        destination: '/private-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/courses/a-level-tutors',
+        destination: '/courses/a-level-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/courses/homeschooling-tutors',
+        destination: '/courses/homeschooling-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/courses/ibdp-tutors',
+        destination: '/courses/ibdp-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/courses/igcse-tutors',
+        destination: '/courses/igcse-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/courses/myp-tutors',
+        destination: '/courses/myp-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/igcse-tutors-in-dubai',
+        destination: '/courses/igcse-tutors-in-dubai',
+        permanent: true,
+      },
     ];
 
     CATEGORY_SLUGS.forEach((slug) => {
