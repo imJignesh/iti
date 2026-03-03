@@ -8,6 +8,7 @@ const GlobalPhoneInput = dynamic(() => import('../GlobalPhoneInput'), {
 
 export default function InfoCardForm() {
     const [isMobile, setIsMobile] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const [pageInfo, setPageInfo] = useState('');
 
     // Form Data
@@ -51,6 +52,7 @@ export default function InfoCardForm() {
 
             setPageInfo(`URL: ${url} | Title/Path: ${title}`);
         }
+        setMounted(true);
         return () => window.removeEventListener("resize", checkDevice);
     }, []);
 
@@ -330,10 +332,10 @@ export default function InfoCardForm() {
                     >
                         {loading ? 'SUBMITTING...' : 'SUBMIT'}
                         <img
-                            src={isMobile ? "/assets/mobilebutton.webp" : "/assets/rwb.webp"}
+                            src={mounted && isMobile ? "/assets/mobilebutton.webp" : "/assets/rwb.webp"}
                             alt="right"
-                            width={isMobile ? 35 : 40}
-                            height={isMobile ? 35 : 40}
+                            width={mounted && isMobile ? 35 : 40}
+                            height={mounted && isMobile ? 35 : 40}
                         />
                     </button>
                 </form>

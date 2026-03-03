@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function IgniteAchievements() {
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const checkDevice = () => {
@@ -12,6 +13,7 @@ export default function IgniteAchievements() {
 
     checkDevice();
     window.addEventListener('resize', checkDevice);
+    setMounted(true);
 
     return () => window.removeEventListener('resize', checkDevice);
   }, []);
@@ -58,7 +60,7 @@ export default function IgniteAchievements() {
               WebkitTextFillColor: "transparent",
               animationDelay: "0.45s",
               fontSize: "0.9rem",
-              lineHeight: isMobile ? "1.3" : "1.2",
+              lineHeight: mounted && isMobile ? "1.3" : "1.2",
             }}>
             Each accomplishment highlights the dedication & success our students have achieved through the years.
           </p>
