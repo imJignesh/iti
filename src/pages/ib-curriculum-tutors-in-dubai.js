@@ -145,38 +145,7 @@ const IBC = ({ headerHeight }) => {
   // ----------------------------------------------------
   // 👇 EXISTING COMPONENT LOGIC (Locomotive Scroll)
   // ----------------------------------------------------
-  const scrollRef = useRef(null);
-  const scrollInstanceRef = useRef(null);
 
-  useEffect(() => {
-    let scroll;
-
-    const initScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      if (!scrollRef.current) return;
-
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1,
-        // optional:
-        getDirection: true,
-        getSpeed: true,
-        multiplier: 1,
-      });
-
-      scrollInstanceRef.current = scroll;
-    };
-
-    if (typeof window !== "undefined") {
-      initScroll();
-    }
-
-    return () => {
-      scrollInstanceRef.current?.destroy();
-      scrollInstanceRef.current = null;
-    };
-  }, []);
 
   return (
     <>
@@ -210,11 +179,11 @@ const IBC = ({ headerHeight }) => {
 
       {/* 3. APPLY the style for paddingTop to the scroll container */}
       <div
-        ref={scrollRef}
+
         className='overflow-hidden innerpage page-content-padding'
-        data-scroll-container
+
       >
-        <div className="hero-section" data-scroll-section>
+        <div className="hero-section">
           {/* LCP Optimization: Background Image handled here */}
           <div className="hero-bg-wrapper">
             <picture>
