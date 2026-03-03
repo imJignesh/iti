@@ -406,6 +406,9 @@ export default function InfoCardLeft() {
                 
                 margin-left: 1rem !important;
               }
+                .btnwraper{
+                    flex-direction: column;
+                }
         }
         
         @media (max-width: 380px) {

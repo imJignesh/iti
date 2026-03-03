@@ -414,6 +414,9 @@ export default function InfoCardLeft() {
                 animation-delay: 0.75s !important;
                 margin-left: 1rem !important;
               }
+                 .btnwraper{
+                    flex-direction: column;
+                }
         }
         
         @media (max-width: 380px) {

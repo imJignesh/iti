@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Head from "next/head";
+// import Head from "next/head";
 import LazySection from "@/components/LazySection";
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
@@ -19,10 +19,10 @@ const InfoCard = dynamic(() => import("../components/bc/InfoCard"), {
 import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
 import Trainers from "@/components/bc/Trainers";
 import WhatWeOfferSection from '@/components/bc/WhatWeOfferSection';
-import LifeAtIgniteCarousel from '@/components/bc/LifeAtIgniteCarousel';
+// import LifeAtIgniteCarousel from '@/components/bc/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/bc/MarqueeBanner';
 import ReviewsSection from '@/components/bc/ReviewsSection';
-import StudentAchievements from '@/components/bc/StudentAchivement';
+// import StudentAchievements from '@/components/bc/StudentAchivement';
 import SubjectsCard from '@/components/bc/SubjectCard';
 import UniImagesCard from '@/components/bc/universityCrad';
 import UspsSection from '@/components/bc/UspsSection';
