@@ -65,7 +65,7 @@ const LazySection = ({ children, threshold = 0.1, rootMargin = "200px" }) => {
     }, [isVisible, scroll]);
 
     return (
-        <div ref={ref} style={{ minHeight: '50vh' }}>
+        <div ref={ref} >
             {isVisible ? children : null}
         </div>
     );
