@@ -80,9 +80,13 @@ const About = ({ headerHeight }) => {
       <SEO title="About Ignite Training Institute: Expert Tutors In Dubai"
         description="Learn about Ignite Training Institute, Dubai's leading tutoring center for IB, IGCSE, A-Levels, & AP. Our experienced tutors and proven methodology ensure academic success." />
       {/* Event snippet for Sign-up - new website main form conversion page */}
-      <Script id="google-conversion-tracking" strategy="afterInteractive">
-        {`gtag('event', 'conversion', {'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID'});`}
-      </Script>
+      <Script
+        id="google-conversion-tracking"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `gtag('event', 'conversion', {'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID'});`,
+        }}
+      />
       {/* 2. RENDER the JsonLd component and pass the schema data */}
       <JsonLd schema={educationalOrganizationSchema} />
 
