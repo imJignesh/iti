@@ -11,7 +11,7 @@ const STATIC_ROOT_PAGES = [
     'join-free-demo-class-copy',
     'maths-tutor-in-dubai', 'our-team', 'physics-tutor-in-dubai',
     'private-tutors-in-dubai', 'psychology-tutor-in-dubai', 'spanish-tutor-in-dubai',
-    'tutors-in-dubai', 'tutors-in-jlt-dubai'
+    'tutors-in-dubai', 'tutors-in-jlt-dubai', 'test-series'
 ]
 
 const STATIC_COURSES_PAGES = [

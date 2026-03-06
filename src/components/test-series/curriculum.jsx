@@ -14,11 +14,20 @@ const IBCurriculumStages = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div style={{ marginBlock: isMobile ? "0" : "0" }}>
+    <div style={{ marginBlock: isMobile ? "0" : "" }}>
       <section
         className="achievementsSection pb-0"
         style={{ position: "relative" }}
       >
+        <div className="d-flex justify-content-end pb-5">
+          <img
+            src={isMobile ? "/assets/bgrect45.webp" : "/assets/bgrect27.webp"}
+            alt="bg-shape"
+            className="testimonialRect rect-1"
+            width={isMobile ? 185 : 811}
+            height={isMobile ? 133 : 120}
+          />
+        </div>
         <div className="container">
           <div className="achievementsHeadings">
             <div
@@ -29,7 +38,7 @@ const IBCurriculumStages = () => {
               style={{ animationDelay: "0.1s" }}
             >
               <h2 className="SubHeading">
-                CURRICULA & STANDARDISED TESTS WE OFFER
+                STRUCTURE
               </h2>
             </div>
             <div
@@ -40,27 +49,42 @@ const IBCurriculumStages = () => {
               style={{ animationDelay: "0.25s" }}
             >
               <h3 className="achievementsTitle">
-                Curriculum-Based Learning &{isMobile ? "" : <br />}
-                <span className="highlight"> Exam Prep</span> Solutions{" "}
+
+                <span className="highlight"> TEST SERIES </span> STRUCTURE
               </h3>
+            </div>
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
+              className="divider desktop-fade-in"
+              style={{ animationDelay: "0.25s" }}
+            >
+              <p
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                className="fade-in-section"
+                style={{ animationDelay: "0.25s" }}
+              >Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.</p>
             </div>
           </div>
         </div>
-        <img
+        {/* <img
           src="/assets/bgrect25.webp"
-          alt="tutors in jlt dubai"
+          alt="private tutors in dubai"
           className="testimonialRect rect-1"
-        />
+          width={598}
+          height={120}
+        /> */}
         <img
           src="/assets/bgrect26.webp"
-          alt="tutors in jlt dubai"
+          alt="private tutors in dubai"
           className="testimonialRect rect-2"
+          width={428}
+          height={120}
         />
-        <img
-          src={isMobile ? "/assets/bgrect45.webp" : "/assets/bgrect27.webp"}
-          alt="bg-shape"
-          className="testimonialRect rect-3"
-        />{" "}
+
       </section>
       <section className="" style={{ position: "relative" }}>
         <div
@@ -78,10 +102,10 @@ const IBCurriculumStages = () => {
                 <p
                   className="curriculum-section-heading1"
                   style={{
-                    fontSize: "35px",
+                    fontSize: "30px",
                   }}
                 >
-                  CURRICULUMS
+                  3 unit tests
                 </p>
                 <div
                   style={{
@@ -95,10 +119,10 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile ? 20 : 30}
-                      height={isMobile ? 20 : 30}
+                      width={isMobile ? 20 : 26}
+                      height={isMobile ? 20 : 26}
                       quality={100}
-                      alt="Trusted Tutors In JLT Dubai"
+                      alt="Private Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -107,7 +131,7 @@ const IBCurriculumStages = () => {
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
                       >
-                        IB (MYP & IBDP)
+                        Full Syllabus Coverage
                       </a>
                     </h3>
                   </div>
@@ -115,10 +139,10 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile ? 20 : 30}
-                      height={isMobile ? 20 : 30}
+                      width={isMobile ? 20 : 26}
+                      height={isMobile ? 20 : 26}
                       quality={100}
-                      alt="Trusted Tutors In JLT Dubai"
+                      alt="Private Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -127,7 +151,7 @@ const IBCurriculumStages = () => {
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
                       >
-                        IGCSE
+                        All Question Types Tested <br /> (MCQ, Short & Long Answer)
                       </a>
                     </h3>
                   </div>
@@ -135,10 +159,10 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile ? 20 : 30}
-                      height={isMobile ? 20 : 30}
+                      width={isMobile ? 20 : 26}
+                      height={isMobile ? 20 : 26}
                       quality={100}
-                      alt="Trusted Tutors In JLT Dubai"
+                      alt="Private Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -147,30 +171,12 @@ const IBCurriculumStages = () => {
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
                       >
-                        A-Levels
+                        Strength & Weakness Mapping
                       </a>
                     </h3>
                   </div>
 
-                  <div className="curriculum-info">
-                    <Image
-                      src="/assets/check-inactive-blue.webp"
-                      width={isMobile ? 20 : 30}
-                      height={isMobile ? 20 : 30}
-                      quality={100}
-                      alt="Trusted Tutors In JLT Dubai"
-                    />{" "}
-                    <h3>
-                      <a
-                        href="/courses/igcse-tutors-in-dubai/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ textDecoration: "none", color: "inherit" }}
-                      >
-                        Private Candidate (Homeschooling)
-                      </a>
-                    </h3>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -182,11 +188,11 @@ const IBCurriculumStages = () => {
                 <p
                   className="curriculum-section-heading2"
                   style={{
-                    fontSize: "35px",
+                    fontSize: "30px",
                     borderRadius: 0,
                   }}
                 >
-                  STANDARDISED TESTS
+                  3 full syllabus mock exams
                 </p>{" "}
                 <div
                   style={{
@@ -200,10 +206,10 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile ? 20 : 30}
-                      height={isMobile ? 20 : 30}
+                      width={isMobile ? 20 : 26}
+                      height={isMobile ? 20 : 26}
                       quality={100}
-                      alt="Trusted Tutors In JLT Dubai"
+                      alt="Private Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -212,7 +218,7 @@ const IBCurriculumStages = () => {
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
                       >
-                        ACT
+                        Strength & Weakness Mapping
                       </a>
                     </h3>
                   </div>
@@ -220,10 +226,10 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile ? 20 : 30}
-                      height={isMobile ? 20 : 30}
+                      width={isMobile ? 20 : 26}
+                      height={isMobile ? 20 : 26}
                       quality={100}
-                      alt="Trusted Tutors In JLT Dubai"
+                      alt="Private Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -232,7 +238,7 @@ const IBCurriculumStages = () => {
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
                       >
-                        Advanced Placements (AP)
+                        Ignite 2026 Predicted Paper (2 papers)
                       </a>
                     </h3>
                   </div>
@@ -240,10 +246,10 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile ? 20 : 30}
-                      height={isMobile ? 20 : 30}
+                      width={isMobile ? 20 : 26}
+                      height={isMobile ? 20 : 26}
                       quality={100}
-                      alt="Trusted Tutors In JLT Dubai"
+                      alt="Private Tutors in Dubai"
                     />{" "}
                     <h3>
                       <a
@@ -252,7 +258,7 @@ const IBCurriculumStages = () => {
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
                       >
-                        UCAT
+                        Based On The Latest Exam Trends
                       </a>
                     </h3>
                   </div>
@@ -261,7 +267,17 @@ const IBCurriculumStages = () => {
             </div>
           </div>
         </div>
+        <div className="d-flex justify-content-end pt-5">
+          <img
+            src={isMobile ? "/assets/bgrect45.webp" : "/assets/bgrect27.webp"}
+            alt="bg-shape"
+            className="testimonialRect rect-3"
+            width={isMobile ? 185 : 811}
+            height={isMobile ? 133 : 120}
+          />
+        </div>
       </section>
+
       <style jsx>{`
         /* Container width fix */
         .container {
@@ -286,23 +302,23 @@ const IBCurriculumStages = () => {
         }
 
         .rect-1 {
-          top: -120px;
-          right: 54px;
+          // top: -120px;
+          // right: 54px;
+          position:relative;
           width: 608px;
           height: 102px;
         }
 
         .rect-2 {
-          top: 32%;
+          top: 60%;
           left: 0;
           width: 428px;
           height: 102px;
         }
 
         .rect-3 {
-          bottom: -370%;
-          right: 6rem;
-          width: 750px;
+         position:relative;
+         width: 750px;
           height: 102px;
         }
 
@@ -330,10 +346,12 @@ const IBCurriculumStages = () => {
           background-clip: text;
         }
 
+        
         .achievementsHeadings p {
-          font-size: 1.4rem;
-          color: rgba(0, 0, 0, 0.5);
-          line-height: 1.4;
+          // font-size: 1.4rem;
+          color: #233467;
+          // line-height: 1.4;
+          padding-bottom: 30px;
         }
 
         /* Carousel container */
@@ -431,8 +449,8 @@ const IBCurriculumStages = () => {
         }
         .curriculum-info h3 {
           color: rgba(35, 52, 103, 1);
-          font-size: 23px;
-          font-weight: 600;
+          font-size: 20px;
+          font-weight: normal;
           margin-bottom: 0;
         }
         .achievements-name::after {
@@ -973,14 +991,11 @@ const IBCurriculumStages = () => {
         }
         @media (max-width: 575px) {
           .achievementsSection {
-            padding: 0 0px;
-          }
-          .achievementsHeadings .SubHeading {
-            margin: 0;
+            padding: 0 0;
           }
           .achievementsTitle {
-            margin: 20px 0;
             font-size: 20.4px;
+            margin: 20px 0;
           }
           .curriculum-content {
             padding-top: 15px;

@@ -44,6 +44,7 @@ const STATIC_ROOT_PAGES = [
   'thank-you-tutor',
   'tutors-in-dubai',
   'tutors-in-jlt-dubai',
+  'test-series',
 ];
 
 // STATIC PAGES LIST (Courses Folder - 5 pages)
