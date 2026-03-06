@@ -9,6 +9,9 @@ import CurriculumTestsComponent from '@/components/test-series/curriculum';
 import IgniteAchievements from '@/components/test-series/IgniteAchievements';
 import SubjectsCard from '@/components/test-series/SubjectCard';
 import Usps from '@/components/test-series/Usps';
+import FAQSection from '@/components/test-series/FaqSection';
+import TutoringHeroSection from '@/components/test-series/BottomSub';
+import Accordion from '@/components/test-series/accordian';
 
 const TestSeries = ({ headerHeight }) => {
 
@@ -41,7 +44,7 @@ const TestSeries = ({ headerHeight }) => {
             />
 
             <div
-                className='overflow-hidden innerpage page-content-padding'
+                className='innerpage page-content-padding'
                 style={{ paddingTop: `${headerHeight}px` }}
             >
                 <section data-scroll-section className="hero-section">
@@ -132,6 +135,23 @@ const TestSeries = ({ headerHeight }) => {
                     </section>
                 </LazySection>
 
+                <LazySection>
+                    <section data-scroll-section>
+                        <FAQSection />
+                    </section>
+                </LazySection>
+
+                <LazySection>
+                    <section data-scroll-section>
+                        <TutoringHeroSection />
+                    </section>
+                </LazySection>
+
+                <LazySection>
+                    <section data-scroll-section>
+                        <Accordion />
+                    </section>
+                </LazySection>
             </div>
         </>
     );

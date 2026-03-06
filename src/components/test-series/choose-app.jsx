@@ -62,7 +62,7 @@ const IBCurriculumStages = () => {
                 style={{ borderRadius: 35 }}
               >
                 <p
-                  className="curriculum-section-heading1 text-start d-inline-block"
+                  className="curriculum-section-heading1 text-md-start text-center  d-inline-block"
                   style={{
 
 
@@ -83,7 +83,7 @@ const IBCurriculumStages = () => {
                 style={{ borderRadius: 35 }}
               >
                 <p
-                  className="curriculum-section-heading2 text-start d-inline-block"
+                  className="curriculum-section-heading2 text-md-start text-center  d-inline-block"
                   style={{
 
 
@@ -105,7 +105,7 @@ const IBCurriculumStages = () => {
                 style={{ borderRadius: 35 }}
               >
                 <p
-                  className="curriculum-section-heading2 text-start d-inline-block"
+                  className="curriculum-section-heading2 text-md-start text-center  d-inline-block"
                   style={{
 
 
@@ -127,7 +127,7 @@ const IBCurriculumStages = () => {
                 style={{ borderRadius: 35 }}
               >
                 <p
-                  className="curriculum-section-heading1 text-start d-inline-block"
+                  className="curriculum-section-heading1 text-md-start text-center  d-inline-block"
                   style={{
 
 
@@ -148,7 +148,7 @@ const IBCurriculumStages = () => {
                 style={{ borderRadius: 35 }}
               >
                 <p
-                  className="curriculum-section-heading1 text-start d-inline-block"
+                  className="curriculum-section-heading1 text-md-start text-center  d-inline-block"
                   style={{
 
 
@@ -169,7 +169,7 @@ const IBCurriculumStages = () => {
                 style={{ borderRadius: 35 }}
               >
                 <p
-                  className="curriculum-section-heading2 text-start d-inline-block"
+                  className="curriculum-section-heading2 text-md-start text-center  d-inline-block"
                   style={{
 
 
@@ -481,7 +481,7 @@ const IBCurriculumStages = () => {
     height: 30px;
   }
 .achievementsSection {
-  padding: 30px 0;
+  // padding: 30px 0;
 }
   .achievementsHeadings p {
     font-size: 1rem;
@@ -491,7 +491,7 @@ const IBCurriculumStages = () => {
 }
 @media (max-width: 575px) {
       .achievementsSection {
-        padding: 0 0 80px 0;
+        // padding: 0 0 80px 0;
       }
 }
       
@@ -658,11 +658,14 @@ const IBCurriculumStages = () => {
     font-size: 16px;
   }
   .curriculum-section-heading1 {
-  
-    font-size: 22px !important;
+    
+    font-size: 16px !important;
+    text-align: center;
   }
   .curriculum-section-heading2 {
-    font-size: 22px !important;
+    font-size: 16px !important;
+    
+    text-align: center;
   }
   .achievementsTitle {
     font-size: 23px;
@@ -873,8 +876,11 @@ background : linear-gradient(90deg, rgba(167,235,199,0.74) 50%,rgba(237,255,244,
   border-bottom-left-radius: 20px;
   padding-right: 0px;
   padding: 30px;
-
+  text-align: center;
 }
+  .curriculum-info{
+    justify-content: center;
+    }
 .curriculum-section-heading1{
   font-size: 2rem;
 }
@@ -883,7 +889,7 @@ background : linear-gradient(90deg, rgba(167,235,199,0.74) 50%,rgba(237,255,244,
   /* Curriculum Sections */
   .curriculum-section-heading1,
   .curriculum-section-heading2 {
-    font-size: 40px; /* 45px - 5px */
+    // font-size: 40px; /* 45px - 5px */
   }
   
   .curriculum-section-sub-heading1,
@@ -934,7 +940,7 @@ background : linear-gradient(90deg, rgba(167,235,199,0.74) 50%,rgba(237,255,244,
   /* Curriculum Sections */
   .curriculum-section-heading1,
   .curriculum-section-heading2 {
-    font-size: 35px; /* 45px - 10px */
+    // font-size: 35px; /* 45px - 10px */
   }
   
   .curriculum-section-sub-heading1,
@@ -1017,6 +1023,7 @@ background : linear-gradient(90deg, rgba(167,235,199,0.74) 50%,rgba(237,255,244,
     .curriculum-section-heading1,
     .curriculum-section-heading2{
         margin-bottom:0;
+        padding-bottom:15px;
     }
 }
 `}</style>

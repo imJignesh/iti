@@ -237,32 +237,28 @@ export default function IgniteAchievements() {
           <div className="stats-grid-mobile">
             {/* Row 1 */}
             <div className="row g-3 mb-3">
-              <div className="col-6">
+              <div className="col-12">
                 <div className="stat-card-mobile">
-                  <div className="stat-number blue-text">10+</div>
-                  <p className="stat-title-mobile blue-text">Years Of Experience</p>
+                  <div className="stat-number teal-text">IGCSE</div>
+                  <div className="stat-content">
+                    <p className="stat-description"> (Cambridge | Edexcel | AQA)</p>
+                  </div>
+                  <div className="stat-divider"></div>
                 </div>
-              </div>
-              <div className="col-6">
                 <div className="stat-card-mobile">
-                  <div className="stat-number teal-text">1K+</div>
-                  <p className="stat-title-mobile teal-text">Exam Prep Resources</p>
+                  <div className="stat-number blue-text">AS & A Levels</div>
+                  <div className="stat-content">
+                    <p className="stat-description">(Cambridge | Edexcel | Oxford AQA)</p>
+                  </div>
+                  <div className="stat-divider"></div>
                 </div>
-              </div>
-            </div>
 
-            {/* Row 2 */}
-            <div className="row g-3">
-              <div className="col-6">
                 <div className="stat-card-mobile">
-                  <div className="stat-number blue-text">100%</div>
-                  <p className="stat-title-mobile blue-text">Better Grades Achieved</p>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className="stat-card-mobile">
-                  <div className="stat-number teal-text">2K+</div>
-                  <p className="stat-title-mobile teal-text">Student Success Stories</p>
+                  <div className="stat-number teal-text">IBDP</div>
+                  <div className="stat-content">
+                    <p className="stat-description"> (HL & SL Subjects)</p>
+                  </div>
+                  <div className="stat-divider"></div>
                 </div>
               </div>
             </div>
@@ -306,7 +302,7 @@ export default function IgniteAchievements() {
         }
 
         /* Desktop Layout */
- .desktop-stats-container {
+        .desktop-stats-container {
           display: flex;
           align-items: flex-start;
           gap: 3rem;
@@ -343,7 +339,7 @@ export default function IgniteAchievements() {
           padding-left: 20px;
           position: relative;
         }
-          .stat-card-desktop .teal-text:before{
+          .stat-card-desktop .teal-text:before,.stat-card-mobile .teal-text:before{
             content: "•";
             position: absolute;
             top: 0;
@@ -353,7 +349,7 @@ export default function IgniteAchievements() {
             line-height: 1;
            -webkit-text-fill-color: #019A88;
           }
-           .stat-card-desktop .blue-text:before{
+           .stat-card-desktop .blue-text:before,.stat-card-mobile .blue-text:before{
             content: "•";
             position: absolute;
             top: 0;
@@ -371,16 +367,16 @@ export default function IgniteAchievements() {
           margin-bottom: 0.5rem;
         }
         
-.stat-divider {
-  width: 250px;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    rgba(0, 164, 145, 0.2),
-    rgba(0, 62, 55, 0.2)
-  );
-  border-radius: 2px;
-}
+      .stat-divider {
+        width: 250px;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          rgba(0, 164, 145, 0.2),
+          rgba(0, 62, 55, 0.2)
+        );
+        border-radius: 2px;
+      }
 
 
         
@@ -414,7 +410,7 @@ export default function IgniteAchievements() {
         }
         
         .stat-card-mobile {
-          text-align: center;
+          text-align: left;
           padding: 1.5rem 1rem;
         }
         
@@ -444,7 +440,7 @@ export default function IgniteAchievements() {
         /* Responsive adjustments */
         @media (max-width: 575px) {
           .stat-card-mobile .stat-number {
-            font-size: 2rem;
+            font-size: 1.6rem;
           }
           
           .stat-title-mobile {
@@ -454,6 +450,9 @@ export default function IgniteAchievements() {
           .stats-grid-mobile {
             padding: 1.5rem;
           }
+            .stat-content{
+            padding-bottom:10px;
+            }
         }
           @media (max-width: 575px) {
           .mobileign{
@@ -481,7 +480,11 @@ export default function IgniteAchievements() {
               margin:20px 0;
             }
             .stat-card-mobile{
-              padding:1rem 0;
+              padding:1rem;
+              position:relative;
+            }
+            .stat-card-mobile .stat-number:before{
+              top:10px;
             }
             .stat-title-mobile{
               font-size:0.9rem;
@@ -538,16 +541,16 @@ export default function IgniteAchievements() {
           margin-bottom: 0.5rem;
         }
         
-.stat-divider {
-  width: 200px;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    rgba(0, 164, 145, 0.2),
-    rgba(0, 62, 55, 0.2)
-  );
-  border-radius: 2px;
-}
+      .stat-divider {
+        width: 200px;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          rgba(0, 164, 145, 0.2),
+          rgba(0, 62, 55, 0.2)
+        );
+        border-radius: 2px;
+      }
 
 
         

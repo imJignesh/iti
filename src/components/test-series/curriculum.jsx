@@ -21,7 +21,7 @@ const IBCurriculumStages = () => {
       >
         <div className="d-flex justify-content-end pb-5">
           <img
-            src={isMobile ? "/assets/bgrect45.webp" : "/assets/bgrect27.webp"}
+            src={isMobile ? "/assets/bgrect27.webp" : "/assets/bgrect27.webp"}
             alt="bg-shape"
             className="testimonialRect rect-1"
             width={isMobile ? 185 : 811}
@@ -269,7 +269,7 @@ const IBCurriculumStages = () => {
         </div>
         <div className="d-flex justify-content-end pt-5">
           <img
-            src={isMobile ? "/assets/bgrect45.webp" : "/assets/bgrect27.webp"}
+            src={isMobile ? "/assets/bgrect27.webp" : "/assets/bgrect27.webp"}
             alt="bg-shape"
             className="testimonialRect rect-3"
             width={isMobile ? 185 : 811}
@@ -647,7 +647,7 @@ const IBCurriculumStages = () => {
         @media (max-width: 388px) {
           .rect-1 {
             top: 260% !important;
-            right: -44px !important;
+            right: 0 !important;
             width: 144px !important;
             height: 55px !important;
           }
@@ -660,7 +660,7 @@ const IBCurriculumStages = () => {
           }
           .rect-3 {
             bottom: -140% !important;
-            right: 296px !important;
+            right: 0 !important;
             width: 100px !important;
             height: 55px !important;
           }
@@ -745,23 +745,22 @@ const IBCurriculumStages = () => {
 
           .rect-1 {
             top: 319%;
-            right: -44px;
+            right: 0;
             width: 157px;
             height: 55px;
           }
 
           .rect-2 {
-            top: 146%;
-            left: 24px;
-            width: 279px;
-            height: 55px;
+              width: 220px;
+              height: 60px;
+              top: 32%;
+              left: -90px;
+              aspect-ratio: 321 / 170;
           }
 
           .rect-3 {
-            bottom: -200%;
-            right: 357px;
-            width: 100px;
-            height: 55px;
+            width: 190px;
+            height: 45px;
           }
 
           .curriculum-info {
@@ -859,23 +858,21 @@ const IBCurriculumStages = () => {
         }
         @media (max-width: 400px) {
           .rect-2 {
-            top: 137%;
-            left: 24px;
+            top: 30%;
+            left: -106px;
             width: 226px;
             height: 55px;
           }
           .rect-1 {
-            top: 268%;
-            right: -44px;
+         
             width: 157px;
             height: 55px;
           }
 
           .rect-3 {
-            top: 234%;
-            right: 328px;
+          
             width: 167px;
-            height: 72px;
+            height: 50px;
           }
         }
         .curriculum-col {
@@ -1001,12 +998,14 @@ const IBCurriculumStages = () => {
             padding-top: 15px;
           }
           .curriculum-info {
-            padding: 5px 30px;
+            padding: 5px 0;
           }
 
           .curriculum-section-heading1,
           .curriculum-section-heading2 {
             margin-bottom: 0;
+            text-align: left;
+            line-height: 1.2;
           }
         }
       `}</style>

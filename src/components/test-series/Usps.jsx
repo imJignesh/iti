@@ -19,7 +19,7 @@ const uspData = [
   {
     number: "01",
     icon: "/images/usp-icon1.webp",
-    title: "Language Mastery",
+    title: "Timed & Invigilated exam environment",
     desc: "Build strong English fluency with focused skills training.",
     width: 77,
     height: 67,
@@ -27,7 +27,7 @@ const uspData = [
   {
     number: "02",
     icon: "/images/usp-icon2.webp",
-    title: "Personalized Approach",
+    title: "Mix of important & high-weightage past paper questions",
     desc: "Customized lessons that match your learning style perfectly.",
     width: 67,
     height: 63,
@@ -35,7 +35,7 @@ const uspData = [
   {
     number: "03",
     icon: "/images/usp-icon3.webp",
-    title: "Cultural Insights",
+    title: "All question styles covered (MCQ, short & long answers)",
     desc: "Learn language in context through global cultural relevance.",
     width: 76,
     height: 69,
@@ -43,7 +43,7 @@ const uspData = [
   {
     number: "04",
     icon: "/images/usp-icon4.webp",
-    title: "Proven Results",
+    title: "Strict Adherence to curriculum-specific guidelines",
     desc: "Consistent academic success with top scores in English.",
     width: 66,
     height: 71,
@@ -91,7 +91,7 @@ export default function Usps({ }) {
   return (
     <>
       <div
-        className="usp-section sp-container"
+        className="usp-section blue sp-container"
       >
         <div
           className={`fade-in-section ${styles.uspSection}`}
@@ -115,7 +115,7 @@ export default function Usps({ }) {
                   data-scroll-repeat
                   style={{ animationDelay: "0.1s" }}
                 >
-                  OUR PROMISE
+                  FEATURES
                 </h2>
 
                 <h3
@@ -127,7 +127,28 @@ export default function Usps({ }) {
                 >
                   What Do Students Get From Ignite's Test Series?
                 </h3>
+                <h4
+                  // Apply local module class
+                  className={`fade-in-section ${styles.uspSubtitle}`}
+                  data-scroll
+                  data-scroll-class="is-inview"
 
+                  style={{ animationDelay: "0.3s" }}
+                >
+                  Lorem ipsum dolor sit amet
+                </h4>
+
+                {/* 1. DESKTOP TEXT */}
+                <p
+                  // Apply local module class and global Bootstrap classes
+                  className={`fade-in-section ${styles.uspDesc} d-none d-lg-block`}
+                  data-scroll
+                  data-scroll-class="is-inview"
+
+                  style={{ animationDelay: "0.4s" }}
+                >
+                  Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.We offer personalized strategies, proven methods, and unwavering support to help you navigate challenges.
+                </p>
                 <a
                   href="/about-us/"
                   className={`${styles.uspBtn} fade-in-section buttonSkyBlue`}
@@ -136,7 +157,7 @@ export default function Usps({ }) {
                   data-scroll-repeat
                   style={{ animationDelay: "0.5s" }}
                 >
-                  KNOW MORE ABOUT IGNITE{" "}
+                  KNOW MORE
                   <Image
                     src="/images/right-arrow-blue.webp"
                     width={40}
