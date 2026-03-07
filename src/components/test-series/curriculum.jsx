@@ -880,7 +880,7 @@ const IBCurriculumStages = () => {
           border-bottom-left-radius: 20px;
           padding: 30px 30px 50px 30px;
           padding-right: 100px;
-          height: -webkit-fill-available;
+          height: auto;
         }
         .curriculum-col-left {
           background: url("/assets/turg.webp") no-repeat center center;
