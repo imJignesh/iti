@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const subjectRows = [
   ["Mathematics", "English Language"],
   ["English Literature", "Physics", "Chemistry"],
-  ["Biology", "Economics", "Spanish"],
+  ["Biology", "Economics", "Business Studies"],
   ["Accounting", "Computer Science"],
 ];
 
@@ -43,7 +43,7 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <h2 className="SubHeading testSubheading">SUBJECTS COVERED
+            <h2 className="SubHeading testSubheading">Maximize Your Grades
             </h2>
           </div>
           <h3
@@ -68,7 +68,7 @@ export default function SubjectsCard1({ }) {
               fontSize: "1rem",
               lineHeight: isMobile ? "1.3" : "1.2",
             }}>
-            Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.
+            Comprehensive coverage designed to maximize your final exam performance with Ignite.
           </p>
         </div>
       </div>

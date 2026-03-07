@@ -28,29 +28,95 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "What qualifications do Ignite’s English tutors hold?",
-      answer:
-        "Our English tutors at Ignite are seasoned professionals with advanced degrees in English and extensive teaching experience across IGCSE, A-Level, IB, AP, ACT, and university preparation programs",
+      question: "What is an IGCSE, A Levels, and IBDP Test Series in Dubai?",
+      answer: () => (
+        <>An IGCSE, A Levels, and IBDP Test Series in Dubai is a structured mock exam program designed to help students practice under real exam conditions. It includes subject-wise tests, full-length mock exams, and detailed performance analysis aligned with official board standards.</>
+      ),
     },
     {
-      question: "Are tutoring sessions available online & in person?",
-      answer:
-        "Absolutely, Ignite offers both online and in-person English tutoring sessions in Dubai, catering to students’ preferred learning environments and schedules",
+      question: "Which exam boards does the test series cover?",
+      answer: () => (
+        <>
+          Our test papers are strictly aligned with major international boards, including:
+          <ul>
+            <li>Cambridge Assessment International Education</li>
+            <li>Pearson Edexcel</li>
+            <li>Oxford International AQA Examinations</li>
+            <li>International Baccalaureate Organization</li>
+          </ul>
+          This ensures complete curriculum-specific accuracy and updated marking standards.
+        </>
+      ),
     },
     {
-      question: "Do you offer one-on-one support as well as group tutoring?",
-      answer:
-        "Yes, we offer both personalized one-on-one tutoring and small group English classes, allowing students to choose the format that best matches their learning style and goals",
+      question: "Is the test series suitable for students aiming for top scores (7 in IB or A* in A Levels)?",
+      answer: () => (
+        <>Yes, advanced-level mock exams challenge high-achieving students with application-based and higher-order thinking questions. This prepares them to aim for top grades like 7/7 in IB and A* in A Levels.</>
+      ),
     },
     {
-      question: "How is student progress monitored during tutoring?",
-      answer:
-        "We track progress through regular assignments, quizzes, and feedback sessions to ensure steady improvement and identify areas that require further focus",
+      question: "Can students enroll in subject-specific test series in Dubai?",
+      answer: () => (
+        <>Yes, students can choose subject-specific test series for core subjects like Mathematics, Physics, Chemistry, Biology, Economics, and English. This flexibility allows focused preparation where improvement is most needed.</>
+      ),
     },
     {
-      question: "How can I book an English tutoring session at Ignite?",
-      answer:
-        "Schedule a free demo class to experience our teaching approach firsthand. After your request, we’ll match you with an expert English tutor based on your academic level and learning goals.",
+      question: "Are mock exams conducted under real exam conditions?",
+      answer: () => (
+        <>Yes, most IGCSE, A Levels, and IB Diploma Test Series programs in Dubai conduct exams in strict, timed conditions to mirror the actual board examination environment. This helps reduce exam anxiety and improve performance under pressure.</>
+      ),
+    },
+    {
+      question: "How does a test series help IGCSE students improve their grades?",
+      answer: () => (
+        <>An IGCSE Test Series in Dubai helps students identify weak areas, improve time management, and gain exam confidence. Regular practice with past-paper-style questions ensures better accuracy and familiarity with Cambridge and Edexcel exam patterns.</>
+      ),
+    },
+    {
+      question: "Is the A Level test series aligned with the different exam boards?",
+      answer: () => (
+        <>Yes, the A Level Test Series in Dubai is typically aligned with leading boards such as Cambridge Assessment International Education, Pearson Edexcel, & OxfordAQA, ensuring students practice in line with the latest syllabus updates and marking schemes.</>
+      ),
+    },
+    {
+      question: "How is an IBDP test series different from regular tuition classes?",
+      answer: () => (
+        <>An IBDP Test Series focuses specifically on exam practice rather than concept teaching. It includes timed mock exams, examiner-style feedback, and grading based on International Baccalaureate Organization assessment criteria to simulate the real Diploma Programme experience.</>
+      ),
+    },
+    {
+      question: "Does a test series improve predicted grades for university applications?",
+      answer: () => (
+        <>Yes, consistent performance in mock exams can help teachers assess academic progress more accurately. Improved test results can positively impact predicted grades, which are crucial for competitive university admissions.</>
+      ),
+    },
+    {
+      question: "Can private candidates in Dubai join the test series?",
+      answer: () => (
+        <>Yes, private candidates appearing for IGCSE, A Levels, or IB Diploma exams in Dubai can enroll in test series programs to practice in a structured and guided environment.</>
+      ),
+    },
+    {
+      question: "Will students receive detailed feedback after each test?",
+      answer: () => (
+        <>
+          Absolutely. Each paper is corrected using official marking standards with:
+          <ul>
+            <li>Examiner-style comments</li>
+            <li>Topic-wise score breakdown</li>
+            <li>Strength & weakness mapping</li>
+            <li>Predicted grade estimation</li>
+            <li>Improvement strategy guidance (on request)</li>
+          </ul>
+          This helps students make targeted improvements before the final exams.
+        </>
+      ),
+    },
+    {
+      question: "How early should students join the Test Series before the May 2026 exams?",
+      answer: () => (
+        <>Starting from March 2026 allows students approximately 8–10 weeks of structured assessment, correction cycles, and performance refinement, ideal for maximizing final board exam scores.</>
+      ),
     },
   ];
 
@@ -106,8 +172,7 @@ const FAQSection = () => {
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "2rem"
               }}
             >
-
-              Your Questions About <span className="highlight"> Test Series </span> Tutoring In Dubai Answered
+              Got Questions? We’ve <span className="highlight">Answered Them</span>
             </h3>
 
             <p
@@ -126,7 +191,7 @@ const FAQSection = () => {
                 marginBottom: isMobile ? "15px" : "20px"
               }}
             >
-              Learn how Ignite’s expert tutors help improve your exam performance with our Test Series.
+              Get clarity on how the Test Series works, what students can expect, and how it supports better final exam performance.
             </p>
           </div>
 
@@ -186,7 +251,7 @@ const FAQSection = () => {
                     maxHeight: openIndex === index ? "10rem" : "0",
                   }}
                 >
-                  <p
+                  <div
                     style={{
                       color: "#64748b",
                       paddingRight: "1.5rem",
@@ -194,8 +259,8 @@ const FAQSection = () => {
                       lineHeight: isMobile ? "1.4" : "1.2"
                     }}
                   >
-                    {faq.answer}
-                  </p>
+                    {typeof faq.answer === 'function' ? faq.answer() : faq.answer}
+                  </div>
                 </div>
               </div>
             ))}

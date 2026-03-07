@@ -15,7 +15,7 @@ const IBCurriculumStages = () => {
               style={{ animationDelay: "0.1s" }}
             >
               <h2 className="SubHeading">
-                WHY THE NEED?
+                Final Exam Success Requires Strategy, Not Just Revision
               </h2>
             </div>
             <div
@@ -49,7 +49,7 @@ const IBCurriculumStages = () => {
                 data-scroll-repeat
                 className="fade-in-section"
                 style={{ animationDelay: "0.25s" }}
-              >Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.</p>
+              >Our structured test series ensures students are guided, challenged, & strategically prepared to perform at their highest potential.</p>
             </div>
           </div>
           <div className="row fade-in-section"
@@ -68,11 +68,11 @@ const IBCurriculumStages = () => {
 
                   }}
                 >
-                  <span className="highlight">Identifies weak areas early </span>
+                  <span className="highlight">IDENTIFIES WEAK AREAS EARLY</span>
                 </p>
                 <div className="row gy-3">
                   <div className="curriculum-info">
-                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <p>Pinpoints gaps before final exam pressure</p>
                   </div>
                 </div>
               </div>
@@ -89,12 +89,12 @@ const IBCurriculumStages = () => {
 
                   }}
                 >
-                  Exposure to mark schemes
+                  EXPOSURE TO MARK SCHEMES
                 </p>{" "}
 
                 <div className="row gy-3">
                   <div className="curriculum-info">
-                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <p>Grasps examiner expectations & scoring criteria</p>
                   </div>
                 </div>
               </div>
@@ -111,12 +111,12 @@ const IBCurriculumStages = () => {
 
                   }}
                 >
-                  Improves speed & time management
+                  IMPROVES SPEED & TIME MANAGEMENT
                 </p>{" "}
 
                 <div className="row gy-3">
                   <div className="curriculum-info">
-                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <p>Enhances accuracy within strict exam time</p>
                   </div>
                 </div>
               </div>
@@ -133,11 +133,11 @@ const IBCurriculumStages = () => {
 
                   }}
                 >
-                  <span className="highlight">Reduces exam anxiety</span>
+                  <span className="highlight">REDUCES EXAM ANXIETY</span>
                 </p>
                 <div className="row gy-3">
                   <div className="curriculum-info">
-                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <p>Familiarity reduces stress & uncertainty</p>
                   </div>
                 </div>
               </div>
@@ -154,11 +154,11 @@ const IBCurriculumStages = () => {
 
                   }}
                 >
-                  <span className="highlight">Builds real exam confidence </span>
+                  <span className="highlight">BUILDS REAL TIME CONFIDENCE</span>
                 </p>
                 <div className="row gy-3">
                   <div className="curriculum-info">
-                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <p>Strengthens performance under timed conditions</p>
                   </div>
                 </div>
               </div>
@@ -175,12 +175,12 @@ const IBCurriculumStages = () => {
 
                   }}
                 >
-                  Helps students rank themselves competitively
+                  ENABLES COMPETITIVE SELF-RANKING
                 </p>{" "}
 
                 <div className="row gy-3">
                   <div className="curriculum-info">
-                    <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <p>Ranking across Dubai & UAE students</p>
                   </div>
                 </div>
               </div>

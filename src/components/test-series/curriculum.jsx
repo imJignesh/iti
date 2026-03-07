@@ -38,7 +38,7 @@ const IBCurriculumStages = () => {
               style={{ animationDelay: "0.1s" }}
             >
               <h2 className="SubHeading">
-                STRUCTURE
+                Step-By-Step Assessment Plan
               </h2>
             </div>
             <div
@@ -218,7 +218,7 @@ const IBCurriculumStages = () => {
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
                       >
-                        Strength & Weakness Mapping
+                        2 Sets Of Past Papers (4 papers)
                       </a>
                     </h3>
                   </div>
@@ -238,7 +238,7 @@ const IBCurriculumStages = () => {
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none", color: "inherit" }}
                       >
-                        Ignite 2026 Predicted Paper (2 papers)
+                        1 Ignite 2026 Predicted Paper (2 papers)
                       </a>
                     </h3>
                   </div>

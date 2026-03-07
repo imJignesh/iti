@@ -10,7 +10,7 @@ export default function InfoCardLeft() {
                 data-scroll-class="is-inview"
                 data-scroll-repeat
             >
-                Ace Your May 2026 Final Exams With Ignite’s Structured Test Series
+                Ace Your 2026 Final Exams With Ignite’s Structured Test Series
             </h1>
             <div className="divider desktop-fade-in"
                 data-scroll
@@ -26,7 +26,7 @@ export default function InfoCardLeft() {
                 data-scroll-class="is-inview"
                 data-scroll-repeat
             >
-                IGCSE, A-Levels & IBDP | Starting 1st March 2026
+                IGCSE, A-Levels & IBDP | 12th March To 30th June 2026
             </h2>
 
             <div
@@ -111,8 +111,7 @@ export default function InfoCardLeft() {
                             className="icon-img icon-img-3"
                         />
                     </span>
-                    Ranking Across <br />Dubai & UAE
-
+                    In Person At <br />DIFC & JLT
                 </h3>
 
             </div>
@@ -130,7 +129,7 @@ export default function InfoCardLeft() {
                     opacity: "0.9",
                 }}
             >
-                We provide comprehensive academic support through our customized IB curriculum courses, giving students access to high-end learning with experienced and certified IB tutors across various IB subjects.
+                Prepare smarter for your final exams through real exam simulations, detailed performance analysis, & competitive ranking to maximize your final scores.
             </p>
 
             <div className="d-flex gap-3 btnwraper desktop-fade-in"
@@ -155,7 +154,7 @@ export default function InfoCardLeft() {
                         }}
                     >
                         <span style={{ letterSpacing: "0px" }}>
-                            RESERVE YOUR TEST SLOTS NOW
+                            Reserve Your Test Slots Now
                         </span>
                         <img
                             src="/assets/rar.webp"

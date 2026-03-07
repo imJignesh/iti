@@ -33,7 +33,7 @@ export default function IgniteAchievements() {
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.2s" }}>
-          <h2 className="SubHeading testSubheading">TARGET AUDIENCE
+          <h2 className="SubHeading testSubheading">The Smart Final Push
           </h2>
 
           {/* Main Title */}
@@ -45,7 +45,7 @@ export default function IgniteAchievements() {
             style={{ animationDelay: "0.2s" }}
           >
 
-            Who Is This  <span className="highlight"> Test Series </span>for ?
+            Who Is This  <span className="highlight"> Test Series </span>for?
 
           </h3>
 
@@ -62,7 +62,7 @@ export default function IgniteAchievements() {
               fontSize: "0.9rem",
               lineHeight: isMobile ? "1.3" : "1.2",
             }}>
-            Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.
+            Designed specifically for May–June 2026 final exam students seeking structured preparation and higher score outcomes.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function IgniteAchievements() {
                   <h2 className="SubHeading testSubheading fade-in-section"
                     data-scroll
                     data-scroll-class="is-inview"
-                    data-scroll-repeat>TARGET AUDIENCE
+                    data-scroll-repeat>The Smart Final Push
                   </h2>
                 </div>
 
@@ -95,7 +95,7 @@ export default function IgniteAchievements() {
                   className="fade-in-section testTitle"
 
                 >
-                  Who Is This  <span className="highlight"> Test Series </span>for ?
+                  Who Is This  <span className="highlight"> Test Series </span>for?
                 </h3>
 
 
@@ -112,7 +112,7 @@ export default function IgniteAchievements() {
                     fontSize: "1.2rem",
                     marginTop: "16px",
                   }}>
-                  Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.
+                  Designed specifically for May–June 2026 final exam students seeking structured preparation and higher score outcomes.
                 </p>
               </div>
 

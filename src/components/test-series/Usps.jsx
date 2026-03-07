@@ -20,7 +20,7 @@ const uspData = [
     number: "01",
     icon: "/images/usp-icon1.webp",
     title: "Timed & Invigilated exam environment",
-    desc: "Build strong English fluency with focused skills training.",
+    desc: "",
     width: 77,
     height: 67,
   },
@@ -28,7 +28,7 @@ const uspData = [
     number: "02",
     icon: "/images/usp-icon2.webp",
     title: "Mix of important & high-weightage past paper questions",
-    desc: "Customized lessons that match your learning style perfectly.",
+    desc: "",
     width: 67,
     height: 63,
   },
@@ -36,7 +36,7 @@ const uspData = [
     number: "03",
     icon: "/images/usp-icon3.webp",
     title: "All question styles covered (MCQ, short & long answers)",
-    desc: "Learn language in context through global cultural relevance.",
+    desc: "",
     width: 76,
     height: 69,
   },
@@ -44,39 +44,55 @@ const uspData = [
     number: "04",
     icon: "/images/usp-icon4.webp",
     title: "Strict Adherence to curriculum-specific guidelines",
-    desc: "Consistent academic success with top scores in English.",
+    desc: "",
     width: 66,
     height: 71,
   },
   {
     number: "05",
     icon: "/images/usp-icon5.webp",
-    title: "Interactive Learning",
-    desc: "Engaging sessions that truly bring language to life.",
+    title: "Detailed correction with examiner-style marking & feedback",
+    desc: "",
     width: 78,
     height: 74,
   },
   {
     number: "06",
     icon: "/images/usp-icon6.webp",
-    title: "Flexible Sessions",
-    desc: "Online or in-person classes that perfectly fit your schedule.",
+    title: "Mark schemes with report card & predicted grades",
+    desc: "",
     width: 76,
     height: 78,
   },
   {
     number: "07",
     icon: "/images/usp-icon1.webp",
-    title: "Tailored Guidance",
-    desc: "Curriculum-specific support based on goals and abilities.",
+    title: "Flexible scheduling around student availability",
+    desc: "",
     width: 77,
     height: 67,
   },
   {
     number: "08",
     icon: "/images/usp-icon2.webp",
-    title: "Exam Excellence",
-    desc: "Targeted preparation for top performance in English exams.",
+    title: "Personalized doubt & revision sessions (on request)",
+    desc: "",
+    width: 67,
+    height: 63,
+  },
+  {
+    number: "09",
+    icon: "/images/usp-icon2.webp",
+    title: "Compete with UAE students & get percentile ranking",
+    desc: "",
+    width: 67,
+    height: 63,
+  },
+  {
+    number: "10",
+    icon: "/images/usp-icon2.webp",
+    title: "Per-subject pricing with multi-subject discounts",
+    desc: "",
     width: 67,
     height: 63,
   },
@@ -115,7 +131,7 @@ export default function Usps({ }) {
                   data-scroll-repeat
                   style={{ animationDelay: "0.1s" }}
                 >
-                  FEATURES
+                  The Extra Edge
                 </h2>
 
                 <h3
@@ -125,7 +141,7 @@ export default function Usps({ }) {
                   data-scroll-repeat
                   style={{ animationDelay: "0.2s" }}
                 >
-                  What Do Students Get From Ignite's Test Series?
+                  What Makes Ignite’s Test Series Different?
                 </h3>
                 <h4
                   // Apply local module class
@@ -135,7 +151,7 @@ export default function Usps({ }) {
 
                   style={{ animationDelay: "0.3s" }}
                 >
-                  Lorem ipsum dolor sit amet
+                  Not Just Tests, Real Preparation
                 </h4>
 
                 {/* 1. DESKTOP TEXT */}
@@ -147,7 +163,7 @@ export default function Usps({ }) {
 
                   style={{ animationDelay: "0.4s" }}
                 >
-                  Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.We offer personalized strategies, proven methods, and unwavering support to help you navigate challenges.
+                  Choosing Ignite means partnering with experienced subject-specialist coaches who understand exam patterns, marking standards, and scoring strategies.
                 </p>
                 <a
                   href="/about-us/"

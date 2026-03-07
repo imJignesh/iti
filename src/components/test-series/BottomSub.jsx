@@ -15,16 +15,16 @@ export default function CallToAction() {
           <div className="desktop-only desktopLayout text-uppercase">
             <div className="textSection">
               <h2 className="heading">
-                Your Final Exams Decide Your University Future. Prepare Like It Matters
+                Make Your Finals Attempt Your Strongest One
               </h2>
 
               <p className="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                Secure your place in Ignite’s structured Test Series to gain the preparation, strategy, and competitive edge needed to perform at your absolute best in May 2026.
               </p>
-              <a href="/courses">
+              <a href="/contact-us">
                 <button className="cta-button">
                   <span className="text-uppercase">
-                    explore our tutoring course
+                    Connect With Us Now
                   </span>
                   <div className="buttonIcon">
                     <ArrowRight size={20} />
@@ -49,18 +49,18 @@ export default function CallToAction() {
           <div className="mobile-only mobileLayout text-uppercase">
             <div className="mobileTextSection">
               <p className="mobileHeading">
-                Your Final Exams Decide Your University Future. Prepare Like It Matters
+                Make Your Finals Attempt Your Strongest One
               </p>
 
               <p className="mobileParagraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                Secure your place in Ignite’s structured Test Series to gain the preparation, strategy, and competitive edge needed to perform at your absolute best in May 2026.
               </p>
 
               <div className="mobileButtonContainer">
-                <a href="/courses">
+                <a href="/contact-us">
                   <button className="mobileButton">
                     <span className="text-uppercase mobileButtonText">
-                      EXPLORE OUR TUTORING COURSES
+                      Connect With Us Now
                     </span>
                     <div className="mobileButtonIcon">
                       <ArrowRight size={18} />
