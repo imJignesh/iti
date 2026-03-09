@@ -21,17 +21,26 @@ export default function CallToAction() {
               <p className="paragraph">
                 Secure your place in Ignite’s structured Test Series to gain the preparation, strategy, and competitive edge needed to perform at your absolute best in May 2026.
               </p>
-              <a href="/contact-us">
-                <button className="cta-button">
-                  <span className="text-uppercase">
-                    Connect With Us Now
-                  </span>
-                  <div className="buttonIcon">
-                    <ArrowRight size={20} />
-                  </div>
+              <button
+                className="cta-button"
+                onClick={() => {
+                  const el = document.querySelector('.hero-section');
+                  if (el) {
+                    const y = el.getBoundingClientRect().top + window.scrollY - 100; // Offset for header visibility
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                  } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
+              >
+                <span className="text-uppercase">
+                  Connect With Us Now
+                </span>
+                <div className="buttonIcon">
+                  <ArrowRight size={20} />
+                </div>
 
-                </button>
-              </a>
+              </button>
             </div>
 
             <div className="imageSection">
@@ -57,16 +66,25 @@ export default function CallToAction() {
               </p>
 
               <div className="mobileButtonContainer">
-                <a href="/contact-us">
-                  <button className="mobileButton">
-                    <span className="text-uppercase mobileButtonText">
-                      Connect With Us Now
-                    </span>
-                    <div className="mobileButtonIcon">
-                      <ArrowRight size={18} />
-                    </div>
-                  </button>
-                </a>
+                <button
+                  className="mobileButton"
+                  onClick={() => {
+                    const el = document.querySelector('.hero-section');
+                    if (el) {
+                      const y = el.getBoundingClientRect().top + window.scrollY - 100; // Offset for header visibility
+                      window.scrollTo({ top: y, behavior: 'smooth' });
+                    } else {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  <span className="text-uppercase mobileButtonText">
+                    Connect With Us Now
+                  </span>
+                  <div className="mobileButtonIcon">
+                    <ArrowRight size={18} />
+                  </div>
+                </button>
               </div>
             </div>
           </div>
