@@ -18,7 +18,7 @@ export default function InfoCardForm() {
         school: "",
         grade: "",
         message: "",
-        formType: "Organic_Curriculum", // Standard for this section
+        formType: "TestSeries", // Standard for this section
     });
 
     // New state for validation errors

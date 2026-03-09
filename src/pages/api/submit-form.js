@@ -26,6 +26,13 @@ export default async function handler(req, res) {
     const FORM_CONFIGS = [
         // Add this inside the FORM_CONFIGS array in submit-form.js
         {
+            type: 'TestSeries',
+            slugs: ["/test-series"],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/TestSeries/formperma/3tyreWSJDDoP89gAcnlvfyv54UlR9HkdE5OPlCqVEEQ/htmlRecords/submit',
+            fieldMap: { name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode', grade: 'SingleLine3', school: 'SingleLine1', message: 'MultiLine', pageinfo: 'SingleLine2' },
+            redirectUrl: '/thank-you-organic',
+        },
+        {
             type: 'NEWSLETTER',
             slugs: [],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Newsletter/formperma/SllpnKEoYnsphGyGPZQ-ZFV4xNvQE0MU9hiSCzjd2vo/htmlRecords/submit',
