@@ -225,7 +225,7 @@ export default function CallToAction() {
         }
 
         .mobileHeading {
-          font-size: 2rem;
+          font-size: 1.7rem;
           font-weight: bold;
           color: white;
           margin-bottom: 1.5rem;
