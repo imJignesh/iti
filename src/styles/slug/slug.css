@@ -895,3 +895,14 @@ body.has-highlighted-video::before {
         display: none;
     }
 }
+
+.desktop-gif-banner {
+    max-width: 100% !important;
+    height: auto;
+}
+
+@media(min-width: 768px) {
+    .desktop-gif-banner {
+        width: 100% !important;
+    }
+}

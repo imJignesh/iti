@@ -193,6 +193,17 @@ const TOCPostContent = ({ content, toc }) => {
             </div>
         `;
 
+        const gifHeaderHtml = `
+            <div class="blog-banner-wrapper my-5 highlight-on-scroll" data-scroll data-scroll-call="video-highlight" data-scroll-repeat="true">
+                <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="/videos/bnr-d.gif" />
+                        <img src="/videos/bnr1-m.gif" alt="Promo Banner" class="img-fluid desktop-gif-banner rounded" />
+                    </picture>
+                </a>
+            </div>
+        `;
+
         const video1Html = `
             <div class="blog-video-wrapper my-5 highlight-on-scroll" data-scroll data-scroll-call="video-highlight" data-scroll-repeat="true">
                 <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
@@ -241,6 +252,13 @@ const TOCPostContent = ({ content, toc }) => {
             const video1TempDiv = document.createElement('div');
             video1TempDiv.innerHTML = video1Html.trim();
             thirdH2.parentNode.insertBefore(video1TempDiv.firstChild, thirdH2);
+        }
+
+        const secondH2 = allH2s[1];
+        if (secondH2) {
+            const gifTempDiv = document.createElement('div');
+            gifTempDiv.innerHTML = gifHeaderHtml.trim();
+            secondH2.parentNode.insertBefore(gifTempDiv.firstChild, secondH2);
         }
 
         let newContent = tempDiv.innerHTML;
