@@ -52,7 +52,7 @@ const IBCurriculumStages = () => {
               >Our structured test series ensures students are guided, challenged, & strategically prepared to perform at their highest potential.</p>
             </div>
           </div>
-          <div className="row fade-in-section"
+          <div className="row fade-in-section structured-test-series-row"
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat>

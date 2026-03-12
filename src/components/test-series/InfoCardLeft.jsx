@@ -1,7 +1,14 @@
 "use client";
 import Image from "next/image";
 
-export default function InfoCardLeft() {
+export default function InfoCardLeft({ onReserveClick }) {
+    const handleClick = (e) => {
+        if (onReserveClick) {
+            e.preventDefault();
+            onReserveClick();
+        }
+    };
+
     return (
         <div className="col-lg-8 d-flex flex-column justify-content-center pe-lg-4 p-4 left-content v100">
             <h1
@@ -139,6 +146,7 @@ export default function InfoCardLeft() {
                 <a
                     href="/join-free-demo-class/"
                     style={{ textDecoration: "none" }}
+                    onClick={handleClick}
                 >
                     <button
                         className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow left-btn"
@@ -365,9 +373,9 @@ export default function InfoCardLeft() {
              .text-white.mb-4:last-of-type {
                 padding: 1rem !important;
                 line-height: 1.6 !important;
-             }
-              .info-row{ margin-top:1rem !important; }
-              .cust-text {
+              }
+               .info-row{ margin-top:1rem !important; }
+               .cust-text {
                 padding: 8px 15px 8px 15px !important;
                 border: none !important;
                 transition: opacity .3s ease !important;
@@ -375,13 +383,13 @@ export default function InfoCardLeft() {
                 font-size: 1rem !important;
                 margin:10px auto!important;
                 min-width: auto !important;
-              }
-              .custom-height {
+               }
+               .custom-height {
                 width: 30px !important;
                 height: 30px !important;
                 animation-delay: 0.75s !important;
                 margin-left: 1rem !important;
-              }
+               }
         }
         
         @media (max-width: 380px) {

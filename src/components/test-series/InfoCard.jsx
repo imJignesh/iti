@@ -1,7 +1,17 @@
+"use client";
+import { useRef } from "react";
 import InfoCardLeft from "./InfoCardLeft";
 import InfoCardForm from "./InfoCardForm";
 
 export default function InfoCard() {
+  const formRef = useRef(null);
+
+  const handleReserveClick = () => {
+    if (formRef.current) {
+      formRef.current.triggerShake();
+    }
+  };
+
   return (
     <div className="info-card-container">
       <div
@@ -14,10 +24,10 @@ export default function InfoCard() {
         <div className="position-relative h-100" style={{ zIndex: 1 }}>
           <div className="row g-0 h-100">
             {/* Left Section (Static Text - LCP Optimized) */}
-            <InfoCardLeft />
+            <InfoCardLeft onReserveClick={handleReserveClick} />
 
             {/* Right Section (Interactive Form) */}
-            <InfoCardForm />
+            <InfoCardForm ref={formRef} />
           </div>
         </div>
       </div>

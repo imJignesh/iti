@@ -1,14 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useImperativeHandle, forwardRef, useRef } from "react";
 import dynamic from "next/dynamic";
 const GlobalPhoneInput = dynamic(() => import('../GlobalPhoneInput'), {
     ssr: false,
     loading: () => <div style={{ height: '50px', width: '100%', borderRadius: '40px', border: '1.5px solid rgba(255,255,255,0.3)' }} />
 });
 
-export default function InfoCardForm() {
+const InfoCardForm = forwardRef((props, ref) => {
     const [isMobile, setIsMobile] = useState(false);
     const [pageInfo, setPageInfo] = useState('');
+    const [isShaking, setIsShaking] = useState(false);
+    const nameInputRef = useRef(null);
 
     // Form Data
     const [formData, setFormData] = useState({
@@ -26,6 +28,19 @@ export default function InfoCardForm() {
 
     const [loading, setLoading] = useState(false);
     const [submissionStatus, setSubmissionStatus] = useState(null);
+
+    // Expose triggerShake to parent
+    useImperativeHandle(ref, () => ({
+        triggerShake: () => {
+            setIsShaking(true);
+            if (nameInputRef.current) {
+                nameInputRef.current.focus({ preventScroll: true });
+            }
+            setTimeout(() => {
+                setIsShaking(false);
+            }, 500);
+        }
+    }));
 
     const handlePhoneChange = (value) => {
         setFormData((prevData) => ({
@@ -151,22 +166,21 @@ export default function InfoCardForm() {
 
     return (
         <div
-            className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center fade-in-section position-relative right-form"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{ animationDelay: "0.6s" }}
+            className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center position-relative right-form"
+            style={{
+                opacity: 1,
+                visibility: 'visible',
+                animation: 'simpleFadeIn 0.8s ease-out forwards',
+                animationDelay: "0.6s"
+            }}
         >
-            <div className="w-100 text-white form-container">
+            <div className={`w-100 text-white form-container ${isShaking ? 'shake-animation' : ''}`}>
                 <form onSubmit={handleSubmit}>
 
                     <input type="hidden" name="pageinfo" value="" />
                     <p
-                        className="fw-bold text-uppercase mb-4 fade-in-section text-center form-heading"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
-                        style={{ animationDelay: "0.65s" }}
+                        className="fw-bold text-uppercase mb-4 text-center form-heading"
+                        style={{ opacity: 1 }}
                     >
                         GET A FREE DEMO CLASS+ FREE STUDY RESOURCES
                     </p>
@@ -182,13 +196,11 @@ export default function InfoCardForm() {
                     )}
 
                     <div
-                        className="mb-3 fade-in-section"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
-                        style={{ animationDelay: "0.7s" }}
+                        className="mb-3"
+                        style={{ opacity: 1 }}
                     >
                         <input
+                            ref={nameInputRef}
                             type="text"
                             name="name"
                             value={formData.name}
@@ -206,11 +218,8 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="row g-2 mb-3 fade-in-section"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
-                        style={{ animationDelay: "0.75s" }}
+                        className="row g-2 mb-3"
+                        style={{ opacity: 1 }}
                     >
                         <div className="col-6">
                             <input
@@ -239,11 +248,8 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-3 fade-in-section"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
-                        style={{ animationDelay: "0.77s" }}
+                        className="mb-3"
+                        style={{ opacity: 1 }}
                     >
                         <input
                             type="text"
@@ -263,11 +269,8 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-3 fade-in-section"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
-                        style={{ animationDelay: "0.8s" }}
+                        className="mb-3"
+                        style={{ opacity: 1 }}
                     >
                         <input
                             type="text"
@@ -287,11 +290,8 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-4 fade-in-section"
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
-                        style={{ animationDelay: "0.85s" }}
+                        className="mb-4"
+                        style={{ opacity: 1 }}
                     >
                         <textarea
                             name="message"
@@ -313,10 +313,7 @@ export default function InfoCardForm() {
                     <button
                         type="submit"
                         disabled={loading}
-                        data-scroll
-                        data-scroll-class="is-inview"
-                        data-scroll-repeat
-                        className="fade-in-section btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
+                        className="btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
                         style={{
                             background: "transparent",
                             color: "white",
@@ -325,7 +322,7 @@ export default function InfoCardForm() {
                             border: "1.5px solid rgba(255, 255, 255, 0.7)",
                             borderRadius: "40px",
                             transition: "all 0.3s ease",
-                            animationDelay: "0.85s"
+                            opacity: 1
                         }}
                     >
                         {loading ? 'SUBMITTING...' : 'SUBMIT'}
@@ -340,6 +337,23 @@ export default function InfoCardForm() {
             </div>
 
             <style jsx>{`
+        @keyframes simpleFadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        .shake-animation {
+          animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+
+        @keyframes shake {
+          10%, 90% { transform: translateX(-1px); }
+          20%, 80% { transform: translateX(2px); }
+          30%, 50%, 70% { transform: translateX(-4px); }
+          40%, 60% { transform: translateX(4px); }
+          100% { transform: translateX(0); }
+        }
+
         .form-control::placeholder {
           color: #ffffff !important;
           opacity: 0.5;
@@ -532,4 +546,6 @@ export default function InfoCardForm() {
       `}</style>
         </div>
     );
-}
+});
+
+export default InfoCardForm;
