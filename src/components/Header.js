@@ -142,6 +142,9 @@ const Header = ({ setHeaderHeight }) => {
                                     <div className={styles.megaMenuLeft}>
                                         <h3><span>03</span><a href='/courses/homeschooling-tutors-in-dubai'> Homeschooling<div><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></div></a></h3>
                                     </div>
+                                    <div className={styles.megaMenuLeft}>
+                                        <h3><span>03</span><a href='/test-series'> Test Series<div><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></div></a></h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>

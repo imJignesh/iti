@@ -169,9 +169,7 @@ const InfoCardForm = forwardRef((props, ref) => {
             className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center position-relative right-form"
             style={{
                 opacity: 1,
-                visibility: 'visible',
-                animation: 'simpleFadeIn 0.8s ease-out forwards',
-                animationDelay: "0.6s"
+                visibility: 'visible'
             }}
         >
             <div className={`w-100 text-white form-container ${isShaking ? 'shake-animation' : ''}`}>
@@ -337,11 +335,6 @@ const InfoCardForm = forwardRef((props, ref) => {
             </div>
 
             <style jsx>{`
-        @keyframes simpleFadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-
         .shake-animation {
           animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
         }
