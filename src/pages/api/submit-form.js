@@ -31,6 +31,7 @@ export default async function handler(req, res) {
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/TestSeries/formperma/3tyreWSJDDoP89gAcnlvfyv54UlR9HkdE5OPlCqVEEQ/htmlRecords/submit',
             fieldMap: { name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode', grade: 'SingleLine3', school: 'SingleLine1', message: 'MultiLine', pageinfo: 'SingleLine2' },
             redirectUrl: '/thank-you-organic',
+            brevoListId: 16,
         },
         {
             type: 'NEWSLETTER',
@@ -177,7 +178,7 @@ export default async function handler(req, res) {
                     FIRSTNAME: name || '',
                     // SMS: cleanPhone
                 },
-                listIds: [12],
+                listIds: submittedFormConfig.brevoListId ? [submittedFormConfig.brevoListId] : [12],
                 updateEnabled: true
             };
 
