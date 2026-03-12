@@ -195,7 +195,7 @@ const TOCPostContent = ({ content, toc }) => {
 
         const gifHeaderHtml = `
             <div class="blog-banner-wrapper my-5 highlight-on-scroll" data-scroll data-scroll-call="video-highlight" data-scroll-repeat="true">
-                <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
+                <a href="/test-series/" style="display: block; line-height: 0;">
                     <picture>
                         <source media="(min-width: 768px)" srcset="/videos/bnr-d.gif" />
                         <img src="/videos/bnr1-m.gif" alt="Promo Banner" class="img-fluid desktop-gif-banner rounded" />
