@@ -19,6 +19,21 @@ const IBCurriculumStages = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const scrollToForm = (e) => {
+    e.preventDefault();
+    const element = document.getElementById('reserve-form-section');
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   const cardItems = [
     {
       type: "left",
@@ -163,38 +178,33 @@ const IBCurriculumStages = () => {
           <div
             className="d-flex justify-content-center pt-3"
           >
-            <a
-              href="/join-free-demo-class"
-              style={{ textDecoration: "none" }}
+            <button
+              className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
+              style={{
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
+                color: "white",
+                padding: "12px 14px 12px 20px",
+                border: "none",
+                transition: "opacity 0.3s ease",
+                fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
+              }}
+              onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
+              onMouseLeave={(e) => (e.target.style.opacity = "1")}
+              onClick={scrollToForm}
             >
-              <button
-                className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
+              Reserve Your Test Slots Now
+              <div
+                className="custom-height rounded-circle d-flex align-items-center justify-content-center"
                 style={{
-                  background: "linear-gradient(90deg,#161664, #3F88BA)",
-                  color: "white",
-                  padding: "12px 14px 12px 20px",
-                  border: "none",
-                  transition: "opacity 0.3s ease",
-
-                  fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
+                  width: "2.5rem",
+                  height: "2.5rem",
+                  background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                  marginLeft: "2.1rem",
                 }}
-                onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
-                onMouseLeave={(e) => (e.target.style.opacity = "1")}
               >
-                Get A Free Demo
-                <div
-                  className="custom-height rounded-circle d-flex align-items-center justify-content-center"
-                  style={{
-                    width: "2.5rem",
-                    height: "2.5rem",
-                    background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                    marginLeft: "2.1rem",
-                  }}
-                >
-                  <Image src="/assets/arrowright.webp" alt="arrright" width={16} height={16} />
-                </div>
-              </button>
-            </a>
+                <Image src="/assets/arrowright.webp" alt="arrright" width={16} height={16} />
+              </div>
+            </button>
           </div>
         </div>
       </section>

@@ -16,6 +16,21 @@ export default function IgniteAchievements() {
 
     return () => window.removeEventListener('resize', checkDevice);
   }, []);
+
+  const scrollToForm = (e) => {
+    e.preventDefault();
+    const element = document.getElementById('reserve-form-section');
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
   return (
     <div className="mobileign fade-in-section" data-scroll
       data-scroll-class="is-inview"
@@ -134,8 +149,9 @@ export default function IgniteAchievements() {
                   }}
                   onMouseEnter={(e) => e.target.style.opacity = "0.9"}
                   onMouseLeave={(e) => e.target.style.opacity = "1"}
+                  onClick={scrollToForm}
                 >
-                  GET A FREE DEMO
+                  Reserve Your Test Slots Now
                   <div
                     className="custom-height rounded-circle d-flex align-items-center justify-content-center"
                     style={{
@@ -217,8 +233,9 @@ export default function IgniteAchievements() {
               }}
               onMouseEnter={(e) => e.target.style.opacity = "0.9"}
               onMouseLeave={(e) => e.target.style.opacity = "1"}
+              onClick={scrollToForm}
             >
-              GET FREE DEMO
+              Reserve Your Test Slots Now
               <div
                 className="custom-height rounded-circle d-flex align-items-center justify-content-center"
                 style={{

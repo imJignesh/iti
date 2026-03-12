@@ -158,10 +158,15 @@ export default function InfoCardLeft({ onReserveClick }) {
                             padding: "10px 15px",
                             boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
                             minWidth: "auto",
-                            gap: "20px",
+                            gap: "10px",
                         }}
                     >
-                        <span style={{ letterSpacing: "0px" }}>
+                        <span style={{
+                            letterSpacing: "0px",
+                            textAlign: "left",
+                            lineHeight: "1.2",
+                            flex: "1"
+                        }}>
                             Reserve Your Test Slots Now
                         </span>
                         <img
@@ -176,6 +181,20 @@ export default function InfoCardLeft({ onReserveClick }) {
             </div>
 
             <style jsx>{`
+        .left-btn span {
+            text-align: left;
+        }
+        @media (max-width: 575px) {
+            .left-btn {
+                padding: 10px 16px !important;
+                width: 100%;
+                max-width: 320px;
+            }
+            .left-btn span {
+                font-size: 0.9rem !important;
+                text-align: left !important;
+            }
+        }
         .info-row {
           -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%);
           -webkit-mask-repeat: no-repeat;

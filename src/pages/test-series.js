@@ -47,7 +47,7 @@ const TestSeries = ({ headerHeight }) => {
                 className='innerpage page-content-padding'
                 style={{ paddingTop: `${headerHeight}px` }}
             >
-                <section data-scroll-section className="hero-section">
+                <section data-scroll-section className="hero-section" id="reserve-form-section">
                     <div className="hero-container">
                         <picture className="hero-bg">
                             <source media="(max-width: 768px)" srcSet="/assets/mobileact.webp" />
