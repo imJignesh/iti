@@ -1,7 +1,63 @@
 import Image from 'next/image'
 import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const IBCurriculumStages = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const cardItems = [
+    {
+      type: "left",
+      heading: <span className="highlight">IDENTIFIES WEAK AREAS EARLY</span>,
+      desc: "Pinpoints gaps before final exam pressure",
+      headingClass: "curriculum-section-heading1"
+    },
+    {
+      type: "right",
+      heading: "EXPOSURE TO MARK SCHEMES",
+      desc: "Grasps examiner expectations & scoring criteria",
+      headingClass: "curriculum-section-heading2"
+    },
+    {
+      type: "left",
+      heading: "IMPROVES SPEED & TIME MANAGEMENT",
+      desc: "Enhances accuracy within strict exam time",
+      headingClass: "curriculum-section-heading2"
+    },
+    {
+      type: "right",
+      heading: <span className="highlight">REDUCES EXAM ANXIETY</span>,
+      desc: "Familiarity reduces stress & uncertainty",
+      headingClass: "curriculum-section-heading1"
+    },
+    {
+      type: "left",
+      heading: <span className="highlight">BUILDS REAL TIME CONFIDENCE</span>,
+      desc: "Strengthens performance under timed conditions",
+      headingClass: "curriculum-section-heading1"
+    },
+    {
+      type: "right",
+      heading: "ENABLES COMPETITIVE SELF-RANKING",
+      desc: "Ranking across Dubai & UAE students",
+      headingClass: "curriculum-section-heading2"
+    }
+  ];
+
   return (
     <div>
       <section className="achievementsSection">
@@ -52,139 +108,57 @@ const IBCurriculumStages = () => {
               >Our structured test series ensures students are guided, challenged, & strategically prepared to perform at their highest potential.</p>
             </div>
           </div>
-          <div className="row fade-in-section structured-test-series-row"
+          {/* Desktop View: Grid */}
+          <div className="row fade-in-section structured-test-series-row d-none d-md-flex"
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat>
-            <div className="col-lg-6 pb-5 px-4">
-              <div
-                className="curriculum-col curriculum-col-left"
-                style={{ borderRadius: 35 }}
-              >
-                <p
-                  className="curriculum-section-heading1 text-md-start text-center  d-inline-block"
-                  style={{
-
-
-                  }}
-                >
-                  <span className="highlight">IDENTIFIES WEAK AREAS EARLY</span>
-                </p>
-                <div className="row gy-3">
-                  <div className="curriculum-info">
-                    <p>Pinpoints gaps before final exam pressure</p>
+            {cardItems.map((item, index) => (
+              <div key={index} className="col-lg-4 col-md-4 pb-4 px-3">
+                <div className={`curriculum-col curriculum-col-${item.type}`} style={{ borderRadius: 35 }}>
+                  <div className={`${item.headingClass} text-md-start text-center d-inline-block w-100`}>
+                    {item.heading}
+                  </div>
+                  <div className="row gy-3">
+                    <div className="curriculum-info">
+                      <p>{item.desc}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-6 pb-5 px-4">
-              <div
-                className="curriculum-col curriculum-col-right"
-                style={{ borderRadius: 35 }}
-              >
-                <p
-                  className="curriculum-section-heading2 text-md-start text-center  d-inline-block"
-                  style={{
+            ))}
+          </div>
 
-
-                  }}
-                >
-                  EXPOSURE TO MARK SCHEMES
-                </p>{" "}
-
-                <div className="row gy-3">
-                  <div className="curriculum-info">
-                    <p>Grasps examiner expectations & scoring criteria</p>
+          {/* Mobile View: Swiper */}
+          <div className="d-block d-md-none mb-5">
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              spaceBetween={0}
+              slidesPerView={1}
+              centeredSlides={false}
+              loop={true}
+              pagination={{ clickable: true }}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              className="mySwiper"
+            >
+              {cardItems.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className={`curriculum-col curriculum-col-${item.type}`} style={{ borderRadius: 35 }}>
+                    <div className={`${item.headingClass} text-center d-inline-block w-100`}>
+                      {item.heading}
+                    </div>
+                    <div className="row gy-3">
+                      <div className="curriculum-info justify-content-center">
+                        <p className="text-center">{item.desc}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 pb-5 px-4">
-              <div
-                className="curriculum-col curriculum-col-right"
-                style={{ borderRadius: 35 }}
-              >
-                <p
-                  className="curriculum-section-heading2 text-md-start text-center  d-inline-block"
-                  style={{
-
-
-                  }}
-                >
-                  IMPROVES SPEED & TIME MANAGEMENT
-                </p>{" "}
-
-                <div className="row gy-3">
-                  <div className="curriculum-info">
-                    <p>Enhances accuracy within strict exam time</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 pb-5 px-4">
-              <div
-                className="curriculum-col curriculum-col-left"
-                style={{ borderRadius: 35 }}
-              >
-                <p
-                  className="curriculum-section-heading1 text-md-start text-center  d-inline-block"
-                  style={{
-
-
-                  }}
-                >
-                  <span className="highlight">REDUCES EXAM ANXIETY</span>
-                </p>
-                <div className="row gy-3">
-                  <div className="curriculum-info">
-                    <p>Familiarity reduces stress & uncertainty</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 pb-5 px-4">
-              <div
-                className="curriculum-col curriculum-col-left"
-                style={{ borderRadius: 35 }}
-              >
-                <p
-                  className="curriculum-section-heading1 text-md-start text-center  d-inline-block"
-                  style={{
-
-
-                  }}
-                >
-                  <span className="highlight">BUILDS REAL TIME CONFIDENCE</span>
-                </p>
-                <div className="row gy-3">
-                  <div className="curriculum-info">
-                    <p>Strengthens performance under timed conditions</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 pb-5 px-4">
-              <div
-                className="curriculum-col curriculum-col-right"
-                style={{ borderRadius: 35 }}
-              >
-                <p
-                  className="curriculum-section-heading2 text-md-start text-center  d-inline-block"
-                  style={{
-
-
-                  }}
-                >
-                  ENABLES COMPETITIVE SELF-RANKING
-                </p>{" "}
-
-                <div className="row gy-3">
-                  <div className="curriculum-info">
-                    <p>Ranking across Dubai & UAE students</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
           <div
             className="d-flex justify-content-center pt-3"
@@ -367,8 +341,8 @@ const IBCurriculumStages = () => {
   padding: 15px;
 }
 .curriculum-info p {
-  color:#233467
-  font-size: 24px;
+  color:#233467;
+  font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0;
 }
@@ -770,7 +744,7 @@ const IBCurriculumStages = () => {
 .curriculum-col {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-  padding: 40px 80px;
+  padding: 40px 40px;
 }
 .curriculum-col-left{
 background : linear-gradient(90deg, rgba(167,235,199,0.74) 50%,rgba(237,255,244,0) 98%);
@@ -929,7 +903,7 @@ background : linear-gradient(90deg, rgba(167,235,199,0.74) 50%,rgba(237,255,244,
   
   /* Adjust padding for smaller text */
   .curriculum-col {
-    padding: 35px 75px; /* 40px 80px - 5px */
+    padding: 30px 25px;
   }
   
   .curriculum-info {
@@ -980,7 +954,7 @@ background : linear-gradient(90deg, rgba(167,235,199,0.74) 50%,rgba(237,255,244,
   
   /* Adjust padding for smaller text */
   .curriculum-col {
-    padding: 30px 70px; /* 40px 80px - 10px */
+    padding: 25px 20px;
   }
   
   .curriculum-info {
@@ -1024,6 +998,13 @@ background : linear-gradient(90deg, rgba(167,235,199,0.74) 50%,rgba(237,255,244,
     .curriculum-section-heading2{
         margin-bottom:0;
         padding-bottom:15px;
+        min-height: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mySwiper {
+        padding-bottom: 40px !important;
     }
 }
 `}</style>
