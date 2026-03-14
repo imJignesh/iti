@@ -4,6 +4,9 @@ import LazySection from "@/components/LazySection";
 import SEO from "@/components/SEO";
 import SEOHead from "@/components/SEOHead";
 import Hero from "@/components/homeCopy/Hero";
+// import TestSeriesBanner from "@/components/homeCopy/TestSeriesBanner"; // Switched to dynamic
+
+
 
 
 // Dynamic imports
@@ -21,6 +24,8 @@ const Usps = dynamic(() => import("@/components/homeCopy/Usps"));
 const Trainers = dynamic(() => import("@/components/homeCopy/Trainers"));
 const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"));
 const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
+const TestSeriesBanner = dynamic(() => import("@/components/homeCopy/TestSeriesBanner"));
+
 
 const HomeCopy = ({ headerHeight }) => {
     const [active, setActive] = useState(1);
@@ -41,11 +46,24 @@ const HomeCopy = ({ headerHeight }) => {
                         src: "/images/banner-bg.webp",
                         type: "image/webp",
                         media: "(min-width: 768px)"
+                    },
+                    {
+                        src: "/images/test-series-m.webp",
+                        type: "image/webp",
+                        media: "(max-width: 767px)"
+                    },
+                    {
+                        src: "/images/test-series-d.webp",
+                        type: "image/webp",
+                        media: "(min-width: 768px)"
                     }
+
                 ]}
             />
             <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
                 <Hero />
+                <TestSeriesBanner />
+
 
                 <LazySection>
                     <Course />

@@ -1,0 +1,42 @@
+.testSeriesBanner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px 0 50px 0;
+}
+
+.bannerLink {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bannerImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.bannerLink:hover .bannerImage {
+    transform: scale(1.02);
+}
+
+@media (max-width: 767px) {
+    .testSeriesBanner {
+        padding: 10px 0 30px 0;
+    }
+
+    .bannerLink {
+        border-radius: 15px;
+    }
+
+    .bannerImage {
+        /* Ensure image fills width on mobile */
+        min-height: 100px;
+        object-fit: cover;
+    }
+}

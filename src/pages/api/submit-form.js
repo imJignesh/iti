@@ -219,7 +219,6 @@ export default async function handler(req, res) {
     if (curriculum && fieldMap.curriculum) zohoPayload.append(fieldMap.curriculum, curriculum);
     if (fieldMap.message) zohoPayload.append(fieldMap.message, message || '');
     if (fieldMap.pageinfo) zohoPayload.append(fieldMap.pageinfo, pageinfo || '');
-
     if (fieldMap.location) zohoPayload.append(fieldMap.location, location || '');
     if (fieldMap.department) zohoPayload.append(fieldMap.department, department || '');
     if (fieldMap.position) zohoPayload.append(fieldMap.position, position || '');
