@@ -147,39 +147,11 @@ const act = ({ headerHeight }) => {
   // ----------------------------------------------------
 
 
-  const scrollRef = useRef(null);
-  const scrollInstanceRef = useRef(null);
+  const [mounted, setMounted] = React.useState(false);
 
-  useEffect(() => {
-    let scroll;
-
-    const initScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      if (!scrollRef.current) return;
-
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1,
-        // optional:
-        getDirection: true,
-        getSpeed: true,
-        multiplier: 1,
-      });
-
-      scrollInstanceRef.current = scroll;
-    };
-
-    if (typeof window !== "undefined") {
-      initScroll();
-    }
-
-    return () => {
-      scrollInstanceRef.current?.destroy();
-      scrollInstanceRef.current = null;
-    };
+  React.useEffect(() => {
+    setMounted(true);
   }, []);
-
 
   return (
     <>
@@ -212,12 +184,8 @@ const act = ({ headerHeight }) => {
       <JsonLd schema={actSchema} />
 
       {/* 3. APPLY the style for paddingTop to the scroll container */}
-      <div
-        ref={scrollRef}
-        className='overflow-hidden innerpage page-content-padding'
-        data-scroll-container
-      >
-        <section data-scroll-section className="hero-section">
+      <div className='overflow-hidden innerpage page-content-padding'>
+        <section className="hero-section">
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}
             <picture className="hero-bg">
@@ -233,7 +201,7 @@ const act = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            {mounted && <InfoCard />}
           </div>
 
           <style jsx>{`
