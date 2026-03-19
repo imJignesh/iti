@@ -148,11 +148,6 @@ const act = ({ headerHeight }) => {
   // ----------------------------------------------------
 
 
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <>
@@ -194,7 +189,7 @@ const act = ({ headerHeight }) => {
               />
             </picture>
 
-            {mounted && <InfoCard />}
+            <InfoCard />
           </div>
 
           <style jsx>{`
