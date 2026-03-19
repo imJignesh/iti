@@ -3,21 +3,22 @@ import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
-import Accordion from '@/components/act/accrodian';
-import Blog from "@/components/act/Blog";
-import CourseCard from '@/components/act/CourseCard';
-import FAQSection from '@/components/act/FaqSection';
-import IgniteAchievements from '@/components/act/IgniteAchievements';
+import dynamic from 'next/dynamic';
 import InfoCard from '@/components/act/InfoCard';
-import IgniteAboutCard from "@/components/act/IgniteAboutCard";
-import LifeAtIgniteCarousel from '@/components/act/LifeAtIgniteCarousel';
-import MarqueeBanner from '@/components/act/MarqueeBanner';
-import ReviewsSection from '@/components/act/ReviewsSection';
-import StudentAchievements from '@/components/act/StudentAchivement';
-import SubjectsCard from '@/components/act/SubjectCard';
-import SubjectsCard1 from '@/components/act/SubjectCard1';
-import UspsSection from '@/components/act/UspsSection';
-import Head from 'next/head';
+
+const Accordion = dynamic(() => import('@/components/act/accrodian'));
+const Blog = dynamic(() => import('@/components/act/Blog'));
+const CourseCard = dynamic(() => import('@/components/act/CourseCard'));
+const FAQSection = dynamic(() => import('@/components/act/FaqSection'));
+const IgniteAchievements = dynamic(() => import('@/components/act/IgniteAchievements'));
+const IgniteAboutCard = dynamic(() => import('@/components/act/IgniteAboutCard'));
+const LifeAtIgniteCarousel = dynamic(() => import('@/components/act/LifeAtIgniteCarousel'));
+const MarqueeBanner = dynamic(() => import('@/components/act/MarqueeBanner'));
+const ReviewsSection = dynamic(() => import('@/components/act/ReviewsSection'));
+const StudentAchievements = dynamic(() => import('@/components/act/StudentAchivement'));
+const SubjectsCard = dynamic(() => import('@/components/act/SubjectCard'));
+const SubjectsCard1 = dynamic(() => import('@/components/act/SubjectCard1'));
+const UspsSection = dynamic(() => import('@/components/act/UspsSection'));
 
 // 1. ACCEPT the headerHeight prop
 const act = ({ headerHeight }) => {
@@ -155,30 +156,22 @@ const act = ({ headerHeight }) => {
 
   return (
     <>
-      <Head>
-        <link rel="stylesheet" href="/styles/home/MovingBanner.css" />
-        <link rel="stylesheet" href="/styles/home/Subjects.css" />
-        <link
-          rel="preload"
-          href="/assets/mobileact.webp"
-          as="image"
-          type="image/webp"
-          media="(max-width: 768px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          href="/assets/act_bg_main.webp"
-          as="image"
-          type="image/webp"
-          media="(min-width: 769px)"
-          fetchPriority="high"
-        />
-      </Head>
       <SEO
         title="ACT Subject Tests Prep With Focused Courses & Tutors In UAE"
         description="Ignite Training Institute can support you as the best ACT tutors in Dubai through our comprehensive guidance & ACT-specific tutoring strategies"
         url="https://ignitetraininginstitute.com/act-tutors-in-dubai"
+        preloadImages={[
+            {
+                src: "/assets/mobileact.webp",
+                type: "image/webp",
+                media: "(max-width: 767px)"
+            },
+            {
+                src: "/assets/act_bg_main.webp",
+                type: "image/webp",
+                media: "(min-width: 768px)"
+            }
+        ]}
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={actSchema} />
