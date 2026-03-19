@@ -37,27 +37,29 @@ const HomeCopy = ({ headerHeight }) => {
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
                 url="https://ignitetraininginstitute.com"
                 preloadImages={[
+                    // --- LCP 1: The Student Image (Actual LCP Element) ---
+                    {
+                        src: "/images/video-cover-mobile.webp",
+                        type: "image/webp",
+                        media: "(max-width: 767px)"
+                    },
+                    // --- LCP 2: The Section Background ---
                     {
                         src: "/images/banner-bg-mobile.webp",
                         type: "image/webp",
                         media: "(max-width: 767px)"
                     },
+                    // --- Desktop Hero preloads ---
+                    {
+                        src: "/images/video-cover.webp",
+                        type: "image/webp",
+                        media: "(min-width: 768px)"
+                    },
                     {
                         src: "/images/banner-bg.webp",
                         type: "image/webp",
                         media: "(min-width: 768px)"
-                    },
-                    {
-                        src: "/images/test-series-m.webp",
-                        type: "image/webp",
-                        media: "(max-width: 767px)"
-                    },
-                    {
-                        src: "/images/test-series-d.webp",
-                        type: "image/webp",
-                        media: "(min-width: 768px)"
                     }
-
                 ]}
             />
             <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
