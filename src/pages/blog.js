@@ -1,4 +1,6 @@
 'use client';
+import "@/styles/blog/Blogpg.css";
+
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import useSWR from 'swr';
