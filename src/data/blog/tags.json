@@ -1,0 +1,3542 @@
+[
+  {
+    "id": 16,
+    "count": 28,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/a-levels/",
+    "name": "A-Levels",
+    "slug": "a-levels",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>A-Levels Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"A-Levels Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/a-levels/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/a-levels/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/a-levels/\",\"name\":\"A-Levels Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/a-levels/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/a-levels/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"A-Levels\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "A-Levels Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "A-Levels Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/a-levels/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/a-levels/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/a-levels/",
+            "name": "A-Levels Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/a-levels/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/a-levels/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "A-Levels"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/16",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=16"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "count": 24,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/",
+    "name": "Advanced Placements",
+    "slug": "advanced-placement",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Advanced Placements Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Advanced Placements Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/\",\"name\":\"Advanced Placements Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Advanced Placements\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Advanced Placements Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Advanced Placements Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/",
+            "name": "Advanced Placements Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/advanced-placement/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Advanced Placements"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/2",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=2"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "count": 1,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/",
+    "name": "American Curriculum",
+    "slug": "american-curriculum",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>American Curriculum Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"American Curriculum Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/\",\"name\":\"American Curriculum Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"American Curriculum\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "American Curriculum Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "American Curriculum Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/",
+            "name": "American Curriculum Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/american-curriculum/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "American Curriculum"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/25",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=25"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 39,
+    "count": 6,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/aqa/",
+    "name": "AQA",
+    "slug": "aqa",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>AQA Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"AQA Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/aqa/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/aqa/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/aqa/\",\"name\":\"AQA Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/aqa/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/aqa/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AQA\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "AQA Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "AQA Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/aqa/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/aqa/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/aqa/",
+            "name": "AQA Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/aqa/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/aqa/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "AQA"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/39",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=39"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "count": 1,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/as-levels/",
+    "name": "AS-Levels",
+    "slug": "as-levels",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>AS-Levels Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"AS-Levels Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/as-levels/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/as-levels/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/as-levels/\",\"name\":\"AS-Levels Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/as-levels/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/as-levels/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AS-Levels\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "AS-Levels Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "AS-Levels Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/as-levels/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/as-levels/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/as-levels/",
+            "name": "AS-Levels Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/as-levels/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/as-levels/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "AS-Levels"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/31",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=31"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "count": 20,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/",
+    "name": "British Curriculum",
+    "slug": "british-curriculum",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>British Curriculum Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"British Curriculum Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/\",\"name\":\"British Curriculum Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"British Curriculum\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "British Curriculum Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "British Curriculum Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/",
+            "name": "British Curriculum Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/british-curriculum/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "British Curriculum"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/5",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=5"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 44,
+    "count": 3,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/cambridge/",
+    "name": "Cambridge",
+    "slug": "cambridge",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Cambridge Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Cambridge Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/cambridge/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/cambridge/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/cambridge/\",\"name\":\"Cambridge Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/cambridge/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/cambridge/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Cambridge\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Cambridge Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Cambridge Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/cambridge/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/cambridge/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/cambridge/",
+            "name": "Cambridge Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/cambridge/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/cambridge/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Cambridge"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/44",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=44"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "count": 3,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/cbse/",
+    "name": "CBSE",
+    "slug": "cbse",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>CBSE Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"CBSE Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/cbse/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/cbse/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/cbse/\",\"name\":\"CBSE Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/cbse/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/cbse/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"CBSE\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "CBSE Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "CBSE Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/cbse/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/cbse/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/cbse/",
+            "name": "CBSE Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/cbse/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/cbse/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "CBSE"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/34",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=34"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 40,
+    "count": 4,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/cie/",
+    "name": "CIE",
+    "slug": "cie",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>CIE Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"CIE Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/cie/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/cie/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/cie/\",\"name\":\"CIE Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/cie/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/cie/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"CIE\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "CIE Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "CIE Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/cie/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/cie/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/cie/",
+            "name": "CIE Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/cie/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/cie/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "CIE"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/40",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=40"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 46,
+    "count": 1,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/",
+    "name": "Curriculum Comparison",
+    "slug": "curriculum-comparison",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Curriculum Comparison Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Curriculum Comparison Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/\",\"name\":\"Curriculum Comparison Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Curriculum Comparison\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Curriculum Comparison Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Curriculum Comparison Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/",
+            "name": "Curriculum Comparison Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/curriculum-comparison/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Curriculum Comparison"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/46",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=46"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 41,
+    "count": 1,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/edexcel/",
+    "name": "Edexcel",
+    "slug": "edexcel",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Edexcel Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Edexcel Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/edexcel/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/edexcel/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/edexcel/\",\"name\":\"Edexcel Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/edexcel/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/edexcel/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Edexcel\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Edexcel Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Edexcel Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/edexcel/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/edexcel/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/edexcel/",
+            "name": "Edexcel Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/edexcel/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/edexcel/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Edexcel"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/41",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=41"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "count": 8,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/exams/",
+    "name": "Exams",
+    "slug": "exams",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Exams Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Exams Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/exams/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/exams/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/exams/\",\"name\":\"Exams Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/exams/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/exams/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Exams\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Exams Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Exams Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/exams/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/exams/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/exams/",
+            "name": "Exams Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/exams/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/exams/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Exams"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/33",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=33"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "count": 11,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/gcse/",
+    "name": "GCSE",
+    "slug": "gcse",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>GCSE Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"GCSE Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/gcse/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/gcse/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/gcse/\",\"name\":\"GCSE Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/gcse/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/gcse/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"GCSE\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "GCSE Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "GCSE Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/gcse/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/gcse/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/gcse/",
+            "name": "GCSE Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/gcse/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/gcse/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "GCSE"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/27",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=27"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "count": 4,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/grading-system/",
+    "name": "Grading System",
+    "slug": "grading-system",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Grading System Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Grading System Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/grading-system/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/grading-system/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/grading-system/\",\"name\":\"Grading System Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/grading-system/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/grading-system/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Grading System\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Grading System Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Grading System Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/grading-system/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/grading-system/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/grading-system/",
+            "name": "Grading System Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/grading-system/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/grading-system/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Grading System"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/30",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=30"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 43,
+    "count": 3,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/homeschooling/",
+    "name": "Homeschooling",
+    "slug": "homeschooling",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Homeschooling Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Homeschooling Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/homeschooling/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/homeschooling/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/homeschooling/\",\"name\":\"Homeschooling Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/homeschooling/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/homeschooling/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Homeschooling\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Homeschooling Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Homeschooling Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/homeschooling/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/homeschooling/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/homeschooling/",
+            "name": "Homeschooling Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/homeschooling/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/homeschooling/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Homeschooling"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/43",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=43"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "count": 32,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/ib/",
+    "name": "IB",
+    "slug": "ib",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>IB Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"IB Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/ib/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/ib/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/ib/\",\"name\":\"IB Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/ib/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/ib/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"IB\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "IB Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "IB Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/ib/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/ib/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/ib/",
+            "name": "IB Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/ib/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/ib/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "IB"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/7",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=7"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "count": 20,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/ibdp/",
+    "name": "IB DP",
+    "slug": "ibdp",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>IB DP Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"IB DP Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/ibdp/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/ibdp/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/ibdp/\",\"name\":\"IB DP Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/ibdp/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/ibdp/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"IB DP\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "IB DP Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "IB DP Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/ibdp/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/ibdp/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/ibdp/",
+            "name": "IB DP Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/ibdp/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/ibdp/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "IB DP"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/19",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=19"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "count": 3,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/myp/",
+    "name": "IB MYP",
+    "slug": "myp",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>IB MYP Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"IB MYP Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/myp/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/myp/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/myp/\",\"name\":\"IB MYP Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/myp/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/myp/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"IB MYP\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "IB MYP Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "IB MYP Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/myp/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/myp/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/myp/",
+            "name": "IB MYP Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/myp/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/myp/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "IB MYP"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/21",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=21"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 47,
+    "count": 1,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/icse/",
+    "name": "ICSE",
+    "slug": "icse",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>ICSE Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"ICSE Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/icse/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/icse/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/icse/\",\"name\":\"ICSE Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/icse/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/icse/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ICSE\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "ICSE Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "ICSE Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/icse/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/icse/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/icse/",
+            "name": "ICSE Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/icse/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/icse/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "ICSE"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/47",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=47"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "count": 35,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/igcse/",
+    "name": "IGCSE",
+    "slug": "igcse",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>IGCSE Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"IGCSE Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/igcse/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/igcse/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/igcse/\",\"name\":\"IGCSE Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/igcse/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/igcse/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"IGCSE\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "IGCSE Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "IGCSE Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/igcse/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/igcse/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/igcse/",
+            "name": "IGCSE Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/igcse/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/igcse/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "IGCSE"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/18",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=18"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 36,
+    "count": 1,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/",
+    "name": "Indian Curriculum",
+    "slug": "indian-curriculum",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Indian Curriculum Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Indian Curriculum Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/\",\"name\":\"Indian Curriculum Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Indian Curriculum\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Indian Curriculum Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Indian Curriculum Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/",
+            "name": "Indian Curriculum Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/indian-curriculum/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Indian Curriculum"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/36",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=36"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "count": 34,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/",
+    "name": "International Baccalaureate",
+    "slug": "international-baccalaureate",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>International Baccalaureate Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"International Baccalaureate Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/\",\"name\":\"International Baccalaureate Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"International Baccalaureate\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "International Baccalaureate Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "International Baccalaureate Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/",
+            "name": "International Baccalaureate Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/international-baccalaureate/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "International Baccalaureate"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/8",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=8"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 37,
+    "count": 2,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/",
+    "name": "International Curriculums",
+    "slug": "international-curriculums",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>International Curriculums Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"International Curriculums Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/\",\"name\":\"International Curriculums Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"International Curriculums\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "International Curriculums Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "International Curriculums Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/",
+            "name": "International Curriculums Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/international-curriculums/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "International Curriculums"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/37",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=37"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 48,
+    "count": 2,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/",
+    "name": "Medical Guidance",
+    "slug": "medical-guidance",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Medical Guidance Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Medical Guidance Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/\",\"name\":\"Medical Guidance Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Medical Guidance\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Medical Guidance Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Medical Guidance Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/",
+            "name": "Medical Guidance Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/medical-guidance/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Medical Guidance"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/48",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=48"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "count": 13,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/schools/",
+    "name": "Schools In UAE",
+    "slug": "schools",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Schools In UAE Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Schools In UAE Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/schools/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/schools/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/schools/\",\"name\":\"Schools In UAE Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/schools/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/schools/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Schools In UAE\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Schools In UAE Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Schools In UAE Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/schools/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/schools/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/schools/",
+            "name": "Schools In UAE Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/schools/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/schools/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Schools In UAE"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/11",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=11"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "count": 1,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/",
+    "name": "Standardized Tests",
+    "slug": "standardized-tests",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Standardized Tests Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Standardized Tests Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/\",\"name\":\"Standardized Tests Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Standardized Tests\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Standardized Tests Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Standardized Tests Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/",
+            "name": "Standardized Tests Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/standardized-tests/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Standardized Tests"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/35",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=35"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "count": 21,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/study-tips/",
+    "name": "Study Tips",
+    "slug": "study-tips",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Study Tips Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Study Tips Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/study-tips/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/study-tips/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/study-tips/\",\"name\":\"Study Tips Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/study-tips/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/study-tips/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Study Tips\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Study Tips Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Study Tips Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/study-tips/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/study-tips/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/study-tips/",
+            "name": "Study Tips Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/study-tips/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/study-tips/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Study Tips"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/6",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "count": 15,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/subject-choices/",
+    "name": "Subject Choices",
+    "slug": "subject-choices",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Subject Choices Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Subject Choices Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/subject-choices/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/subject-choices/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/subject-choices/\",\"name\":\"Subject Choices Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/subject-choices/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/subject-choices/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Subject Choices\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Subject Choices Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Subject Choices Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/subject-choices/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/subject-choices/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/subject-choices/",
+            "name": "Subject Choices Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/subject-choices/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/subject-choices/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Subject Choices"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/29",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=29"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "count": 5,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/tutoring/",
+    "name": "Tutoring",
+    "slug": "tutoring",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Tutoring Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Tutoring Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/tutoring/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/tutoring/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/tutoring/\",\"name\":\"Tutoring Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/tutoring/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/tutoring/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tutoring\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Tutoring Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Tutoring Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/tutoring/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/tutoring/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/tutoring/",
+            "name": "Tutoring Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/tutoring/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/tutoring/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tutoring"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/14",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=14"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 38,
+    "count": 8,
+    "description": "",
+    "link": "https://api.ignitetraininginstitute.com/blog/tag/universities/",
+    "name": "Universities",
+    "slug": "universities",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Universities Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Universities Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/universities/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/universities/\",\"url\":\"https://api.ignitetraininginstitute.com/blog/tag/universities/\",\"name\":\"Universities Archives - ignite\",\"isPartOf\":{\"@id\":\"https://api.ignitetraininginstitute.com/#website\"},\"breadcrumb\":{\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/universities/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://api.ignitetraininginstitute.com/blog/tag/universities/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://api.ignitetraininginstitute.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Universities\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://api.ignitetraininginstitute.com/#website\",\"url\":\"https://api.ignitetraininginstitute.com/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://api.ignitetraininginstitute.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Universities Archives - ignite",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Universities Archives - ignite",
+      "og_url": "https://api.ignitetraininginstitute.com/blog/tag/universities/",
+      "og_site_name": "ignite",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/universities/",
+            "url": "https://api.ignitetraininginstitute.com/blog/tag/universities/",
+            "name": "Universities Archives - ignite",
+            "isPartOf": {
+              "@id": "https://api.ignitetraininginstitute.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://api.ignitetraininginstitute.com/blog/tag/universities/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://api.ignitetraininginstitute.com/blog/tag/universities/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://api.ignitetraininginstitute.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Universities"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://api.ignitetraininginstitute.com/#website",
+            "url": "https://api.ignitetraininginstitute.com/",
+            "name": "ignite",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/38",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=38"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

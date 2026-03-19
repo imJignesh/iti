@@ -90,129 +90,81 @@ const Blogpg = ({ headerHeight, ...props }) => {
     // 👆 END OF SCHEMA DEFINITION
     // ----------------------------------------------------
 
-    // --- Start of Blog Content State and Hooks (from WpPosts) ---
-    // Use fallback data from SSR if available
-    const [posts, setPosts] = useState(props.fallbackData?.posts || []);
+    // --- NEW: Local Blog Database Logic ---
+    const allPosts = props.allPosts || [];
+    const localCategories = props.categories || [];
+    const localTagsMap = props.tagsMap || {};
+
     const [page, setPage] = useState(1);
-    const [tagsMap, setTagsMap] = useState({});
-    const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState(localCategories);
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
-    const [hasMore, setHasMore] = useState(props.fallbackData?.hasMore ?? true);
+    const [isClient, setIsClient] = useState(false);
 
-    // Debounce effect for search term
+    useEffect(() => { setIsClient(true); }, []);
+
+    // Debounce search term
     useEffect(() => {
         const timerId = setTimeout(() => {
             setDebouncedSearchTerm(searchTerm);
+            setPage(1); // Reset to page 1 on search
         }, 500);
-
-        return () => {
-            clearTimeout(timerId);
-        };
+        return () => clearTimeout(timerId);
     }, [searchTerm]);
 
-    const postsApiUrl = `/api/wp/posts?per_page=9&page=${page}&_embed${selectedCategories.length > 0 ? `&categories=${selectedCategories.join(',')}` : ''}${debouncedSearchTerm ? `&search=${debouncedSearchTerm}` : ''}`;
+    // --- INSTANT FILTERING LOGIC ---
+    const filteredPosts = React.useMemo(() => {
+        return allPosts.filter(post => {
+            // 1. Search Filter
+            const matchesSearch = !debouncedSearchTerm || 
+                post.title.rendered.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+                post.excerpt.rendered.toLowerCase().includes(debouncedSearchTerm.toLowerCase());
+            
+            // 2. Category Filter
+            const matchesCategory = selectedCategories.length === 0 || 
+                selectedCategories.some(catId => post.categories && post.categories.includes(catId));
 
-    // Use SWR with fallback data for the initial load
-    const { data, error, isLoading, isValidating } = useSWR(postsApiUrl, fetcher, {
-        fallbackData: (page === 1 && !debouncedSearchTerm && selectedCategories.length === 0)
-            ? { data: props.fallbackData?.posts || [], totalPages: props.fallbackData?.totalPages || 1 }
-            : undefined,
-        revalidateOnFocus: false
-    });
+            return matchesSearch && matchesCategory;
+        });
+    }, [allPosts, debouncedSearchTerm, selectedCategories]);
 
-    // --- FIX: Add isClient state to prevent hydration mismatch ---
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => { setIsClient(true); }, []);
-
-    // Helper to determine if we should show the spinner (loading, validating, or masking a soft error)
-    // We strictly use isClient to ensure we don't render this on the server or initial hydration pass if the server rendered content.
-    const showSpinner = isClient && (isLoading || isValidating || (error && error.message?.includes('API Connection Failed'))) && posts.length === 0;
-
-    // Helper to determine if we should show the hard error
-    const showError = error && !showSpinner && posts.length === 0;
-
-    // Effect to accumulate posts and determine if more are available
-    useEffect(() => {
-        if (data && data.data) {
-            if (page === 1) {
-                setPosts(data.data);
-            } else {
-                setPosts(prevPosts => [...prevPosts, ...data.data]);
-            }
-            setHasMore(page < data.totalPages);
-        }
-    }, [data, page]);
-
-    // Fetch tags on component mount
-    useEffect(() => {
-        const fetchTags = async () => {
-            try {
-                const res = await fetch('/api/wp/tags?per_page=100');
-                const tags = await res.json();
-                const map = {};
-                tags.forEach(tag => (map[tag.id] = tag.name));
-                setTagsMap(map);
-            } catch (err) {
-                console.error("Failed to fetch tags:", err);
-            }
-        };
-        fetchTags();
-    }, []);
-
-    // Fetch categories on component mount
-    useEffect(() => {
-        const fetchCategories = async () => {
-            try {
-                const res = await fetch('/api/wp/categories?per_page=100');
-                const cats = await res.json();
-                setCategories(cats);
-            } catch (err) {
-                console.error("Failed to fetch categories:", err);
-            }
-        };
-        fetchCategories();
-    }, []);
+    // --- PAGINATION LOGIC ---
+    const POSTS_PER_PAGE = 9;
+    const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+    const hasMore = page < totalPages;
+    const posts = filteredPosts.slice(0, page * POSTS_PER_PAGE);
 
     const handleCategoryClick = (categoryId) => {
-        setPosts([]);
-        setPage(1);
-        setSearchTerm('');
-        setDebouncedSearchTerm('');
-        setHasMore(true);
-
-        setSelectedCategories(prevSelected => {
-            if (prevSelected.includes(categoryId)) {
-                return prevSelected.filter(id => id !== categoryId);
-            } else {
-                return [...prevSelected, categoryId];
-            }
+        setPage(1); // Reset to first page
+        setSelectedCategories(prev => {
+            if (prev.includes(categoryId)) return prev.filter(id => id !== categoryId);
+            return [...prev, categoryId];
         });
     };
 
     const handleAllCategoriesClick = () => {
-        setPosts([]);
-        setSelectedCategories([]);
         setPage(1);
-        setSearchTerm('');
-        setDebouncedSearchTerm('');
-        setHasMore(true);
+        setSelectedCategories([]);
+    };
+
+    const loadMore = () => {
+        if (hasMore) setPage(p => p + 1);
     };
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
     };
 
-    // Effect to handle search debounce side-effects
-    useEffect(() => {
-        if (debouncedSearchTerm) {
-            setPosts([]);
-            setPage(1);
-            setHasMore(true);
-            setSelectedCategories([]);
-        }
-    }, [debouncedSearchTerm]);
+    // Spinner is rarely needed now as it's instant, but we keep it for UX consistency if needed
+    const showSpinner = false; 
+    const showError = false;
+    const tagsMap = localTagsMap;
+    const isLoading = false;
+    const isValidating = false;
+
+    // --- END OF LOCAL LOGIC ---
+
 
     // Determine current breadcrumb path
     const getBreadcrumbPath = () => {
@@ -486,43 +438,47 @@ const Blogpg = ({ headerHeight, ...props }) => {
 };
 
 export async function getServerSideProps() {
+    const fs = require('fs');
+    const path = require('path');
+
     try {
-        // Fetch initial posts (page 1, 9 posts)
-        // We use the direct external URL here because SSR runs on the server (Node.js)
-        // and doesn't suffer from the same CORS/Browser-Network issues as client-side.
-        const res = await fetch('https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=9&page=1&_embed');
+        const dataDir = path.join(process.cwd(), 'src', 'data', 'blog');
+        
+        // 1. Load All Posts List
+        const listPath = path.join(dataDir, 'list.json');
+        const listData = fs.existsSync(listPath) ? JSON.parse(fs.readFileSync(listPath, 'utf8')) : { posts: [] };
+        
+        // 2. Load Categories
+        const catsPath = path.join(dataDir, 'categories.json');
+        const categories = fs.existsSync(catsPath) ? JSON.parse(fs.readFileSync(catsPath, 'utf8')) : [];
 
-        if (!res.ok) {
-            console.warn('SSR Blog Fetch failed:', res.status);
-            return {
-                props: {
-                    fallbackData: { posts: [], totalPages: 1, hasMore: false }
-                }
-            };
-        }
-
-        const data = await res.json();
-        const totalPages = parseInt(res.headers.get('X-WP-TotalPages'), 10) || 1;
+        // 3. Load Tags and create a map
+        const tagsPath = path.join(dataDir, 'tags.json');
+        const tags = fs.existsSync(tagsPath) ? JSON.parse(fs.readFileSync(tagsPath, 'utf8')) : [];
+        const tagsMap = {};
+        tags.forEach(tag => { tagsMap[tag.id] = tag.name; });
 
         return {
             props: {
-                fallbackData: {
-                    posts: Array.isArray(data) ? data : [],
-                    totalPages: totalPages,
-                    hasMore: 1 < totalPages
-                }
+                allPosts: listData.posts || [],
+                categories: categories,
+                tagsMap: tagsMap,
+                lastSync: listData.syncDate || null
             }
         };
 
     } catch (error) {
-        console.error('SSR Error in blog.js:', error);
-        // Return empty fallback content so the page still loads (client-side can retry)
+        console.error('SSR Error in blog.js (Static Mode):', error);
         return {
             props: {
-                fallbackData: { posts: [], totalPages: 1, hasMore: false }
+                allPosts: [],
+                categories: [],
+                tagsMap: {}
             }
         };
     }
 }
+
+
 
 export default Blogpg;

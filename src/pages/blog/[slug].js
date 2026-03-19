@@ -384,48 +384,60 @@ const TOCPostContent = ({ content, toc }) => {
 
 export async function getServerSideProps(context) {
     const { slug } = context.params;
+    const fs = require('fs');
+    const path = require('path');
+
     try {
-        // Fetch the post data on the server
-        const res = await fetch(`https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed`);
-
-        if (!res.ok) {
-            // If API returns 500 or other errors, handle gracefully
-            console.error(`Post fetch failed for slug: ${slug}, status: ${res.status}`);
-            return {
-                notFound: true,
-            };
+        const dataDir = path.join(process.cwd(), 'src', 'data', 'blog');
+        
+        // 1. Load the specific post data
+        const postFilePath = path.join(dataDir, 'posts', `${slug}.json`);
+        let post = null;
+        
+        if (fs.existsSync(postFilePath)) {
+            post = JSON.parse(fs.readFileSync(postFilePath, 'utf8'));
+        } else {
+            // Fallback for missing local file
+            const res = await fetch(`https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?slug=${slug}&_embed`);
+            const data = await res.json();
+            if (data && data.length > 0) post = data[0];
         }
 
-        const data = await res.json();
+        if (!post) return { notFound: true };
 
-        // If no post found, return 404
-        if (!data || !data.length) {
-            return {
-                notFound: true,
-            };
-        }
+        // 2. Load the lightweight "Related Posts Pool" (list.json)
+        const listPath = path.join(dataDir, 'list.json');
+        const listData = fs.existsSync(listPath) ? JSON.parse(fs.readFileSync(listPath, 'utf8')) : { posts: [] };
 
-        // Return the post data as props
+        // 3. Load tags for display
+        const tagsPath = path.join(dataDir, 'tags.json');
+        const tags = fs.existsSync(tagsPath) ? JSON.parse(fs.readFileSync(tagsPath, 'utf8')) : [];
+        const tagsMap = {};
+        tags.forEach(t => { tagsMap[t.id] = t.name; });
+
         return {
             props: {
-                initialPost: data[0],
+                initialPost: post,
+                allPosts: listData.posts || [],
+                tagsMap: tagsMap
             },
         };
     } catch (error) {
         console.error(`Server-side error fetching post for slug ${slug}:`, error);
-        // Fallback to 404 or a custom error page prop if preferred. 
-        // Returning notFound: true is the safest specific failure mode.
-        return {
-            notFound: true,
-        };
+        return { notFound: true };
     }
 }
 
-export default function PostDetail({ initialPost }) {
+
+
+export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsTagsMap = {} }) {
     const router = useRouter();
     const [pageInfo, setPageInfo] = useState('');
     const { slug } = router.query;
     const [toc, setToc] = useState([]);
+
+    // --- State for Tags (Initialized from props) ---
+    const [tagsMap, setTagsMap] = useState(propsTagsMap);
 
     // --- State for Like/Dislike functionality ---
     const [likes, setLikes] = useState(0);
@@ -434,11 +446,20 @@ export default function PostDetail({ initialPost }) {
     // --------------------------------------------
 
     // --- NEW: State for Related Posts ---
-    const [relatedPosts, setRelatedPosts] = useState(null);
+    const [relatedPosts, setRelatedPosts] = useState([]);
+
     // ------------------------------------
 
     const postApiUrl = slug ? `/api/wp/posts?slug=${slug}&_embed` : null;
-    const { data, error } = useSWR(postApiUrl, fetcher, { fallbackData: [initialPost] });
+    const fallback = useMemo(() => [initialPost], [initialPost]);
+
+    const { data, error } = useSWR(postApiUrl, fetcher, { 
+        fallbackData: fallback,
+
+        revalidateOnMount: !initialPost, // Only revalidate if we don't already have the post from the local JSON cache
+        revalidateOnFocus: false
+    });
+
 
     const scrollInstanceRef = useRef(null);
     const post = data?.[0] || initialPost; // Define post once here
@@ -624,8 +645,10 @@ export default function PostDetail({ initialPost }) {
         };
     }, []);
 
+    const [processedHtml, setProcessedHtml] = useState(null);
+
     useEffect(() => {
-        if (data && data[0]?.content?.rendered) {
+        if (data && data[0]?.content?.rendered && !processedHtml) {
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = data[0].content.rendered;
 
@@ -637,14 +660,17 @@ export default function PostDetail({ initialPost }) {
                 return { text, id };
             });
 
-            data[0].content.rendered = tempDiv.innerHTML;
+            // Don't mutate the data[0] object directly. 
+            // Instead, we just use the result for TOC and potentially for rendering.
             setToc(generatedToc);
+            setProcessedHtml(tempDiv.innerHTML);
 
             if (scrollInstanceRef.current?.update) {
                 scrollInstanceRef.current.update();
             }
         }
-    }, [data]);
+    }, [data, processedHtml]);
+
 
     // --- Initialization of Likes/Dislikes state and NEW Related Posts Fetch ---
     useEffect(() => {
@@ -669,17 +695,33 @@ export default function PostDetail({ initialPost }) {
                 setPageInfo(`URL: ${url} | Title: ${title}`);
             }
 
-            // --- RELATED POSTS FETCH START ---
-            if (typeof window !== 'undefined') {
-                const postCategories = post._embedded?.['wp:term']?.find(term => term[0]?.taxonomy === 'category') || [];
-                if (postCategories.length > 0) {
-                    fetchRelatedPosts(post, postCategories).catch(err => console.warn("Background fetchRelatedPosts failed:", err.message));
-                } else {
-                    // If no categories, rely entirely on the latest posts fallback
-                    fetchRelatedPosts(post, []).catch(err => console.warn("Background fetchRelatedPosts (fallback) failed:", err.message));
-                }
+            // --- LOCAL RELATED POSTS MATCHING ---
+            const currentPostId = post.id;
+            const currentPostCategories = post.categories || [];
+
+            // 1. Find posts with matching categories
+            let localRelated = allPosts.filter(p => 
+                p.id !== currentPostId && 
+                p.categories.some(catId => currentPostCategories.includes(catId))
+            );
+
+            // 2. If not enough, fill with latest posts
+            if (localRelated.length < 3) {
+                const latestFound = allPosts.filter(p => 
+                    p.id !== currentPostId && 
+                    !localRelated.some(r => r.id === p.id)
+                );
+                localRelated = [...localRelated, ...latestFound].slice(0, 3);
+            } else {
+                localRelated = localRelated.slice(0, 3);
             }
-            // --- RELATED POSTS FETCH END ---
+
+            // Only update if changed (to prevent potential loops)
+            if (JSON.stringify(relatedPosts) !== JSON.stringify(localRelated)) {
+                setRelatedPosts(localRelated);
+            }
+            // --- END LOCAL MATCHING ---
+
         }
     }, [post]);
     // --------------------------------------------------------------------
@@ -861,7 +903,8 @@ export default function PostDetail({ initialPost }) {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8">
-                            <TOCPostContent content={post.content.rendered} toc={toc} />
+                            <TOCPostContent content={processedHtml || post.content.rendered} toc={toc} />
+
 
                             {/* --- UPDATED: Like/Dislike Block --- */}
                             <div className="helpful-block d-flex align-items-center flex-wrap mt-4 mb-4 gap-3 bg-light p-3 rounded shadow-sm border" id='author-part'>
