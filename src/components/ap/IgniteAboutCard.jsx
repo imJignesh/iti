@@ -132,6 +132,8 @@ export default function IgniteAboutCard() {
 
       <style jsx>{`
         @font-face {
+font-display: swap;
+font-display: swap;
           font-family: "Monstra";
           src: url("/fonts/Monstra.ttf") format("truetype");
           font-weight: normal;
@@ -139,6 +141,7 @@ export default function IgniteAboutCard() {
         }
 
         .my-text {
+font-display: swap;
           font-family: "Monstra", sans-serif;
         }
 
@@ -358,6 +361,7 @@ background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 
         }
 
         .heading-title {
+font-display: swap;
           font-family: "Monstra", sans-serif;
           font-weight: bolder;
           font-size: 33px;
@@ -590,6 +594,7 @@ top: 5%;
     
 
 .heading-title {
+font-display: swap;
     font-family: "Monstra", sans-serif;
     font-weight: bolder;
     font-size: 25px;
@@ -695,6 +700,7 @@ bottom: 5%;
         height: 60px;
         }
         .heading-title {
+font-display: swap;
     font-family: "Monstra", sans-serif;
     font-weight: bolder;
     font-size: 22px;

@@ -6,19 +6,19 @@ import SEO from "@/components/SEO";
 import dynamic from 'next/dynamic';
 import InfoCard from '@/components/act/InfoCard';
 
-const Accordion = dynamic(() => import('@/components/act/accrodian'));
-const Blog = dynamic(() => import('@/components/act/Blog'));
-const CourseCard = dynamic(() => import('@/components/act/CourseCard'));
-const FAQSection = dynamic(() => import('@/components/act/FaqSection'));
-const IgniteAchievements = dynamic(() => import('@/components/act/IgniteAchievements'));
-const IgniteAboutCard = dynamic(() => import('@/components/act/IgniteAboutCard'));
-const LifeAtIgniteCarousel = dynamic(() => import('@/components/act/LifeAtIgniteCarousel'));
-const MarqueeBanner = dynamic(() => import('@/components/act/MarqueeBanner'));
-const ReviewsSection = dynamic(() => import('@/components/act/ReviewsSection'));
-const StudentAchievements = dynamic(() => import('@/components/act/StudentAchivement'));
-const SubjectsCard = dynamic(() => import('@/components/act/SubjectCard'));
-const SubjectsCard1 = dynamic(() => import('@/components/act/SubjectCard1'));
-const UspsSection = dynamic(() => import('@/components/act/UspsSection'));
+const Accordion = dynamic(() => import('@/components/act/accrodian'), { ssr: false });
+const Blog = dynamic(() => import('@/components/act/Blog'), { ssr: false });
+const CourseCard = dynamic(() => import('@/components/act/CourseCard'), { ssr: false });
+const FAQSection = dynamic(() => import('@/components/act/FaqSection'), { ssr: false });
+const IgniteAchievements = dynamic(() => import('@/components/act/IgniteAchievements'), { ssr: false });
+const IgniteAboutCard = dynamic(() => import('@/components/act/IgniteAboutCard'), { ssr: false });
+const LifeAtIgniteCarousel = dynamic(() => import('@/components/act/LifeAtIgniteCarousel'), { ssr: false });
+const MarqueeBanner = dynamic(() => import('@/components/act/MarqueeBanner'), { ssr: false });
+const ReviewsSection = dynamic(() => import('@/components/act/ReviewsSection'), { ssr: false });
+const StudentAchievements = dynamic(() => import('@/components/act/StudentAchivement'), { ssr: false });
+const SubjectsCard = dynamic(() => import('@/components/act/SubjectCard'), { ssr: false });
+const SubjectsCard1 = dynamic(() => import('@/components/act/SubjectCard1'), { ssr: false });
+const UspsSection = dynamic(() => import('@/components/act/UspsSection'), { ssr: false });
 
 // 1. ACCEPT the headerHeight prop
 const act = ({ headerHeight }) => {
@@ -157,7 +157,7 @@ const act = ({ headerHeight }) => {
         url="https://ignitetraininginstitute.com/act-tutors-in-dubai"
         preloadImages={[
             {
-                src: "/assets/mobileact.webp",
+                src: "/assets/mobileactv2.webp",
                 type: "image/webp",
                 media: "(max-width: 767px)"
             },
@@ -177,7 +177,7 @@ const act = ({ headerHeight }) => {
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}
             <picture className="hero-bg">
-              <source media="(max-width: 768px)" srcSet="/assets/mobileact.webp" />
+              <source media="(max-width: 768px)" srcSet="/assets/mobileactv2.webp" />
               <img
                 src="/assets/act_bg_main.webp"
                 alt="ACT Tutors Background"

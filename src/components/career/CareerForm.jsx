@@ -450,6 +450,7 @@ export default function CareerForm() {
         }
 
         @font-face {
+font-display: swap;
           font-family: 'Monstra';
           src: url('/fonts/Monstra.ttf') format('truetype');
           font-weight: normal;
