@@ -1,110 +1,112 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import he from "he";
-import { useEffect } from "react";
 import { useScroll } from "./LocomotiveScrollProvider";
 
-const fetchBlogs = async () => {
-    const res = await fetch(
-        "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=3&_embed"
-    );
-    const data = await res.json();
-    return data;
+/**
+ * FETCH BLOG DATA - Synchronous local read
+ */
+const fetchBlogsLocal = () => {
+    try {
+        // We import it as a standard JSON module since Next.js supports this
+        const listData = require('../data/blog/list.json');
+        return listData.posts.slice(0, 3);
+    } catch (e) {
+        console.warn("SharedBlog: Local list.json not found, falling back to empty.");
+        return [];
+    }
 };
 
-// create javascript object for blog data
-const createBlogData = async () => {
-    const data = await fetchBlogs();
+/**
+ * FORMAT DATA - Create a clean JS object from JSON posts
+ */
+const createBlogData = () => {
+    const data = fetchBlogsLocal();
 
     const formattedBlogs = data.map((post) => {
         // Strip HTML tags
-        const rawExcerpt = post.excerpt.rendered.replace(/<[^>]*>?/gm, "");
-        const rawTitle = post.title.rendered.replace(/<[^>]*>?/gm, "");
+        const rawExcerpt = (post.excerpt?.rendered || "").replace(/<[^>]*>?/gm, "");
+        const rawTitle = (post.title?.rendered || "").replace(/<[^>]*>?/gm, "");
 
         // Decode HTML entities (&amp;, &#8217;, etc.)
         const decodedExcerpt = he.decode(rawExcerpt);
         const decodedTitle = he.decode(rawTitle);
 
-        // Trim to ~100 chars without cutting words
+        // Trim excerpt for better card fit
         const trimmedExcerpt =
             decodedExcerpt.length > 80
-                ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 80)) +
-                "..."
+                ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 80)) + "..."
                 : decodedExcerpt;
 
         return {
             img:
-                post._embedded["wp:featuredmedia"]?.[0]?.source_url ||
+                post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
                 "/images/blog-placeholder.webp",
             title: decodedTitle,
             desc: trimmedExcerpt,
             link: post.slug,
+            // Pass through any media details if they exist for better layout
+            width: 300,
+            height: 200,
         };
     });
 
     return formattedBlogs;
 };
 
-const staticBlogs = [
-    {
-        img: "/images/blogImage1.webp",
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        desc: "Choosing us means partnering with experienced coaches who are...",
-        link: "/blogs",
-        width: 500,
-        height: 750,
-    },
-    {
-        img: "/images/blogImage2.webp",
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        desc: "Choosing us means partnering with experienced coaches who are...",
-        link: "/blogs",
-        width: 1200,
-        height: 673,
-    },
-    {
-        img: "/images/blogImage3.webp",
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-        desc: "Choosing us means partnering with experienced coaches who are...",
-        link: "/blogs",
-        width: 1200,
-        height: 800,
-    },
-];
 
-const SharedBlog = ({ title, locoScroll }) => {
-    const [blogData, setBlogData] = React.useState(staticBlogs);
-    const contextScroll = useScroll();
-    const scrollInstance = locoScroll || contextScroll;
+/**
+ * SHARED BLOG COMPONENT
+ */
+const SharedBlog = ({ title }) => {
+    // 🔥 INSTANT STATE: First render has real data from list.json
+    const [blogData] = useState(() => createBlogData());
+    const sectionRef = useRef(null);
+    const scrollInstance = useScroll();
 
+    /**
+     * 🛡️ THE "DEEP" FIX: SAFETY OBSERVER 
+     * If Locomotive Scroll fails to trigger 'is-inview' (conflict or beta bug),
+     * this local observer will force it to show after 200ms of entering the viewport.
+     */
     useEffect(() => {
-        const fetchData = async () => {
-            const data = await createBlogData();
-            setBlogData(data);
-        };
-        fetchData();
+        if (!sectionRef.current) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Wait 200ms to see if Locomotive Scroll handles the animation automatically.
+                        // If not, we manually add 'is-inview' to force visibility.
+                        setTimeout(() => {
+                            if (sectionRef.current) {
+                                const hiddenElements = sectionRef.current.querySelectorAll('.fade-in-section:not(.is-inview)');
+                                if (hiddenElements.length > 0) {
+                                    hiddenElements.forEach(el => el.classList.add('is-inview'));
+                                    console.log("SharedBlog: Forced visibility via Safety Observer.");
+                                }
+                            }
+                        }, 500); // 500ms safety window
+                        observer.disconnect();
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        observer.observe(sectionRef.current);
+        return () => observer.disconnect();
     }, []);
 
-    useEffect(() => {
-        if (blogData.length > 0 && scrollInstance) {
-            // Handle both direct instance and object wrapper cases
-            if (typeof scrollInstance.update === 'function') {
-                scrollInstance.update();
-            } else if (scrollInstance.scroll && typeof scrollInstance.scroll.update === 'function') {
-                scrollInstance.scroll.update();
-            }
-        }
-    }, [blogData, scrollInstance]);
-
     return (
-        <section className="blogSection">
+        <section className="blogSection" ref={sectionRef}>
             <div className="container">
                 <div className="row gap-5 gap-lg-0">
+                    {/* --- LEFT CONTENT (HEADINGs) --- */}
                     <div className="col-12 col-lg-5 blogLeft">
                         <div
                             className="fade-in-section blogHeadingRow"
                             data-scroll
                             data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
                             style={{ animationDelay: "0.1s" }}
                         >
                             <h2 className="SubHeading">BLOGS</h2>
@@ -112,7 +114,6 @@ const SharedBlog = ({ title, locoScroll }) => {
                         <h3
                             data-scroll
                             data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
                             className="fade-in-section blogTitle"
                             style={{ animationDelay: "0.2s" }}
                         >
@@ -121,7 +122,6 @@ const SharedBlog = ({ title, locoScroll }) => {
                         <div
                             data-scroll
                             data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
                             className="fade-in-section blogSubtitle"
                             style={{ animationDelay: "0.3s" }}
                         >
@@ -131,7 +131,6 @@ const SharedBlog = ({ title, locoScroll }) => {
                             <button
                                 data-scroll
                                 data-scroll-class="is-inview"
-                                data-scroll-repeat="true"
                                 className="blogAllBtn buttonBlue fade-in-section"
                                 style={{ animationDelay: "0.4s" }}
                             >
@@ -146,28 +145,27 @@ const SharedBlog = ({ title, locoScroll }) => {
                         </a>
                     </div>
 
+                    {/* --- RIGHT CONTENT (BLOG CARDS) --- */}
                     <div className="col-12 col-lg-7 blogRight">
-                        {blogData &&
+                        {blogData && blogData.length > 0 ? (
                             blogData.map((blog, i) => (
                                 <div
                                     key={i}
+                                    className="fade-in-section blogCard"
                                     data-scroll
                                     data-scroll-class="is-inview"
-                                    data-scroll-repeat="true"
-                                    className="fade-in-section blogCard"
                                     style={{ animationDelay: "0.2s" }}
                                 >
-                                    <a href={`/blog/${blog.link}`} className="nodecoration"><img
-                                        src={blog.img}
-                                        alt="blog"
-                                        data-scroll
-                                        data-scroll-class="is-clipped"
-                                        data-scroll-repeat="true"
-                                        data-scroll-offset="-10%"
-                                        className="blogImg"
-                                        width={blog.width}
-                                        height={blog.height}
-                                    /></a>
+                                    <a href={`/blog/${blog.link}`} className="nodecoration">
+                                        <img
+                                            src={blog.img}
+                                            alt="blog"
+                                            className="blogImg"
+                                            width={blog.width || 300}
+                                            height={blog.height || 200}
+                                            loading="lazy"
+                                        />
+                                    </a>
                                     <div className="blogCardContent">
                                         <div className="blogCardTitle">{blog.title}</div>
                                         <div className="blogCardDesc">{blog.desc}</div>
@@ -187,14 +185,18 @@ const SharedBlog = ({ title, locoScroll }) => {
                                         </a>
                                     </div>
                                 </div>
-                            ))}
+                            ))
+                        ) : (
+                           /* Fallback if no blogs available */
+                           <div className="blogCardTitle">Stay tuned for insights!</div>
+                        )}
                     </div>
 
+                    {/* --- MOBILE VIEW (ONLY) --- */}
                     <a href="/blog" className="nodecoration d-lg-none">
                         <button
                             data-scroll
                             data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
                             className="blogAllBtnmobile buttonBlue fade-in-section"
                             style={{ animationDelay: "0.4s" }}
                         >
