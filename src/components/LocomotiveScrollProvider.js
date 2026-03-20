@@ -30,6 +30,14 @@ const LocomotiveScrollProvider = ({ children }) => {
         }
         return false;
     };
+
+    const isMobileDevice = () => {
+        if (typeof window === 'undefined') return false;
+        return (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+            window.innerWidth <= 768
+        );
+    };
     // --- END NEW FUNCTION ---
 
     // Effect 0: Apply class to body if bot is detected
@@ -45,11 +53,11 @@ const LocomotiveScrollProvider = ({ children }) => {
         if (typeof window === "undefined") return;
 
         const checkWidth = () => {
-            // User's current logic: Scroll enabled if width is >= 280px
-            const shouldEnable = window.innerWidth >= 280;
+            // Enable scroll ONLY if on desktop (width > 768) and NOT a bot
+            const shouldEnable = window.innerWidth > 768;
 
             // --- MODIFIED: Check width AND check for PSI bot ---
-            if (shouldEnable && !isBotDetected()) {
+            if (shouldEnable && !isBotDetected() && !isMobileDevice()) {
                 setIsScrollEnabled(true);
             } else {
                 setIsScrollEnabled(false);

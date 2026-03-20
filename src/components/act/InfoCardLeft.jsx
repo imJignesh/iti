@@ -5,17 +5,11 @@ export default function InfoCardLeft() {
     return (
         <div className="col-lg-8 d-flex flex-column justify-content-center pe-lg-4 p-4 left-content v100">
             <h1
-                className="fw-bold text-white text-uppercase mb-3 desktop-fade-in hero-h1"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+                className="fw-bold text-white text-uppercase mb-3 hero-h1"
             >
                 ACT Tutors In Dubai, UAE <br /> For Assured High Scores
             </h1>
-            <div className="divider desktop-fade-in"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+            <div className="divider"
                 style={{
                     animationDelay: "0.25s",
                 }}></div>
