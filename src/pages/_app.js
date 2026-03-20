@@ -19,7 +19,10 @@ import "@/styles/contact/contact.css";
 import SEOHead from '../components/SEOHead';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import DelayedPopup from "../components/DelayedPopup";
+
+const DelayedPopup = dynamic(() => import('../components/DelayedPopup'), {
+    ssr: false,
+});
 
 import "@/styles/DelayedPopup.css";
 

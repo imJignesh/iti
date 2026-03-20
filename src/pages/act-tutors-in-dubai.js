@@ -4,6 +4,7 @@ import LazySection from '@/components/LazySection';
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import InfoCard from '@/components/act/InfoCard';
 
 const Accordion = dynamic(() => import('@/components/act/accrodian'), { ssr: false });
@@ -159,12 +160,12 @@ const act = ({ headerHeight }) => {
             {
                 src: "/assets/mobileactv2.webp",
                 type: "image/webp",
-                media: "(max-width: 767px)"
+                media: "(max-width: 1024px)"
             },
             {
                 src: "/assets/act_bg_main.webp",
                 type: "image/webp",
-                media: "(min-width: 768px)"
+                media: "(min-width: 1025px)"
             }
         ]}
       />
@@ -175,19 +176,20 @@ const act = ({ headerHeight }) => {
       <div className='overflow-hidden innerpage page-content-padding'>
         <section className="hero-section">
           <div className="hero-container">
-            {/* LCP Image moved here for immediate painting (SSR) */}
-            <picture className="hero-bg">
-              <source media="(max-width: 768px)" srcSet="/assets/mobileactv2.webp" />
-              <img
+            {/* High-Performance LCP Image using Next.js Image component */}
+            <div className="hero-bg">
+              <Image
                 src="/assets/act_bg_main.webp"
+                srcSet="/assets/mobileactv2.webp 1024w, /assets/act_bg_main.webp 2000w"
                 alt="ACT Tutors Background"
+                fill
+                priority
                 fetchPriority="high"
-                width="1200"
-                height="800"
-                className="hero-img"
-                style={{ opacity: 1, visibility: 'visible' }}
+                sizes="100vw"
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                loading="eager"
               />
-            </picture>
+            </div>
 
             <InfoCard />
           </div>
