@@ -4,7 +4,7 @@ import LazySection from '@/components/LazySection';
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
+// import Image from 'next/image';
 import InfoCard from '@/components/act/InfoCard';
 
 const Accordion = dynamic(() => import('@/components/act/accrodian'), { ssr: false });
@@ -157,16 +157,16 @@ const act = () => {
         description="Ignite Training Institute can support you as the best ACT tutors in Dubai through our comprehensive guidance & ACT-specific tutoring strategies"
         url="https://ignitetraininginstitute.com/act-tutors-in-dubai"
         preloadImages={[
-            {
-                src: "/assets/mobileactv2.webp",
-                type: "image/webp",
-                media: "(max-width: 1024px)"
-            },
-            {
-                src: "/assets/act_bg_main.webp",
-                type: "image/webp",
-                media: "(min-width: 1025px)"
-            }
+          {
+            src: "/assets/mobileactv2.webp",
+            type: "image/webp",
+            media: "(max-width: 1024px)"
+          },
+          {
+            src: "/assets/act_bg_main.webp",
+            type: "image/webp",
+            media: "(min-width: 1025px)"
+          }
         ]}
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
@@ -178,7 +178,7 @@ const act = () => {
           <div className="hero-container">
             {/* NATIVE HTML PICTURE: Essential for instant Preload Scanner (LCP Fix) */}
             {/* ❄️ React Freeze: Prevent hydration re-paint by manually setting HTML ❄️ */}
-            <div 
+            <div
               className="hero-bg"
               dangerouslySetInnerHTML={{
                 __html: `
