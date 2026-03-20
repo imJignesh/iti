@@ -177,26 +177,25 @@ const act = () => {
         <section className="hero-section">
           <div className="hero-container">
             {/* NATIVE HTML PICTURE: Essential for instant Preload Scanner (LCP Fix) */}
-            <div className="hero-bg">
-              <picture>
-                <source media="(max-width: 1024px)" srcSet="/assets/mobileactv2.webp" />
-                <img
-                  src="/assets/act_bg_main.webp"
-                  alt="ACT Tutors Background"
-                  fetchpriority="high"
-                  loading="eager"
-                  className="hero-img"
-                  style={{ 
-                    objectFit: 'cover', 
-                    objectPosition: 'center',
-                    width: '100%',
-                    height: '100%',
-                    position: 'absolute',
-                    inset: 0
-                  }}
-                />
-              </picture>
-            </div>
+            {/* ❄️ React Freeze: Prevent hydration re-paint by manually setting HTML ❄️ */}
+            <div 
+              className="hero-bg"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  <picture>
+                    <source media="(max-width: 1024px)" srcset="/assets/mobileactv2.webp" />
+                    <img
+                      src="/assets/act_bg_main.webp"
+                      alt="ACT Tutors Background"
+                      fetchpriority="high"
+                      loading="eager"
+                      class="hero-img"
+                      style="object-fit:cover;object-position:center;width:100%;height:100%;position:absolute;inset:0;"
+                    />
+                  </picture>
+                `
+              }}
+            />
 
             <InfoCard />
           </div>

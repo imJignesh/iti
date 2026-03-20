@@ -10,6 +10,12 @@
     transition: none !important;
 }
 
+/* ❄️ LCP Fix: Force Montserrat for the Hero heading instantly ❄️ */
+.hero-h1 {
+    font-family: var(--font-montserrat), Arial, sans-serif !important;
+    color: #FFF !important;
+}
+
 
 /* CSS Variables */
 :root {
