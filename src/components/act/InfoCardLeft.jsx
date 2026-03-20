@@ -7,7 +7,7 @@ export default function InfoCardLeft() {
             <h1
                 className="fw-bold text-white text-uppercase mb-3 hero-h1"
             >
-                ACT Tutors In Dubai, UAE <br /> For Assured High Scores
+                ACT Tutors In Dubai, UAE <br /> For Assured High Scores.
             </h1>
             <div className="divider"
                 style={{
