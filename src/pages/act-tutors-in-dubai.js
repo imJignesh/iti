@@ -21,8 +21,8 @@ const SubjectsCard = dynamic(() => import('@/components/act/SubjectCard'), { ssr
 const SubjectsCard1 = dynamic(() => import('@/components/act/SubjectCard1'), { ssr: false });
 const UspsSection = dynamic(() => import('@/components/act/UspsSection'), { ssr: false });
 
-// 1. ACCEPT the headerHeight prop
-const act = ({ headerHeight }) => {
+// 1. ACCEPT props normally (decoupled from headerHeight state to prevent re-renders)
+const act = () => {
 
   // ----------------------------------------------------
   // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
@@ -176,19 +176,26 @@ const act = ({ headerHeight }) => {
       <div className='overflow-hidden innerpage page-content-padding'>
         <section className="hero-section">
           <div className="hero-container">
-            {/* High-Performance LCP Image using Next.js Image component */}
+            {/* NATIVE HTML PICTURE: Essential for instant Preload Scanner (LCP Fix) */}
             <div className="hero-bg">
-              <Image
-                src="/assets/act_bg_main.webp"
-                srcSet="/assets/mobileactv2.webp 1024w, /assets/act_bg_main.webp 2000w"
-                alt="ACT Tutors Background"
-                fill
-                priority
-                fetchPriority="high"
-                sizes="100vw"
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                loading="eager"
-              />
+              <picture>
+                <source media="(max-width: 1024px)" srcSet="/assets/mobileactv2.webp" />
+                <img
+                  src="/assets/act_bg_main.webp"
+                  alt="ACT Tutors Background"
+                  fetchpriority="high"
+                  loading="eager"
+                  className="hero-img"
+                  style={{ 
+                    objectFit: 'cover', 
+                    objectPosition: 'center',
+                    width: '100%',
+                    height: '100%',
+                    position: 'absolute',
+                    inset: 0
+                  }}
+                />
+              </picture>
             </div>
 
             <InfoCard />
