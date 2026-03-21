@@ -13,7 +13,7 @@ const LazySection = ({ children, threshold = 0.1, rootMargin = "200px" }) => {
 
         // Comprehensive regex for Search Engines, AI Bots, and Social Previews.
         // Note: Removed performance tools (lighthouse, pagespeed, gtmetrix) so they measure actual user experience.
-        const botPattern = /googlebot|bingbot|applebot|slurp|baiduspider|duckduckbot|google-inspectiontool|headlesschrome|gptbot|oai-searchbot|claudebot|perplexitybot|amazonbot|bytespider|ccbot|facebookexternalhit|twitterbot|linkedinbot|slackbot|discordbot|whatsapp/;
+        const botPattern = /googlebot|bingbot|applebot|slurp|baiduspider|duckduckbot|google-inspectiontool|gptbot|oai-searchbot|claudebot|perplexitybot|amazonbot|bytespider|ccbot|facebookexternalhit|twitterbot|linkedinbot|slackbot|discordbot|whatsapp/;
 
         return botPattern.test(userAgent);
     };
