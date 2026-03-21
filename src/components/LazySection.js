@@ -2,28 +2,29 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useScroll } from './LocomotiveScrollProvider'; // Adjust path if needed
 
 const LazySection = ({ children, threshold = 0.1, rootMargin = "200px" }) => {
-    // Helper to detect bots/crawlers & also enforce TRUE on server for SEO
-    const isBotOrServer = () => {
-        // SSR MUST return true to render children in the initial HTML for SEO
-        if (typeof window === 'undefined') return true;
-        
-        const userAgent = navigator.userAgent.toLowerCase();
-        // Detect crawlers and search engine bots
-        const botPattern = /googlebot|bingbot|applebot|slurp|baiduspider|duckduckbot|google-inspectiontool|headlesschrome|gptbot|oai-searchbot|claudebot|perplexitybot|amazonbot|bytespider|ccbot|facebookexternalhit|twitterbot|linkedinbot|slackbot|discordbot|whatsapp/;
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
+    const scroll = useScroll(); // Get Locomotive Scroll instance
 
-        // On client side, if window > 768px, we also consider it true (eager load desktop)
-        if (window.innerWidth > 768) return true;
+    // Helper to detect bots/crawlers
+    const isBotDetected = () => {
+        if (typeof window === 'undefined') return false;
+        const userAgent = navigator.userAgent.toLowerCase();
+
+        // Comprehensive regex for Search Engines, AI Bots, and Social Previews.
+        // Note: Removed performance tools (lighthouse, pagespeed, gtmetrix) so they measure actual user experience.
+        const botPattern = /googlebot|bingbot|applebot|slurp|baiduspider|duckduckbot|google-inspectiontool|headlesschrome|gptbot|oai-searchbot|claudebot|perplexitybot|amazonbot|bytespider|ccbot|facebookexternalhit|twitterbot|linkedinbot|slackbot|discordbot|whatsapp/;
 
         return botPattern.test(userAgent);
     };
 
-    const [isVisible, setIsVisible] = useState(() => isBotOrServer());
-    const ref = useRef(null);
-    const scroll = useScroll(); // Get Locomotive Scroll instance
-
     // Unified effect for visibility and scroll updates
     useEffect(() => {
-        if (isVisible) return; // already visible
+        // Eager load logic
+        if (typeof window !== 'undefined' && (window.innerWidth > 768 || isBotDetected())) {
+            setIsVisible(true);
+            return;
+        }
 
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -44,32 +45,27 @@ const LazySection = ({ children, threshold = 0.1, rootMargin = "200px" }) => {
                 observer.unobserve(ref.current);
             }
         };
-    }, [threshold, rootMargin, isVisible]);
+    }, [threshold, rootMargin]);
 
     // Separate effect to handle ResizeObserver when content becomes visible
     useEffect(() => {
         if (!isVisible || !ref.current || !scroll) return;
 
-        let resizeTimer;
         const resizeObserver = new ResizeObserver(() => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                if (scroll && typeof scroll.update === 'function') {
-                    scroll.update();
-                }
-            }, 100);
+            if (scroll && typeof scroll.update === 'function') {
+                scroll.update();
+            }
         });
 
         resizeObserver.observe(ref.current);
 
         return () => {
-            clearTimeout(resizeTimer);
             resizeObserver.disconnect();
         };
     }, [isVisible, scroll]);
 
     return (
-        <div ref={ref} suppressHydrationWarning>
+        <div ref={ref} >
             {isVisible ? children : null}
         </div>
     );
