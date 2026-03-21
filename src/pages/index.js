@@ -38,26 +38,15 @@ const HomeCopy = ({ headerHeight }) => {
                 url="https://ignitetraininginstitute.com"
                 preloadImages={[
                     {
-                        src: "/images/banner-bg-mobile.webp",
+                        src: "/images/video-cover-mobile.webp",
                         type: "image/webp",
                         media: "(max-width: 767px)"
                     },
                     {
-                        src: "/images/banner-bg.webp",
-                        type: "image/webp",
-                        media: "(min-width: 768px)"
-                    },
-                    {
-                        src: "/images/test-series-m.webp",
-                        type: "image/webp",
-                        media: "(max-width: 767px)"
-                    },
-                    {
-                        src: "/images/test-series-d.webp",
+                        src: "/images/video-cover.webp",
                         type: "image/webp",
                         media: "(min-width: 768px)"
                     }
-
                 ]}
             />
             <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>

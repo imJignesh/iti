@@ -25,10 +25,11 @@ const Hero = () => {
             }
         };
 
+        const delay = window.innerWidth <= 767 ? 6000 : 2000;
         if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadVideo, { timeout: 2000 });
+            requestIdleCallback(loadVideo, { timeout: delay });
         } else {
-            setTimeout(loadVideo, 1000);
+            setTimeout(loadVideo, delay);
         }
 
         const handleInteraction = () => {
@@ -87,6 +88,7 @@ const Hero = () => {
                                                 alt="Video Poster"
                                                 className={styles.posterImage}
                                                 fetchPriority="high"
+                                                decoding="sync"
                                             />
                                         </picture>
                                     </div>
