@@ -26,29 +26,8 @@ const DelayedPopup = dynamic(() => import('../components/DelayedPopup'), {
 
 import "@/styles/DelayedPopup.css";
 
-const LocomotiveScrollProvider = dynamic(() => import('../components/LocomotiveScrollProvider'), {
-    ssr: false,
-});
-
-const isPageSpeedInsights = () => {
-    if (typeof navigator === 'undefined') return false;
-    const userAgent = navigator.userAgent.toLowerCase();
-    return (
-        userAgent.includes('lighthouse') ||
-        userAgent.includes('gtmetrix') ||
-        userAgent.includes('pagespeed') ||
-        userAgent.includes('chrome-lighthouse') ||
-        userAgent.includes('speed insights')
-    );
-};
-
-const isMobileDevice = () => {
-    if (typeof window === 'undefined') return false;
-    return (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-        window.innerWidth <= 768
-    );
-};
+import LocomotiveScrollProvider from '../components/LocomotiveScrollProvider';
+import { isPerformanceTool, isMobileDevice } from '@/utils/performance';
 
 
 
@@ -85,7 +64,7 @@ export default function MyApp({ Component, pageProps }) {
     const [showButton, setShowButton] = useState(false);
     const [stylesLoaded, setStylesLoaded] = useState(false);
 
-    const mobileBreakpoint = 2600;
+    const mobileBreakpoint = 1100;
 
     useEffect(() => {
         const handleScroll = () => {

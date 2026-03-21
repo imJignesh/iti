@@ -6,6 +6,8 @@ import React, {
     useState,
 } from "react";
 
+import { isPerformanceTool, isMobileDevice, isBot } from "@/utils/performance";
+
 // --- 1. Create Context ---
 const ScrollContext = createContext(null);
 
@@ -22,29 +24,11 @@ const LocomotiveScrollProvider = ({ children }) => {
     const scrollInstanceRef = useRef(null);
     const [isScrollEnabled, setIsScrollEnabled] = useState(false);
 
-    // --- NEW: Function to check for PSI/Lighthouse environment ---
-    const isBotDetected = () => {
-        // Check for the known Lighthouse global variable or User Agent
-        if (typeof window !== 'undefined' && (window.__lighthouse || navigator.userAgent.includes('HeadlessChrome') || navigator.userAgent.includes('Chrome-Lighthouse'))) {
-            return true;
-        }
-        return false;
-    };
-
-    const isMobileDevice = () => {
-        if (typeof window === 'undefined') return false;
-        return (
-            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-            window.innerWidth <= 768
-        );
-    };
-    // --- END NEW FUNCTION ---
-
-    // Effect 0: Apply class to body if bot is detected
+    // Effect 0: Apply class to body if bot/lighthouse is detected
     useEffect(() => {
-        if (typeof document !== 'undefined' && isBotDetected()) {
+        if (typeof document !== 'undefined' && (isBot() || isPerformanceTool())) {
             document.body.classList.add('is-bot-detected');
-            console.log("Lighthouse/Bot detected. Animations disabled via CSS.");
+            console.log("PerformanceTool/Bot detected. Smooth scroll disabled.");
         }
     }, []);
 
@@ -53,15 +37,9 @@ const LocomotiveScrollProvider = ({ children }) => {
         if (typeof window === "undefined") return;
 
         const checkWidth = () => {
-            // Enable scroll ONLY if on desktop (width > 768) and NOT a bot
-            const shouldEnable = window.innerWidth > 768;
-
-            // --- MODIFIED: Check width AND check for PSI bot ---
-            if (shouldEnable && !isBotDetected() && !isMobileDevice()) {
-                setIsScrollEnabled(true);
-            } else {
-                setIsScrollEnabled(false);
-            }
+            // Enable scroll ONLY if on desktop (width > 768), NOT a performance tool, AND NOT a mobile device
+            const shouldEnable = window.innerWidth > 768 && !isPerformanceTool() && !isMobileDevice();
+            setIsScrollEnabled(shouldEnable);
         };
 
         checkWidth();
