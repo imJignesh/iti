@@ -43,17 +43,7 @@ const HomeCopy = ({ headerHeight }) => {
                         media: "(max-width: 767px)"
                     },
                     {
-                        src: "/images/video-cover-mobile.webp",
-                        type: "image/webp",
-                        media: "(max-width: 767px)"
-                    },
-                    {
                         src: "/images/banner-bg.webp",
-                        type: "image/webp",
-                        media: "(min-width: 768px)"
-                    },
-                    {
-                        src: "/images/video-cover.webp",
                         type: "image/webp",
                         media: "(min-width: 768px)"
                     }
@@ -61,7 +51,9 @@ const HomeCopy = ({ headerHeight }) => {
             />
             <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
                 <Hero />
-                <TestSeriesBanner />
+                <LazySection>
+                    <TestSeriesBanner />
+                </LazySection>
 
 
                 <LazySection>

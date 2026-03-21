@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from '@/components/CustomImageWrapper';
+import { getImageProps } from 'next/image';
 import styles from '@/styles/home-copy/Hero.module.css';
 
 const Hero = () => {
@@ -50,6 +51,22 @@ const Hero = () => {
         };
     }, [videoLoaded]);
 
+    const commonProps = {
+        alt: "Video Poster",
+        fill: true,
+        priority: true,
+        sizes: "100vw",
+        className: styles.posterImage,
+    };
+
+    const {
+        props: { srcSet: mobileImg },
+    } = getImageProps({ ...commonProps, src: '/images/video-cover-mobile.webp' });
+
+    const {
+        props: { srcSet: desktopImg, ...restProps },
+    } = getImageProps({ ...commonProps, src: '/images/video-cover.webp' });
+
     return (
         <>
 
@@ -82,14 +99,9 @@ const Hero = () => {
                                 <div className={styles.videoContainer}>
                                     <div className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}>
                                         <picture>
-                                            <source media="(max-width: 767px)" srcSet="/images/video-cover-mobile.webp" />
-                                            <img
-                                                src="/images/video-cover.webp"
-                                                alt="Video Poster"
-                                                className={styles.posterImage}
-                                                fetchPriority="high"
-                                                decoding="sync"
-                                            />
+                                            <source media="(max-width: 767px)" srcSet={mobileImg} />
+                                            <source media="(min-width: 768px)" srcSet={desktopImg} />
+                                            <img {...restProps} />
                                         </picture>
                                     </div>
                                     <video
