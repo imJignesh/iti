@@ -1,17 +1,27 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useScroll } from './LocomotiveScrollProvider'; // Adjust path if needed
-import { isSeoBot, isBot, isPerformanceTool } from '@/utils/performance';
 
-const LazySection = ({ children, threshold = 0.1, rootMargin = "250px" }) => {
+const LazySection = ({ children, threshold = 0.1, rootMargin = "200px" }) => {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
     const scroll = useScroll(); // Get Locomotive Scroll instance
 
+    // Helper to detect bots/crawlers
+    const isBotDetected = () => {
+        if (typeof window === 'undefined') return false;
+        const userAgent = navigator.userAgent.toLowerCase();
+
+        // Comprehensive regex for Search Engines, AI Bots, and Social Previews.
+        // Note: Removed performance tools (lighthouse, pagespeed, gtmetrix) so they measure actual user experience.
+        const botPattern = /googlebot|bingbot|applebot|slurp|baiduspider|duckduckbot|google-inspectiontool|headlesschrome|gptbot|oai-searchbot|claudebot|perplexitybot|amazonbot|bytespider|ccbot|facebookexternalhit|twitterbot|linkedinbot|slackbot|discordbot|whatsapp/;
+
+        return botPattern.test(userAgent);
+    };
+
     // Unified effect for visibility and scroll updates
     useEffect(() => {
-        // Eager load ONLY for critical SEO bots. 
-        // We do NOT eagerness for Performance Tools (Lighthouse) to measure real UX.
-        if (typeof window !== 'undefined' && isSeoBot()) {
+        // Eager load logic
+        if (typeof window !== 'undefined' && (window.innerWidth > 768 || isBotDetected())) {
             setIsVisible(true);
             return;
         }

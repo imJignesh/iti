@@ -1,22 +1,5 @@
 /* styles/critical.css - Load FIRST for fastest paint */
 
-/* --- LCP FIX: Force First Section to be Static/Visible --- */
-.hero-section, 
-.hero-section * {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-    animation: none !important;
-    transition: none !important;
-}
-
-/* ❄️ LCP Fix: Force Montserrat for the Hero heading instantly ❄️ */
-.hero-h1 {
-    font-family: var(--font-montserrat), Arial, sans-serif !important;
-    color: #FFF !important;
-}
-
-
 /* CSS Variables */
 :root {
     --font-montserrat: 'Montserrat', Arial, sans-serif;

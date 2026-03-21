@@ -30,10 +30,10 @@ const Header = ({ setHeaderHeight }) => {
     }, []);
 
     useEffect(() => {
-        if (headerRef.current && router.pathname === "/") {
+        if (headerRef.current) {
             setHeaderHeight(headerRef.current.offsetHeight);
         }
-    }, [setHeaderHeight, router.pathname]);
+    }, [setHeaderHeight]);
 
     const isLinkActive = (href, parentPaths = []) => {
         const pathsToCheck = [href, ...parentPaths];

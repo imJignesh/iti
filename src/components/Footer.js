@@ -90,10 +90,17 @@ const Footer = () => {
 
   return (
     <footer
-      className={`sp-container ${styles.footerWrap}`}
-    >
+      data-scroll
+      data-scroll-class="is-inview"
+      data-scroll-repeat="true"
+      className={`fade-in-section sp-container ${styles.footerWrap}`}
+      style={{ animationDelay: "0.2s" }}>
       <div
-        className={`${styles.footerTop}`}
+        className={`fade-in-section ${styles.footerTop}`}
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat="true"
+        style={{ animationDelay: "0.1s" }}
       >
         <h3 className={styles.footerTitle}>
           REVOLUTIONIZING THE WAY STUDENTS LEARN
@@ -102,11 +109,14 @@ const Footer = () => {
           <div className={styles.footerTop}>
             <Image
               src="/images/footerImage.webp"
+              data-scroll
+              data-scroll-class="is-clipped"
+              data-scroll-repeat="true"
+              data-scroll-offset="-10%"
               alt="Footer"
               className={`${styles.footerMainImg}`}
               width={452}
               height={250}
-              loading='lazy'
             />
           </div>
           <div

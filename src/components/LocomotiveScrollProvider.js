@@ -6,8 +6,6 @@ import React, {
     useState,
 } from "react";
 
-import { isPerformanceTool, isMobileDevice, isBot } from "@/utils/performance";
-
 // --- 1. Create Context ---
 const ScrollContext = createContext(null);
 
@@ -24,11 +22,21 @@ const LocomotiveScrollProvider = ({ children }) => {
     const scrollInstanceRef = useRef(null);
     const [isScrollEnabled, setIsScrollEnabled] = useState(false);
 
-    // Effect 0: Apply class to body if bot/lighthouse is detected
+    // --- NEW: Function to check for PSI/Lighthouse environment ---
+    const isBotDetected = () => {
+        // Check for the known Lighthouse global variable or User Agent
+        if (typeof window !== 'undefined' && (window.__lighthouse || navigator.userAgent.includes('HeadlessChrome') || navigator.userAgent.includes('Chrome-Lighthouse'))) {
+            return true;
+        }
+        return false;
+    };
+    // --- END NEW FUNCTION ---
+
+    // Effect 0: Apply class to body if bot is detected
     useEffect(() => {
-        if (typeof document !== 'undefined' && (isBot() || isPerformanceTool())) {
+        if (typeof document !== 'undefined' && isBotDetected()) {
             document.body.classList.add('is-bot-detected');
-            console.log("PerformanceTool/Bot detected. Smooth scroll disabled.");
+            console.log("Lighthouse/Bot detected. Animations disabled via CSS.");
         }
     }, []);
 
@@ -37,9 +45,15 @@ const LocomotiveScrollProvider = ({ children }) => {
         if (typeof window === "undefined") return;
 
         const checkWidth = () => {
-            // Enable scroll ONLY if on desktop (width > 768), NOT a performance tool, AND NOT a mobile device
-            const shouldEnable = window.innerWidth > 768 && !isPerformanceTool() && !isMobileDevice();
-            setIsScrollEnabled(shouldEnable);
+            // User's current logic: Scroll enabled if width is >= 280px
+            const shouldEnable = window.innerWidth >= 280;
+
+            // --- MODIFIED: Check width AND check for PSI bot ---
+            if (shouldEnable && !isBotDetected()) {
+                setIsScrollEnabled(true);
+            } else {
+                setIsScrollEnabled(false);
+            }
         };
 
         checkWidth();

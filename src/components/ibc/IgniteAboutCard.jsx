@@ -132,12 +132,17 @@ export default function IgniteAboutCard() {
         </div> */}
 
       <style jsx>{`
+        @font-face {
+          font-family: "Monstra";
+          src: url("/fonts/Monstra.ttf") format("truetype");
+          font-weight: normal;
+          font-style: normal;
+        }
         .aboutignite-card{
             text-align: center;
             }
         .my-text {
-font-display: swap;
-          font-family: "Montserrat", sans-serif;
+          font-family: "Monstra", sans-serif;
         }
 
          .testimonialRect {
@@ -355,8 +360,7 @@ font-display: swap;
         }
 
         .heading-title {
-font-display: swap;
-          font-family: "Montserrat", sans-serif;
+          font-family: "Monstra", sans-serif;
           font-weight: bolder;
           font-size: 33px;
           text-align: center;
@@ -577,8 +581,7 @@ font-display: swap;
               
 
           .heading-title {
-font-display: swap;
-              font-family: "Montserrat", sans-serif;
+              font-family: "Monstra", sans-serif;
               font-weight: bolder;
               font-size: 25px;
               text-align: center;
@@ -683,8 +686,7 @@ font-display: swap;
                   height: 60px;
                   }
                   .heading-title {
-font-display: swap;
-              font-family: "Montserrat", sans-serif;
+              font-family: "Monstra", sans-serif;
               font-weight: bolder;
               font-size: 22px;
               text-align: center;

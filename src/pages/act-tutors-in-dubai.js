@@ -3,26 +3,24 @@ import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
-import dynamic from 'next/dynamic';
-// import Image from 'next/image';
+import Accordion from '@/components/act/accrodian';
+import Blog from "@/components/act/Blog";
+import CourseCard from '@/components/act/CourseCard';
+import FAQSection from '@/components/act/FaqSection';
+import IgniteAchievements from '@/components/act/IgniteAchievements';
 import InfoCard from '@/components/act/InfoCard';
+import IgniteAboutCard from "@/components/act/IgniteAboutCard";
+import LifeAtIgniteCarousel from '@/components/act/LifeAtIgniteCarousel';
+import MarqueeBanner from '@/components/act/MarqueeBanner';
+import ReviewsSection from '@/components/act/ReviewsSection';
+import StudentAchievements from '@/components/act/StudentAchivement';
+import SubjectsCard from '@/components/act/SubjectCard';
+import SubjectsCard1 from '@/components/act/SubjectCard1';
+import UspsSection from '@/components/act/UspsSection';
+import Head from 'next/head';
 
-const Accordion = dynamic(() => import('@/components/act/accrodian'), { ssr: false });
-const Blog = dynamic(() => import('@/components/act/Blog'), { ssr: false });
-const CourseCard = dynamic(() => import('@/components/act/CourseCard'), { ssr: false });
-const FAQSection = dynamic(() => import('@/components/act/FaqSection'), { ssr: false });
-const IgniteAchievements = dynamic(() => import('@/components/act/IgniteAchievements'), { ssr: false });
-const IgniteAboutCard = dynamic(() => import('@/components/act/IgniteAboutCard'), { ssr: false });
-const LifeAtIgniteCarousel = dynamic(() => import('@/components/act/LifeAtIgniteCarousel'), { ssr: false });
-const MarqueeBanner = dynamic(() => import('@/components/act/MarqueeBanner'), { ssr: false });
-const ReviewsSection = dynamic(() => import('@/components/act/ReviewsSection'), { ssr: false });
-const StudentAchievements = dynamic(() => import('@/components/act/StudentAchivement'), { ssr: false });
-const SubjectsCard = dynamic(() => import('@/components/act/SubjectCard'), { ssr: false });
-const SubjectsCard1 = dynamic(() => import('@/components/act/SubjectCard1'), { ssr: false });
-const UspsSection = dynamic(() => import('@/components/act/UspsSection'), { ssr: false });
-
-// 1. ACCEPT props normally (decoupled from headerHeight state to prevent re-renders)
-const act = () => {
+// 1. ACCEPT the headerHeight prop
+const act = ({ headerHeight }) => {
 
   // ----------------------------------------------------
   // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
@@ -149,53 +147,91 @@ const act = () => {
   // ----------------------------------------------------
 
 
+  const scrollRef = useRef(null);
+  const scrollInstanceRef = useRef(null);
+
+  useEffect(() => {
+    let scroll;
+
+    const initScroll = async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      if (!scrollRef.current) return;
+
+      scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.1,
+        // optional:
+        getDirection: true,
+        getSpeed: true,
+        multiplier: 1,
+      });
+
+      scrollInstanceRef.current = scroll;
+    };
+
+    if (typeof window !== "undefined") {
+      initScroll();
+    }
+
+    return () => {
+      scrollInstanceRef.current?.destroy();
+      scrollInstanceRef.current = null;
+    };
+  }, []);
+
 
   return (
     <>
+      <Head>
+        <link rel="stylesheet" href="/styles/home/MovingBanner.css" />
+        <link rel="stylesheet" href="/styles/home/Subjects.css" />
+        <link
+          rel="preload"
+          href="/assets/mobileact.webp"
+          as="image"
+          type="image/webp"
+          media="(max-width: 768px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/assets/act_bg_main.webp"
+          as="image"
+          type="image/webp"
+          media="(min-width: 769px)"
+          fetchPriority="high"
+        />
+      </Head>
       <SEO
         title="ACT Subject Tests Prep With Focused Courses & Tutors In UAE"
         description="Ignite Training Institute can support you as the best ACT tutors in Dubai through our comprehensive guidance & ACT-specific tutoring strategies"
         url="https://ignitetraininginstitute.com/act-tutors-in-dubai"
-        preloadImages={[
-          {
-            src: "/assets/mobileactv2.webp",
-            type: "image/webp",
-            media: "(max-width: 1024px)"
-          },
-          {
-            src: "/assets/act_bg_main.webp",
-            type: "image/webp",
-            media: "(min-width: 1025px)"
-          }
-        ]}
       />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       <JsonLd schema={actSchema} />
 
       {/* 3. APPLY the style for paddingTop to the scroll container */}
-      <div className='overflow-hidden innerpage page-content-padding'>
-        <section className="hero-section">
+      <div
+        ref={scrollRef}
+        className='overflow-hidden innerpage page-content-padding'
+        data-scroll-container
+      >
+        <section data-scroll-section className="hero-section">
           <div className="hero-container">
-            {/* NATIVE HTML PICTURE: Essential for instant Preload Scanner (LCP Fix) */}
-            {/* ❄️ React Freeze: Prevent hydration re-paint by manually setting HTML ❄️ */}
-            <div
-              className="hero-bg"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="/assets/mobileactv2.webp" />
-                    <img
-                      src="/assets/act_bg_main.webp"
-                      alt="ACT Tutors Background"
-                      fetchpriority="high"
-                      loading="eager"
-                      class="hero-img"
-                      style="object-fit:cover;object-position:center;width:100%;height:100%;position:absolute;inset:0;"
-                    />
-                  </picture>
-                `
-              }}
-            />
+            {/* LCP Image moved here for immediate painting (SSR) */}
+            <picture className="hero-bg">
+              <source media="(max-width: 768px)" srcSet="/assets/mobileact.webp" />
+              <img
+                src="/assets/act_bg_main.webp"
+                alt="ACT Tutors Background"
+                fetchPriority="high"
+                width="1200"
+                height="800"
+                className="hero-img"
+                style={{ opacity: 1, visibility: 'visible' }}
+              />
+            </picture>
 
             <InfoCard />
           </div>
