@@ -35,10 +35,9 @@ export default function InfoCardLeft() {
                 
                 
                 style={{
-                    background: "linear-gradient(to right, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",
-                    backdropFilter: "blur(3px)",
-                    WebkitBackdropFilter: "blur(3px)",
+                    background: "rgba(255, 255, 255, 0.1)",
                     borderRadius: "100px",
+
                     maxWidth: "823px",
                     fontSize: "0.9rem",
                     
@@ -57,14 +56,15 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image
+                        <img
                             src="/assets/medal.webp"
                             alt="Grade Support"
-                            width={32}
-                            height={45}
+                            width="32"
+                            height="45"
                             className="icon-img"
                             style={{ width: "auto", height: "auto", maxHeight: "45px", maxWidth: "32px" }}
                         />
+
                     </span>
                     Grade 8 To <br /> 12 Support
                 </h3>
@@ -81,13 +81,15 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image
+                        <img
                             src="/assets/person.webp"
                             alt="Learning Mode"
-                            width={30}
-                            height={45}
+                            width="30"
+                            height="45"
                             className="icon-img icon-img-2"
+                            style={{ width: "auto", height: "auto", maxHeight: "45px", maxWidth: "30px" }}
                         />
+
                     </span>
                     Online <br /> & In-Person
                 </h3>
@@ -103,13 +105,15 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image
+                        <img
                             src="/assets/location.webp"
                             alt="Location"
-                            width={32}
-                            height={42}
+                            width="32"
+                            height="42"
                             className="icon-img icon-img-3"
+                            style={{ width: "auto", height: "auto", maxHeight: "42px", maxWidth: "32px" }}
                         />
+
                     </span>
 
                     Dubai <br /> (DIFC, JLT)
