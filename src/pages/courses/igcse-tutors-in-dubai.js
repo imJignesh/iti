@@ -140,8 +140,7 @@ const IGCSE = ({ headerHeight }) => {
   return (
     <>
     <Head>
-        <link rel="preload" as="image" href="/assets/igcse.webp" media="(max-width: 768px)" fetchPriority="high" />
-        <link rel="preload" as="image" href="/assets/igcse_bg_main.webp" media="(min-width: 769px)" fetchPriority="high" />
+        <link rel="preload" as="image" href="/assets/igcse.webp" fetchPriority="high" />
     </Head>
     <SEO
         title="IGCSE Tutors In Dubai, UAE | Expert Coaching & Guidance"
@@ -150,13 +149,7 @@ const IGCSE = ({ headerHeight }) => {
         preloadImages={[
           {
             src: "/assets/igcse.webp",
-            type: "image/webp",
-            media: "(max-width: 768px)"
-          },
-          {
-            src: "/assets/igcse_bg_main.webp",
-            type: "image/webp",
-            media: "(min-width: 769px)"
+            type: "image/webp"
           }
         ]}
       />
@@ -172,9 +165,8 @@ const IGCSE = ({ headerHeight }) => {
         <section className="hero-section">
           <div className="hero-container">
             <picture className="hero-bg">
-              <source media="(max-width: 768px)" srcSet="/assets/igcse.webp" />
               <img
-                src="/assets/igcse_bg_main.webp"
+                src="/assets/igcse.webp"
                 alt="IGCSE Tutors Background"
                 fetchPriority="high"
                 width="1200"
