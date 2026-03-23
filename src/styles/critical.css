@@ -124,3 +124,39 @@ body {
 main {
     min-height: auto;
 }
+/* --- Hero Critical Layout --- */
+.hero-container {
+    position: relative!important;
+    max-width: 90vw!important;
+    margin-inline: auto!important;
+    margin-block: 0!important;
+    min-height: 750px!important;
+    border-radius: 1.5rem!important;
+    overflow: hidden!important;
+    isolation: isolate!important;
+}
+
+.hero-bg {
+    position: absolute!important;
+    top: 0!important;
+    left: 0!important;
+    width: 100%!important;
+    height: 100%!important;
+    z-index: -1!important;
+}
+
+.hero-img {
+    width: 100%!important;
+    height: 100%!important;
+    object-fit: cover!important;
+    object-position: center!important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        max-width: 95vw!important;
+        min-height: 650px!important;
+    }
+}
