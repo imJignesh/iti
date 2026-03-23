@@ -197,8 +197,8 @@ const TOCPostContent = ({ content, toc }) => {
             <div class="blog-banner-wrapper my-5 highlight-on-scroll" data-scroll data-scroll-call="video-highlight" data-scroll-repeat="true">
                 <a href="/test-series/" style="display: block; line-height: 0;">
                     <picture>
-                        <source media="(min-width: 768px)" srcset="/videos/bnr-d.gif" />
-                        <img src="/videos/bnr1-m.gif" alt="Promo Banner" class="img-fluid desktop-gif-banner rounded" />
+                        <source media="(min-width: 768px)" srcset="/videos/blog-bnr-1-desktop.webp" />
+                        <img src="/videos/blog-bnr-1-mobile.webp" alt="Promo Banner" class="img-fluid desktop-gif-banner rounded" />
                     </picture>
                 </a>
             </div>
@@ -207,17 +207,10 @@ const TOCPostContent = ({ content, toc }) => {
         const video1Html = `
             <div class="blog-video-wrapper my-5 highlight-on-scroll" data-scroll data-scroll-call="video-highlight" data-scroll-repeat="true">
                 <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
-                    <video
-                        class="img-fluid gif-1 w-100 rounded"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-              
-                        style="object-fit: cover;"
-                    >
-                        <source src="/videos/blog-gif1.mp4" type="video/mp4" />
-                    </video>
+                     <picture>
+                        <source media="(min-width: 768px)" srcset="/videos/blog-bnr-2-desktop.webp" />
+                        <img src="/videos/blog-bnr-2-mobile.webp" alt="Join Free Demo Class" class="img-fluid gif-1 w-100 rounded" style="object-fit: cover;" />
+                    </picture>
                 </a>
             </div>
         `;
@@ -225,17 +218,10 @@ const TOCPostContent = ({ content, toc }) => {
         const video2Html = `
             <div class="blog-video-wrapper my-5 ${gif2PlaceholderClass} highlight-on-scroll" data-scroll data-scroll-call="video-highlight" data-scroll-repeat="true">
                 <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
-                    <video
-                        class="img-fluid gif-2 w-100 rounded"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-              
-                        style="object-fit: cover;"
-                    >
-                        <source src="/videos/blog-gif-2.mp4" type="video/mp4" />
-                    </video>
+                     <picture>
+                        <source media="(min-width: 768px)" srcset="/videos/blog-bnr-3-desktop.webp" />
+                        <img src="/videos/blog-bnr-3-mobile.webp" alt="Join Free Demo Class" class="img-fluid gif-2 w-100 rounded" style="object-fit: cover;" />
+                    </picture>
                 </a>
             </div>
         `;
