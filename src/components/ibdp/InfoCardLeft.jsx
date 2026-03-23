@@ -48,8 +48,9 @@ export default function InfoCardLeft() {
                             alt="Grade Support"
                             width={32}
                             height={45}
+                            priority
                             className="icon-img"
-                            style={{ width: "auto", height: "auto", maxHeight: "45px", maxWidth: "32px" }}
+                            style={{ maxHeight: "45px", maxWidth: "32px" }}
                         />
                     </span>
                     Grade 11<br />& 12 Support
@@ -72,6 +73,7 @@ export default function InfoCardLeft() {
                             alt="Learning Mode"
                             width={30}
                             height={45}
+                            priority
                             className="icon-img icon-img-2"
                         />
                     </span>
@@ -94,6 +96,7 @@ export default function InfoCardLeft() {
                             alt="Location"
                             width={32}
                             height={42}
+                            priority
                             className="icon-img icon-img-3"
                         />
                     </span>

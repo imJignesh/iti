@@ -9,8 +9,6 @@ const GlobalPhoneInput = dynamic(() => import('../GlobalPhoneInput'), {
 });
 
 export default function InfoCardForm() {
-    const [isMobile, setIsMobile] = useState(false);
-    const [mounted, setMounted] = useState(false);
     const [pageInfo, setPageInfo] = useState('');
 
     // Note: isMobileButton was defined but seemingly unused in original code except maybe implicit logic. 
@@ -44,21 +42,11 @@ export default function InfoCardForm() {
     };
 
     useEffect(() => {
-        const checkDevice = () => {
-            setIsMobile(window.innerWidth <= 1100);
-        };
-
-        checkDevice();
-        window.addEventListener("resize", checkDevice);
-
         if (typeof window !== 'undefined') {
             const url = window.location.href;
             const title = window.document.title || window.location.pathname;
             setPageInfo(`URL: ${url} | Title/Path: ${title}`);
         }
-
-        setMounted(true);
-        return () => window.removeEventListener("resize", checkDevice);
     }, []);
 
     const validate = () => {
@@ -313,10 +301,18 @@ export default function InfoCardForm() {
                     >
                         {loading ? 'SUBMITTING...' : 'SUBMIT'}
                         <img
-                            src={mounted && isMobile ? "/assets/mobilebutton.webp" : "/assets/rwb.webp"}
+                            src="/assets/rwb.webp"
                             alt="right"
-                            width={mounted && isMobile ? 35 : 40}
-                            height={mounted && isMobile ? 35 : 40}
+                            width={40}
+                            height={40}
+                            className="submit-btn-img desktop-btn-img"
+                        />
+                        <img
+                            src="/assets/mobilebutton.webp"
+                            alt="right"
+                            width={35}
+                            height={35}
+                            className="submit-btn-img mobile-btn-img"
                         />
                     </button>
                 </form>
@@ -333,6 +329,27 @@ export default function InfoCardForm() {
           border-color: rgba(255, 255, 255, 0.7) !important;
           box-shadow: none !important;
           color: white !important;
+        }
+
+        /* Hydration Flicker Fix */
+        .submit-btn-img {
+          width: 40px;
+          height: 40px;
+        }
+        .mobile-btn-img {
+          display: none;
+        }
+        @media (max-width: 1100px) {
+          .submit-btn-img {
+            width: 35px;
+            height: 35px;
+          }
+          .desktop-btn-img {
+            display: none;
+          }
+          .mobile-btn-img {
+            display: inline-block;
+          }
         }
 
         /* Desktop form styling */

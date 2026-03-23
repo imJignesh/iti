@@ -170,7 +170,7 @@ const DelayedPopup = () => {
                 </button>
 
                 <form onSubmit={handleSubmit} className="popupForm">
-                    <h3>Achieve 7s, A*s & 5s with Ignite</h3>
+                    <h3>Prepare Like A Top Scorer This Season</h3>
                     <p>Register for a free consultation and study resources.</p>
 
                     {submissionStatus === 'error' && (
