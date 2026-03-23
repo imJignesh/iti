@@ -46,9 +46,8 @@ export default function InfoCardLeft() {
                             alt="Grade Support"
                             width={32}
                             height={45}
-                            priority
                             className="icon-img"
-                            style={{ maxHeight: "45px", maxWidth: "32px" }}
+                            style={{ width: "auto", height: "auto", maxHeight: "45px", maxWidth: "32px" }}
                         />
                     </span>
                     Year 12 &<br />Year 13 Support
@@ -71,8 +70,8 @@ export default function InfoCardLeft() {
                             alt="Learning Mode"
                             width={30}
                             height={45}
-                            priority
                             className="icon-img icon-img-2"
+                            style={{ width: "auto", height: "auto" }}
                         />
                     </span>
                     Online <br /> & In-Person
@@ -94,8 +93,8 @@ export default function InfoCardLeft() {
                             alt="Location"
                             width={32}
                             height={42}
-                            priority
                             className="icon-img icon-img-3"
+                            style={{ width: "auto", height: "auto" }}
                         />
                     </span>
 
@@ -168,8 +167,8 @@ export default function InfoCardLeft() {
 
         @media (min-width: 1101px) {
           .desktop-fade-in {
-            opacity: 0;
-            transform: translateY(20px);
+            opacity: 1;
+            transform: translateY(0);
             transition: opacity 0.5s ease-out, transform 0.5s ease-out;
           }
           .desktop-fade-in.is-inview {
