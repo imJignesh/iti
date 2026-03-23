@@ -5,27 +5,45 @@ import SEO from "@/components/SEO";
 import LazySection from "@/components/LazySection";
 // import MovingBanner from '@/components/home/MovingBanner';
 // import Testimonial from '@/components/home/Testimonial';
-import Accordion from '@/components/myp/accordian';
-import Blog from "@/components/myp/Blog";
-import CourseCard from '@/components/myp/CourseCard';
-import FAQSection from '@/components/myp/FaqSection';
-import IgniteAchievements from '@/components/myp/IgniteAchievements';
-import InfoCard from '@/components/myp/InfoCard';
-import IgniteAboutCard from "@/components/myp/IgniteAboutCard";
-import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
-import Trainers from "@/components/myp/Trainers";
-import LifeAtIgniteCarousel from '@/components/myp/LifeAtIgniteCarousel';
-import MarqueeBanner from '@/components/myp/MarqueeBanner';
-import ReviewsSection from '@/components/myp/ReviewsSection';
-import StudentAchievements from '@/components/myp/StudentAchivement';
-import SubjectsCard from '@/components/myp/SubjectCard';
-import UspsSection from '@/components/myp/UspsSection';
+import dynamic from 'next/dynamic';
+import { getImageProps } from 'next/image';
+
+const Accordion = dynamic(() => import('@/components/myp/accordian'));
+const Blog = dynamic(() => import('@/components/myp/Blog'));
+const CourseCard = dynamic(() => import('@/components/myp/CourseCard'));
+const FAQSection = dynamic(() => import('@/components/myp/FaqSection'));
+const IgniteAchievements = dynamic(() => import('@/components/myp/IgniteAchievements'));
+import InfoCard from '@/components/myp/InfoCard'; // Keeps static because it's ATF
+const IgniteAboutCard = dynamic(() => import('@/components/myp/IgniteAboutCard'));
+const WhatWeOfferSection = dynamic(() => import('@/components/ibdp/WhatWeOfferSection'));
+const Trainers = dynamic(() => import('@/components/myp/Trainers'));
+const LifeAtIgniteCarousel = dynamic(() => import('@/components/myp/LifeAtIgniteCarousel'));
+const MarqueeBanner = dynamic(() => import('@/components/myp/MarqueeBanner'));
+const ReviewsSection = dynamic(() => import('@/components/myp/ReviewsSection'));
+const StudentAchievements = dynamic(() => import('@/components/myp/StudentAchivement'));
+const SubjectsCard = dynamic(() => import('@/components/myp/SubjectCard'));
+const UspsSection = dynamic(() => import('@/components/myp/UspsSection'));
 
 
 // 1. ACCEPT the headerHeight prop
 // NOTE: Component is named IBDP, but the logic and schema provided are for MYP.
 const IBDP = ({ headerHeight }) => {
 
+  const commonProps = {
+    alt: "MYP Tutors Background",
+    fill: true,
+    priority: true,
+    sizes: "100vw",
+    className: "hero-img",
+  };
+
+  const {
+      props: { srcSet: mobileImg },
+  } = getImageProps({ ...commonProps, src: '/assets/myp_bg_mobile.webp' });
+
+  const {
+      props: { srcSet: desktopImg, ...restProps },
+  } = getImageProps({ ...commonProps, src: '/assets/myp_bg_main.webp' });
   // ----------------------------------------------------
   // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
   // ----------------------------------------------------
@@ -142,38 +160,7 @@ const IBDP = ({ headerHeight }) => {
   // 👆 END OF SCHEMA DEFINITION
   // ----------------------------------------------------
 
-  const scrollRef = useRef(null);
-  const scrollInstanceRef = useRef(null);
-
-  useEffect(() => {
-    let scroll;
-
-    const initScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      if (!scrollRef.current) return;
-
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1,
-        // optional:
-        getDirection: true,
-        getSpeed: true,
-        multiplier: 1,
-      });
-
-      scrollInstanceRef.current = scroll;
-    };
-
-    if (typeof window !== "undefined") {
-      initScroll();
-    }
-
-    return () => {
-      scrollInstanceRef.current?.destroy();
-      scrollInstanceRef.current = null;
-    };
-  }, []);
+  // Removed redundant local Locomotive Scroll initialization to prevent conflict with _app.js global provider
 
   return (
     <>
@@ -183,46 +170,30 @@ const IBDP = ({ headerHeight }) => {
         title="One-On-One Interactive Tutoring Classes For IB MYP In UAE"
         description="Improve grades with top IB MYP tutors in the UAE. Get subject-specific support, interactive lessons & tailored study plans from certified MYP trainers"
         url="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai"
+        preloadImages={[
+            {
+                src: "/assets/myp_bg_mobile.webp",
+                type: "image/webp",
+                media: "(max-width: 768px)"
+            },
+            {
+                src: "/assets/myp_bg_main.webp",
+                type: "image/webp",
+                media: "(min-width: 769px)"
+            }
+        ]}
       />
 
-      <Head>
-        <link
-          rel="preload"
-          href="/assets/myp_bg_main.webp"
-          as="image"
-          type="image/webp"
-          media="(max-width: 768px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          href="/assets/myp_bg_main.webp"
-          as="image"
-          type="image/webp"
-          media="(min-width: 769px)"
-          fetchPriority="high"
-        />
-      </Head>
+
       {/* 3. APPLY the style for paddingTop */}
-      <div
-        ref={scrollRef}
-        className='overflow-hidden innerpage page-content-padding'
-        data-scroll-container
-      >
-        <section data-scroll-section className="hero-section">
+      <div className='overflow-hidden innerpage page-content-padding'>
+        <section className="hero-section">
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}
             <picture className="hero-bg">
-              <source media="(max-width: 768px)" srcSet="/assets/myp_bg_mobile.webp" />
-              <img
-                src="/assets/myp_bg_main.webp"
-                alt="MYP Tutors Background"
-                fetchPriority="high"
-                width="1200"
-                height="800"
-                className="hero-img"
-                style={{ opacity: 1, visibility: 'visible' }}
-              />
+              <source media="(max-width: 768px)" srcSet={mobileImg} />
+              <source media="(min-width: 769px)" srcSet={desktopImg} />
+              <img {...restProps} fetchPriority="high" style={{ opacity: 1, visibility: 'visible' }} />
             </picture>
 
             <InfoCard />
