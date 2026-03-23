@@ -1,29 +1,24 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import LazySection from "@/components/LazySection";
-// 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
-// import MovingBanner from '@/components/home/MovingBanner';
-// import Testimonial from '@/components/home/Testimonial';
-import Accordion from '@/components/ibc/accordian';
-import Blog from "@/components/ibc/Blog";
-import CourseCard from '@/components/ibc/CourseCard';
-import IBCurriculumStages from '@/components/ibc/Curriculum.jsx';
-import FAQSection from '@/components/ibc/FaqSection';
-import IgniteAchievements from '@/components/ibc/IgniteAchievements';
-import InfoCard from '@/components/ibc/InfoCard';
-import IgniteAboutCard from "@/components/ibc/IgniteAboutCard";
-import Trainers from "@/components/ibc/Trainers";
-import WhatWeOfferSection from '@/components/ibc/WhatWeOfferSection';
-import LifeAtIgniteCarousel from '@/components/ibc/LifeAtIgniteCarousel';
-import MarqueeBanner from '@/components/ibc/MarqueeBanner';
-import ReviewsSection from '@/components/ibc/ReviewsSection';
-import StudentAchievements from '@/components/ibc/StudentAchivement';
-import SubjectsCard from '@/components/ibc/SubjectCard';
-import UniImagesCard from '@/components/ibc/universityCrad';
-import UspsSection from '@/components/ibc/UspsSection';
-import { University } from 'lucide-react';
 import SEO from "@/components/SEO";
+import InfoCard from '@/components/ibc/InfoCard';
+
+const Accordion = dynamic(() => import('@/components/ibc/accordian'));
+const Blog = dynamic(() => import("@/components/ibc/Blog"));
+const IBCurriculumStages = dynamic(() => import('@/components/ibc/Curriculum.jsx'));
+const FAQSection = dynamic(() => import('@/components/ibc/FaqSection'));
+const IgniteAchievements = dynamic(() => import('@/components/ibc/IgniteAchievements'));
+const IgniteAboutCard = dynamic(() => import("@/components/ibc/IgniteAboutCard"));
+const Trainers = dynamic(() => import("@/components/ibc/Trainers"));
+const WhatWeOfferSection = dynamic(() => import('@/components/ibc/WhatWeOfferSection'));
+const MarqueeBanner = dynamic(() => import('@/components/ibc/MarqueeBanner'));
+const ReviewsSection = dynamic(() => import('@/components/ibc/ReviewsSection'));
+const SubjectsCard = dynamic(() => import('@/components/ibc/SubjectCard'));
+const UspsSection = dynamic(() => import('@/components/ibc/UspsSection'));
+
 
 // 1. ACCEPT the headerHeight prop
 const IBC = ({ headerHeight }) => {
@@ -153,6 +148,18 @@ const IBC = ({ headerHeight }) => {
         title="IB Tutors In Dubai For Exam Success I IB Coaching In UAE"
         description="Get dedicated learning support for IB coaching in Dubai. Our expert IB tutors in the UAE are equipped with the right approach, strategies & resources"
         url="https://ignitetraininginstitute.com/ib-curriculum-tutors-in-dubai"
+        preloadImages={[
+          {
+            src: "/assets/ib-bg.webp",
+            type: "image/webp",
+            media: "(max-width: 768px)"
+          },
+          {
+            src: "/assets/ibc_bg_main.webp",
+            type: "image/webp",
+            media: "(min-width: 769px)"
+          }
+        ]}
       />
 
       <Head>
