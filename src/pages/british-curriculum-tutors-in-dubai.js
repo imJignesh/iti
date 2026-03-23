@@ -1,37 +1,30 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Head from "next/head";
+import dynamic from 'next/dynamic';
 import LazySection from "@/components/LazySection";
-// 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
-// import MovingBanner from '@/components/home/MovingBanner';
-// import Testimonial from '@/components/home/Testimonial';
-import Accordion from '@/components/bc/accordian';
-import Blog from "@/components/bc/Blog";
-import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
-import FAQSection from '@/components/bc/FaqSection';
-import IgniteAchievements from '@/components/bc/IgniteAchievements';
-import Image from "next/image";
-import InfoCard from "@/components/bc/InfoCard";
-import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
-import Trainers from "@/components/bc/Trainers";
-import WhatWeOfferSection from '@/components/bc/WhatWeOfferSection';
-// import LifeAtIgniteCarousel from '@/components/bc/LifeAtIgniteCarousel';
-import MarqueeBanner from '@/components/bc/MarqueeBanner';
-import ReviewsSection from '@/components/bc/ReviewsSection';
-// import StudentAchievements from '@/components/bc/StudentAchivement';
-import SubjectsCard from '@/components/bc/SubjectCard';
-import UniImagesCard from '@/components/bc/universityCrad';
-import UspsSection from '@/components/bc/UspsSection';
 import SEO from "@/components/SEO";
+import InfoCard from "@/components/bc/InfoCard";
+
+const Accordion = dynamic(() => import('@/components/bc/accordian'));
+const Blog = dynamic(() => import("@/components/bc/Blog"));
+const IBCurriculumStages = dynamic(() => import('@/components/bc/Curriculum.jsx'));
+const FAQSection = dynamic(() => import('@/components/bc/FaqSection'));
+const IgniteAchievements = dynamic(() => import('@/components/bc/IgniteAchievements'));
+const IgniteAboutCard = dynamic(() => import("@/components/bc/IgniteAboutCard"));
+const Trainers = dynamic(() => import("@/components/bc/Trainers"));
+const WhatWeOfferSection = dynamic(() => import('@/components/bc/WhatWeOfferSection'));
+const MarqueeBanner = dynamic(() => import('@/components/bc/MarqueeBanner'));
+const ReviewsSection = dynamic(() => import('@/components/bc/ReviewsSection'));
+const SubjectsCard = dynamic(() => import('@/components/bc/SubjectCard'));
+const UniImagesCard = dynamic(() => import('@/components/bc/universityCrad'));
+const UspsSection = dynamic(() => import('@/components/bc/UspsSection'));
+
 
 
 // 1. ACCEPT the headerHeight prop
 const BC = ({ headerHeight }) => {
-  const [mounted, setMounted] = React.useState(false);
 
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // ----------------------------------------------------
   // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
@@ -155,6 +148,18 @@ const BC = ({ headerHeight }) => {
         title="British Curriculum Tutors For IGCSE/GCSE & AS & A-Levels"
         description="Seek full guidance for the British Curriculum in the UAE. Learn from expert A-Level & IGCSE tutors to strengthen academics & boost performance"
         url="https://ignitetraininginstitute.com/british-curriculum-tutors-in-dubai"
+        preloadImages={[
+          {
+            src: "/assets/ib-bg.webp",
+            type: "image/webp",
+            media: "(max-width: 768px)"
+          },
+          {
+            src: "/assets/bc_bg_main.webp",
+            type: "image/webp",
+            media: "(min-width: 769px)"
+          }
+        ]}
       />
 
       <Head>
@@ -164,7 +169,7 @@ const BC = ({ headerHeight }) => {
       </Head>
 
       {/* Inject SEO Schema */}
-      <JsonLd data={bcSchema} />
+      <JsonLd schema={bcSchema} />
 
       {/* LCP Optimization: Lifted Image and removed data-scroll-container */}
       <div className='overflow-hidden innerpage page-content-padding'>
@@ -185,14 +190,15 @@ const BC = ({ headerHeight }) => {
                     height: "100%",
                     objectFit: "cover",
                     objectPosition: "center",
-                    display: 'block'
+                    display: 'block',
+                    opacity: 1, 
+                    visibility: 'visible'
                   }}
                 />
               </picture>
             </div>
 
-            {/* Content wrapped in mounted check to prevent Hydration Failure (which resets LCP timer) */}
-            {mounted && <InfoCard />}
+            <InfoCard />
           </div>
 
           <style jsx>{`
