@@ -12,13 +12,7 @@ export default function InfoCardLeft() {
             >
                 IB MYP Tutors In UAE To Begin<br /> Your Academic Journey
             </h1>
-            <div className="divider"
-                
-                
-                
-                style={{
-                    animationDelay: "0.25s",
-                }}></div>
+            <div className="divider"></div>
 
             <h2
                 className="text-white fs-8 fs-md-10 hero-h2"
@@ -31,9 +25,6 @@ export default function InfoCardLeft() {
 
             <div
                 className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold info-row"
-                
-                
-                
                 style={{
                     background: "linear-gradient(to right, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",
                     backdropFilter: "blur(3px)",
@@ -41,7 +32,6 @@ export default function InfoCardLeft() {
                     borderRadius: "100px",
                     maxWidth: "823px",
                     fontSize: "0.9rem",
-                    animationDelay: "0.3s",
                     border: "1px solid rgba(255, 255, 255, 0.30)",
                 }}
             >
@@ -200,14 +190,12 @@ export default function InfoCardLeft() {
         .hero-h1 {
             line-height: 1.2;
             max-width: 863px;
-            animation-delay: 0.2s;
             font-size: 2.6rem;
         }
         .hero-h2 {
             letter-spacing: 0.2em;
             font-weight: 600;
             opacity: 1;
-            animation-delay: 0.25s;
             font-size: inherit;
             line-height: inherit;
             margin-top: 19px;
@@ -381,7 +369,6 @@ export default function InfoCardLeft() {
               .custom-height {
                 width: 30px !important;
                 height: 30px !important;
-                animation-delay: 0.75s !important;
                 margin-left: 1rem !important;
               }
         }
@@ -410,7 +397,6 @@ export default function InfoCardLeft() {
              .custom-height {
                 width: 40px !important;
                 height: 40px !important;
-                animation-delay: 0.75s !important;
                 margin-left: 1rem !important;
              }
         }

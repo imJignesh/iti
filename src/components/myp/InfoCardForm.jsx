@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+
 const GlobalPhoneInput = dynamic(() => import('../GlobalPhoneInput'), {
     ssr: false,
     loading: () => <div style={{ height: '50px', width: '100%', borderRadius: '40px', border: '1.5px solid rgba(255,255,255,0.3)' }} />
 });
 
 export default function InfoCardForm() {
-    const [isMobile, setIsMobile] = useState(false);
     const [pageInfo, setPageInfo] = useState('');
 
     // Form Data
@@ -39,19 +39,12 @@ export default function InfoCardForm() {
     };
 
     useEffect(() => {
-        const checkDevice = () => {
-            setIsMobile(window.innerWidth <= 1100);
-        };
-
-        checkDevice();
-        window.addEventListener("resize", checkDevice);
         if (typeof window !== 'undefined') {
             const url = window.location.href;
             const title = window.document.title || window.location.pathname;
 
             setPageInfo(`URL: ${url} | Title/Path: ${title}`);
         }
-        return () => window.removeEventListener("resize", checkDevice);
     }, []);
 
     const handleChange = (e) => {
@@ -153,10 +146,6 @@ export default function InfoCardForm() {
     return (
         <div
             className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center position-relative right-form"
-            
-            
-            
-            style={{ animationDelay: "0.6s" }}
         >
             <div className="w-100 text-white form-container">
                 <form onSubmit={handleSubmit}>
@@ -164,10 +153,6 @@ export default function InfoCardForm() {
                     <input type="hidden" name="pageinfo" value="" />
                     <p
                         className="fw-bold text-uppercase mb-4 text-center form-heading"
-                        
-                        
-                        
-                        style={{ animationDelay: "0.65s" }}
                     >
                         GET A FREE DEMO CLASS+ FREE STUDY RESOURCES
                     </p>
@@ -184,10 +169,6 @@ export default function InfoCardForm() {
 
                     <div
                         className="mb-3"
-                        
-                        
-                        
-                        style={{ animationDelay: "0.7s" }}
                     >
                         <input
                             type="text"
@@ -208,10 +189,6 @@ export default function InfoCardForm() {
 
                     <div
                         className="row g-2 mb-3"
-                        
-                        
-                        
-                        style={{ animationDelay: "0.75s" }}
                     >
                         <div className="col-6">
                             <input
@@ -242,10 +219,6 @@ export default function InfoCardForm() {
                     {/* Grade Field - Specific to MYP Form */}
                     <div
                         className="mb-3"
-                        
-                        
-                        
-                        style={{ animationDelay: "0.77s" }}
                     >
                         <input
                             type="text"
@@ -266,10 +239,6 @@ export default function InfoCardForm() {
 
                     <div
                         className="mb-3"
-                        
-                        
-                        
-                        style={{ animationDelay: "0.8s" }}
                     >
                         <input
                             type="text"
@@ -290,10 +259,6 @@ export default function InfoCardForm() {
 
                     <div
                         className="mb-4"
-                        
-                        
-                        
-                        style={{ animationDelay: "0.85s" }}
                     >
                         <textarea
                             name="message"
@@ -315,9 +280,6 @@ export default function InfoCardForm() {
                     <button
                         type="submit"
                         disabled={loading}
-                        
-                        
-                        
                         className="btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
                         style={{
                             background: "transparent",
@@ -327,15 +289,18 @@ export default function InfoCardForm() {
                             border: "1.5px solid rgba(255, 255, 255, 0.7)",
                             borderRadius: "40px",
                             transition: "all 0.3s ease",
-                            animationDelay: "0.85s"
                         }}
                     >
                         {loading ? 'SUBMITTING...' : 'SUBMIT'}
                         <img
-                            src={isMobile ? "/assets/mobilebutton.webp" : "/assets/rwb.webp"}
+                            src="/assets/rwb.webp"
                             alt="right"
-                            width={isMobile ? 35 : 40}
-                            height={isMobile ? 35 : 40}
+                            className="submit-btn-img desktop-btn-img"
+                        />
+                        <img
+                            src="/assets/mobilebutton.webp"
+                            alt="right"
+                            className="submit-btn-img mobile-btn-img"
                         />
                     </button>
                 </form>
@@ -361,6 +326,27 @@ export default function InfoCardForm() {
         .fade-in-section.is-inview {
           opacity: 1;
           transform: translateY(0);
+        }
+
+        /* Hydration Flicker Fix */
+        .submit-btn-img {
+          width: 40px;
+          height: 40px;
+        }
+        .mobile-btn-img {
+          display: none;
+        }
+        @media (max-width: 1100px) {
+          .submit-btn-img {
+            width: 35px;
+            height: 35px;
+          }
+          .desktop-btn-img {
+            display: none;
+          }
+          .mobile-btn-img {
+            display: inline-block;
+          }
         }
 
         /* Desktop form styling */

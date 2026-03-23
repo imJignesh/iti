@@ -6,7 +6,7 @@ import LazySection from "@/components/LazySection";
 // import MovingBanner from '@/components/home/MovingBanner';
 // import Testimonial from '@/components/home/Testimonial';
 import dynamic from 'next/dynamic';
-import { getImageProps } from 'next/image';
+import Image from 'next/image';
 
 const Accordion = dynamic(() => import('@/components/myp/accordian'));
 const Blog = dynamic(() => import('@/components/myp/Blog'));
@@ -27,23 +27,8 @@ const UspsSection = dynamic(() => import('@/components/myp/UspsSection'));
 
 // 1. ACCEPT the headerHeight prop
 // NOTE: Component is named IBDP, but the logic and schema provided are for MYP.
-const IBDP = ({ headerHeight }) => {
+const MYP = ({ headerHeight }) => {
 
-  const commonProps = {
-    alt: "MYP Tutors Background",
-    fill: true,
-    priority: true,
-    sizes: "100vw",
-    className: "hero-img",
-  };
-
-  const {
-      props: { srcSet: mobileImg },
-  } = getImageProps({ ...commonProps, src: '/assets/myp_bg_mobile.webp' });
-
-  const {
-      props: { srcSet: desktopImg, ...restProps },
-  } = getImageProps({ ...commonProps, src: '/assets/myp_bg_main.webp' });
   // ----------------------------------------------------
   // 👇 COMBINED JSON-LD SCHEMAS DEFINITION FOR THIS PAGE
   // ----------------------------------------------------
@@ -191,9 +176,16 @@ const IBDP = ({ headerHeight }) => {
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}
             <picture className="hero-bg">
-              <source media="(max-width: 768px)" srcSet={mobileImg} />
-              <source media="(min-width: 769px)" srcSet={desktopImg} />
-              <img {...restProps} fetchPriority="high" style={{ opacity: 1, visibility: 'visible' }} />
+              <source media="(max-width: 768px)" srcSet="/assets/myp_bg_mobile.webp" />
+              <img
+                src="/assets/myp_bg_main.webp"
+                alt="MYP Tutors Background"
+                fetchPriority="high"
+                width="1200"
+                height="800"
+                className="hero-img"
+                style={{ opacity: 1, visibility: 'visible' }}
+              />
             </picture>
 
             <InfoCard />
@@ -223,6 +215,9 @@ const IBDP = ({ headerHeight }) => {
               height: 100%;
               object-fit: cover;
               object-position: center;
+              transition: opacity 0.5s ease-in-out;
+              opacity: 1;
+              visibility: visible;
             }
             @media (max-width: 1100px) {
               .hero-container {
@@ -231,7 +226,11 @@ const IBDP = ({ headerHeight }) => {
             }
           `}</style>
         </section>
-        <SubjectsCard />
+        <LazySection>
+          <section data-scroll-section>
+            <SubjectsCard />
+          </section>
+        </LazySection>
         <LazySection>
           <section data-scroll-section>
             <IgniteAboutCard />
@@ -316,4 +315,4 @@ const IBDP = ({ headerHeight }) => {
   );
 };
 
-export default IBDP;
+export default MYP;
