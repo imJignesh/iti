@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
@@ -142,66 +142,25 @@ const ALEVEL = ({ headerHeight }) => {
   // ----------------------------------------------------
 
 
-  const scrollRef = useRef(null);
-  const scrollInstanceRef = useRef(null);
-
-  useEffect(() => {
-    let scroll;
-
-    const initScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      if (!scrollRef.current) return;
-
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1,
-        // optional:
-        getDirection: true,
-        getSpeed: true,
-        multiplier: 1,
-      });
-
-      scrollInstanceRef.current = scroll;
-    };
-
-    if (typeof window !== "undefined") {
-      initScroll();
-    }
-
-    return () => {
-      scrollInstanceRef.current?.destroy();
-      scrollInstanceRef.current = null;
-    };
-  }, []);
-
   return (
     <>
-
       <SEO
         title="UAE's Leading A-Level, AS-Level Tutors For All Subjects"
         description="Learn from the best A-Level tutors In UAE with assured grade improvement. Choose a personalized tutoring plan with subjects of your choice"
         url="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai"
+        preloadImages={[
+            {
+                src: "/assets/alevel.webp",
+                type: "image/webp",
+                media: "(max-width: 768px)"
+            },
+            {
+                src: "/assets/alevel_bg_main.webp",
+                type: "image/webp",
+                media: "(min-width: 769px)"
+            }
+        ]}
       />
-
-      <Head>
-        <link
-          rel="preload"
-          href="/assets/alevel_bg_main.webp"
-          as="image"
-          type="image/webp"
-          media="(max-width: 768px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          href="/assets/alevel_bg_main.webp"
-          as="image"
-          type="image/webp"
-          media="(min-width: 769px)"
-          fetchPriority="high"
-        />
-      </Head>
 
 
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
@@ -209,9 +168,7 @@ const ALEVEL = ({ headerHeight }) => {
 
       {/* 3. APPLY the style for paddingTop */}
       <div
-        ref={scrollRef}
         className='overflow-hidden innerpage page-content-padding'
-        data-scroll-container
       >
         <section data-scroll-section className="hero-section">
           <div className="hero-container">

@@ -5,35 +5,20 @@ export default function InfoCardLeft() {
     return (
         <div className="col-lg-8 d-flex flex-column justify-content-center pe-lg-4 p-4 left-content v100">
             <h1
-                className="fw-bold text-white text-uppercase mb-3 desktop-fade-in hero-h1"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+                className="fw-bold text-white text-uppercase mb-3 hero-h1"
             >
                 AS & A Level Tutors In Dubai<br /> For Exam Success
             </h1>
-            <div className="divider desktop-fade-in"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
-                style={{
-                    animationDelay: "0.25s",
-                }}></div>
+            <div className="divider"></div>
 
             <h2
-                className="text-white desktop-fade-in fs-8 fs-md-10 hero-h2"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+                className="text-white fs-8 fs-md-10 hero-h2"
             >
                 Pathway To Your Dream College
             </h2>
 
             <div
-                className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold desktop-fade-in info-row"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+                className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold info-row"
                 style={{
                     background: "linear-gradient(to right, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",
                     backdropFilter: "blur(3px)",
@@ -41,7 +26,6 @@ export default function InfoCardLeft() {
                     borderRadius: "100px",
                     maxWidth: "823px",
                     fontSize: "0.9rem",
-                    animationDelay: "0.3s",
                     border: "1px solid rgba(255, 255, 255, 0.30)",
                 }}
             >
@@ -62,8 +46,9 @@ export default function InfoCardLeft() {
                             alt="Grade Support"
                             width={32}
                             height={45}
+                            priority
                             className="icon-img"
-                            style={{ width: "auto", height: "auto", maxHeight: "45px", maxWidth: "32px" }}
+                            style={{ maxHeight: "45px", maxWidth: "32px" }}
                         />
                     </span>
                     Year 12 &<br />Year 13 Support
@@ -86,6 +71,7 @@ export default function InfoCardLeft() {
                             alt="Learning Mode"
                             width={30}
                             height={45}
+                            priority
                             className="icon-img icon-img-2"
                         />
                     </span>
@@ -108,6 +94,7 @@ export default function InfoCardLeft() {
                             alt="Location"
                             width={32}
                             height={42}
+                            priority
                             className="icon-img icon-img-3"
                         />
                     </span>
@@ -119,10 +106,7 @@ export default function InfoCardLeft() {
             </div>
 
             <p
-                className="desktop-fade-in text-white mb-4 pt-3 pt-md-4"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+                className="text-white mb-4 pt-3 pt-md-4"
                 style={{
                     maxWidth: "750px",
                     fontSize: "1.2rem",
@@ -134,10 +118,7 @@ export default function InfoCardLeft() {
                 Unlock your full potential with expert-led A-Level tutoring tailored for all major exam boards. With focused exam prep, we help students achieve top results & pursue admissions at top universities globally.
             </p>
 
-            <div className="d-flex gap-3 btnwraper desktop-fade-in"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat>
+            <div className="d-flex gap-3 btnwraper">
                 <a
                     href="/join-free-demo-class/"
                     style={{ textDecoration: "none" }}
@@ -200,14 +181,12 @@ export default function InfoCardLeft() {
         .hero-h1 {
             line-height: 1.2;
             max-width: 863px;
-            animation-delay: 0.2s;
             font-size: 2.6rem;
         }
         .hero-h2 {
             letter-spacing: 0.2em;
             font-weight: 600;
             opacity: 1;
-            animation-delay: 0.25s;
             font-size: inherit;
             line-height: inherit;
             margin-top: 19px;
@@ -363,7 +342,7 @@ export default function InfoCardLeft() {
              }
         }
         
-        @media (max-width: 575px) {
+         @media (max-width: 575px) {
              .text-white.mb-4:last-of-type {
                 padding: 1rem !important;
                 line-height: 1.6 !important;
@@ -381,7 +360,7 @@ export default function InfoCardLeft() {
               .custom-height {
                 width: 30px !important;
                 height: 30px !important;
-                animation-delay: 0.75s !important;
+                
                 margin-left: 1rem !important;
               }
         }
@@ -400,6 +379,7 @@ export default function InfoCardLeft() {
              } 
         }
 
+        /* Desktop/Shared Breakpoints */
         @media (min-width: 768px) {
             .cust-text {
                 padding:  10px 14px 10px 20px !important;
@@ -410,7 +390,7 @@ export default function InfoCardLeft() {
              .custom-height {
                 width: 40px !important;
                 height: 40px !important;
-                animation-delay: 0.75s !important;
+                
                 margin-left: 1rem !important;
              }
         }
