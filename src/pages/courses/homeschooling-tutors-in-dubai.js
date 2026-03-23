@@ -171,7 +171,7 @@ const HomeSchooling = ({ headerHeight }) => {
 
       {/* 3. APPLY the style for paddingTop to the scroll container */}
       <div className='overflow-hidden innerpage page-content-padding'>
-        <section data-scroll-section className="hero-section">
+        <section className="hero-section">
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}
             <picture className="hero-bg">
