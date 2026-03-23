@@ -5,14 +5,14 @@ export default function InfoCardLeft() {
     return (
         <div className="col-lg-8 d-flex flex-column justify-content-center pe-lg-4 p-4 left-content v100">
             <h1
-                className="fw-bold text-white text-uppercase mb-3 desktop-fade-in hero-h1"
+                className="fw-bold text-white text-uppercase mb-3 hero-h1"
                 
                 
                 
             >
                 IB MYP Tutors In UAE To Begin<br /> Your Academic Journey
             </h1>
-            <div className="divider desktop-fade-in"
+            <div className="divider"
                 
                 
                 
@@ -21,7 +21,7 @@ export default function InfoCardLeft() {
                 }}></div>
 
             <h2
-                className="text-white desktop-fade-in fs-8 fs-md-10 hero-h2"
+                className="text-white fs-8 fs-md-10 hero-h2"
                 
                 
                 
@@ -30,7 +30,7 @@ export default function InfoCardLeft() {
             </h2>
 
             <div
-                className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold desktop-fade-in info-row"
+                className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold info-row"
                 
                 
                 
@@ -119,7 +119,7 @@ export default function InfoCardLeft() {
             </div>
 
             <p
-                className="desktop-fade-in text-white mb-4 pt-3 pt-md-4"
+                className="text-white mb-4 pt-3 pt-md-4"
                 
                 
                 
@@ -134,7 +134,7 @@ export default function InfoCardLeft() {
                 At Ignite, we provide year-round academic support through engaging, concept-driven MYP tutoring & expertly designed study resources, empowering students to approach their MYP exams with clarity & confidence.
             </p>
 
-            <div className="d-flex gap-3 btnwraper desktop-fade-in"
+            <div className="d-flex gap-3 btnwraper"
                 
                 
                 >

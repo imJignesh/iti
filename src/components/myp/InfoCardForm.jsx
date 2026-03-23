@@ -152,7 +152,7 @@ export default function InfoCardForm() {
 
     return (
         <div
-            className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center fade-in-section position-relative right-form"
+            className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center position-relative right-form"
             
             
             
@@ -163,7 +163,7 @@ export default function InfoCardForm() {
 
                     <input type="hidden" name="pageinfo" value="" />
                     <p
-                        className="fw-bold text-uppercase mb-4 fade-in-section text-center form-heading"
+                        className="fw-bold text-uppercase mb-4 text-center form-heading"
                         
                         
                         
@@ -183,7 +183,7 @@ export default function InfoCardForm() {
                     )}
 
                     <div
-                        className="mb-3 fade-in-section"
+                        className="mb-3"
                         
                         
                         
@@ -207,7 +207,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="row g-2 mb-3 fade-in-section"
+                        className="row g-2 mb-3"
                         
                         
                         
@@ -241,7 +241,7 @@ export default function InfoCardForm() {
 
                     {/* Grade Field - Specific to MYP Form */}
                     <div
-                        className="mb-3 fade-in-section"
+                        className="mb-3"
                         
                         
                         
@@ -265,7 +265,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-3 fade-in-section"
+                        className="mb-3"
                         
                         
                         
@@ -289,7 +289,7 @@ export default function InfoCardForm() {
                     </div>
 
                     <div
-                        className="mb-4 fade-in-section"
+                        className="mb-4"
                         
                         
                         
@@ -318,7 +318,7 @@ export default function InfoCardForm() {
                         
                         
                         
-                        className="fade-in-section btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
+                        className="btn bt-width fw-bold text-uppercase d-flex align-items-center justify-content-between gap-3 width"
                         style={{
                             background: "transparent",
                             color: "white",
