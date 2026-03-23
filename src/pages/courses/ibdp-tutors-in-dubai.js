@@ -71,37 +71,6 @@ const IBDP = ({ headerHeight }) => {
             <InfoCard />
           </div>
 
-          <style jsx>{`
-            .hero-container {
-              position: relative;
-              max-width: 90vw;
-              margin-inline: auto;
-              margin-block: 0;
-              min-height: 750px;
-              border-radius: 1.5rem;
-              overflow: hidden;
-              isolation: isolate; /* Creates stacking context */
-            }
-            .hero-bg {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              z-index: -1;
-            }
-            .hero-img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              object-position: center;
-            }
-            @media (max-width: 1100px) {
-              .hero-container {
-                max-width: 95vw;
-              }
-            }
-          `}</style>
         </section>
 
         <LazySection>
