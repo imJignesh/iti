@@ -145,11 +145,12 @@ const HomeSchooling = ({ headerHeight }) => {
 
   return (
     <>
-    <Head>
+      <JsonLd schema={homeschoolingSchema} />
+      <Head>
         <link rel="preload" as="image" href="/assets/homeschooling-bg.webp" type="image/webp" media="(max-width: 768px)" fetchPriority="high" />
         <link rel="preload" as="image" href="/assets/homeschooling_bg_main.webp" type="image/webp" media="(min-width: 769px)" fetchPriority="high" />
-    </Head>
-    <SEO
+      </Head>
+      <SEO
         title="Homeschooling In Dubai | Support For Private Candidates"
         description="Join homeschooling in Dubai, UAE for IGCSE, A-Levels & AP as private candidates. Get personalized learning support to excel academically & beyond"
         url="https://ignitetraininginstitute.com/courses/homeschooling-tutors-in-dubai"
@@ -166,8 +167,6 @@ const HomeSchooling = ({ headerHeight }) => {
           }
         ]}
       />
-      {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
-      <JsonLd schema={homeschoolingSchema} />
 
       {/* 3. APPLY the style for paddingTop to the scroll container */}
       <div className='overflow-hidden innerpage page-content-padding'>
