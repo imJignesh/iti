@@ -2,22 +2,21 @@
 import LazySection from "@/components/LazySection";
 import Head from "next/head";
 // import Testimonial from '@/components/home/Testimonial';
-import Accordion from '@/components/ibdp/accordian';
-import Blog from "@/components/ibdp/Blog";
-import CourseCard from '@/components/ibdp/CourseCard';
-//import OurTrainers from '@/components/tutors-jlt-dubai/ourTrainers';
-import FAQSection from '@/components/ibdp/FaqSection';
-import IgniteAchievements from '@/components/ibdp/IgniteAchievements';
-import InfoCard from '@/components/ibdp/InfoCard';
-import IgniteAboutCard from "@/components/ibdp/IgniteAboutCard";
-import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
-import Trainers from "@/components/ibdp/Trainers";
-// import LifeAtIgniteCarousel from '@/components/ibdp/LifeAtIgniteCarousel';
-import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
-import ReviewsSection from '@/components/ibdp/ReviewsSection';
-// import StudentAchievements from '@/components/ibdp/StudentAchivement';
-import SubjectsCard from '@/components/ibdp/SubjectCard';
-import UspsSection from '@/components/ibdp/UspsSection';
+import dynamic from 'next/dynamic';
+
+const Accordion = dynamic(() => import('@/components/ibdp/accordian'));
+const Blog = dynamic(() => import('@/components/ibdp/Blog'));
+const CourseCard = dynamic(() => import('@/components/ibdp/CourseCard'));
+const FAQSection = dynamic(() => import('@/components/ibdp/FaqSection'));
+const IgniteAchievements = dynamic(() => import('@/components/ibdp/IgniteAchievements'));
+import InfoCard from '@/components/ibdp/InfoCard'; // ATF - keep static
+const IgniteAboutCard = dynamic(() => import('@/components/ibdp/IgniteAboutCard'));
+const WhatWeOfferSection = dynamic(() => import('@/components/ibdp/WhatWeOfferSection'));
+const Trainers = dynamic(() => import('@/components/ibdp/Trainers'));
+const MarqueeBanner = dynamic(() => import('@/components/ibdp/MarqueeBanner'));
+const ReviewsSection = dynamic(() => import('@/components/ibdp/ReviewsSection'));
+const SubjectsCard = dynamic(() => import('@/components/ibdp/SubjectCard'));
+const UspsSection = dynamic(() => import('@/components/ibdp/UspsSection'));
 // Removed: { useEffect, useRef }
 import SEO from "@/components/SEO";
 
@@ -26,7 +25,11 @@ const IBDP = ({ headerHeight }) => {
 
   return (
     <>
-      <SEO
+    <Head>
+        <link rel="preload" as="image" href="/assets/ib-bg.webp" media="(max-width: 768px)" fetchPriority="high" />
+        <link rel="preload" as="image" href="/assets/ibdp_bg_main.webp" media="(min-width: 769px)" fetchPriority="high" />
+    </Head>
+    <SEO
         title="IBDP Tutors In Dubai, UAE | IB Diploma Coaching Support"
         description="Ace your training & exam preparation with IBDP tutors in Dubai. Our specialized IB Diploma trainers help you achieve top scores with the right guidance"
         url="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai"
