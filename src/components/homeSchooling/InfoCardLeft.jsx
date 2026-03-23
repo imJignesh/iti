@@ -5,35 +5,23 @@ export default function InfoCardLeft() {
     return (
         <div className="col-lg-8 d-flex flex-column justify-content-center pe-lg-4 p-4 left-content v100">
             <h1
-                className="fw-bold text-white text-uppercase mb-3 desktop-fade-in hero-h1"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+                className="fw-bold text-white text-uppercase mb-3 hero-h1"
             >
                 Homeschooling In Dubai To<br /> Thrive As A Private Candidate
             </h1>
-            <div className="divider desktop-fade-in"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+            <div className="divider"
                 style={{
-                    animationDelay: "0.25s",
+                    
                 }}></div>
 
             <h2
-                className="text-white desktop-fade-in fs-8 fs-md-10 hero-h2"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+                className="text-white fs-8 fs-md-10 hero-h2"
             >
                 IGCSE, A Levels, & AP Supported
             </h2>
 
             <div
-                className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold desktop-fade-in info-row"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+                className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold info-row"
                 style={{
                     background: "linear-gradient(to right, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",
                     backdropFilter: "blur(3px)",
@@ -41,7 +29,6 @@ export default function InfoCardLeft() {
                     borderRadius: "100px",
                     maxWidth: "823px",
                     fontSize: "0.9rem",
-                    animationDelay: "0.3s",
                     border: "1px solid rgba(255, 255, 255, 0.30)",
                 }}
             >
@@ -58,6 +45,7 @@ export default function InfoCardLeft() {
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                         <Image
+                            loading="eager"
                             src="/assets/medal.webp"
                             alt="Grade Support"
                             width={32}
@@ -82,11 +70,13 @@ export default function InfoCardLeft() {
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                         <Image
+                            loading="eager"
                             src="/assets/person.webp"
                             alt="Learning Mode"
                             width={30}
                             height={45}
                             className="icon-img icon-img-2"
+                            style={{ width: "auto", height: "auto" }}
                         />
                     </span>
                     Online <br /> & In-Person
@@ -104,11 +94,13 @@ export default function InfoCardLeft() {
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                         <Image
+                            loading="eager"
                             src="/assets/location.webp"
                             alt="Location"
                             width={32}
                             height={42}
                             className="icon-img icon-img-3"
+                            style={{ width: "auto", height: "auto" }}
                         />
                     </span>
 
@@ -119,10 +111,7 @@ export default function InfoCardLeft() {
             </div>
 
             <p
-                className="desktop-fade-in text-white mb-4 pt-3 pt-md-4"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat
+                className="text-white mb-4 pt-3 pt-md-4"
                 style={{
                     maxWidth: "750px",
                     fontSize: "1.2rem",
@@ -134,10 +123,7 @@ export default function InfoCardLeft() {
                 Experience customized, expert-led support across IGCSE, A-Levels, & AP as a private candidate. We offer flexible, high-quality education tailored to your goals, ensuring every learner feels seen & empowered.
             </p>
 
-            <div className="d-flex gap-3 btnwraper desktop-fade-in"
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat>
+            <div className="d-flex gap-3 btnwraper">
                 <a
                     href="/join-free-demo-class/"
                     style={{ textDecoration: "none" }}
@@ -187,9 +173,8 @@ export default function InfoCardLeft() {
 
         @media (min-width: 1101px) {
           .desktop-fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            opacity: 1;
+            transform: translateY(0);
           }
           .desktop-fade-in.is-inview {
             opacity: 1;
@@ -200,18 +185,19 @@ export default function InfoCardLeft() {
         .hero-h1 {
             line-height: 1.2;
             max-width: 863px;
-            animation-delay: 0.2s;
             font-size: 2.6rem;
+            opacity: 1;
+            transform: translateY(0);
         }
         .hero-h2 {
             letter-spacing: 0.2em;
             font-weight: 600;
             opacity: 1;
-            animation-delay: 0.25s;
             font-size: inherit;
             line-height: inherit;
             margin-top: 19px;
             margin-bottom: 26px;
+            transform: translateY(0);
         }
 
         .info-col-1 { padding-right: 3.7rem; }

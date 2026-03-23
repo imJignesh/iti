@@ -351,14 +351,15 @@ export default function InfoCardForm() {
           box-shadow: none !important;
           color: white !important;
         }
-        .fade-in-section {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-        .fade-in-section.is-inview {
-          opacity: 1;
-          transform: translateY(0);
+        @media (min-width: 1101px) {
+          .fade-in-section {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          .fade-in-section.is-inview {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         /* Desktop form styling */
