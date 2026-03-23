@@ -150,7 +150,7 @@ const BC = ({ headerHeight }) => {
         url="https://ignitetraininginstitute.com/british-curriculum-tutors-in-dubai"
         preloadImages={[
           {
-            src: "/assets/ib-bg.webp",
+            src: "/assets/alevel.webp",
             type: "image/webp",
             media: "(max-width: 768px)"
           },
@@ -162,12 +162,6 @@ const BC = ({ headerHeight }) => {
         ]}
       />
 
-      <Head>
-        {/* Explicitly hardcode preloads to override any component-level ambiguity */}
-        <link rel="preload" href="/assets/ib-bg.webp" as="image" type="image/webp" media="(max-width: 768px)" fetchPriority="high" />
-        <link rel="preload" href="/assets/bc_bg_main.webp" as="image" type="image/webp" media="(min-width: 769px)" fetchPriority="high" />
-      </Head>
-
       {/* Inject SEO Schema */}
       <JsonLd schema={bcSchema} />
 
@@ -178,8 +172,8 @@ const BC = ({ headerHeight }) => {
             {/* LCP Image moved here for immediate painting (SSR) - No hydration check here */}
             <div className="hero-bg" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
               <picture>
-                {/* Mobile Source */}
-                <source media="(max-width: 768px)" srcSet="/assets/ib-bg.webp" />
+                {/* Mobile Source - using optimized 15K image */}
+                <source media="(max-width: 768px)" srcSet="/assets/alevel.webp" />
                 {/* Desktop Source / Fallback */}
                 <img
                   src="/assets/bc_bg_main.webp"

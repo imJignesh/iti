@@ -139,19 +139,21 @@ const IGCSE = ({ headerHeight }) => {
 
   return (
     <>
-    <Head>
-        <link rel="preload" as="image" href="/assets/igcse.webp" fetchPriority="high" />
-    </Head>
     <SEO
         title="IGCSE Tutors In Dubai, UAE | Expert Coaching & Guidance"
         description="Achieve success with top IGCSE tutors in UAE. Get full prep support for IGCSE with syllabus coverage, past paper practice & exam strategies"
         url="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai"
         preloadImages={[
           {
+            src: "/assets/ib-bg.webp",
+            type: "image/webp",
+            media: "(max-width: 768px)"
+          },
+          {
             src: "/assets/igcse.webp",
-            type: "image/webp"
+            type: "image/webp",
+            media: "(min-width: 769px)"
           }
-
         ]}
       />
 
@@ -166,6 +168,7 @@ const IGCSE = ({ headerHeight }) => {
         <section className="hero-section">
           <div className="hero-container">
             <picture className="hero-bg">
+              <source media="(max-width: 768px)" srcSet="/assets/ib-bg.webp" />
               <img
                 src="/assets/igcse.webp"
                 alt="IGCSE Tutors Background"

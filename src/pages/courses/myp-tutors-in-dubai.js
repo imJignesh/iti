@@ -141,12 +141,6 @@ const MYP = ({ headerHeight }) => {
 
   return (
     <>
-      <Head>
-        {/* Absolute priority preloads for LCP - discovery priority #1 */}
-        <link rel="preload" as="image" href="/assets/myp_bg_mobile.webp" media="(max-width: 768px)" fetchPriority="high" />
-        <link rel="preload" as="image" href="/assets/myp_bg_main.webp" media="(min-width: 769px)" fetchPriority="high" />
-      </Head>
-      <JsonLd schema={mypSchema} />
       <SEO
         title="One-On-One Interactive Tutoring Classes For IB MYP In UAE"
         description="Improve grades with top IB MYP tutors in the UAE. Get subject-specific support, interactive lessons & tailored study plans from certified MYP trainers"
@@ -164,6 +158,7 @@ const MYP = ({ headerHeight }) => {
             }
         ]}
       />
+      <JsonLd schema={mypSchema} />
 
 
       {/* 3. APPLY the style for paddingTop */}

@@ -161,25 +161,6 @@ const IBC = ({ headerHeight }) => {
           }
         ]}
       />
-
-      <Head>
-        <link
-          rel="preload"
-          href="/assets/ib-bg.webp"
-          as="image"
-          type="image/webp"
-          media="(max-width: 768px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          href="/assets/ibc_bg_main.webp"
-          as="image"
-          type="image/webp"
-          media="(min-width: 769px)"
-          fetchPriority="high"
-        />
-      </Head>
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
       {/* The JsonLd component will correctly stringify and inject this valid JSON-LD array */}
       <JsonLd schema={ibcSchema} />

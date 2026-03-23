@@ -146,13 +146,9 @@ const HomeSchooling = ({ headerHeight }) => {
   return (
     <>
       <JsonLd schema={homeschoolingSchema} />
-      <Head>
-        <link rel="preload" as="image" href="/assets/homeschooling-bg.webp" type="image/webp" media="(max-width: 768px)" fetchPriority="high" />
-        <link rel="preload" as="image" href="/assets/homeschooling_bg_main.webp" type="image/webp" media="(min-width: 769px)" fetchPriority="high" />
-      </Head>
       <SEO
-        title="Homeschooling In Dubai | Support For Private Candidates"
-        description="Join homeschooling in Dubai, UAE for IGCSE, A-Levels & AP as private candidates. Get personalized learning support to excel academically & beyond"
+        title="Best Homeschooling In UAE For Full Academic Support"
+        description="Choose the top homeschooling center in UAE for your child's academic success. Get one-on-one sessions, comprehensive resources & flexible study plans"
         url="https://ignitetraininginstitute.com/courses/homeschooling-tutors-in-dubai"
         preloadImages={[
           {

@@ -25,25 +25,21 @@ const IBDP = ({ headerHeight }) => {
 
   return (
     <>
-    <Head>
-        <link rel="preload" as="image" href="/assets/ib-bg.webp" media="(max-width: 768px)" fetchPriority="high" />
-        <link rel="preload" as="image" href="/assets/ibdp_bg_main.webp" media="(min-width: 769px)" fetchPriority="high" />
-    </Head>
-    <SEO
-        title="IBDP Tutors In Dubai, UAE | IB Diploma Coaching Support"
-        description="Ace your training & exam preparation with IBDP tutors in Dubai. Our specialized IB Diploma trainers help you achieve top scores with the right guidance"
+      <SEO
+        title="IBDP Tutors In Dubai | Leading IB Diploma Tutors"
+        description="Expert IBDP tutors in Dubai. Get personalized tutoring for all IB Diploma subjects. Boost your IB scores with certified IBDP trainers"
         url="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai"
         preloadImages={[
-            {
-                src: "/assets/ib-bg.webp",
-                type: "image/webp",
-                media: "(max-width: 768px)"
-            },
-            {
-                src: "/assets/ibdp_bg_main.webp",
-                type: "image/webp",
-                media: "(min-width: 769px)"
-            }
+          {
+            src: "/assets/ib-bg.webp",
+            type: "image/webp",
+            media: "(max-width: 768px)"
+          },
+          {
+            src: "/assets/ibdp_bg_main.webp",
+            type: "image/webp",
+            media: "(min-width: 769px)"
+          }
         ]}
       />
       <div

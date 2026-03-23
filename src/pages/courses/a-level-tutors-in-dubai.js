@@ -138,13 +138,9 @@ const ALEVEL = ({ headerHeight }) => {
 
   return (
     <>
-      <Head>
-        <link rel="preload" as="image" href="/assets/alevel.webp" media="(max-width: 768px)" fetchPriority="high" />
-        <link rel="preload" as="image" href="/assets/alevel_bg_main.webp" media="(min-width: 769px)" fetchPriority="high" />
-      </Head>
       <SEO
-        title="UAE's Leading A-Level, AS-Level Tutors For All Subjects"
-        description="Learn from the best A-Level tutors In UAE with assured grade improvement. Choose a personalized tutoring plan with subjects of your choice"
+        title="Best A-Level Tutors In Dubai | Leading Coaching Institute"
+        description="Empower your academic journey with expert A-level tutors in Dubai. Personalized tutoring for Mathematics, Sciences, Business, & more to excel in your exams"
         url="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai"
         preloadImages={[
           {
