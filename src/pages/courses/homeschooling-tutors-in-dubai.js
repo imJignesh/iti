@@ -146,8 +146,8 @@ const HomeSchooling = ({ headerHeight }) => {
   return (
     <>
     <Head>
-        <link rel="preload" as="image" href="/assets/homeschooling-bg.webp" media="(max-width: 768px)" fetchPriority="high" />
-        <link rel="preload" as="image" href="/assets/homeschooling_bg_main.webp" media="(min-width: 769px)" fetchPriority="high" />
+        <link rel="preload" as="image" href="/assets/homeschooling-bg.webp" type="image/webp" media="(max-width: 768px)" fetchPriority="high" />
+        <link rel="preload" as="image" href="/assets/homeschooling_bg_main.webp" type="image/webp" media="(min-width: 769px)" fetchPriority="high" />
     </Head>
     <SEO
         title="Homeschooling In Dubai | Support For Private Candidates"
@@ -175,7 +175,7 @@ const HomeSchooling = ({ headerHeight }) => {
           <div className="hero-container">
             {/* LCP Image moved here for immediate painting (SSR) */}
             <picture className="hero-bg">
-              <source media="(max-width: 768px)" srcSet="/assets/homeschooling-bg.webp" />
+              <source media="(max-width: 768px)" srcSet="/assets/homeschooling-bg.webp" type="image/webp" />
               <img
                 src="/assets/homeschooling_bg_main.webp"
                 alt="Homeschooling Tutors Background"
@@ -183,6 +183,8 @@ const HomeSchooling = ({ headerHeight }) => {
                 width="1200"
                 height="800"
                 className="hero-img"
+                loading="eager"
+                decoding="async"
                 style={{ opacity: 1, visibility: 'visible' }}
               />
             </picture>
