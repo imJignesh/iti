@@ -327,14 +327,15 @@ export default function InfoCardForm() {
           box-shadow: none !important;
           color: white !important;
         }
-        .removed-class {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-        .removed-is-inview {
-          opacity: 1;
-          transform: translateY(0);
+        @media (min-width: 1101px) {
+          .removed-class {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          .removed-is-inview {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         /* Desktop form styling */

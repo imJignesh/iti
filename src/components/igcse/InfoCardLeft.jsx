@@ -45,7 +45,8 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image loading="lazy"
+                        <Image 
+                            loading="eager"
                             src="/assets/medal.webp"
                             alt="Grade Support"
                             width={32}
@@ -69,12 +70,14 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image loading="lazy"
+                        <Image 
+                            loading="eager"
                             src="/assets/person.webp"
                             alt="Learning Mode"
                             width={30}
                             height={45}
                             className="icon-img icon-img-2"
+                            style={{ width: "auto", height: "auto" }}
                         />
                     </span>
                     Online <br /> & In-Person
@@ -91,12 +94,14 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image loading="lazy"
+                        <Image 
+                            loading="eager"
                             src="/assets/location.webp"
                             alt="Location"
                             width={32}
                             height={42}
                             className="icon-img icon-img-3"
+                            style={{ width: "auto", height: "auto" }}
                         />
                     </span>
 
@@ -169,9 +174,8 @@ export default function InfoCardLeft() {
 
         @media (min-width: 1101px) {
           .removed-class {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            opacity: 1;
+            transform: translateY(0);
           }
           .removed-is-inview {
             opacity: 1;
@@ -182,18 +186,19 @@ export default function InfoCardLeft() {
         .hero-h1 {
             line-height: 1.2;
             max-width: 863px;
-            animation-delay: 0.2s;
             font-size: 2.6rem;
+            opacity: 1;
+            transform: translateY(0);
         }
         .hero-h2 {
             letter-spacing: 0.2em;
             font-weight: 600;
             opacity: 1;
-            animation-delay: 0.25s;
             font-size: inherit;
             line-height: inherit;
             margin-top: 19px;
             margin-bottom: 26px;
+            transform: translateY(0);
         }
 
         .info-col-1 { padding-right: 3.7rem; }
