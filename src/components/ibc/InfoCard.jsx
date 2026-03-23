@@ -1,8 +1,7 @@
 import dynamic from "next/dynamic";
 import InfoCardLeft from "./InfoCardLeft";
-const InfoCardForm = dynamic(() => import("./InfoCardForm"), {
-  ssr: false,
-});
+const InfoCardForm = dynamic(() => import("./InfoCardForm"));
+
 
 
 export default function InfoCard() {

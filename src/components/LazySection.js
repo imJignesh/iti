@@ -1,56 +1,24 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useScroll } from './LocomotiveScrollProvider'; // Adjust path if needed
+import React, { useEffect, useRef } from 'react';
+import { useScroll } from './LocomotiveScrollProvider';
 
-const LazySection = ({ children, threshold = 0.1, rootMargin = "200px" }) => {
-    const [isVisible, setIsVisible] = useState(false);
+/**
+ * LazySection Optimized for SSR & SEO
+ * 
+ * To ensure Google can crawl all content, we now render children immediately 
+ * in the initial SSR HTML. The performance gains are maintained by next/dynamic 
+ * which defers the hydration of the components until their JS is ready.
+ * 
+ * This component now primarily handles Locomotive Scroll updates when the 
+ * component's size changes or becomes visible.
+ */
+const LazySection = ({ children }) => {
     const ref = useRef(null);
-    const scroll = useScroll(); // Get Locomotive Scroll instance
+    const scroll = useScroll();
 
-    // Helper to detect bots/crawlers
-    const isBotDetected = () => {
-        if (typeof window === 'undefined') return false;
-        const userAgent = navigator.userAgent.toLowerCase();
-
-        // Comprehensive regex for Search Engines, AI Bots, and Social Previews.
-        // Note: Removed performance tools (lighthouse, pagespeed, gtmetrix) so they measure actual user experience.
-        const botPattern = /googlebot|bingbot|applebot|slurp|baiduspider|duckduckbot|google-inspectiontool|gptbot|oai-searchbot|claudebot|perplexitybot|amazonbot|bytespider|ccbot|facebookexternalhit|twitterbot|linkedinbot|slackbot|discordbot|whatsapp/;
-
-        return botPattern.test(userAgent);
-    };
-
-    // Unified effect for visibility and scroll updates
     useEffect(() => {
-        // Eager load logic
-        if (typeof window !== 'undefined' && (window.innerWidth > 768 || isBotDetected())) {
-            setIsVisible(true);
-            return;
-        }
+        if (!ref.current || !scroll) return;
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.disconnect();
-                }
-            },
-            { threshold, rootMargin }
-        );
-
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
-
-        return () => {
-            if (observer && ref.current) {
-                observer.unobserve(ref.current);
-            }
-        };
-    }, [threshold, rootMargin]);
-
-    // Separate effect to handle ResizeObserver when content becomes visible
-    useEffect(() => {
-        if (!isVisible || !ref.current || !scroll) return;
-
+        // Ensure Locomotive Scroll is notified when the component reaches its final size
         const resizeObserver = new ResizeObserver(() => {
             if (scroll && typeof scroll.update === 'function') {
                 scroll.update();
@@ -60,13 +28,13 @@ const LazySection = ({ children, threshold = 0.1, rootMargin = "200px" }) => {
         resizeObserver.observe(ref.current);
 
         return () => {
-            resizeObserver.disconnect();
+            if (resizeObserver) resizeObserver.disconnect();
         };
-    }, [isVisible, scroll]);
+    }, [scroll]);
 
     return (
-        <div ref={ref} >
-            {isVisible ? children : null}
+        <div ref={ref}>
+            {children}
         </div>
     );
 };

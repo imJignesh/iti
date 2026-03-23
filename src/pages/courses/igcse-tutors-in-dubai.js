@@ -95,7 +95,7 @@ const igcseSchema = [
       {
         "@type": "EducationalOrganization",
         "name": "Ignite Training Institute",
-        "url": "https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/",
+        "url": "https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai",
         "logo": "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
         "telephone": "+971588589958",
         "address": {
@@ -125,7 +125,7 @@ const igcseSchema = [
         "provider": {
           "@type": "EducationalOrganization",
           "name": "Ignite Training Institute",
-          "url": "https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/"
+          "url": "https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai"
         }
       }
     ]
@@ -151,6 +151,7 @@ const IGCSE = ({ headerHeight }) => {
             src: "/assets/igcse.webp",
             type: "image/webp"
           }
+
         ]}
       />
 
