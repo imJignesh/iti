@@ -209,7 +209,7 @@ const TOCPostContent = ({ content, toc }) => {
                 <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
                      <picture>
                         <source media="(min-width: 768px)" srcset="/videos/blog-bnr-2-desktop.webp" />
-                        <img src="/videos/blog-bnr-2-mobile.webp" alt="Join Free Demo Class" class="img-fluid gif-1 w-100 rounded" style="object-fit: cover;" />
+                        <img src="/videos/blog-bnr-2-mobile.webp" alt="Join Free Demo Class" class="img-fluid gif-1 desktop-gif-banner w-100 rounded" style="object-fit: cover;" />
                     </picture>
                 </a>
             </div>
@@ -220,7 +220,7 @@ const TOCPostContent = ({ content, toc }) => {
                 <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
                      <picture>
                         <source media="(min-width: 768px)" srcset="/videos/blog-bnr-3-desktop.webp" />
-                        <img src="/videos/blog-bnr-3-mobile.webp" alt="Join Free Demo Class" class="img-fluid gif-2 w-100 rounded" style="object-fit: cover;" />
+                        <img src="/videos/blog-bnr-3-mobile.webp" alt="Join Free Demo Class" class="img-fluid gif-2 desktop-gif-banner w-100 rounded" style="object-fit: cover;" />
                     </picture>
                 </a>
             </div>
