@@ -36,18 +36,6 @@ const HomeCopy = ({ headerHeight }) => {
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
                 url="https://ignitetraininginstitute.com"
-                preloadImages={[
-                    {
-                        src: "/images/video-cover-mobile.webp",
-                        type: "image/webp",
-                        media: "(max-width: 767px)"
-                    },
-                    {
-                        src: "/images/video-cover.webp",
-                        type: "image/webp",
-                        media: "(min-width: 768px)"
-                    }
-                ]}
             />
             <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
                 <Hero />

@@ -132,8 +132,8 @@ const Course = () => {
                                         alt={`${card.title} course background`}
                                         fill
                                         style={{ objectFit: 'cover' }}
-                                        priority
                                         sizes="(max-width: 768px) 100vw, 33vw"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <div
