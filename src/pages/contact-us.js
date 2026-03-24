@@ -162,7 +162,7 @@ const Contact = ({ headerHeight }) => {
                 description="Get in touch with our academic experts to clearly understand the tutoring process & successfully kickstart your academic journey today!"
                 url="https://ignitetraininginstitute.com/contact-us" />
             <Head>
-<link rel="stylesheet" href="/styles/contact.css" />
+                <link rel="stylesheet" href="/styles/contact.css" />
             </Head>
             {/* 燥 SCHEMA INJECTION: Use the reusable component here */}
             <JsonLd schema={educationalOrganizationSchema} />
@@ -411,8 +411,7 @@ const Contact = ({ headerHeight }) => {
                         data-scroll-class="is-inview"
                         data-scroll-repeat>
                         <iframe
-                            // NOTE: Changed to a safe, valid Google Maps URL format for embedding if necessary
-                            src="https://maps.google.com/maps?q=Al%20Moosa%20Tower%201,%20Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.6010810897133!2d55.2777655!3d25.2166721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43b8f8e29eb3%3A0x44b31b9a92cc00dc!2sIgnite%20Training%20Institute!5e0!3m2!1sen!2sin!4v1774356673335!5m2!1sen!2sin"
                             width="100%"
                             height="450"
                             style={{ border: 0 }}
@@ -420,6 +419,7 @@ const Contact = ({ headerHeight }) => {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade">
                         </iframe>
+
                     </section>
                 </LazySection>
             </div >
