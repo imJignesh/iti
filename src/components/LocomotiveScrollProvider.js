@@ -5,6 +5,7 @@ import React, {
     useRef,
     useState,
 } from "react";
+import { isBot as isBotDetected } from "@/utils/botDetection";
 
 // --- 1. Create Context ---
 const ScrollContext = createContext(null);
@@ -21,16 +22,6 @@ const LocomotiveScrollProvider = ({ children }) => {
     // A ref to hold the Locomotive Scroll instance
     const scrollInstanceRef = useRef(null);
     const [isScrollEnabled, setIsScrollEnabled] = useState(false);
-
-    // --- NEW: Function to check for PSI/Lighthouse environment ---
-    const isBotDetected = () => {
-        // Check for the known Lighthouse global variable or User Agent
-        if (typeof window !== 'undefined' && (window.__lighthouse || navigator.userAgent.includes('HeadlessChrome') || navigator.userAgent.includes('Chrome-Lighthouse'))) {
-            return true;
-        }
-        return false;
-    };
-    // --- END NEW FUNCTION ---
 
     // Effect 0: Apply class to body if bot is detected
     useEffect(() => {
