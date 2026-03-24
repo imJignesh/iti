@@ -48,6 +48,8 @@ const About = () => {
                   data-scroll-class="is-inview"
 
                   className={`fade-in-section ${styles.rectangleBG}`}
+                  loading="lazy"
+                  decoding="async"
                   src="/images/rectangle-bg1.webp"
                   alt="Teacher"
                   width={265}
@@ -56,6 +58,9 @@ const About = () => {
                 <img
                   data-scroll
                   data-scroll-class="is-inview"
+                  
+                  loading="lazy"
+                  decoding="async"
 
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.webp"
@@ -66,6 +71,9 @@ const About = () => {
                 <img
                   data-scroll
                   data-scroll-class="is-inview"
+                  
+                  loading="lazy"
+                  decoding="async"
 
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.webp"
@@ -76,6 +84,9 @@ const About = () => {
                 <img
                   data-scroll
                   data-scroll-class="is-inview"
+                  
+                  loading="lazy"
+                  decoding="async"
 
                   className={`fade-in-section ${styles.rectangleBG}`}
                   src="/images/rectangle-bg2.webp"

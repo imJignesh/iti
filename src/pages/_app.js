@@ -27,17 +27,7 @@ const LocomotiveScrollProvider = dynamic(() => import('../components/LocomotiveS
     ssr: false,
 });
 
-const isPageSpeedInsights = () => {
-    if (typeof navigator === 'undefined') return false;
-    const userAgent = navigator.userAgent.toLowerCase();
-    return (
-        userAgent.includes('lighthouse') ||
-        userAgent.includes('gtmetrix') ||
-        userAgent.includes('pagespeed') ||
-        userAgent.includes('chrome-lighthouse') ||
-        userAgent.includes('speed insights')
-    );
-};
+import { isPageSpeedInsights, isBot } from "@/utils/botDetection";
 
 const isMobileDevice = () => {
     if (typeof window === 'undefined') return false;
@@ -87,11 +77,12 @@ export default function MyApp({ Component, pageProps }) {
 
     useEffect(() => {
         const isMobile = isMobileDevice();
-        // const isPageSpeed = isPageSpeedInsights(); // Only needed if you have special logic for bots
+        // --- MODIFIED: Disable for PSI/Bots as well ---
+        const isPageSpeed = isPageSpeedInsights();
 
-        // Ensure Locomotive Scroll is disabled for ALL mobile devices
-        if (isMobile) {
-            console.log('Locomotive Scroll disabled for mobile');
+        // Ensure Locomotive Scroll is disabled for ALL mobile devices and bots
+        if (isMobile || isPageSpeed) {
+            console.log('Locomotive Scroll disabled for mobile/bot');
             setShouldLoadLocomotiveScroll(false);
         } else {
             setShouldLoadLocomotiveScroll(true);

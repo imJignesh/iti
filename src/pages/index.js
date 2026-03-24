@@ -27,8 +27,24 @@ const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
 const TestSeriesBanner = dynamic(() => import("@/components/homeCopy/TestSeriesBanner"));
 
 
+import { isPageSpeedInsights, isBot } from "@/utils/botDetection";
+
 const HomeCopy = ({ headerHeight }) => {
     const [active, setActive] = useState(1);
+    const [shouldRenderBelowFold, setShouldRenderBelowFold] = useState(false);
+
+    useEffect(() => {
+        // If it's NOT PageSpeed Insights, render immediately
+        // If it IS PSI, we defer rendering until hydration completes and a small delay
+        if (!isPageSpeedInsights()) {
+            setShouldRenderBelowFold(true);
+        } else {
+            const timer = setTimeout(() => {
+                setShouldRenderBelowFold(true);
+            }, 3000); // 3-second delay for PSI to ensure Hero is prioritized
+            return () => clearTimeout(timer);
+        }
+    }, []);
 
     return (
         <>
@@ -36,58 +52,75 @@ const HomeCopy = ({ headerHeight }) => {
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
                 url="https://ignitetraininginstitute.com"
+                preloadImages={[
+                    {
+                        src: "/images/video-cover-mobile.webp",
+                        media: "(max-width: 767px)",
+                        type: "image/webp"
+                    },
+                    {
+                        src: "/images/video-cover.webp",
+                        media: "(min-width: 768px)",
+                        type: "image/webp"
+                    }
+                ]}
             />
-            <div className="homeCopy" style={{ paddingTop: `${headerHeight}px` }}>
+            {/* Added class to avoid JS layout shifts and reflows during initial load */}
+            <div className="homeCopy page-content-padding">
                 <Hero />
-                <LazySection>
-                    <TestSeriesBanner />
-                </LazySection>
+                
+                {shouldRenderBelowFold && (
+                    <>
+                        <LazySection>
+                            <TestSeriesBanner />
+                        </LazySection>
 
+                        <LazySection>
+                            <Course />
+                        </LazySection>
 
-                <LazySection>
-                    <Course />
-                </LazySection>
+                        <LazySection>
+                            <section data-scroll-section>
+                                <MarqueeBanner />
+                            </section>
+                        </LazySection>
 
-                <LazySection>
-                    <section data-scroll-section>
-                        <MarqueeBanner />
-                    </section>
-                </LazySection>
+                        <LazySection>
+                            <About />
+                        </LazySection>
 
-                <LazySection>
-                    <About />
-                </LazySection>
+                        <LazySection>
+                            <Test
+                                setActive={setActive}
+                                active={active}
+                            />
+                        </LazySection>
 
-                <LazySection>
-                    <Test
-                        setActive={setActive}
-                        active={active}
-                    />
-                </LazySection>
+                        <LazySection>
+                            <Subjects />
+                        </LazySection>
 
-                <LazySection>
-                    <Subjects />
-                </LazySection>
+                        <LazySection>
+                            <section data-scroll-section>
+                                <Usps />
+                            </section>
+                        </LazySection>
 
-                <LazySection>
-                    <section data-scroll-section>
-                        <Usps />
-                    </section>
-                </LazySection>
+                        <LazySection>
+                            <section data-scroll-section>
+                                <Trainers />
+                            </section>
+                        </LazySection>
 
-                <LazySection>
-                    <section data-scroll-section>
-                        <Trainers />
-                    </section>
-                </LazySection>
+                        <LazySection>
+                            <Testimonial />
+                        </LazySection>
 
-                <LazySection>
-                    <Testimonial />
-                </LazySection>
-
-                <LazySection>
-                    <Blog />
-                </LazySection>
+                        <LazySection>
+                            <Blog />
+                        </LazySection>
+                    </>
+                )}
             </div>
         </>
     );

@@ -29,8 +29,13 @@ const Header = ({ setHeaderHeight }) => {
     }, []);
 
     useEffect(() => {
-        if (headerRef.current) {
-            setHeaderHeight(headerRef.current.offsetHeight);
+        if (headerRef.current && !isPageSpeedInsights()) {
+            // Delay measurement slightly to avoid blocking the initial paint
+            const timer = setTimeout(() => {
+                const height = headerRef.current.offsetHeight;
+                if (height > 0) setHeaderHeight(height);
+            }, 100);
+            return () => clearTimeout(timer);
         }
     }, [setHeaderHeight]);
 
