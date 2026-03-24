@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/Header.module.css';
 import Image from 'next/image';
-// import { Columns } from 'lucide-react';
 
 const Header = ({ setHeaderHeight }) => {
     const [navOpen, setNavOpen] = useState(false);
