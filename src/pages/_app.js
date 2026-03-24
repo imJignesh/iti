@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 import { useState, createContext, useEffect } from "react";
-import Link from 'next/link';
 
 import "@/styles/critical.css";
 import "@/styles/globals.css";
@@ -11,7 +10,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // --- Global Styles for specific sub-pages ---
 // Moved to individual pages via <link> tags in Head to prioritize home page LCP.
 
-import SEOHead from '../components/SEOHead';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 const DelayedPopup = dynamic(() => import("../components/DelayedPopup"), { ssr: false });
