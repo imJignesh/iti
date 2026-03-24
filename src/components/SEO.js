@@ -12,16 +12,16 @@ const SEO = ({ title, description, url, image, keywords, preloadImages }) => {
             {/* Primary SEO Tags */}
             <title>{pageTitle}</title>
 
-            {/* Critical LCP Preloading */}
+            {/* Critical LCP Preloading - Only first image gets high priority */}
             {preloadImages && preloadImages.map((img, index) => (
                 <link
                     key={index}
                     rel="preload"
                     as="image"
                     href={img.src}
-                    type={img.type}
+                    type={img.type || "image/webp"}
                     media={img.media}
-                    fetchPriority="high"
+                    fetchPriority={index === 0 ? "high" : "low"}
                 />
             ))}
 

@@ -206,45 +206,33 @@ export default function MyApp({ Component, pageProps }) {
 
             {shouldLoadLocomotiveScroll ? (
                 <LocomotiveScrollProvider>
-                    <SEOHead />
-                    <div className={`${montserrat.className} ${montserrat.variable}`}>
-                        <Header setHeaderHeight={setHeaderHeight} />
-                        <Component {...pageProps} headerHeight={headerHeight} />
-                        <Footer />
-                        <DelayedPopup />
-                    </div>
-                    {showButton && (
-                        <a
-                            href="/join-free-demo-class"
-                            onClick={handleDemoClick}
-                            className="sticky-demo-button"
-                            aria-label="Go to Free Demo Class page"
-                        >
-                            Get a Free Demo
-                        </a>
-                    )}
+                    <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} showButton={showButton} handleDemoClick={handleDemoClick} />
                 </LocomotiveScrollProvider>
             ) : (
-                <>
-                    <SEOHead />
-                    <div className={`${montserrat.className} ${montserrat.variable}`}>
-                        <Header setHeaderHeight={setHeaderHeight} />
-                        <Component {...pageProps} headerHeight={headerHeight} />
-                        <Footer />
-                        <DelayedPopup />
-                    </div>
-                    {showButton && (
-                        <a
-                            href="/join-free-demo-class"
-                            onClick={handleDemoClick}
-                            className="sticky-demo-button"
-                            aria-label="Go to Free Demo Class page"
-                        >
-                            Get a Free Demo
-                        </a>
-                    )}
-                </>
+                <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} showButton={showButton} handleDemoClick={handleDemoClick} />
             )}
         </PopupProvider>
     );
 }
+
+const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component, showButton, handleDemoClick }) => (
+    <>
+        <SEOHead />
+        <div className={`${montserrat.className} ${montserrat.variable}`}>
+            <Header setHeaderHeight={setHeaderHeight} />
+            <Component {...pageProps} headerHeight={headerHeight} />
+            <Footer />
+            <DelayedPopup />
+        </div>
+        {showButton && (
+            <a
+                href="/join-free-demo-class"
+                onClick={handleDemoClick}
+                className="sticky-demo-button"
+                aria-label="Go to Free Demo Class page"
+            >
+                Get a Free Demo
+            </a>
+        )}
+    </>
+);

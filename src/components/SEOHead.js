@@ -13,15 +13,15 @@ export default function SEOHead({
 
             {/* REMOVED: Preconnects moved to _document.js for better performance */}
 
-            {/* Preload LCP image candidates with fetchpriority high */}
-            {preloadImages.map((img, idx) => (
+            {/* Preload LCP image candidates with fetchpriority high ONLY for the first image */}
+            {preloadImages && preloadImages.map((img, idx) => (
                 <link
                     key={idx}
                     rel="preload"
                     href={img.src}
                     as="image"
                     type={img.type || "image/webp"}
-                    fetchPriority="high"
+                    fetchPriority={idx === 0 ? "high" : "low"}
                     media={img.media || undefined}
                 />
             ))}
