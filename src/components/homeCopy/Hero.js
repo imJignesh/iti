@@ -101,7 +101,11 @@ const Hero = () => {
                                         <picture>
                                             <source media="(max-width: 767px)" srcSet={mobileImg} />
                                             <source media="(min-width: 768px)" srcSet={desktopImg} />
-                                            <img {...restProps} />
+                                            <img 
+                                                {...restProps} 
+                                                decoding="sync" 
+                                                fetchpriority="high" 
+                                            />
                                         </picture>
                                     </div>
                                     <video
@@ -120,22 +124,22 @@ const Hero = () => {
                                 <div className={styles.buttonGroup}>
                                     <a href="/join-free-demo-class/" className="buttonBlue">
                                         Get A Free Demo{" "}
-                                        <Image
+                                        <img
                                             src="/images/right-arrow-skyblue.webp"
                                             width={40}
                                             height={40}
                                             alt="Right arrow"
-                                            priority
+                                            loading="lazy"
                                         />
                                     </a>
                                     <a href="/courses/" className="buttonSkyBlue">
                                         Explore Classes{" "}
-                                        <Image
+                                        <img
                                             src="/images/right-arrow-blue.webp"
                                             width={40}
                                             height={40}
                                             alt="Right arrow"
-                                            priority
+                                            loading="lazy"
                                         />
                                     </a>
                                 </div>
