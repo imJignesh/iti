@@ -145,7 +145,7 @@ const IGCSE = ({ headerHeight }) => {
         url="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai"
         preloadImages={[
           {
-            src: "/assets/ib-bg.webp",
+            src: "/assets/igcse.webp",
             type: "image/webp",
             media: "(max-width: 768px)"
           },
@@ -168,7 +168,7 @@ const IGCSE = ({ headerHeight }) => {
         <section className="hero-section hero-atf-optimized">
           <div className="hero-container">
             <picture className="hero-bg">
-              <source media="(max-width: 768px)" srcSet="/assets/ib-bg.webp" />
+              <source media="(max-width: 768px)" srcSet="/assets/igcse.webp" />
               <img
                 src="/assets/igcse.webp"
                 alt="IGCSE Tutors Background"

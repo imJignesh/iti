@@ -120,22 +120,22 @@ const Header = ({ setHeaderHeight }) => {
                                     <div className={styles.megaMenuLeft}>
                                         <h3><span>01</span> <a href='/ib-curriculum-tutors-in-dubai'>International baccalaureate<div><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></div></a></h3>
                                         <a href='/courses/ibdp-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/ibdp-tutors-in-dubai') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/header-menu1.webp" alt="IBDP" loading="lazy" />
+                                            <img height={25} width={30} src="/images/header-menu1.webp" alt="IBDP" loading="lazy" />
                                             <h4>IBDP</h4>
                                         </a>
                                         <a href='/courses/myp-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/myp-tutors-in-dubai') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/header-menu2.webp" alt="MYP" loading="lazy" />
+                                            <img height={25} width={30} src="/images/header-menu2.webp" alt="MYP" loading="lazy" />
                                             <h4>MYP</h4>
                                         </a>
                                     </div>
                                     <div className={styles.megaMenuLeft}>
                                         <h3><span>02</span> <a href='/british-curriculum-tutors-in-dubai'>British curriculum<div><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></div></a></h3>
                                         <a href='/courses/a-level-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/a-level-tutors-in-dubai') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/header-menu3.webp" alt="A-LEVELS" loading="lazy" />
+                                            <img height={25} width={30} src="/images/header-menu3.webp" alt="A-LEVELS" loading="lazy" />
                                             <h4>A LEVELS</h4>
                                         </a>
                                         <a href='/courses/igcse-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/igcse-tutors-in-dubai') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/header-menu4.webp" alt="I/GCSE" loading="lazy" />
+                                            <img height={25} width={30} src="/images/header-menu4.webp" alt="I/GCSE" loading="lazy" />
                                             <h4>I/GCSE</h4>
                                         </a>
                                     </div>
@@ -160,11 +160,11 @@ const Header = ({ setHeaderHeight }) => {
                                 <div className={styles.megaMenuContent}>
                                     <div className={styles.megaMenuRight}>
                                         <a href='/act-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/act-tutors-in-dubai') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/menu-act.webp" alt="ACT" loading="lazy" />
+                                            <img height={25} width={30} src="/images/menu-act.webp" alt="ACT" loading="lazy" />
                                             <h4>ACT</h4>
                                         </a>
                                         <a href='/advanced-placements-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/advanced-placements-tutors-in-dubai') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/menu-ap.webp" alt="AP" loading="lazy" />
+                                            <img height={25} width={30} src="/images/menu-ap.webp" alt="AP" loading="lazy" />
                                             <h4>AP</h4>
                                         </a>
                                     </div>
@@ -186,23 +186,23 @@ const Header = ({ setHeaderHeight }) => {
                                 <div className={styles.megaMenuContent}>
                                     <div className={styles.megaMenuRight}>
                                         <a href='/blog' className={`${styles.megaMenuBox} ${isLinkActive('/blog') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/menu-blog.webp" alt="Blog" loading="lazy" />
+                                            <img height={25} width={30} src="/images/menu-blog.webp" alt="Blog" loading="lazy" />
                                             <h4>Blog</h4>
                                         </a>
                                         <a href='/about-us' className={`${styles.megaMenuBox} ${isLinkActive('/about-us') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/menu-about.webp" alt="About Us" loading="lazy" />
+                                            <img height={25} width={30} src="/images/menu-about.webp" alt="About Us" loading="lazy" />
                                             <h4>About Us</h4>
                                         </a>
                                         <a href='/our-team' className={`${styles.megaMenuBox} ${isLinkActive('/our-team') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/menu-team.webp" alt="Our Team" loading="lazy" />
+                                            <img height={25} width={30} src="/images/menu-team.webp" alt="Our Team" loading="lazy" />
                                             <h4>Our Team</h4>
                                         </a>
                                         <a href='/contact-us' className={`${styles.megaMenuBox} ${isLinkActive('/contact-us') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/menu-contact.webp" alt="Contact Us" loading="lazy" />
+                                            <img height={25} width={30} src="/images/menu-contact.webp" alt="Contact Us" loading="lazy" />
                                             <h4>Contact Us</h4>
                                         </a>
                                         <a href='/career' className={`${styles.megaMenuBox} ${isLinkActive('/career') ? styles.activeLink : ''}`}>
-                                            <Image height={25} width={30} src="/images/menu-career.webp" alt="Career" loading="lazy" />
+                                            <img height={25} width={30} src="/images/menu-career.webp" alt="Career" loading="lazy" />
                                             <h4>Career</h4>
                                         </a>
                                     </div>

@@ -38,12 +38,12 @@ const HomeCopy = ({ headerHeight }) => {
                 url="https://ignitetraininginstitute.com"
                 preloadImages={[
                     {
-                        src: "/images/banner-bg-mobile.webp",
+                        src: "/images/video-cover-mobile.webp",
                         type: "image/webp",
                         media: "(max-width: 767px)"
                     },
                     {
-                        src: "/images/banner-bg.webp",
+                        src: "/images/video-cover.webp",
                         type: "image/webp",
                         media: "(min-width: 768px)"
                     }

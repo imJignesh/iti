@@ -217,7 +217,6 @@ export default function MyApp({ Component, pageProps }) {
 
 const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component, showButton, handleDemoClick }) => (
     <>
-        <SEOHead />
         <div className={`${montserrat.className} ${montserrat.variable}`}>
             <Header setHeaderHeight={setHeaderHeight} />
             <Component {...pageProps} headerHeight={headerHeight} />
