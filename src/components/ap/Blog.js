@@ -3,7 +3,7 @@ import SharedBlog from "../SharedBlog";
 
 const Blog = () => {
     return (
-        <SharedBlog
+        <SharedBlog showInnerStyles={true}
             title="Explore Tips, Resources & Real Student Journeys"
         />
     );
