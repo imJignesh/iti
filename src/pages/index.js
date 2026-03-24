@@ -27,24 +27,8 @@ const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
 const TestSeriesBanner = dynamic(() => import("@/components/homeCopy/TestSeriesBanner"));
 
 
-import { isPageSpeedInsights, isBot } from "@/utils/botDetection";
-
 const HomeCopy = ({ headerHeight }) => {
     const [active, setActive] = useState(1);
-    const [shouldRenderBelowFold, setShouldRenderBelowFold] = useState(false);
-
-    useEffect(() => {
-        // If it's NOT PageSpeed Insights, render immediately
-        // If it IS PSI, we defer rendering until hydration completes and a small delay
-        if (!isPageSpeedInsights()) {
-            setShouldRenderBelowFold(true);
-        } else {
-            const timer = setTimeout(() => {
-                setShouldRenderBelowFold(true);
-            }, 3000); // 3-second delay for PSI to ensure Hero is prioritized
-            return () => clearTimeout(timer);
-        }
-    }, []);
 
     return (
         <>
@@ -65,62 +49,58 @@ const HomeCopy = ({ headerHeight }) => {
                     }
                 ]}
             />
-            {/* Added class to avoid JS layout shifts and reflows during initial load */}
+            {/* Using the CSS class page-content-padding (from critical.css) to ensure SEO-safe SSR without JS layout shifts */}
             <div className="homeCopy page-content-padding">
                 <Hero />
                 
-                {shouldRenderBelowFold && (
-                    <>
-                        <LazySection>
-                            <TestSeriesBanner />
-                        </LazySection>
+                <LazySection>
+                    <TestSeriesBanner />
+                </LazySection>
 
-                        <LazySection>
-                            <Course />
-                        </LazySection>
+                <LazySection>
+                    <Course />
+                </LazySection>
 
-                        <LazySection>
-                            <section data-scroll-section>
-                                <MarqueeBanner />
-                            </section>
-                        </LazySection>
+                <LazySection>
+                    <section data-scroll-section>
+                        <MarqueeBanner />
+                    </section>
+                </LazySection>
 
-                        <LazySection>
-                            <About />
-                        </LazySection>
+                <LazySection>
+                    <About />
+                </LazySection>
 
-                        <LazySection>
-                            <Test
-                                setActive={setActive}
-                                active={active}
-                            />
-                        </LazySection>
+                <LazySection>
+                    <Test
+                        setActive={setActive}
+                        active={active}
+                    />
+                </LazySection>
 
-                        <LazySection>
-                            <Subjects />
-                        </LazySection>
+                <LazySection>
+                    <Subjects />
+                </LazySection>
 
-                        <LazySection>
-                            <section data-scroll-section>
-                                <Usps />
-                            </section>
-                        </LazySection>
+                <LazySection>
+                    <section data-scroll-section>
+                        <Usps />
+                    </section>
+                </LazySection>
 
-                        <LazySection>
-                            <section data-scroll-section>
-                                <Trainers />
-                            </section>
-                        </LazySection>
+                <LazySection>
+                    <section data-scroll-section>
+                        <Trainers />
+                    </section>
+                </LazySection>
 
-                        <LazySection>
-                            <Testimonial />
-                        </LazySection>
+                <LazySection>
+                    <Testimonial />
+                </LazySection>
 
-                        <LazySection>
-                            <Blog />
-                        </LazySection>
-                    </>
-                )}
+                <LazySection>
+                    <Blog />
+                </LazySection>
             </div>
         </>
     );
