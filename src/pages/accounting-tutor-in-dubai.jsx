@@ -124,12 +124,13 @@ const AccountingTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
+                loadInnerStyles={true}
                 title="Accounting Tutors In Dubai - IGCSE & A-Level Support"
                 description="Learn with accounting tutors in Dubai, specializing in IGCSE & A-Level. Benefit from personalized support, structured learning plans, & study resources"
                 url="https://ignitetraininginstitute.com/accounting-tutor-in-dubai"
             />
             <Head>
-                <link
+<link
                     rel="preload"
                     href="/assets/subject-tutoring-m.webp"
                     as="image"

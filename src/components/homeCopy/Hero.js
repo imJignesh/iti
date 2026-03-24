@@ -69,7 +69,26 @@ const Hero = () => {
 
     return (
         <>
-
+            <Head>
+                {/* Preload Mobile Image */}
+                <link
+                    rel="preload"
+                    as="image"
+                    imagesrcset={mobileImg}
+                    imagesizes="100vw"
+                    media="(max-width: 767px)"
+                    fetchPriority="high"
+                />
+                {/* Preload Desktop Image */}
+                <link
+                    rel="preload"
+                    as="image"
+                    imagesrcset={desktopImg}
+                    imagesizes="100vw"
+                    media="(min-width: 768px)"
+                    fetchPriority="high"
+                />
+            </Head>
 
             <div className={styles.heroSectionWrapper}>
                 <section className={`${styles.hero} ${styles.homeherosection}`}>

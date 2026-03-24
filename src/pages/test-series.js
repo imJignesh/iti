@@ -18,7 +18,7 @@ const TestSeries = ({ headerHeight }) => {
     return (
         <>
             <Head>
-                {/* <link rel="stylesheet" href="/styles/home/MovingBanner.css" />
+{/* <link rel="stylesheet" href="/styles/home/MovingBanner.css" />
                 <link rel="stylesheet" href="/styles/home/Subjects.css" /> */}
                 <link
                     rel="preload"
@@ -38,6 +38,7 @@ const TestSeries = ({ headerHeight }) => {
                 />
             </Head>
             <SEO
+                loadInnerStyles={true}
                 title="Test Series | Ignite Training Institute"
                 description="Prepare for your exams with the best Test Series at Ignite Training Institute."
                 url="https://ignitetraininginstitute.com/test-series"

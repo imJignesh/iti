@@ -767,6 +767,9 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
                 image={seoImage}
                 keywords={seoKeywords}
             />
+            <Head>
+                <link rel="stylesheet" href="/styles/slug.css" />
+            </Head>
             {/* Additional manual tags if needed (e.g. article specific) */}
             <Head>
                 <meta property="og:type" content="article" key="og-type" />

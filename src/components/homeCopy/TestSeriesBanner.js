@@ -13,7 +13,7 @@ const TestSeriesBanner = () => {
                             src="/images/test-series-d.webp"
                             alt="Test Series"
                             className={styles.bannerImage}
-                            fetchPriority="high"
+                            loading="lazy"
                         />
                     </picture>
                 </a>

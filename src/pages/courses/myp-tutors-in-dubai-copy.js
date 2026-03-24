@@ -180,13 +180,14 @@ const IBDP = ({ headerHeight }) => {
 
       <JsonLd schema={mypSchema} />
       <SEO
+                loadInnerStyles={true}
         title="One-On-One Interactive Tutoring Classes For IB MYP In UAE"
         description="Improve grades with top IB MYP tutors in the UAE. Get subject-specific support, interactive lessons & tailored study plans from certified MYP trainers"
         url="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai"
       />
 
       <Head>
-        <meta name="robots" content="noindex" />
+<meta name="robots" content="noindex" />
         <link
           rel="preload"
           href="/assets/myp_bg_main.webp"

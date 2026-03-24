@@ -125,12 +125,13 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
+                loadInnerStyles={true}
                 title="Biology Tutors In Dubai For IB, IGCSE, A-Level, & AP"
                 description="Get expert Biology tutoring in Dubai from highly qualified tutors specializing in IB, IGCSE, A-Levels, & AP. Achieve confidence & academic excellence"
                 url="https://ignitetraininginstitute.com/biology-tutor-in-dubai"
             />
             <Head>
-                <link
+<link
                     rel="preload"
                     href="/assets/subject-tutoring-m.webp"
                     as="image"

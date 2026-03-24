@@ -36,18 +36,6 @@ const HomeCopy = ({ headerHeight }) => {
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"
                 url="https://ignitetraininginstitute.com"
-                preloadImages={[
-                    {
-                        src: "/images/video-cover-mobile.webp",
-                        media: "(max-width: 767px)",
-                        type: "image/webp"
-                    },
-                    {
-                        src: "/images/video-cover.webp",
-                        media: "(min-width: 768px)",
-                        type: "image/webp"
-                    }
-                ]}
             />
             {/* Using the CSS class page-content-padding (from critical.css) to ensure SEO-safe SSR without JS layout shifts */}
             <div className="homeCopy page-content-padding">

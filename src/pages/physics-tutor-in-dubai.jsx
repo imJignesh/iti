@@ -125,11 +125,12 @@ const PhysicsTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
+                loadInnerStyles={true}
                 title="Physics Tutors In Dubai For IB, IGCSE, A-Level, & AP"
                 description="Excel with the best Physics tutors in Dubai, specializing in IB, IGCSE, A-Level, & AP. Build strong concepts & achieve top exam results"
                 url="https://ignitetraininginstitute.com/physics-tutor-in-dubai" />
             <Head>
-                <link
+<link
                     rel="preload"
                     href="/assets/subject-tutoring-m.webp"
                     as="image"

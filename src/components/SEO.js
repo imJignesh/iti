@@ -1,7 +1,7 @@
 // src/components/SEO.js
 import Head from 'next/head';
 
-const SEO = ({ title, description, url, image, keywords, preloadImages }) => {
+const SEO = ({ title, description, url, image, keywords, preloadImages, loadInnerStyles }) => {
     // 1. We use the provided title directly (no global site name appended).
     const pageTitle = title || 'Ignite Training Institute';
 
@@ -25,7 +25,12 @@ const SEO = ({ title, description, url, image, keywords, preloadImages }) => {
                 />
             ))}
 
-            {/* 🚨 CRITICAL: The 'key' prop forces replacement of any default meta tag */}
+            {/* Load Inner Page Styles (On-demand) */}
+            {loadInnerStyles && (
+                <link rel="stylesheet" href="/styles/Ibdp.css" />
+            )}
+
+            {/*  CRITICAL: The 'key' prop forces replacement of any default meta tag */}
             <meta
                 name="description"
                 content={description || "Discover the best courses and expert trainers for your career growth."}

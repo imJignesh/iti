@@ -1,0 +1,908 @@
+/* Base styles for all screen sizes */
+
+.blog-detail-container {
+    margin-top: 4vw;
+}
+
+.post-detail-section {
+    padding-bottom: 0 !important;
+}
+
+h1.main-title {
+    font-weight: 700 !important;
+    line-height: 1;
+    text-transform: uppercase;
+    background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    padding: 0 40px;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    /* Default font size for larger screens */
+}
+
+.post-date {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.post-date span {
+    font-size: 22px;
+    font-weight: 600;
+    color: #233467;
+}
+
+.post-author {
+    display: flex;
+    justify-content: center;
+}
+
+.post-author span {
+    font-size: 22px;
+    font-weight: 600;
+    color: #23346782;
+}
+
+.post-share-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-feature img {
+    border-radius: 40px;
+    overflow: hidden;
+    height: 800px;
+}
+
+.post-content img {
+    max-width: 400px;
+    height: auto !important;
+}
+
+.post-content .wp-block-list,
+.post-content p {
+    color: #161616;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Sticky sidebar styling using native CSS */
+.sticky-sidebar-wrapper {
+    position: -webkit-sticky;
+    /* For Safari compatibility */
+    position: sticky;
+    top: 5.5vw;
+    /* Adjust this value as needed, e.g., to account for a fixed header */
+}
+
+.post-content h2 {
+    font-weight: 500 !important;
+    line-height: 1;
+    text-transform: uppercase;
+    background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px 0px;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    font-size: 32px;
+    /* Default font size for larger screens */
+}
+
+.post-content h3 {
+    font-weight: 500 !important;
+    line-height: 1;
+    /* text-transform: uppercase; */
+    background: linear-gradient(to left, var(--green-color), var(--lightgreen-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px 0px;
+    position: relative;
+    display: block;
+    text-align: left;
+    font-size: 28px;
+    /* Default font size for larger screens */
+}
+
+.toc-title {
+    font-size: 32px;
+    font-weight: 700 !important;
+    line-height: 1;
+    text-transform: uppercase;
+    background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 0px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.toc-list li {
+    padding: 15px 20px;
+    background: linear-gradient(86deg, rgba(243, 250, 255, 1) 50%, rgba(209, 229, 250, 1) 100%);
+}
+
+.toc-list li:nth-child(odd) {
+    background: linear-gradient(86deg, rgba(209, 229, 250, 1) 50%, rgba(243, 250, 255, 1) 100%);
+}
+
+.toc-list li a {
+    color: #161616;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.toc-list {
+    width: 100%;
+}
+
+/* New form styling from your provided code */
+.form-container {
+    background: linear-gradient(115deg, rgba(163, 202, 245, 1) 45%, rgba(231, 246, 255, 1) 100%);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 50, 0.15);
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1.2vw;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.blog-container .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2vw;
+    flex: 1;
+}
+
+.form-group label {
+    font-size: 0.8vw;
+    color: #1f2d61;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+    border: none;
+    border-bottom: 1px solid #88A9C4;
+    padding: 3px 0;
+    background: transparent;
+    font-size: 0.8vw;
+    outline: none;
+    width: 100%;
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.flag {
+    width: 28px;
+    height: 20px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.submit-btn {
+    display: block;
+    background: transparent;
+    color: #1f2d61;
+    border: 1px solid #1f2d61;
+    padding: 8px;
+    font-size: 1vw;
+    font-weight: 500;
+    border-radius: 30px;
+    text-align: left;
+    width: 70%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0.5vw 1.2vw;
+}
+
+.submit-btn.blog-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: linear-gradient(90deg, #0d1b6a, #4c84d3);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1vw;
+    padding: 0.5vw 1.2vw;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 270px;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+.arrow {
+    color: #FFF;
+    border-radius: 50%;
+    padding: 4px 9px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, rgba(22, 22, 100, 1) 23%, rgba(63, 136, 186, 1) 102%);
+}
+
+.helpful-block {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.helpful-block span {
+    display: flex;
+    line-height: 3rem;
+    background: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+button.like,
+button.dislike {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+}
+
+.author-bio-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5vw;
+    /* 40px → vw */
+    max-width: 62.5vw;
+    /* 1200px → vw */
+    margin: 2vw auto;
+    font-family: Arial, sans-serif;
+}
+
+.author-bio-image img {
+    width: 10vw;
+    /* 350px → vw */
+    border-radius: 0.6vw;
+    object-fit: cover;
+}
+
+.author-bio-heading {
+    font-size: 1.4vw;
+    /* 32px */
+    font-weight: 700;
+    color: #7c819c;
+    margin-bottom: 1vw;
+}
+
+.author-bio-text {
+    line-height: 1.5;
+
+}
+
+.author-bio-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2vw;
+    padding: 1vw 1.2vw;
+    background: linear-gradient(90deg, #12235d, #1e5fb2);
+    border-radius: 3.5vw;
+    font-size: 1vw;
+    /* 28px */
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.author-bio-btn .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.4vw;
+    /* 65px */
+    height: 3.4vw;
+    background: #c7dbf9;
+    border-radius: 50%;
+    font-size: 2vw;
+    /* arrow size */
+    color: #0f2d75;
+}
+
+.key-features {
+    padding: 15px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(163, 202, 245, 1) 0%, rgba(231, 246, 255, 1) 100%);
+    margin-bottom: 20px;
+}
+
+.key-features h3 {
+    text-transform: uppercase;
+    background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    padding: 10px 0;
+    font-size: 32px;
+    line-height: 1.2;
+
+    font-weight: 700 !important;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 1400px) {
+
+    .post-date span,
+    .post-author span,
+    .post-date-separator {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .post-date span,
+    .post-author span {
+        font-size: 18px;
+    }
+
+    .post-share-icons svg {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1.main-title {
+        font-size: 32px;
+        padding: 0;
+        text-align: left;
+    }
+
+    .post-date span,
+    .post-author span {
+        font-size: 14px;
+    }
+
+    .post-content img {
+        max-width: 90%;
+    }
+
+    .image-feature img {
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .post-author {
+        justify-content: flex-start;
+        padding: 0;
+        line-height: 30px;
+    }
+
+    .post-date {
+        flex-direction: column;
+        align-items: left;
+        gap: 5px;
+        padding: 0;
+    }
+
+    .post-date-separator {
+        display: none;
+    }
+
+    .post-content .wp-block-list,
+    .post-content p {
+        font-size: 18px;
+    }
+
+    .post-content h2,
+    .toc-title {
+        font-size: 24px;
+        padding: 10px 0;
+    }
+
+    .post-content h3 {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .toc-list li a {
+        font-size: 16px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 1.2vw;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        font-size: 20px;
+        padding-left: 15px;
+    }
+
+    .arrow {
+        right: 15px;
+    }
+
+    .sticky-sidebar-wrapper {
+        position: static;
+        top: auto;
+    }
+
+    .post-share-icons svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 575px) {
+    .text-center.mb-5.image-feature {
+        margin-bottom: 0 !important;
+    }
+
+    section.post-detail-section,
+    .post-content-and-sidebar-section.py-5 {
+        padding-bottom: 0 !important;
+    }
+
+    .author-bio-section {
+        max-width: 100%;
+
+    }
+
+    .buttonBlue {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .author-bio-heading,
+    .author-bio-text {
+        font-size: 14px;
+    }
+
+    .author-bio-image img {
+        width: 100%;
+    }
+
+    .card {
+        padding: 10px 0;
+    }
+
+    .form-group select {
+        font-size: 1rem;
+    }
+
+    .form-group option {
+        font-size: 24px;
+    }
+
+    .form-group input,
+    .form-group select {
+
+        font-size: 15px;
+
+    }
+
+    .submit-btn.blog-submit-btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+        background: transparent;
+        border: 1px solid #1f2d61;
+        color: #1f2d61;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .form-container h2 {
+        width: 100%;
+    }
+
+    .sticky-sidebar-wrapper {
+        padding-bottom: 20px;
+    }
+
+    .blog-sidebar-form-mobile p.pre-h {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .blog-sidebar-form-mobile p.main-h {
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        font-weight: 800;
+    }
+
+    .post-content .key-features h3 {
+        font-size: 22px;
+        ;
+    }
+}
+
+@media (max-width: 480px) {
+    h1.main-title {
+        font-size: 24px;
+    }
+
+    .post-date span,
+    .post-author span {
+        font-size: 12px;
+    }
+
+    .post-content .wp-block-list,
+    .post-content p {
+        font-size: 16px;
+    }
+
+    .post-content h2,
+    .toc-title {
+        font-size: 20px;
+    }
+
+    .post-content h3 {
+        font-size: 18px;
+    }
+
+    .toc-list li {
+        padding: 10px;
+    }
+
+    .toc-list li a {
+        font-size: 14px;
+    }
+
+    .form-container {
+        padding: 20px 15px;
+    }
+
+    .form-container h2 {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        font-size: 18px;
+        padding: 6px 15px;
+    }
+}
+
+/* Spotlight Effect on Scroll */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9998;
+    /* Just below highlight target */
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    pointer-events: none;
+    /* Let clicks pass through */
+}
+
+body.has-highlighted-video::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.highlight-on-scroll {
+    transition: transform 0.5s ease-in-out, z-index 0s;
+}
+
+.highlight-on-scroll.is-highlighted {
+    position: relative;
+    z-index: 9999;
+    /* Above the dark overlay */
+}
+
+/* Expandable Table of Contents Styles */
+.toc-react-container {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.toc-react-container nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.toc-react-container nav ul li {
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.toc-react-container nav ul li:hover {
+    background: #f8fafc;
+}
+
+.toc-react-container nav ul li a {
+    color: #334155;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.toc-react-container nav ul li a::before {
+    content: "•";
+    color: #94a3b8;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* 3rd item fade effect when collapsed */
+.toc-item-fade {
+    position: relative;
+    /* Create a gradient overlay to blend into the background */
+    background: linear-gradient(180deg, #334155 0%, rgba(51, 65, 85, 0) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.toc-item-fade::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #ffffff);
+    pointer-events: none;
+}
+
+/* Hide items beyond index 2 initially */
+.toc-item-hidden {
+    display: none !important;
+}
+
+.toc-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 0 0 0;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.toc-toggle-btn svg {
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+}
+
+.toc-toggle-btn.expanded svg {
+    transform: rotate(180deg);
+}
+
+
+/* --- Table of Contents Expand/Collapse Styles --- */
+
+.toc-outer-container nav {
+    position: relative;
+}
+
+.toc-list {
+    overflow: hidden;
+    /* transition: max-height 0.3s ease-out; */
+    max-height: 2000px;
+    /* A safe max-height for expanded state to animate to */
+    transition: max-height 0.4s ease-in-out;
+}
+
+/* Base collapsed state max height to fit ~3 elements perfectly */
+/* Each element is standard padding + text height, approx ~60px each */
+.toc-list.collapsed {
+    max-height: 160px;
+}
+
+/* Gradient Fade Effect */
+/* When it's collapsed, create a pseudo-element overlay on the nav */
+/* that fades from transparent (top) to the background color (bottom) */
+.toc-list.collapsed::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Gradient height covers the last visible item */
+    height: 60px;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(243, 250, 255, 0) 0%,
+            rgba(215, 233, 251, 1) 100%);
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+}
+
+.toc-list:not(.collapsed)::after {
+    opacity: 0;
+}
+
+.toc-toggle-btn {
+    cursor: pointer;
+}
+
+.toc-toggle-btn:hover .btn-text {
+    opacity: 0.8;
+}
+
+@media (max-width: 575px) {
+    .toc-list.collapsed {
+        max-height: 140px;
+    }
+}
+
+/* --- Responsive Meta Flex Layout --- */
+.post-meta-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.meta-col-left,
+.meta-col-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.meta-col-right {
+    gap: 16px;
+}
+
+.meta-item {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-weight: 600;
+}
+
+.meta-author {
+    font-weight: 600;
+}
+
+.meta-share svg {
+    width: 32px;
+    height: 32px;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .post-meta-wrapper {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 5px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .meta-col-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding-top: 7px;
+    }
+
+    .meta-col-right {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    .meta-item {
+        font-size: 12px;
+        margin: 0 !important;
+        white-space: nowrap;
+    }
+
+    .meta-share svg {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .post-date-separator {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: flex;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+}
+
+.desktop-gif-banner {
+    max-width: 100% !important;
+    height: auto;
+}
+
+@media(min-width: 768px) {
+    .desktop-gif-banner {
+        width: 100% !important;
+    }
+}

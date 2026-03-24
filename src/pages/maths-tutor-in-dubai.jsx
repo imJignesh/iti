@@ -125,11 +125,12 @@ const MathsTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
+                loadInnerStyles={true}
                 title="Maths Tutors In Dubai - IB, IGCSE, A-Levels, & AP Support"
                 description="Excel in Mathematics with expert Maths tutors in Dubai, specializing in IB, IGCSE, A-Levels & AP. Build strong concepts & achieve top exam results"
                 url="https://ignitetraininginstitute.com/maths-tutor-in-dubai" />
             <Head>
-                <link
+<link
                     rel="preload"
                     href="/assets/subject-tutoring-m.webp"
                     as="image"

@@ -124,12 +124,13 @@ const BusinessTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
+                loadInnerStyles={true}
                 title="Business Studies Tutors In Dubai - IB, IGCSE, & A-Level"
                 description="Unlock exam success with Business Studies tutors in Dubai, catering to IB, IGCSE, & A-Level. Get personalized guidance to strengthen your concepts"
                 url="https://ignitetraininginstitute.com/business-studies-tutor-in-dubai"
             />
             <Head>
-                <link
+<link
                     rel="preload"
                     href="/assets/subject-tutoring-m.webp"
                     as="image"

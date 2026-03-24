@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import Head from 'next/head';
 import useSWR from 'swr';
 import SEO from "@/components/SEO";
 import Image from 'next/image';
@@ -194,6 +195,9 @@ const Blogpg = ({ headerHeight, ...props }) => {
                 description="Explore Ignite’s blog for expert study tips, exam strategies, & guidance on IB, IGCSE, A-Levels, AP & more. Stay ahead with academic insights"
                 url="https://ignitetraininginstitute.com/blog"
             />
+            <Head>
+                <link rel="stylesheet" href="/styles/Blogpg.css" />
+            </Head>
             <JsonLd schema={blogSchema} />
 
             <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }} >

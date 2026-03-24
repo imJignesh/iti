@@ -124,12 +124,13 @@ const FrenchTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
+                loadInnerStyles={true}
                 title="Best French Tutors In Dubai - IB, IGCSE, & A-Level Support"
                 description="Unlock efficiency in the French language with Ignite's French tutors in Dubai. We specialize - IB, IGCSE, & A-Levels & offer advanced support"
                 url="https://ignitetraininginstitute.com/french-tutor-in-dubai"
             />
             <Head>
-                <link
+<link
                     rel="preload"
                     href="/assets/subject-tutoring-m.webp"
                     as="image"

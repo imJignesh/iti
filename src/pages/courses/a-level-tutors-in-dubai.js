@@ -139,6 +139,7 @@ const ALEVEL = ({ headerHeight }) => {
   return (
     <>
       <SEO
+                loadInnerStyles={true}
         title="Best A-Level Tutors In Dubai | Leading Coaching Institute"
         description="Empower your academic journey with expert A-level tutors in Dubai. Personalized tutoring for Mathematics, Sciences, Business, & more to excel in your exams"
         url="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai"

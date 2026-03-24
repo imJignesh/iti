@@ -6,6 +6,7 @@ const Blog = () => {
         <>
             <SharedBlog
                 title="Expert Insights To Help You Learn, Grow & Excel"
+                showInnerStyles={true}
             />
             <style jsx global>{`
                 .blogImg {

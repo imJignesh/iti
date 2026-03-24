@@ -5,6 +5,7 @@ const Blog = () => {
     return (
         <SharedBlog
             title="Study Smarter With Resources, Tips & Student Stories"
+            showInnerStyles={true}
         />
     );
 };

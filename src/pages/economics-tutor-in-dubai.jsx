@@ -124,12 +124,13 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
     return (
         <>
             <SEO
+                loadInnerStyles={true}
                 title="Economics Tutors In Dubai For IB, IGCSE, A-Level, & AP"
                 description="Boost your exam grades with the best Economics tutors in Dubai, specializing in IB, IGCSE, A-Levels, & AP. Get expert guidance now"
                 url="https://ignitetraininginstitute.com/economics-tutor-in-dubai"
             />
             <Head>
-                <link
+<link
                     rel="preload"
                     href="/assets/subject-tutoring-m.webp"
                     as="image"

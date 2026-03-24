@@ -147,12 +147,13 @@ const Tutors = ({ headerHeight }) => {
   return (
     <>
       <SEO
+                loadInnerStyles={true}
         title="Tutors In Dubai - IB, IGCSE, A-Levels, AP, & More"
         description="Gain academic efficiency with the tutors in Dubai - IB, IGCSE, A-Levels, AP, & more, Our expert tutors offer tailored support for curriculums"
         url="https://ignitetraininginstitute.com/tutors-in-dubai"
       />
       <Head>
-        <link
+<link
           rel="preload"
           href="/assets/motutors.webp"
           as="image"

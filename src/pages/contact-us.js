@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import LazySection from "@/components/LazySection";
 // Import the reusable schema component
 import SEO from "@/components/SEO";
@@ -156,9 +157,13 @@ const Contact = ({ headerHeight }) => {
 
     return (
         <>
-            <SEO title="Contact Us"
+            <SEO
+                loadInnerStyles={true} title="Contact Us"
                 description="Get in touch with our academic experts to clearly understand the tutoring process & successfully kickstart your academic journey today!"
                 url="https://ignitetraininginstitute.com/contact-us" />
+            <Head>
+<link rel="stylesheet" href="/styles/contact.css" />
+            </Head>
             {/* 燥 SCHEMA INJECTION: Use the reusable component here */}
             <JsonLd schema={educationalOrganizationSchema} />
 

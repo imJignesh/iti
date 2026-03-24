@@ -179,13 +179,14 @@ const IGCSE = ({ headerHeight }) => {
   return (
     <>
       <SEO
+                loadInnerStyles={true}
         title="IGCSE Tutors In Dubai, UAE | Expert Coaching & Guidance"
         description="Achieve success with top IGCSE tutors in UAE. Get full prep support for IGCSE with syllabus coverage, past paper practice & exam strategies"
         url="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai"
       />
 
       <Head>
-        <meta name="robots" content="noindex" />
+<meta name="robots" content="noindex" />
         <link
           rel="preload"
           href="/assets/ib-bg.webp"
@@ -205,7 +206,7 @@ const IGCSE = ({ headerHeight }) => {
       </Head>
 
       {/* <Head>
-        <link
+<link
           rel="preload"
           href="/assets/igcse.webp"
           as="image"

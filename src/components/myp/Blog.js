@@ -5,6 +5,7 @@ const Blog = () => {
     return (
         <SharedBlog
             title="Insights to Help You Understand, Improve, & Succeed"
+            showInnerStyles={true}
         />
     );
 };

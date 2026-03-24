@@ -26,6 +26,7 @@ const IBDP = ({ headerHeight }) => {
   return (
     <>
       <SEO
+                loadInnerStyles={true}
         title="IBDP Tutors In Dubai | Leading IB Diploma Tutors"
         description="Expert IBDP tutors in Dubai. Get personalized tutoring for all IB Diploma subjects. Boost your IB scores with certified IBDP trainers"
         url="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai"
@@ -42,6 +43,9 @@ const IBDP = ({ headerHeight }) => {
           }
         ]}
       />
+      <Head>
+<link rel="stylesheet" href="/styles/Ibdp.css" />
+      </Head>
       <div
         // Removed: ref={scrollRef}
         className='overflow-hidden innerpage page-content-padding'

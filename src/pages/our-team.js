@@ -2,6 +2,7 @@
 import LazySection from "@/components/LazySection";
 
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 import SEO from "@/components/SEO";
 import TeamBanner from "@/components/team/Banner";
 import MarqueeBanner from '@/components/a-level/MarqueeBanner';
@@ -204,6 +205,9 @@ const OurTeam = ({ headerHeight }) => {
                 description="Get to know Ignite Training Institute’s expert mentors in the UAE, shaping bright futures with 2000+ trained students & remarkable academic results"
                 url="https://ignitetraininginstitute.com/our-team"
             />
+            <Head>
+<link rel="stylesheet" href="/styles/team.css" />
+            </Head>
 
             <div style={{ paddingTop: `${headerHeight}px` }} className="innerpage">
                 <TeamBanner />

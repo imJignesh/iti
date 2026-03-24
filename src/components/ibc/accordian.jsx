@@ -93,7 +93,7 @@ export default function Accordion() {
           padding: 24px;
           transition: all 0.3s ease;
           margin:0 auto !important;
-        }
+         border-radius: 30px; overflow: hidden;}
 
         .header {
           display: flex;

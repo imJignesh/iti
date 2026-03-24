@@ -105,12 +105,13 @@ const FreeDemo = ({ headerHeight }) => {
     return (
         <>
             <SEO
+                loadInnerStyles={true}
                 title="Free Demo Class At Ignite Training Institute | Join Today"
                 description="Experience Ignite’s expert tutoring with a free demo class. Explore IB, IGCSE, A-Levels, AP & more with certified trainers in Dubai, UAE"
                 url="https://ignitetraininginstitute.com/join-free-demo-class"
             />
             <Head>
-                <link
+<link
                     rel="preload"
                     href="/assets/mobileact.webp"
                     as="image"

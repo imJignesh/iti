@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import Head from "next/head";
 import he from "he";
 import { useScroll } from "./LocomotiveScrollProvider";
 
@@ -57,7 +58,7 @@ const createBlogData = () => {
 /**
  * SHARED BLOG COMPONENT
  */
-const SharedBlog = ({ title }) => {
+const SharedBlog = ({ title, showInnerStyles = false }) => {
     // 🔥 INSTANT STATE: First render has real data from list.json
     const [blogData] = useState(() => createBlogData());
     const sectionRef = useRef(null);
@@ -99,6 +100,10 @@ const SharedBlog = ({ title }) => {
 
     return (
         <section className="blogSection" ref={sectionRef}>
+            <Head>
+                <link rel="stylesheet" href="/styles/Blog.css" />
+                {showInnerStyles && <link rel="stylesheet" href="/styles/bloginnerpage.css" />}
+            </Head>
             <div className="container">
                 <div className="row gap-5 gap-lg-0">
                     {/* --- LEFT CONTENT (HEADINGs) --- */}

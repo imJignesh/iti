@@ -24,6 +24,21 @@
      background-position: center;
  }
 
+ .blog-banner {
+     font-family: "Montserrat", sans-serif;
+     position: relative;
+     max-width: 90vw;
+     width: 100%;
+     height: calc(90vw / 2.98);
+     /* desktop aspect ratio */
+     margin: auto;
+     border-radius: 12px;
+     overflow: hidden;
+     background-image: url("/images/blog-banner-desktop.webp");
+     background-size: cover;
+     background-position: center;
+ }
+
 
 
  /* Dark overlay */
@@ -96,9 +111,56 @@
      }
  }
 
+ .team-banner {
+     font-family: "Montserrat", sans-serif;
+     position: relative;
+     max-width: 90vw;
+     width: 100%;
+     height: calc(90vw / 2.98);
+     margin: auto;
+     border-radius: 12px;
+     overflow: hidden;
+     background-size: cover;
+     background-position: center;
+ }
+
+ .team-banner .desktop-banner-img {
+     display: block;
+ }
+
+ .team-banner .mobile-banner-img {
+     display: none;
+ }
+
+ @media (max-width: 768px) {
+     .team-banner {
+         height: 90vw;
+     }
+
+     .team-banner .desktop-banner-img {
+         display: none;
+     }
+
+     .team-banner .mobile-banner-img {
+         display: block;
+     }
+
+     .team-banner .heading {
+         font-size: 6.33vw !important;
+         line-height: 36px !important;
+         margin: 0 !important;
+     }
+
+     .team-banner .subHeading {
+         font-size: 4.08vw !important;
+         margin: 0 !important;
+     }
+ }
+
  @media (max-width: 768px) {
 
-     .careers-banner {
+     .careers-banner,
+     .blog-banner {
          height: 90vw;
          background-image: url("/images/blog-banner-mobile.webp");
          /* square card on mobile */

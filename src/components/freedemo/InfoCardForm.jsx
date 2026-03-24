@@ -393,6 +393,7 @@ export default function InfoCardForm() {
           backdrop-filter: blur(12px);
           position: relative;
           z-index: 10;
+          border-radius: 20px;
         }
 
         /* iPad Mini */

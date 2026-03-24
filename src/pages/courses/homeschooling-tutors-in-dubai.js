@@ -147,6 +147,7 @@ const HomeSchooling = ({ headerHeight }) => {
     <>
       <JsonLd schema={homeschoolingSchema} />
       <SEO
+                loadInnerStyles={true}
         title="Best Homeschooling In UAE For Full Academic Support"
         description="Choose the top homeschooling center in UAE for your child's academic success. Get one-on-one sessions, comprehensive resources & flexible study plans"
         url="https://ignitetraininginstitute.com/courses/homeschooling-tutors-in-dubai"

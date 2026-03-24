@@ -184,7 +184,7 @@ const act = ({ headerHeight }) => {
   return (
     <>
       <Head>
-        <link rel="stylesheet" href="/styles/home/MovingBanner.css" />
+<link rel="stylesheet" href="/styles/home/MovingBanner.css" />
         <link rel="stylesheet" href="/styles/home/Subjects.css" />
         <link
           rel="preload"
@@ -204,6 +204,7 @@ const act = ({ headerHeight }) => {
         />
       </Head>
       <SEO
+                loadInnerStyles={true}
         title="ACT Subject Tests Prep With Focused Courses & Tutors In UAE"
         description="Ignite Training Institute can support you as the best ACT tutors in Dubai through our comprehensive guidance & ACT-specific tutoring strategies"
         url="https://ignitetraininginstitute.com/act-tutors-in-dubai"
