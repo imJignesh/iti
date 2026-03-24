@@ -16,7 +16,7 @@ export default function Document() {
           href="/images/logo.svg"
           as="image"
           type="image/svg+xml"
-          fetchPriority="high"
+          fetchPriority="low"
         />
 
 

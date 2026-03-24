@@ -164,8 +164,8 @@ const IGCSE = ({ headerHeight }) => {
       <JsonLd schema={igcseSchema} />
 
       {/* 3. APPLY the style for paddingTop */}
-      <div className='overflow-hidden innerpage page-content-padding'>
-        <section className="hero-section">
+      <div className='overflow-hidden innerpage'>
+        <section className="hero-section hero-atf-optimized">
           <div className="hero-container">
             <picture className="hero-bg">
               <source media="(max-width: 768px)" srcSet="/assets/ib-bg.webp" />
@@ -177,11 +177,24 @@ const IGCSE = ({ headerHeight }) => {
                 height="800"
                 className="hero-img"
                 style={{ opacity: 1, visibility: 'visible' }}
+                decoding="sync"
               />
             </picture>
 
             <InfoCard />
           </div>
+
+          <style jsx>{`
+            .hero-atf-optimized {
+              /* Ensure the content starts below the header immediately in SSR */
+              padding-top: max(100px, 8vw); 
+            }
+            @media (max-width: 768px) {
+              .hero-atf-optimized {
+                padding-top: 80px;
+              }
+            }
+          `}</style>
         </section>
 
         <LazySection>

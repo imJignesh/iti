@@ -45,13 +45,14 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image 
-                            loading="eager"
+                        <img 
                             src="/assets/medal.webp"
                             alt="Grade Support"
                             width={32}
                             height={45}
                             className="icon-img"
+                            fetchpriority="low"
+                            loading="lazy"
                             style={{ width: "auto", height: "auto", maxHeight: "45px", maxWidth: "32px" }}
                         />
                     </span>
@@ -70,13 +71,14 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image 
-                            loading="eager"
+                        <img 
                             src="/assets/person.webp"
                             alt="Learning Mode"
                             width={30}
                             height={45}
                             className="icon-img icon-img-2"
+                            fetchpriority="low"
+                            loading="lazy"
                             style={{ width: "auto", height: "auto" }}
                         />
                     </span>
@@ -94,19 +96,19 @@ export default function InfoCardLeft() {
                     }}
                 >
                     <span className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
-                        <Image 
-                            loading="eager"
+                        <img 
                             src="/assets/location.webp"
                             alt="Location"
                             width={32}
                             height={42}
                             className="icon-img icon-img-3"
+                            fetchpriority="low"
+                            loading="lazy"
                             style={{ width: "auto", height: "auto" }}
                         />
                     </span>
 
                     Dubai <br /> (DIFC, JLT)
-
                 </h3>
 
             </div>
