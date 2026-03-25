@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { getImageProps } from 'next/image';
 import styles from '@/styles/home-copy/Hero.module.css';
 
 const Hero = () => {
@@ -89,7 +88,7 @@ const Hero = () => {
                                             <img 
                                                 src="/images/video-cover.webp"
                                                 alt="Video Poster"
-                                                className={styles.posterImage}
+                                                className={`hero-poster-image ${styles.posterImage}`}
                                                 decoding="sync" 
                                                 fetchpriority="high" 
                                             />
