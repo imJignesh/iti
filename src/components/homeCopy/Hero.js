@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import styles from '@/styles/home-copy/Hero.module.css';
+import { getImageProps } from 'next/image';
+import styles from "../../styles/home-copy/Hero.module.css";
 
 const Hero = () => {
     const videoRef = useRef(null);
@@ -88,7 +89,7 @@ const Hero = () => {
                                             <img 
                                                 src="/images/video-cover.webp"
                                                 alt="Video Poster"
-                                                className={`hero-poster-image ${styles.posterImage}`}
+                                                className={styles.posterImage}
                                                 decoding="sync" 
                                                 fetchpriority="high" 
                                             />

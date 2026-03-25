@@ -145,18 +145,11 @@ main {
     z-index: -1!important;
 }
 
-.hero-img,
-.hero-poster-image {
+.hero-img {
     width: 100%!important;
     height: 100%!important;
     object-fit: cover!important;
     object-position: center!important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-}
-
-.posterOverlay {
     opacity: 1 !important;
     visibility: visible !important;
 }
