@@ -112,65 +112,12 @@ const nextConfig = {
   }),
 
   experimental: {
-    optimizePackageImports: ['lucide-react', 'react-phone-input-2'],
+    optimizePackageImports: ['lucide-react', 'react-phone-input-2', 'swiper'],
   },
 
   turbopack: {},
 
   webpack: (config, { dev, isServer }) => {
-    if (!dev) {
-      config.optimization = {
-        ...config.optimization,
-        moduleIds: 'deterministic',
-        runtimeChunk: 'single',
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            default: false,
-            vendors: false,
-            vendor: {
-              name: 'vendor',
-              chunks: 'all',
-              test: /node_modules/,
-              priority: 20,
-            },
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: 'all',
-              priority: 10,
-              reuseExistingChunk: true,
-              enforce: true,
-            },
-            react: {
-              test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
-              name: 'react',
-              chunks: 'all',
-              priority: 30,
-            },
-            swiper: {
-              test: /[\\/]node_modules[\\/]swiper[\\/]/,
-              name: 'swiper',
-              chunks: 'async',
-              priority: 25,
-            },
-            locomotiveScroll: {
-              test: /[\\/]node_modules[\\/]locomotive-scroll[\\/]/,
-              name: 'locomotive-scroll',
-              chunks: 'async',
-              priority: 25,
-            },
-            bootstrap: {
-              test: /[\\/]node_modules[\\/](bootstrap|@popperjs)[\\/]/,
-              name: 'bootstrap',
-              chunks: 'async',
-              priority: 25,
-            },
-          },
-        },
-      };
-    }
-
     return config;
   },
 
