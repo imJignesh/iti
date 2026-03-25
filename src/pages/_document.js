@@ -8,6 +8,22 @@ export default function Document() {
 
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
+        {/* Hero LCP image preloads — placed here so browser discovers them at first byte */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/video-cover-mobile.webp"
+          media="(max-width: 767px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/video-cover.webp"
+          media="(min-width: 768px)"
+          fetchPriority="high"
+        />
+
         <link
           rel="preload"
           href="/images/logo.svg"
