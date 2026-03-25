@@ -1,65 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
-import he from "he";
 import { useScroll } from "./LocomotiveScrollProvider";
-
-/**
- * FETCH BLOG DATA - Synchronous local read
- */
-const fetchBlogsLocal = () => {
-    try {
-        // We import it as a standard JSON module since Next.js supports this
-        const listData = require('../data/blog/list.json');
-        return listData.posts.slice(0, 3);
-    } catch (e) {
-        console.warn("SharedBlog: Local list.json not found, falling back to empty.");
-        return [];
-    }
-};
-
-/**
- * FORMAT DATA - Create a clean JS object from JSON posts
- */
-const createBlogData = () => {
-    const data = fetchBlogsLocal();
-
-    const formattedBlogs = data.map((post) => {
-        // Strip HTML tags
-        const rawExcerpt = (post.excerpt?.rendered || "").replace(/<[^>]*>?/gm, "");
-        const rawTitle = (post.title?.rendered || "").replace(/<[^>]*>?/gm, "");
-
-        // Decode HTML entities (&amp;, &#8217;, etc.)
-        const decodedExcerpt = he.decode(rawExcerpt);
-        const decodedTitle = he.decode(rawTitle);
-
-        // Trim excerpt for better card fit
-        const trimmedExcerpt =
-            decodedExcerpt.length > 80
-                ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 80)) + "..."
-                : decodedExcerpt;
-
-        return {
-            img:
-                post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-                "/images/blog-placeholder.webp",
-            title: decodedTitle,
-            desc: trimmedExcerpt,
-            link: post.slug,
-            // Pass through any media details if they exist for better layout
-            width: 300,
-            height: 200,
-        };
-    });
-
-    return formattedBlogs;
-};
-
+import fallbackPosts from "../data/blog/top-posts.json";
 
 /**
  * SHARED BLOG COMPONENT
  */
-const SharedBlog = ({ title, showInnerStyles = false }) => {
-    // 🔥 INSTANT STATE: First render has real data from list.json
-    const [blogData] = useState(() => createBlogData());
+const SharedBlog = ({ title, showInnerStyles = false, posts = [] }) => {
+    // 🔥 DATA FLOW: 
+    // Uses posts from Props (Home Page) OR Fallback JSON (Inner Pages)
+    const [blogData] = useState(() => {
+        if (posts && posts.length > 0) return posts;
+        return fallbackPosts || [];
+    });
+
     const sectionRef = useRef(null);
     const scrollInstance = useScroll();
 

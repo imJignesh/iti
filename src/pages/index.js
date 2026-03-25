@@ -27,7 +27,11 @@ const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
 const TestSeriesBanner = dynamic(() => import("@/components/homeCopy/TestSeriesBanner"));
 
 
-const HomeCopy = ({ headerHeight }) => {
+import path from "path";
+import fs from "fs";
+import he from "he";
+
+const HomeCopy = ({ blogPosts = [] }) => {
     const [active, setActive] = useState(1);
 
     return (
@@ -87,11 +91,59 @@ const HomeCopy = ({ headerHeight }) => {
                 </LazySection>
 
                 <LazySection>
-                    <Blog />
+                    <Blog posts={blogPosts} />
                 </LazySection>
             </div>
         </>
     );
 };
+
+export async function getStaticProps() {
+    try {
+        const filePath = path.join(process.cwd(), 'src', 'data', 'blog', 'list.json');
+        const fileData = fs.readFileSync(filePath, 'utf-8');
+        const listData = JSON.parse(fileData);
+        
+        // Extract top 3 posts
+        const rawPosts = listData.posts ? listData.posts.slice(0, 3) : [];
+
+        // Format data on the server — client only gets exactly what it needs to display
+        const blogPosts = rawPosts.map((post) => {
+            const rawExcerpt = (post.excerpt?.rendered || "").replace(/<[^>]*>?/gm, "");
+            const rawTitle = (post.title?.rendered || "").replace(/<[^>]*>?/gm, "");
+
+            const decodedExcerpt = he.decode(rawExcerpt);
+            const decodedTitle = he.decode(rawTitle);
+
+            const trimmedExcerpt =
+                decodedExcerpt.length > 80
+                    ? decodedExcerpt.substring(0, decodedExcerpt.lastIndexOf(" ", 80)) + "..."
+                    : decodedExcerpt;
+
+            return {
+                img: post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/images/blog-placeholder.webp",
+                title: decodedTitle,
+                desc: trimmedExcerpt,
+                link: post.slug,
+                width: 300,
+                height: 200,
+            };
+        });
+        
+        return {
+            props: {
+                blogPosts,
+            },
+            revalidate: 3600, 
+        };
+    } catch (e) {
+        console.error("Home: Error loading blog data for SSG", e);
+        return {
+            props: {
+                blogPosts: [],
+            },
+        };
+    }
+}
 
 export default HomeCopy;
