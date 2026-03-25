@@ -51,18 +51,16 @@ const Hero = () => {
     return (
         <>
             <div className={styles.heroSectionWrapper}>
-                <section className={`${styles.hero} ${styles.homeherosection}`}>
+                <section className={`hero ${styles.homeherosection}`}>
                     <div className="container">
-                        <div className={`row ${styles.heroMain}`}>
-                            <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
+                        <div className={`row hero-main`}>
+                            <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 hero-left`}>
                                 <div className={`${styles.heroMainHeading}`}>
                                     <h1 className={styles.SubHeading}>BEST TUTORS IN UAE</h1>
                                 </div>
-
                                 <h2 className={styles.heroTitle}>
                                     Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
                                 </h2>
-
                                 <div className={styles.heroParagraph}>
                                     <h3>Improve Your Grades Today!</h3>
                                     <b>
@@ -73,9 +71,8 @@ const Hero = () => {
                                     </strong>
                                 </div>
                             </div>
-
-                            <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
-                                <div className={styles.videoContainer}>
+                            <div className={`col-12 col-lg-5 col-xl-5 hero-right`}>
+                                <div className="video-container">
                                     <div 
                                         className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}
                                         style={{ opacity: 1, visibility: 'visible' }}

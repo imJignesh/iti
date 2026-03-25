@@ -61,12 +61,12 @@
   }
 }
 
-.heroMain {
+:global(.hero-main) {
   display: flex;
   align-items: center;
 }
 
-.heroLeft {
+:global(.hero-left) {
   margin-top: -1vw;
 }
 
@@ -109,13 +109,13 @@
   margin-bottom: 30px;
 }
 
-.heroRight {
+:global(.hero-right) {
   display: flex;
   justify-content: flex-end;
   position: relative;
 }
 
-.videoContainer {
+:global(.video-container) {
   position: relative;
   width: 30vw;
   height: 33vw;
@@ -303,18 +303,18 @@
     background-position: top 10% left;
   }
 
-  .heroLeft .heroParagraph {
+  :global(.hero-left) .heroParagraph {
     font-size: 1.3vw;
   }
 }
 
 /* Removed .homeCopy prefix */
 @media (max-width: 1280px) {
-  .heroRight .buttonGroup {
+  :global(.hero-right) .buttonGroup {
     gap: 0.8vw;
   }
 
-  .heroRight .buttonGroup :global(button) {
+  :global(.hero-right) .buttonGroup :global(button) {
     padding: 5px 20px;
     gap: 10px;
     font-size: 16px;
@@ -323,15 +323,15 @@
 
 /* Removed .homeCopy prefix */
 @media (max-width: 1024px) {
-  .heroLeft .heroTitle {
+  :global(.hero-left) .heroTitle {
     font-size: 35px;
   }
 
-  .heroLeft .heroParagraph {
+  :global(.hero-left) .heroParagraph {
     font-size: 18px;
   }
 
-  .heroLeft .heroParagraph :global(span) {
+  :global(.hero-left) .heroParagraph :global(span) {
     font-size: 16px;
   }
 }
@@ -350,25 +350,34 @@
     transition: opacity 0.5s ease-in !important;
   }
 
-  .videoContainer {
+  :global(.video-container) {
     position: relative;
     width: 100vw;
     height: 48vw;
     overflow: hidden;
   }
 
-  .heroRight {
+  :global(.hero-right) {
     justify-content: center;
   }
 
-  .heroRight .buttonGroup {
+  :global(.hero-right) .buttonGroup {
     top: 0vw;
     bottom: 1vw;
     right: 19vw;
     width: 31vw;
   }
 
-  .heroLeft :global(div) {
+  .heroMainHeading {
+    text-align: center;
+    width: 100%;
+  }
+
+  :global(.hero-left) {
+    text-align: center;
+  }
+
+  :global(.hero-left) :global(div) {
     text-align: center;
   }
 
@@ -383,7 +392,7 @@
     font-weight: 500;
   }
 
-  .heroRight .heroImage,
+  :global(.hero-right) .heroImage,
   .heroVideo {
     object-position: center;
     width: 100vw;
@@ -393,7 +402,7 @@
 
 /* Mobile Fixes - use :global() for Bootstrap utility classes */
 @media (max-width: 767px) {
-  .heroLeft {
+  :global(.hero-left) {
     padding: inherit !important;
   }
 
@@ -419,7 +428,7 @@
     }
   } */
 
-  .heroRight .buttonGroup {
+  :global(.hero-right) .buttonGroup {
     left: 40%;
     right: 15%;
   }
@@ -438,16 +447,16 @@
     display: inline-block;
   }
 
-  .heroLeft .heroParagraph {
+  :global(.hero-left) .heroParagraph {
     padding-top: 10px;
     margin-bottom: 10px;
   }
 
-  .heroLeft .heroParagraph :global(span) {
+  :global(.hero-left) .heroParagraph :global(span) {
     margin-bottom: 5px;
   }
 
-  .heroRight .mobileContent {
+  :global(.hero-right) .mobileContent {
     font-size: 22px;
     margin: 0;
     line-height: 30px;
@@ -472,11 +481,11 @@
 
 
 
-  .videoContainer {
+  :global(.video-container) {
     height: 95vw;
   }
 
-  /* .videoContainer, */
+  /* :global(.video-container), */
   .heroVideo {
     height: 100%;
     width: 100%;
@@ -485,16 +494,16 @@
 
 
 
-  .heroRight .buttonGroup :global(.buttonBlue),
-  .heroRight .buttonGroup :global(.buttonSkyBlue) {
+  :global(.hero-right) .buttonGroup :global(.buttonBlue),
+  :global(.hero-right) .buttonGroup :global(.buttonSkyBlue) {
     justify-content: space-around;
   }
 
-  .heroRight .buttonGroup :global(img) {
+  :global(.hero-right) .buttonGroup :global(img) {
     width: 7vw;
   }
 
-  .heroLeft .heroTitle {
+  :global(.hero-left) .heroTitle {
     /* Assuming this refers to desktop or mobile title */
     font-size: 25px;
     margin: 15px auto;
@@ -502,7 +511,7 @@
     line-height: 1.2;
   }
 
-  .heroRight .mobileContent {
+  :global(.hero-right) .mobileContent {
     left: 38%;
     max-width: 55%;
     font-size: 18px;
@@ -510,7 +519,7 @@
     line-height: 25px;
   }
 
-  .heroLeft .heroParagraph :global(span) {
+  :global(.hero-left) .heroParagraph :global(span) {
     margin-bottom: 25px;
     font-size: 14px;
   }
@@ -522,7 +531,7 @@
     padding-bottom: 10px;
   }
 
-  .heroRight .buttonGroup {
+  :global(.hero-right) .buttonGroup {
     justify-content: flex-end;
     gap: 3vw;
     width: 55vw;
@@ -531,24 +540,24 @@
     right: 5vw;
   }
 
-  .heroRight .buttonGroup :global(button) {
+  :global(.hero-right) .buttonGroup :global(button) {
     padding: 10px 25px;
   }
 
-  .heroRight .buttonGroup :global(.buttonBlue),
-  .heroRight .buttonGroup :global(.buttonSkyBlue) {
+  :global(.hero-right) .buttonGroup :global(.buttonBlue),
+  :global(.hero-right) .buttonGroup :global(.buttonSkyBlue) {
     font-size: 1rem;
     font-weight: 600;
     padding: 8px 15px;
   }
 
-  .heroLeft :global(div) {
+  :global(.hero-left) :global(div) {
     padding-top: 0px;
   }
 }
 
 /* @media (max-width: 430px) {
-  .heroRight .buttonGroup {
+  :global(.hero-right) .buttonGroup {
     width: 55vw;
     right: 7vw;
     padding-bottom: 40px;
@@ -564,39 +573,39 @@
     background-size: 90%;
   }
 
-  .heroRight {
+  :global(.hero-right) {
     padding-top: 20px;
   }
 
-  .heroRight .buttonGroup :global(button) {
+  :global(.hero-right) .buttonGroup :global(button) {
     font-size: 14px;
     padding: 8px 12px;
   }
 
-  .heroRight .buttonGroup :global(button) :global(img) {
+  :global(.hero-right) .buttonGroup :global(button) :global(img) {
     width: 25px;
     height: 25px;
   }
 
-  .heroMain :global(h3) {
+  :global(.hero-main) :global(h3) {
     font-size: 0.9rem;
   }
 
-  .heroLeft .heroTitle {
+  :global(.hero-left) .heroTitle {
     font-size: 1.2rem;
     text-align: center;
   }
 
-  .heroLeft .heroTitle :global(span) {
+  :global(.hero-left) .heroTitle :global(span) {
     display: inline-block;
   }
 
-  .heroRight .mobileContent {
+  :global(.hero-right) .mobileContent {
     font-size: 16px;
     line-height: 18px;
   }
 
-  .heroLeft .heroParagraph :global(span) {
+  :global(.hero-left) .heroParagraph :global(span) {
     margin-bottom: 25px;
     font-size: 14px;
   }
@@ -607,11 +616,11 @@
     display: inline-block;
   }
 
-  .videoContainer {
+  :global(.video-container) {
     height: 88vw;
   }
 
-  .heroRight .buttonGroup {
+  :global(.hero-right) .buttonGroup {
     justify-content: flex-end;
     gap: 1vw;
     width: 53vw;
@@ -620,21 +629,21 @@
     right: 8vw;
   }
 
-  /* .heroRight .buttonGroup {
+  /* :global(.hero-right) .buttonGroup {
     gap: 5vw;
     padding-bottom: 50px;
   } */
 
-  .heroRight .buttonGroup :global(button) {
+  :global(.hero-right) .buttonGroup :global(button) {
     padding: 10px 25px;
   }
 
-  .heroLeft :global(div) {
+  :global(.hero-left) :global(div) {
     padding-top: 7px;
   }
 
-  .heroRight .buttonGroup :global(.buttonBlue),
-  .heroRight .buttonGroup :global(.buttonSkyBlue) {
+  :global(.hero-right) .buttonGroup :global(.buttonBlue),
+  :global(.hero-right) .buttonGroup :global(.buttonSkyBlue) {
     font-size: 0.8rem;
   }
 
@@ -642,7 +651,7 @@
     max-width: 100%;
   }
 
-  .heroLeft {
+  :global(.hero-left) {
     margin-top: -1vw;
   }
 
@@ -657,20 +666,20 @@
     background: url(/images/banner-bg-mobile.webp) right -7vh top 1% / 50vh 16vh no-repeat;
   }
 
-  .heroLeft {
+  :global(.hero-left) {
     margin-top: -3vw;
   }
 
-  .videoContainer {
+  :global(.video-container) {
     height: 85vw;
   }
 
-  /* .videoContainer,
+  /* :global(.video-container),
   .heroVideo {
     height: 65vw;
   } */
 
-  /* .heroRight .buttonGroup {
+  /* :global(.hero-right) .buttonGroup {
     justify-content: flex-end;
         gap: 1vw;
         width: 53vw;
@@ -679,12 +688,12 @@
         right: 8vw;
   } */
 
-  .heroLeft :global(div) {
+  :global(.hero-left) :global(div) {
     padding-top: 0px;
   }
 
-  .heroRight .buttonGroup :global(.buttonBlue),
-  .heroRight .buttonGroup :global(.buttonSkyBlue) {
+  :global(.hero-right) .buttonGroup :global(.buttonBlue),
+  :global(.hero-right) .buttonGroup :global(.buttonSkyBlue) {
     font-size: 0.8rem;
     padding: 8px 10px;
   }
