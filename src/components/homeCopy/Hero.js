@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
+import Head from "next/head";
+import Image from '@/components/CustomImageWrapper';
 import { getImageProps } from 'next/image';
-import styles from "../../styles/home-copy/Hero.module.css";
+import styles from '@/styles/home-copy/Hero.module.css';
 
 const Hero = () => {
     const videoRef = useRef(null);
     const [videoLoaded, setVideoLoaded] = useState(false);
     const isVideoLoadingRef = useRef(false);
+
 
     useEffect(() => {
         const loadVideo = () => {
@@ -48,8 +51,45 @@ const Hero = () => {
         };
     }, [videoLoaded]);
 
+    const commonProps = {
+        alt: "Video Poster",
+        fill: true,
+        priority: true,
+        sizes: "100vw",
+        className: styles.posterImage,
+    };
+
+    const {
+        props: { srcSet: mobileImg },
+    } = getImageProps({ ...commonProps, src: '/images/video-cover-mobile.webp' });
+
+    const {
+        props: { srcSet: desktopImg, ...restProps },
+    } = getImageProps({ ...commonProps, src: '/images/video-cover.webp' });
+
     return (
         <>
+            <Head>
+                {/* Preload Mobile Image */}
+                <link
+                    rel="preload"
+                    as="image"
+                    imagesrcset={mobileImg}
+                    imagesizes="100vw"
+                    media="(max-width: 767px)"
+                    fetchPriority="high"
+                />
+                {/* Preload Desktop Image */}
+                <link
+                    rel="preload"
+                    as="image"
+                    imagesrcset={desktopImg}
+                    imagesizes="100vw"
+                    media="(min-width: 768px)"
+                    fetchPriority="high"
+                />
+            </Head>
+
             <div className={styles.heroSectionWrapper}>
                 <section className={`${styles.hero} ${styles.homeherosection}`}>
                     <div className="container">
@@ -78,14 +118,12 @@ const Hero = () => {
                                 <div className={styles.videoContainer}>
                                     <div className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}>
                                         <picture>
-                                            <source media="(max-width: 767px)" srcSet="/images/video-cover-mobile.webp" />
-                                            <source media="(min-width: 768px)" srcSet="/images/video-cover.webp" />
-                                            <img 
-                                                src="/images/video-cover.webp"
-                                                alt="Video Poster"
-                                                className={styles.posterImage}
-                                                decoding="sync" 
-                                                fetchpriority="high" 
+                                            <source media="(max-width: 767px)" srcSet={mobileImg} />
+                                            <source media="(min-width: 768px)" srcSet={desktopImg} />
+                                            <img
+                                                {...restProps}
+                                                decoding="sync"
+                                                fetchpriority="high"
                                             />
                                         </picture>
                                     </div>
