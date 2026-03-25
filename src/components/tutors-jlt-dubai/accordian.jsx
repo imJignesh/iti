@@ -124,7 +124,7 @@ export default function Accordion() {
                           .card {
           max-width:95vw;
           color: white;
-          padding: 10px;
+          padding: 20px;
           transition: all 0.3s ease;
          border-radius: 30px; overflow: hidden;}
             }
