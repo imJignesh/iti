@@ -76,7 +76,10 @@ const Hero = () => {
 
                             <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
                                 <div className={styles.videoContainer}>
-                                    <div className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}>
+                                    <div 
+                                        className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}
+                                        style={{ opacity: 1, visibility: 'visible' }}
+                                    >
                                         <picture>
                                             <source media="(max-width: 767px)" srcSet="/images/video-cover-mobile.webp" />
                                             <source media="(min-width: 768px)" srcSet="/images/video-cover.webp" />
@@ -84,8 +87,11 @@ const Hero = () => {
                                                 src="/images/video-cover.webp"
                                                 alt="Video Poster"
                                                 className={styles.posterImage}
+                                                style={{ opacity: 1, visibility: 'visible' }}
                                                 decoding="sync" 
-                                                fetchpriority="high" 
+                                                fetchpriority="high"
+                                                width="1200"
+                                                height="800"
                                             />
                                         </picture>
                                     </div>

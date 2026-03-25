@@ -293,7 +293,7 @@
 @media (max-width: 1800px) {
   .hero {
     background-size: 28vw;
-    background-position: 6.5vw 1vw;
+    background-position: 6.5vw 0vw;
   }
 }
 
