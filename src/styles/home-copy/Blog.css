@@ -237,7 +237,9 @@
   }
 
   .homeCopy .blogSection .blogImg {
-    max-width: 95vw;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 
   .homeCopy .blogSection .blogCard {
