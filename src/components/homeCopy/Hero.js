@@ -54,22 +54,6 @@ const Hero = () => {
         };
     }, [videoLoaded]);
 
-    const commonProps = {
-        alt: "Video Poster",
-        fill: true,
-        priority: true,
-        sizes: "100vw",
-        className: styles.posterImage,
-    };
-
-    const {
-        props: { srcSet: mobileImg },
-    } = getImageProps({ ...commonProps, src: '/images/video-cover-mobile.webp' });
-
-    const {
-        props: { srcSet: desktopImg, ...restProps },
-    } = getImageProps({ ...commonProps, src: '/images/video-cover.webp' });
-
     return (
         <>
             <div className={styles.heroSectionWrapper}>
@@ -100,10 +84,12 @@ const Hero = () => {
                                 <div className={styles.videoContainer}>
                                     <div className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}>
                                         <picture>
-                                            <source media="(max-width: 767px)" srcSet={mobileImg} />
-                                            <source media="(min-width: 768px)" srcSet={desktopImg} />
+                                            <source media="(max-width: 767px)" srcSet="/images/video-cover-mobile.webp" />
+                                            <source media="(min-width: 768px)" srcSet="/images/video-cover.webp" />
                                             <img 
-                                                {...restProps} 
+                                                src="/images/video-cover.webp"
+                                                alt="Video Poster"
+                                                className={styles.posterImage}
                                                 decoding="sync" 
                                                 fetchpriority="high" 
                                             />
