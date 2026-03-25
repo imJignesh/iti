@@ -51,16 +51,18 @@ const Hero = () => {
     return (
         <>
             <div className={styles.heroSectionWrapper}>
-                <section className={`hero ${styles.homeherosection}`}>
+                <section className={`${styles.hero} ${styles.homeherosection}`}>
                     <div className="container">
-                        <div className={`row hero-main`}>
-                            <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 hero-left`}>
+                        <div className={`row ${styles.heroMain}`}>
+                            <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
                                 <div className={`${styles.heroMainHeading}`}>
                                     <h1 className={styles.SubHeading}>BEST TUTORS IN UAE</h1>
                                 </div>
+
                                 <h2 className={styles.heroTitle}>
                                     Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
                                 </h2>
+
                                 <div className={styles.heroParagraph}>
                                     <h3>Improve Your Grades Today!</h3>
                                     <b>
@@ -71,12 +73,10 @@ const Hero = () => {
                                     </strong>
                                 </div>
                             </div>
-                            <div className={`col-12 col-lg-5 col-xl-5 hero-right`}>
-                                <div className="video-container">
-                                    <div 
-                                        className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}
-                                        style={{ opacity: 1, visibility: 'visible' }}
-                                    >
+
+                            <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
+                                <div className={styles.videoContainer}>
+                                    <div className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}>
                                         <picture>
                                             <source media="(max-width: 767px)" srcSet="/images/video-cover-mobile.webp" />
                                             <source media="(min-width: 768px)" srcSet="/images/video-cover.webp" />
@@ -84,11 +84,8 @@ const Hero = () => {
                                                 src="/images/video-cover.webp"
                                                 alt="Video Poster"
                                                 className={styles.posterImage}
-                                                style={{ opacity: 1, visibility: 'visible' }}
                                                 decoding="sync" 
-                                                fetchpriority="high"
-                                                width="1200"
-                                                height="800"
+                                                fetchpriority="high" 
                                             />
                                         </picture>
                                     </div>
