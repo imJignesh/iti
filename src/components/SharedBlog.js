@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import Head from "next/head";
 import he from "he";
 import { useScroll } from "./LocomotiveScrollProvider";
 
@@ -98,12 +97,21 @@ const SharedBlog = ({ title, showInnerStyles = false }) => {
         return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+        // Load Blog.css non-blocking after paint to avoid render-blocking
+        const loadCSS = (href) => {
+            if (document.querySelector(`link[href="${href}"]`)) return;
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = href;
+            document.head.appendChild(link);
+        };
+        loadCSS("/styles/Blog.css");
+        if (showInnerStyles) loadCSS("/styles/bloginnerpage.css");
+    }, [showInnerStyles]);
+
     return (
         <section className="blogSection" ref={sectionRef}>
-            <Head>
-                <link rel="stylesheet" href="/styles/Blog.css" />
-                {showInnerStyles && <link rel="stylesheet" href="/styles/bloginnerpage.css" />}
-            </Head>
             <div className="container">
                 <div className="row gap-5 gap-lg-0">
                     {/* --- LEFT CONTENT (HEADINGs) --- */}
