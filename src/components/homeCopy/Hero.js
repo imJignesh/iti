@@ -5,13 +5,7 @@ import styles from "../../styles/home-copy/Hero.module.css";
 const Hero = () => {
     const videoRef = useRef(null);
     const [videoLoaded, setVideoLoaded] = useState(false);
-    const [isMounted, setIsMounted] = useState(false);
     const isVideoLoadingRef = useRef(false);
-
-    // Only mount the video element on the client — prevents browser from picking
-    // the empty <video> as LCP candidate (which caused a 38s render delay).
-    useEffect(() => { setIsMounted(true); }, []);
-
 
     useEffect(() => {
         const loadVideo = () => {
@@ -95,19 +89,17 @@ const Hero = () => {
                                             />
                                         </picture>
                                     </div>
-                                    {isMounted && (
-                                        <video
-                                            ref={videoRef}
-                                            className={styles.heroVideo}
-                                            autoPlay
-                                            muted
-                                            loop
-                                            playsInline
-                                            preload="metadata"
-                                            onCanPlay={() => setVideoLoaded(true)}
-                                        >
-                                        </video>
-                                    )}
+                                    <video
+                                        ref={videoRef}
+                                        className={styles.heroVideo}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        preload="metadata"
+                                        onCanPlay={() => setVideoLoaded(true)}
+                                    >
+                                    </video>
                                 </div>
 
                                 <div className={styles.buttonGroup}>
