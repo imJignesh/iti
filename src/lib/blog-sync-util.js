@@ -1,6 +1,6 @@
-// src/lib/blog-sync-util.js
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 // --- SHARED CONFIG ---
 const API_BASE = 'https://api.ignitetraininginstitute.com/wp-json/wp/v2';
@@ -15,11 +15,42 @@ function ensureDirs() {
     });
 }
 
+// Git Push Utility to sync back to GitHub
+function gitPushChanges(message) {
+    try {
+        console.log(`📡 Preparing to push changes to GitHub: "${message}"`);
+        
+        // Stage only relevant data
+        execSync('git add src/data/blog/ public/images/blogs/', { stdio: 'inherit' });
+        
+        // Check if there are actually changes to commit
+        const status = execSync('git status --porcelain').toString();
+        if (!status) {
+            console.log('ℹ️ No changes to commit.');
+            return false;
+        }
+
+        execSync(`git commit -m "${message}"`, { stdio: 'inherit' });
+        execSync('git push', { stdio: 'inherit' });
+        
+        console.log('✅ Changes successfully pushed to GitHub!');
+        return true;
+    } catch (err) {
+        console.error('⚠️ Git Push Failed:', err.message);
+        // We don't throw here to avoid failing the whole sync if only the push fails
+        return false;
+    }
+}
+
 // Download image utility (reusable)
-async function downloadImage(url, destFilename) {
+async function downloadImage(url, destFilename, force = false) {
     try {
         const destPath = path.join(IMAGE_DIR, destFilename);
-        if (fs.existsSync(destPath)) return `/images/blogs/${destFilename}`;
+        
+        // Skip if exists and not forced
+        if (!force && fs.existsSync(destPath)) {
+            return `/images/blogs/${destFilename}`;
+        }
 
         const res = await fetch(url);
         if (!res.ok) throw new Error(`Download status: ${res.status}`);
@@ -51,7 +82,6 @@ async function fetchAll(endpoint) {
 }
 
 // THE MAIN SYNC ACTION
-// This can be called as a full sync (default) or potentially single sync in the future
 async function runMirrorSync() {
     ensureDirs();
 
@@ -83,7 +113,8 @@ async function runMirrorSync() {
                 const originalUrl = featuredMedia.source_url;
                 const extension = path.extname(new URL(originalUrl).pathname) || '.webp';
                 const filename = `${slug}${extension}`;
-                const localUrl = await downloadImage(originalUrl, filename);
+                // Set force to true for all images as requested by the user
+                const localUrl = await downloadImage(originalUrl, filename, true);
                 featuredMedia.source_url = localUrl;
             }
 
@@ -120,12 +151,72 @@ async function runMirrorSync() {
         }
     }
 
+    // --- AUTO GITHUB PUSH ---
+    const pushed = gitPushChanges(`Blog Sync: Full Mirror Update [${new Date().toISOString()}]`);
+
     return {
         success: true,
         modified: allLightweightPosts.length,
         deleted: deletedCount,
-        date: listData.syncDate
+        date: listData.syncDate,
+        pushedToGithub: pushed
     };
 }
 
-module.exports = { runMirrorSync };
+async function syncSinglePost(slug) {
+    if (!slug) throw new Error("No slug provided for single sync");
+    ensureDirs();
+
+    const fetchUrl = `${API_BASE}/posts?slug=${slug}&_embed`;
+    const response = await fetch(fetchUrl);
+    if (!response.ok) throw new Error(`WP API Error: ${response.status}`);
+
+    const posts = await response.json();
+    if (!posts || posts.length === 0) throw new Error(`Post not found with slug: ${slug}`);
+
+    const post = posts[0];
+    const featuredMedia = post._embedded?.['wp:featuredmedia']?.[0];
+    if (featuredMedia && featuredMedia.source_url) {
+        const originalUrl = featuredMedia.source_url;
+        const extension = path.extname(new URL(originalUrl).pathname) || '.webp';
+        const filename = `${slug}${extension}`;
+        // FORCE re-download for single post updates to ensure images are fresh
+        const localUrl = await downloadImage(originalUrl, filename, true);
+        featuredMedia.source_url = localUrl;
+    }
+
+    // Update Post
+    fs.writeFileSync(path.join(POSTS_DIR, `${slug}.json`), JSON.stringify(post, null, 2));
+
+    // Update list.json (lightweight sync) 
+    const listPath = path.join(DATA_DIR, 'list.json');
+    if (fs.existsSync(listPath)) {
+        const listData = JSON.parse(fs.readFileSync(listPath, 'utf8'));
+        const index = listData.posts.findIndex(p => p.slug === slug);
+        const slimPost = {
+            id: post.id,
+            date: post.date,
+            slug: post.slug,
+            title: post.title,
+            excerpt: post.excerpt,
+            categories: post.categories,
+            tags: post.tags,
+            _embedded: post._embedded
+        };
+
+        if (index > -1) {
+            listData.posts[index] = slimPost;
+        } else {
+            listData.posts.unshift(slimPost);
+        }
+        listData.syncDate = new Date().toISOString();
+        fs.writeFileSync(listPath, JSON.stringify(listData, null, 2));
+    }
+
+    // --- AUTO GITHUB PUSH ---
+    const pushed = gitPushChanges(`Blog Sync: Updated "${post.title?.rendered || slug}"`);
+
+    return { success: true, slug: slug, date: new Date().toISOString(), pushedToGithub: pushed };
+}
+
+module.exports = { runMirrorSync, syncSinglePost };
