@@ -3,8 +3,6 @@ import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 import LazySection from "@/components/LazySection"
-// import MovingBanner from '@/components/home/MovingBanner';
-// import Testimonial from '@/components/home/Testimonial';
 import Accordion from '@/components/a-level/accordian';
 import Blog from "@/components/a-level/Blog";
 import CourseCard from '@/components/a-level/CourseCard';
@@ -179,14 +177,14 @@ const ALEVEL = ({ headerHeight }) => {
     <>
 
       <SEO
-                loadInnerStyles={true}
+        loadInnerStyles={true}
         title="UAE's Leading A-Level, AS-Level Tutors For All Subjects"
         description="Learn from the best A-Level tutors In UAE with assured grade improvement. Choose a personalized tutoring plan with subjects of your choice"
         url="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai"
       />
 
       <Head>
-<meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex" />
         <link
           rel="preload"
           href="/assets/alevel_bg_main.webp"
