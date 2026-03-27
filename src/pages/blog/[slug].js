@@ -769,6 +769,7 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
             />
             <Head>
                 <link rel="stylesheet" href="/styles/slug.css" />
+                <link rel="stylesheet" href="/styles/Blogpg.css" />
             </Head>
             {/* Additional manual tags if needed (e.g. article specific) */}
             <Head>
