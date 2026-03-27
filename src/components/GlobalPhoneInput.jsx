@@ -133,8 +133,38 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
             <PhoneInput
                 country={'ae'}
                 value={value}
+                // Hard limit on total characters including format symbols (spaces, +, brackets)
+                inputProps={{
+                    maxLength: flagIso === 'ae' ? 16 : 20, // Strict 16 for UAE (+971 50 123 4567)
+                }}
                 // Use the 4th argument (formattedValue) to keep +, brackets, and spaces for Zoho
-                onChange={(val, country, e, formattedValue) => onChange(formattedValue)}
+                onChange={(val, country, e, formattedValue) => {
+                    const dialCode = country.dialCode || '';
+                    const iso2 = country.iso2 || '';
+
+                    // Explicitly enforce 12 digits for UAE (+971 + 9 digits)
+                    const totalMaxDigits = (iso2 === 'ae' || dialCode === '971') ? 12 : 15;
+
+                    // Remove all non-numeric characters to check actual digit count
+                    const rawDigits = val.replace(/\D/g, '');
+
+                    if (rawDigits.length > totalMaxDigits) {
+                        let digitCount = 0;
+                        let truncated = '';
+                        // Re-build formatted string but stop when reached totalMaxDigits
+                        for (let char of formattedValue) {
+                            if (/\d/.test(char)) digitCount++;
+                            if (digitCount <= totalMaxDigits) {
+                                truncated += char;
+                            } else {
+                                break;
+                            }
+                        }
+                        onChange(truncated);
+                    } else {
+                        onChange(formattedValue);
+                    }
+                }}
                 disableDropdown={true}
                 specialLabel=""
                 placeholder="PH.NO"
