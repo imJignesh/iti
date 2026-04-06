@@ -1,5 +1,5 @@
 .heroSectionWrapper {
-  padding: 10vh 0;
+  padding: 8.5vh 0;
 }
 
 @media (max-width: 991px) {
@@ -14,7 +14,7 @@
 
 /* Removed redundant .homeCopy prefix */
 .hero {
-  padding: 3rem 0 !important;
+  padding: 0 !important;
   /* LCP FIX: Desktop Background - Loads instantly */
   background: url(/images/banner-bg.webp);
   background-repeat: no-repeat;
