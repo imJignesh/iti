@@ -112,7 +112,6 @@ const nextConfig = {
   }),
 
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'react-phone-input-2', 'swiper'],
   },
 
