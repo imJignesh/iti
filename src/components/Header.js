@@ -103,7 +103,7 @@ const Header = ({ setHeaderHeight }) => {
                                 height={80}
                                 alt="Ignite Training Institute"
                                 loading="eager"
-                                fetchPriority="low"
+                                fetchPriority="high"
                             />
                         </a>
                     </div>

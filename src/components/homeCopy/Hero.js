@@ -88,6 +88,11 @@ const Hero = () => {
                     media="(min-width: 768px)"
                     fetchPriority="high"
                 />
+                {/* Preload Background Images (LCP Fix) */}
+                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" />
+                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" />
+                {/* Preload Heading Icons */}
+                <link rel="preload" as="image" href="/images/heading-icon.webp" />
             </Head>
 
             <div className={styles.heroSectionWrapper}>
@@ -123,7 +128,7 @@ const Hero = () => {
                                             <img
                                                 {...restProps}
                                                 decoding="sync"
-                                                fetchpriority="high"
+                                                fetchPriority="high"
                                             />
                                         </picture>
                                     </div>
@@ -148,7 +153,7 @@ const Hero = () => {
                                             width={40}
                                             height={40}
                                             alt="Right arrow"
-                                            loading="lazy"
+                                            loading="eager"
                                         />
                                     </a>
                                     <a href="/courses/" className="buttonSkyBlue">
@@ -158,7 +163,7 @@ const Hero = () => {
                                             width={40}
                                             height={40}
                                             alt="Right arrow"
-                                            loading="lazy"
+                                            loading="eager"
                                         />
                                     </a>
                                 </div>

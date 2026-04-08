@@ -397,7 +397,7 @@
     padding: inherit !important;
   }
 
-  :global(.p) .hero {
+  .hero {
     background: url(/images/banner-bg-mobile.webp);
     background-repeat: no-repeat;
     background-size: 85%;
