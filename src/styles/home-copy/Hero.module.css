@@ -479,8 +479,9 @@
   /* .videoContainer, */
   .heroVideo {
     height: 100%;
-    width: 100%;
+    width: auto;
     text-align: center;
+    margin: 0 auto;
   }
 
 
@@ -528,7 +529,7 @@
     width: 55vw;
     bottom: 0;
     left: auto;
-    right: 5vw;
+    right: 6vw;
   }
 
   .heroRight .buttonGroup :global(button) {
