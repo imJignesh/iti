@@ -49,28 +49,7 @@ const Hero = () => {
     return (
         <>
             <Head>
-                {/*
-                  * LCP FIX: Preload using plain static URLs.
-                  * These must EXACTLY match the src="" used in the <picture> below
-                  * so the browser reuses the preloaded bytes instead of re-fetching.
-                  */}
-                <link
-                    rel="preload"
-                    as="image"
-                    href={MOBILE_POSTER}
-                    media="(max-width: 767px)"
-                    fetchPriority="high"
-                />
-                <link
-                    rel="preload"
-                    as="image"
-                    href={DESKTOP_POSTER}
-                    media="(min-width: 768px)"
-                    fetchPriority="high"
-                />
-                {/* Preload Background Decoration Images */}
-                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" />
-                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" />
+                {/* LCP FIX: Preload managed uniquely inside _document.js instead to avoid duplication */}
             </Head>
 
             <div className={styles.heroSectionWrapper}>
@@ -144,7 +123,7 @@ const Hero = () => {
                                             width={40}
                                             height={40}
                                             alt="Right arrow"
-                                            loading="eager"
+                                            loading="lazy"
                                         />
                                     </a>
                                     <a href="/courses/" className="buttonSkyBlue">
@@ -154,7 +133,7 @@ const Hero = () => {
                                             width={40}
                                             height={40}
                                             alt="Right arrow"
-                                            loading="eager"
+                                            loading="lazy"
                                         />
                                     </a>
                                 </div>
