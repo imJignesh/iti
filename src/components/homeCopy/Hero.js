@@ -1,20 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
-import Image from '@/components/CustomImageWrapper';
-import { getImageProps } from 'next/image';
 import styles from '@/styles/home-copy/Hero.module.css';
+
+const MOBILE_POSTER = '/images/video-cover-mobile.webp';
+const DESKTOP_POSTER = '/images/video-cover.webp';
 
 const Hero = () => {
     const videoRef = useRef(null);
     const [videoLoaded, setVideoLoaded] = useState(false);
     const isVideoLoadingRef = useRef(false);
 
-
     useEffect(() => {
         const loadVideo = () => {
             if (videoRef.current && !isVideoLoadingRef.current) {
                 isVideoLoadingRef.current = true;
-                // Only append source if not already present (since we added one in JSX)
                 if (videoRef.current.getElementsByTagName('source').length === 0) {
                     const source = document.createElement('source');
                     source.src = '/videos/hero-banner-video2.mp4';
@@ -22,7 +21,6 @@ const Hero = () => {
                     videoRef.current.appendChild(source);
                 }
                 videoRef.current.load();
-                // setVideoLoaded(true); // Moved to onCanPlay
             }
         };
 
@@ -35,9 +33,6 @@ const Hero = () => {
 
         const handleInteraction = () => {
             loadVideo();
-            document.removeEventListener('scroll', handleInteraction);
-            document.removeEventListener('touchstart', handleInteraction);
-            document.removeEventListener('mousedown', handleInteraction);
         };
 
         document.addEventListener('scroll', handleInteraction, { passive: true, once: true });
@@ -51,48 +46,31 @@ const Hero = () => {
         };
     }, [videoLoaded]);
 
-    const commonProps = {
-        alt: "Video Poster",
-        fill: true,
-        priority: true,
-        sizes: "100vw",
-        className: styles.posterImage,
-    };
-
-    const {
-        props: { srcSet: mobileImg },
-    } = getImageProps({ ...commonProps, src: '/images/video-cover-mobile.webp' });
-
-    const {
-        props: { srcSet: desktopImg, ...restProps },
-    } = getImageProps({ ...commonProps, src: '/images/video-cover.webp' });
-
     return (
         <>
             <Head>
-                {/* Preload Mobile Image */}
+                {/*
+                  * LCP FIX: Preload using plain static URLs.
+                  * These must EXACTLY match the src="" used in the <picture> below
+                  * so the browser reuses the preloaded bytes instead of re-fetching.
+                  */}
                 <link
                     rel="preload"
                     as="image"
-                    imagesrcset={mobileImg}
-                    imagesizes="100vw"
+                    href={MOBILE_POSTER}
                     media="(max-width: 767px)"
                     fetchPriority="high"
                 />
-                {/* Preload Desktop Image */}
                 <link
                     rel="preload"
                     as="image"
-                    imagesrcset={desktopImg}
-                    imagesizes="100vw"
+                    href={DESKTOP_POSTER}
                     media="(min-width: 768px)"
                     fetchPriority="high"
                 />
-                {/* Preload Background Images (LCP Fix) */}
+                {/* Preload Background Decoration Images */}
                 <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" />
                 <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" />
-                {/* Preload Heading Icons */}
-                <link rel="preload" as="image" href="/images/heading-icon.webp" />
             </Head>
 
             <div className={styles.heroSectionWrapper}>
@@ -111,10 +89,10 @@ const Hero = () => {
                                 <div className={styles.heroParagraph}>
                                     <h3>Improve Your Grades Today!</h3>
                                     <b>
-                                        We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, & more through our curriculum-specific approach & expert tutors in Dubai, guiding them toward a stronger understanding & lasting growth.
+                                        We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, &amp; more through our curriculum-specific approach &amp; expert tutors in Dubai, guiding them toward a stronger understanding &amp; lasting growth.
                                     </b>
                                     <strong>
-                                        Ignite's experienced tutors in Dubai help students thrive in IBDP, IB MYP, IGCSE, A-Levels, AP, & more with personalized support & structured programs.
+                                        Ignite's experienced tutors in Dubai help students thrive in IBDP, IB MYP, IGCSE, A-Levels, AP, &amp; more with personalized support &amp; structured programs.
                                     </strong>
                                 </div>
                             </div>
@@ -122,13 +100,26 @@ const Hero = () => {
                             <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
                                 <div className={styles.videoContainer}>
                                     <div className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}>
+                                        {/*
+                                          * LCP IMAGE: Using plain <img> + <picture> with static src="" paths.
+                                          * These MUST match the href="" in the <link rel="preload"> above
+                                          * to guarantee the browser reuses the preloaded resource.
+                                          * Do NOT use Next.js <Image> or getImageProps here — they generate
+                                          * /_next/image?url=... URLs that won't match static preload hrefs.
+                                          */}
                                         <picture>
-                                            <source media="(max-width: 767px)" srcSet={mobileImg} />
-                                            <source media="(min-width: 768px)" srcSet={desktopImg} />
+                                            <source
+                                                media="(max-width: 767px)"
+                                                srcSet={MOBILE_POSTER}
+                                            />
                                             <img
-                                                {...restProps}
+                                                src={DESKTOP_POSTER}
+                                                alt="Ignite tutors in Dubai — IBDP, IGCSE, A-Level, IB MYP"
+                                                width={600}
+                                                height={660}
                                                 decoding="sync"
                                                 fetchPriority="high"
+                                                className={styles.posterImage}
                                             />
                                         </picture>
                                     </div>
@@ -139,7 +130,7 @@ const Hero = () => {
                                         muted
                                         loop
                                         playsInline
-                                        preload="metadata"
+                                        preload="none"
                                         onCanPlay={() => setVideoLoaded(true)}
                                     >
                                     </video>
