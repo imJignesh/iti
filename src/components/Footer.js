@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/Footer.module.css';
 import Image from '@/components/CustomImageWrapper';
@@ -65,34 +65,30 @@ const Footer = () => {
   };
   // --- END: Newsletter Integration ---
 
-  const isReportingRef = useRef(false);
-
   // --- Google Ads Click Conversion Tracking for "Call" Contact Link ---
+  // Dedup guard: prevents double-firing when both direct gtag AND GTM click
+  // triggers are active for the same conversion label.
   const handleCallClick = (e) => {
-    if (isReportingRef.current) return;
-
     e.preventDefault();
     const url = phoneNumberObj.href;
 
+    if (window.__callConversionFiring) return;
+    window.__callConversionFiring = true;
+    setTimeout(() => { window.__callConversionFiring = false; }, 2000);
+
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      isReportingRef.current = true;
       window.gtag('event', 'conversion', {
         'send_to': 'AW-844959495/LGsACP7qiP4bEIee9JID',
         'event_callback': function () {
           window.location.href = url;
-          isReportingRef.current = false;
         }
       });
 
       // Fallback in case the callback doesn't fire
       setTimeout(() => {
-        if (isReportingRef.current) {
-          window.location.href = url;
-          isReportingRef.current = false;
-        }
+        window.location.href = url;
       }, 500);
     } else {
-      // If gtag isn't loaded, just perform the regular navigation
       window.location.href = url;
     }
   };
