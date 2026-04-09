@@ -45,60 +45,6 @@ const Header = ({ setHeaderHeight }) => {
         return pathsToCheck.some(path => currentPath.startsWith(path));
     };
 
-    // --- Google Ads Click Conversion Tracking for "Call" Button ---
-    const handleCallClick = (e) => {
-        e.preventDefault();
-        const url = `tel:${phoneNumber}`;
-        let redirected = false;
-
-        const performRedirect = () => {
-            if (!redirected) {
-                redirected = true;
-                window.location.href = url;
-            }
-        };
-
-        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-            window.gtag('event', 'conversion', {
-                'send_to': 'AW-844959495/LGsACP7qiP4bEIee9JID',
-                'event_callback': performRedirect
-            });
-
-            // Fallback in case the callback doesn't fire
-            setTimeout(performRedirect, 500);
-        } else {
-            // If gtag isn't loaded, just perform the regular navigation
-            performRedirect();
-        }
-    };
-
-    // --- Google Ads Click Conversion Tracking for WhatsApp Button ---
-    const handleWhatsappClick = (e) => {
-        e.preventDefault();
-        const url = `https://wa.me/${phoneNumber}`;
-        let redirected = false;
-
-        const performRedirect = () => {
-            if (!redirected) {
-                redirected = true;
-                window.location.href = url;
-            }
-        };
-
-        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-            window.gtag('event', 'conversion', {
-                'send_to': 'AW-844959495/qUVOCIHriP4bEIee9JID',
-                'event_callback': performRedirect
-            });
-
-            // Fallback in case the callback doesn't fire
-            setTimeout(performRedirect, 500);
-        } else {
-            // If gtag isn't loaded, just perform the regular navigation
-            performRedirect();
-        }
-    };
-
     return (
         <div className={styles.headerWrapper}>
             <header ref={headerRef} className={`${styles.header}`}>
@@ -228,13 +174,13 @@ const Header = ({ setHeaderHeight }) => {
 
                 <div className={`d-flex justify-content-end m-0 ${styles.header_right_content}`}>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href={`tel:${phoneNumber}`} onClick={handleCallClick} className={styles.iconButton}>
+                        <a href={`tel:${phoneNumber}`} className={styles.iconButton}>
                             <Image src="/images/mobile.webp" width={25} height={25} alt="Call" />
                             Call
                         </a>
                     </div>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href={`https://wa.me/${phoneNumber}`} onClick={handleWhatsappClick} className={styles.iconButton}>
+                        <a href={`https://wa.me/${phoneNumber}`} className={styles.iconButton}>
                             <Image src="/images/whatsapp.webp" width={25} height={25} alt='Whatsapp' />
                             Whatsapp
                         </a>
