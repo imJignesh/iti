@@ -79,6 +79,21 @@ const About = ({ headerHeight }) => {
     <>
       <SEO title="About Ignite Training Institute: Expert Tutors In Dubai"
         description="Learn about Ignite Training Institute, Dubai's leading tutoring center for IB, IGCSE, A-Levels, & AP. Our experienced tutors and proven methodology ensure academic success." />
+      <Script
+        id="gt-6OB"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              if (window._gt_6OB_done) return;
+              window._gt_6OB_done = true;
+              if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID'});
+              }
+            })();
+          `
+        }}
+      />
       {/* 2. RENDER the JsonLd component and pass the schema data */}
       <JsonLd schema={educationalOrganizationSchema} />
 
