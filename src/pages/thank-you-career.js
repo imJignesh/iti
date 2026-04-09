@@ -43,12 +43,11 @@ const About = ({ headerHeight }) => {
   // ----------------------------------------------------
   const scrollRef = useRef(null);
   const scrollInstanceRef = useRef(null);
-  const conversionFired = useRef(false);
 
   useEffect(() => {
-    if (!conversionFired.current && typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function' && !window._cv_6OB_fired) {
       window.gtag('event', 'conversion', { 'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID' });
-      conversionFired.current = true;
+      window._cv_6OB_fired = true;
     }
   }, []);
 
