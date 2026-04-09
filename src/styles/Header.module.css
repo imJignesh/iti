@@ -105,8 +105,7 @@ header .header_right_content {
 
 
 
-header .header_right_content button,
-header .header_right_content .iconButton {
+header .header_right_content button {
   font-size: 1vw;
   font-weight: 500;
   letter-spacing: 0;
@@ -121,19 +120,15 @@ header .header_right_content .iconButton {
   gap: 0.7vw;
   cursor: pointer;
   transition: 0.4s all;
-  text-decoration: none;
-  color: inherit;
 }
 
-header .header_right_content button:hover,
-header .header_right_content .iconButton:hover {
+header .header_right_content button:hover {
   color: var(--skyblue-color);
   transform: scale(1.05);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-header .header_right_content button img,
-header .header_right_content .iconButton img {
+header .header_right_content button img {
   width: 15px;
   height: 15px;
 }
@@ -203,7 +198,6 @@ header .megaMenuContent h3 {
       var(--lightgreen-color),
       var(--green-color));
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -422,7 +416,7 @@ header .toggleButton img {
     display: flex
   }
 
-  header .header_right_content button, header .header_right_content .iconButton {
+  header .header_right_content button {
     font-size: 1vw;
     padding: 0.2vw 0.6vw;
   }
@@ -460,7 +454,7 @@ header .toggleButton img {
     /* Reduced gap between links */
   }
 
-  header .header_right_content button, header .header_right_content .iconButton {
+  header .header_right_content button {
     font-size: 1vw;
     padding: 5px 10px
   }
@@ -503,13 +497,13 @@ header .toggleButton img {
     /* Reduced gap between links */
   }
 
-  header .header_right_content button, header .header_right_content .iconButton {
+  header .header_right_content button {
     font-size: 1.2vw;
     padding: 5px 10px
   }
 
 
-  header .header_right_content button img, header .header_right_content .iconButton img {
+  header .header_right_content button img {
     width: 20px;
     height: 20px;
   }
@@ -584,7 +578,7 @@ header .toggleButton img {
     margin: 0 auto;
   }
 
-  header .header_right_content button, header .header_right_content .iconButton {
+  header .header_right_content button {
     font-size: 16px;
   }
 
@@ -624,13 +618,13 @@ header .toggleButton img {
     font-size: 14px;
   }
 
-  header .header_right_content button, header .header_right_content .iconButton {
+  header .header_right_content button {
     font-size: 14px;
     border: 2px solid transparent;
     padding: 8px 15px;
   }
 
-  header .header_right_content button img, header .header_right_content .iconButton img {
+  header .header_right_content button img {
     width: 18px;
     height: 18px;
   }
@@ -644,7 +638,7 @@ header .toggleButton img {
     height: auto;
   }
 
-  header .header_right_content button img, header .header_right_content .iconButton img {
+  header .header_right_content button img {
     width: 15px;
     height: 15px;
   }
@@ -665,7 +659,7 @@ header .toggleButton img {
     gap: 10px;
   }
 
-  header .header_right_content button, header .header_right_content .iconButton {
+  header .header_right_content button {
     font-size: 12px;
     padding: 6px 10px;
     letter-spacing: 1px;
@@ -686,14 +680,14 @@ header .toggleButton img {
     gap: 5px;
   }
 
-  header .header_right_content button, header .header_right_content .iconButton {
+  header .header_right_content button {
     padding: 3px 8px;
     border-radius: 10px;
     letter-spacing: 0.3px;
     gap: 5px;
   }
 
-  header .header_right_content button img, header .header_right_content .iconButton img {
+  header .header_right_content button img {
     width: 12px;
     height: 12px;
   }
@@ -716,7 +710,7 @@ header .toggleButton img {
     gap: 5px;
   }
 
-  header .header_right_content button img, header .header_right_content .iconButton img {
+  header .header_right_content button img {
     display: none;
   }
 

@@ -112,6 +112,29 @@ export default function MyApp({ Component, pageProps }) {
         };
     }, []);
 
+    // --- Google Ads Click Conversion Tracking for "Get a Free Demo" ---
+    const handleDemoClick = (e) => {
+        e.preventDefault();
+        const url = '/join-free-demo-class';
+
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            window.gtag('event', 'conversion', {
+                'send_to': 'AW-844959495/i6DpCNnjiP4bEIee9JID',
+                'event_callback': function () {
+                    window.location.href = url;
+                }
+            });
+
+            // Fallback in case the callback doesn't fire
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500);
+        } else {
+            // If gtag isn't loaded, just perform the regular navigation
+            window.location.href = url;
+        }
+    };
+
     // Minimal Return for Debugging
     return (
         <PopupProvider>
@@ -167,16 +190,16 @@ export default function MyApp({ Component, pageProps }) {
 
             {shouldLoadLocomotiveScroll ? (
                 <LocomotiveScrollProvider>
-                    <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} showButton={showButton} />
+                    <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} showButton={showButton} handleDemoClick={handleDemoClick} />
                 </LocomotiveScrollProvider>
             ) : (
-                <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} showButton={showButton} />
+                <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} showButton={showButton} handleDemoClick={handleDemoClick} />
             )}
         </PopupProvider>
     );
 }
 
-const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component, showButton }) => (
+const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component, showButton, handleDemoClick }) => (
     <>
         <div className={`${montserrat.className} ${montserrat.variable}`}>
             <Header setHeaderHeight={setHeaderHeight} />
@@ -187,6 +210,7 @@ const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component, show
         {showButton && (
             <a
                 href="/join-free-demo-class"
+                onClick={handleDemoClick}
                 className="sticky-demo-button"
                 aria-label="Go to Free Demo Class page"
             >
