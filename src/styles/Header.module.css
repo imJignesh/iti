@@ -133,6 +133,36 @@ header .header_right_content button img {
   height: 15px;
 }
 
+.headerRightBtn {
+  font-size: 1vw;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  padding: 0.3vw 0.7vw;
+  background-color: var(--white-color);
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, var(--border-color), #e7f6ff) border-box;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.7vw;
+  cursor: pointer;
+  transition: 0.4s all;
+  text-decoration: none;
+  color: inherit;
+}
+
+.headerRightBtn:hover {
+  color: var(--skyblue-color);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.headerRightBtn img {
+  width: 15px;
+  height: 15px;
+}
+
 header .megaMenuWrapper {
   position: relative;
   display: inline-block;
@@ -199,6 +229,7 @@ header .megaMenuContent h3 {
       var(--green-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @keyframes arrowWiggle {
