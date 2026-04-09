@@ -45,22 +45,31 @@ const Header = ({ setHeaderHeight }) => {
         return pathsToCheck.some(path => currentPath.startsWith(path));
     };
 
+    const isReportingRef = useRef(false);
+
     // --- Google Ads Click Conversion Tracking for "Call" Button ---
     const handleCallClick = (e) => {
+        if (isReportingRef.current) return;
+        
         e.preventDefault();
         const url = `tel:${phoneNumber}`;
 
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            isReportingRef.current = true;
             window.gtag('event', 'conversion', {
                 'send_to': 'AW-844959495/LGsACP7qiP4bEIee9JID',
                 'event_callback': function () {
                     window.location.href = url;
+                    isReportingRef.current = false;
                 }
             });
 
             // Fallback in case the callback doesn't fire
             setTimeout(() => {
-                window.location.href = url;
+                if (isReportingRef.current) {
+                    window.location.href = url;
+                    isReportingRef.current = false;
+                }
             }, 500);
         } else {
             // If gtag isn't loaded, just perform the regular navigation
@@ -70,20 +79,27 @@ const Header = ({ setHeaderHeight }) => {
 
     // --- Google Ads Click Conversion Tracking for WhatsApp Button ---
     const handleWhatsappClick = (e) => {
+        if (isReportingRef.current) return;
+
         e.preventDefault();
         const url = `https://wa.me/${phoneNumber}`;
 
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            isReportingRef.current = true;
             window.gtag('event', 'conversion', {
                 'send_to': 'AW-844959495/qUVOCIHriP4bEIee9JID',
                 'event_callback': function () {
                     window.location.href = url;
+                    isReportingRef.current = false;
                 }
             });
 
             // Fallback in case the callback doesn't fire
             setTimeout(() => {
-                window.location.href = url;
+                if (isReportingRef.current) {
+                    window.location.href = url;
+                    isReportingRef.current = false;
+                }
             }, 500);
         } else {
             // If gtag isn't loaded, just perform the regular navigation
@@ -220,19 +236,15 @@ const Header = ({ setHeaderHeight }) => {
 
                 <div className={`d-flex justify-content-end m-0 ${styles.header_right_content}`}>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href={`tel:${phoneNumber}`} onClick={handleCallClick}>
-                            <button>
-                                <Image src="/images/mobile.webp" width={25} height={25} alt="Call" />
-                                Call
-                            </button>
+                        <a href={`tel:${phoneNumber}`} onClick={handleCallClick} className={styles.headerRightBtn}>
+                            <Image src="/images/mobile.webp" width={25} height={25} alt="Call" />
+                            Call
                         </a>
                     </div>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href={`https://wa.me/${phoneNumber}`} onClick={handleWhatsappClick}>
-                            <button>
-                                <Image src="/images/whatsapp.webp" width={25} height={25} alt='Whatsapp' />
-                                Whatsapp
-                            </button>
+                        <a href={`https://wa.me/${phoneNumber}`} onClick={handleWhatsappClick} className={styles.headerRightBtn}>
+                            <Image src="/images/whatsapp.webp" width={25} height={25} alt='Whatsapp' />
+                            Whatsapp
                         </a>
                     </div>
                     <button

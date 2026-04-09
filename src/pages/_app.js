@@ -112,22 +112,31 @@ export default function MyApp({ Component, pageProps }) {
         };
     }, []);
 
+    const isReportingRef = useRef(false);
+
     // --- Google Ads Click Conversion Tracking for "Get a Free Demo" ---
     const handleDemoClick = (e) => {
+        if (isReportingRef.current) return;
+
         e.preventDefault();
         const url = '/join-free-demo-class';
 
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            isReportingRef.current = true;
             window.gtag('event', 'conversion', {
                 'send_to': 'AW-844959495/i6DpCNnjiP4bEIee9JID',
                 'event_callback': function () {
                     window.location.href = url;
+                    isReportingRef.current = false;
                 }
             });
 
             // Fallback in case the callback doesn't fire
             setTimeout(() => {
-                window.location.href = url;
+                if (isReportingRef.current) {
+                    window.location.href = url;
+                    isReportingRef.current = false;
+                }
             }, 500);
         } else {
             // If gtag isn't loaded, just perform the regular navigation
