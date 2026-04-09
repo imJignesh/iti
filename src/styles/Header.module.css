@@ -203,6 +203,7 @@ header .megaMenuContent h3 {
       var(--lightgreen-color),
       var(--green-color));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

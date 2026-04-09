@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/Footer.module.css';
 import Image from '@/components/CustomImageWrapper';
@@ -65,7 +65,7 @@ const Footer = () => {
   };
   // --- END: Newsletter Integration ---
 
-  const isReportingRef = React.useRef(false);
+  const isReportingRef = useRef(false);
 
   // --- Google Ads Click Conversion Tracking for "Call" Contact Link ---
   const handleCallClick = (e) => {

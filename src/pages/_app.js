@@ -2,7 +2,7 @@ import { Montserrat } from 'next/font/google';
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import Script from "next/script";
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext, useEffect, useRef } from "react";
 
 import "@/styles/critical.css";
 import "@/styles/globals.css";
