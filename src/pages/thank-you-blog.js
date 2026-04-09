@@ -82,7 +82,7 @@ const About = ({ headerHeight }) => {
       {/* Event snippet for Sign-up - new website main form conversion page */}
       <Script
         id="google-conversion-tracking"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `gtag('event', 'conversion', {'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID'});`,
         }}

@@ -49,22 +49,26 @@ const Header = ({ setHeaderHeight }) => {
     const handleCallClick = (e) => {
         e.preventDefault();
         const url = `tel:${phoneNumber}`;
+        let redirected = false;
+
+        const performRedirect = () => {
+            if (!redirected) {
+                redirected = true;
+                window.location.href = url;
+            }
+        };
 
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
             window.gtag('event', 'conversion', {
                 'send_to': 'AW-844959495/LGsACP7qiP4bEIee9JID',
-                'event_callback': function () {
-                    window.location.href = url;
-                }
+                'event_callback': performRedirect
             });
 
             // Fallback in case the callback doesn't fire
-            setTimeout(() => {
-                window.location.href = url;
-            }, 500);
+            setTimeout(performRedirect, 500);
         } else {
             // If gtag isn't loaded, just perform the regular navigation
-            window.location.href = url;
+            performRedirect();
         }
     };
 
@@ -72,22 +76,26 @@ const Header = ({ setHeaderHeight }) => {
     const handleWhatsappClick = (e) => {
         e.preventDefault();
         const url = `https://wa.me/${phoneNumber}`;
+        let redirected = false;
+
+        const performRedirect = () => {
+            if (!redirected) {
+                redirected = true;
+                window.location.href = url;
+            }
+        };
 
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
             window.gtag('event', 'conversion', {
                 'send_to': 'AW-844959495/qUVOCIHriP4bEIee9JID',
-                'event_callback': function () {
-                    window.location.href = url;
-                }
+                'event_callback': performRedirect
             });
 
             // Fallback in case the callback doesn't fire
-            setTimeout(() => {
-                window.location.href = url;
-            }, 500);
+            setTimeout(performRedirect, 500);
         } else {
             // If gtag isn't loaded, just perform the regular navigation
-            window.location.href = url;
+            performRedirect();
         }
     };
 
@@ -220,19 +228,15 @@ const Header = ({ setHeaderHeight }) => {
 
                 <div className={`d-flex justify-content-end m-0 ${styles.header_right_content}`}>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href={`tel:${phoneNumber}`} onClick={handleCallClick}>
-                            <button>
-                                <Image src="/images/mobile.webp" width={25} height={25} alt="Call" />
-                                Call
-                            </button>
+                        <a href={`tel:${phoneNumber}`} onClick={handleCallClick} className={styles.iconButton}>
+                            <Image src="/images/mobile.webp" width={25} height={25} alt="Call" />
+                            Call
                         </a>
                     </div>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href={`https://wa.me/${phoneNumber}`} onClick={handleWhatsappClick}>
-                            <button>
-                                <Image src="/images/whatsapp.webp" width={25} height={25} alt='Whatsapp' />
-                                Whatsapp
-                            </button>
+                        <a href={`https://wa.me/${phoneNumber}`} onClick={handleWhatsappClick} className={styles.iconButton}>
+                            <Image src="/images/whatsapp.webp" width={25} height={25} alt='Whatsapp' />
+                            Whatsapp
                         </a>
                     </div>
                     <button

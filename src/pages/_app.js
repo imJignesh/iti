@@ -116,22 +116,26 @@ export default function MyApp({ Component, pageProps }) {
     const handleDemoClick = (e) => {
         e.preventDefault();
         const url = '/join-free-demo-class';
+        let redirected = false;
+
+        const performRedirect = () => {
+            if (!redirected) {
+                redirected = true;
+                window.location.href = url;
+            }
+        };
 
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
             window.gtag('event', 'conversion', {
                 'send_to': 'AW-844959495/i6DpCNnjiP4bEIee9JID',
-                'event_callback': function () {
-                    window.location.href = url;
-                }
+                'event_callback': performRedirect
             });
 
             // Fallback in case the callback doesn't fire
-            setTimeout(() => {
-                window.location.href = url;
-            }, 500);
+            setTimeout(performRedirect, 500);
         } else {
             // If gtag isn't loaded, just perform the regular navigation
-            window.location.href = url;
+            performRedirect();
         }
     };
 
@@ -140,7 +144,7 @@ export default function MyApp({ Component, pageProps }) {
         <PopupProvider>
             <Script
                 id="gtm-script"
-                strategy="lazyOnload"
+                strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -152,9 +156,9 @@ export default function MyApp({ Component, pageProps }) {
             {/* Google Tag (gtag.js) */}
             <Script
                 src="https://www.googletagmanager.com/gtag/js?id=AW-844959495"
-                strategy="lazyOnload"
+                strategy="afterInteractive"
             />
-            <Script id="google-analytics" strategy="lazyOnload">
+            <Script id="google-analytics" strategy="afterInteractive">
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
@@ -164,7 +168,7 @@ export default function MyApp({ Component, pageProps }) {
             </Script>
 
             {/* Meta Pixel Code */}
-            <Script id="meta-pixel" strategy="lazyOnload">
+            <Script id="meta-pixel" strategy="afterInteractive">
                 {`
                     !function(f,b,e,v,n,t,s)
                     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
