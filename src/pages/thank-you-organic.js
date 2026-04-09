@@ -79,24 +79,23 @@ const About = ({ headerHeight }) => {
     <>
       <SEO title="About Ignite Training Institute: Expert Tutors In Dubai"
         description="Learn about Ignite Training Institute, Dubai's leading tutoring center for IB, IGCSE, A-Levels, & AP. Our experienced tutors and proven methodology ensure academic success." />
-      <Script
-        id="gt-6OB"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function() {
-              if (window._gt_6OB_done) {
-                console.log('Conversion check: Already fired, skipping.');
-                return;
-              }
-              window._gt_6OB_done = true;
-              console.log('Conversion check: Firing gtag conversion now!');
-              if (typeof gtag === 'function') {
-                gtag('event', 'conversion', {'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID'});
-              }
-            })();
-          `
-        }}
+      {/* Google Ads Conversion Pixel - Image-only to prevent double firing in GTM/gtag */}
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: 'none' }}
+          src="https://www.googleadservices.com/pagead/conversion/844959495/?label=6OBkCIqSlP4bEIee9JID&guid=ON&script=0"
+          alt=""
+        />
+      </noscript>
+      <img
+        className="visually-hidden"
+        height="1"
+        width="1"
+        style={{ display: 'none' }}
+        src="https://www.googleadservices.com/pagead/conversion/844959495/?label=6OBkCIqSlP4bEIee9JID&guid=ON&script=0"
+        alt=""
       />
       {/* 2. RENDER the JsonLd component and pass the schema data */}
       <JsonLd schema={educationalOrganizationSchema} />
