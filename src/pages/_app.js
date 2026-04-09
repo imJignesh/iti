@@ -158,17 +158,12 @@ export default function MyApp({ Component, pageProps }) {
           })(window,document,'script','dataLayer','GTM-PMG2GSQ');`,
                 }}
             />
-            {/* Google Tag (gtag.js) */}
-            <Script
-                src="https://www.googletagmanager.com/gtag/js?id=AW-844959495"
-                strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
+            {/* Google Tag (gtag.js) stub for GTM */}
+            <Script id="gtag-stub" strategy="afterInteractive">
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', 'AW-844959495');
                 `}
             </Script>
 

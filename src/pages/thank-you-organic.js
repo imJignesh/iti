@@ -88,7 +88,7 @@ const About = ({ headerHeight }) => {
               if (window._gt_6OB_done) return;
               window._gt_6OB_done = true;
               if (typeof gtag === 'function') {
-                gtag('event', 'page_load_conversion', {'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID'});
+                gtag('event', 'conversion', {'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID'});
               }
             })();
           `
