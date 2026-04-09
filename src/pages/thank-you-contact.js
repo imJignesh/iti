@@ -45,9 +45,14 @@ const About = ({ headerHeight }) => {
   const scrollInstanceRef = useRef(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function' && !window._cv_6OB_fired) {
-      window.gtag('event', 'conversion', { 'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID' });
-      window._cv_6OB_fired = true;
+    if (typeof window !== "undefined") {
+      if (window._gt_pixel_sent_6OB) return;
+      window._gt_pixel_sent_6OB = true;
+      const trackingPixel = new Image(1, 1);
+      trackingPixel.src = "https://www.googleadservices.com/pagead/conversion/844959495/?label=6OBkCIqSlP4bEIee9JID&guid=ON&script=0";
+    
+      
+      
     }
   }, []);
 
