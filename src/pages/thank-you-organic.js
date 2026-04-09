@@ -45,13 +45,6 @@ const About = ({ headerHeight }) => {
   const scrollInstanceRef = useRef(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function' && !window._cv_6OB_fired) {
-      window.gtag('event', 'conversion', { 'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID' });
-      window._cv_6OB_fired = true;
-    }
-  }, []);
-
-  useEffect(() => {
     let scroll;
 
     const initScroll = async () => {
