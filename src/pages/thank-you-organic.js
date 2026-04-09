@@ -44,21 +44,6 @@ const About = ({ headerHeight }) => {
   const scrollRef = useRef(null);
   const scrollInstanceRef = useRef(null);
 
-  // --- STRICT Google Ads Conversion Pixel (Image-based, JS-injected) ---
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // 1. Strict guard to prevent dual execution under any circumstances
-      if (window._gt_pixel_sent_6OB) return;
-      window._gt_pixel_sent_6OB = true;
-      
-      console.log('Sending pure image pixel conversion for 6OB...');
-
-      // 2. Create the image in memory (not in the DOM)
-      const trackingPixel = new Image(1, 1);
-      trackingPixel.src = "https://www.googleadservices.com/pagead/conversion/844959495/?label=6OBkCIqSlP4bEIee9JID&guid=ON&script=0";
-    }
-  }, []);
-
   useEffect(() => {
     let scroll;
 
@@ -94,6 +79,14 @@ const About = ({ headerHeight }) => {
     <>
       <SEO title="About Ignite Training Institute: Expert Tutors In Dubai"
         description="Learn about Ignite Training Institute, Dubai's leading tutoring center for IB, IGCSE, A-Levels, & AP. Our experienced tutors and proven methodology ensure academic success." />
+      {/* Event snippet for Sign-up - new website main form conversion page */}
+      <Script
+        id="google-conversion-tracking"
+        strategy="lazyOnload"
+        dangerouslySetInnerHTML={{
+          __html: `gtag('event', 'conversion', {'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID'});`,
+        }}
+      />
       {/* 2. RENDER the JsonLd component and pass the schema data */}
       <JsonLd schema={educationalOrganizationSchema} />
 
