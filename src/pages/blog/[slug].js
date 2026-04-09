@@ -375,11 +375,11 @@ export async function getServerSideProps(context) {
 
     try {
         const dataDir = path.join(process.cwd(), 'src', 'data', 'blog');
-        
+
         // 1. Load the specific post data
         const postFilePath = path.join(dataDir, 'posts', `${slug}.json`);
         let post = null;
-        
+
         if (fs.existsSync(postFilePath)) {
             post = JSON.parse(fs.readFileSync(postFilePath, 'utf8'));
         } else {
@@ -439,7 +439,7 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
     const postApiUrl = slug ? `/api/wp/posts?slug=${slug}&_embed` : null;
     const fallback = useMemo(() => [initialPost], [initialPost]);
 
-    const { data, error } = useSWR(postApiUrl, fetcher, { 
+    const { data, error } = useSWR(postApiUrl, fetcher, {
         fallbackData: fallback,
 
         revalidateOnMount: !initialPost, // Only revalidate if we don't already have the post from the local JSON cache
@@ -686,15 +686,15 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
             const currentPostCategories = post.categories || [];
 
             // 1. Find posts with matching categories
-            let localRelated = allPosts.filter(p => 
-                p.id !== currentPostId && 
+            let localRelated = allPosts.filter(p =>
+                p.id !== currentPostId &&
                 p.categories.some(catId => currentPostCategories.includes(catId))
             );
 
             // 2. If not enough, fill with latest posts
             if (localRelated.length < 3) {
-                const latestFound = allPosts.filter(p => 
-                    p.id !== currentPostId && 
+                const latestFound = allPosts.filter(p =>
+                    p.id !== currentPostId &&
                     !localRelated.some(r => r.id === p.id)
                 );
                 localRelated = [...localRelated, ...latestFound].slice(0, 3);
@@ -781,12 +781,12 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
                     <h1 className="mb-4 display-4 main-title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                     <div className="post-meta-wrapper mb-4">
                         <div className="meta-col-left">
-                            <div className="meta-item meta-published">
+                            {/* <div className="meta-item meta-published">
                                 <span>Published on {publishedDate}</span>
-                            </div>
+                            </div> */}
                             {updatedDate && (
                                 <>
-                                    <span className="post-date-separator mx-2 d-none d-md-inline">|</span>
+                                    {/* <span className="post-date-separator mx-2 d-none d-md-inline">|</span> */}
                                     <div className="meta-item meta-updated">
                                         <span>Updated on {updatedDate}</span>
                                     </div>
