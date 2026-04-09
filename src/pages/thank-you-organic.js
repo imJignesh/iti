@@ -85,8 +85,12 @@ const About = ({ headerHeight }) => {
         dangerouslySetInnerHTML={{
           __html: `
             (function() {
-              if (window._gt_6OB_done) return;
+              if (window._gt_6OB_done) {
+                console.log('Conversion check: Already fired, skipping.');
+                return;
+              }
               window._gt_6OB_done = true;
+              console.log('Conversion check: Firing gtag conversion now!');
               if (typeof gtag === 'function') {
                 gtag('event', 'conversion', {'send_to': 'AW-844959495/6OBkCIqSlP4bEIee9JID'});
               }
