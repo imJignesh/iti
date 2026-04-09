@@ -167,7 +167,12 @@ export default function MyApp({ Component, pageProps }) {
             <Script id="google-analytics" strategy="afterInteractive">
                 {`
                     window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
+                    function gtag(){
+                        if (arguments[0] === 'event' && arguments[1] === 'conversion') {
+                            console.trace("🔎 ANY GTAG CONVERSION ACCESSED:", arguments);
+                        }
+                        dataLayer.push(arguments);
+                    }
                     gtag('js', new Date());
                     gtag('config', 'AW-844959495');
                 `}

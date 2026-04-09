@@ -56,6 +56,7 @@ const Header = ({ setHeaderHeight }) => {
 
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
             isReportingRef.current = true;
+            console.trace('🔴 CALL conversion fired — stack trace:');
             window.gtag('event', 'conversion', {
                 'send_to': 'AW-844959495/LGsACP7qiP4bEIee9JID',
                 'event_callback': function () {
@@ -86,6 +87,7 @@ const Header = ({ setHeaderHeight }) => {
 
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
             isReportingRef.current = true;
+            console.trace('🟡 WHATSAPP conversion fired — stack trace:');
             window.gtag('event', 'conversion', {
                 'send_to': 'AW-844959495/qUVOCIHriP4bEIee9JID',
                 'event_callback': function () {
