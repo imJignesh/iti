@@ -906,33 +906,46 @@ body.has-highlighted-video::before {
         width: 100% !important;
     }
 }
+
 /* --- WordPress Block Table Styling --- */
-.post-content .wp-block-table {
+.wp-block-table {
     margin: 20px 0;
     overflow-x: auto;
-    max-width: 500px;
+    -webkit-overflow-scrolling: touch;
 }
 
-.post-content .wp-block-table table {
-    width: 100%;
+.wp-block-table table {
+    width: auto;
+    max-width: 900px;
+    min-width: 300px;
+
     border-collapse: collapse;
     font-family: Arial, sans-serif;
     border: 1px solid #000000;
 }
 
-.post-content .wp-block-table td {
+.wp-block-table td {
     border: 1px solid #000000;
-    padding: 8px 15px;
+    padding: 12px 5px;
     text-align: center;
     color: #000000;
+    white-space: nowrap;
 }
 
-.post-content .wp-block-table tr:first-child td {
+.wp-block-table tr:first-child td {
     background-color: #D6E4FF;
     font-weight: bold;
-    font-size: 1.1em;
 }
 
-.post-content .wp-block-table tr td:first-child {
-    width: 40%;
+@media screen and (max-width: 900px) {
+    .wp-block-table table {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wp-block-table td {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
 }
