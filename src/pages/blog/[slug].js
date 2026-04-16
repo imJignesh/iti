@@ -240,12 +240,12 @@ const TOCPostContent = ({ content, toc }) => {
             thirdH2.parentNode.insertBefore(video1TempDiv.firstChild, thirdH2);
         }
 
-        const secondH2 = allH2s[1];
-        if (secondH2) {
-            const gifTempDiv = document.createElement('div');
-            gifTempDiv.innerHTML = gifHeaderHtml.trim();
-            secondH2.parentNode.insertBefore(gifTempDiv.firstChild, secondH2);
-        }
+        // const secondH2 = allH2s[1];
+        // if (secondH2) {
+        //     const gifTempDiv = document.createElement('div');
+        //     gifTempDiv.innerHTML = gifHeaderHtml.trim();
+        //     secondH2.parentNode.insertBefore(gifTempDiv.firstChild, secondH2);
+        // }
 
         let newContent = tempDiv.innerHTML;
         if (firstH2) {
