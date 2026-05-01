@@ -195,6 +195,11 @@ const nextConfig = {
   async redirects() {
     const redirects = [
       {
+        source: '/blog/benefits-of-ib-curriculum',
+        destination: '/blog/ib-program-pros-and-cons',
+        permanent: true,
+      },
+      {
         source: '/blog/emsat-tutors-in-dubai',
         destination: '/',
         permanent: true,
