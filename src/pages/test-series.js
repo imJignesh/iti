@@ -38,7 +38,7 @@ const TestSeries = ({ headerHeight }) => {
             <SEO
                 loadInnerStyles={true}
                 title="Test Series | Ignite Training Institute"
-                description="Prepare for your exams with the best Test Series at Ignite Training Institute."
+                description="Prepare smarter with Ignite's IGCSE, IB, and A-Level test series in Dubai. Practice real exam questions, identify gaps, and improve your scores"
                 url="https://ignitetraininginstitute.com/test-series"
             />
 
