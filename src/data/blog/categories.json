@@ -239,7 +239,7 @@
   },
   {
     "id": 24,
-    "count": 1,
+    "count": 2,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/american-curriculum/",
     "name": "American Curriculum",
@@ -715,7 +715,7 @@
   },
   {
     "id": 20,
-    "count": 24,
+    "count": 23,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/ibdp/",
     "name": "IBDP",
@@ -834,7 +834,7 @@
   },
   {
     "id": 17,
-    "count": 33,
+    "count": 34,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/igcse/",
     "name": "IGCSE",
@@ -953,7 +953,7 @@
   },
   {
     "id": 9,
-    "count": 39,
+    "count": 38,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/international-baccalaureate/",
     "name": "International Baccalaureate (IB)",
@@ -1072,7 +1072,7 @@
   },
   {
     "id": 22,
-    "count": 6,
+    "count": 5,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/myp/",
     "name": "MYP",
