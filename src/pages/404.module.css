@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1e2f, #282848);
+  color: #fff;
+}
+
+.main {
+  text-align: center;
+}
+
+.title {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+.homeLink {
+  font-size: 1.2rem;
+  color: #90cdf4;
+  text-decoration: underline;
+}

@@ -8,6 +8,7 @@ import useSWR from 'swr';
 import SEO from "@/components/SEO";
 import Image from 'next/image';
 import JsonLd from "@/components/JsonLd";
+import Head from 'next/head';
 
 
 /**
@@ -420,6 +421,9 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
                 keywords={metaKeywords}
             />
             <JsonLd schema={categorySchema} />
+            <Head>
+                <link rel="stylesheet" href="/styles/Blogpg.css" />
+            </Head>
 
             <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }} >
                 <section

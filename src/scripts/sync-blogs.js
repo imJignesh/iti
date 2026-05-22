@@ -1,5 +1,5 @@
 // scripts/sync-blogs.js
-const { runMirrorSync } = require('./src/lib/blog-sync-util');
+const { runMirrorSync } = require('../lib/blog-sync-util');
 
 async function main() {
     try {

@@ -2,6 +2,8 @@
 
 // Import bundle analyzer
 import withBundleAnalyzer from '@next/bundle-analyzer';
+import fs from 'fs';
+import path from 'path';
 
 // STATIC PAGES LIST (Root Level - 34 pages)
 const STATIC_ROOT_PAGES = [
@@ -348,14 +350,6 @@ const nextConfig = {
       'sitemap.xml',
     ];
 
-    const excludePattern = excludedSlugs.join('|');
-
-    redirects.push({
-      source: `/:slug((?!(?:${excludePattern})$)[^/.]+)`,
-      destination: '/blog/:slug',
-      permanent: true,
-    });
-
     CATEGORY_SLUGS.forEach((slug) => {
       redirects.push({
         source: `/blog/${slug}`,
@@ -363,6 +357,63 @@ const nextConfig = {
         permanent: true,
       });
     });
+
+    // Dynamically load additional redirects from redirects_parsed.json
+    try {
+      const redirectsPath = path.join(process.cwd(), 'redirects_parsed.json');
+      if (fs.existsSync(redirectsPath)) {
+        const parsedRedirects = JSON.parse(fs.readFileSync(redirectsPath, 'utf8'));
+        if (Array.isArray(parsedRedirects)) {
+          const formattedRedirects = [];
+
+          for (const r of parsedRedirects) {
+            let cleanSource = r.source;
+            let hasArray = undefined;
+
+            // Handle URLs with query strings (?)
+            if (cleanSource.includes('?')) {
+              const [base, queryStr] = cleanSource.split('?');
+              cleanSource = base;
+              if (queryStr) {
+                hasArray = [];
+                const searchParams = new URLSearchParams(queryStr);
+                for (const [key, value] of searchParams.entries()) {
+                  hasArray.push({
+                    type: 'query',
+                    key: key,
+                    value: value || undefined
+                  });
+                }
+              }
+            }
+
+            // Handle URLs with colons (::) by escaping them
+            if (cleanSource.includes(':')) {
+              cleanSource = cleanSource.replace(/:/g, '\\:');
+            }
+
+            // Fix double slashes inside paths (e.g. /some//path) FIRST
+            cleanSource = cleanSource.replace(/\/{2,}/g, '/');
+
+            // Then remove trailing slashes to match Next.js defaults
+            if (cleanSource.endsWith('/') && cleanSource.length > 1) {
+              cleanSource = cleanSource.slice(0, -1);
+            }
+
+            formattedRedirects.push({
+              source: cleanSource || '/',
+              has: hasArray,
+              destination: r.destination,
+              permanent: r.permanent,
+            });
+          }
+
+          redirects.push(...formattedRedirects);
+        }
+      }
+    } catch (error) {
+      console.error('Error loading redirects_parsed.json:', error);
+    }
 
     return redirects;
   },

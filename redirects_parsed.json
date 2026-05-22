@@ -1,0 +1,817 @@
+[
+  {
+    "source": "/blog/join-free-demo",
+    "destination": "/join-free-demo-class",
+    "permanent": true
+  },
+  {
+    "source": "/thank-you-landing/",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/team/ashni/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/ignite_global_pathways/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/webinar/paid-webinars/",
+    "destination": "/join-free-demo-class",
+    "permanent": true
+  },
+  {
+    "source": "/webinar/non-paid-webinars/",
+    "destination": "/join-free-demo-class",
+    "permanent": true
+  },
+  {
+    "source": "/blog/team/freezy/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/difference-between-gcse-and-a-levels//1000",
+    "destination": "/blog/difference-between-gcse-and-a-levels/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/team/anuja/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/blog/uncategorized/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/difference-between-gcse-and-a-levels/1000",
+    "destination": "/blog/difference-between-gcse-and-a-levels/",
+    "permanent": true
+  },
+  {
+    "source": "/uncategorized/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/subject-page/",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/page/2/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/advanced_placements/",
+    "destination": "/category/advanced-placements",
+    "permanent": true
+  },
+  {
+    "source": "/blog/a-level-arts-subjects-guide-for-students-in-uae",
+    "destination": "/blog/a-level-subjects",
+    "permanent": true
+  },
+  {
+    "source": "/courses/ibdp-tutors-in-dubai/",
+    "destination": "/courses/ibdp-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/emsat-tutors",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/team/anuja/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/blog/anuja/",
+    "destination": "/about-us/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/page/19/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/team/team-1/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/ucat/",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/courses/ibdp-tutors/",
+    "destination": "/courses/ibdp-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/team/mufaddal/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/blog/page/5/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/ibdp-spring-course/",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/team/saranya/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/courses/ibdp-tutors",
+    "destination": "/courses/ibdp-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/subject_choices/",
+    "destination": "/blog/a-level-subjects",
+    "permanent": true
+  },
+  {
+    "source": "/blog/page/8/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/british_curriculum/",
+    "destination": "/blog/ib-curriculum-vs-british-curriculum",
+    "permanent": true
+  },
+  {
+    "source": "/blog/page/6/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/team/irtiqa-nissar/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/igcse-tutors-in-dubai/",
+    "destination": "/courses/igcse-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/emsat-tutors/",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/gcse/page/2/",
+    "destination": "/courses/igcse-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/join-free-demo/",
+    "destination": "/join-free-demo-class",
+    "permanent": true
+  },
+  {
+    "source": "/blog/igcse/page/2/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/international_baccalaureate/page/2/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/team/mufaddal/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/blog/team/saranya/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/blog/subject_choices/",
+    "destination": "/blog/a-level-subjects",
+    "permanent": true
+  },
+  {
+    "source": "/courses/homeschooling-tutors/",
+    "destination": "/courses/homeschooling-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/page/1/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/universities/page/2/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/courses/myp-tutors",
+    "destination": "/courses/myp-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/courses/myp-tutors/",
+    "destination": "/courses/myp-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/author/ignite/",
+    "destination": "/about-us/",
+    "permanent": true
+  },
+  {
+    "source": "/british-curriculum-schools/?utm_source=rss&utm_medium=rss&utm_campaign=british-curriculum-schools",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/igcse-exams/",
+    "destination": "/blog/igcse-exams",
+    "permanent": true
+  },
+  {
+    "source": "/page/3/?s=IGCSE&et_pb_searchform_submit=et_search_proccess&et_pb_include_posts=yes",
+    "destination": "/courses/igcse-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/international-baccalaureate/page/2/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/standardized_tests/",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/british-curriculum/",
+    "destination": "/blog/ib-curriculum-vs-british-curriculum",
+    "permanent": true
+  },
+  {
+    "source": "/british-curriculum/",
+    "destination": "/blog/ib-curriculum-vs-british-curriculum",
+    "permanent": true
+  },
+  {
+    "source": "/myp/",
+    "destination": "/courses/myp-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/gcse/",
+    "destination": "/courses/igcse-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-curriculum-1/",
+    "destination": "/blog/ib-curriculum-blog/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-curriculum-1/",
+    "destination": "/blog/ib-curriculum-blog/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-curriculum-blog//1000",
+    "destination": "/blog/ib-curriculum-blog/",
+    "permanent": true
+  },
+  {
+    "source": "/courses/ib-curriculum",
+    "destination": "/courses/ibdp-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/private-tutors/",
+    "destination": "/private-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/ibdp-curriculum-components-requirements/1000",
+    "destination": "/blog/ibdp-curriculum/",
+    "permanent": true
+  },
+  {
+    "source": "/ibdp-curriculum-components-requirements/",
+    "destination": "/blog/ibdp-curriculum/",
+    "permanent": true
+  },
+  {
+    "source": "/ibdp-curriculum-components-requirements/",
+    "destination": "/blog/ibdp-curriculum/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-curriculum-blog/1000",
+    "destination": "/blog/ib-curriculum-blog/",
+    "permanent": true
+  },
+  {
+    "source": "/ibdp-subjects",
+    "destination": "/ib-subject-choices/",
+    "permanent": true
+  },
+  {
+    "source": "/private-tutors/",
+    "destination": "/private-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/ibdp-curriculum-components-requirements//1000",
+    "destination": "/blog/ibdp-curriculum/",
+    "permanent": true
+  },
+  {
+    "source": "/international_baccalaureate/",
+    "destination": "/blog/ib-diploma",
+    "permanent": true
+  },
+  {
+    "source": "/ibdp-subjects-2/",
+    "destination": "/ib-subject-choices/",
+    "permanent": true
+  },
+  {
+    "source": "/team/irtiqa-nissar/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/team/irtiqa-nissar/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/advanced-placements-tutors//?utm_source=chatgpt.com",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-myp/",
+    "destination": "/courses/myp-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-ibdp/",
+    "destination": "/courses/ibdp-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/blog_post_demo/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/are-ap-exams-hard//1000",
+    "destination": "/blog/are-ap-exams-hard/",
+    "permanent": true
+  },
+  {
+    "source": "/igcse-schools-in-dubai/1000",
+    "destination": "/igcse-schools-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/?et_core_page_resource",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/igcse-schools-in-dubai//1000",
+    "destination": "/igcse-schools-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-schools-in-abu-dhabi/feed/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/business-syllabus-a-level-overview-cambridge-aqa-edexcel/",
+    "destination": "/blog/a-level-subjects",
+    "permanent": true
+  },
+  {
+    "source": "/ib-myp/",
+    "destination": "/courses/myp-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/myp-programme-guide/",
+    "destination": "/blog/ib-myp-programme",
+    "permanent": true
+  },
+  {
+    "source": "/advanced-placements-ap/",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/is-o-level-and-igcse-the-same/feed/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/are-ap-exams-hard/1000",
+    "destination": "/blog/are-ap-exams-hard/",
+    "permanent": true
+  },
+  {
+    "source": "/demo_blog_post/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/british-curriculum-tutors-in-dubai/:::British",
+    "destination": "/british-curriculum-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/standardized_tests/feed/",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/advanced_placements/",
+    "destination": "/advanced-placements-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/ib-curriculum-schools-in-dubai//1000",
+    "destination": "/blog/ib-schools-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/ib-curriculum-schools-in-dubai/1000",
+    "destination": "/blog/ib-schools-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/advanced-placements/1000",
+    "destination": "/advanced-placements-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/are-gcses-important/1000",
+    "destination": "/blog/are-gcses-important",
+    "permanent": true
+  },
+  {
+    "source": "/:::Home",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-cas-program/1000",
+    "destination": "/blog/ib-cas-program/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-curriculum-vs-british-curriculum//1000",
+    "destination": "/blog/ib-curriculum-vs-british-curriculum",
+    "permanent": true
+  },
+  {
+    "source": "/igcse-curriculum/1000",
+    "destination": "/blog/igcse-curriculum",
+    "permanent": true
+  },
+  {
+    "source": "/igcse-vs-cbse/1000",
+    "destination": "/blog/igcse-vs-cbse",
+    "permanent": true
+  },
+  {
+    "source": "/ib-curriculum-schools-in-dubai/",
+    "destination": "/blog/ib-schools-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/british-curriculum-tutors-in-sharjah/",
+    "destination": "/british-curriculum-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/advanced-placements//1000",
+    "destination": "/advanced-placements-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/ib-curriculum-vs-british-curriculum/1000",
+    "destination": "/blog/ib-curriculum-vs-british-curriculum",
+    "permanent": true
+  },
+  {
+    "source": "/igcse-exams//1000",
+    "destination": "/blog/igcse-exams",
+    "permanent": true
+  },
+  {
+    "source": "/high-school-british-curriculum/",
+    "destination": "/blog/british-curriculum-guide",
+    "permanent": true
+  },
+  {
+    "source": "/are-gcses-important//1000",
+    "destination": "/blog/are-gcses-important",
+    "permanent": true
+  },
+  {
+    "source": "/a-levels-qualifications/",
+    "destination": "/blog/as-level-qualification",
+    "permanent": true
+  },
+  {
+    "source": "/a-levels-qualifications/",
+    "destination": "/blog/as-level-qualification",
+    "permanent": true
+  },
+  {
+    "source": "/what-is-ib-extended-essay//1000",
+    "destination": "/blog/what-is-ib-extended-essay",
+    "permanent": true
+  },
+  {
+    "source": "/british-curriculum-a-levels/",
+    "destination": "/courses/a-level-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/private-tutor-in-dubai/",
+    "destination": "/private-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/how-to-study-physics-effectively-a-winning-study-plan/",
+    "destination": "/blog/how-to-study-physics-effectively",
+    "permanent": true
+  },
+  {
+    "source": "/team/team-1/",
+    "destination": "/our-team",
+    "permanent": true
+  },
+  {
+    "source": "/ib-cas-program//1000",
+    "destination": "/blog/ib-cas-program/",
+    "permanent": true
+  },
+  {
+    "source": "/business-subjects-in-a-levels/",
+    "destination": "/blog/a-level-subjects",
+    "permanent": true
+  },
+  {
+    "source": "/what-is-ib-extended-essay/1000",
+    "destination": "/blog/what-is-ib-extended-essay",
+    "permanent": true
+  },
+  {
+    "source": "/universities/feed/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/category/advanced_placements/",
+    "destination": "/category/advanced-placements",
+    "permanent": true
+  },
+  {
+    "source": "/ib-career-related-programme-guide//1000",
+    "destination": "/blog/ib-career-related-programme-guide",
+    "permanent": true
+  },
+  {
+    "source": "/private-tutor-in-dubai/",
+    "destination": "/private-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-career-related-programme-guide/1000",
+    "destination": "/blog/ib-career-related-programme-guide",
+    "permanent": true
+  },
+  {
+    "source": "/benefits-of-ib-diploma//1000",
+    "destination": "/blog/benefits-of-ib-curriculum/",
+    "permanent": true
+  },
+  {
+    "source": "/ap-exams/",
+    "destination": "/blog/ap-exams-overview",
+    "permanent": true
+  },
+  {
+    "source": "/maths-tutors-in-dubai/",
+    "destination": "/maths-tutor-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/british_curriculum/",
+    "destination": "/blog/ib-curriculum-vs-british-curriculum",
+    "permanent": true
+  },
+  {
+    "source": "/benefits-of-ib-diploma/1000",
+    "destination": "/blog/benefits-of-ib-curriculum/",
+    "permanent": true
+  },
+  {
+    "source": "/ibcp-vs-ibdp/1000",
+    "destination": "/blog/ibcp-vs-ibdp",
+    "permanent": true
+  },
+  {
+    "source": "/a-level/",
+    "destination": "/category/a-levels",
+    "permanent": true
+  },
+  {
+    "source": "/igcse-vs-gcse-comparison/1000",
+    "destination": "/blog/igcse-vs-gcse-comparison",
+    "permanent": true
+  },
+  {
+    "source": "/igcse-exams/1000",
+    "destination": "/blog/igcse-exams",
+    "permanent": true
+  },
+  {
+    "source": "/what-is-an-ap-seminar-exam/1000",
+    "destination": "/blog/what-is-an-ap-seminar-exam",
+    "permanent": true
+  },
+  {
+    "source": "/ignite-expands-stem-training-test-preparation-programs-dubai/",
+    "destination": "/blog/gulf-news-features-ignite-stem-training-test-prep-programs",
+    "permanent": true
+  },
+  {
+    "source": "/what-is-an-ap-seminar-exam//1000",
+    "destination": "/blog/what-is-an-ap-seminar-exam",
+    "permanent": true
+  },
+  {
+    "source": "/universities-that-",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/universities-",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/how-to-study-12th-organic-chemistry-10-study-tips/",
+    "destination": "/blog/how-to-study-12th-organic-chemistry",
+    "permanent": true
+  },
+  {
+    "source": "/what-is-cambridge-",
+    "destination": "/blog/what-is-cambridge-curriculum",
+    "permanent": true
+  },
+  {
+    "source": "/ib/",
+    "destination": "/ib-curriculum-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/ib/",
+    "destination": "/ib-curriculum-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/igcse-vs-gcse-comparison//1000",
+    "destination": "/blog/igcse-vs-gcse-comparison",
+    "permanent": true
+  },
+  {
+    "source": "/ibcp-vs-ibdp//1000",
+    "destination": "/blog/ibcp-vs-ibdp",
+    "permanent": true
+  },
+  {
+    "source": "/contact-us-3/",
+    "destination": "/contact-us/",
+    "permanent": true
+  },
+  {
+    "source": "/british-curriculum-i-gcse/",
+    "destination": "/courses/igcse-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/test-page/",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/test-page/",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/blog-list/",
+    "destination": "/blog/",
+    "permanent": true
+  },
+  {
+    "source": "/global_pathways/",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/spring-course-structure-test/",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/spring-course-structure-test/",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/ucat-tutors-in-dubai/",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/psychology-tutor-in-dubai/",
+    "destination": "/psychology-tutor-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/courses/ibdp-tutors-in-dubai/:::IBDP",
+    "destination": "/courses/ibdp-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/courses/igcse-tutors-in-dubai/:::I/GCSE",
+    "destination": "/courses/igcse-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/courses/myp-tutors-in-dubai/:::MYP",
+    "destination": "/courses/myp-tutors-in-dubai/",
+    "permanent": true
+  },
+  {
+    "source": "/courses/a-level-tutors-in-dubai/:::A",
+    "destination": "/courses/a-level-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/courses/:::High",
+    "destination": "/courses/",
+    "permanent": true
+  },
+  {
+    "source": "/::",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/ib-curriculum-tutors-in-dubai/:::International",
+    "destination": "/ib-curriculum-tutors-in-dubai",
+    "permanent": true
+  },
+  {
+    "source": "/portfolio/",
+    "destination": "/about-us/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/join-free-demo",
+    "destination": "/join-free-demo-class",
+    "permanent": true
+  }
+]
