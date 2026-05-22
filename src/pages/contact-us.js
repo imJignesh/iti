@@ -158,7 +158,7 @@ const Contact = ({ headerHeight }) => {
     return (
         <>
             <SEO
-                loadInnerStyles={true} title="Contact Us"
+                loadInnerStyles={true} title="Contact Us for Experienced Tutors In Dubai"
                 description="Get in touch with our academic experts to clearly understand the tutoring process & successfully kickstart your academic journey today!"
                 url="https://ignitetraininginstitute.com/contact-us" />
             <Head>
