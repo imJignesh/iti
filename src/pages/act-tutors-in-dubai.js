@@ -184,8 +184,6 @@ const act = ({ headerHeight }) => {
   return (
     <>
       <Head>
-<link rel="stylesheet" href="/styles/home/MovingBanner.css" />
-        <link rel="stylesheet" href="/styles/home/Subjects.css" />
         <link
           rel="preload"
           href="/assets/mobileact.webp"
