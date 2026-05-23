@@ -54,27 +54,27 @@ export default function Accordion() {
           <p className="subtitle">Ignite's IGCSE coaching follows six teaching pillars across the full Year 10 to Year 11 journey, mapped to how IGCSE students are actually assessed. The same pillars run across the IGCSE Year 10 Group, the IGCSE Finals Prep Group for Year 11, and Bespoke One-to-One Tutoring.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#1. IGCSE Subject Support At Core And Extended Levels</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>1. IGCSE Subject Support At Core And Extended Levels</h3>
           <p className="subtitle">Subject support spans Maths (Core and Extended), Further Maths, Statistics, Physics, Chemistry, Biology, Computer Science, Double Award Science, Economics, Business Studies, Accounting, English Language and Literature, French, Spanish, Psychology, and EVM. Each subject is taught at the level and board the student is sitting.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#2. IGCSE Personalised Training Based On Diagnostic Assessment</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>2. IGCSE Personalised Training Based On Diagnostic Assessment</h3>
           <p className="subtitle">Every new student starts with a diagnostic in their weak subject. We identify which topic strands are dragging the grade down (in Maths it is often algebra and trigonometry; in Sciences it is often application and Paper 6 practical questions; in English Literature it is often essay structure). The lesson plan is then built around closing those specific strands.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#3. IGCSE Syllabus Completion Aligned With School Pacing</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>3. IGCSE Syllabus Completion Aligned With School Pacing</h3>
           <p className="subtitle">For May/June candidates, planning aims for full syllabus coverage by mid-March, leaving 8 to 10 weeks for revision, mocks, and past paper practice. October/November candidates follow a shifted calendar. Mid-year joiners get an accelerated catch-up plan that prioritises the highest-weight topics first.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#4. IGCSE Past Paper Solving Across All Three Exam Boards</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>4. IGCSE Past Paper Solving Across All Three Exam Boards</h3>
           <p className="subtitle">We work through past papers from recent series across Edexcel, CAIE, and Oxford AQA based on the student's specific board. Each question is mapped to the official mark scheme, command terms are decoded, and students sit timed papers under exam conditions so paper-day pacing becomes second nature.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#5. Complete IGCSE Revision Aligned With 9-1 Grade Boundaries</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>5. Complete IGCSE Revision Aligned With 9-1 Grade Boundaries</h3>
           <p className="subtitle">Revision is targeted at the gap between the student's current grade and their next grade boundary. Lifting a 6 to a 7 needs different work from lifting a 4 to a 5, and revision is calibrated accordingly. Year 11 revision intensifies before May/June finals.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#6. IGCSE Exam Strategies For Command Terms And Mark Scheme Alignment</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>6. IGCSE Exam Strategies For Command Terms And Mark Scheme Alignment</h3>
           <p className="subtitle">IGCSE papers reward students who answer the question that was actually asked. We coach students on board-specific command terms (describe, explain, evaluate, calculate, compare, distinguish), on writing mark-scheme-aligned responses, and on time allocation across paper sections. These are skills, not knowledge.</p>
           <br />
 
@@ -140,16 +140,14 @@ export default function Accordion() {
           font-size: 0.95rem;
           line-height: 1.5;
         }
-        @media (max-width: 575px) {
-          .card {
-            max-width: 95vw;
-            color: white;
-            padding: 20px;
-            transition: all 0.3s ease;
-            border-radius: 30px;
-            overflow: hidden;
-          }
-        }
+                  @media (max-width: 575px) {
+                          .card {
+          max-width:95vw;
+          color: white;
+          padding: 20px;
+          transition: all 0.3s ease;
+         border-radius: 30px; overflow: hidden;}
+            }
       `}</style>
     </div>
   );

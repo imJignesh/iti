@@ -46,27 +46,27 @@ export default function Accordion() {
           <p className="subtitle">Homeschooling and private candidacy in Dubai are not for every family, but they suit specific situations very well. Six reasons consistently come up in our conversations with parents.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#1. Flexible Subject And Curriculum Choices</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>1. Flexible Subject And Curriculum Choices</h3>
           <p className="subtitle">Homeschooled students can mix subjects across IGCSE, A-Levels, and AP based on what suits their target universities, rather than being limited to what one school offers. A student aiming for US universities might take a mix of IGCSE in Year 10-11, then switch to AP for Year 12-13. A student aiming for UK universities typically takes IGCSE then A-Levels. The choice is the family's, not the school's.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#2. Independent And Accelerated Pacing</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>2. Independent And Accelerated Pacing</h3>
           <p className="subtitle">A capable Year 9 student can sit some IGCSE subjects in Year 9 if ready, rather than waiting for the standard Year 11 timetable. A student catching up after a school disruption can take an extra term on a single difficult subject without falling behind across the board. The pacing matches the student rather than the class average.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#3. Personalised Academic Focus</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>3. Personalised Academic Focus</h3>
           <p className="subtitle">Homeschooled students typically take 5-7 subjects with full depth rather than 9-10 with surface coverage. The reduced subject load lets students go deeper into each subject, which suits university applications that increasingly look at depth of preparation in the chosen field rather than breadth across unrelated subjects.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#4. Stronger College Readiness Pathway</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>4. Stronger College Readiness Pathway</h3>
           <p className="subtitle">The discipline homeschooling demands (managing your own schedule, preparing for external exams, making registration deadlines) maps directly to how university coursework actually works. Students who handle homeschooling successfully through Year 11-13 typically arrive at university substantially better prepared for the self-managed academic environment.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#5. Cost And Location Advantages</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>5. Cost And Location Advantages</h3>
           <p className="subtitle">For families relocating between countries, homeschooling provides curriculum continuity that school transfers cannot. Private school fees in Dubai sit between AED 25,000 and AED 100,000 per year for Years 10-13 at most British schools. Homeschooling with structured tutoring is typically more cost-effective, particularly for families with multiple children at different academic levels.</p>
           <br />
 
-          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>#6. Balanced Focus On Extracurriculars</h3>
+          <h3 className="title" style={{ fontSize: "1.1rem", marginTop: "1rem" }}>6. Balanced Focus On Extracurriculars</h3>
           <p className="subtitle">Homeschooled students often have substantially more time for sports training, music, art, competitive exam preparation (UKMT Maths Olympiad, Physics Olympiad, debate), and other extracurricular pursuits that strengthen university applications. The school day's structure is often the bottleneck for serious extracurricular commitment, and homeschooling removes it.</p>
           <br />
 
@@ -142,8 +142,7 @@ export default function Accordion() {
           color: white;
           padding: 20px;
           transition: all 0.3s ease;
-          
-        }
+         border-radius: 30px; overflow: hidden;}
             }
       `}</style>
     </div>

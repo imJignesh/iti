@@ -75,9 +75,7 @@ export default function Accordion() {
           padding: 24px;
           transition: all 0.3s ease;
           margin:0 auto !important;
-          border-radius: 30px;
-          overflow: hidden;
-        }
+         border-radius: 30px; overflow: hidden;}
 
         .header {
           display: flex;
@@ -122,8 +120,7 @@ export default function Accordion() {
           color: white;
           padding: 20px;
           transition: all 0.3s ease;
-          
-        }
+         border-radius: 30px; overflow: hidden;}
             }
       `}</style>
     </div>

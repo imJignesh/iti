@@ -35,12 +35,7 @@ export default function Accordion() {
           <br />
 
           <h2 className="title">The IBDP Core: Extended Essay, Theory Of Knowledge, And Internal Assessments</h2>
-          <div className="subtitle">The IBDP core (EE, TOK, and Internal Assessments) is where the most predictable grade improvements happen because every component is rubric-driven. The IB markscheme tells you exactly what an A grade looks like, what an E looks like, and what falls between. Strong tutoring against the rubric is high-leverage work.<br /><br />
-          <ul>
-            <li><strong>Extended Essay (4,000 words, externally assessed).</strong> Marked out of 34 against five criteria (A: focus and method; B: knowledge and understanding; C: critical thinking; D: presentation; E: engagement). The score maps to an A through E band, and the EE band combines with the TOK band for 0 to 3 bonus Diploma points. Ignite tutors guide students through research question framing in early Year 1, structured supervisor meeting preparation, and final-draft polish. A weak research question in October of Year 1 is the single biggest predictor of a weak EE in March of Year 2.</li>
-            <li><strong>Theory of Knowledge (TOK essay + TOK exhibition).</strong> The TOK essay (1,600 words, externally assessed against the IB prescribed titles released annually) and the TOK exhibition (three objects, internally assessed) together score across criteria A through E. A strong essay-exhibition combination delivers an A or B, which feeds the bonus points alongside EE.</li>
-            <li><strong>Internal Assessments (across all six subjects).</strong> IA weightings vary by subject but typically sit between 20% and 30% of the final subject grade. Sciences IA = 20%, Maths IA = 20%, Economics IA = 20%, Business Management IA = 25%, English Lang and Lit Individual Oral = 30%. Each IA is criterion-marked. Ignite tutors guide IA topic selection, structured drafting against the criteria, and final polish before submission.</li>
-          </ul></div>
+          <p className="subtitle">The IBDP core (EE, TOK, and Internal Assessments) is where the most predictable grade improvements happen because every component is rubric-driven. The IB markscheme tells you exactly what an A grade looks like, what an E looks like, and what falls between. Strong tutoring against the rubric is high-leverage work.</p><ul className="subtitle"><li><strong>Extended Essay (4,000 words, externally assessed).</strong> Marked out of 34 against five criteria (A: focus and method; B: knowledge and understanding; C: critical thinking; D: presentation; E: engagement). The score maps to an A through E band, and the EE band combines with the TOK band for 0 to 3 bonus Diploma points. Ignite tutors guide students through research question framing in early Year 1, structured supervisor meeting preparation, and final-draft polish. A weak research question in October of Year 1 is the single biggest predictor of a weak EE in March of Year 2.</li><li><strong>Theory of Knowledge (TOK essay + TOK exhibition).</strong> The TOK essay (1,600 words, externally assessed against the IB prescribed titles released annually) and the TOK exhibition (three objects, internally assessed) together score across criteria A through E. A strong essay-exhibition combination delivers an A or B, which feeds the bonus points alongside EE.</li><li><strong>Internal Assessments (across all six subjects).</strong> IA weightings vary by subject but typically sit between 20% and 30% of the final subject grade. Sciences IA = 20%, Maths IA = 20%, Economics IA = 20%, Business Management IA = 25%, English Lang and Lit Individual Oral = 30%. Each IA is criterion-marked. Ignite tutors guide IA topic selection, structured drafting against the criteria, and final polish before submission.</li></ul>
           <br />
 
           <h2 className="title">IBDP Coaching In Dubai For Predicted Grades, Mocks, And Final Exams</h2>
@@ -147,7 +142,6 @@ export default function Accordion() {
           color: white;
           padding: 20px;
           transition: all 0.3s ease;
-          
          border-radius: 30px; overflow: hidden;}
             }
       `}</style>
