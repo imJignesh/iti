@@ -26,31 +26,56 @@ const FAQSection = () => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-  const faqData = [
+    const faqData = [
     {
-      question: "What A Level subjects does Ignite offer tutoring for?",
+      question: "Which A-Level And AS-Level Subjects Does Ignite Tutor For In Dubai?",
       answer:
-        "Ignite provides expert tutoring across a wide range of A Level subjects, including Mathematics, Physics, Chemistry, Biology, Economics, Business Studies, and English — covering both AS and A2 levels.",
+        "Ignite covers Pure Math, Statistics, Further Math, Physics, Chemistry, Biology, Computer Science, Economics, Business Studies, Accounting, English Language and Literature, French, Spanish, Psychology, and AS Level EVM. Subjects are tutored at both AS and A2, matched to the student's specific exam board across CAIE, Pearson Edexcel, and Oxford AQA.",
     },
     {
-      question: "Which exam boards are covered in the A Level tutoring?",
+      question: "Which Exam Boards Does Ignite Cover (Edexcel, CAIE, Oxford AQA)?",
       answer:
-        "Our tutoring aligns with major exam boards such as Edexcel, Cambridge International (CAIE), and Oxford International AQA, ensuring students are fully prepared for their specific syllabus and exam requirements.",
+        "Ignite tutors across all three British A-Level exam boards: Cambridge International (CAIE), Pearson Edexcel (both IAL and GCE), and Oxford International AQA. Tutors are matched to the student's specific board for each subject, with past paper practice and mark scheme work tailored to that board's exact specification.",
     },
     {
-      question: "Are both one-on-one and group tutoring sessions available?",
+      question: "Does Ignite Offer Both One-On-One And Small Group A-Level Tutoring?",
       answer:
-        "Yes, Ignite offers both one-on-one and small-group A Level tutoring to suit different learning styles — individual sessions for focused guidance and group classes for collaborative learning.",
+        "Yes. One-on-One tutoring runs year-round for students who need fully individualised pacing or are pushing a weak subject up. Small Group sessions (3 to 6 students at the same year and exam board) run as 10-month structured programmes for AS Year 12 and A-Level Year 13 cohorts, including over 70 hours of expert tutoring.",
     },
     {
-      question: "How does Ignite ensure exam readiness for A Level students?",
+      question: "How Does Ignite Prepare Students For A-Level Exams And Past Papers?",
       answer:
-        "Ignite’s A Level programme includes regular past paper practice, detailed feedback, timed mock exams, and tailored exam strategies designed to boost confidence and performance in final assessments.",
+        "Sessions work through past papers across Edexcel, CAIE, and Oxford AQA, with each question mapped to the mark scheme and command terms decoded. Students sit timed mock papers under exam conditions, receive detailed paper review feedback, and work through unit-wise worksheets calibrated to their specific board's specification.",
     },
     {
-      question: "Can I book a demo class before enrolment for A Level?",
+      question: "Can Students Try A Free Demo Class Before Enrolling?",
       answer:
-        "Absolutely. Ignite offers a free demo session so students and parents can experience the tutoring style, interact with the tutor, and evaluate whether it aligns with their academic goals before enrolling.",
+        "Yes. Every new student is offered a free demo class with the matched A-Level tutor before any enrolment commitment. The demo lets the student assess teaching style, ask exam-board-specific questions, and see how a real session runs. Parents typically use it to confirm fit before discussing a regular schedule.",
+    },
+    {
+      question: "When Should Students Start A-Level Tutoring In Dubai?",
+      answer:
+        "Year 11 students benefit from summer bridging support before Year 12 starts. Year 12 students ideally start in September or October at the beginning of AS. Year 13 students benefit from starting after autumn mocks when predicted grades land. The most common pattern is Year 12 students who join in October and stay through Year 13 finals.",
+    },
+    {
+      question: "Is Ignite's AS-Level Tuition Available For Year 12 Students?",
+      answer:
+        "Yes. AS-Level tuition runs as a 10-month group programme from September to June for Year 12 students, with over 70 hours of expert tutoring, full AS syllabus coverage, unit-wise worksheets tailored to Edexcel, CAIE, or Oxford AQA, and a mock exam series under timed conditions before May finals.",
+    },
+    {
+      question: "Are Ignite's A-Level Classes Available Online For UAE Students?",
+      answer:
+        "Yes. Online A-Level classes are available across Year 12 and Year 13 for students in Dubai, Abu Dhabi, Sharjah, Ajman, and the wider UAE. Sessions run live with interactive whiteboards, real-time mark-scheme annotation, and recordings for review. Online suits Year 13 students particularly well given the heavier workload year.",
+    },
+    {
+      question: "Can A-Level Tutors At Ignite Help Students Aiming For Top Universities?",
+      answer:
+        "Yes. A-Level tutors work with students applying to Russell Group universities, Oxbridge, US Ivy League, and top UAE universities. Predicted grade improvement happens through structured AS work and Year 13 paper technique. UCAS predictions submit by 14 January (15 October for Oxbridge and medicine), so the work needs to land before those windows.",
+    },
+    {
+      question: "What Should Parents Look For When Hiring An A-Level Tutor In Dubai?",
+      answer:
+        "Look for exam-board-specific knowledge (CAIE Maths and Edexcel IAL Maths use different syllabus codes), genuine subject and year-level match (AS-only tutoring is different from A2), transparent progress tracking against mark schemes, and a teaching style your child responds to. A free demo class confirms fit before committing.",
     },
   ];
 

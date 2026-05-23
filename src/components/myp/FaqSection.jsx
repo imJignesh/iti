@@ -26,31 +26,56 @@ const FAQSection = () => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-  const faqData = [
+    const faqData = [
     {
-      question: "What subjects are covered in IB MYP tutoring at Ignite?",
+      question: "What Subjects Are Covered In IB MYP Tutoring At Ignite?",
       answer:
-        "Ignite offers comprehensive MYP tutoring support across all subject groups, including Mathematics, Sciences, English, Individuals & Societies, Design, and more — all following the IB MYP framework.",
+        "Ignite's IB MYP tutoring covers Maths Standard and Extended, Physics, Chemistry, Biology, Computer Science, Economics, Business Management, English Language and Literature, and French. Subjects are taught across all four MYP criteria for each year level, with Year 5 support extended to eAssessment preparation and Personal Project supervision.",
     },
     {
-      question: "How is the tutoring aligned with the IB MYP curriculum?",
+      question: "Is Ignite's MYP Tutoring Aligned With IB Criterion-Based Assessment?",
       answer:
-        "All sessions are structured in line with IB MYP objectives and assessment criteria. Tutors help students strengthen both subject knowledge and ATL (Approaches to Learning) skills.",
+        "Yes. Sessions are structured around the four MYP criteria (A, B, C, D, each scored out of 8\\) used by IB World Schools in Dubai. Tutors map student work against criterion descriptors, identify weak strands, and align ATL skill-building with what the IB rubric actually rewards.",
     },
     {
-      question: "Is the tutoring personalized for each student’s needs?",
+      question: "How Are Ignite's MYP Tutoring Sessions Personalised For Each Student?",
       answer:
-        "Yes, Ignite provides tailored MYP tutoring based on each student’s academic level, school requirements, and learning pace, ensuring steady progress and deeper understanding.",
+        "Every new MYP student starts with a diagnostic in their weak subject. Tutors map current performance against each of the four MYP criteria for that subject, identify the specific criterion strands dragging the grade down, and build a personalised lesson plan around closing those gaps rather than re-teaching what the student already knows.",
     },
     {
-      question: "Does Ignite help with IB MYP assessments and personal projects?",
+      question: "Does Ignite Help With MYP Personal Projects And eAssessments?",
       answer:
-        "Absolutely. Ignite’s tutors assist students in preparing for both formative and summative assessments, while also guiding them through the research, planning, and execution of their MYP Personal Project.",
+        "Yes. Year 5 students get full Personal Project support across topic selection, supervisor meeting preparation, process journal review, and final report drafting against the four criteria. eAssessment support covers on-screen exam practice, ePortfolio structuring for Arts, Design, and PHE, and timed mock papers ahead of May and November sessions.",
     },
     {
-      question: "Can students attend a demo class before enrolling for classes?",
+      question: "Can Students Try A Free Demo Class Before Enrolling In MYP Tuition?",
       answer:
-        "Yes, students can book a free demo class to experience Ignite’s teaching methodology and interact with an MYP subject specialist before enrolling.",
+        "Yes. Every new student is offered a free demo class with the matched MYP tutor before any enrolment commitment. The demo lets the student assess teaching style, ask subject-specific questions, and see how a real session runs. Parents typically use it to confirm fit before discussing a regular schedule.",
+    },
+    {
+      question: "How Does Ignite's MYP Tutoring Support The Transition To IBDP?",
+      answer:
+        "Year 5 MYP support is built to feed directly into IBDP readiness. We focus on the ATL skills the IBDP demands (academic writing, source evaluation, time management across multi-week tasks), help students choose between Maths Standard and Extended at MYP 4, and align Year 5 subject work with the HL or SL choices students will lock in at the start of Year 11\\.",
+    },
+    {
+      question: "When Should Students Start MYP Tutoring In Dubai?",
+      answer:
+        "Most Grade 8-10 students benefit from starting MYP tutoring in Year 3 or Year 4 to build criterion-based understanding before Year 5\\. Year 5 students often start in the summer before Grade 10 to prepare for eAssessment and the Personal Project. Students switching curricula into the MYP usually benefit from starting in the first term.",
+    },
+    {
+      question: "How Many MYP Coaching Sessions Should A Student Attend Each Week?",
+      answer:
+        "Most MYP students benefit from 1 to 2 sessions per week per weak subject during the regular term. Year 5 students often increase to 2 to 3 sessions per week closer to mocks or May or November eAssessments, with added Personal Project supervision blocks. Frequency is reviewed every few weeks based on the student's pace.",
+    },
+    {
+      question: "Are Online IB MYP Classes In Dubai Available For Grade 8-10 Students?",
+      answer:
+        "Yes. Online IB MYP classes are available across Year 3, Year 4, and Year 5, with live interactive sessions, real-time rubric annotation, and session recordings for review. Online suits MYP students with packed school and activity schedules. In-person at the DIFC and JLT centres remains available for students who prefer face-to-face sessions.",
+    },
+    {
+      question: "What Should Parents Look For When Hiring An MYP Tutor In Dubai?",
+      answer:
+        "Look for genuine MYP curriculum knowledge (the four criteria, ATL skills, Personal Project, eAssessment format), subject specialisation at the right year level, transparent progress reporting against the rubric, and a teaching style your child responds to. A free demo class confirms fit before committing to a regular schedule.",
     },
   ];
 

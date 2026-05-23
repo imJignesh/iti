@@ -26,31 +26,36 @@ const FAQSection = () => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-  const faqData = [
+    const faqData = [
     {
-      question: "What Subjects Do Ignite Tutors In JLT Dubai Offer Support For?",
+      question: "Where Can I Find The Best Tutors In JLT Dubai?",
       answer:
-        "Ignite offers tutoring in a wide range of subjects, including Maths, English, Physics, Chemistry, Biology, Economics, Business, Computer Science, and more across international curricula.",
+        "The best tutors in JLT Dubai are those with direct experience of the exam board the student is sitting, not just the subject in general. At Ignite Training Institute's JLT centre, tutors specialise by board (Cambridge CAIE, Pearson Edexcel, AQA, IBO, College Board AP) and by curriculum level (IGCSE, A-Level, IB MYP, IBDP, AP). Parents should look for transparent academic outcomes, structured lesson planning, and a clear diagnostic before tutoring begins. A [free demo class](https://ignitetraininginstitute.com/join-free-demo-class) at the Ignite JLT centre is also a useful way to assess the fit before enrolling.",
     },
     {
-      question: "Which Curricula Are Supported At The JLT Dubai Center?",
+      question: "Do Tuition Centres In JLT Offer One-On-One And Small Group Classes?",
       answer:
-        "Tutors at the JLT center specialize in IB (PYP, MYP, DP), British Curriculum (IGCSE/GCSE & A-Levels), American Curriculum, AP, and ACT prep.",
+        "Yes. Most tuition centres in JLT, including Ignite, offer both formats. One-on-one tutoring works best for students with specific weak areas, exam-board switches, or accelerated targets, because the entire session is built around their syllabus position. Small group classes work well for students who learn from peer discussion and need consistent weekly structure across a full subject. Many families combine the two: one-on-one for the weakest subject and small group for the others.",
     },
     {
-      question: "Are Both Group And One-On-One Sessions Available In JLT?",
+      question: "How Much Do Private Tutors In JLT Dubai Charge?",
       answer:
-        "Yes, students can choose between personalized one-on-one sessions or small-group classes depending on their academic needs and preferences.",
+        "Private tutor fees in JLT depend on the curriculum level, the subject, and the format (one-on-one vs small group, in-centre vs online). IGCSE and IB MYP sessions are typically priced lower than IB Higher Level, A-Level, or AP, where subject specialism is rarer and demand is higher. Most reputable tuition centres in JLT charge per hour or as a package across a set number of sessions. Asking for the per-hour cost alongside the expected number of sessions to reach the student's target grade gives the most accurate comparison.",
     },
     {
-      question: "Do You Offer In-Person Classes Only, Or Online As Well?",
+      question: "Do Tutors In JLT Provide Support For Homeschooling And Private Candidates?",
       answer:
-        "Ignite’s JLT branch offers both in-person tutoring at the center and flexible online learning options for students across Dubai and beyond.",
+        "Yes. Tutors at the Ignite JLT centre support both school-going students and homeschooling families preparing privately for IGCSE, A-Level, IB, or AP exams. The [homeschooling support in Dubai](https://ignitetraininginstitute.com/courses/homeschooling-tutors-in-dubai) at Ignite is structured to cover the full syllabus across a full academic year, with progress checkpoints aligned to exam-series dates. Private candidates can also use these sessions to prepare for a specific paper or retake without enrolling full-time. This is especially useful for families relocating mid-academic year.",
     },
     {
-      question: "How Can I Book A Tutoring Session At The JLT Center?",
+      question: "Can Tutors In JLT Dubai Help Improve Exam Scores?",
       answer:
-        "You can schedule a free demo class through the website or by contacting the JLT branch directly. This helps you understand the teaching style before enrolling.",
+        "Yes, when the tutoring is genuinely structured around examiner expectations. At the Ignite JLT centre, score improvement comes from a sequence: closing the conceptual gaps first, then practising past papers under timed conditions, then reviewing performance against the official mark scheme to identify exactly where marks were lost. Students who consistently underperform on application questions often need different practice from students who lose marks on recall. The mark scheme reveals which pattern applies, and the plan is built accordingly.",
+    },
+    {
+      question: "Do Tutors In JLT Dubai Offer Online Classes?",
+      answer:
+        "Yes. Online classes are available alongside in-centre tutoring at the Ignite JLT branch. Online sessions are particularly useful for students with packed school and activity schedules, during exam season when commute time is tight, or for families based further from JLT who want access to the same tutors. The teaching approach stays identical: diagnostic-led planning, past paper practice, and written progress tracking. Most students use a blend of in-centre and online sessions across the academic year.",
     },
   ];
 

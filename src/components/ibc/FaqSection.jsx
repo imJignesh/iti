@@ -26,31 +26,56 @@ const FAQSection = () => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-  const faqData = [
+    const faqData = [
     {
-      question: "What subjects does Ignite offer tutoring for in the IB?",
+      question: "Which IB Subjects Do Ignite's IB Tutors In Dubai Cover At SL And HL?",
       answer:
-        "Ignite provides expert tutoring across all IB subjects, including Mathematics AA & AI, Sciences (Physics, Chemistry, Biology), English, Economics, Business Management, & more, covering both HL & SL levels.",
+        "Ignite's IB tutors in Dubai cover Maths AA, Maths AI, Physics, Chemistry, Biology, Economics, Business Management, Computer Science, English Language and Literature, French Ab Initio and B, Spanish, and Psychology. All subjects are supported at both Standard Level and Higher Level, including HL extension topics and Paper 3 components where applicable.",
     },
     {
-      question: "Is the tutoring aligned with the IB exam board requirements?",
+      question: "Is Ignite's IB Tutoring Aligned With The Latest IB Curriculum And Assessment Criteria?",
       answer:
-        "Yes, IB tutoring at Ignite is fully aligned with the latest IB curriculum standards & assessment criteria, including guidance on IAs, EEs, & TOK components.",
+        "Yes. Ignite's IB tutoring follows the current IB syllabus documents and assessment criteria for each subject, including the latest IA rubrics, Extended Essay supervision guidelines, and TOK essay prescribed titles. Tutors update their teaching materials with each IB curriculum revision so students are prepared for the exact paper they will sit.",
     },
     {
-      question: "Can I try a session before enrolling in a full course?",
+      question: "How Does Ignite's IB Tutoring Support Internal Assessments, The Extended Essay, And TOK?",
       answer:
-        "Absolutely. Ignite offers a free demo class so that students & parents can experience the teaching style before making a decision.",
+        "Tutors guide students through IA topic selection, criteria-based drafting (Criteria A to E depending on subject), and final polish before submission. Extended Essay support covers research question framing, supervisor meeting preparation, and 4,000-word structuring. For TOK, students work through essay prompts and exhibition object selection with markscheme-aligned feedback.",
     },
     {
-      question: "Do you offer one-on-one or group tutoring options?",
+      question: "Can Students Try A Free Demo Class Before Enrolling In IB Tuition At Ignite?",
       answer:
-        "Ignite offers both one-on-one & small group tutoring (SGT) formats to suit different learning preferences, ensuring personalized attention and academic support.",
+        "Yes. Every new student is offered a free demo class with the matched IB tutor before any enrolment commitment. The demo lets students assess teaching style, ask subject-specific questions, and see how a real session runs. Parents typically use it to confirm fit before discussing a regular schedule.",
     },
     {
-      question: "Is online IB tutoring available for students outside Dubai?",
+      question: "Does Ignite Offer One-On-One IB Tutoring Or Small Group Tutoring (SGT) In Dubai?",
       answer:
-        "Yes, Ignite provides flexible online IB tutoring for students in the UAE and beyond, with live interactive sessions, past paper practice, and exam-focused guidance.",
+        "Both formats are available. One-on-one IB tutoring suits students who need fully individualised pacing or are working on weak HL subjects close to exams. Small Group Tutoring (SGT) runs with 2 to 4 students at similar levels and works well for Economics, Business Management, and English Lit where group discussion adds value.",
+    },
+    {
+      question: "Is Online IB Tutoring Available For Students Outside Dubai Or In Other Emirates?",
+      answer:
+        "Yes. Online IB tutoring is available for students in Abu Dhabi, Sharjah, Ajman, and across the wider UAE, as well as international IB students in different time zones. Sessions run live with interactive whiteboards, real-time mark scheme annotation, and session recordings so students can review the lesson later.",
+    },
+    {
+      question: "How Early Should Students Start IB Tuition In Dubai?",
+      answer:
+        "Most students benefit from starting IB tuition in Dubai at MYP Year 4 (Grade 9\\) or the start of DP Year 1 (Grade 11). MYP Year 4 helps with subject selection and rubric-based learning. DP Year 1 prevents the second-term IA workload pile-up. Students switching curricula often start earlier.",
+    },
+    {
+      question: "How Many IB Coaching Sessions Per Week Does A Student Usually Need?",
+      answer:
+        "Most IB students benefit from 1 to 2 sessions per week per weak subject during the regular term. Closer to mock exams or the May or November sittings, students often increase to 3 sessions per week or add intensive revision blocks. Frequency is reviewed every few weeks based on the student's pace.",
+    },
+    {
+      question: "Are Ignite's IB Classes Suitable For Students Transferring Mid-Year Or Switching From CBSE, IGCSE, Or A-Levels?",
+      answer:
+        "Yes. Mid-year transfers and curriculum-switch students are common at Ignite, especially from CBSE, ICSE, IGCSE, and A-Level backgrounds. We run a diagnostic in the first session to map gaps against the IB syllabus, then build an accelerated catch-up plan that prioritises the highest-weight topics and IB-specific skills like criterion-based assessment.",
+    },
+    {
+      question: "What Should Parents Look For When Hiring An IB Tutor In Dubai?",
+      answer:
+        "Look for subject and level match (Maths AA HL is different from AI SL), genuine IB curriculum knowledge, transparent progress reporting, and a teaching style your child responds to. Ask whether the tutor has taught your child’s exact subject and level before. A free demo class helps confirm fit before committing.",
     },
   ];
 

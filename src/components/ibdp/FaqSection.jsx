@@ -26,31 +26,56 @@ const FAQSection = () => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-  const faqData = [
+    const faqData = [
     {
-      question: "What is the focus of IBDP tutoring at Ignite Training Institute?",
+      question: "What Is The Focus Of IBDP Tutoring At Ignite Training Institute?",
       answer:
-        "Ignite’s IBDP tutoring focuses on subject mastery, IA and EE guidance, and exam techniques. The program is designed to support students through both Year 1 & Year 2 of the Diploma Programme.",
+        "Ignite's IBDP tutoring focuses on subject mastery across HL and SL, Internal Assessment guidance, Extended Essay supervision, TOK essay support, and Paper 1, Paper 2, and Paper 3 exam technique. Programmes are calibrated for both Year 1 and Year 2 students and aligned with May and November exam sessions.",
     },
     {
-      question: "Do Ignite’s tutors have experience with all IBDP subjects?",
+      question: "Do Ignite's IBDP Tutors Cover All Subjects Across HL And SL?",
       answer:
-        "Yes, Ignite’s tutors are subject specialists with extensive experience across all IBDP Group 1 to Group 6 subjects, including HL & SL levels, as well as core components like TOK & EE.",
+        "Yes. Ignite's IBDP tutors cover Maths AA, Maths AI, Physics, Chemistry, Biology, Economics, Business Management, Computer Science, English Language and Literature, French Ab Initio and B, Spanish, and Psychology, at both HL and SL. HL coverage includes extension topics, option topics, and Paper 3 components.",
     },
     {
-      question: "How is the IBDP tutoring customized for each student?",
+      question: "How Are Ignite's IBDP Tutoring Sessions Customised For Each Student?",
       answer:
-        "Each student receives a personalized tutoring plan based on their subject combination, academic goals, & learning pace. Tutors adjust the content & approach accordingly to support the individual progress of the students.",
+        "Every new IBDP student starts with a diagnostic to map subject gaps and learning style. The tutor then builds a personalised plan around HL or SL choices, school pacing, target IB score, and university goals. The plan is reviewed every few weeks and adjusted as the student's predicted grade moves.",
     },
     {
-      question: "Are there regular assessments or feedback provided?",
+      question: "Can Students Try A Free Demo Class Before Enrolling In IBDP Tuition?",
       answer:
-        "Yes, students receive regular assessments, mock tests, & detailed feedback to help them identify areas of improvement & track their performance consistently.",
+        "Yes. Every new IBDP student is offered a free demo class with the matched tutor before any enrolment commitment. The demo lets the student assess teaching style, ask subject-specific questions, and see how a real IBDP session runs. Parents typically use it to confirm fit before discussing a regular schedule.",
     },
     {
-      question: "Can I attend a demo class before enrolling for IBDP?",
+      question: "How Does Ignite's IBDP Tutoring Support The Extended Essay, IA, And TOK?",
       answer:
-        "Definitely, Ignite offers a free demo class so students & parents can evaluate the teaching approach & personalized approach before starting the full course.",
+        "Ignite tutors guide students through EE research question framing, supervisor meeting preparation, and final-draft polish. IA support covers topic selection and criterion-based drafting (typically Criteria A to E). For TOK, we work through prescribed essay titles, real-life-situation framing, and exhibition object selection with markscheme-aligned feedback.",
+    },
+    {
+      question: "Can IBDP Tutoring Help Improve Predicted Grades And Final Diploma Scores?",
+      answer:
+        "Yes. Predicted grades are built from school mocks and IA scores submitted to UCAS by 14 January and US applications from November 1\\. Ignite's IBDP coaching focuses Year 2 work on the highest-leverage push to lift those grades before submission, then shifts to paper technique and timed practice for final exams.",
+    },
+    {
+      question: "How Early Should Students Start IBDP Tutoring In Dubai?",
+      answer:
+        "Most students benefit from starting at the beginning of Year 1 (Grade 11\\) to build subject foundations, plan IA topics, and register the Extended Essay early. Year 2 students still gain from focused tutoring on predicted-grade improvement and paper technique, though the timeline is tighter once university applications open.",
+    },
+    {
+      question: "Are Online IBDP Classes In Dubai Available For Year 1 And Year 2 Students?",
+      answer:
+        "Yes. Online IBDP classes are available across both Year 1 and Year 2, with live interactive sessions, real-time mark scheme annotation, and session recordings for review. Online suits Year 12 students particularly well because it returns 3 to 5 hours per week of commute time straight into revision during the heaviest workload year.",
+    },
+    {
+      question: "How Many IBDP Coaching Sessions Per Week Does A Student Need?",
+      answer:
+        "Most IBDP students benefit from 1 to 2 sessions per week per weak subject during the regular term. Closer to school mocks or May or November final exams, students often increase to 3 sessions per week or add intensive revision blocks. Ignite reviews session frequency every few weeks based on the student's pace.",
+    },
+    {
+      question: "What Should Parents Look For When Hiring An IBDP Tutor In Dubai?",
+      answer:
+        "Look for subject and level match (Maths AA HL is different from AI SL), genuine IBDP curriculum knowledge (IA criteria, EE supervision, TOK rubric), transparent progress reporting, and a teaching style your child responds to. Ask whether the tutor has taught your child's exact subject and level. A free demo class confirms fit.",
     },
   ];
 

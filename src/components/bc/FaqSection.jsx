@@ -26,31 +26,56 @@ const FAQSection = () => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-  const faqData = [
+    const faqData = [
     {
-      question: "What levels of the British curriculum does Ignite support?",
+      question: "Which Levels And Year Groups Does Ignite's British Curriculum Tutoring Cover?",
       answer:
-        "Ignite offers tutoring for IGCSE, GCSE, AS, and A Levels across a wide range of subjects, supporting students from early secondary years through final board exams.",
+        "Ignite covers Year 8 to Year 13 across the British Curriculum, including Key Stage 3 (Year 8 and Year 9), IGCSE and GCSE (Year 10 and Year 11), and AS and A-Level (Year 12 and Year 13). Subject support spans core academic subjects and the wider option-subject range across all three exam boards.",
     },
     {
-      question: "Which exam boards does Ignite’s British curriculum tutoring cover?",
+      question: "Does Ignite Tutor For All Three British Exam Boards (CAIE, Edexcel, Oxford AQA)?",
       answer:
-        "Tutoring is available for major British curriculum boards, including Edexcel, Cambridge (CAIE), and Oxford International AQA, with teaching aligned to each board's requirements.",
+        "Yes. Ignite's British Curriculum tutoring covers Cambridge Assessment International Education (CAIE), Pearson Edexcel, and Oxford International AQA. Tutors are matched to the student's specific board for each subject, with past paper practice and mark-scheme work tailored to that board's exact specification and grading.",
     },
     {
-      question: "Are subjects like Math, Science, and English included in the tutoring?",
+      question: "Is Ignite's British Curriculum Tutoring Available Online And In Person?",
       answer:
-        "Yes, Ignite provides expert tutoring in all core and elective subjects including Math, Physics, Chemistry, Biology, English Language and Literature, Business Studies, Economics, and more.",
+        "Both formats are available across Year 8 to Year 13\\. In-person sessions run from our DIFC and JLT centres in Dubai. Online sessions run live with interactive whiteboards, real-time mark-scheme annotation, and recordings for review. Many students switch between formats depending on the subject and the week.",
     },
     {
-      question: "Is the tutoring offered online, in person, or both?",
+      question: "Can Students Try A Free Demo Class Before Enrolling?",
       answer:
-        "Ignite offers flexible tutoring options with both in-person and online classes available, allowing students to choose what suits their schedule and learning style best.",
+        "Yes. Every new student is offered a free demo class with a matched British Curriculum tutor before any enrolment commitment. The demo lets the student assess teaching style, ask exam-board-specific questions, and see how a real session runs. Parents typically use it to confirm fit before discussing a regular schedule.",
     },
     {
-      question: "Can students take a demo class before enrolling?",
+      question: "How Are Ignite's British Curriculum Sessions Personalised, And How Is Progress Tracked?",
       answer:
-        "Yes, Ignite offers a free demo class so students and parents can experience the teaching style and personalized support before committing to a full course.",
+        "Every new student starts with a diagnostic in their weak subject. The tutor maps current performance against the specific exam board's mark scheme, identifies the topic strands holding the grade back, and builds a lesson plan around closing those gaps. Progress is reviewed every few weeks through unit tests, mock papers, and termly reports.",
+    },
+    {
+      question: "Do Ignite's Tutors Cover Both IGCSE/GCSE And A-Level Within The Same Programme?",
+      answer:
+        "Yes. The same British Curriculum framework runs from Year 10 IGCSE through to Year 13 A-Level, and Ignite's tutors are matched to the level the student is sitting. Students often work with the same subject tutor through both stages, which keeps continuity across IGCSE, AS, and A2.",
+    },
+    {
+      question: "When Should Students Start British Curriculum Tutoring In Dubai?",
+      answer:
+        "Most students benefit from starting in Year 9 to build foundations before IGCSE begins, or in early Year 10 once the IGCSE syllabus is set. Year 12 students benefit from starting at the beginning of AS to build technique before predicted grades land. Year 8 students can start earlier if foundation gaps are present.",
+    },
+    {
+      question: "Is Ignite Suitable For Students From British International Schools In Dubai?",
+      answer:
+        "Yes. Ignite's tutors regularly work with students from British international schools across Dubai, including those following CAIE, Edexcel, and Oxford AQA. Lessons align with the school's pacing and specification rather than running a parallel curriculum, and tutors track the unit the student is currently studying at school.",
+    },
+    {
+      question: "Does Ignite Offer Year 9, Year 10, Year 11, Year 12, And Year 13 Tutoring?",
+      answer:
+        "Yes. Ignite offers tutoring across all five secondary year groups. Year 9 tutoring focuses on KS3 consolidation and IGCSE option-subject preparation. Year 10 and Year 11 cover the IGCSE/GCSE syllabus and exam prep. Year 12 and Year 13 cover AS and A-Level, with predicted-grade work in the autumn of Year 13 for UCAS applications.",
+    },
+    {
+      question: "What Should Parents Look For When Hiring A British Curriculum Tutor In Dubai?",
+      answer:
+        "Look for exam-board-specific knowledge (CAIE Maths is structured differently from Edexcel), genuine subject and year-level match, transparent progress tracking against mark schemes, and a teaching style your child responds to. Ask whether the tutor has taught your child's exact board and year before. A free demo class confirms fit.",
     },
   ];
 
