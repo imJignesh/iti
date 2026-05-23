@@ -400,12 +400,20 @@ const nextConfig = {
               cleanSource = cleanSource.slice(0, -1);
             }
 
-            formattedRedirects.push({
-              source: cleanSource || '/',
-              has: hasArray,
-              destination: r.destination,
-              permanent: r.permanent,
-            });
+            // Prevent circular redirects
+            let cleanDest = r.destination;
+            if (cleanDest.endsWith('/') && cleanDest.length > 1) {
+              cleanDest = cleanDest.slice(0, -1);
+            }
+
+            if (cleanSource !== cleanDest) {
+              formattedRedirects.push({
+                source: cleanSource || '/',
+                has: hasArray,
+                destination: r.destination,
+                permanent: r.permanent,
+              });
+            }
           }
 
           redirects.push(...formattedRedirects);
