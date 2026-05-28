@@ -24,7 +24,7 @@ const Usps = dynamic(() => import("@/components/homeCopy/Usps"));
 const Trainers = dynamic(() => import("@/components/homeCopy/Trainers"));
 const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"));
 const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
-const TestSeriesBanner = dynamic(() => import("@/components/homeCopy/TestSeriesBanner"));
+// const TestSeriesBanner = dynamic(() => import("@/components/homeCopy/TestSeriesBanner"));
 
 
 import path from "path";
@@ -44,10 +44,10 @@ const HomeCopy = ({ blogPosts = [] }) => {
             {/* Using the CSS class page-content-padding (from critical.css) to ensure SEO-safe SSR without JS layout shifts */}
             <div className="homeCopy page-content-padding">
                 <Hero />
-                
-                <LazySection>
+
+                {/* <LazySection>
                     <TestSeriesBanner />
-                </LazySection>
+                </LazySection> */}
 
                 <LazySection>
                     <Course />
@@ -103,7 +103,7 @@ export async function getStaticProps() {
         const filePath = path.join(process.cwd(), 'src', 'data', 'blog', 'list.json');
         const fileData = fs.readFileSync(filePath, 'utf-8');
         const listData = JSON.parse(fileData);
-        
+
         // Extract top 3 posts
         const rawPosts = listData.posts ? listData.posts.slice(0, 3) : [];
 
@@ -129,12 +129,12 @@ export async function getStaticProps() {
                 height: 200,
             };
         });
-        
+
         return {
             props: {
                 blogPosts,
             },
-            revalidate: 3600, 
+            revalidate: 3600,
         };
     } catch (e) {
         console.error("Home: Error loading blog data for SSG", e);
