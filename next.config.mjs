@@ -212,6 +212,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/a-levels-subjects',
+        destination: '/blog/a-level-subjects',
+        permanent: true,
+      },
+      {
         source: '/blog/advanced-placements-ap',
         destination: '/category/advanced-placements',
         permanent: true,
