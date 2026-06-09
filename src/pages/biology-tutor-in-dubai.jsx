@@ -74,42 +74,50 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "Which curricula does Ignite support for Biology tutoring?",
+                    "name": "Which Biology Courses Do Ignite's Biology Tutors In Dubai Cover?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Ignite offers Biology tutoring for IB (SL/HL), IGCSE, A-Levels, and AP, aligned with the requirements of major exam boards."
+                        "text": "Ignite's Biology tutors in Dubai cover Cambridge IGCSE Biology (0610), GCSE Biology (AQA, OCR, Edexcel), Cambridge International AS and A-Level Biology (9700), UK A-Level Biology boards, IB Biology (SL and HL, plus MYP Sciences), and AP Biology from the College Board. Most students join us between Year 7 and Year 13, or Grades 11 to 12. Tutoring is matched to the exact board and level your school follows."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "What topics are covered in Biology tutoring sessions?",
+                    "name": "What Modifications Were Made to the Updated IB Biology Syllabus (First Examinations 2025)?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Tutoring includes cell biology, genetics, ecology, human physiology, molecular biology, and other core and optional topics based on the syllabus."
+                        "text": "The IB Biology course was significantly redesigned, with first exams in May 2025. Content is now organised around four themes (Unity and Diversity, Form and Function, Interaction and Interdependence, Continuity and Change) rather than numbered topics. Paper 3 has been removed, so students now sit only Paper 1 and Paper 2. The optional topics were folded into the core, and the Internal Assessment remains worth 20%."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Do tutors help with lab work & internal assessments?",
+                    "name": "How Do Ignite's Tutors Support The IB Biology Internal Assessment?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, Ignite supports students with IB IAs, lab report guidance, and scientific writing, helping them meet curriculum-specific criteria."
+                        "text": "The IB Biology Internal Assessment is an individual investigation worth 20% of the final grade, completed in around 10 hours of class time. Our tutors support students through choosing a focused research question, designing a valid method, processing data, and writing the analysis and evaluation against the IB criteria. The most common mark loss is a research question that's too broad, so we narrow it early before any data is collected."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Are past papers & exam techniques part of the program?",
+                    "name": "Are Private Biology Tutoring Sessions In Dubai Available Online Or In Person?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Absolutely. Sessions include past paper practice, command term training, and exam strategy development to improve accuracy and timing."
+                        "text": "Both. We run in-centre sessions at our two Dubai locations (DIFC and JLT), plus one-to-one online sessions for students across the wider UAE or with packed schedules. Online sessions use the same tutors and lesson structure as in-centre ones, with screen-sharing for diagrams, data questions, and past paper review. Most students searching for a biology tutor near me use both formats across the year, switching to online during heavy exam weeks."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Can I attend a Biology demo class before enrolling?",
+                    "name": "Which Biology Topics Do Students Most Often Need Help With?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, Ignite offers a free demo session so students can experience the teaching style and meet the tutor before committing."
+                        "text": "The topics students struggle with most are genetics and inheritance, cell biology and biochemistry, human physiology, and ecology. Genetics tends to cause problems because it combines abstract concepts with problem-solving, while physiology has a heavy volume of interlinked detail. There are also numerous requests for assistance with questions related to data analysis and graph interpretation, which now hold considerable importance in IB, IGCSE, A-Level, and AP examinations."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How Soon Should A Student Start Biology Tutoring Before Their Board Exams?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For IGCSE and A-Level Biology, three to six months of weekly sessions before the May/June series is the sensible window. IB Diploma students benefit most from starting early in DP1, since the Internal Assessment investigation runs across the course. AP Biology students need at least four months before the May AP exam window. Earlier starts let us spread practical work, past papers, and data-question practice across the full preparation arc."
                     }
                 }
             ]

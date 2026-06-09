@@ -23,45 +23,131 @@ export default function Accordion() {
       {/* Expanded Content */}
       {open && (
         <div className="expanded">
-          <h2 className="title">Find The Best Mathematics Tutor In Dubai For You With Ignite Training Institute</h2>
-          <p className="subtitle">Struggling to find the right Maths tutor? Ignite Training Institute connects students with highly qualified Mathematics tutors in Dubai who understand different learning paces and goals. Whether it's IB, IGCSE, or A Levels, our tutors bring clarity and confidence to every lesson. We focus on foundational understanding, logical reasoning, and effective revision techniques. Flexible timing, in-person and online options, and personalized attention make it easy to stay on track. With our support, you’ll stop dreading Maths and start mastering it. Let us match you with the right tutor for your needs.
-          </p>          <br />
+          <h2 className="title"><strong>Maths Tutors In Dubai For IB, IGCSE, A-Level, And AP Students</strong></h2>
+          <p className="subtitle">Ignite Training Institute provides 1-on-1 maths tutoring in Dubai across IB (both AA and AI, SL and HL), IGCSE, GCSE, A-Level, AS-Level, and AP. Sessions run from our DIFC and JLT centres and online, covering algebra, functions, geometry, calculus, and statistics, with tutors matched to each exam board and a focus on problem-solving and exam technique.</p>
+          <br />
+          <p className="subtitle">Most students come to us when small gaps have started to compound, when they can follow a method in class but freeze on an unfamiliar exam question, or when an IB Internal Assessment is stuck at the planning stage. Some join months ahead of mocks; others arrive with weeks to go and need focused work on one topic or one paper. Whatever the timing, every new student starts with a diagnostic so the tutor can see exactly where marks are being lost rather than re-teaching what the student already knows.</p>
+          <br />
+          <p className="subtitle">We work with students from international schools across Dubai, including those at GEMS Wellington, Dubai College, Jumeirah College, JESS Ranches, Dubai American Academy, and Repton School Dubai, and with families across DIFC, JLT, Jumeirah, Motor City, Dubai Hills, and the wider UAE searching for a maths tutor near me. Maths is also the gateway subject for almost every STEM and business degree, so we keep the university target grade in view from the first session.</p>
+          <br />
 
-          <h2 className="title">Personalized Maths Tuition In Dubai For Every Student</h2>
-          <p className="subtitle">At Ignite, we understand that no two students learn Maths the same way. Our personalized Maths tuition in Dubai is designed around your strengths, challenges, and academic goals. From homework help to exam prep, our tutors build a learning path that truly works. We ensure every concept is thoroughly explained and practiced so students feel more confident in class and during assessments. The result is a stronger grasp of topics and improved academic performance. Discover the power of custom learning with Ignite’s personalised tuition support.</p>          <br />
+          <h3 className="title"><strong>Maths Courses At A Glance: IB, IGCSE, A-Level, And AP Compared</strong></h3>
+          <div className="table-responsive">
+            <table className="table table-bordered text-white">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Level</th>
+                  <th>Board / Codes</th>
+                  <th>Key Assessment Components</th>
+                  <th>Typical Year/Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IB Maths (AA or AI)</td>
+                  <td>DP SL and HL</td>
+                  <td>IB</td>
+                  <td>SL: Paper 1 + Paper 2 + IA (20%); HL adds Paper 3</td>
+                  <td>DP1 to DP2 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>IGCSE Maths</td>
+                  <td>Core / Extended</td>
+                  <td>Cambridge 0580, Edexcel 4MA1</td>
+                  <td>Multiple papers covering non-calculator and calculator skills</td>
+                  <td>Year 10 to 11 (Grade 9 to 10)</td>
+                </tr>
+                <tr>
+                  <td>Additional Maths</td>
+                  <td>IGCSE level</td>
+                  <td>Cambridge 0606</td>
+                  <td>Pure maths bridge into A-Level for stronger students</td>
+                  <td>Year 10 to 11</td>
+                </tr>
+                <tr>
+                  <td>A-Level Maths</td>
+                  <td>AS + A2</td>
+                  <td>Cambridge 9709, Edexcel IAL, AQA, OCR</td>
+                  <td>Pure Maths plus Mechanics and Statistics components</td>
+                  <td>Year 12 to 13 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>AP Maths</td>
+                  <td>College Board</td>
+                  <td>AP</td>
+                  <td>Calculus AB, Calculus BC, Statistics, Precalculus; scored 1 to 5</td>
+                  <td>Grade 11 to 12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br />
 
-          <h2 className="title">Score Higher With Targeted Maths Coaching In Dubai Today</h2>
-          <p className="subtitle">Get the scores you need with focused and strategic Maths coaching at Ignite. Our Dubai-based tutors offer structured sessions that align with your curriculum and upcoming exams. We don’t just teach Maths, we coach students to think critically, solve efficiently, and apply their knowledge under pressure. Regular assessments, feedback, and targeted revisions help eliminate weak areas and boost performance. Whether preparing for term tests or final boards, our approach is results-driven and student-centric. Take the first step toward higher scores with expert coaching today.</p>          <br />
+          <h3 className="title"><strong>Why Students Often Struggle With Maths?</strong></h3>
+          <p className="subtitle">Maths is the subject where gaps compound fastest, so the cause of a low grade is rarely the topic the student is on right now. <strong>Foundational gaps</strong> are the first reason, since a shaky grasp of fractions or indices from two years ago quietly breaks everything built on top of it. <strong>Algebra fluency</strong> is the second, because students who cannot rearrange and manipulate expressions quickly lose time and accuracy on every other topic. <strong>Translating word problems</strong> is the third, where the maths is manageable but turning a paragraph into an equation is the real barrier. <strong>Exam method and timing</strong> is the fourth, since maths mark schemes reward shown working, and students who jump to answers lose method marks they had earned. Tutoring works best when it fixes the foundation first, because that single change lifts performance across the whole paper.</p>
+          <br />
 
-          <h2 className="title">Maths Classes In Dubai For Academic Excellence & Exam Support</h2>
-          <p className="subtitle">Ignite Training Institute offers comprehensive Maths classes in Dubai for students across IB, IGCSE, A Levels, and other international curricula. Our classes are designed to improve understanding, sharpen skills, and build exam readiness. Tutors follow a structured approach, ensuring students cover all necessary topics with clarity and confidence. We offer support in algebra, geometry, calculus, statistics, and more. With a blend of concept-based teaching and rigorous practice, we prepare students for success inside and outside the classroom. Join our high-performing Maths learners today.</p>          <br />
+          <h2 className="title"><strong>Maths Tuition And Coaching In Dubai: Formats, Sessions, And What's Included</strong></h2>
+          <p className="subtitle">Maths tuition in Dubai works best when sessions combine teaching with worked practice and past papers, rather than passive review of notes. We run two formats: in-person at our DIFC or JLT centres, and one-to-one online for students based further out or with tight schedules. Both use the same tutor pool and the same lesson structure, with a shared digital whiteboard during online sessions for working through problems line by line.</p>
+          <br />
+          <p className="subtitle">Private one-to-one sessions are the most popular choice, because maths problems are personal: the question is always where this particular student is losing marks. Sessions are typically 60 minutes weekly during regular term, extending to 90-minute blocks during exam preparation. Each session covers a targeted teaching block, worked practice on the relevant topic, and past paper questions marked against the real board mark scheme so students see exactly where method marks are won and lost. Small-group maths classes of two to three students are available for IGCSE and GCSE where families want structured coaching at a lower per-session cost.</p>
+          <br />
+          <p className="subtitle">For families weighing up exam boards before committing to tuition, our guide on <a href="https://ignitetraininginstitute.com/blog/what-is-the-difference-between-edexcel-and-cambridge">the differences between Edexcel and Cambridge</a> is useful background.</p>
+          <br />
 
-          <h2 className="title">Top-Notch Maths Tutoring In Dubai For Stronger Skills</h2>
-          <p className="subtitle">Develop stronger analytical and problem-solving skills with Ignite’s top-tier Maths tutoring. Our tutors in Dubai are subject-matter experts who make abstract concepts more accessible and engaging. From junior school Maths to advanced levels, we support students at every stage of their academic journey. Our sessions blend theory, application, and continuous practice to help students gain mastery. Whether you’re working to improve grades or aiming for academic excellence, we offer the tools, techniques, and mentoring you need. Ignite is where skills meet confidence.</p>          <br />
+          <h2 className="title"><strong>IB Maths Tutors: Analysis &amp; Approaches (AA) And Applications &amp; Interpretation (AI)</strong></h2>
+          <p className="subtitle">IB Maths confuses more families at the course-selection stage than any other subject, because the choice between the two routes shapes university options. Here is how it actually works.</p>
+          <br />
+          <p className="subtitle">IB Maths is split into two courses, each available at Standard Level and Higher Level. <strong>Analysis and Approaches (AA)</strong> is the traditional, pure-maths route built around algebra, functions, calculus, and formal proof, and it is the course that engineering, physics, computer science, and mathematics degrees expect. <strong>Applications and Interpretation (AI)</strong> is the applied route, with a heavier focus on statistics, probability, and real-world modelling, and it suits students heading into business, design, social sciences, and similar fields. Choosing the wrong route can quietly close university doors, so we help families match the course to the degree before DP1 begins.</p>
+          <br />
+          <p className="subtitle">Both courses cover the <strong>same five topics</strong>: Number and Algebra, Functions, Geometry and Trigonometry, Statistics and Probability, and Calculus. AA goes deeper into algebra, proof, and calculus, while AI emphasises functions, statistics, and modelling. HL in either route adds harder content and a third paper.</p>
+          <br />
+          <p className="subtitle">Assessment differs between the routes in a way that matters for tutoring. <strong>AA Paper 1 is sat without a calculator</strong>, while AA Paper 2 and all AI papers allow a graphical display calculator, so GDC fluency is essential for AI students from the start. At SL, students sit Paper 1 and Paper 2, each worth 40%, plus the Internal Assessment worth 20%. At HL, the weighting becomes Paper 1 at 30%, Paper 2 at 30%, Paper 3 at 20%, and the IA at 20%. The <strong>Internal Assessment is a mathematical exploration</strong> worth 20% of the final grade, and it is where many students lose marks on a weak research question or thin mathematical engagement, so we settle it early. Our <a href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai">IBDP tutors in Dubai</a> cover the full Diploma, and our <a href="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai">IB MYP tutors</a> build the foundation that leads into DP Maths.</p>
+          <br />
 
-          <h2 className="title">Online Maths Tutor In Dubai Helping Students Build Confidence</h2>
-          <p className="subtitle">Can’t attend in-person sessions? Our online Maths tutors in Dubai deliver the same quality support right to your screen. We offer flexible, interactive, and personalized tutoring from the comfort of your home. Using digital tools and real-time feedback, our tutors guide students through concepts, clarify doubts, and provide structured assignments. It’s ideal for students with busy schedules or who prefer learning in a quieter space. With one-on-one focus and engaging virtual lessons, we help students overcome fear of Maths and thrive academically.</p>          <br />
+          <h2 className="title"><strong>IGCSE And GCSE Maths Tutors In Dubai</strong></h2>
+          <p className="subtitle">The IGCSE Maths course is undertaken by the majority of international school students in the UAE who follow the British curriculum, establishing the groundwork that A-Level and IB Maths rely upon. <strong>Cambridge IGCSE Mathematics (0580)</strong> and <strong>Pearson Edexcel International (4MA1)</strong> are the two common specifications, both tiered into Core and Extended (Edexcel uses Foundation and Higher). Stronger students often also take <strong>Additional Mathematics (0606)</strong>, a pure-maths bridge that makes the jump to A-Level far less steep.</p>
+          <br />
+          <p className="subtitle">The course covers number, algebra, geometry and trigonometry, mensuration, probability, and statistics, assessed across multiple papers that test both non-calculator and calculator skills. The topics where Dubai students most often lose marks are algebraic manipulation, circle theorems, probability, and the step up from Core to Extended tier. We build past-paper technique and timing into every plan rather than leaving it to the final weeks. Our <a href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai">IGCSE tutors in Dubai</a> work across all major subjects, so students taking Maths alongside the sciences can coordinate scheduling under one weekly plan.</p>
+          <br />
 
-          <h2 className="title">Trusted Maths Learning Centre In Dubai For Exam Success</h2>
-          <p className="subtitle">Ignite Training Institute is a trusted Maths learning centre in Dubai, known for driving real academic results. Our students consistently achieve top grades thanks to our systematic teaching methods, regular mock tests, and concept-driven learning plans. We go beyond rote memorization, focusing on building deep understanding and confident application. Whether you're struggling with functions or preparing for finals, we’ve got you covered. Our dedicated Maths faculty ensures every student receives the attention and strategies needed to succeed. Experience exam success with us.</p>          <br />
+          <h2 className="title"><strong>A-Level And AS Maths Tutors For Pure, Mechanics, And Statistics</strong></h2>
+          <p className="subtitle">A-Level Maths carries a real difficulty jump from IGCSE, and the students who cope best are usually the ones who took Additional Maths first. <strong>Cambridge International AS and A-Level Mathematics (9709)</strong> is the most common specification in UAE schools, alongside <strong>Edexcel IAL</strong>, with UK boards <strong>AQA</strong> and <strong>OCR</strong> used in British curriculum schools. The course combines <strong>Pure Mathematics</strong> (algebra, functions, calculus, trigonometry) with applied components in <strong>Mechanics</strong> and <strong>Statistics</strong>.</p>
+          <br />
+          <p className="subtitle">The skills that separate top candidates are algebraic fluency, confident calculus, and the ability to apply familiar methods to unfamiliar problems under time pressure. AS students preparing for May papers usually need targeted work on calculus accuracy and structured solutions, while A2 students need help with harder integration, proof, and the applied modules. Students aiming for mathematics, engineering, or economics at top universities often add <strong>Further Maths</strong>, covering complex numbers, matrices, and further calculus. Our <a href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai">A-Level tutors in Dubai</a> coordinate Maths alongside Physics, Chemistry, and other subjects under a single weekly plan.</p>
+          <br />
 
-          <h2 className="title">Looking For A Maths Tutor Near Me In Dubai? Get Help Today!</h2>
-          <p className="subtitle">Searching for a Maths tutor near you in Dubai? Ignite Training Institute offers accessible and expert tutors ready to support your academic goals. We match students with tutors based on curriculum, skill level, and learning preferences. Our nearby locations and flexible timings make it easy to fit tutoring into your routine. Whether you need urgent exam help or long-term academic support, we have qualified tutors across the city. Get the help you need today and see real improvement in your Maths performance.</p>          <br />
+          <h2 className="title"><strong>AP Maths Tutors: Calculus AB/BC, Statistics, And Precalculus</strong></h2>
+          <p className="subtitle">There is no single course called "AP Maths." The College Board runs several separate AP mathematics courses, and students take whichever their school offers. <strong>AP Calculus AB</strong> covers a first year of calculus (limits, derivatives, and integrals), while <strong>AP Calculus BC</strong> extends that with series, parametric and polar functions, and additional integration techniques. <strong>AP Statistics</strong> covers data analysis, probability, and inference, and <strong>AP Precalculus</strong> prepares students for the calculus courses.</p>
+          <br />
+          <p className="subtitle">All Advanced Placement mathematics examinations are evaluated on a scale from 1 to 5, with the majority of universities in the United States seeking a score of 4 or 5 in order to grant academic credit. The exams combine a multiple-choice section with a free-response section where method and clear mathematical reasoning earn the marks, not just the final answer. Our <a href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai">AP tutors in Dubai</a> handle the full AP maths range, matching students to a tutor who knows the specific course and its scoring rubric.</p>
+          <br />
 
-          <h2 className="title">Get Better Results With IB Maths Tutor In Dubai Support</h2>
-          <p className="subtitle">Our experienced IB Maths tutors in Dubai help students master the unique demands of the IB curriculum. From standard to higher level, we offer structured guidance, time-saving techniques, and clarity on complex topics. Our tutors break down syllabus components, past papers, and internal assessments in a way that builds both understanding and confidence. With a balance of theory and practical application, we ensure students are well-prepared for exams. Improve your results and take the stress out of IB Maths with our expert support.</p>          <br />
+          <h2 className="title"><strong>Core Maths Topics And Skills We Cover</strong></h2>
+          <p className="subtitle">Most students need help with specific topics rather than the whole subject, so the lesson plan is built around where marks are actually being lost. The areas we support most often are:</p>
+          <br />
+          <p className="subtitle"><strong>Algebra and equations</strong>, the foundation that every other topic leans on, from rearranging expressions to quadratics and simultaneous equations. <strong>Functions and graphs</strong>, including transformations, domains, and reading meaning from a curve. <strong>Geometry and trigonometry</strong>, including circle theorems, identities, and 3D problems. <strong>Calculus</strong>, including differentiation, integration, and their applications, which is where A-Level and IB students spend the most time. <strong>Statistics and probability</strong>, including distributions, hypothesis testing, and data interpretation, which carry heavy weight in IB AI and AP Statistics. <strong>Vectors, matrices, complex numbers, and sequences</strong>, the higher-tier topics that separate the strongest candidates.</p>
+          <br />
+          <p className="subtitle">Alongside content, we build the cross-cutting skills maths mark schemes reward: showing clear working so method marks are earned, managing time across a paper, and using a graphical display calculator efficiently where one is allowed. Students who want Maths and Physics supported together can work with a tutor across both, and those who prefer one-to-one delivery across several subjects often work with our <a href="https://ignitetraininginstitute.com/private-tutors-in-dubai">private tutors in Dubai</a>.</p>
+          <br />
 
-          <h2 className="title">Experienced IGCSE Maths Tutor In Dubai For Exam Prep</h2>
-          <p className="subtitle">Prepare smarter and perform better with our IGCSE Maths tutors in Dubai. At Ignite, we focus on exam techniques, time management, and core concept clarity to help students excel. Our tutors are well-versed in the IGCSE syllabus and guide students through key topics, tricky questions, and past paper practice. We offer both extended and core level support, ensuring students build confidence and skill with every session. With our structured approach, you’ll walk into your exams fully prepared and ready to score high.</p>          <br />
+          <h2 className="title"><strong>Ignite: Best Maths Tutor In Dubai For Every Curriculum</strong></h2>
+          <p className="subtitle">Ignite has been running tutoring in Dubai for over ten years, and Maths is one of our most active subjects, with a bench of specialist tutors including Abdul, who has With over thirteen years of experience, one parent specifically highlighted the A-Level Further Maths instruction for addressing her daughter's questions in a step-by-step manner. Our two centres at DIFC and JLT serve students from international schools across Dubai, and our online programme extends that reach to Sharjah, Abu Dhabi, and the wider UAE.</p>
+          <br />
+          <p className="subtitle">What makes maths tutoring work, in our experience, is matching the tutor to the exact course and the specific gap, then fixing the foundation that sits under everything else. A tutor guiding an IB student through the AA Paper 1 non-calculator demands works very differently from one coaching an AI student on statistics and modelling, or an A-Level student through Mechanics. Every maths tutor at Ignite has direct experience with at least one of the major curriculums, and most have taught several. New students start with a diagnostic, get matched to a tutor whose specialism fits, and follow a session-by-session plan built around the actual papers and assessments they need to deliver.</p>
+          <br />
+          <p className="subtitle">If you're considering maths tutoring for the first time, a <a href="https://ignitetraininginstitute.com/join-free-demo-class">free demo class with Ignite</a> is the simplest way to see how the diagnostic session and lesson structure work in practice. There's no expectation to commit beyond the demo.</p>
+          <br />
 
-          <h2 className="title">Achieve More With A Levels Maths Tutor In Dubai Help</h2>
-          <p className="subtitle">Our A Levels Maths tutors in Dubai are dedicated to helping students tackle advanced concepts with ease. We specialize in supporting students through pure, mechanics, and statistics components, ensuring a strong grasp of each. With a focus on precision, application, and problem-solving, our tutors prepare students for both coursework and final exams. Whether you’re struggling or aiming for top grades, our tailored sessions adapt to your needs. Achieve more and go further in A Levels with Ignite’s expert Maths tutors.</p>          <br />
-
-          <h2 className="title">One-On-One AS Levels Maths Tutor In Dubai For Assured Improvement</h2>
-          <p className="subtitle">Ignite’s AS Levels Maths tutoring in Dubai offers personalized, one-on-one sessions for students who want focused improvement. We help students understand fundamental principles, build step-by-step strategies, and develop exam confidence. Our tutors identify problem areas and provide targeted support that leads to measurable progress. With regular feedback and exam-style practice, students become more proficient and less anxious about assessments. Whether you’re catching up or pushing ahead, our tutors are here to help you improve with every session.</p>          <br />
-
-          <h2 className="title">AP Maths Tutor In Dubai Helping Students Excel With Confidence</h2>
-          <p className="subtitle">AP Maths can be demanding, with advanced concepts in calculus, algebra, and statistics. Ignite’s AP Maths tutors in Dubai simplify complex theories and guide students step by step. Through focused practice, exam strategies, and conceptual clarity, students strengthen their problem-solving skills. Our tutors provide structured sessions to help students maximize their scores and confidence. Personalized teaching ensures every student masters both theory and application. With Ignite’s guidance, students approach AP Maths with clarity, accuracy, and improved performance.</p>
+          <h3 className="title"><strong>Know more about our programmes:</strong></h3>
+          <p className="subtitle">
+            • <a href="https://ignitetraininginstitute.com/ib-curriculum-tutors-in-dubai">IB Curriculum Tutors In Dubai</a><br />
+            • <a href="https://ignitetraininginstitute.com/british-curriculum-tutors-in-dubai">British Curriculum Tutors In Dubai</a><br />
+            • <a href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai">AP Tutors In Dubai</a><br />
+            • <a href="https://ignitetraininginstitute.com/join-free-demo-class">Free Demo Class At Ignite Training Institute</a><br />
+            • <a href="https://ignitetraininginstitute.com/contact-us">Contact Us</a>
+          </p>
 
           <br /><br />
           <h2><strong>Ignite's Exclusive Learning Resources </strong></h2>

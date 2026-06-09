@@ -13,9 +13,8 @@ export default function Accordion() {
       {/* Header Row */}
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
-          <h2 className="title">Expert Spanish Tutor In Dubai, UAE For Academic Confidence</h2>
-          <p className="subtitle">Build a strong foundation in Spanish with guidance from expert tutors at Ignite Training Institute. Our experienced faculty simplifies complex grammar and vocabulary for better understanding. Whether you're a beginner or looking to sharpen your fluency, we create a clear path to academic confidence. With structured lessons and individual attention, students feel empowered to express themselves in Spanish. We don’t just teach the language, we inspire a love for it. Choose Ignite for expert-led learning that boosts both skill and self-assurance.</p>
-
+          <h2 className="title"><strong>Spanish Tutors In Dubai For IB, IGCSE, A-Level, And AP Students</strong></h2>
+          <p className="subtitle">Ignite Training Institute provides 1-on-1 Spanish tutoring in Dubai across IB (Ab Initio, Language B HL and SL, MYP), IGCSE, GCSE, A-Level, and AP curriculums. Lessons run from our DIFC and JLT centres and online, with native and near-native tutors matched to each exam board.</p>
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
@@ -23,45 +22,131 @@ export default function Accordion() {
       {/* Expanded Content */}
       {open && (
         <div className="expanded">
-          <h2 className="title">Find The Best Spanish Tutor In Dubai For You With Ignite Training Institute</h2>
-          <p className="subtitle">Searching for a Spanish tutor who truly understands your learning needs? Ignite matches you with the right tutor based on your goals and current level. From conversational Spanish to exam prep, we personalize your journey every step of the way. Our tutors are not only fluent but also skilled educators who care about your progress. Learn faster, smarter, and more confidently with one-on-one or small-group sessions. Find your perfect-fit Spanish tutor in Dubai with Ignite today.</p>          <br />
+          <p className="subtitle">Most families come to us when oral exams start feeling unmanageable, when listening papers consistently underperform writing scores, or when a student stops finishing exam papers on time. Certain students begin their preparation several months prior to mock examinations; others come just weeks before and require concentrated effort on a particular skill or exam paper. Every new student starts with a diagnostic session and the lesson plan follows from there.</p><br />
 
-          <h2 className="title">Personalized Spanish Tuition In Dubai For Every Student</h2>
-          <p className="subtitle">No two students are the same, and neither are our Spanish lessons. At Ignite, we offer personalized Spanish tuition that adapts to your pace, strengths, and challenges. Our tutors use proven methods to reinforce weak areas while enhancing fluency. Whether you're preparing for school exams or simply want to improve communication skills, our tuition is tailored just for you. With flexible scheduling and continuous feedback, you stay on track toward your goals. Learn Spanish your way, confidently and effectively.</p>          <br />
+          <p className="subtitle">We work with students from international schools across Dubai, including those at GEMS Wellington, Dubai College, Jumeirah College, JESS Ranches, Dubai American Academy, Repton School Dubai, and similar IB / British / American curriculum schools across DIFC, JLT, Jumeirah, and the wider UAE.</p><br />
 
-          <h2 className="title">Score Higher With Targeted Spanish Coaching In Dubai Today</h2>
-          <p className="subtitle">Get the academic edge you need with targeted Spanish coaching at Ignite. Our programs are designed to align with school curricula, international exam boards, and personal learning milestones. Through engaging lessons, practical application, and strategic revision, we help students score higher in Spanish. Regular assessments and progress reports ensure you’re always improving. Gain more than just marks, build lasting skills and confidence in your Spanish language journey. Start your transformation today with expert coaching.</p>          <br />
+          <h3 className="title"><strong>Spanish Courses At A Glance: IB, IGCSE, A-Level, And AP Compared</strong></h3>
+          <div className="table-responsive">
+            <table className="table table-bordered table-striped" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Level</th>
+                  <th>Best For</th>
+                  <th>Assessment Format</th>
+                  <th>Typical Year/Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IB Spanish Ab Initio</td>
+                  <td>SL only</td>
+                  <td>Beginners with little or no prior Spanish</td>
+                  <td>Paper 1 (writing), Paper 2 (listening + reading), Individual Oral</td>
+                  <td>DP1 to DP2 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>IB Spanish B</td>
+                  <td>HL or SL</td>
+                  <td>Students with 3+ years of Spanish</td>
+                  <td>Paper 1 (writing), Paper 2 (listening + reading), Individual Oral, HL: literature component</td>
+                  <td>DP1 to DP2 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>IGCSE Spanish (0530 / 4SP1)</td>
+                  <td>Year 10 to 11</td>
+                  <td>Beginner to intermediate students</td>
+                  <td>4 papers: listening, reading, speaking, writing</td>
+                  <td>Year 10 to 11 (Grade 9 to 10)</td>
+                </tr>
+                <tr>
+                  <td>A-Level Spanish (AS + A2)</td>
+                  <td>Advanced</td>
+                  <td>Students with 4+ years of Spanish</td>
+                  <td>Translation, essay/research, oral, listening, literary/film analysis</td>
+                  <td>Year 12 to 13 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>AP Spanish Language and Culture</td>
+                  <td>College Board</td>
+                  <td>Advanced students applying to US universities</td>
+                  <td>MC (reading + listening) + 4 free-response tasks; scored on a 1 to 5 scale</td>
+                  <td>Grade 11 to 12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br />
 
-          <h2 className="title">Spanish Classes In Dubai For Academic Excellence & Exam Support</h2>
-          <p className="subtitle">Excel in Spanish with our structured classes that blend language fluency with exam success. Whether you're studying for IB, IGCSE, A-Levels, or school exams, Ignite offers expert-led lessons designed for results. Our small class sizes allow for active participation and personalized attention. From mastering grammar to building vocabulary, we equip students with the tools they need to succeed. Ongoing test practice and support ensure you’re prepared, confident, and capable.</p>          <br />
+          <h3 className="title"><strong>Why Students Often Struggle With Spanish?</strong></h3>
+          <p className="subtitle">Three grammar areas come up repeatedly across IB, IGCSE, A-Level, and AP students. <strong>Ser vs estar</strong> (the two Spanish verbs for "to be") trips up almost every student at some point because English has no equivalent split. The <strong>subjunctive mood</strong> is the second consistent challenge, since English uses it rarely while Spanish uses it constantly for opinions, doubts, and hypotheticals. <strong>Preterite vs imperfect</strong> is the third one, where choosing the right past tense depends on context that isn't intuitive for English speakers. Beyond grammar, gender agreement on adjectives and articles is a high-frequency error in written work that costs marks even when the meaning is clear. Targeted tutoring addresses these specifically rather than treating them as side issues.</p><br />
 
-          <h2 className="title">Top-Notch Spanish Tutoring In Dubai For Stronger Skills</h2>
-          <p className="subtitle">Strengthen your Spanish skills with Ignite’s top-tier tutoring. Our expert tutors focus on comprehension, conversation, reading, and writing, all tailored to your needs. We help students of all levels, from beginners to advanced, achieve clarity, fluency, and accuracy. With interactive techniques and real-world applications, language becomes second nature. Whether you’re preparing for an exam or learning for personal growth, our tutoring gives you the tools to succeed in Spanish.</p>          <br />
+          <h2 className="title"><strong>Spanish Tuition And Coaching In Dubai: Formats, Sessions, And What's Included?</strong></h2>
+          <p className="subtitle">Spanish tuition in Dubai works best when the format matches the student's schedule and the skill being built. We run two formats: in-person at our DIFC or JLT centres, and one-to-one online for students based further out in Dubai or across the wider UAE. Both formats use the same tutor pool and the same lesson structure, so switching between them during term doesn't break continuity.</p><br />
 
-          <h2 className="title">Online Spanish Tutor In Dubai Helping Students Build Confidence</h2>
-          <p className="subtitle">Learn Spanish from the comfort of your home with our online tutoring. Ignite’s virtual Spanish classes are interactive, personalized, and effective. Our tutors use dynamic teaching tools to make online learning engaging and impactful. Whether you're revising for exams or learning as a hobby, we help you build language confidence step by step. Flexible scheduling means you can learn at your pace, anytime, anywhere. Boost your Spanish skills online with Ignite today.</p>          <br />
+          <p className="subtitle">Sessions are typically 60 minutes weekly during regular term, extending to 90-minute blocks twice a week during exam preparation. Each session covers a targeted teaching block on a single skill, a timed practice task using past paper material, and mark-scheme-based feedback. Speaking practice is woven into every session rather than saved for a separate "oral" block, because oral fluency builds faster through regular short exposure than through occasional long sessions. Small-group sessions of two to three students are available for IGCSE and GCSE Spanish, where families want the structure of coaching at a lower per-session cost.</p><br />
 
-          <h2 className="title">Trusted Spanish Learning Centre In Dubai For Exam Success</h2>
-          <p className="subtitle">Join one of Dubai’s most trusted names for Spanish education. At Ignite Training Institute, our Spanish learning centre supports students aiming for academic excellence. We cover everything from foundational grammar to advanced exam prep, including IB, IGCSE, and A-Level Spanish. Our reputation is built on results and student satisfaction. With customized support, regular assessments, and a motivating environment, we set you up for exam success. Your success story starts here.</p>          <br />
+          <p className="subtitle">For families weighing up exam boards before choosing tuition, our blog on <a href="https://ignitetraininginstitute.com/blog/what-is-the-difference-between-edexcel-and-cambridge" style={{color: "inherit", textDecoration: "underline"}}>the differences between Edexcel and Cambridge</a> is a useful background.</p><br />
 
-          <h2 className="title">Looking For A Spanish Tutor Near Me In Dubai? Get Help Today!</h2>
-          <p className="subtitle">If you're searching for “Spanish tutor near me” in Dubai, look no further. Ignite connects you with skilled local tutors who understand the UAE academic landscape. Whether you prefer in-person sessions or online learning, our flexible formats ensure convenience without compromising quality. From grammar basics to fluency goals, we cover all aspects of Spanish. Get the expert help you need, right in your neighborhood. Ignite makes finding a tutor simple and rewarding.</p>          <br />
+          <h2 className="title"><strong>IB Spanish Tutors For Ab Initio, Language B (HL And SL), And MYP</strong></h2>
+          <p className="subtitle">IB Spanish is the area where course-level specificity matters most. The three relevant IB Spanish options are very different from each other, and a tutor's preparation approach has to match the course.</p><br />
 
-          <h2 className="title">Get Better Results With An IB Spanish Tutor In Dubai Support</h2>
-          <p className="subtitle">IB Spanish requires precision, fluency, and strategic exam prep. Our specialized IB Spanish tutors in Dubai are trained to help students succeed across both SL and HL levels. We focus on oral communication, textual analysis, and exam-style writing. With regular mock tests and individualized feedback, students improve both their confidence and scores. Our goal is to simplify the syllabus and amplify results. Learn smarter with dedicated IB Spanish support at Ignite.</p>          <br />
+          <h3 className="title"><strong>IB Spanish Ab Initio (SL only)</strong></h3>
+          <p className="subtitle">It is a beginner-level course for students with little or no prior Spanish. The exam tests basic communicative competence through Paper 1 (short writing tasks), Paper 2 (simple listening and reading comprehension), and an Individual Oral built around prepared themes. Most UAE international school students whose home language isn't Spanish start here.</p><br />
 
-          <h2 className="title">Experienced IGCSE Spanish Tutor In Dubai For Exam Prep</h2>
-          <p className="subtitle">Tackle your IGCSE Spanish exam with a tutor who understands the curriculum inside out. Ignite’s tutors are experienced in helping students succeed in Cambridge and Edexcel syllabi. We break down complex topics into manageable lessons and provide continuous test practice. Students build vocabulary, enhance grammar, and sharpen speaking skills with confidence. With past paper analysis and focused revision, we prepare you to face the IGCSE exam head-on. Let Ignite support your Spanish success.</p>          <br />
+          <h3 className="title"><strong>IB Spanish B (HL and SL)</strong></h3>
+          <p className="subtitle">It is for students with three or more years of Spanish study, comfortable with intermediate texts and conversations. The assessment includes Paper 1 (writing tasks based on a chosen text type), Paper 2 (listening and reading comprehension), and an Individual Oral with greater interpretive depth. HL adds a literature component that SL does not include.</p><br />
 
-          <h2 className="title">Achieve More With A Levels Spanish Tutor In Dubai Help</h2>
-          <p className="subtitle">Whether you're struggling with A-Level Spanish essays or oral exams, Ignite is here to help. Our A-Level Spanish tutors in Dubai are experts in curriculum requirements and effective strategies. Lessons are designed to help you interpret texts, improve grammar, and enhance fluency. We also provide guidance on past paper techniques and exam expectations. With regular feedback and customized coaching, students gain both skill and confidence. Get ahead in A-Level Spanish with expert help.</p>          <br />
+          <h3 className="title"><strong>MYP Spanish (Phases 1 to 6)</strong></h3>
+          <p className="subtitle">It runs from Year 7 to Year 11 and prepares students for the jump to either Ab Initio or Language B in DP1. We work with MYP students on the four criterion-based assessment objectives (listening, reading, speaking, writing) and on the eAssessment for schools that opt in.</p><br />
 
-          <h2 className="title">One-On-One AS Levels Spanish Tutor In Dubai For Assured Improvement</h2>
-          <p className="subtitle">Our AS Level Spanish tutoring offers individual attention that truly makes a difference. One-on-one sessions at Ignite are personalized to address specific learning goals and challenges. From boosting speaking confidence to refining grammar and comprehension, we guide you every step of the way. Tutors focus on your pace, style, and syllabus requirements to drive consistent progress. With tailored lesson plans and exam techniques, improvement is guaranteed. Discover the difference focused support can make.</p>          <br />
+          <h3 className="title"><strong>IB Spanish Ab Initio VS Language B: Which Course Are You On?</strong></h3>
+          <p className="subtitle">Your school's IB coordinator confirms course placement based on a diagnostic, but as a general guide: students who reached IB DP with fewer than three years of Spanish study are usually placed in Ab Initio. Students with five or more years of Spanish (typically through MYP or equivalent) are placed in Language B. The assessments differ completely between the two courses, so tutoring effort spent on the wrong course doesn't transfer cleanly.</p><br />
 
-          <h2 className="title">AP Spanish Tutor In Dubai Helping Students Excel With Confidence</h2>
-          <p className="subtitle">AP Spanish requires strong command over vocabulary, grammar, listening, and speaking. Ignite’s AP Spanish tutors in Dubai help students build fluency through interactive learning. Our sessions combine grammar mastery with cultural awareness for a complete learning experience. Students practice real exam-style tasks, essays, and conversations to boost confidence. With personalized teaching, students strengthen weaker areas and improve accuracy. Ignite prepares students to excel in AP Spanish exams and use the language effectively in real-world contexts.</p>
-          <br /><br />
+          <p className="subtitle">Our <a href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai" style={{color: "inherit", textDecoration: "underline"}}>IBDP tutors in Dubai</a> encompass all six DP subject groups along with the core components, while our <a href="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai" style={{color: "inherit", textDecoration: "underline"}}>IB MYP tutors</a> cater to students in Years 7 to 11, assisting families in their preparation for the transition to the DP.</p><br />
+
+          <h2 className="title"><strong>IGCSE And GCSE Spanish Tutors In Dubai</strong></h2>
+          <p className="subtitle">IGCSE Spanish is taken by most UAE international school students at the British curriculum level, and we cover both major boards. <strong>Cambridge IGCSE Spanish (0530)</strong> is the standard Spanish as a Foreign Language qualification; <strong>Cambridge International Level 1/Level 2 Certificate Spanish (7160)</strong> is the equivalent UK-recognised variant. <strong>Pearson Edexcel International GCSE Spanish (4SP1)</strong> is the Pearson alternative. All three test the same four skill areas (listening, reading, speaking, writing) but with different paper structures and weightings, so tutoring must be matched to the specific board.</p><br />
+
+          <p className="subtitle">Speaking and listening are the components most students underperform on at IGCSE level. The speaking test follows a structured format with a presentation, conversation, and role-play element. Each part benefits from repeated mock practice with a tutor who has marked these tests before. Listening papers use exam-board-specific audio recordings, and getting used to accent variations (peninsular vs Latin American Spanish) and pace is something only built by working through past paper audio systematically.</p><br />
+
+          <p className="subtitle">For students at British curriculum schools that follow the UK GCSE (AQA, OCR, or Pearson Edexcel UK) rather than the international IGCSE, we tutor those boards too. The underlying skills are the same; mark schemes differ in detail. Our <a href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai" style={{color: "inherit", textDecoration: "underline"}}>IGCSE tutors in Dubai</a> work across all major IGCSE subjects, so if your child needs Spanish alongside Sciences or Humanities, we can usually fit it into one coordinated schedule.</p><br />
+
+          <h2 className="title"><strong>A-Level And AS Spanish Tutors For Language And Literature</strong></h2>
+          <p className="subtitle">A-Level Spanish is considered one of the more challenging A-Level subjects, and its structure differs considerably among various examination boards. Cambridge International A-Level Spanish (codes vary by year of entry, so please confirm with your school) covers reading, writing, listening, and oral skills, with separate AS and A2 components. Pearson Edexcel International AS and A-Level Spanish (YSP0 / YSP1) follows a similar pattern with a written translation paper, an essay-based response paper, and an oral examination.</p><br />
+
+          <p className="subtitle">For students at British curriculum schools following UK boards, we also tutor AQA A-Level Spanish (7692) and Pearson Edexcel A-Level Spanish. UK A-Level Spanish is heavier on literary and film analysis than the international variants. It includes two studied works examined through written response, and a longer independent research project at A2.</p><br />
+
+          <p className="subtitle">Most students preparing for AS papers in May need targeted work on essay structure and timed translation, because the jump from IGCSE to AS in writing density and analytical expectation is significant. A2 students typically need help with the synoptic literature/film essay and longer translation passages. Our <a href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai" style={{color: "inherit", textDecoration: "underline"}}>A-Level tutors in Dubai</a> coordinate Spanish alongside other A-Level subjects under a single weekly plan where needed.</p><br />
+
+          <h2 className="title"><strong>AP Spanish Tutors For AP Spanish Language And Culture</strong></h2>
+          <p className="subtitle">AP Spanish Language and Culture is the College Board's flagship Spanish course, taken in Grade 11 or 12 by students preparing for US university applications. It tests four skill areas with a heavier emphasis on cultural context and authentic source materials than most other Spanish exams.</p><br />
+
+          <p className="subtitle">The exam structure splits into two sections. <strong>Section 1 (Multiple Choice)</strong> covers interpretive reading and listening across written, audio, and combined audio-text sources. <strong>Section 2 (Free Response)</strong> has four tasks: an email reply (interpersonal writing), a persuasive essay drawing on three sources (presentational writing), a conversation (interpersonal speaking), and a cultural comparison presentation (presentational speaking). The examination is graded on a scale from 1 to 5, with the majority of universities in the United States seeking a score of 4 or 5 for academic credit.</p><br />
+
+          <p className="subtitle">AP Spanish tutoring at Ignite focuses on three areas: building familiarity with the persuasive essay's three-source synthesis (unfamiliar to students coming from IB or A-Level), refining the cultural comparison speaking task (where students often lose marks on under-developed cultural knowledge), and timed listening practice with authentic Spanish-language audio sources. Our <a href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai" style={{color: "inherit", textDecoration: "underline"}}>AP tutors in Dubai</a> work across the full AP range, with AP Spanish handled by tutors who have specifically prepared students through the College Board framework.</p><br />
+
+          <h2 className="title"><strong>Speaking, Listening, Reading, And Writing: How Skills Are Built</strong></h2>
+          <p className="subtitle">Most students underperform on one or two of the four Spanish skills, not all four. The lesson plan weights time toward the weakest skills based on the diagnostic session.</p><br />
+
+          <p className="subtitle"><strong>Speaking</strong> is built through structured conversation practice on the exam topic list, mock oral exams under timed conditions, and pronunciation work where needed. For IB Individual Oral, IGCSE speaking tests, and A-Level oral exams, we run multiple full mocks across the preparation arc rather than a single mock at the end.</p><br />
+
+          <p className="subtitle"><strong>Listening</strong> is built through past paper audio from the relevant exam board. The skill isn't comprehension of Spanish in general; it's the ability to extract specific information under timed pressure from audio that often plays only once. Regular weekly listening exposure makes more difference than long monthly sessions.</p><br />
+
+          <p className="subtitle"><strong>Reading</strong> focuses on text analysis, vocabulary expansion, and answering exam-specific question types. The trick at IGCSE and A-Level is recognising the question type quickly (true/false/justify, gap-fill, multiple choice, short answer) and applying the right reading strategy for each.</p><br />
+
+          <p className="subtitle"><strong>Writing</strong> covers essay structure, descriptive and narrative writing, translation passages, and summary writing. Each exam board weights these differently, so writing practice must be board-specific. We work through past paper writing prompts with mark-scheme-based feedback after each task.</p><br />
+
+          <p className="subtitle">Students who prefer one-to-one delivery across multiple subjects often work with our <a href="https://ignitetraininginstitute.com/private-tutors-in-dubai" style={{color: "inherit", textDecoration: "underline"}}>private tutors in Dubai</a>, which lets us coordinate Spanish alongside other subjects under a single weekly plan.</p><br />
+
+          <h2 className="title"><strong>Ignite: Best Spanish Tutor In Dubai For Every Curriculum</strong></h2>
+          <p className="subtitle">Ignite has been running tutoring in Dubai for over ten years, and Spanish is one of the languages we've worked on longest. Our two centres at DIFC and JLT serve students from international schools across Dubai, and our online programme extends that reach to Sharjah, Abu Dhabi, and the wider UAE.</p><br />
+
+          <p className="subtitle">Every Spanish tutor at Ignite has direct experience teaching either IB, IGCSE, A-Level, or AP, and most have taught more than one of these. New students start with a diagnostic session, get matched to a tutor whose curriculum specialism and teaching style fit, and follow a session-by-session plan built around the actual papers they'll sit. If a match isn't working in the first two or three sessions, we change it.</p><br />
+
+          <p className="subtitle">If you're considering Spanish tutoring for the first time, a <a href="https://ignitetraininginstitute.com/join-free-demo-class" style={{color: "inherit", textDecoration: "underline"}}>free demo class with Ignite</a> is the simplest way to see how the diagnostic session and lesson structure works in practice. There's no expectation to commit beyond the demo.</p><br />
+          
           <h2><strong>Ignite's Exclusive Learning Resources </strong></h2>
           <h3><strong>IB Resources</strong></h3>
           <p><strong><a href="https://ignitetraininginstitute.com/ib-curriculum-blog/">IB Curriculum</a> | <a href="https://ignitetraininginstitute.com/ib-diploma/">IB Diploma</a> | <a href="https://ignitetraininginstitute.com/guide-on-ib-programmes/">IB Programmes</a> | <a href="https://ignitetraininginstitute.com/ib-myp-programme/">IB MYP Programme Guide</a> | <a href="https://ignitetraininginstitute.com/ib-program-pros-and-cons/">IB Program Pros & Cons</a> | <a href="https://ignitetraininginstitute.com/benefits-of-ib-curriculum/">Benefits Of IB Curriculum</a> | <a href="https://ignitetraininginstitute.com/benefits-of-ib-diploma/">Benefits Of The IB Diploma Programme</a> | <a href="https://ignitetraininginstitute.com/is-myp-certificate-important/">Is MYP Certificate Important</a> | <a href="https://ignitetraininginstitute.com/how-to-study-for-ib-exams/">How To Study For IB Exams</a> | <a href="https://ignitetraininginstitute.com/ibdp-syllabus-changes/">IB Syllabus Updates</a> | <a href="https://ignitetraininginstitute.com/ib-bilingual-diploma/">IB Bilingual Diploma</a> | <a href="https://ignitetraininginstitute.com/how-to-get-good-grades-in-ib/">How To Get Good Grades In IB</a> | <a href="https://ignitetraininginstitute.com/ib-diploma-gpa-calculator/">IB Diploma GPA Calculator</a> | <a href="https://ignitetraininginstitute.com/ib-subject-choices/">IB Subject Choices</a> | <a href="https://ignitetraininginstitute.com/colleges-that-accept-ib-diploma/">Colleges That Accept IB Diploma</a> | <a href="https://ignitetraininginstitute.com/what-is-an-ib-world-school/">What Is An IB World School</a> | <a href="https://ignitetraininginstitute.com/ib-grades-explained/">IB Grades Explained</a> | <a href="https://ignitetraininginstitute.com/ib-cas-program/">CAS IB</a> | <a href="https://ignitetraininginstitute.com/ib-cas-ideas/">IB CAS Ideas</a> | <a href="https://ignitetraininginstitute.com/what-is-ib-extended-essay/">What Is An Extended Essay For IB</a> | <a href="https://ignitetraininginstitute.com/ib-learner-profile/">IB Learner Profile Attributes</a> | <a href="https://ignitetraininginstitute.com/ib-career-related-programme-guide/">IB Career Related Programme</a> | | <a href="https://ignitetraininginstitute.com/ib-physics/">IB Physics</a> | <a href="https://ignitetraininginstitute.com/ib-maths/">IB Maths</a> | <a href="https://ignitetraininginstitute.com/ib-computer-science-syllabus/">IB Computer Science Syllabus</a> | <a href="https://ignitetraininginstitute.com/ib-economics-exam/">IB Economics</a> | <a href="https://ignitetraininginstitute.com/ib-economics-exam/">IB Economics Exam</a> | <a href="https://ignitetraininginstitute.com/ib-curriculum-vs-british-curriculum/">IB Curriculum Vs British Curriculum</a> | <a href="https://ignitetraininginstitute.com/a-levels-vs-ibdp-comparison/">IB VS A Levels</a> | <a href="https://ignitetraininginstitute.com/ib-vs-igcse-program/">IB VS IGCSE</a> | <a href="https://ignitetraininginstitute.com/ib-vs-ap-comparison/">IB VS AP Difficulty</a> | <a href="https://ignitetraininginstitute.com/ib-certificate-vs-ib-diploma/">IB Certificate Vs IB Diploma</a> | <a href="https://ignitetraininginstitute.com/ib-vs-icse/">IB VS ICSE</a> | <a href="https://ignitetraininginstitute.com/ibcp-vs-ibdp/">IBCP VS IBDP</a> | <a href="https://ignitetraininginstitute.com/cbse-or-ib-board/">CBSE Or IB</a> | <a href="https://ignitetraininginstitute.com/a-levels-vs-ibdp-comparison/">A-Levels VS IBDP</a> | <a href="https://ignitetraininginstitute.com/ib-schools-in-dubai/">IB Schools In Dubai</a> | <a href="https://ignitetraininginstitute.com/ib-schools-in-abu-dhabi/">IB Schools In Abu Dhabi</a> | <a href="https://ignitetraininginstitute.com/ibdp-schools-in-dubai/">IBDP Schools In Dubai</a></strong></p>

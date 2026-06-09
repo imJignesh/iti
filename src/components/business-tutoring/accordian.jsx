@@ -23,44 +23,98 @@ export default function Accordion() {
       {/* Expanded Content */}
       {open && (
         <div className="expanded">
-          <h2 className="title">Find The Best Business Studies Tutor In Dubai For You With Ignite Training Institute</h2>
-          <p className="subtitle">Searching for the right tutor can be overwhelming, but not with Ignite. We connect students with top-rated Business Studies tutors in Dubai based on their curriculum and learning needs. Our educators are experienced in handling diverse boards like IB, IGCSE, and A Levels. With a focus on goal-oriented teaching, we ensure each session adds value. Build subject knowledge and exam confidence with Dubai’s trusted tutors. Get matched with the perfect fit today.</p>          <br />
+          <h2 className="title"><strong>Business Studies Tutors In Dubai For IB, IGCSE, A-Level, And AP Students</strong></h2>
+          <p className="subtitle">Ignite Training Institute provides 1-on-1 business studies tutoring in Dubai across IGCSE, GCSE, A-Level, AS-Level, IB Business Management (SL and HL), and the new AP Business course. Sessions run from our DIFC and JLT centres and online, covering marketing, finance, human resources, and operations, with tutors matched to each exam board and a focus on case-study application and exam technique.</p><br />
+          <p className="subtitle">Most students come to us when they can recite business theory but lose marks applying it to an unseen case study, when the analysis-and-evaluation questions feel impossible to structure, or when the quantitative finance topics (ratios, break-even, investment appraisal) stop making sense. Some join months ahead of mocks; others arrive with weeks to go and need focused work on exam technique. Every new student starts with a diagnostic so the tutor can see exactly where marks are being lost rather than re-teaching content the student already knows.</p><br />
+          <p className="subtitle">We work with students from international schools across Dubai, including those at GEMS Wellington, Dubai College, Jumeirah College, JESS Ranches, Dubai American Academy, and Repton School Dubai, and with families across DIFC, JLT, Jumeirah, and the wider UAE. Business is also a popular foundation for university degrees in management, finance, and economics, so we keep the university target grade in view from the first session.</p><br />
 
-          <h2 className="title">Personalized Business Studies Tuition In Dubai For Every Student</h2>
-          <p className="subtitle">Every student learns differently, and our Business Studies tuition reflects that. At Ignite, we create custom lesson plans tailored to individual strengths and areas of improvement. Our expert tutors help students grasp key business principles through interactive sessions. From case studies to past papers, we offer tools to deepen understanding and retention. Personalized support leads to better grades and sharper thinking. Experience tuition that’s built just for you.</p>          <br />
+          <h3 className="title"><strong>Business Courses At A Glance: IB, IGCSE, A-Level, And AP Compared</strong></h3>
+          <div className="table-responsive my-3">
+            <table className="table table-bordered text-white">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Level</th>
+                  <th>Board / Codes</th>
+                  <th>Key Assessment Components</th>
+                  <th>Typical Year/Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IB Business Management</td>
+                  <td>DP SL and HL</td>
+                  <td>IB</td>
+                  <td>Paper 1 (pre-released case study) + Paper 2 (quantitative) + IA; HL adds Paper 3</td>
+                  <td>DP1 to DP2 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>IGCSE Business Studies</td>
+                  <td>Year 10 to 11</td>
+                  <td>Cambridge 0450 / 0986, Edexcel</td>
+                  <td>Short-answer and case-study papers, including high-mark evaluation questions</td>
+                  <td>Year 10 to 11 (Grade 9 to 10)</td>
+                </tr>
+                <tr>
+                  <td>A-Level Business</td>
+                  <td>AS + A2</td>
+                  <td>Cambridge 9609, Edexcel, AQA</td>
+                  <td>Case-study and essay papers across the two years</td>
+                  <td>Year 12 to 13 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>AS-Level Business</td>
+                  <td>AS only</td>
+                  <td>Cambridge, Edexcel, AQA</td>
+                  <td>First-year content and exam technique foundation</td>
+                  <td>Year 12 (Grade 11)</td>
+                </tr>
+                <tr>
+                  <td>AP Business</td>
+                  <td>College Board</td>
+                  <td>AP</td>
+                  <td>AP Business with Personal Finance (from 2026 to 2027); project-based</td>
+                  <td>Grade 11 to 12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br />
 
-          <h2 className="title">Score Higher With Targeted Business Studies Coaching In Dubai Today</h2>
-          <p className="subtitle">Want to improve your Business Studies scores? Our targeted coaching approach delivers real results. With Ignite, students receive focused help on tricky topics and exam strategies. We use proven teaching methods, regular assessments, and one-on-one feedback. Our coaching sharpens analytical skills and enhances answer-writing techniques. Ideal for students aiming for top scores in IGCSE, A Levels, or IB. Let’s start raising your academic game now.</p>          <br />
+          <h3 className="title"><strong>Why Students Often Struggle With Business Studies?</strong></h3>
+          <p className="subtitle">Business looks approachable, which is exactly why students underestimate it. <strong>Application over memorisation</strong> is the first barrier, since students who learn definitions still lose marks when they cannot apply theory to the specific business in front of them. <strong>Analysis and evaluation chains</strong> are the second, because higher-mark questions reward a developed argument with a justified judgement, not a list of points. <strong>Quantitative finance</strong> is the third, where break-even, ratios, cash flow, and investment appraisal trip up students who expected business to be essay-only. <strong>Case-study time pressure</strong> is the fourth, since reading a case, planning, and writing a structured answer under timed conditions is a skill that needs practice. Tutoring focuses on these exam skills, because that is where grades actually move.</p><br />
 
-          <h2 className="title">Business Studies Classes In Dubai For Academic Excellence & Exam Support</h2>
-          <p className="subtitle">Join Business Studies classes at Ignite and unlock academic success. Our classes are led by experienced tutors who make theory practical and engaging. We provide structured lessons, revision sessions, and practice questions aligned to your curriculum. Whether you need help with coursework or exam prep, we’re here to support you. Classes are small, focused, and tailored for better learning outcomes. Get the right support to thrive in school and beyond.</p>          <br />
+          <h2 className="title"><strong>Business Studies Tuition And Coaching In Dubai: Formats, Sessions, And What's Included</strong></h2>
+          <p className="subtitle">In Dubai, business studies tuition is most effective when sessions integrate concept instruction with case study analysis and the review of past papers, rather than relying solely on passive note-taking. We run two formats: in-person at our DIFC or JLT centres, and one-to-one online for students based further out or with tight schedules. Both use the same tutor pool and the same lesson structure, with screen-sharing during online sessions for working through case studies and calculations.</p><br />
+          <p className="subtitle">Private one-to-one sessions are the most popular choice, because business questions are personal: the issue is usually whether this particular student applies theory well or argues to a judgement. Sessions are typically 60 minutes weekly during the regular term, extending to 90-minute blocks during exam preparation. Each session combines a targeted teaching block, practice on the relevant case study or calculation, and past paper questions marked against the actual board mark scheme, so students see exactly where application and evaluation marks are won. Small-group business studies classes of two to three students are available where families want structured coaching at a lower per-session cost.</p><br />
+          <p className="subtitle">For students taking Business alongside Economics, our <a href="https://ignitetraininginstitute.com/economics-tutor-in-dubai" style={{ color: "#fff", textDecoration: "underline" }}>Economics tutors in Dubai</a> coordinate both subjects, which overlap usefully on markets, costs, and the wider economic environment.</p><br />
 
-          <h2 className="title">Top-Notch Business Studies Tutoring In Dubai For Stronger Skills</h2>
-          <p className="subtitle">Strong business acumen starts with strong tutoring. At Ignite, our top-notch Business Studies tutors equip students with deep subject knowledge and critical thinking skills. Lessons cover everything from business environments to finance and strategy. We bridge classroom gaps and prepare you for academic and real-world success. Ideal for students seeking to build long-term competency in the subject. Invest in quality tutoring that makes a difference.</p>          <br />
+          <h2 className="title"><strong>IB Business Management Tutors: SL And HL (And Why It Is Not Called Business Studies)</strong></h2>
+          <p className="subtitle">This is the point that confuses most families, so it is worth stating plainly. At IGCSE and A-Level, the subject is Business Studies, but in the IB Diploma, the same subject is officially called <strong>Business Management</strong>. If a school or tutor only ever says "IB Business Studies," that is a small sign that they may not know the IB course closely. Here is how the IB course actually works.</p><br />
+          <p className="subtitle">IB Business Management is built around <strong>five units</strong>: Introduction to Business Management, Human Resource Management, Finance and Accounts, Marketing, and Operations Management. Running through all of them are the four course concepts of creativity, change, ethics, and sustainability, plus the <strong>Business Management Toolkit</strong> (tools such as SWOT, the Ansoff matrix, STEEPLE analysis, the BCG matrix, and break-even analysis) that students are expected to apply in their answers.</p><br />
+          <p className="subtitle">Assessment is where tutoring matters most. <strong>Paper 1</strong> is based on a pre-released case study that the IB publishes a few months before the exam, so preparation can start early. <strong>Paper 2</strong> focuses on quantitative and analytical skills, including finance and data response. <strong>Paper 3 is HL only</strong> and centres on a social enterprise scenario. All students also complete the <strong>Internal Assessment</strong>, a business research project, which is common to SL and HL under the current syllabus. At SL, the weighting falls more heavily on Papers 1 and 2 plus the IA, while HL adds Paper 3 and carries more analytical depth across every unit. Our <a href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai" style={{ color: "#fff", textDecoration: "underline" }}>IBDP tutors in Dubai</a> cover the full Diploma, and our <a href="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai" style={{ color: "#fff", textDecoration: "underline" }}>IB MYP tutors</a> build the foundation that leads into DP Business Management.</p><br />
 
-          <h2 className="title">Online Business Studies Tutor In Dubai, Helping Students Build Confidence</h2>
-          <p className="subtitle">Study smarter from the comfort of your home with online tutoring. Ignite’s Business Studies tutors offer interactive, live sessions tailored to your goals. Our digital platform supports seamless learning with flexible scheduling and expert instruction. Gain clarity on complex concepts, prepare for exams, and get ahead in class. Online doesn’t mean impersonal; it means accessible and effective. Build your confidence with trusted guidance, wherever you are.</p>          <br />
+          <h2 className="title"><strong>IGCSE And GCSE Business Studies Tutors In Dubai</strong></h2>
+          <p className="subtitle">IGCSE Business Studies is where most UAE students first meet the subject formally, and it sets the foundation for A-Level. <strong>Cambridge IGCSE Business Studies (0450)</strong>, graded A* to G, and its <strong>9-1 graded variant (0986)</strong> are the common specifications, alongside <strong>Pearson Edexcel International GCSE Business</strong>. The syllabus covers business activity and enterprise, marketing, operations, finance, and people in organisations, assessed through short-answer and case-study questions.</p><br />
+          <p className="subtitle">The questions that decide grades are the higher-mark evaluation questions, where students have to weigh up a decision and justify a recommendation rather than just describe. These are the most commonly dropped marks at IGCSE, so we build that argue-to-a-judgement technique early rather than leaving it to revision. We also work through the quantitative topics (revenue, costs, break-even, and simple cash flow) that catch students who expected business to be essay-only. Our <a href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai" style={{ color: "#fff", textDecoration: "underline" }}>IGCSE tutors in Dubai</a> work across all major subjects, so students can coordinate Business alongside Economics or Maths under one weekly plan.</p><br />
 
-          <h2 className="title">Trusted Business Studies Learning Centre In Dubai For Exam Success</h2>
-          <p className="subtitle">Ignite is more than a tuition provider, we’re a trusted learning partner. Our Business Studies centre in Dubai supports students across all levels with a structured learning path. From fundamentals to advanced topics, our experienced tutors help students succeed. We focus on concepts, practice, and exam-readiness. Whether it’s internal assessments or board exams, we ensure you're fully prepared. Join a centre that delivers consistent academic success.</p>          <br />
+          <h2 className="title"><strong>A-Level And AS Business Tutors For Case Studies And Essays</strong></h2>
+          <p className="subtitle">A-Level Business steps up the demand for sustained argument and applied analysis. <strong>Cambridge International AS and A-Level Business (9609)</strong> is the most common specification in UAE schools, alongside <strong>Edexcel</strong> and UK boards such as <strong>AQA</strong>. The course enhances the same functional domains (marketing, finance, operations, human resources) while incorporating strategy, business expansion, and the external environment, all evaluated through case studies and essay assignments.</p><br />
+          <p className="subtitle">The skills that separate top candidates are reading a case study quickly and accurately, applying theory to that specific business, and building analysis through to a justified evaluation under time pressure. AS students usually need work on structuring answers and applying concepts precisely, while A2 students need help with strategic analysis and the longer evaluative essays. Our <a href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai" style={{ color: "#fff", textDecoration: "underline" }}>A-Level tutors in Dubai</a> coordinate Business alongside Economics and other subjects under a single weekly plan, which suits the many students taking Business for a management or finance degree application.</p><br />
 
-          <h2 className="title">Looking For A Business Studies Tutor Near Me In Dubai? Get Help Today!</h2>
-          <p className="subtitle">If you're searching “Business Studies tutor near me,” you’ve found the answer. Ignite connects students with expert tutors right here in Dubai. We offer flexible scheduling, both online and offline, and personalized attention. Whether you're behind in class or aiming for top marks, we have the right support. Boost understanding, improve scores, and enjoy learning. Reach out now and get started on your success journey.</p>          <br />
+          <h2 className="title"><strong>AP Business With Personal Finance Tutors</strong></h2>
+          <p className="subtitle">For students in American curriculum schools, the College Board is introducing a new course called <strong>AP Business with Personal Finance</strong>, launching nationally for the 2026 to 2027 school year as part of the AP Career Kickstart programme. This is genuinely new, so a lot of older guidance online still says there is no AP business course at all.</p><br />
+          <p className="subtitle">The course is an introductory, college-level business and personal finance course covering entrepreneurship, marketing, finance, accounting, and management, with personal finance standards integrated throughout. It is built around real-world application, case studies, and a business project rather than pure theory, which means exam preparation and project work go hand in hand. Our <a href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai" style={{ color: "#fff", textDecoration: "underline" }}>AP tutors in Dubai</a> work across the AP range and prepare students for both the academic content and the project-based elements of the new course.</p><br />
 
-          <h2 className="title">Get Better Results With An IB Business Studies Tutor In Dubai Support</h2>
-          <p className="subtitle">IB Business Studies demands deep analysis, strong writing, and real-world application. Our expert IB tutors at Ignite help students master the curriculum with confidence. We break down complex theories, guide you through IA preparation, and boost exam performance. Personalized sessions target your weak spots and reinforce strengths. Whether you’re in Year 1 or 2, we’ll help you stay ahead. Unlock your IB potential with expert support.</p>          <br />
+          <h2 className="title"><strong>Core Business Topics And Exam Skills We Cover</strong></h2>
+          <p className="subtitle">Most students need help with specific topics and specific question types rather than the whole subject, so the lesson plan is built around where marks are actually being lost. The areas we support most often are:</p><br />
+          <p className="subtitle"><strong>Marketing</strong>, including the marketing mix, market research, and segmentation. <strong>Finance and accounts</strong>, including costs and revenue, break-even, cash flow, final accounts, and ratio analysis, which is where students who expected an essay-only subject tend to struggle. <strong>Human resource management</strong>, including organisational structure, motivation, and leadership. <strong>Operations management</strong>, including production methods, quality, and the supply chain. <strong>Business strategy and the external environment</strong>, including tools such as SWOT, Ansoff, and STEEPLE that examiners expect students to apply rather than just name.</p><br />
+          <p className="subtitle">Alongside content, we build the exam skills that business mark schemes reward: decoding command words, applying theory to the specific case rather than in general, and developing analysis through to a justified evaluation. These technique skills are what move a student from a middle grade to a top one, and they transfer across IGCSE, A-Level, and IB. Students who prefer one-to-one delivery across several subjects often work with our <a href="https://ignitetraininginstitute.com/private-tutors-in-dubai" style={{ color: "#fff", textDecoration: "underline" }}>private tutors in Dubai</a>.</p><br />
 
-          <h2 className="title">Experienced IGCSE Business Studies Tutor In Dubai For Exam Prep</h2>
-          <p className="subtitle">Get exam-ready with our experienced IGCSE Business Studies tutors. At Ignite, we cover the entire syllabus, including paper formats, mark schemes, and common pitfalls. Our tutors use past papers, mock tests, and targeted reviews to ensure thorough preparation. Lessons are interactive and focused on improving performance in both theory and case-based questions. Perfect for students aiming for top grades in IGCSE. Get the guidance you need to succeed.</p>          <br />
-
-          <h2 className="title">Achieve More With A Levels Business Studies Tutor In Dubai Help</h2>
-          <p className="subtitle">A Levels demand a deeper understanding of business concepts, and we’re here to help. Our tutors guide you through difficult topics like strategy, operations, and global business. With practice essays, structured analysis, and regular feedback, students become exam-ready. Whether you're struggling with content or aiming for an A*, we tailor support to your needs. Excel in your A Levels with Ignite’s expert guidance. Let’s help you achieve more.</p>          <br />
-
-          <h2 className="title">One-On-One AS Levels Business Studies Tutor In Dubai For Assured Improvement</h2>
-          <p className="subtitle">AS Levels set the foundation for future academic success. Our one-on-one tutoring ensures students get the individual support they need. Ignite tutors explain concepts clearly, provide custom notes, and conduct regular tests to track progress. Sessions are flexible and focused on your specific challenges. Ideal for students who need a strong start in Business Studies. Improve grades and boost confidence with personal, expert-led sessions.</p>          <br />
-
-          <h2 className="title">AP Business Studies Tutor in Dubai Helping Students Excel with Confidence</h2>
-          <p className="subtitle">AP Business Studies combines strategy, operations, marketing, and finance. Ignite’s AP Business Studies tutors in Dubai provide real-world insights alongside exam preparation. Students learn case analysis, business models, and exam-specific application of concepts. Personalized support ensures students understand both theory and practical business applications. Our tutors build students’ confidence through practice and exam-focused guidance. With Ignite, students perform strongly in exams while developing future-ready business thinking skills.</p>
+          <h2 className="title"><strong>Ignite: Best Business Studies Tutor In Dubai For Every Curriculum</strong></h2>
+          <p className="subtitle">Ignite has been running tutoring in Dubai for over ten years, and Business is one of our most established subjects, with specialist tutors including Harsha, who has more than ten years of experience teaching across the curriculums. One IB parent described our team as the best Business and Economics teachers they had worked with, crediting the clear explanations for getting their child on track for a strong Diploma score. Our two centres at DIFC and JLT serve students from international schools across Dubai, and our online programme extends that reach to Sharjah, Abu Dhabi, and the wider UAE.</p><br />
+          <p className="subtitle">What makes business tutoring work, in our experience, is matching the tutor to the exact course, then drilling the application and evaluation skills that exams actually reward rather than re-teaching theory the student can already recite. A tutor guiding an IB student through the Paper 1 pre-released case study works very differently from one coaching an A-Level student through a strategic essay or an IGCSE student through the high-mark evaluation question.</p><br />
+          <p className="subtitle">Several of our students take Business and Economics together, and a number have gone on to strong A-Level and Diploma results in both. New students start with a diagnostic, get matched to a tutor whose specialism fits, and follow a session-by-session plan built around the actual papers and assessments they need to deliver.</p><br />
+          <p className="subtitle">If you're considering business tutoring for the first time, a <a href="https://ignitetraininginstitute.com/join-free-demo-class" style={{ color: "#fff", textDecoration: "underline" }}>free demo class with Ignite</a> is the simplest way to see how the diagnostic session and lesson structure work in practice. There's no expectation to commit beyond the demo.</p>
           <br /><br />
           <h2><strong>Ignite's Exclusive Learning Resources </strong></h2>
           <h3><strong>IB Resources</strong></h3>

@@ -74,42 +74,50 @@ const ChemistryTutorsInDubai = ({ headerHeight }) => {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "What Chemistry curricula does Ignite support?",
+                    "name": "Which Chemistry Courses And Boards Do Ignite's Tutors Cover?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Ignite offers Chemistry tutoring for IB (SL/HL), IGCSE, A-Levels, and AP Chemistry, following the exact requirements of each syllabus."
+                        "text": "Ignite's Chemistry tutors in Dubai cover Cambridge IGCSE Chemistry (0620, and the 9-1 graded 0971), GCSE Chemistry (AQA, OCR, Edexcel), Cambridge International AS and A-Level Chemistry (9701), IB Chemistry (SL and HL, plus MYP Sciences), and AP Chemistry from the College Board. Tutoring is matched to the exact board and level your school follows, since paper structures and mark schemes differ across them."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Do tutors cover both theory and numerical problem-solving?",
+                    "name": "What Changed In The New IB Chemistry Syllabus (First Exams 2025)?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, tutoring sessions include detailed explanation of theory concepts along with structured practice in calculations, equations, and problem-solving."
+                        "text": "The IB Chemistry curriculum has been restructured based on two central themes, Structure and Reactivity, superseding the previous eleven-topic framework. The four option topics (Materials, Biochemistry, Energy, Medicinal Chemistry) were removed, with some content folded into the core. The standalone Paper 3 was removed and its data-analysis element absorbed into Paper 1B. Calculators are now allowed on all papers, and the Internal Assessment remains worth 20%."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Can I get help with lab work, IAs, or practicals?",
+                    "name": "How Do Ignite's Tutors Support The IB Chemistry Internal Assessment?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Absolutely. Ignite provides support for IB internal assessments, lab report writing, and understanding experimental techniques based on curriculum expectations."
+                        "text": "The IB Chemistry Internal Assessment is a scientific investigation worth 20% of the final grade, with a 3,000-word limit. Our tutors help students choose a focused research question, design a safe and valid method, process and graph data correctly, and write the analysis and evaluation against the IB criteria. The most common mark loss is a research question that's too broad or a method that can't produce meaningful data, so we settle both early."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Are exam techniques and past paper practice part of the program?",
+                    "name": "Do Sessions Cover Organic, Inorganic, And Physical Chemistry Separately?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, students regularly solve past papers, timed mock questions, and receive guidance on command terms, structured responses, and marking criteria."
+                        "text": "Yes. Chemistry splits into three branches, and most students are stronger in some than others. Physical chemistry (moles, energetics, equilibrium, kinetics) is where calculation-heavy marks are won or lost. Organic chemistry rewards pattern recognition across reaction mechanisms. Inorganic chemistry covers periodicity, bonding, and the behaviour of elements and compounds. We diagnose which branch is costing marks and weight sessions accordingly rather than teaching all three at one pace."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Is a demo session available for Chemistry tutoring?",
+                    "name": "Are Private Chemistry Tutoring Sessions In Dubai Available Online Or In Person?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, students can book a free demo class to understand the teaching approach and get matched with the right Chemistry tutor."
+                        "text": "Both. We run in-centre sessions at our two Dubai locations (DIFC and JLT), plus one-to-one online sessions for students across the wider UAE or with packed schedules. Online sessions use the same tutors and lesson structure as in-centre ones, with screen-sharing for working through calculations, mechanisms, and past paper questions. Most students searching for a chemistry tutor near me use both formats across the year."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How Soon Should A Student Start Chemistry Tutoring Before Their Board Exams?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For IGCSE and A-Level Chemistry, three to six months of weekly sessions before the May/June series is the sensible window. IB Diploma students benefit most from starting early in DP1, since the Internal Assessment runs across the course. AP Chemistry students need at least four months before the May exam. Earlier starts let us spread calculation practice, mechanism work, and past papers across the full preparation arc."
                     }
                 }
             ]

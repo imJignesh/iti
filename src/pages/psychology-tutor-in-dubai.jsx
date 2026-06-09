@@ -73,42 +73,50 @@ const PsychologyTutorsInDubai = ({ headerHeight }) => {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "Which curricula does Ignite support for Psychology tutoring?",
+                    "name": "Which Psychology Courses And Boards Do Ignite's Tutors Cover?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Ignite provides Psychology tutoring for IGCSE, A-Levels, & AP Psychology, with lessons customized to fit each curriculum’s syllabus and exam requirements."
+                        "text": "Ignite's psychology tutors in Dubai cover IB Psychology (SL and HL, both the current and the new syllabus), Cambridge IGCSE Psychology (0266, first exams 2027), UK GCSE Psychology (AQA, OCR, Pearson Edexcel), Cambridge International AS and A-Level Psychology (9990), UK A-Level Psychology boards including AQA, and AP Psychology under its 2025 redesigned framework. Tutoring is matched to the exact board and exam session your student is preparing for."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "What key topics are covered in Psychology sessions?",
+                    "name": "What Is Changing In IB Psychology, And Which Syllabus Is My Student On?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Tutoring includes cognitive, biological, & sociocultural approaches to psychology, research methods, abnormal psychology, developmental psychology, & exam-specific application of theories & studies."
+                        "text": "May 2026 is the last exam session of the current IB Psychology syllabus. Students who started the Diploma in August 2025 are on the redesigned course, with first assessment in May 2027. The new course has substantial changes to how research methods and the Internal Assessment are assessed. We tutor both cohorts, since the right approach is very different depending on which syllabus a student is sitting."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Do tutors help with essay writing & structured answers?",
+                    "name": "What Changed In AP Psychology With The 2025 Redesign?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, students receive guidance on planning & writing essays, applying psychological theories and studies effectively, and developing well-structured analytical responses for exams such as IB Paper 1/2 & A-Level essays."
+                        "text": "The College Board redesigned AP Psychology from May 2025. The course moved from nine units to five (the APA five pillars: biological, cognitive, developmental, social, and mental and physical health), the exam went fully digital via Bluebook, and the multiple-choice section was reduced to 75 questions with four answer choices each. Two new free-response question types replaced the previous format: the Article Analysis Question and the Evidence-Based Question."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Is exam preparation part of the tutoring program?",
+                    "name": "Is There An IGCSE Psychology Course?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Absolutely. Students practice with past papers, timed writing, & strategy sessions focused on clarity, evaluation, & critical analysis to strengthen exam performance."
+                        "text": "Yes, and it is new. Cambridge launched Cambridge IGCSE Psychology (0266) with first examinations from 2027, so students are studying it now ahead of those sittings. For UK GCSE Psychology, AQA, OCR, and Pearson Edexcel all offer a specification, taken by students in British curriculum schools. We tutor across all of these. If your school doesn't offer Psychology before A-Level, we also support students who want to learn the subject ahead of selecting it."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Can I attend a demo session before enrolling?",
+                    "name": "Do You Offer Online Psychology Tutoring As Well As In-Person?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, Ignite offers a free demo class where students can experience our teaching approach and connect with a tutor who best matches their academic needs."
+                        "text": "Both. We run in-person sessions at our two Dubai centres (DIFC and JLT) and one-to-one online psychology tutoring for students across the wider UAE or with packed schedules. Online sessions use the same tutors and structure as in-centre ones, with screen-sharing for working through case studies, essay plans, and past paper questions. Many students searching for a psychology tutor near me end up using both formats across the year."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How Soon Before Exams Should A Student Start Psychology Tutoring?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For IGCSE, GCSE, and A-Level Psychology, three to six months of weekly sessions before the May/June series is the sensible window. IB Diploma students benefit from starting early in DP1, since the Internal Assessment runs across the course. AP students need at least four months before the May digital exam. Earlier starts let us spread study learning, essay practice, and past papers across the full preparation arc."
                     }
                 }
             ]

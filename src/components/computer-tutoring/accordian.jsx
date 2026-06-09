@@ -23,44 +23,116 @@ export default function Accordion() {
       {/* Expanded Content */}
       {open && (
         <div className="expanded">
-          <h2 className="title">Find The Best Computer Tutor In Dubai For You With Ignite Training Institute</h2>
-          <p className="subtitle">Struggling to find the right Computer tutor in Dubai? Ignite Training Institute connects you with highly qualified professionals who align with your goals. Our tutors bring real-world experience and academic know-how to help you grasp tough subjects with ease. Discover engaging lessons, one-on-one attention, and results-driven support. Let’s help you find your ideal tutor today.</p>          <br />
+          <h2 className="title"><strong>Computer Science Tutors In Dubai For IB, IGCSE, A-Level, And AP Students</strong></h2>
+          <p className="subtitle">Ignite Training Institute provides 1-on-1 Computer Science tutoring in Dubai across IB (SL, HL, MYP), IGCSE, GCSE, A-Level, AP Computer Science A, and AP Computer Science Principles. Lessons cover Python, Java, pseudocode, and C++, depending on what the curriculum requires, with tutors matched to each exam board.<br /><br />Most students come to us when programming logic stops making sense, when algorithm questions on past papers consistently lose marks, or when an IB Computational Solution project feels stuck. Some students join us months ahead of mocks; others arrive with weeks to go and need focused work on one specific topic. Every new student starts with a short diagnostic where the tutor looks at recent code, exam scripts, or project work to see exactly where the gap is.<br /><br />We work with students from international schools across Dubai, including those at GEMS Wellington, Dubai College, Jumeirah College, JESS Ranches, Dubai American Academy, Repton School Dubai, and similar IB / British / American curriculum schools across DIFC, JLT, Jumeirah, and the wider UAE.</p><br />
 
-          <h2 className="title">Personalized Computer Science Tuition In Dubai For Every Student</h2>
-          <p className="subtitle">No two learners are alike, so why should tuition be the same? At Ignite, we offer customized Computer Science tuition in Dubai that caters to individual needs. Whether you're preparing for an exam or need concept clarity, our tutors tailor sessions just for you. Learn at your pace, your way. See the difference a personalized approach makes.</p>          <br />
+          <h3 className="title"><strong>Computer Science Courses At A Glance: IB, IGCSE, A-Level, And AP Compared</strong></h3>
+          <div className="table-responsive">
+            <table className="table table-bordered text-white">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Level</th>
+                  <th>Primary Language</th>
+                  <th>Assessment Format</th>
+                  <th>Typical Year/Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IB Computer Science SL</td>
+                  <td>DP Standard Level</td>
+                  <td>Java or Python</td>
+                  <td>Paper 1 + Paper 2 + Internal Assessment (Computational Solution)</td>
+                  <td>DP1 to DP2 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>IB Computer Science HL</td>
+                  <td>DP Higher Level</td>
+                  <td>Java or Python</td>
+                  <td>Paper 1 + Paper 2 + Paper 3 (Case Study) + Internal Assessment</td>
+                  <td>DP1 to DP2 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>IGCSE Computer Science (0478 / 0984)</td>
+                  <td>Year 10 to 11</td>
+                  <td>Python (most common) + pseudocode</td>
+                  <td>Paper 1 (theory) + Paper 2 (programming, with pre-release material)</td>
+                  <td>Year 10 to 11 (Grade 9 to 10)</td>
+                </tr>
+                <tr>
+                  <td>A-Level Computer Science (9618)</td>
+                  <td>AS + A2</td>
+                  <td>Python or Java + pseudocode</td>
+                  <td>2 written papers + practical programming project</td>
+                  <td>Year 12 to 13 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>AP Computer Science A</td>
+                  <td>College Board</td>
+                  <td>Java only</td>
+                  <td>42 MC (90 min) + 4 free-response questions (90 min); scored on a 1 to 5 scale</td>
+                  <td>Grade 11 to 12</td>
+                </tr>
+                <tr>
+                  <td>AP Computer Science Principles</td>
+                  <td>College Board</td>
+                  <td>Language-agnostic (Python widely used)</td>
+                  <td>70 MC (120 min, 70%) + Create Performance Task (30%)</td>
+                  <td>Grade 10 to 12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br />
 
-          <h2 className="title">Score Higher With Targeted Computer Science Coaching In Dubai Today</h2>
-          <p className="subtitle">Boost your grades with focused, strategic Computer Science coaching from Dubai’s top educators. Our tutors use proven methods and adaptive tools to ensure students gain clarity, solve problems efficiently, and approach exams confidently. Whether you're in school or preparing for competitive exams, we’ve got you covered. Let’s aim higher together.</p>          <br />
+          <h3 className="title"><strong>Why Students Often Struggle With Computer Science?</strong></h3>
+          <p className="subtitle">Four areas come up repeatedly across IB, IGCSE, A-Level, and AP students. <strong>Programming logic</strong> is the biggest one, students can read code line by line, but can't yet design a solution from scratch when handed a problem. <strong>Algorithm tracing</strong> under exam conditions is the second, walking through nested loops, recursion, or sorting algorithms step by step to predict the output is harder than it looks on paper. <strong>Pseudocode to code translation</strong> trips up Cambridge IGCSE and A-Level students who understand the logic but lose marks on syntax and variable handling. <strong>Debugging methodology</strong> is the fourth, most students try random fixes instead of working through the error systematically. Tutoring targets each of these specifically rather than treating them as general weaknesses.</p><br />
 
-          <h2 className="title">Computer Science Classes In Dubai For Academic Excellence & Exam Support</h2>
-          <p className="subtitle">Our Computer Science classes in Dubai are designed to equip students with practical and theoretical knowledge. Taught by skilled educators, our sessions cover essential topics, exam techniques, and problem-solving strategies. Get the edge you need in both school assessments and board exams. Join a class that delivers results.</p>          <br />
+          <h2 className="title"><strong>Computer Science Tuition And Coaching In Dubai: Formats, Sessions, And What's Included</strong></h2>
+          <p className="subtitle">Computer Science tuition in Dubai works best when the format lets the tutor see the student's actual code, not just talk about it. We run two formats: in-person at our DIFC or JLT centres, and one-to-one online for students based further out in Dubai or across the wider UAE. Both formats use the same tutor pool and the same lesson structure, with screen-sharing during online sessions so the tutor can review and debug code in real time.<br /><br />Sessions are typically 60 minutes weekly during the regular term, extending to 90-minute blocks twice a week during exam preparation or major project deadlines. Each session covers a targeted teaching block on one concept, hands-on coding practice with the language the student's syllabus requires, and review of past paper questions or project work. For IB students preparing the Computational Solution IA, sessions also include design documentation review and criteria-based feedback on written sections.<br /><br />For families weighing up exam boards before committing to tuition, our blog on <a href="https://ignitetraininginstitute.com/blog/what-is-the-difference-between-edexcel-and-cambridge" className="text-white text-decoration-underline">the differences between Edexcel and Cambridge</a> is a useful background.</p><br />
 
-          <h2 className="title">Top-Notch Computer Science Tutoring In Dubai For Stronger Skills</h2>
-          <p className="subtitle">From Python basics to data structures and algorithms, our top-notch tutoring in Dubai helps students strengthen their coding and computational thinking skills. We ensure conceptual clarity through interactive sessions, hands-on tasks, and personalized attention. Experience tutoring that’s one step ahead and truly impactful.</p>          <br />
+          <h2 className="title"><strong>IB Computer Science Tutors For DP (SL And HL) And MYP</strong></h2>
+          <p className="subtitle">IB Computer Science is structured into two main DP courses plus the MYP foundation. The DP courses share a common core but differ significantly at HL, and the Internal Assessment runs across both years for either level.</p><br />
 
-          <h2 className="title">Online Computer Tutor In Dubai Helping Students Build Confidence</h2>
-          <p className="subtitle">No matter where you are in Dubai, our online Computer tutors bring world-class instruction straight to your screen. Flexible timings, engaging lessons, and real-time feedback make it easy to learn and grow confidently. Whether you're revising for finals or need consistent academic support, we’ve got your back, online and always available.</p>          <br />
+          <h3 className="title"><strong>IB Computer Science SL</strong></h3>
+          <p className="subtitle">It covers system fundamentals, computer organisation, networks, computational thinking, and programming. The exam includes Paper 1 (theory and algorithm questions) and Paper 2 (a focused option topic), alongside the Internal Assessment.</p><br />
 
-          <h2 className="title">Trusted Computer Science Learning Centre In Dubai For Exam Success</h2>
-          <p className="subtitle">Ignite Training Institute is your go-to learning centre for Computer Science success in Dubai. With a track record of top-performing students, our focused approach ensures better understanding and improved scores. We support IGCSE, IB, A-Level, and school curriculum needs. Trust us to guide your academic journey.</p>          <br />
+          <h3 className="title"><strong>IB Computer Science HL</strong></h3>
+          <p className="subtitle">It covers everything in SL plus recursion, abstract data structures (stacks, queues, linked lists, binary trees), and resource management. HL adds Paper 3, which is the annual Case Study (a pre-released real-world scenario), tested in detail.</p><br />
 
-          <h2 className="title">Looking For A Computer Science Tutor Near Me In Dubai? Get Help Today!</h2>
-          <p className="subtitle">Searching “Computer Science tutor near me” in Dubai? Your search ends here. Ignite Training Institute connects students with expert tutors in their vicinity or online. From beginner-level help to exam prep, we offer comprehensive support. Start your learning journey with someone nearby and dependable.</p>          <br />
+          <h3 className="title"><strong>The IB Internal Assessment (Computational Solution)</strong></h3>
+          <p className="subtitle">It is a major project component for both SL and HL. Students identify a real-world problem, design a solution, code a working program, and submit a structured written report against IB criteria. This process generally requires several months of organized effort, which is the reason we advise beginning tutoring early in DP1 instead of waiting until late in DP2.</p><br />
 
-          <h2 className="title">Get Better Results With An IB Computer Science Tutor In Dubai Support</h2>
-          <p className="subtitle">Our IB Computer Science tutors in Dubai are experts in the IB curriculum, ensuring students get targeted guidance across SL and HL topics. We cover IA planning, exam techniques, and real-world coding scenarios. With us, you'll not just meet the IB standards, you’ll exceed them.</p>          <br />
+          <h3 className="title"><strong>MYP Design & Digital Design</strong></h3>
+          <p className="subtitle">It runs from Year 7 to Year 11 and builds the computational thinking foundation that makes DP CS manageable. Our <a href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai" className="text-white text-decoration-underline">IBDP tutors in Dubai</a> cover the full DP framework, and our <a href="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai" className="text-white text-decoration-underline">IB MYP tutors</a> handle Years 7 to 11.</p><br />
 
-          <h2 className="title">Experienced IGCSE Computer Science Tutor In Dubai For Exam Prep</h2>
-          <p className="subtitle">Get ready for your IGCSE exams with experienced Computer Science tutors in Dubai. We break down complex topics, practice past papers, and build strong exam strategies. Whether you’re with Edexcel or Cambridge, our expert guidance ensures top results. Start prepping smart today.</p>          <br />
+          <h2 className="title"><strong>IGCSE And GCSE Computer Science Tutors In Dubai</strong></h2>
+          <p className="subtitle">IGCSE Computer Science is taken by most UAE international school students at the British curriculum level. <strong>Cambridge IGCSE Computer Science (0478)</strong> is the standard international qualification; <strong>0984</strong> is the UK 9-1 grading variant of the same course. Both papers test the same content with the same structure but use different grading scales, so tutoring is identical in approach.<br /><br />The course covers computational thinking, algorithm design, programming (typically taught in Python), data representation, hardware and software, networks and communications, databases, and cybersecurity. Paper 1 is theory-focused, and Paper 2 is programming-focused. <strong>Paper 2 uses pre-release material</strong>, which Cambridge publishes several weeks before the exam. The pre-release is essentially a coded scenario that students prepare in advance, then face exam questions on. We work through the pre-release with students systematically so they can write, trace, and modify code confidently when the real paper appears.<br /><br />For students at British curriculum schools sitting UK GCSE Computer Science rather than the international IGCSE, we also tutor AQA GCSE Computer Science (8525) and OCR GCSE Computer Science (J277). The subject areas are comparable; however, the assessment frameworks and grading criteria vary.<br /><br />Our <a href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai" className="text-white text-decoration-underline">IGCSE tutors in Dubai</a> work across all major IGCSE subjects, so students taking Computer Science alongside Maths, Physics, or other STEM subjects can coordinate scheduling under one weekly plan.</p><br />
 
-          <h2 className="title">Achieve More With A Levels Computer Science Tutor In Dubai Help</h2>
-          <p className="subtitle">Need help navigating A Levels Computer Science? Our tutors in Dubai are well-versed with curriculum demands and exam formats. From programming to system architecture, we simplify learning and focus on scoring techniques. Achieve more and stress less with expert support tailored for A Level success.</p>          <br />
+          <h2 className="title"><strong>A-Level And AS Computer Science Tutors For Theory And Practical Skills</strong></h2>
+          <p className="subtitle">A-Level Computer Science is substantially harder than IGCSE, with the jump catching many students off guard at the start of AS. <strong>Cambridge International A-Level Computer Science (9618)</strong> is the dominant board in UAE schools. The course covers advanced algorithms, object-oriented programming, recursion, data structures (stacks, queues, linked lists, binary trees), databases with SQL, and a substantial individual programming project.<br /><br />The exam structure includes two written papers covering theory and algorithmic problem-solving, plus a practical programming project that students develop across the year. For Cambridge, that practical project is a significant portion of the final grade and benefits from regular tutor review across the design, coding, and documentation phases.<br /><br />For students at British curriculum schools sitting UK A-Level Computer Science rather than the international Cambridge variant, we also tutor AQA A-Level Computer Science (7517) and OCR A-Level Computer Science (H446). Both UK boards include a practical programming project component similar to Cambridge, but with their own coursework requirements.<br /><br />Most students preparing for AS papers in May need targeted work on tracing algorithms, designing functions, and translating between pseudocode and their chosen programming language. A2 students typically need help with recursion, OOP design patterns, and the synoptic elements of advanced data structures. Our <a href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai" className="text-white text-decoration-underline">A-Level tutors in Dubai</a> coordinate Computer Science alongside other A-Level subjects under a single weekly plan.</p><br />
 
-          <h2 className="title">One-On-One AS Levels Computer Science Tutor In Dubai For Assured Improvement</h2>
-          <p className="subtitle">Personalized, one-on-one AS Level Computer Science tutoring in Dubai ensures focused attention where you need it most. Our expert tutors work closely with you to bridge gaps, refine skills, and maximize performance. From theoretical concepts to practical programming, we help you improve, guaranteed.</p>          <br />
+          <h2 className="title"><strong>AP Computer Science Tutors For AP CS A And AP CS Principles</strong></h2>
+          <p className="subtitle">AP Computer Science splits into two completely different courses, and which one your school offers (or both) affects what tutoring looks like.</p><br />
 
-          <h2 className="title">AP Computer Science Tutor In Dubai, Helping Students Excel with Confidence</h2>
-          <p className="subtitle">AP Computer Science requires logic, coding skills, and analytical thinking. Ignite’s AP Computer Science tutors in Dubai guide students through programming fundamentals, data structures, algorithms, and problem-solving techniques. Our sessions focus on making coding concepts easier to understand and apply. With practice-based learning, students gain the confidence to approach both theory and coding challenges. Personalized guidance and exam-focused preparation ensure better results in the AP exam. Ignite helps students strengthen computational skills that are valuable for both academics and future tech careers.</p>
+          <h3 className="title"><strong>AP Computer Science A</strong></h3>
+          <p className="subtitle">It is the technical, programming-heavy course. It's built around Java, with a strong focus on object-oriented programming, control structures, classes, arrays, ArrayLists, 2D arrays, and recursion tracing (though writing recursion is no longer assessed in the current curriculum). The exam has 42 multiple-choice questions in 90 minutes and 4 free-response questions in 90 minutes. The 2026 exam is on <strong>Friday, May 15, 2026</strong>, delivered fully digitally through the College Board Bluebook app, with FRQs typed into a built-in code editor. The exam is scored on a 1 to 5 scale, and roughly 47% of test-takers score a 4 or 5. This is the course for students planning to study Computer Science or a STEM major at US universities.</p><br />
+
+          <h3 className="title"><strong>AP Computer Science Principles</strong></h3>
+          <p className="subtitle">It is the broader, conceptual course. It covers computational thinking, programming concepts, the internet, data and cybersecurity, and the social impact of computing. It is language-agnostic, meaning students can use any programming language for the coursework (Python is the most common choice). The assessment has two components: a 70-question multiple-choice end-of-course exam (120 minutes, 70% of the score) and the Create Performance Task (30% of the score), where students develop their own program over 9 hours of in-class time and submit code plus a Personalized Project Reference. Two written response questions on the exam are based on the student's own Create task. The 2026 exam is on <strong>Thursday, May 14, 2026</strong>, also fully digital in Bluebook.<br /><br />For students aiming at top US universities, AP CS scores carry weight alongside SAT and IB grades. Our <a href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai" className="text-white text-decoration-underline">AP tutors in Dubai</a> work across the full AP range, with AP CS handled by tutors who have specifically prepared students through the College Board Java and Create Task frameworks.</p><br />
+
+          <h2 className="title"><strong>Programming Languages And Topics We Cover (Python, Java, Pseudocode, C++)</strong></h2>
+          <p className="subtitle">Tutoring at Ignite covers whatever programming language the student's curriculum requires. The dominant languages across Dubai schools are Python and Java, with pseudocode required for Cambridge exams and other languages occasionally used.<br /><br /><strong>Python</strong> is the most commonly taught language in UAE schools across IGCSE, A-Level (where the school chooses Python), IB Computer Science, and AP Computer Science Principles. We teach Python from the foundations through advanced topics, including OOP, file handling, modules, and library usage.<br /><br /><strong>Java</strong> is required for AP Computer Science A and is used in some IB DP schools and Cambridge A-Level schools that choose Java over Python. AP CS A in particular has very specific Java requirements (control structures, classes, arrays, ArrayLists, 2D arrays) that need direct practice with the College Board curriculum framework.<br /><br /><strong>Pseudocode</strong> is utilized in the Cambridge IGCSE (0478, 0984) and A-Level (9618) examinations. Cambridge has its own pseudocode conventions that students must follow for written exam answers, even when they code in Python or Java for the practical components. Translating between pseudocode and a real language is a frequently tested skill.<br /><br /><strong>C++</strong> comes up occasionally in specific schools and for students preparing for competitive coding contexts. We support it when needed.<br /><br />Beyond syntax, the lesson plan focuses on the underlying skills that transfer across languages: computational thinking, algorithmic logic, debugging methodology, and object-oriented design. Specific topics covered include arrays and lists, sorting and searching algorithms, recursion, stacks, queues, linked lists, binary trees, databases, SQL, networking fundamentals, and Boolean logic. Students who prefer one-to-one delivery across multiple subjects often work with our <a href="https://ignitetraininginstitute.com/private-tutors-in-dubai" className="text-white text-decoration-underline">private tutors in Dubai</a>.</p><br />
+
+          <h2 className="title"><strong>Ignite: Best Computer Science Tutor In Dubai For Every Curriculum</strong></h2>
+          <p className="subtitle">Ignite has been running tutoring in Dubai for over ten years, and Computer Science is one of the subjects where curriculum-specific expertise matters most. Our two centres at DIFC and JLT serve students from international schools across Dubai, and our online programme extends that reach to Sharjah, Abu Dhabi, and the wider UAE.<br /><br />What makes Computer Science tutoring work, in our experience, is matching tutor to curriculum, language, and exam pattern. A tutor strong on IB CS HL is not automatically the right fit for AP CS A. A Python specialist isn't always the right call for a student locked into Java for AP. Every CS tutor at Ignite has direct experience teaching at least one of the major CS curricula, and most have taught more than one. New students start with a diagnostic session, get matched to a tutor whose curriculum and language specialism fit, and follow a session-by-session plan built around the actual papers, projects, or IA work they need to deliver.<br /><br />If you're considering Computer Science tutoring for the first time, a <a href="https://ignitetraininginstitute.com/join-free-demo-class" className="text-white text-decoration-underline">free demo class with Ignite</a> is the simplest way to see how the diagnostic session and lesson structure works in practice. There's no expectation to commit beyond the demo.</p><br />
+
+          <h2 className="title"><strong>Know more about our programmes:</strong></h2>
+          <p className="subtitle">• <a href="https://ignitetraininginstitute.com/ib-curriculum-tutors-in-dubai" className="text-white text-decoration-underline">IB Curriculum Tutors In Dubai</a><br />
+          • <a href="https://ignitetraininginstitute.com/british-curriculum-tutors-in-dubai" className="text-white text-decoration-underline">British Curriculum Tutors In Dubai</a><br />
+          • <a href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai" className="text-white text-decoration-underline">AP Tutors In Dubai</a><br />
+          • <a href="https://ignitetraininginstitute.com/join-free-demo-class" className="text-white text-decoration-underline">Free Demo Class At Ignite Training Institute</a><br />
+          • <a href="https://ignitetraininginstitute.com/contact-us" className="text-white text-decoration-underline">Contact Us</a></p>
           <br /><br />
           <h2><strong>Ignite's Exclusive Learning Resources </strong></h2>
           <h3><strong>IB Resources</strong></h3>

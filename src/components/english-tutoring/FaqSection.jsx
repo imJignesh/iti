@@ -28,29 +28,34 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "What qualifications do Ignite’s English tutors hold?",
+      question: "What English Courses & Boards Are Covered By Ignite's Tutors?",
       answer:
-        "Our English tutors at Ignite are seasoned professionals with advanced degrees in English and extensive teaching experience across IGCSE, A-Level, IB, AP, ACT, and university preparation programs",
+        "Ignite's English tutors in Dubai cover Cambridge IGCSE First Language English (0500 / 0990), Literature in English (0475 / 0992), and English as a Second Language (0510 / 0993), Cambridge AS and A-Level English Language (9093) and Literature in English (9695), UK A-Level boards, IB English A (Language and Literature, Literature) and English B, plus AP English Language and AP English Literature.",
     },
     {
-      question: "Are tutoring sessions available online & in person?",
+      question: "What Is The Difference Between IB English A Language And Literature, And IB English A Literature?",
       answer:
-        "Absolutely, Ignite offers both online and in-person English tutoring sessions in Dubai, catering to students’ preferred learning environments and schedules",
+        "IB English A has two routes. Language and Literature mixes literary works with non-literary text types (news articles, advertising, political speeches, image-based texts), which is now the more commonly taken course. Literature focuses purely on literary texts: novels, plays, poetry, and short stories. Both run at SL and HL. The right choice depends on whether a student prefers analysing a wider range of text types or going deeper into literary works.",
     },
     {
-      question: "Do you offer one-on-one support as well as group tutoring?",
+      question: "What Is The Difference Between AP English Language And AP English Literature?",
       answer:
-        "Yes, we offer both personalized one-on-one tutoring and small group English classes, allowing students to choose the format that best matches their learning style and goals",
+        "The College Board runs two distinct AP English courses. AP English Language and Composition focuses on rhetorical analysis of non-fiction prose, argumentation, and synthesis essays using multiple sources. AP English Literature and Composition focuses on prose, poetry, and drama analysis, with a literary-criticism approach. Many US-curriculum students take both, usually AP Language in Grade 11 and AP Literature in Grade 12. We tutor for both exams.",
     },
     {
-      question: "How is student progress monitored during tutoring?",
+      question: "Do You Offer Online English Tutoring As Well As In-Person In Dubai?",
       answer:
-        "We track progress through regular assignments, quizzes, and feedback sessions to ensure steady improvement and identify areas that require further focus",
+        "Both. We run in-person sessions at our two Dubai centres (DIFC and JLT) and one-to-one online English tutoring for students across the wider UAE or with packed schedules. Online sessions use the same tutors and structure as in-centre ones, with screen-sharing for working through texts, essay planning, and past paper questions step by step. Most students searching for an English tutor near me end up using both formats across the year.",
     },
     {
-      question: "How can I book an English tutoring session at Ignite?",
+      question: "How Do Tutors Help With English Essays And Unseen Text Analysis?",
       answer:
-        "Schedule a free demo class to experience our teaching approach firsthand. After your request, we’ll match you with an expert English tutor based on your academic level and learning goals.",
+        "English marks at every level are won on textual evidence and structured argument. We teach students to read a text closely, identify the technique and purpose, then build a paragraph around the AQA / Cambridge / IB / College Board criteria with a clear point, embedded quotation, analysis, and link back to the argument. Unseen text and unseen poetry work uses past paper material under timed conditions, marked against the actual mark scheme.",
+    },
+    {
+      question: "How Soon Before Exams Should A Student Start English Tutoring?",
+      answer:
+        "For IGCSE and GCSE English (First Language, Literature, or ESL), three to six months of weekly sessions before the May/June series is sensible. IB Diploma students benefit from starting early in DP1, since the Individual Oral and Higher Level Essay run across the course. AP English students need at least four months before the May exams. Earlier starts let us spread set-text reading, essay practice, and past papers across the preparation arc.",
     },
   ];
 

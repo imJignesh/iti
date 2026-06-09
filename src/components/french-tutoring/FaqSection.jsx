@@ -28,29 +28,34 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "Does Ignite offer French tutoring for different curricula?",
+      question: "Which French Courses Do Ignite's French Tutors In Dubai Cover?",
       answer:
-        "Yes, Ignite provides French tutoring tailored to major international curricula, including IB (SL/HL), IGCSE, A-Levels, and AP French. Tutors are well-versed with each board’s requirements, ensuring focused academic support.",
+        "Ignite's French tutors in Dubai cover Cambridge IGCSE French (0520) and Pearson Edexcel International GCSE French (4FR1), Cambridge International AS and A-Level French, UK A-Level boards including AQA (7652) and Edexcel, the IB Diploma Programme (French Ab Initio, French B SL and HL, plus MYP French Phases 1 to 6), and the College Board's AP French Language and Culture. Tutoring is matched to the exact board your school follows.",
     },
     {
-      question: "What areas of the French language are covered in tutoring sessions?",
+      question: "What Is The Difference Between IB French Ab Initio And French B?",
       answer:
-        "Tutoring sessions cover all key skills like reading, writing, listening, and speaking. Emphasis is placed on grammar, vocabulary, comprehension, and cultural context based on each curriculum’s exam format.",
+        "These two courses exist because IB students arrive with very different levels of French. French Ab Initio (SL only) is for genuine beginners with little or no prior French exposure. French B (SL and HL) is for students who have studied French for several years and can already handle intermediate texts and conversations. The school's IB coordinator confirms which one is right based on prior study, since the assessments are completely different.",
     },
     {
-      question: "Is support available for internal assessments & oral exams in IB French?",
+      question: "Are Ignite's French Tutors Native Speakers?",
       answer:
-        "Absolutely. Ignite’s IB French tutors provide guidance for internal assessments (IA), oral presentations, and writing tasks, helping students meet the IB language criteria with clarity and confidence.",
+        "We have both native French speakers and highly proficient non-native tutors on the team, and the right match depends on what a student is preparing for. Native speakers are usually the strongest fit for speaking exams and pronunciation work. Non-native tutors who have themselves passed through the IB, A-Level, or AP system often explain grammar more methodically and understand exam technique. We match the tutor to the exam and the student's current level.",
     },
     {
-      question: "Can students get help with past papers & exam strategies?",
+      question: "Do You Offer Online French Tutoring As Well As In-Person In Dubai?",
       answer:
-        "Yes, students practice with past papers and receive targeted coaching on exam strategies, timed responses, and common question types for IGCSE, A-Levels, and AP French exams.",
+        "Both. We run in-person sessions at our two Dubai centres (DIFC and JLT) and one-to-one online French tutoring for students across the wider UAE or with packed schedules. Virtual sessions employ the same instructors and framework as in-person sessions, utilizing screen-sharing to facilitate text analysis, spoken practice, and review of previous examination questions. Most students searching for a French tutor near me end up using both formats across the year.",
     },
     {
-      question: "How do I start French tutoring at Ignite?",
+      question: "How Are Speaking And Listening Skills Prepared For French Exams?",
       answer:
-        "You can begin by booking a free demo class. This allows you to assess our teaching style and get paired with a French tutor suited to your academic needs and curriculum.",
+        "Speaking and listening are usually the highest-anxiety components for UAE students. For speaking, sessions include structured practice on the exam topic list and timed mock orals matched to the real format (IB Individual Oral, IGCSE speaking test, A-Level oral, AP interpersonal and presentational speaking). For listening, we use past paper audio from each board so students get used to the accent variations, speed, and question types they will actually face.",
+    },
+    {
+      question: "How Soon Before Exams Should A Student Start French Tutoring?",
+      answer:
+        "For IGCSE and GCSE French, three to six months of weekly sessions before the May/June series is the sensible window. IB Diploma students benefit from starting early in DP1, since the Individual Oral is assessed before the final exam year. AP French students need at least four months before the May exam window. Earlier starts let us spread oral practice, listening exercises, and past papers across the full preparation arc.",
     },
   ];
 

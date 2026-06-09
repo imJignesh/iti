@@ -28,29 +28,28 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "Which curricula does Ignite support for Business Studies tutoring?",
-      answer:
-        "Ignite offers Business Studies tutoring for IB (SL/HL), IGCSE, A-Levels, and AP Business, tailored to each board’s syllabus and assessment style.",
+      question: "Which Business Courses And Boards Do Ignite's Tutors Cover?",
+      answer: "Ignite's business tutors in Dubai cover Cambridge IGCSE Business Studies (0450, and the 9-1 graded 0986), Edexcel International GCSE Business, Cambridge International AS and A-Level Business (9609), UK A-Level Business boards, IB Business Management (SL and HL, and MYP), and the new AP Business with Personal Finance course. Tutoring is matched to the exact board and level your school follows, since the assessment style differs across them.",
     },
     {
-      question: "What key topics are covered in Business Studies sessions?",
-      answer:
-        "Tutoring covers business organization, marketing, finance, operations, HR management, case study analysis, and exam-specific application of concepts.",
+      question: "Is IB Business Management The Same As Business Studies?",
+      answer: "They are closely related but not identically named. At IGCSE and A-Level, the subject is called Business Studies. In the IB Diploma, the same broad subject is officially called Business Management, and it sits in Group 3 (Individuals and Societies). The content overlaps heavily across marketing, finance, human resources, and operations, but the IB assessment structure and the case-study approach are distinct, which is why tutoring should be matched to the specific course.",
     },
     {
-      question: "Do tutors help with essay writing and structured answers?",
-      answer:
-        "Yes, students receive guidance on structuring answers, using business terminology effectively, and writing analytical essays for exams like IB Paper 1 and A-Level case-based questions.",
+      question: "Is There An AP Business Course?",
+      answer: "Yes, and it is new. The College Board is launching AP Business with Personal Finance for the 2026 to 2027 school year as part of its AP Career Kickstart programme. The course covers entrepreneurship, marketing, finance, accounting, and management alongside personal finance, and it is built around real-world application and a business project rather than pure theory. Our AP tutors prepare students for this course and its project-based assessment.",
     },
     {
-      question: "Is exam preparation part of the tutoring program?",
-      answer:
-        "Absolutely. Students practice with past papers, timed responses, and exam strategy sessions to improve clarity, speed, and scoring techniques.",
+      question: "Do You Offer Online Business Studies Tutoring As Well As In-Person?",
+      answer: "Both. We run in-person sessions at our two Dubai centres (DIFC and JLT) and one-to-one online business studies tutoring for students across the wider UAE or with packed schedules. Online sessions use the same tutors and structure as in-centre ones, with screen-sharing for working through case studies, calculations, and past paper questions. Many students use a mix of both formats across the year.",
     },
     {
-      question: "Can I attend a demo session before enrolling?",
-      answer:
-        "Yes, Ignite offers a free demo class so students can experience our tutoring style and get matched with a tutor suited to their curriculum and academic needs.",
+      question: "How Do Tutors Help With Business Case Studies And Exam Essays?",
+      answer: "Business marks are won on application and evaluation, not memorised definitions. Our tutors teach students to read a case study quickly, apply theory to that specific business rather than in the abstract, and build the analysis-to-evaluation chains that higher-mark questions reward. We work through command words, essay structure, and the longer questions (such as the IGCSE high-mark evaluation question) where most marks are gained or lost.",
+    },
+    {
+      question: "How Soon Before Exams Should A Student Start Business Tutoring?",
+      answer: "For IGCSE and A-Level Business, three to six months of weekly sessions before the May/June series is the sensible window. IB Diploma students benefit from starting early, since the Internal Assessment research project runs across the course. Earlier starts let us spread case-study practice, quantitative finance work, and past papers across the full preparation arc rather than cramming theory at the end.",
     },
   ];
 
@@ -106,7 +105,7 @@ const FAQSection = () => {
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "2rem"
               }}
             >
-              Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
+              Frequently Asked Questions About <br /> <span className="highlight"> Business Studies </span> Tutoring
             </h3>
 
             <p
@@ -125,7 +124,8 @@ const FAQSection = () => {
                 marginBottom: isMobile ? "15px" : "20px"
               }}
             >
-              Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
+              Here are some of the most common questions we receive about our Business Studies tutoring services in Dubai.
+            </p>
           </div>
 
           {/* Right Section */}

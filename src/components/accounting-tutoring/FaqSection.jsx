@@ -28,29 +28,29 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "What curricula does Ignite offer Accounting tutoring for?",
+      question: "Does The IB Diploma Offer A Standalone Accounting Course?",
       answer:
-        "Ignite provides Accounting tutoring for IGCSE, AS & A-Levels (Cambridge & Edexcel), and introductory university-level courses.",
+        "No, it does not. IB Group 3 (Individuals and Societies) has ten subjects, and Accounting is not one of them. Accounting content sits inside IB Business Management as Unit 3 (Finance and Accounts), covering final accounts, ratio analysis, cash flow, sources of finance, and investment appraisal. Many IB students still need tutoring on this material, which we provide as Business Management support rather than a separate IB Accounting course.",
     },
     {
-      question: "What topics are covered in Accounting tutoring sessions?",
+      question: "Is There An AP Accounting Course?",
       answer:
-        "Tutoring includes financial statements, double-entry bookkeeping, ratios, adjustments, ledgers, trial balance, and accounting principles.",
+        "There is no standalone AP Accounting course either. The closest fit is the new AP Business with Personal Finance, launching nationally for the 2026 to 2027 school year as part of AP Career Kickstart, which covers accounting as one of five core disciplines alongside entrepreneurship, marketing, finance, and management. Our AP tutors support students on the accounting content within that course, including financial statements and basic analysis.",
     },
     {
-      question: "Is support available for both theory and numerical questions?",
+      question: "Do You Offer Online Accounting Tutoring As Well As In-Person?",
       answer:
-        "Yes, sessions focus on building both conceptual understanding and calculation accuracy to handle structured and application-based questions.",
+        "Both. We run in-person sessions at our two Dubai centres (DIFC and JLT) and one-to-one online accounting tutoring for students across the wider UAE or with packed schedules. Online sessions use the same tutors and structure as in-centre ones, with screen-sharing for working through ledger entries, trial balances, and full statements line by line. Many students searching for an accounting tutor near me end up using both formats across the year.",
     },
     {
-      question: "Do you offer past paper practice and exam preparation?",
+      question: "How Do Tutors Help With The Calculation-Heavy Parts Of Accounting?",
       answer:
-        "Absolutely. Students work on past papers, mock tests, and receive feedback on time management, presentation, and examiner expectations.",
+        "Accounting marks are won on accuracy and presentation, not just final answers. Our tutors drill the double-entry logic first, since most calculation errors trace back to a misapplied debit or credit. We then build the format discipline that mark schemes reward: correct headings, dates, narrations, and balance carrying-forward. Past paper questions are marked against the actual board mark scheme so students see exactly where method marks are being lost.",
     },
     {
-      question: "Can I book a free demo class before joining?",
+      question: "How Soon Before Exams Should A Student Start Accounting Tutoring?",
       answer:
-        "Yes, Ignite offers a free demo session so students can assess the teaching approach and get paired with the right Accounting tutor.",
+        "For IGCSE and A-Level Accounting, three to six months of weekly sessions before the May/June series is the sensible window. Accounting is cumulative, so foundation gaps from earlier in the course quietly break later topics, which is why earlier starts work better. Students taking the IB Business Management Finance and Accounts unit benefit from starting at the beginning of DP1, since the material carries through to the Internal Assessment.",
     },
   ];
 
@@ -106,7 +106,7 @@ const FAQSection = () => {
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "2rem"
               }}
             >
-              Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
+              Which Accounting Courses And Boards Do <br /> <span className="highlight"> Ignite's</span> Tutors Cover?
             </h3>
 
             <p
@@ -125,7 +125,8 @@ const FAQSection = () => {
                 marginBottom: isMobile ? "15px" : "20px"
               }}
             >
-              Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
+              Ignite's accounting tutors in Dubai cover Cambridge IGCSE Accounting (0452, and the 9-1 graded 0985), Edexcel International GCSE Accounting, Cambridge International AS and A-Level Accounting (9706), and Edexcel International A Level Accounting (WAC11 and WAC12). We also support IB Diploma students with the Finance and Accounts unit of Business Management, and accounting fundamentals within the new AP Business with Personal Finance course launching in 2026.
+            </p>
           </div>
 
           {/* Right Section */}

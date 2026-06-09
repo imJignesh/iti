@@ -13,8 +13,8 @@ export default function Accordion() {
       {/* Header Row */}
       <div className="header" onClick={() => setOpen(!open)}>
         <div className="text-content">
-          <h2 className="title">Expert Physics Tutor In Dubai UAE For Academic Confidence</h2>
-          <p className="subtitle">Ignite’s expert Physics tutors in Dubai offer in-depth guidance tailored to every learner’s pace and goals. With strong fundamentals and conceptual clarity, students develop the confidence needed to handle even the most complex topics. Our teaching methods encourage curiosity, critical thinking, and real-world application. Whether you’re aiming for higher grades or stronger conceptual understanding, we’re here to help. Students benefit from a structured yet flexible approach. Each lesson builds clarity, momentum, and measurable progress.</p>
+          <h2 className="title"><strong>Physics Tutors In Dubai For IB, IGCSE, A-Level, And AP Students</strong></h2>
+          <p className="subtitle">Ignite Training Institute provides 1-on-1 Physics tutoring in Dubai across IB (SL and HL), IGCSE, GCSE, A-Level, and AP Physics. Lessons run from our DIFC and JLT centres and online, covering mechanics, waves, electricity, fields, and modern physics, with tutors matched to each exam board and a focus on problem-solving, the maths behind the physics, and exam technique.</p>
         </div>
         <div className="icon">{open ? <Minus size={20} /> : <Plus size={20} />}</div>
       </div>
@@ -22,44 +22,111 @@ export default function Accordion() {
       {/* Expanded Content */}
       {open && (
         <div className="expanded">
-          <h2 className="title">Find The Best Physics Tutor In Dubai For You With Ignite Training Institute</h2>
-          <p className="subtitle">At Ignite, we help you find the right Physics tutor in Dubai to match your academic needs and learning style. Our qualified tutors offer both academic expertise and mentorship, helping students overcome challenges with ease. Whether it's revision support or concept mastery, we ensure a personalized and results-driven approach. With a proven track record of success, our students consistently achieve top results. Discover a tutor who truly understands your goals and helps you reach them. Start building your academic future with Ignite.</p>          <br />
+          <p className="subtitle">Most students come to us when the numerical side of physics stops making sense, when they understand a concept in class but cannot apply it to an unfamiliar exam question, or when an IB Internal Assessment is stuck at the design stage. Some students join us months ahead of mocks; others arrive with weeks to go and need focused work on one topic or one paper. Every new student starts with a diagnostic where the tutor works through recent problems and past paper attempts to see exactly where marks are being lost.</p><br />
 
-          <h2 className="title">Personalized Physics Tuition In Dubai For Every Student</h2>
-          <p className="subtitle">We believe every learner deserves tailored support, and that’s what our personalized Physics tuition in Dubai delivers. Our tutors focus on individual strengths, learning gaps, and curriculum requirements to craft lessons that make a difference. With one-on-one attention and real-time feedback, students learn faster and retain more. We cover IB, IGCSE, A-Levels, and other major curricula with precision and depth. Whether it’s problem-solving, lab work, or theory, we support holistic understanding. Personalized learning leads to consistent growth and confidence.</p>          <br />
+          <p className="subtitle">We work with students from international schools across Dubai, including those at GEMS Wellington, Dubai College, Jumeirah College, JESS Ranches, Dubai American Academy, Repton School Dubai, and similar IB / British / American curriculum schools across DIFC, JLT, Jumeirah, and the wider UAE. Physics is also a gateway subject for engineering, medicine, and other STEM degrees, so we keep an eye on the grade those university routes expect.</p><br />
 
-          <h2 className="title">Score Higher With Targeted Physics Coaching In Dubai Today</h2>
-          <p className="subtitle">Boost your Physics performance with targeted coaching designed for exam success. At Ignite, our tutors identify weak areas early and help you master them through focused practice and proven strategies. From foundational concepts to advanced applications, every session is aligned with your academic goals. We offer timed assessments, review sessions, and revision drills to build exam readiness. Whether you need help with mechanics, electricity, or thermodynamics, we’ve got you covered. High scores start with high-impact coaching.</p>          <br />
+          <h3 className="title"><strong>Physics Courses At A Glance: IB, IGCSE, A-Level, And AP Compared</strong></h3>
+          <div className="table-responsive">
+            <table className="table table-bordered text-white">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Level</th>
+                  <th>Board Code</th>
+                  <th>Key Assessment Components</th>
+                  <th>Typical Year/Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IB Physics SL</td>
+                  <td>DP Standard Level</td>
+                  <td>IB</td>
+                  <td>Paper 1 (1A multiple choice + 1B data) + Paper 2 + Internal Assessment (20%)</td>
+                  <td>DP1 to DP2 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>IB Physics HL</td>
+                  <td>DP Higher Level</td>
+                  <td>IB</td>
+                  <td>Same papers as SL with additional HL content + Internal Assessment (20%)</td>
+                  <td>DP1 to DP2 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>IGCSE Physics</td>
+                  <td>Year 10 to 11</td>
+                  <td>Cambridge 0625 / 0972</td>
+                  <td>Multiple-choice, theory, and practical/alternative-to-practical papers</td>
+                  <td>Year 10 to 11 (Grade 9 to 10)</td>
+                </tr>
+                <tr>
+                  <td>A-Level Physics</td>
+                  <td>AS + A2</td>
+                  <td>Cambridge 9702</td>
+                  <td>MCQ, AS and A2 structured papers, plus a practical assessment</td>
+                  <td>Year 12 to 13 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>AP Physics</td>
+                  <td>College Board</td>
+                  <td>AP</td>
+                  <td>Separate courses (1, 2, C: Mechanics, C: E&M); each 40 MC + free response; scored 1 to 5</td>
+                  <td>Grade 11 to 12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br />
 
-          <h2 className="title">Physics Classes In Dubai For Academic Excellence & Exam Support</h2>
-          <p className="subtitle">Join our Physics classes in Dubai to experience structured learning and impactful exam support. Taught by experienced educators, our classes combine strong theoretical grounding with practical problem-solving. We help students from diverse curricula prepare for their board exams with clarity and confidence. Through interactive learning and regular assessments, we track performance and encourage improvement. Whether you’re in IB, IGCSE, or A-Levels, we tailor content to suit your needs. Excellence is not just a goal – it’s the result of consistent support.</p>          <br />
+          <h3 className="title"><strong>Why Students Often Struggle With Physics?</strong></h3>
+          <p className="subtitle">The biggest barrier in physics is usually the maths, not the physics itself. <strong>Rearranging equations</strong> trips students up first, since a student who understands a concept can still lose every mark by getting the algebra wrong under exam pressure. <strong>Units and significant figures</strong> are the second consistent gap, where correct working loses marks for a missing or wrong unit. <strong>Vectors and graph work</strong> are the third, because direction, components, and gradients carry meaning that students often skip past. <strong>Visualising abstract ideas</strong> like fields, forces, and waves is the fourth, since you cannot see a magnetic field or an electric force the way you can see a moving object. Tutoring fixes the maths foundation first, because that single change lifts marks across every topic.</p><br />
 
-          <h2 className="title">Top-Notch Physics Tutoring In Dubai For Stronger Skills</h2>
-          <p className="subtitle">Our Physics tutoring program in Dubai is built to sharpen skills and deepen understanding. Students are encouraged to ask questions, explore concepts, and engage in active learning. With our expert guidance, topics like kinematics, energy, and magnetism become easy to grasp. Tutors provide timely feedback, performance tracking, and continuous motivation. Whether it’s grade improvement or concept mastery, we help students progress with confidence. Unlock your true potential with top-quality tutoring that delivers results.</p>          <br />
+          <h2 className="title"><strong>Physics Tuition And Coaching In Dubai: Formats, Sessions, And What's Included?</strong></h2>
+          <p className="subtitle">Physics tuition in Dubai works best when sessions combine concept teaching with worked problems and past paper practice, rather than passive review. We run two formats: in-person at our DIFC or JLT centres, and one-to-one online for students based further out in Dubai or across the wider UAE. Both formats use the same tutor pool and the same lesson structure, with screen-sharing during online sessions for working through problems step by step.</p><br />
+          <p className="subtitle">Private one-to-one sessions are the most popular choice, since physics problems are personal: the question is always where this particular student is losing method marks. Sessions are typically 60 minutes weekly during regular term, extending to 90-minute blocks twice a week during exam preparation. Each session covers a targeted teaching block, worked practice on the relevant calculations, and past paper questions marked against the actual board mark scheme. Small-group sessions of two to three students are available for IGCSE and GCSE Physics where families want the structure of coaching at a lower per-session cost.</p><br />
+          <p className="subtitle">For families weighing up exam boards before committing to tuition, our blog on <a href="https://ignitetraininginstitute.com/blog/what-is-the-difference-between-edexcel-and-cambridge" className="text-white text-decoration-underline">the differences between Edexcel and Cambridge</a> is useful background.</p><br />
 
-          <h2 className="title">Online Physics Tutor In Dubai Helping Students Build Confidence</h2>
-          <p className="subtitle">Study from anywhere in Dubai with our expert online Physics tutors. With interactive whiteboards, shared resources, and live explanations, students enjoy a classroom-like experience from the comfort of home. Our digital learning sessions are flexible, effective, and fully personalized to suit your schedule and pace. Whether it’s IB, IGCSE, or A-Levels, our online tutoring ensures you’re always supported. Get help before exams, clarify doubts instantly, and improve steadily. Confidence in Physics starts with the right online tutor.</p>          <br />
+          <h2 className="title"><strong>IB Physics Tutors For DP (SL And HL) And MYP</strong></h2>
+          <p className="subtitle">IB Physics changed substantially with the syllabus first examined in May 2025, and a lot of material online still describes the old course. Here is how it actually works now.</p><br />
+          <p className="subtitle">The course is built around <strong>five themes</strong>: Space, Time and Motion; The Particulate Nature of Matter; Wave Behaviour; Fields; and Nuclear and Quantum Physics. This replaced the old numbered topics. The optional topics were removed and astrophysics was dropped, so every SL and HL student now studies the same core content, with HL going deeper within the same five themes rather than choosing a separate option.</p><br />
+          <p className="subtitle">Assessment changed too. The standalone Paper 3 was removed, and its experimental-design and data-analysis questions were absorbed into <strong>Paper 1B</strong>. Students now sit Paper 1 (Paper 1A multiple choice, plus Paper 1B data-based questions) and Paper 2 (short-answer and extended-response). The external papers carry roughly 80% of the grade, and the new structure rewards scientific reasoning and uncertainty analysis more than recall.</p><br />
+          <p className="subtitle"><strong>IB Physics SL and HL</strong> share the five themes, but HL covers more material at greater depth, with topics such as rotational mechanics and deeper field theory. The <strong>Internal Assessment</strong> is a scientific investigation worth 20%, with a 3,000-word limit, and it runs across the two years. We support students from research-question design through to uncertainty handling and evaluation, since that is where most IA marks are won or lost. Our <a href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai" className="text-white text-decoration-underline">IBDP tutors in Dubai</a> cover the full DP framework, and our <a href="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai" className="text-white text-decoration-underline">IB MYP tutors</a> handle the Sciences foundation that leads into DP Physics.</p><br />
 
-          <h2 className="title">Trusted Physics Learning Centre In Dubai For Exam Success</h2>
-          <p className="subtitle">Ignite is a trusted name for Physics education in Dubai, known for its rigorous academic standards and caring approach. Our learning centre is equipped to support students across all major curricula, preparing them for academic and exam success. With structured study plans, mock tests, and constant mentorship, we help students build exam strategies and subject mastery. Physics is no longer intimidating with the right guidance in place. Our results speak for themselves – and so do our students’ achievements.</p>          <br />
+          <h2 className="title"><strong>IGCSE And GCSE Physics Tutors In Dubai</strong></h2>
+          <p className="subtitle">IGCSE Physics is taken by most UAE international school students at the British curriculum level, and it builds the foundation that A-Level and IB Physics assume. <strong>Cambridge IGCSE Physics (0625)</strong> is the standard international qualification, graded A* to G, with <strong>0972</strong> being the 9-1 graded variant of the same syllabus. Students taking combined science rather than separate Physics usually sit Cambridge IGCSE Co-ordinated Sciences (0654), which overlaps heavily with 0625 for the core physics topics.</p><br />
+          <p className="subtitle">The course covers motion, forces and energy, thermal physics, waves, electricity and magnetism, and atomic physics. Cambridge IGCSE Physics is tiered into Core and Extended, and students sit either a practical exam or the alternative-to-practical paper, both of which test experimental skills, measurement, and data handling. We build those practical-paper skills alongside the theory rather than leaving them to the end.</p><br />
+          <p className="subtitle">For students at British curriculum schools sitting UK GCSE Physics rather than the international IGCSE, we tutor AQA, OCR, and Pearson Edexcel GCSE Physics. Our <a href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai" className="text-white text-decoration-underline">IGCSE tutors in Dubai</a> work across all major IGCSE subjects, so students taking Physics alongside Maths, Chemistry, or Biology can coordinate scheduling under one weekly plan.</p><br />
 
-          <h2 className="title">Looking For An Physics Tutor Near Me In Dubai? Get Help Today!</h2>
-          <p className="subtitle">If you’re searching for a “Physics tutor near me” in Dubai, Ignite is here with the perfect match. Our local tutors bring deep curriculum knowledge and a personalized touch to every session. Get the flexibility of choosing between home tutoring, centre-based sessions, or online classes. Students benefit from individual attention, proven techniques, and consistent progress tracking. Don’t wait to fall behind – get expert support right where you are. Start your journey to better grades and stronger confidence now.</p>          <br />
+          <h2 className="title"><strong>A-Level And AS Physics Tutors For Theory And Practical Skills</strong></h2>
+          <p className="subtitle">A-Level Physics is one of the most demanding A-Levels, combining heavy conceptual content with a real mathematical load. <strong>Cambridge International A-Level Physics (9702)</strong> is the most common specification in UAE schools. It is assessed through a multiple-choice paper, AS and A2 structured papers, and a practical assessment covering planning, analysis, and evaluation. The content runs across mechanics, waves, electricity, fields, and nuclear and particle physics.</p><br />
+          <p className="subtitle">For students at British curriculum schools sitting UK A-Level Physics, we tutor AQA, Pearson Edexcel, and OCR specifications, which include a separately assessed practical endorsement alongside the written papers. Practical understanding feeds directly into exam questions, so it cannot be treated as optional.</p><br />
+          <p className="subtitle">The skills that separate top A-Level candidates are mathematical fluency (rearranging equations, working with vectors, handling logarithms and exponentials), correct use of units and significant figures, and the ability to apply familiar physics to unfamiliar scenarios. This is exactly why so many students look for a tutor who can support physics and maths together.</p><br />
+          <p className="subtitle">Most students preparing for AS papers in May need targeted work on calculation accuracy and structured answers, while A2 students need help with synoptic links and the practical paper. Our <a href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai" className="text-white text-decoration-underline">A-Level tutors in Dubai</a> coordinate Physics alongside Maths, Chemistry, and other subjects under a single weekly plan, which suits the many students taking Physics for an engineering or medicine application.</p><br />
 
-          <h2 className="title">Get Better Results With IB Physics Tutor In Dubai Support</h2>
-          <p className="subtitle">Our IB Physics tutors in Dubai specialize in HL and SL support, guiding students through a challenging and concept-heavy curriculum. We focus on strengthening IA preparation, lab report clarity, and command terms for exams. Tutors break down complex theories into digestible parts, using real-life examples to enhance understanding. We ensure students are confident with calculations, evaluations, and application-based questions. Our proven track record includes multiple 6s and 7s from past students. With the right support, IB Physics becomes manageable and even enjoyable.</p>          <br />
+          <h2 className="title"><strong>AP Physics Tutors: Physics 1, 2, And C</strong></h2>
+          <p className="subtitle">AP Physics is not a single course. The College Board runs four separate AP Physics courses, and students take whichever their school offers: <strong>AP Physics 1</strong> and <strong>AP Physics 2</strong> are algebra-based, while <strong>AP Physics C: Mechanics</strong> and <strong>AP Physics C: Electricity and Magnetism</strong> are calculus-based and aimed at students heading into engineering and the physical sciences.</p><br />
+          <p className="subtitle">The courses were redesigned for the May 2025 exams. AP Physics 1 now has eight units, with fluid mechanics moved in from AP Physics 2. Across the courses, the multiple-choice section is 40 questions with four answer choices, and the free-response section uses a set of structured question types covering experimental design, data analysis, and mathematical reasoning. The two AP Physics C exams now sit in separate testing sessions. All AP Physics exams are scored on a 1 to 5 scale, with most US universities looking for a 4 or 5 for credit.</p><br />
+          <p className="subtitle">AP Physics rewards clear reasoning and correct working, not just final answers, and the free-response section is where method marks are won. Our <a href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai" className="text-white text-decoration-underline">AP tutors in Dubai</a> work across the full AP range, with AP Physics handled by tutors familiar with both the algebra-based and calculus-based courses and the redesigned exam format.</p><br />
 
-          <h2 className="title">Experienced IGCSE Physics Tutor In Dubai For Exam Prep</h2>
-          <p className="subtitle">Our IGCSE Physics tutors in Dubai are experienced in both Edexcel and Cambridge syllabi, offering exam-focused guidance and conceptual clarity. From forces and motion to energy transfers and electricity, we help students tackle the most challenging topics. Every lesson is backed with past paper practice, tips on marking schemes, and revision strategies. Students learn how to approach 4-mark and 6-mark questions with precision and confidence. We create a supportive, structured learning space that encourages progress. With our help, exam prep becomes effective and less stressful.</p>          <br />
+          <h2 className="title"><strong>Core Physics Topics And Skills We Cover</strong></h2>
+          <p className="subtitle">Most students need help with specific topics rather than the whole subject, so the lesson plan is built around the areas where marks are actually being lost. The topics we support most often are:</p><br />
+          <p className="subtitle"><strong>Mechanics</strong>, including motion, forces, energy, momentum, and circular motion, which is where most students start and where the maths foundation is set. <strong>Waves and optics</strong>, including wave behaviour, interference, and the electromagnetic spectrum. <strong>Electricity and magnetism</strong>, including circuits, fields, and electromagnetic induction, which students consistently find the hardest to visualise. <strong>Thermal physics</strong>, including temperature, heat transfer, and gas laws. <strong>Fields and nuclear and modern physics</strong>, including gravitational and electric fields, radioactivity, and quantum ideas.</p><br />
+          <p className="subtitle">Alongside content, we build the cross-cutting skills that physics mark schemes reward: rearranging and applying equations, correct use of units and significant figures, working with vectors and graphs, and showing clear method so that working earns marks even when a final answer slips. Because so much of physics rests on the maths, students who want both supported together can work with a tutor across Physics and Maths, and those who prefer one-to-one delivery across multiple subjects often work with our <a href="https://ignitetraininginstitute.com/private-tutors-in-dubai" className="text-white text-decoration-underline">private tutors in Dubai</a>.</p><br />
 
-          <h2 className="title">Achieve More With A Levels Physics Tutor In Dubai Help</h2>
-          <p className="subtitle">Take your grades higher with our expert A Levels Physics tutors in Dubai. We simplify complex topics such as quantum physics, nuclear reactions, and thermodynamics to ensure clear understanding. Our tutors emphasize real-world application and step-by-step problem solving. Students also receive past paper practice, exam tips, and targeted feedback. Whether you're pursuing AQA, Edexcel, or Cambridge, we align our sessions to your board. With consistent guidance, high achievement in A Levels Physics is within reach.</p>          <br />
+          <h2 className="title"><strong>Ignite: Best Physics Tutor In Dubai For Every Curriculum</strong></h2>
+          <p className="subtitle">Ignite has been running tutoring in Dubai for over ten years, and Physics is one of our most active subjects, with a bench of specialist tutors including Deepak, who has more than thirteen years of experience. Our two centres at DIFC and JLT serve students from international schools across Dubai, and our online programme extends that reach to Sharjah, Abu Dhabi, and the wider UAE.</p><br />
+          <p className="subtitle">What makes Physics tutoring work, in our experience, is matching the tutor to the exam board and the specific gap, then fixing the maths foundation that sits under everything else. A tutor preparing a student for the new IB five-theme papers works very differently from one coaching an A-Level student through the practical paper or an AP student through calculus-based mechanics.</p><br />
+          <p className="subtitle">Every Physics tutor at Ignite has direct experience with at least one of the major curriculums, and most have taught several. New students start with a diagnostic, get matched to a tutor whose curriculum specialism fits, and follow a session-by-session plan built around the actual papers, practicals, and IA work they need to deliver.</p><br />
+          <p className="subtitle">If you're considering Physics tutoring for the first time, a <a href="https://ignitetraininginstitute.com/join-free-demo-class" className="text-white text-decoration-underline">free demo class with Ignite</a> is the simplest way to see how the diagnostic session and lesson structure works in practice. There's no expectation to commit beyond the demo.</p><br />
 
-          <h2 className="title">One-On-One AS Levels Physics Tutor In Dubai For Assured Improvement</h2>
-          <p className="subtitle">Our one-on-one AS Levels Physics tutoring in Dubai offers fully personalized support to help students overcome academic hurdles and achieve better results. Tutors focus on key areas like wave motion, circuits, and forces, making sure you grasp each topic completely. With tailored explanations, regular quizzes, and mentorship, students grow in confidence and competence. We help you prepare thoroughly for internal assessments and board exams. With our dedicated one-on-one sessions, improvement is not just possible – it’s guaranteed.</p>          <br />
-
-          <h2 className="title">AP Physics Tutor In Dubai Helping Students Excel With Confidence</h2>
-          <p className="subtitle">Mastering AP Physics requires strong conceptual clarity, problem-solving skills, and consistent practice. At Ignite Training Institute, our AP Physics tutors in Dubai help students tackle complex topics like mechanics, electricity, magnetism, and waves with ease. Personalized sessions are designed to strengthen weak areas, improve analytical thinking, and boost exam performance. With exam-focused strategies, practice tests, and one-on-one guidance, students gain confidence in solving challenging problems. Our tutors ensure students not only prepare for AP exams but also build a strong foundation for future STEM studies.</p>
+          <h3 className="title"><strong>Know more about our programmes:</strong></h3>
+          <ul className="subtitle" style={{ listStyleType: "disc", paddingLeft: "20px" }}>
+            <li><a href="https://ignitetraininginstitute.com/ib-curriculum-tutors-in-dubai" className="text-white text-decoration-underline">IB Curriculum Tutors In Dubai</a></li>
+            <li><a href="https://ignitetraininginstitute.com/british-curriculum-tutors-in-dubai" className="text-white text-decoration-underline">British Curriculum Tutors In Dubai</a></li>
+            <li><a href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai" className="text-white text-decoration-underline">AP Tutors In Dubai</a></li>
+            <li><a href="https://ignitetraininginstitute.com/join-free-demo-class" className="text-white text-decoration-underline">Free Demo Class At Ignite Training Institute</a></li>
+            <li><a href="https://ignitetraininginstitute.com/contact-us" className="text-white text-decoration-underline">Contact Us</a></li>
+          </ul>
           <br /><br />
           <h2><strong>Ignite's Exclusive Learning Resources </strong></h2>
           <h3><strong>IB Resources</strong></h3>

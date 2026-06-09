@@ -74,42 +74,50 @@ const MathsTutorsInDubai = ({ headerHeight }) => {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "What levels of Maths tutoring does Ignite offer?",
+                    "name": "Which Maths Courses And Boards Do Ignite's Tutors Cover?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Ignite provides expert Maths tutoring for IB (AA & AI, SL/HL), IGCSE (Core & Extended), A-Levels (Pure, Mechanics, Stats), and AP Calculus AB/BC and Statistics."
+                        "text": "Ignite's maths tutors in Dubai cover Cambridge IGCSE Maths (0580) and Edexcel International (4MA1) at Core and Extended, plus Additional Maths (0606), Cambridge International AS and A-Level Maths (9709), Edexcel IAL, AQA and OCR A-Level, IB Maths (both Analysis and Approaches and Applications and Interpretation, at SL and HL), and the AP maths courses. Tutoring is matched to the exact board and level your school follows."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Do tutors focus on concept clarity or exam techniques?",
+                    "name": "What Is The Difference Between IB Maths AA And AI, And Which Should I Choose?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Both. Sessions are designed to build strong foundational understanding while also teaching students how to approach past paper questions, apply formulas, and manage time effectively."
+                        "text": "IB Maths splits into two routes. Analysis and Approaches (AA) is the traditional, pure-maths-heavy course built around algebra, calculus, and proof, and it suits engineering, physics, and mathematics degrees. Applications and Interpretation (AI) is the applied, statistics-and-modelling course for fields like business, design, and social sciences. Both run at SL and HL. The right choice depends on the degree a student is aiming for, which is exactly what we help families work out."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Can Ignite help if I’m struggling with specific Maths topics?",
+                    "name": "Do You Offer Online Maths Tutoring As Well As In-Person In Dubai?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Absolutely. Tutors offer targeted support on challenging areas such as calculus, algebra, vectors, or probability through customized lessons and one-on-one doubt solving."
+                        "text": "Both. We run in-person sessions at our two Dubai centres (DIFC and JLT) and one-to-one online maths tutoring for students across the wider UAE or with packed schedules. Online sessions use the same tutors and structure as in-centre ones, with a shared whiteboard for working through problems, graphs, and past paper questions step by step. Most students searching for a maths tutor near me end up using both formats across the year."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Are mock tests & exam-focused practice part of the tutoring?",
+                    "name": "Can One Tutor Cover Both Maths And Physics?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, students regularly attempt past papers, timed mock exams, and receive feedback on their problem-solving accuracy, speed, and presentation."
+                        "text": "Yes, and many families ask for exactly this. The algebra, trigonometry, and calculus behind A-Level and IB Physics are the same skills students build in their maths course, so a tutor who teaches both can fix the root cause when physics marks are actually being lost on the maths. Several of our tutors specialise in Maths and Physics together, which suits students on STEM university pathways."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Is there a way to try a class before committing?",
+                    "name": "How Are Private Maths Tutoring Sessions Structured?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes. Ignite offers a free demo class so students can experience the tutor’s approach and ensure it aligns with their academic goals before enrolling."
+                        "text": "Every new student starts with a diagnostic where the tutor works through recent class material and past paper attempts to find exactly where marks are being lost. Sessions are usually 60 minutes weekly during term, extending to 90-minute blocks during exam preparation. Each session combines targeted teaching, worked practice on the relevant topics, and past paper questions marked against the actual board mark scheme."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How Soon Before Exams Should A Student Start Maths Tutoring?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For IGCSE and A-Level Maths, three to six months of weekly sessions before the May/June series is the sensible window. IB Diploma students benefit from starting early in DP1, since the Internal Assessment runs across the course. AP students need at least four months before the May exams. Earlier starts let us spread topic coverage, problem-solving practice, and past papers across the full preparation arc rather than cramming."
                     }
                 }
             ]

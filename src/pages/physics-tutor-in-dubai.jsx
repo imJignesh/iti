@@ -54,42 +54,50 @@ const PhysicsTutorsInDubai = ({ headerHeight }) => {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "Which Physics curricula does Ignite offer tutoring for?",
+                    "name": "Which Physics Courses And Boards Do Ignite's Tutors Cover?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Ignite provides Physics tutoring for IB (SL/HL), IGCSE, A-Levels, and AP Physics (1, 2, and C), covering each board’s structure and exam format."
+                        "text": "Ignite's Physics tutors in Dubai cover Cambridge IGCSE Physics (0625, and the 9-1 graded 0972), GCSE Physics (AQA, OCR, Edexcel), Cambridge International AS and A-Level Physics (9702), UK A-Level Physics boards, IB Physics (SL and HL, plus MYP Sciences), and the AP Physics courses from the College Board. Tutoring is matched to the exact board and level your school follows, since paper structures differ across them."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Do tutors help with both theoretical concepts and numerical problems?",
+                    "name": "What Changed In The New IB Physics Syllabus (First Exams 2025)?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, sessions include in-depth concept explanation along with regular practice on formulas, calculations, and application-based questions."
+                        "text": "IB Physics was redesigned around five themes: Space, Time and Motion; The Particulate Nature of Matter; Wave Behaviour; Fields; and Nuclear and Quantum Physics. The optional topics were removed and astrophysics was dropped, so every SL and HL student now studies the same core. The standalone Paper 3 was removed and its experimental and data-analysis questions absorbed into Paper 1B. The Internal Assessment remains worth 20%."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Can I get help with IB Internal Assessments or lab report guidance?",
+                    "name": "How Do Ignite's Tutors Support The IB Physics Internal Assessment?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Absolutely. Tutors guide students through their IB Physics IAs, lab design, data analysis, and evaluation, ensuring alignment with IB criteria."
+                        "text": "The IB Physics Internal Assessment is a scientific investigation worth 20% of the final grade, with a 3,000-word limit. Our tutors help students choose a focused research question, design a method that produces measurable data, handle uncertainties and error analysis correctly, and write the evaluation against the IB criteria. The most common mark loss is a vague research question or weak treatment of uncertainties, so we settle both early."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "How does Ignite help students prepare for Physics exams?",
+                    "name": "Can A Tutor Help With Both Physics And Maths Together?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Tutoring includes past paper practice, time-bound mock tests, problem-solving strategies, and feedback on commonly tested topics and errors."
+                        "text": "Yes, and it is one of the most common requests we get. Physics marks are often lost on the maths, not the physics, so rearranging equations, handling units, and working with vectors and graphs hold students back even when they understand the concept. Many students book a physics and maths tutor in Dubai to fix both at once, since the algebra and trigonometry behind A-Level and IB Physics overlap directly with their maths course."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Is a Physics demo class available before enrolling?",
+                    "name": "Are Private Physics Tutoring Sessions In Dubai Available Online Or In Person?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, students can schedule a free demo session to meet a tutor, review their learning needs, and experience the teaching approach first-hand."
+                        "text": "Both. We run in-centre sessions at our two Dubai locations (DIFC and JLT), plus one-to-one online sessions for students across the wider UAE or with packed schedules. Online sessions use the same tutors and lesson structure as in-centre ones, with screen-sharing for working through problems, diagrams, and past paper questions. Most students searching for a physics tutor near me use both formats across the year."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How Soon Should A Student Start Physics Tutoring Before Their Board Exams?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For IGCSE and A-Level Physics, three to six months of weekly sessions before the May/June series is the sensible window. IB Diploma students benefit most from starting early in DP1, since the Internal Assessment runs across the course. AP Physics students need at least four months before the May exams. Earlier starts let us spread problem-solving practice, practical work, and past papers across the full preparation arc."
                     }
                 }
             ]

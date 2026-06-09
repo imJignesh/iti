@@ -28,30 +28,29 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "What curricula does Ignite support for Spanish tutoring?",
-      answer:
-        "Yes, Ignite offers specialized Spanish tutoring for students following the IB (SL/HL), IGCSE, A-Levels, and AP Spanish courses. Each program is aligned with the specific assessment objectives and exam formats of the chosen curriculum.",
+      question: "Which Spanish Courses Do Ignite's Spanish Tutors In Dubai Cover?",
+      answer: "Ignite's Spanish tutors in Dubai cover Cambridge IGCSE Spanish (0530), Pearson Edexcel International GCSE Spanish (4SP1), Cambridge International AS and A-Level Spanish, IB Spanish (Ab Initio, Language B HL and SL, plus MYP), and AP Spanish Language and Culture from the College Board. Most students join us between Year 7 and Year 13, or Grades 11 to 12.",
     },
     {
-      question: "What language skills are covered in Spanish tutoring?",
-      answer:
-        "Tutoring sessions cover reading, writing, listening, and speaking skills. Students work on grammar, vocabulary, comprehension, and cultural awareness, with customized support for both exam and coursework requirements.",
+      question: "What's The Difference Between IB Spanish Ab Initio, Language B, And Literature?",
+      answer: "IB Spanish Ab Initio (SL only) is for beginners with little or no prior Spanish. IB Spanish B (HL or SL) is for students with 3+ years of Spanish study, focused on intermediate texts and conversations. IB Spanish A: Literature is for fluent students studying Spanish as a literary subject, usually mother-tongue speakers. Most UAE international school students sit Ab Initio or Language B. The IB coordinator at your school verifies placement following a diagnostic assessment.",
     },
     {
-      question: "Can Ignite help with IB internal assessments & AP free-response practice?",
-      answer:
-        "Yes, tutors provide guidance for IB IAs, orals, and AP free-response practice to help students improve performance in coursework and exams.",
+      question: "Are Ignite's Spanish Tutors Native Speakers?",
+      answer: "We have both native Spanish speakers and highly proficient non-native tutors on the team. Native speakers typically excel in speaking assessments, oral presentations, and pronunciation exercises. Non-native instructors who have successfully completed IB, A-Level, or AP programs frequently provide a more systematic explanation of grammar and possess a deeper understanding of test-taking strategies. We match the tutor to the exam, the student's level, and parent preference.",
     },
     {
-      question: "Are past papers & mocks part of the Spanish tutoring program?",
-      answer:
-        "Students practice with past papers and mock exams to build accuracy, fluency, and exam confidence across all curricula.",
+      question: "Are Private Spanish Tutoring Sessions In Dubai Available Online Or In Person?",
+      answer: "We conduct in-centre sessions at DIFC and JLT for in-person instruction, in addition to offering one-on-one online sessions for students throughout the broader UAE or those with busy schedules. Online sessions use the same tutors and lesson structure as in-centre ones. Most students searching for a private Spanish tutor in Dubai or a Spanish tutor near me use both formats across the year, switching to online during heavy exam weeks.",
     },
     {
-      question: "How do I start French tutoring at Ignite?",
-      answer:
-        "You can schedule a free demo session to experience our teaching style and find the right Spanish tutor for your needs.",
+      question: "How Are Speaking And Listening Skills Prepared For Spanish Exams?",
+      answer: "Speaking and listening are the highest-anxiety components for most UAE students. Speaking sessions include structured conversation practice on the exam topic list, full mock orals timed to the real format (IB Individual Oral, IGCSE speaking test, A-Level oral, AP speaking tasks), and pronunciation work. Listening uses past paper audio from each exam board so students get used to the accent, speed, and question types they'll face.",
     },
+    {
+      question: "How Soon Should A Student Start Spanish Tutoring Before Their Board Exams?",
+      answer: "For IGCSE and GCSE Spanish, start three to six months before the May/June exam series. IB Diploma students benefit most from beginning in DP1, since the Individual Oral is assessed before the final exam year. A-Level students are encouraged to enroll prior to the AS examinations in May or before the mock assessments in November or January. AP Spanish students need at least four months before the May AP exam window.",
+    }
   ];
 
   return (

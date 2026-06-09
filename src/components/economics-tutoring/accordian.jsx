@@ -23,44 +23,152 @@ export default function Accordion() {
       {/* Expanded Content */}
       {open && (
         <div className="expanded">
-          <h2 className="title">Find The Best Economics Tutor In Dubai For You With Ignite Training Institute</h2>
-          <p className="subtitle">At Ignite Training Institute, we match students with the best Economics tutors in Dubai. Our team comprises experienced educators who understand international curricula and how to unlock student potential. We focus on conceptual clarity, exam strategies, and academic confidence. Whether you're in IB, IGCSE, or A Levels, we’ll help you find a tutor who suits your learning style. Begin your journey with a free consultation and see the difference expert guidance makes.</p>          <br />
+          <h2 className="title"><strong>Economics Tutors In Dubai For IB, IGCSE, A-Level, And AP Students</strong></h2>
+          <p className="subtitle">Ignite Training Institute provides 1-on-1 Economics tutoring in Dubai across IB (SL and HL), IGCSE, GCSE, A-Level, AP Microeconomics, and AP Macroeconomics. Lessons run from our DIFC and JLT centres and online, with tutors matched to each exam board and a focus on essay technique, diagrams, and evaluation.</p>
+          <br />
+          <p className="subtitle">Most students come to us when essay marks plateau despite knowing the content, when diagrams lose marks on labelling and accuracy, or when evaluation answers stay one-sided and never reach the top band. Some students join us months ahead of mocks; others arrive with weeks to go and need focused work on a specific paper. Every new student starts with a diagnostic where the tutor reviews recent essays or past paper attempts to see exactly where marks are being lost.</p>
+          <br />
+          <p className="subtitle">We work with students from international schools across Dubai, including those at GEMS Wellington, Dubai College, Jumeirah College, JESS Ranches, Dubai American Academy, Repton School Dubai, and similar IB / British / American curriculum schools across DIFC, JLT, Jumeirah, and the wider UAE.</p>
+          <br />
 
-          <h2 className="title">Personalized Economics Tuition In Dubai For Every Student</h2>
-          <p className="subtitle">No two students learn the same way, which is why our Economics tuition is completely personalized. We assess your strengths and challenges to create a plan that supports your academic goals. From foundational understanding to advanced exam techniques, our sessions are designed to maximise learning outcomes. Our tutors build rapport, foster curiosity, and guide you at a pace that works for you. Unlock your potential with tuition built just for you.</p>          <br />
+          <h3 className="title"><strong>Economics Courses At A Glance: IB, IGCSE, A-Level, And AP Compared</strong></h3>
+          <div className="table-responsive">
+            <table className="table table-bordered text-white">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Level</th>
+                  <th>Key Assessment Components</th>
+                  <th>Distinctive Skill Focus</th>
+                  <th>Typical Year/Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IB Economics SL</td>
+                  <td>DP Standard Level</td>
+                  <td>Paper 1 (essays) + Paper 2 (data-response) + Internal Assessment</td>
+                  <td>DEED essay structure, diagram accuracy</td>
+                  <td>DP1 to DP2 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>IB Economics HL</td>
+                  <td>DP Higher Level</td>
+                  <td>Paper 1 + Paper 2 + Paper 3 (quantitative) + Internal Assessment</td>
+                  <td>PED, XED, PES, multiplier calculations</td>
+                  <td>DP1 to DP2 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>IGCSE Economics (0455)</td>
+                  <td>Year 10 to 11</td>
+                  <td>Multiple choice + structured/data-response paper</td>
+                  <td>Command words, structured answers</td>
+                  <td>Year 10 to 11 (Grade 9 to 10)</td>
+                </tr>
+                <tr>
+                  <td>A-Level Economics (9708 / 9EC0 / 7136)</td>
+                  <td>AS + A2</td>
+                  <td>Multiple choice, data-response, and essay papers</td>
+                  <td>Evaluation chains, diagram annotation</td>
+                  <td>Year 12 to 13 (Grade 11 to 12)</td>
+                </tr>
+                <tr>
+                  <td>AP Microeconomics</td>
+                  <td>College Board</td>
+                  <td>60 MC (66%) + 3 FRQs (33%); scored on a 1 to 5 scale</td>
+                  <td>Market structures, firm behaviour, graphs</td>
+                  <td>Grade 11 to 12</td>
+                </tr>
+                <tr>
+                  <td>AP Macroeconomics</td>
+                  <td>College Board</td>
+                  <td>60 MC (66%) + 3 FRQs (33%); scored on a 1 to 5 scale</td>
+                  <td>AD/AS, money market, Phillips curve graphs</td>
+                  <td>Grade 11 to 12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br />
 
-          <h2 className="title">Score Higher With Targeted Economics Coaching In Dubai Today</h2>
-          <p className="subtitle">Achieving top grades in Economics requires more than just memorization. Our targeted coaching focuses on critical thinking, data interpretation, and application skills. With structured practice, timed assessments, and regular feedback, students develop the confidence to perform under pressure. Our Dubai-based coaches specialize in helping students reach their academic goals, whether it’s improving school performance or acing final exams. Start today and take control of your success.</p>          <br />
+          <h3 className="title"><strong>Why Students Often Struggle With Economics?</strong></h3>
+          <p className="subtitle">Four issues come up repeatedly across IB, IGCSE, A-Level, and AP students. <strong>Diagram precision</strong> is the most common, students understand the concept but lose marks on unlabelled axes, missing equilibrium points, or shifts drawn in the wrong direction. <strong>Evaluation depth</strong> is the second, since top grades require weighing both sides of an argument with real-world context, and most students stop at one-sided explanation.</p>
+          <br />
+          <p className="subtitle"><strong>Essay structure</strong> trips up students who know the content but don't follow the definition, explanation, diagram, application, and evaluation sequence examiners reward. <strong>Data-response under time pressure</strong> is the fourth, where students struggle to interpret tables, calculate percentages, and write concise answers to the command word within the minutes available. Tutoring targets each of these directly rather than treating them as general weaknesses.</p>
+          <br />
 
-          <h2 className="title">Economics Classes In Dubai For Academic Excellence & Exam Support</h2>
-          <p className="subtitle">Our Economics classes in Dubai combine expert teaching with strategic exam preparation. Whether you're preparing for IGCSE, IB, or A Levels, our programs are tailored to ensure syllabus coverage and exam success. Classes are interactive, engaging, and designed to help you think critically and write effectively. From individual doubt-solving to mock tests, we support you every step of the way. Excel in Economics with the right class environment and expert support.</p>          <br />
+          <h2 className="title"><strong>Economics Tuition And Coaching In Dubai: Formats, Sessions, And What's Included</strong></h2>
+          <p className="subtitle">Economics tuition in Dubai works best when sessions are built around the student's actual exam papers and the skills they're losing marks on. We run two formats: in-person at our DIFC or JLT centres, and one-to-one online for students based further out in Dubai or across the wider UAE. Both formats use the same tutor pool and the same lesson structure, so switching between them during the term doesn't break continuity.</p>
+          <br />
+          <p className="subtitle">Sessions are typically 60 minutes weekly during the regular term, extending to 90-minute blocks twice a week during exam preparation. Each session covers a targeted teaching block on one concept or skill, a timed practice task using past paper material, and feedback marked against the actual exam board mark scheme (Cambridge, Edexcel, AQA, IBO, or College Board). For IB students, sessions also cover Internal Assessment commentary writing and feedback against IB criteria. Small-group sessions of two to three students are available for IGCSE and A-Level Economics, where families want the structure of coaching at a lower per-session cost.</p>
+          <br />
+          <p className="subtitle">For families weighing up exam boards before committing to tuition, our blog on <a href="https://ignitetraininginstitute.com/blog/what-is-the-difference-between-edexcel-and-cambridge">the differences between Edexcel and Cambridge</a> is useful background.</p>
+          <br />
 
-          <h2 className="title">Top-Notch Economics Tutoring In Dubai For Stronger Skills</h2>
-          <p className="subtitle">Master Economics with top-notch tutoring that builds your academic and problem-solving skills. Our experienced tutors in Dubai help students strengthen their understanding of key topics and develop exam-ready strategies. Lessons are dynamic and customized to suit your curriculum and goals. Whether you're struggling with economic models or essay writing, we’re here to guide you through. Strengthen your skills and elevate your confidence in every lesson.</p>          <br />
+          <h2 className="title"><strong>IB Economics Tutors For DP (SL And HL) And MYP</strong></h2>
+          <p className="subtitle">IB Economics is one of the more analytically demanding DP subjects, and the SL and HL courses share a core but diverge at the assessment level. Both levels study the same four units: introduction to economics, microeconomics, macroeconomics, and the global economy.</p>
+          <br />
+          <p className="subtitle"><strong>IB Economics SL</strong> is assessed through Paper 1 (extended-response essays) and Paper 2 (data-response based on an unseen text and data), alongside the Internal Assessment. <strong>IB Economics HL</strong> adds Paper 3, a quantitative paper that requires calculations including price elasticity of demand (PED), cross elasticity of demand (XED), price elasticity of supply (PES), and the multiplier, plus deeper analytical treatment of the syllabus.</p>
+          <br />
+          <p className="subtitle"><strong>The IB Internal Assessment</strong> is a portfolio of three commentaries, where students analyse real-world news articles using economic theory and diagrams. This is built across both years of the DP, which is why we recommend starting tutoring early in DP1 rather than late in DP2.</p>
+          <br />
+          <p className="subtitle">For Paper 1 essays, we teach the <strong>DEED framework: Define, Explain, Example, Diagram</strong>. Each key term is defined, the economic reasoning is explained step by step, a real-world example grounds the answer, and an accurate diagram supports the analysis. Most students who plateau at a 4 or 5 are losing marks on the example and diagram steps, not the explanation. Our <a href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai">IBDP tutors in Dubai</a> cover the full DP framework, and our <a href="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai">IB MYP tutors</a> handle the Individuals and Societies foundation that leads into DP Economics.</p>
+          <br />
 
-          <h2 className="title">Online Economics Tutor In Dubai Helping Students Build Confidence</h2>
-          <p className="subtitle">Access expert Economics support from the comfort of your home with our online tutoring services. We bring personalized learning to your screen with interactive sessions, digital resources, and focused feedback. Whether you need help understanding market structures or preparing for a final exam, our online tutors in Dubai are ready to help. Build academic confidence and excel in Economics with flexible, effective online support.</p>          <br />
+          <h2 className="title"><strong>IGCSE And GCSE Economics Tutors In Dubai</strong></h2>
+          <p className="subtitle">IGCSE Economics introduces the fundamentals of micro and macroeconomics and is a strong foundation for A-Level or IB Economics later. <strong>Cambridge IGCSE Economics (0455)</strong> is the most common specification in Dubai schools. It covers the basic economic problem, allocation of resources, the price system, market failure, the macroeconomy, government intervention, international trade, and economic development.</p>
+          <br />
+          <p className="subtitle">The course is assessed through a multiple-choice paper and a structured/data-response paper. The biggest mark differentiator at IGCSE is understanding <strong>command words</strong>, the difference between what "identify", "explain", "analyse", and "discuss" require, and structuring answers accordingly. Many students lose marks not because they don't know the content, but because they write an explanation when the question asked them to evaluate.</p>
+          <br />
+          <p className="subtitle">For students at British curriculum schools sitting UK GCSE Economics rather than the international IGCSE, we tutor AQA, OCR, and Pearson Edexcel GCSE Economics. The topic coverage is similar but the assessment structures and mark schemes differ. Our <a href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai">IGCSE tutors in Dubai</a> work across all major IGCSE subjects, so students taking Economics alongside Business, Maths, or other subjects can coordinate scheduling under one weekly plan.</p>
+          <br />
 
-          <h2 className="title">Trusted Economics Learning Centre In Dubai For Exam Success</h2>
-          <p className="subtitle">Ignite Training Institute is a trusted name when it comes to Economics learning support in Dubai. Our centre offers structured programs, experienced faculty, and a nurturing environment that promotes deep understanding and exam readiness. We support students across various boards, including IB, IGCSE, and A Levels, and focus on helping each learner achieve their personal best. Join a centre that understands your goals and helps you achieve them.</p>          <br />
+          <h2 className="title"><strong>A-Level And AS Economics Tutors For Theory And Application</strong></h2>
+          <p className="subtitle">A-Level Economics is a significant step up from IGCSE, demanding sustained analytical writing, accurate diagram work, and genuine evaluation. Three exam boards dominate UAE schools, and the content emphasis differs across them. <strong>Cambridge International A-Level Economics (9708)</strong> uses data-response and essay papers. <strong>Pearson Edexcel A-Level Economics (9EC0)</strong> uses themed papers spanning micro and macro together. <strong>AQA A-Level Economics (7136)</strong> includes a distinct essay paper alongside data-response and multiple-choice.</p>
+          <br />
+          <p className="subtitle">The skill that separates A and A* candidates is <strong>evaluation chains</strong>, the ability to develop an argument, weigh it against a counter-argument, and reach a justified conclusion with real-world context. Strong content knowledge alone caps most students at a B. We focus sessions on building those evaluation chains, annotating diagrams accurately, and applying current economic examples from the UAE, UK, and the global economy.</p>
+          <br />
+          <p className="subtitle">Most students preparing for AS papers in May need targeted work on essay structure and timed data-response, since the jump from IGCSE in writing density is significant. A2 students typically need help with synoptic links across micro and macro, and the deeper evaluation expected at the top band. Our <a href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai">A-Level tutors in Dubai</a> coordinate Economics alongside other A-Level subjects under a single weekly plan.</p>
+          <br />
 
-          <h2 className="title">Looking For An Economics Tutor Near Me In Dubai? Get Help Today!</h2>
-          <p className="subtitle">Struggling to find a reliable Economics tutor near you in Dubai? Ignite makes the search easy. Our tutors are located across the city and also offer flexible online options to suit your schedule. Whether you need help catching up or aiming for a top score, we provide expert guidance that’s right around the corner. Book a session today and get the academic support you’ve been looking for.</p>          <br />
+          <h2 className="title"><strong>AP Economics Tutors For AP Microeconomics And AP Macroeconomics</strong></h2>
+          <p className="subtitle">AP Economics is split into two separate College Board courses, and many students take both in the same year since they complement each other. Each has its own exam and its own score.</p>
+          <br />
+          <p className="subtitle"><strong>AP Microeconomics</strong> focuses on individual markets, firms, and consumer behaviour, including supply and demand, elasticity, market structures (perfect competition, monopoly, oligopoly), factor markets, and market failure.</p>
+          <br />
+          <p className="subtitle"><strong>AP Macroeconomics</strong> focuses on the economy as a whole, including GDP, inflation, unemployment, fiscal and monetary policy, and international trade. Macro is heavily graph-based, requiring students to draw and shift AD/AS, the money market, and the Phillips curve from memory.</p>
+          <br />
+          <p className="subtitle">Both exams follow the same structure: 60 multiple-choice questions (1 hour 10 minutes, 66% of the score) and 3 free-response questions, one long and two short (1 hour, including a 10-minute reading period, 33% of the score). Both are hybrid digital exams taken in the May AP testing window, scored on a 1 to 5 scale, with most US universities looking for a 4 or 5 for credit. Our <a href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai">AP tutors in Dubai</a> work across the full AP range, with AP Economics handled by tutors familiar with both the Micro and Macro frameworks and the graph-heavy free-response expectations.</p>
+          <br />
 
-          <h2 className="title">Get Better Results With An IB Economics Tutor In Dubai Support</h2>
-          <p className="subtitle">IB Economics can be challenging, but our tutors make it easier to master. From data response to essay writing, our IB specialists guide you through each part of the curriculum with clarity. We focus on real-world application, time management, and exam techniques tailored to the IB format. With the right support, you can aim higher and feel more confident walking into your exams.</p>          <br />
+          <h2 className="title"><strong>Exam Technique: Diagrams, Evaluation, And Data-Response Skills</strong></h2>
+          <p className="subtitle">Economics rewards technique as much as knowledge. A student who knows every definition but can't structure an evaluation or label a diagram accurately will not reach the top band in any curriculum. Tutoring at Ignite builds four technique areas alongside content.</p>
+          <br />
+          <p className="subtitle"><strong>Diagram precision</strong> covers accurate drawing, labelling, and annotation of supply and demand, cost and revenue curves, and market structure diagrams. The common mark loss here is unlabelled axes, missing equilibrium points, and shifts drawn in the wrong direction. We drill diagrams until they're automatic under exam conditions.</p>
+          <br />
+          <p className="subtitle"><strong>Evaluation</strong> is the highest-value skill at A-Level and IB. It means weighing an argument against its counter-argument, considering assumptions and real-world context, and reaching a justified judgement rather than sitting on the fence. We build evaluation chains step by step until students can produce them under time pressure.</p>
+          <br />
+          <p className="subtitle"><strong>Essay structure</strong> follows a clear sequence: define the key terms, explain the economic reasoning, support it with a diagram, apply it to a real-world context, and evaluate. This sequence (which the DEED framework captures for IB) keeps answers complete and examiner-friendly.</p>
+          <br />
+          <p className="subtitle"><strong>Data-response technique</strong> covers interpreting data tables and extracts, calculating percentages and changes, identifying trends, and writing concise answers matched to the command word. We use past paper extracts so students build speed and accuracy together. Students who prefer one-to-one delivery across multiple subjects often work with our <a href="https://ignitetraininginstitute.com/private-tutors-in-dubai">private tutors in Dubai</a>.</p>
+          <br />
 
-          <h2 className="title">Experienced IGCSE Economics Tutor In Dubai For Exam Prep</h2>
-          <p className="subtitle">Our IGCSE Economics tutors in Dubai are well-versed in the syllabus and grading criteria. They help you understand economic theory, apply concepts, and write clear, structured answers. With practice papers, revision sessions, and topic-wise support, our tutors ensure you’re thoroughly prepared. Whether you're targeting a specific grade or need help building consistency, we’re here to guide you toward success.</p>          <br />
+          <h2 className="title"><strong>Ignite: Best Economics Tutor In Dubai For Every Curriculum</strong></h2>
+          <p className="subtitle">Ignite has been running tutoring in Dubai for over ten years, and Economics is one of our most established subjects, with tutors who have guided students through IB, IGCSE, A-Level, and AP for years. Our two centres at DIFC and JLT serve students from international schools across Dubai, and our online programme extends that reach to Sharjah, Abu Dhabi, and the wider UAE.</p>
+          <br />
+          <p className="subtitle">What makes Economics tutoring work, in our experience, is matching the tutor to the exam board and the specific skill gap. A tutor strong on IB Paper 1 essays and the DEED framework approaches a session very differently from one preparing a student for AP Macroeconomics graph work. Every Economics tutor at Ignite has direct experience with at least one of the major curricula, and most have taught several. New students start with a diagnostic, get matched to a tutor whose curriculum specialism fits, and follow a session-by-session plan built around the actual papers, essays, and IA work they need to deliver.</p>
+          <br />
+          <p className="subtitle">If you're considering Economics tutoring for the first time, a <a href="https://ignitetraininginstitute.com/join-free-demo-class">free demo class with Ignite</a> is the simplest way to see how the diagnostic session and lesson structure works in practice. There's no expectation to commit beyond the demo.</p>
+          <br />
 
-          <h2 className="title">Achieve More With A Levels Economics Tutor In Dubai Help</h2>
-          <p className="subtitle">A Levels Economics demands critical analysis, structured argumentation, and deep understanding. Our tutors in Dubai specialize in helping students develop these skills through focused instruction and strategic preparation. We tailor our sessions to your board’s requirements and help you excel in both micro and macro aspects of the syllabus. With consistent guidance, you’ll be able to tackle complex questions and improve your academic standing.</p>          <br />
-
-          <h2 className="title">One-On-One AS Levels Economics Tutor In Dubai For Assured Improvement</h2>
-          <p className="subtitle">Our one-on-one AS Levels tutoring ensures every session is built around your specific needs. Whether you're struggling with elasticity, government intervention, or data analysis, we’re here to simplify concepts and improve your writing. Our tutors in Dubai offer a supportive environment where questions are encouraged and progress is tracked. With consistent effort and personalized attention, academic improvement is within reach.</p>          <br />
-
-          <h2 className="title">AP Economics Tutor In Dubai Helping Students Excel With Confidence</h2>
-          <p className="subtitle">AP Economics requires clarity in both microeconomics and macroeconomics concepts. Ignite’s AP Economics tutors in Dubai simplify complex theories, graphs, and problem-solving techniques. Students learn how to analyze data, understand market behavior, and apply concepts effectively in exams. Personalized sessions focus on improving analytical skills and building exam confidence. With targeted strategies and practice, students enhance both conceptual understanding and application. Ignite ensures students approach AP Economics with a structured, result-driven plan for success.</p>
+          <h3 className="title"><strong>Know more about our programmes:</strong></h3>
+          <p className="subtitle">
+            • <a href="https://ignitetraininginstitute.com/ib-curriculum-tutors-in-dubai">IB Curriculum Tutors In Dubai</a><br />
+            • <a href="https://ignitetraininginstitute.com/british-curriculum-tutors-in-dubai">British Curriculum Tutors In Dubai</a><br />
+            • <a href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai">AP Tutors In Dubai</a><br />
+            • <a href="https://ignitetraininginstitute.com/join-free-demo-class">Free Demo Class At Ignite Training Institute</a><br />
+            • <a href="https://ignitetraininginstitute.com/contact-us">Contact Us</a>
+          </p>
 
           <br /><br />
           <h2><strong>Ignite's Exclusive Learning Resources </strong></h2>

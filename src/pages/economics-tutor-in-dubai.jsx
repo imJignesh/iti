@@ -55,42 +55,50 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "What curricula does Ignite offer Economics tutoring for?",
+                    "name": "Which Economics Courses Do Ignite's Economics Tutors In Dubai Cover?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Ignite provides Economics tutoring for IB (SL/HL), IGCSE, A-Levels, and AP, aligned with the requirements of each exam board."
+                        "text": "Ignite's Economics tutors in Dubai cover Cambridge IGCSE Economics (0455), UK GCSE Economics (AQA, OCR, Edexcel), Cambridge International AS and A-Level Economics (9708), Pearson Edexcel A-Level Economics (9EC0), AQA A-Level Economics (7136), IB Economics (SL and HL), and both College Board AP courses: AP Microeconomics and AP Macroeconomics. Tutoring is matched to the exact board and level your school follows."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "What topics are covered in Economics tutoring sessions?",
+                    "name": "What's The Difference Between IB Economics SL And HL?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Tutoring covers microeconomics, macroeconomics, international trade, market structures, and development economics as per the student’s curriculum."
+                        "text": "IB Economics SL and HL share the same four units and both sit Paper 1 (extended-response essays) and Paper 2 (data-response). The key difference is Paper 3, which only HL students take. Paper 3 is a quantitative paper requiring calculations like price elasticity of demand (PED), cross elasticity (XED), price elasticity of supply (PES), and the multiplier. HL also covers topics in greater analytical depth. Both levels complete the Internal Assessment."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Do tutors help with essays and data response questions?",
+                    "name": "What Is The DEED Framework And How Does It Help In IB Economics Essays?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, students get structured support in essay writing, case studies, and data response techniques tailored to their exam format."
+                        "text": "DEED stands for Define, Explain, Example, Diagram. This is a framework for addressing extended-response questions in IB Economics Paper 1, which includes defining each key term, elucidating the economic reasoning, providing a real-world example, and an accurate diagram supports the analysis. Following DEED helps students hit the IB assessment criteria consistently and avoid the most common mark loss: writing strong explanations but forgetting diagrams or real-world application."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Are past papers and exam strategies part of the tutoring?",
+                    "name": "Are Private Economics Tutoring Sessions In Dubai Available Online Or In Person?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Absolutely. Tutors use past papers, timed practice, and examiner-style feedback to prepare students for real exam conditions."
+                        "text": "Both. We run in-centre sessions at our two Dubai locations (DIFC and JLT), plus one-to-one online sessions for students across the wider UAE or with packed schedules. Online sessions use the same tutors and lesson structure as in-centre ones. Most students searching for an economics tutor near me use both formats across the year, switching to online during heavy exam weeks."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Can I attend a trial class before starting?",
+                    "name": "How Are Diagrams, Evaluation, And Data-Response Questions Practiced?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes, Ignite offers a free demo session so students can experience the teaching approach before enrolling."
+                        "text": "These three skills separate top-band Economics students from the rest, so they're built into every session. Diagram work covers accurate drawing and labelling of supply and demand, cost curves, and market structure diagrams. Evaluation practice focuses on building balanced arguments that weigh multiple perspectives, assumptions, and real-world context. Data-response practice uses past paper extracts so students learn to interpret tables, calculate figures, and structure answers to the command word being asked."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How Soon Should A Student Start Economics Tutoring Before Their Board Exams?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For IGCSE and A-Level Economics, three to six months of weekly sessions before the May/June series is the sensible window. IB Diploma students benefit most from starting early in DP1, since the Internal Assessment portfolio of three commentaries is built across both years. AP Microeconomics and AP Macroeconomics students need at least four months before the May AP exam window."
                     }
                 }
             ]

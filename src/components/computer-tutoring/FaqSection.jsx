@@ -28,30 +28,29 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "What curricula does Ignite support for Computer Science tutoring?",
-      answer:
-        "Ignite offers Computer Science tutoring for IB, IGCSE, A-Levels, and AP, covering both theoretical concepts and practical applications.",
+      question: "Which Computer Science Courses Do Ignite's CS Tutors In Dubai Cover?",
+      answer: "Ignite's Computer Science tutors in Dubai cover Cambridge IGCSE Computer Science (0478 international, 0984 UK 9-1 variant), GCSE Computer Science (AQA, OCR, Pearson Edexcel UK boards), Cambridge International AS and A-Level Computer Science (9618), IB Computer Science (SL and HL, plus MYP Design and Digital Design), and both College Board AP courses: AP Computer Science A and AP Computer Science Principles.",
     },
     {
-      question: "Which topics are covered in Computer Science tutoring?",
-      answer:
-        "Tutoring covers programming, algorithms, data structures, databases, system architecture, and curriculum-specific theory.",
+      question: "Which Programming Languages Does Ignite Cover (Python, Java, C++, Pseudocode)?",
+      answer: "Ignite teaches whichever language your child's curriculum requires. Python is the dominant language across Dubai schools and is used in IGCSE, IB, and AP CS Principles. Java is required for AP Computer Science A and used in some IB DP schools. Pseudocode is essential for Cambridge IGCSE and A-Level exams. C++ comes up occasionally. Beyond syntax, we focus on computational thinking and algorithmic logic that transfers across languages.",
     },
     {
-      question: "Do you offer support for internal assessments and coding projects?",
-      answer:
-        "Yes, students receive guidance for IB IAs, coursework, and hands-on coding assignments in Python, Java, or other required languages.",
+      question: "What's The Difference Between AP Computer Science A And AP Computer Science Principles?",
+      answer: "AP Computer Science A is a Java-based course focused on object-oriented programming, data structures, and algorithms. It suits students planning to study CS at university. The exam has 42 MC questions plus 4 free-response questions. AP Computer Science Principles is broader and language-agnostic, covering computational thinking and the impact of computing. It includes a Create Performance Task (worth 30%) plus a 70-question MC exam.",
     },
     {
-      question: "Are tutoring sessions available both online and in person?",
-      answer:
-        "Yes, Ignite offers flexible learning formats with both online and in-person sessions available across Dubai and the UAE.",
+      question: "Are Private Computer Science Tutoring Sessions In Dubai Available Online Or In Person?",
+      answer: "Both. We run in-centre sessions at our two Dubai locations (DIFC and JLT), plus one-to-one online sessions for students across the wider UAE or with packed schedules. Online sessions use the same tutors and lesson structure as in-centre ones, which matters for CS specifically because the tutor can share screens to walk through live code, debug together, and review the student's actual projects.",
     },
     {
-      question: "Can I try a class before enrolling in the full program?",
-      answer:
-        "Absolutely. Ignite offers a free demo class to help students and parents evaluate the tutor fit and teaching approach.",
+      question: "How Are IB Internal Assessments And IGCSE Pre-Release Material Handled?",
+      answer: "The IB Computer Science Internal Assessment is the \"Computational Solution\" project, where students design and build a working program for a real client. We support students through problem identification, design documentation, code development, and the criteria-based written report. For IGCSE Computer Science Paper 2, Cambridge releases pre-release material before the exam. We work through that pre-release systematically with the student so they can write and trace code confidently under exam conditions.",
     },
+    {
+      question: "How Soon Should A Student Start Computer Science Tutoring Before Their Board Exams?",
+      answer: "For IGCSE Computer Science, three to six months before the May/June series is the sensible window, especially since Paper 2 pre-release material is published well in advance. IB Diploma students benefit most from starting in DP1, since the Computational Solution IA takes months of structured project work. A-Level students should join ahead of AS papers in May. AP CS students need at least four months before the May exam window.",
+    }
   ];
 
   return (
@@ -106,7 +105,7 @@ const FAQSection = () => {
                 fontSize: isHighDpi ? "1.75rem" : isMobile ? "17px" : "2rem"
               }}
             >
-              Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
+              Everything You Need To Know About <br /> <span className="highlight"> Computer Science</span> Tutoring
             </h3>
 
             <p
@@ -125,7 +124,7 @@ const FAQSection = () => {
                 marginBottom: isMobile ? "15px" : "20px"
               }}
             >
-              Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
+              Here are some of the most common questions about our Computer Science tutoring services.            </p>
           </div>
 
           {/* Right Section */}
