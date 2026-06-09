@@ -22,7 +22,6 @@ export default function Accordion() {
       {/* Expanded Content */}
       {open && (
         <div className="expanded">
-        <div className="expanded">
           <h2 className="title"><strong>Psychology Tutors In Dubai For IB, IGCSE, A-Level, And AP Students</strong></h2>
           <p className="subtitle">Ignite Training Institute offers personalized one-on-one psychology tutoring in Dubai, covering IB (Standard Level and Higher Level, both current and new syllabus), Cambridge IGCSE 0266, UK GCSE, A-Level and AS, as well as the updated AP Psychology course. Sessions run from our DIFC and JLT centres and online, covering the biological, cognitive, and sociocultural approaches, research methods, the named studies, and the essay technique that mark schemes reward.</p><br />
           <p className="subtitle">Most students come to us when they can remember the studies but lose marks on evaluation, when essay structure starts to slip under timed conditions, or when an IB Internal Assessment is stuck at the research-question stage. Some join months ahead of mocks; others arrive with weeks to go and need focused work on one approach or one paper. Every new student starts with a diagnostic so the tutor can see exactly where marks are being lost rather than re-teaching content the student already knows.</p><br />
