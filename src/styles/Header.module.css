@@ -686,6 +686,12 @@ header .toggleButton img {
 }
 
 @media (max-width: 500px) {
+  .headerRightBtn {
+    font-size: 15px;
+    padding: 2px 10px !important;
+
+  }
+
   header .header_right_content {
     gap: 10px;
   }
