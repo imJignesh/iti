@@ -48,6 +48,13 @@ export default async function handler(req, res) {
             redirectUrl: '/thank-you-popup',
         },
         {
+            type: 'POPUP_FORM_COPY',
+            slugs: ["/join-free-demo-class-copy", "/courses/a-level-tutors-in-dubai-copy", "/courses/igcse-tutors-in-dubai-copy", "/courses/myp-tutors-in-dubai-copy", "/british-curriculum-tutors-in-dubai-copy", "/courses/ibdp-tutors-in-dubai-copy"],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Copypagespopupform/formperma/GBZMWmkrszLUL-Y7SGe1iYXCtQO6oac_TFEyBGSy0ic/htmlRecords/submit',
+            fieldMap: { name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode', curriculum: 'SingleLine1' },
+            redirectUrl: '/thank-you-organic-copy',
+        },
+        {
             type: 'BLOG_SIDEBAR',
             slugs: [],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/BlogDetailPage/formperma/mgvhc7pg0i_9ypjsyAhQqnD4vnIuZusObkrMNZ5f6yk/htmlRecords/submit',
@@ -148,7 +155,19 @@ export default async function handler(req, res) {
     ];
 
     // --- 3. MATCH CONFIGURATION ---
-    let submittedFormConfig = formType ? FORM_CONFIGS.find(config => config.type === formType) : null;
+    let submittedFormConfig = null;
+
+    if (formType === 'POPUP_FORM') {
+        // Special case for popups: check if there is a specific popup form config for this path first
+        submittedFormConfig = FORM_CONFIGS.find(config => config.type === 'POPUP_FORM_COPY' && config.slugs?.includes(path));
+        // Fallback to the generic POPUP_FORM
+        if (!submittedFormConfig) {
+            submittedFormConfig = FORM_CONFIGS.find(config => config.type === 'POPUP_FORM');
+        }
+    } else {
+        submittedFormConfig = formType ? FORM_CONFIGS.find(config => config.type === formType) : null;
+    }
+
     if (!submittedFormConfig) {
         submittedFormConfig = FORM_CONFIGS.find(config => config.slugs && config.slugs.includes(path));
     }
