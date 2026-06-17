@@ -49,7 +49,7 @@ export default async function handler(req, res) {
         },
         {
             type: 'POPUP_FORM_COPY',
-            slugs: ["/join-free-demo-class-copy", "/courses/a-level-tutors-in-dubai-copy", "/courses/igcse-tutors-in-dubai-copy", "/courses/myp-tutors-in-dubai-copy", "/british-curriculum-tutors-in-dubai-copy", "/courses/ibdp-tutors-in-dubai-copy"],
+            slugs: ["/join-free-demo-class-copy", "/courses/a-level-tutors-in-dubai-copy", "/courses/igcse-tutors-in-dubai-copy", "/courses/myp-tutors-in-dubai-copy", "/british-curriculum-tutors-in-dubai-copy", "/courses/ibdp-tutors-in-dubai-copy", "/ib-curriculum-tutors-in-dubai-copy"],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/Copypagespopupform/formperma/GBZMWmkrszLUL-Y7SGe1iYXCtQO6oac_TFEyBGSy0ic/htmlRecords/submit',
             fieldMap: { name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode', curriculum: 'SingleLine1' },
             redirectUrl: '/thank-you-organic-copy',
@@ -121,6 +121,13 @@ export default async function handler(req, res) {
             type: 'IBDP-Copy',
             slugs: ["/courses/ibdp-tutors-in-dubai-copy"],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/IBDPDuplicate/formperma/6WpfjR4URzeSu7bxIB16M5c8OVhf03v8aJmRi-7T5ck/htmlRecords/submit',
+            fieldMap: { name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode', grade: 'SingleLine3', school: 'SingleLine1', message: 'MultiLine', pageinfo: 'SingleLine2' },
+            redirectUrl: '/thank-you-organic-copy',
+        },
+        {
+            type: 'IB_Curriculum-Copy',
+            slugs: ["/ib-curriculum-tutors-in-dubai-copy"],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/IBCurriculumCopy/formperma/VqkqowG9UHiuAxjAvoiXMr7JfVXLQaAgncSCPvwSf_0/htmlRecords/submit',
             fieldMap: { name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode', grade: 'SingleLine3', school: 'SingleLine1', message: 'MultiLine', pageinfo: 'SingleLine2' },
             redirectUrl: '/thank-you-organic-copy',
         },

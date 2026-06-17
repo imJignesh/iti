@@ -25,6 +25,7 @@ const STATIC_ROOT_PAGES = [
   'english-tutor-in-dubai',
   'french-tutor-in-dubai',
   'ib-curriculum-tutors-in-dubai',
+  'ib-curriculum-tutors-in-dubai-copy',
   'index',
   'join-free-demo-class',
   'join-free-demo-class-copy',
