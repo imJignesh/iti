@@ -177,14 +177,18 @@ option {
   }
 }
 
-/* --- FALLBACK FOR MOBILE (No Locomotive Scroll) --- */
-@media (max-width: 768px) {
+/* --- FALLBACK FOR MOBILE + TABLET (No Locomotive Scroll below 991px) ---
+ * LCP FIX: Locomotive Scroll is now desktop-only (> 991px).
+ * On mobile/tablet, no JS will add 'is-inview', so elements must be visible by default.
+ */
+@media (max-width: 991px) {
   .fade-in-section {
     opacity: 1 !important;
     visibility: visible !important;
     transform: none !important;
   }
 }
+
 
 /* --- TRIGGER STATE --- */
 .is-inview.fade-in-section {

@@ -36,8 +36,9 @@ const LocomotiveScrollProvider = ({ children }) => {
         if (typeof window === "undefined") return;
 
         const checkWidth = () => {
-            // User's current logic: Scroll enabled if width is >= 280px
-            const shouldEnable = window.innerWidth >= 280;
+            // LCP FIX: Only enable on desktop (> 991px) to prevent Locomotive Scroll
+            // from initializing on mobile/tablet — which was gating paint behind JS execution.
+            const shouldEnable = window.innerWidth > 991;
 
             // --- MODIFIED: Check width AND check for PSI bot ---
             if (shouldEnable && !isBotDetected()) {

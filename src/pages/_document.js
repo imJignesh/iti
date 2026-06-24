@@ -33,6 +33,7 @@ export default function Document() {
         />
 
 
+
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, viewport-fit=cover"
@@ -47,11 +48,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-
-        {/* <script
-          async
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        ></script> */}
       </body>
     </Html>
   );

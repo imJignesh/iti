@@ -25,11 +25,17 @@ const Hero = () => {
         };
 
         const delay = window.innerWidth <= 767 ? 6000 : 2000;
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadVideo, { timeout: delay });
-        } else {
-            setTimeout(loadVideo, delay);
-        }
+        // LCP FIX: Use setTimeout directly.
+        // requestIdleCallback(fn, {timeout}) runs fn AS SOON as the browser is idle,
+        // which often happens at 2s, causing the video paint to become a late LCP.
+        // We want a strict minimum delay here to protect the LCP window.
+        const timerId = setTimeout(() => {
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadVideo);
+            } else {
+                loadVideo();
+            }
+        }, delay);
 
         const handleInteraction = () => {
             loadVideo();
@@ -40,6 +46,7 @@ const Hero = () => {
         document.addEventListener('mousedown', handleInteraction, { passive: true, once: true });
 
         return () => {
+            clearTimeout(timerId);
             document.removeEventListener('scroll', handleInteraction);
             document.removeEventListener('touchstart', handleInteraction);
             document.removeEventListener('mousedown', handleInteraction);
