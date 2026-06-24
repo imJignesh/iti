@@ -105,7 +105,7 @@ const Hero = () => {
                                                 alt="Ignite tutors in Dubai — IBDP, IGCSE, A-Level, IB MYP"
                                                 width={600}
                                                 height={660}
-                                                decoding="sync"
+                                                decoding="async"
                                                 fetchPriority="high"
                                                 className={styles.posterImage}
                                             />
