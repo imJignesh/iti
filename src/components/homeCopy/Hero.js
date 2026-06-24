@@ -56,28 +56,9 @@ const Hero = () => {
     return (
         <>
             <Head>
-                {/*
-                  * LCP FIX: Preload using plain static URLs.
-                  * These must EXACTLY match the src="" used in the <picture> below
-                  * so the browser reuses the preloaded bytes instead of re-fetching.
-                  */}
-                <link
-                    rel="preload"
-                    as="image"
-                    href={MOBILE_POSTER}
-                    media="(max-width: 767px)"
-                    fetchPriority="high"
-                />
-                <link
-                    rel="preload"
-                    as="image"
-                    href={DESKTOP_POSTER}
-                    media="(min-width: 768px)"
-                    fetchPriority="high"
-                />
-                {/* Preload Background Decoration Images */}
-                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" />
-                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" />
+                {/* Preload Background Decoration Images (low priority — not LCP) */}
+                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" fetchPriority="low" />
+                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" fetchPriority="low" />
             </Head>
 
             <div className={styles.heroSectionWrapper}>

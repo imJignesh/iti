@@ -15,6 +15,7 @@ export default function Document() {
           href="/images/video-cover-mobile.webp"
           media="(max-width: 767px)"
           fetchPriority="high"
+          imageSizes="100vw"
         />
         <link
           rel="preload"
@@ -22,6 +23,7 @@ export default function Document() {
           href="/images/video-cover.webp"
           media="(min-width: 768px)"
           fetchPriority="high"
+          imageSizes="30vw"
         />
 
         <link
