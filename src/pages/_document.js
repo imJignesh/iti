@@ -19,8 +19,8 @@ export default function Document() {
         <link
           rel="preload"
           as="image"
-          imageSrcSet="/images/video-cover-mobile.webp"
-          imageSizes="100vw"
+          imagesrcset="/images/video-cover-mobile.webp"
+          imagesizes="100vw"
           media="(max-width: 767px)"
           fetchPriority="high"
         />
