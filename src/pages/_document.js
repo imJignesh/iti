@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 

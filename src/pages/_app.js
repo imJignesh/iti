@@ -7,7 +7,7 @@ import { useState, createContext, useEffect, useRef } from "react";
 
 import "@/styles/critical.css";
 import "@/styles/globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap is loaded deferred via Script below — critical Bootstrap utilities are in critical.css
 // --- Global Styles for specific sub-pages ---
 // Moved to individual pages via <link> tags in Head to prioritize home page LCP.
 
@@ -148,6 +148,19 @@ export default function MyApp({ Component, pageProps }) {
     // Minimal Return for Debugging
     return (
         <PopupProvider>
+            {/*
+              * Bootstrap loaded deferred from CDN — does NOT block LCP paint.
+              * The CDN URL is versioned so it never needs cache-busting.
+              * Critical Bootstrap utilities (row, col-*, flex, etc.) are
+              * inlined in critical.css to prevent FOUC on above-fold content.
+              */}
+            <Script
+                id="bootstrap-css"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css';l.crossOrigin='anonymous';document.head.appendChild(l);})();`
+                }}
+            />
             <Script
                 id="gtm-script"
                 strategy="afterInteractive"
