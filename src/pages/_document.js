@@ -8,14 +8,20 @@ export default function Document() {
 
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
-        {/* Hero LCP image preloads — placed here so browser discovers them at first byte */}
+        {/*
+          * Hero LCP image preloads.
+          * Mobile uses <source srcSet>, so we must use imageSrcSet (not href).
+          * Chrome uses different cache keys for href vs srcSet resolution —
+          * using href here causes a double-fetch and a 2–3s LCP penalty.
+          * Desktop uses plain <img src>, so href is correct there.
+          */}
         <link
           rel="preload"
           as="image"
-          href="/images/video-cover-mobile.webp"
+          imageSrcSet="/images/video-cover-mobile.webp"
+          imageSizes="100vw"
           media="(max-width: 767px)"
           fetchPriority="high"
-          imageSizes="100vw"
         />
         <link
           rel="preload"
@@ -23,7 +29,6 @@ export default function Document() {
           href="/images/video-cover.webp"
           media="(min-width: 768px)"
           fetchPriority="high"
-          imageSizes="30vw"
         />
 
         <link

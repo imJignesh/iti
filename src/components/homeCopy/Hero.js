@@ -89,11 +89,11 @@ const Hero = () => {
                                 <div className={styles.videoContainer}>
                                     <div className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}>
                                         {/*
-                                          * LCP IMAGE: Using plain <img> + <picture> with static src="" paths.
-                                          * These MUST match the href="" in the <link rel="preload"> above
-                                          * to guarantee the browser reuses the preloaded resource.
-                                          * Do NOT use Next.js <Image> or getImageProps here — they generate
-                                          * /_next/image?url=... URLs that won't match static preload hrefs.
+                                          * LCP IMAGE: Static <picture>/<source srcSet> paths.
+                                          * Mobile: preloaded via imageSrcSet in _document.js (must match srcSet exactly).
+                                          * Desktop: preloaded via href in _document.js (matches plain img src).
+                                          * Do NOT use Next.js <Image> — it generates /_next/image?url=... URLs
+                                          * that won't match the static preload hrefs/imageSrcSet values.
                                           */}
                                         <picture>
                                             <source
