@@ -244,22 +244,24 @@ const FAQSection = () => {
                   )}
                 </button>
                 <div
-                  className="overflow-hidden"
                   style={{
+                    display: "grid",
+                    gridTemplateRows: openIndex === index ? "1fr" : "0fr",
+                    transition: "grid-template-rows 0.3s ease-in-out",
                     marginBottom: isMobile ? "10px" : "20px",
-                    transition: "all 0.3s ease-in-out",
-                    maxHeight: openIndex === index ? "10rem" : "0",
                   }}
                 >
-                  <div
-                    style={{
-                      color: "#64748b",
-                      paddingRight: "1.5rem",
-                      fontSize: isHighDpi ? "16px" : isMobile ? "0.9rem" : "20px",
-                      lineHeight: isMobile ? "1.4" : "1.2"
-                    }}
-                  >
-                    {typeof faq.answer === 'function' ? faq.answer() : faq.answer}
+                  <div style={{ overflow: "hidden" }}>
+                    <div
+                      style={{
+                        color: "#64748b",
+                        paddingRight: "1.5rem",
+                        fontSize: isHighDpi ? "16px" : isMobile ? "0.9rem" : "20px",
+                        lineHeight: isMobile ? "1.4" : "1.2"
+                      }}
+                    >
+                      {typeof faq.answer === 'function' ? faq.answer() : faq.answer}
+                    </div>
                   </div>
                 </div>
               </div>

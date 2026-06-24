@@ -177,14 +177,15 @@ const FAQSection = () => {
                   )}
                 </button>
                 <div
-                  className="overflow-hidden"
-                  style={{
-                    marginBottom: isMobile ? "10px" : "20px",
-                    transition: "all 0.3s ease-in-out",
-                    maxHeight: openIndex === index ? "10rem" : "0",
-                  }}
+                    style={{
+                      display: "grid",
+                      gridTemplateRows: openIndex === index ? "1fr" : "0fr",
+                      transition: "grid-template-rows 0.3s ease-in-out",
+                      marginBottom: isMobile ? "10px" : "20px",
+                    }}
                 >
-                  <p
+                    <div style={{ overflow: "hidden" }}>
+                    <p
                     style={{
                       color: "#64748b",
                       paddingRight: "1.5rem",
@@ -194,6 +195,7 @@ const FAQSection = () => {
                   >
                     {faq.answer}
                   </p>
+                  </div>
                 </div>
               </div>
             ))}
