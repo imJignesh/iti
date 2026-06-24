@@ -5,7 +5,7 @@ import Script from "next/script";
 import { useState, createContext, useEffect, useRef } from "react";
 
 
-import "@/styles/critical.css";
+// critical.css is inlined in _document.js as a <style> tag — zero network request
 import "@/styles/globals.css";
 // Bootstrap is loaded deferred via Script below — critical Bootstrap utilities are in critical.css
 // --- Global Styles for specific sub-pages ---
