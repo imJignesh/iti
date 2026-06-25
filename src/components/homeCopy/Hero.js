@@ -11,6 +11,17 @@ const Hero = () => {
         setPosterImage(window.innerWidth <= 767 ? '/images/video-cover-mobile.webp' : '/images/video-cover.webp');
     }, []);
 
+    useEffect(() => {
+        // Load video after poster image is displayed, without blocking page load
+        const timerId = setTimeout(() => {
+            if (videoRef.current) {
+                videoRef.current.load();
+            }
+        }, 1500);
+
+        return () => clearTimeout(timerId);
+    }, []);
+
 
     return (
         <>
@@ -53,8 +64,7 @@ const Hero = () => {
                                         muted
                                         loop
                                         playsInline
-                                        preload="metadata"
-                                        fetchPriority="high"
+                                        preload="none"
                                         poster={posterImage}
                                     >
                                         <source src="/videos/hero-banner-video2.mp4" type="video/mp4" />
