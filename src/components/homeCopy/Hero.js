@@ -37,7 +37,7 @@ const Hero = () => {
                         <div className={`row ${styles.heroMain}`}>
                             <div className={`col-12 col-lg-7 col-xl-7 pe-lg-5 ${styles.heroLeft}`}>
                                 <div className={`${styles.heroMainHeading}`}>
-                                    <h1 className={styles.SubHeading}>BEST TUTORS IN UAE.</h1>
+                                    <h1 className={styles.SubHeading}>BEST TUTORS IN UAE</h1>
                                 </div>
 
                                 <h2 className={styles.heroTitle}>
