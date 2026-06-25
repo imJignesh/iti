@@ -1,52 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Head from "next/head";
 import styles from '@/styles/home-copy/Hero.module.css';
 
 const Hero = () => {
     const videoRef = useRef(null);
-    const [videoLoaded, setVideoLoaded] = useState(false);
     const [posterImage, setPosterImage] = useState('/images/video-cover.webp');
-    const isVideoLoadingRef = useRef(false);
 
     useEffect(() => {
         // Set correct poster image based on screen width
         setPosterImage(window.innerWidth <= 767 ? '/images/video-cover-mobile.webp' : '/images/video-cover.webp');
     }, []);
 
-    useEffect(() => {
-        const loadVideo = () => {
-            if (videoRef.current && !isVideoLoadingRef.current) {
-                isVideoLoadingRef.current = true;
-                if (videoRef.current.getElementsByTagName('source').length === 0) {
-                    const source = document.createElement('source');
-                    source.src = '/videos/hero-banner-video2.mp4';
-                    source.type = 'video/mp4';
-                    videoRef.current.appendChild(source);
-                }
-                videoRef.current.load();
-            }
-        };
-
-        const delay = window.innerWidth <= 767 ? 800 : 800;
-        const timerId = setTimeout(() => {
-            loadVideo();
-        }, delay);
-
-        const handleInteraction = () => {
-            loadVideo();
-        };
-
-        document.addEventListener('scroll', handleInteraction, { passive: true, once: true });
-        document.addEventListener('touchstart', handleInteraction, { passive: true, once: true });
-        document.addEventListener('mousedown', handleInteraction, { passive: true, once: true });
-
-        return () => {
-            clearTimeout(timerId);
-            document.removeEventListener('scroll', handleInteraction);
-            document.removeEventListener('touchstart', handleInteraction);
-            document.removeEventListener('mousedown', handleInteraction);
-        };
-    }, [videoLoaded]);
 
     return (
         <>
@@ -89,10 +53,11 @@ const Hero = () => {
                                         muted
                                         loop
                                         playsInline
-                                        preload="none"
+                                        preload="metadata"
+                                        fetchPriority="high"
                                         poster={posterImage}
-                                        onCanPlay={() => setVideoLoaded(true)}
                                     >
+                                        <source src="/videos/hero-banner-video2.mp4" type="video/mp4" />
                                     </video>
                                 </div>
 
