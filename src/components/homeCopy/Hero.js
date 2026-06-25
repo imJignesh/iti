@@ -27,17 +27,9 @@ const Hero = () => {
             }
         };
 
-        const delay = window.innerWidth <= 767 ? 6000 : 2000;
-        // LCP FIX: Use setTimeout directly.
-        // requestIdleCallback(fn, {timeout}) runs fn AS SOON as the browser is idle,
-        // which often happens at 2s, causing the video paint to become a late LCP.
-        // We want a strict minimum delay here to protect the LCP window.
+        const delay = window.innerWidth <= 767 ? 800 : 800;
         const timerId = setTimeout(() => {
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(loadVideo);
-            } else {
-                loadVideo();
-            }
+            loadVideo();
         }, delay);
 
         const handleInteraction = () => {
