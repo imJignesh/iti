@@ -21,17 +21,7 @@ const LocomotiveScrollProvider = dynamic(() => import('../components/LocomotiveS
     ssr: false,
 });
 
-import { isPageSpeedInsights, isBot } from "@/utils/botDetection";
-
-const isMobileDevice = () => {
-    if (typeof window === 'undefined') return false;
-    return (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-        window.innerWidth <= 768
-    );
-};
-
-
+import { isPageSpeedInsights } from "@/utils/botDetection";
 
 const montserrat = Montserrat({
     weight: ['400', '700'],
@@ -65,23 +55,15 @@ export default function MyApp({ Component, pageProps }) {
     const [headerHeight, setHeaderHeight] = useState(102); // Default to approx header height to prevent CLS
     const [showButton, setShowButton] = useState(false);
     const [stylesLoaded, setStylesLoaded] = useState(false);
-    const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(false);
+    // Lazy initializer — reads window synchronously on first render (client only).
+    // Value never changes so no re-render/remount ever happens.
+    const [shouldLoadLocomotiveScroll] = useState(() => {
+        if (typeof window === 'undefined') return false;
+        return window.innerWidth > 991 && !isPageSpeedInsights();
+    });
 
     const mobileBreakpoint = 2600;
 
-    useEffect(() => {
-        const isMobile = isMobileDevice();
-        // --- MODIFIED: Disable for PSI/Bots as well ---
-        const isPageSpeed = isPageSpeedInsights();
-
-        // Ensure Locomotive Scroll is disabled for ALL mobile devices and bots
-        if (isMobile || isPageSpeed) {
-            console.log('Locomotive Scroll disabled for mobile/bot');
-            setShouldLoadLocomotiveScroll(false);
-        } else {
-            setShouldLoadLocomotiveScroll(true);
-        }
-    }, []);
 
 
 
