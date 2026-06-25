@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
@@ -140,38 +140,6 @@ const ALEVEL = ({ headerHeight }) => {
   // ----------------------------------------------------
 
 
-  const scrollRef = useRef(null);
-  const scrollInstanceRef = useRef(null);
-
-  useEffect(() => {
-    let scroll;
-
-    const initScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      if (!scrollRef.current) return;
-
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1,
-        // optional:
-        getDirection: true,
-        getSpeed: true,
-        multiplier: 1,
-      });
-
-      scrollInstanceRef.current = scroll;
-    };
-
-    if (typeof window !== "undefined") {
-      initScroll();
-    }
-
-    return () => {
-      scrollInstanceRef.current?.destroy();
-      scrollInstanceRef.current = null;
-    };
-  }, []);
 
   return (
     <>
@@ -209,9 +177,7 @@ const ALEVEL = ({ headerHeight }) => {
 
       {/* 3. APPLY the style for paddingTop */}
       <div
-        ref={scrollRef}
         className='overflow-hidden innerpage page-content-padding'
-        data-scroll-container
       >
         <section data-scroll-section className="hero-section">
           <div className="hero-container">

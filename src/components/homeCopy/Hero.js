@@ -2,13 +2,16 @@ import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import styles from '@/styles/home-copy/Hero.module.css';
 
-const MOBILE_POSTER = '/images/video-cover-mobile.webp';
-const DESKTOP_POSTER = '/images/video-cover.webp';
-
 const Hero = () => {
     const videoRef = useRef(null);
     const [videoLoaded, setVideoLoaded] = useState(false);
+    const [posterImage, setPosterImage] = useState('/images/video-cover.webp');
     const isVideoLoadingRef = useRef(false);
+
+    useEffect(() => {
+        // Set correct poster image based on screen width
+        setPosterImage(window.innerWidth <= 767 ? '/images/video-cover-mobile.webp' : '/images/video-cover.webp');
+    }, []);
 
     useEffect(() => {
         const loadVideo = () => {
@@ -87,30 +90,6 @@ const Hero = () => {
 
                             <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
                                 <div className={styles.videoContainer}>
-                                    <div className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}>
-                                        {/*
-                                          * LCP IMAGE: Static <picture>/<source srcSet> paths.
-                                          * Mobile: preloaded via imageSrcSet in _document.js (must match srcSet exactly).
-                                          * Desktop: preloaded via href in _document.js (matches plain img src).
-                                          * Do NOT use Next.js <Image> — it generates /_next/image?url=... URLs
-                                          * that won't match the static preload hrefs/imageSrcSet values.
-                                          */}
-                                        <picture>
-                                            <source
-                                                media="(max-width: 767px)"
-                                                srcSet={MOBILE_POSTER}
-                                            />
-                                            <img
-                                                src={DESKTOP_POSTER}
-                                                alt="Ignite tutors in Dubai — IBDP, IGCSE, A-Level, IB MYP"
-                                                width={600}
-                                                height={660}
-                                                decoding="async"
-                                                fetchPriority="high"
-                                                className={styles.posterImage}
-                                            />
-                                        </picture>
-                                    </div>
                                     <video
                                         ref={videoRef}
                                         className={styles.heroVideo}
@@ -119,6 +98,7 @@ const Hero = () => {
                                         loop
                                         playsInline
                                         preload="none"
+                                        poster={posterImage}
                                         onCanPlay={() => setVideoLoaded(true)}
                                     >
                                     </video>

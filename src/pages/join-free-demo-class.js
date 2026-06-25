@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Head from "next/head";
 import LazySection from "@/components/LazySection";
 import Image from "next/image";
@@ -78,29 +78,6 @@ const CurriculumCard = ({ defaultClass, full, children }) => {
 };
 
 const FreeDemo = ({ headerHeight }) => {
-    const scrollRef = useRef(null);
-    const scrollInstanceRef = useRef(null);
-
-    useEffect(() => {
-        let scroll;
-        const initScroll = async () => {
-            const LocomotiveScroll = (await import("locomotive-scroll")).default;
-            if (!scrollRef.current) return;
-            scroll = new LocomotiveScroll({
-                el: scrollRef.current,
-                smooth: true,
-                lerp: 0.1,
-            });
-            scrollInstanceRef.current = scroll;
-        };
-        if (typeof window !== "undefined") {
-            initScroll();
-        }
-        return () => {
-            scrollInstanceRef.current?.destroy();
-            scrollInstanceRef.current = null;
-        };
-    }, []);
 
     return (
         <>

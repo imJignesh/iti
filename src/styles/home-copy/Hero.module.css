@@ -355,6 +355,9 @@
     width: 100vw;
     height: 48vw;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .heroRight {
@@ -395,6 +398,12 @@
 @media (max-width: 767px) {
   .heroLeft {
     padding: inherit !important;
+  }
+
+  .videoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero {
@@ -474,6 +483,9 @@
 
   .videoContainer {
     height: 95vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* .videoContainer, */
@@ -563,6 +575,12 @@
   .hero {
     padding: 20px 0 0 0 !important;
     background-size: 90%;
+  }
+
+  .videoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .heroRight {
@@ -664,6 +682,9 @@
 
   .videoContainer {
     height: 85vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* .videoContainer,
@@ -691,35 +712,4 @@
   }
 
 
-}
-
-/* Responsive Poster Overlay */
-.posterOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  /* Sit above video but below interactive elements if any */
-  pointer-events: none;
-  transition: opacity 0.5s ease-out;
-}
-
-.posterHidden {
-  opacity: 0;
-}
-
-.posterImage {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  /* Ensure it covers the container like the video */
-  display: block;
-}
-
-.posterOverlay picture {
-  display: block;
-  width: 100%;
-  height: 100%;
 }

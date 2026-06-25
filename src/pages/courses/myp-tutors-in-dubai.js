@@ -363,11 +363,6 @@ const MYP = ({ headerHeight }) => {
         </section>
         <LazySection>
           <section data-scroll-section>
-            <SubjectsCard />
-          </section>
-        </LazySection>
-        <LazySection>
-          <section data-scroll-section>
             <IgniteAboutCard />
           </section>
         </LazySection>
