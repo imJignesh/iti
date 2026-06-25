@@ -116,6 +116,7 @@ const nextConfig = {
 
   experimental: {
     optimizePackageImports: ['lucide-react', 'react-phone-input-2', 'swiper'],
+    optimizeCss: true,
   },
 
   turbopack: {},
