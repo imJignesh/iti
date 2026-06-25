@@ -200,7 +200,7 @@ const Blogpg = ({ headerHeight, ...props }) => {
             </Head>
             <JsonLd schema={blogSchema} />
 
-            <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }} >
+            <div style={{ minHeight: 'calc(100vh - 200px)' }} className="page-content-padding">
                 <section
                     className="blog-banner fade-in-section"
                     data-scroll

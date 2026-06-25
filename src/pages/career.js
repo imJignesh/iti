@@ -13,10 +13,7 @@ const act = ({ headerHeight }) => {
         description="Join Ignite’s team of expert tutors in Dubai. Explore tutoring jobs, growth opportunities & benefits while helping students achieve academic success" />
       {/* 2. RENDER THE SCHEMA COMPONENT, passing the combined array */}
 
-      <div
-        className='overflow-hidden innerpage'
-        style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
-      >
+      <div className='overflow-hidden innerpage page-content-padding'>
         <section data-scroll-section>
           <CareersBanner />
         </section>

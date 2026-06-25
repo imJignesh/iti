@@ -54,11 +54,7 @@ const About = ({ headerHeight }) => {
       {/* 2. RENDER the JsonLd component and pass the schema data */}
       <JsonLd schema={educationalOrganizationSchema} />
 
-      {/* 3. APPLY the style for paddingTop to the scroll container */}
-      <div
-        className=" innerpage"
-        style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
-      >
+      <div className="innerpage page-content-padding">
         <section data-scroll-section>
           <AboutBanner />
         </section>
