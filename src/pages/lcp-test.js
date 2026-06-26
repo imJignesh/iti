@@ -5,17 +5,17 @@ import SEO from "@/components/SEO";
 import SEOHead from "@/components/SEOHead";
 import HeroTest from "@/components/homeCopy/HeroTest";
 
-// Dynamic imports for below-the-fold components
+// Dynamic imports for below-the-fold components - all with ssr: false to defer rendering
 import dynamic from "next/dynamic";
-const Course = dynamic(() => import("@/components/homeCopy/Course"));
-const MarqueeBanner = dynamic(() => import("@/components/homeCopy/MarqueeBanner"));
-const About = dynamic(() => import("@/components/homeCopy/About"));
-const Test = dynamic(() => import("@/components/homeCopy/Test"));
-const Subjects = dynamic(() => import("@/components/homeCopy/Subjects"));
-const Usps = dynamic(() => import("@/components/homeCopy/Usps"));
-const Trainers = dynamic(() => import("@/components/homeCopy/Trainers"));
-const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"));
-const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
+const Course = dynamic(() => import("@/components/homeCopy/Course"), { ssr: false });
+const MarqueeBanner = dynamic(() => import("@/components/homeCopy/MarqueeBanner"), { ssr: false });
+const About = dynamic(() => import("@/components/homeCopy/About"), { ssr: false });
+const Test = dynamic(() => import("@/components/homeCopy/Test"), { ssr: false });
+const Subjects = dynamic(() => import("@/components/homeCopy/Subjects"), { ssr: false });
+const Usps = dynamic(() => import("@/components/homeCopy/Usps"), { ssr: false });
+const Trainers = dynamic(() => import("@/components/homeCopy/Trainers"), { ssr: false });
+const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"), { ssr: false });
+const Blog = dynamic(() => import("@/components/homeCopy/Blog"), { ssr: false });
 
 import path from "path";
 import fs from "fs";
