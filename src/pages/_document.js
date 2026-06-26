@@ -19,17 +19,16 @@ export default function Document() {
         <link
           rel="preload"
           as="image"
-          imagesrcset="/images/video-cover-mobile.webp"
-          imagesizes="100vw"
+          href="/images/video-cover-mobile.webp"
           media="(max-width: 767px)"
-          fetchPriority="high"
+          {...{ fetchpriority: 'high' }}
         />
         <link
           rel="preload"
           as="image"
           href="/images/video-cover.webp"
           media="(min-width: 768px)"
-          fetchPriority="high"
+          {...{ fetchpriority: 'high' }}
         />
 
         <link
@@ -37,7 +36,7 @@ export default function Document() {
           href="/images/logo.svg"
           as="image"
           type="image/svg+xml"
-          fetchPriority="low"
+          {...{ fetchpriority: 'low' }}
         />
 
 

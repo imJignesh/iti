@@ -27,8 +27,8 @@ const Hero = () => {
         <>
             <Head>
                 {/* Preload Background Decoration Images (low priority — not LCP) */}
-                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" fetchPriority="low" />
-                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" fetchPriority="low" />
+                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" {...{ fetchpriority: 'low' }} />
+                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" {...{ fetchpriority: 'low' }} />
             </Head>
 
             <div className={styles.heroSectionWrapper}>
