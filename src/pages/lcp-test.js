@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
 import LazySection from "@/components/LazySection";
+import Script from "next/script";
 
 import SEO from "@/components/SEO";
 import SEOHead from "@/components/SEOHead";
 import HeroTest from "@/components/homeCopy/HeroTest";
 
-// Dynamic imports for below-the-fold components - all with ssr: false to defer rendering
+// Dynamic imports for below-the-fold components - keep SSR enabled for SEO
 import dynamic from "next/dynamic";
-const Course = dynamic(() => import("@/components/homeCopy/Course"), { ssr: false });
-const MarqueeBanner = dynamic(() => import("@/components/homeCopy/MarqueeBanner"), { ssr: false });
-const About = dynamic(() => import("@/components/homeCopy/About"), { ssr: false });
-const Test = dynamic(() => import("@/components/homeCopy/Test"), { ssr: false });
-const Subjects = dynamic(() => import("@/components/homeCopy/Subjects"), { ssr: false });
-const Usps = dynamic(() => import("@/components/homeCopy/Usps"), { ssr: false });
-const Trainers = dynamic(() => import("@/components/homeCopy/Trainers"), { ssr: false });
-const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"), { ssr: false });
-const Blog = dynamic(() => import("@/components/homeCopy/Blog"), { ssr: false });
+const Course = dynamic(() => import("@/components/homeCopy/Course"));
+const MarqueeBanner = dynamic(() => import("@/components/homeCopy/MarqueeBanner"));
+const About = dynamic(() => import("@/components/homeCopy/About"));
+const Test = dynamic(() => import("@/components/homeCopy/Test"));
+const Subjects = dynamic(() => import("@/components/homeCopy/Subjects"));
+const Usps = dynamic(() => import("@/components/homeCopy/Usps"));
+const Trainers = dynamic(() => import("@/components/homeCopy/Trainers"));
+const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"));
+const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
 
 import path from "path";
 import fs from "fs";
@@ -31,6 +32,41 @@ const LcpTest = ({ blogPosts = [] }) => {
                 description="LCP testing page - not indexed"
                 url="https://ignitetraininginstitute.com/lcp-test"
             />
+
+            {/* OPTION 3: Defer CSS loading for below-fold sections - hide them initially with CSS, show after CSS loads */}
+            <style dangerouslySetInnerHTML={{__html: `
+                /* Hide section components initially to prevent render-blocking */
+                .fade-in-section:not(.Hero-module__tvFdZW__heroSectionWrapper) {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                /* Show them when CSS is loaded */
+                .fade-in-section.visible {
+                    opacity: 1;
+                    pointer-events: auto;
+                    transition: opacity 0.3s ease-in;
+                }
+            `}} />
+
+            {/* Load deferred CSS and reveal sections after page is interactive */}
+            <Script
+                id="defer-section-css"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        (function(){
+                            // After page is interactive, make all sections visible
+                            // This allows their CSS to load without blocking hero LCP
+                            setTimeout(() => {
+                                document.querySelectorAll('.fade-in-section').forEach(el => {
+                                    el.classList.add('visible');
+                                });
+                            }, 100);
+                        })();
+                    `
+                }}
+            />
+
             {/* Using the CSS class page-content-padding (from critical.css) to ensure SEO-safe SSR without JS layout shifts */}
             <div className="homeCopy page-content-padding">
                 <HeroTest />
