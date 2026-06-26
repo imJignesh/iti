@@ -65,8 +65,8 @@ const Hero = () => {
                                         loop
                                         playsInline
                                         preload="none"
-                                        fetchPriority="high"
                                         poster={posterImage}
+                                        {...{ fetchpriority: 'high' }}
                                     >
                                         <source src="/videos/hero-banner-video2.mp4" type="video/mp4" />
                                     </video>
