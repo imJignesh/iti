@@ -3,7 +3,7 @@ import LazySection from "@/components/LazySection";
 
 import SEO from "@/components/SEO";
 import SEOHead from "@/components/SEOHead";
-import Hero from "@/components/homeCopy/Hero";
+import HeroTest from "@/components/homeCopy/HeroTest";
 
 // Dynamic imports for below-the-fold components
 import dynamic from "next/dynamic";
@@ -33,7 +33,7 @@ const LcpTest = ({ blogPosts = [] }) => {
             />
             {/* Using the CSS class page-content-padding (from critical.css) to ensure SEO-safe SSR without JS layout shifts */}
             <div className="homeCopy page-content-padding">
-                <Hero />
+                <HeroTest />
 
                 {/* TESTING: Comment out sections one by one to find which causes LCP request discovery error */}
 
