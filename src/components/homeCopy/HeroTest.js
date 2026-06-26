@@ -16,6 +16,10 @@ const HeroTest = () => {
     return (
         <>
             <Head>
+                {/* Preload poster images for LCP (no media query) */}
+                <link rel="preload" as="image" href="/images/video-cover-mobile.webp" {...{ fetchpriority: 'high' }} />
+                <link rel="preload" as="image" href="/images/video-cover.webp" {...{ fetchpriority: 'high' }} />
+
                 {/* Preload Background Decoration Images (low priority — not LCP) */}
                 <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" {...{ fetchpriority: 'low' }} />
                 <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" {...{ fetchpriority: 'low' }} />
