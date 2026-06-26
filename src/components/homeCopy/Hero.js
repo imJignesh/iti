@@ -68,7 +68,7 @@ const Hero = () => {
                                         poster={posterImage}
                                         {...{ fetchpriority: 'high' }}
                                     >
-                                        <source src="/videos/hero-banner-video2.mp4" type="video/mp4" />
+                                        <source src="/videos/hero-banner-video2.mp4" type="video/mp4" {...{ fetchpriority: 'high' }} />
                                     </video>
                                 </div>
 
