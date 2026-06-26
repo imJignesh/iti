@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LazySection from "@/components/LazySection";
 import Script from "next/script";
-
 import SEO from "@/components/SEO";
 import SEOHead from "@/components/SEOHead";
 import HeroTest from "@/components/homeCopy/HeroTest";
@@ -34,7 +33,8 @@ const LcpTest = ({ blogPosts = [] }) => {
             />
 
             {/* OPTION 3: Defer CSS loading for below-fold sections - hide them initially with CSS, show after CSS loads */}
-            <style dangerouslySetInnerHTML={{__html: `
+            <style dangerouslySetInnerHTML={{
+                __html: `
                 /* Hide section components initially to prevent render-blocking */
                 .fade-in-section:not(.Hero-module__tvFdZW__heroSectionWrapper) {
                     opacity: 0;
