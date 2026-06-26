@@ -35,7 +35,9 @@ const LcpTest = ({ blogPosts = [] }) => {
             <div className="homeCopy page-content-padding">
                 <Hero />
 
-                <LazySection>
+                {/* TESTING: Comment out sections one by one to find which causes LCP request discovery error */}
+
+                {/* <LazySection>
                     <Course />
                 </LazySection>
 
@@ -78,7 +80,7 @@ const LcpTest = ({ blogPosts = [] }) => {
 
                 <LazySection>
                     <Blog posts={blogPosts} />
-                </LazySection>
+                </LazySection> */}
             </div>
         </>
     );
