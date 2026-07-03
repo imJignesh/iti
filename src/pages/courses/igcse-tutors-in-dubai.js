@@ -392,8 +392,8 @@ const IGCSE = ({ headerHeight }) => {
 
   return (
     <>
-    <SEO
-                loadInnerStyles={true}
+      <SEO
+        loadInnerStyles={true}
         title="IGCSE Tutors In Dubai, UAE | Expert Coaching & Guidance"
         description="Achieve success with top IGCSE tutors in UAE. Get full prep support for IGCSE with syllabus coverage, past paper practice & exam strategies"
         url="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai"
@@ -418,8 +418,8 @@ const IGCSE = ({ headerHeight }) => {
       <JsonLd schema={igcseSchema} />
 
       {/* 3. APPLY the style for paddingTop */}
-      <div className='overflow-hidden innerpage'>
-        <section className="hero-section hero-atf-optimized">
+      <div className='overflow-hidden innerpage page-content-padding'>
+        <section className="hero-section">
           <div className="hero-container">
             <picture className="hero-bg">
               <source media="(max-width: 768px)" srcSet="/assets/igcse.webp" />
