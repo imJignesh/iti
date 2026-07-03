@@ -1,3 +1,5 @@
+import { ourApproachConfigs } from "@/data/ourApproachConfig";
+import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
@@ -11,7 +13,6 @@ import CourseCard from '@/components/myp/CourseCard';
 import FAQSection from '@/components/myp/FaqSection';
 import IgniteAchievements from '@/components/myp/IgniteAchievements';
 import InfoCard from '@/components/myp-copy/InfoCard';
-import IgniteAboutCard from "@/components/myp/IgniteAboutCard";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 import Trainers from "@/components/myp/Trainers";
 import LifeAtIgniteCarousel from '@/components/myp/LifeAtIgniteCarousel';
@@ -231,7 +232,7 @@ const IBDP = ({ headerHeight }) => {
         <SubjectsCard />
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach config={ourApproachConfigs.myp} />
           </section>
         </LazySection>
 

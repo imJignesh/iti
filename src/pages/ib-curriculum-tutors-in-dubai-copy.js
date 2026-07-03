@@ -1,3 +1,5 @@
+import { ourApproachConfigs } from "@/data/ourApproachConfig";
+import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
@@ -11,7 +13,6 @@ const Blog = dynamic(() => import("@/components/ibc-copy/Blog"));
 const IBCurriculumStages = dynamic(() => import('@/components/ibc-copy/Curriculum.jsx'));
 const FAQSection = dynamic(() => import('@/components/ibc-copy/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/ibc-copy/IgniteAchievements'));
-const IgniteAboutCard = dynamic(() => import("@/components/ibc-copy/IgniteAboutCard"));
 const Trainers = dynamic(() => import("@/components/ibc-copy/Trainers"));
 const WhatWeOfferSection = dynamic(() => import('@/components/ibc-copy/WhatWeOfferSection'));
 const MarqueeBanner = dynamic(() => import('@/components/ibc-copy/MarqueeBanner'));
@@ -450,7 +451,7 @@ const IBC = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach config={ourApproachConfigs.ibcCopy} />
           </section>
         </LazySection>
 

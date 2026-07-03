@@ -1,3 +1,5 @@
+import { ourApproachConfigs } from "@/data/ourApproachConfig";
+import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import Head from "next/head";
 import LazySection from "@/components/LazySection";
@@ -12,7 +14,6 @@ import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
 import FAQSection from '@/components/bc/FaqSection';
 import IgniteAchievements from '@/components/bc/IgniteAchievements';
 import InfoCard from '@/components/bc-copy/InfoCard';
-import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
 import Trainers from "@/components/bc/Trainers";
 import WhatWeOfferSection from '@/components/bc/WhatWeOfferSection';
 import LifeAtIgniteCarousel from '@/components/bc/LifeAtIgniteCarousel';
@@ -234,7 +235,7 @@ const BC = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach config={ourApproachConfigs.bc} />
           </section>
         </LazySection>
 

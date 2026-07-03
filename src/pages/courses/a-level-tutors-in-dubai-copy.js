@@ -1,3 +1,5 @@
+import { ourApproachConfigs } from "@/data/ourApproachConfig";
+import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
@@ -9,7 +11,6 @@ import CourseCard from '@/components/a-level/CourseCard';
 import FAQSection from '@/components/a-level/FaqSection';
 import IgniteAchievements from '@/components/a-level/IgniteAchievements';
 import InfoCard from '@/components/a-level-copy/InfoCard';
-import IgniteAboutCard from "@/components/a-level/IgniteAboutCard";
 import Trainers from "@/components/a-level/Trainers";
 import WhatWeOfferSection from '@/components/a-level/WhatWeOfferSection';
 import LifeAtIgniteCarousel from '@/components/a-level/LifeAtIgniteCarousel';
@@ -201,7 +202,7 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach config={ourApproachConfigs.aLevel} />
           </section>
         </LazySection>
 

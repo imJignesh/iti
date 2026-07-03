@@ -1,3 +1,5 @@
+import { ourApproachConfigs } from "@/data/ourApproachConfig";
+import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import Head from 'next/head';
 import LazySection from '@/components/LazySection';
@@ -11,7 +13,6 @@ import CourseCard from '@/components/ap/CourseCard';
 import FAQSection from '@/components/ap/FaqSection';
 import IgniteAchievements from '@/components/ap/IgniteAchievements';
 import InfoCard from '@/components/ap/InfoCard';
-import IgniteAboutCard from "@/components/ap/IgniteAboutCard";
 import Trainers from "@/components/ap/Trainers";
 import WhatWeOfferSection from '@/components/ap/WhatWeOfferSection';
 import LifeAtIgniteCarousel from '@/components/ap/LifeAtIgniteCarousel';
@@ -523,7 +524,7 @@ const ap = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach config={ourApproachConfigs.ap} />
           </section>
         </LazySection>
 

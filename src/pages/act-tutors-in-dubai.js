@@ -1,3 +1,5 @@
+import { ourApproachConfigs } from "@/data/ourApproachConfig";
+import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component
@@ -9,7 +11,6 @@ import CourseCard from '@/components/act/CourseCard';
 import FAQSection from '@/components/act/FaqSection';
 import IgniteAchievements from '@/components/act/IgniteAchievements';
 import InfoCard from '@/components/act/InfoCard';
-import IgniteAboutCard from "@/components/act/IgniteAboutCard";
 import LifeAtIgniteCarousel from '@/components/act/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/act/MarqueeBanner';
 import ReviewsSection from '@/components/act/ReviewsSection';
@@ -500,7 +501,7 @@ const act = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach config={ourApproachConfigs.act} />
           </section>
         </LazySection>
         {/* <section data-scroll-section>

@@ -1,3 +1,5 @@
+import { ourApproachConfigs } from "@/data/ourApproachConfig";
+import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import Head from "next/head";
 import dynamic from 'next/dynamic';
@@ -11,7 +13,6 @@ const Blog = dynamic(() => import("@/components/bc/Blog"));
 const IBCurriculumStages = dynamic(() => import('@/components/bc/Curriculum.jsx'));
 const FAQSection = dynamic(() => import('@/components/bc/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/bc/IgniteAchievements'));
-const IgniteAboutCard = dynamic(() => import("@/components/bc/IgniteAboutCard"));
 const Trainers = dynamic(() => import("@/components/bc/Trainers"));
 const WhatWeOfferSection = dynamic(() => import('@/components/bc/WhatWeOfferSection'));
 const MarqueeBanner = dynamic(() => import('@/components/bc/MarqueeBanner'));
@@ -449,7 +450,7 @@ const BC = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach config={ourApproachConfigs.bc} />
           </section>
         </LazySection>
 

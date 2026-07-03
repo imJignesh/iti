@@ -1,3 +1,5 @@
+import { ourApproachConfigs } from "@/data/ourApproachConfig";
+import OurApproach from "@/components/shared/OurApproach";
 // import MovingBanner from '@/components/home/MovingBanner';
 import LazySection from "@/components/LazySection";
 import Head from "next/head";
@@ -9,7 +11,6 @@ import CourseCard from '@/components/ibdp/CourseCard';
 import FAQSection from '@/components/ibdp/FaqSection';
 import IgniteAchievements from '@/components/ibdp/IgniteAchievements';
 import InfoCard from '@/components/ibdp-copy/InfoCard';
-import IgniteAboutCard from "@/components/ibdp/IgniteAboutCard";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 import Trainers from "@/components/ibdp/Trainers";
 // import LifeAtIgniteCarousel from '@/components/ibdp/LifeAtIgniteCarousel';
@@ -111,7 +112,7 @@ const IBDP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach config={ourApproachConfigs.ibdp} />
           </section>
         </LazySection>
 

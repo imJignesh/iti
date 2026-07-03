@@ -1,3 +1,5 @@
+import { ourApproachConfigs } from "@/data/ourApproachConfig";
+import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
@@ -11,7 +13,6 @@ import CourseCard from '@/components/igcse/CourseCard';
 import FAQSection from '@/components/igcse/FaqSection';
 import IgniteAchievements from '@/components/igcse/IgniteAchievements';
 import InfoCard from '@/components/igcse-copy/InfoCard';
-import IgniteAboutCard from "@/components/igcse/IgniteAboutCard";
 import Trainers from '@/components/igcse/Trainers';
 import WhatWeOfferSection from '@/components/igcse/WhatWeOfferSection';
 import LifeAtIgniteCarousel from '@/components/igcse/LifeAtIgniteCarousel';
@@ -220,7 +221,7 @@ const IGCSE = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach config={ourApproachConfigs.igcse} />
           </section>
         </LazySection>
 
