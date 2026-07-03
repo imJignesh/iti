@@ -1,11 +1,7 @@
 import InfoCardLeft from "./InfoCardLeft";
-import InfoCardForm from "@/components/shared/InfoCardForm";
-import { subjectPages, subjectFormConfigs } from "@/data/heroSubjects";
+import InfoCardForm from "./InfoCardForm";
 
 export default function InfoCard() {
-  const heroContent = subjectPages["business"];
-  const formConfig = subjectFormConfigs["business"];
-
   return (
     <div className="info-card-container">
       <div
@@ -18,10 +14,10 @@ export default function InfoCard() {
         <div className="position-relative h-100" style={{ zIndex: 1 }}>
           <div className="row g-0 h-100">
             {/* Left Section (Static Text - LCP Optimized) */}
-            <InfoCardLeft content={heroContent} />
+            <InfoCardLeft />
 
             {/* Right Section (Interactive Form) */}
-            <InfoCardForm formConfig={formConfig} />
+            <InfoCardForm />
           </div>
         </div>
       </div>

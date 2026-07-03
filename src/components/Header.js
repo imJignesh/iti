@@ -30,13 +30,14 @@ const Header = ({ setHeaderHeight }) => {
     }, []);
 
     useEffect(() => {
-        if (!headerRef.current || isPageSpeedInsights()) return;
-        const observer = new ResizeObserver((entries) => {
-            const height = entries[0].contentRect.height;
-            if (height > 0) setHeaderHeight(height);
-        });
-        observer.observe(headerRef.current);
-        return () => observer.disconnect();
+        if (headerRef.current && !isPageSpeedInsights()) {
+            // Delay measurement slightly to avoid blocking the initial paint
+            const timer = setTimeout(() => {
+                const height = headerRef.current.offsetHeight;
+                if (height > 0) setHeaderHeight(height);
+            }, 100);
+            return () => clearTimeout(timer);
+        }
     }, [setHeaderHeight]);
 
     const isLinkActive = (href, parentPaths = []) => {

@@ -19,10 +19,8 @@ export const useScroll = () => {
 const LocomotiveScrollProvider = ({ children }) => {
     // A ref to hold the DOM element that will be the scroll container
     const scrollRef = useRef(null);
-    // A ref to hold the Locomotive Scroll instance (for init/destroy logic)
+    // A ref to hold the Locomotive Scroll instance
     const scrollInstanceRef = useRef(null);
-    // State-tracked instance so context consumers re-render when Locomotive is ready
-    const [scrollInstance, setScrollInstance] = useState(null);
     const [isScrollEnabled, setIsScrollEnabled] = useState(false);
 
     // Effect 0: Apply class to body if bot is detected
@@ -38,9 +36,8 @@ const LocomotiveScrollProvider = ({ children }) => {
         if (typeof window === "undefined") return;
 
         const checkWidth = () => {
-            // LCP FIX: Only enable on desktop (> 991px) to prevent Locomotive Scroll
-            // from initializing on mobile/tablet — which was gating paint behind JS execution.
-            const shouldEnable = window.innerWidth > 991;
+            // User's current logic: Scroll enabled if width is >= 280px
+            const shouldEnable = window.innerWidth >= 280;
 
             // --- MODIFIED: Check width AND check for PSI bot ---
             if (shouldEnable && !isBotDetected()) {
@@ -64,7 +61,6 @@ const LocomotiveScrollProvider = ({ children }) => {
             if (scrollInstanceRef.current) {
                 scrollInstanceRef.current.destroy();
                 scrollInstanceRef.current = null;
-                setScrollInstance(null);
             }
         };
 
@@ -91,7 +87,6 @@ const LocomotiveScrollProvider = ({ children }) => {
             // --- END FIX ---
 
             scrollInstanceRef.current = scroll;
-            setScrollInstance(scroll);
             console.log("Locomotive Scroll Initialized");
         };
 
@@ -104,7 +99,7 @@ const LocomotiveScrollProvider = ({ children }) => {
 
     return (
         <div ref={scrollRef} data-scroll-container={isScrollEnabled ? true : undefined}>
-            <ScrollContext.Provider value={scrollInstance}>
+            <ScrollContext.Provider value={scrollInstanceRef.current}>
                 {children}
             </ScrollContext.Provider>
         </div>

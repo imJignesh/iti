@@ -18,14 +18,7 @@ const LazySection = ({ children }) => {
     useEffect(() => {
         if (!ref.current || !scroll) return;
 
-        // Defer update to next frame so DOM is fully settled and event handlers attached
-        const timeoutId = requestAnimationFrame(() => {
-            if (scroll && typeof scroll.update === 'function') {
-                scroll.update();
-            }
-        });
-
-        // Notify Locomotive when this section's size changes (dynamic content, images loading, etc.)
+        // Ensure Locomotive Scroll is notified when the component reaches its final size
         const resizeObserver = new ResizeObserver(() => {
             if (scroll && typeof scroll.update === 'function') {
                 scroll.update();
@@ -35,7 +28,6 @@ const LazySection = ({ children }) => {
         resizeObserver.observe(ref.current);
 
         return () => {
-            cancelAnimationFrame(timeoutId);
             if (resizeObserver) resizeObserver.disconnect();
         };
     }, [scroll]);

@@ -1,5 +1,3 @@
-import { ourApproachConfigs } from "@/data/ourApproachConfig";
-import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
@@ -13,6 +11,7 @@ const CourseCard = dynamic(() => import('@/components/igcse/CourseCard'));
 const FAQSection = dynamic(() => import('@/components/igcse/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/igcse/IgniteAchievements'));
 import InfoCard from '@/components/igcse/InfoCard'; // ATF - keep static
+const IgniteAboutCard = dynamic(() => import('@/components/igcse/IgniteAboutCard'));
 const Trainers = dynamic(() => import('@/components/igcse/Trainers'));
 const WhatWeOfferSection = dynamic(() => import('@/components/igcse/WhatWeOfferSection'));
 const MarqueeBanner = dynamic(() => import('@/components/igcse/MarqueeBanner'));
@@ -454,7 +453,7 @@ const IGCSE = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <OurApproach config={ourApproachConfigs.igcse} />
+            <IgniteAboutCard />
           </section>
         </LazySection>
 

@@ -299,15 +299,6 @@ export default function SubjectsCard() {
           width: 480px;
         }
 
-        .SubHeading {
-          -webkit-text-fill-color: white;
-        }
-
-        .subjectLeft h2:before,
-        .subjectLeft h2:after {
-          filter: contrast(0) brightness(2);
-        }
-
         .subjectTitle {
           color: white;
           font-size: 29px;

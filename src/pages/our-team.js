@@ -209,7 +209,7 @@ const OurTeam = ({ headerHeight }) => {
 <link rel="stylesheet" href="/styles/team.css" />
             </Head>
 
-            <div className="innerpage page-content-padding">
+            <div style={{ paddingTop: `${headerHeight}px` }} className="innerpage">
                 <TeamBanner />
 
                 {/* --- Section 1: Co-Founders --- */}

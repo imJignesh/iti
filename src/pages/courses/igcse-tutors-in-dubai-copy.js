@@ -1,6 +1,4 @@
-import { ourApproachConfigs } from "@/data/ourApproachConfig";
-import OurApproach from "@/components/shared/OurApproach";
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
@@ -13,6 +11,7 @@ import CourseCard from '@/components/igcse/CourseCard';
 import FAQSection from '@/components/igcse/FaqSection';
 import IgniteAchievements from '@/components/igcse/IgniteAchievements';
 import InfoCard from '@/components/igcse-copy/InfoCard';
+import IgniteAboutCard from "@/components/igcse/IgniteAboutCard";
 import Trainers from '@/components/igcse/Trainers';
 import WhatWeOfferSection from '@/components/igcse/WhatWeOfferSection';
 import LifeAtIgniteCarousel from '@/components/igcse/LifeAtIgniteCarousel';
@@ -144,6 +143,38 @@ const IGCSE = ({ headerHeight }) => {
   // ----------------------------------------------------
 
 
+  const scrollRef = useRef(null);
+  const scrollInstanceRef = useRef(null);
+
+  useEffect(() => {
+    let scroll;
+
+    const initScroll = async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      if (!scrollRef.current) return;
+
+      scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.1,
+        // optional:
+        getDirection: true,
+        getSpeed: true,
+        multiplier: 1,
+      });
+
+      scrollInstanceRef.current = scroll;
+    };
+
+    if (typeof window !== "undefined") {
+      initScroll();
+    }
+
+    return () => {
+      scrollInstanceRef.current?.destroy();
+      scrollInstanceRef.current = null;
+    };
+  }, []);
 
   return (
     <>
@@ -197,7 +228,9 @@ const IGCSE = ({ headerHeight }) => {
 
       {/* 3. APPLY the style for paddingTop */}
       <div
+        ref={scrollRef}
         className='overflow-hidden innerpage page-content-padding'
+        data-scroll-container
       >
         <section data-scroll-section className="hero-section">
           <div className="hero-container">
@@ -221,7 +254,7 @@ const IGCSE = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <OurApproach config={ourApproachConfigs.igcse} />
+            <IgniteAboutCard />
           </section>
         </LazySection>
 

@@ -1,5 +1,3 @@
-import { ourApproachConfigs } from "@/data/ourApproachConfig";
-import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
@@ -16,6 +14,7 @@ const CourseCard = dynamic(() => import('@/components/myp/CourseCard'));
 const FAQSection = dynamic(() => import('@/components/myp/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/myp/IgniteAchievements'));
 import InfoCard from '@/components/myp/InfoCard'; // Keeps static because it's ATF
+const IgniteAboutCard = dynamic(() => import('@/components/myp/IgniteAboutCard'));
 const WhatWeOfferSection = dynamic(() => import('@/components/ibdp/WhatWeOfferSection'));
 const Trainers = dynamic(() => import('@/components/myp/Trainers'));
 const MarqueeBanner = dynamic(() => import('@/components/myp/MarqueeBanner'));
@@ -364,7 +363,12 @@ const MYP = ({ headerHeight }) => {
         </section>
         <LazySection>
           <section data-scroll-section>
-            <OurApproach config={ourApproachConfigs.myp} />
+            <SubjectsCard />
+          </section>
+        </LazySection>
+        <LazySection>
+          <section data-scroll-section>
+            <IgniteAboutCard />
           </section>
         </LazySection>
 

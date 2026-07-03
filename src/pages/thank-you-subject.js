@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Script from "next/script";
 // 1. Import the reusable JsonLd component
 import SEO from "@/components/SEO";
@@ -38,6 +38,42 @@ const About = ({ headerHeight }) => {
     ]
   };
 
+  // ----------------------------------------------------
+  // 👇 EXISTING COMPONENT LOGIC (Locomotive Scroll)
+  // ----------------------------------------------------
+  const scrollRef = useRef(null);
+  const scrollInstanceRef = useRef(null);
+
+  useEffect(() => {
+    let scroll;
+
+    const initScroll = async () => {
+      // Dynamically import Locomotive Scroll
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      if (!scrollRef.current) return;
+
+      scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.1,
+        getDirection: true,
+        getSpeed: true,
+        multiplier: 1,
+      });
+
+      scrollInstanceRef.current = scroll;
+    };
+
+    if (typeof window !== "undefined") {
+      initScroll();
+    }
+
+    // Cleanup function
+    return () => {
+      scrollInstanceRef.current?.destroy();
+      scrollInstanceRef.current = null;
+    };
+  }, []);
 
   return (
     <>
@@ -56,7 +92,9 @@ const About = ({ headerHeight }) => {
 
       {/* 3. APPLY the style for paddingTop to the scroll container */}
       <div
+        ref={scrollRef}
         className=" innerpage"
+        data-scroll-container
         style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
       >
         <section></section>

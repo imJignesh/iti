@@ -4,7 +4,7 @@ import IgniteAboutCard from "@/components/aboutus/IgniteAboutCard";
 import WhyChooseUs from "@/components/aboutus/WhyChooseUs";
 import Timeline from "@/components/aboutus/Timeline";
 import MeetOurFounders from "@/components/aboutus/MeetOurFounders";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import TutoringHeroSection from "@/components/aboutus/BottomSub";
 import MarqueeBanner from "@/components/act/MarqueeBanner";
 import TutoringCourses from "@/components/maincourse/Banner";
@@ -20,6 +20,8 @@ import SEO from "@/components/SEO";
 
 // 1. ACCEPT the headerHeight prop
 const About = ({ headerHeight }) => {
+    const scrollRef = useRef(null);
+    const scrollInstanceRef = useRef(null);
     const [active, setActive] = useState(1);
     const [isMobile, setIsMobile] = useState(false);
     const [isMobileSwiper, setIsMobileSwiper] = useState(false);
@@ -37,6 +39,35 @@ const About = ({ headerHeight }) => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    useEffect(() => {
+        let scroll;
+
+        const initScroll = async () => {
+            const LocomotiveScroll = (await import("locomotive-scroll")).default;
+            if (!scrollRef.current) return;
+
+            scroll = new LocomotiveScroll({
+                el: scrollRef.current,
+                smooth: true,
+                lerp: 0.1,
+                // optional:
+                getDirection: true,
+                getSpeed: true,
+                multiplier: 1,
+            });
+
+            scrollInstanceRef.current = scroll;
+        };
+
+        if (typeof window !== "undefined") {
+            initScroll();
+        }
+
+        return () => {
+            scrollInstanceRef.current?.destroy();
+            scrollInstanceRef.current = null;
+        };
+    }, []);
 
     return (
         <>
@@ -46,7 +77,9 @@ const About = ({ headerHeight }) => {
                 url="https://ignitetraininginstitute.com/courses"
             />
             <div
+                ref={scrollRef}
                 className=" innerpage"
+                data-scroll-container
                 style={{ paddingTop: `${headerHeight}px` }} // <--- THE STICKY HEADER FIX
             >
                 <section data-scroll-section>

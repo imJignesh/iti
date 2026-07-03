@@ -1,6 +1,4 @@
-import { ourApproachConfigs } from "@/data/ourApproachConfig";
-import OurApproach from "@/components/shared/OurApproach";
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
@@ -11,6 +9,7 @@ import CourseCard from '@/components/act/CourseCard';
 import FAQSection from '@/components/act/FaqSection';
 import IgniteAchievements from '@/components/act/IgniteAchievements';
 import InfoCard from '@/components/act/InfoCard';
+import IgniteAboutCard from "@/components/act/IgniteAboutCard";
 import LifeAtIgniteCarousel from '@/components/act/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/act/MarqueeBanner';
 import ReviewsSection from '@/components/act/ReviewsSection';
@@ -412,6 +411,38 @@ const act = ({ headerHeight }) => {
   // ----------------------------------------------------
 
 
+  const scrollRef = useRef(null);
+  const scrollInstanceRef = useRef(null);
+
+  useEffect(() => {
+    let scroll;
+
+    const initScroll = async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      if (!scrollRef.current) return;
+
+      scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.1,
+        // optional:
+        getDirection: true,
+        getSpeed: true,
+        multiplier: 1,
+      });
+
+      scrollInstanceRef.current = scroll;
+    };
+
+    if (typeof window !== "undefined") {
+      initScroll();
+    }
+
+    return () => {
+      scrollInstanceRef.current?.destroy();
+      scrollInstanceRef.current = null;
+    };
+  }, []);
 
 
   return (
@@ -445,7 +476,9 @@ const act = ({ headerHeight }) => {
 
       {/* 3. APPLY the style for paddingTop to the scroll container */}
       <div
+        ref={scrollRef}
         className='overflow-hidden innerpage page-content-padding'
+        data-scroll-container
       >
         <section data-scroll-section className="hero-section">
           <div className="hero-container">
@@ -501,7 +534,7 @@ const act = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <OurApproach config={ourApproachConfigs.act} />
+            <IgniteAboutCard />
           </section>
         </LazySection>
         {/* <section data-scroll-section>

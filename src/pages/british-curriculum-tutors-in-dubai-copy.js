@@ -1,6 +1,4 @@
-import { ourApproachConfigs } from "@/data/ourApproachConfig";
-import OurApproach from "@/components/shared/OurApproach";
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Head from "next/head";
 import LazySection from "@/components/LazySection";
 // 1. Import the reusable schema component
@@ -14,6 +12,7 @@ import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
 import FAQSection from '@/components/bc/FaqSection';
 import IgniteAchievements from '@/components/bc/IgniteAchievements';
 import InfoCard from '@/components/bc-copy/InfoCard';
+import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
 import Trainers from "@/components/bc/Trainers";
 import WhatWeOfferSection from '@/components/bc/WhatWeOfferSection';
 import LifeAtIgniteCarousel from '@/components/bc/LifeAtIgniteCarousel';
@@ -147,6 +146,38 @@ const BC = ({ headerHeight }) => {
   // ----------------------------------------------------
 
 
+  const scrollRef = useRef(null);
+  const scrollInstanceRef = useRef(null);
+
+  useEffect(() => {
+    let scroll;
+
+    const initScroll = async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      if (!scrollRef.current) return;
+
+      scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.1,
+        // optional:
+        getDirection: true,
+        getSpeed: true,
+        multiplier: 1,
+      });
+
+      scrollInstanceRef.current = scroll;
+    };
+
+    if (typeof window !== "undefined") {
+      initScroll();
+    }
+
+    return () => {
+      scrollInstanceRef.current?.destroy();
+      scrollInstanceRef.current = null;
+    };
+  }, []);
 
   return (
     <>
@@ -179,7 +210,9 @@ const BC = ({ headerHeight }) => {
 
       {/* LCP Optimization: Lifted Image */}
       <div
+        ref={scrollRef}
         className='overflow-hidden innerpage page-content-padding'
+        data-scroll-container
       >
         <section data-scroll-section className="hero-section">
           <div className="hero-container">
@@ -235,7 +268,7 @@ const BC = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <OurApproach config={ourApproachConfigs.bc} />
+            <IgniteAboutCard />
           </section>
         </LazySection>
 

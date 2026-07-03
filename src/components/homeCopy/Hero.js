@@ -1,34 +1,76 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import styles from '@/styles/home-copy/Hero.module.css';
 
+const MOBILE_POSTER = '/images/video-cover-mobile.webp';
+const DESKTOP_POSTER = '/images/video-cover.webp';
+
 const Hero = () => {
     const videoRef = useRef(null);
-    const [posterImage, setPosterImage] = useState('/images/video-cover.webp');
+    const [videoLoaded, setVideoLoaded] = useState(false);
+    const isVideoLoadingRef = useRef(false);
 
     useEffect(() => {
-        // Set correct poster image based on screen width
-        setPosterImage(window.innerWidth <= 767 ? '/images/video-cover-mobile.webp' : '/images/video-cover.webp');
-    }, []);
-
-    useEffect(() => {
-        // Load video after poster image is displayed, without blocking page load
-        const timerId = setTimeout(() => {
-            if (videoRef.current) {
+        const loadVideo = () => {
+            if (videoRef.current && !isVideoLoadingRef.current) {
+                isVideoLoadingRef.current = true;
+                if (videoRef.current.getElementsByTagName('source').length === 0) {
+                    const source = document.createElement('source');
+                    source.src = '/videos/hero-banner-video2.mp4';
+                    source.type = 'video/mp4';
+                    videoRef.current.appendChild(source);
+                }
                 videoRef.current.load();
             }
-        }, 1500);
+        };
 
-        return () => clearTimeout(timerId);
-    }, []);
+        const delay = window.innerWidth <= 767 ? 6000 : 2000;
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadVideo, { timeout: delay });
+        } else {
+            setTimeout(loadVideo, delay);
+        }
 
+        const handleInteraction = () => {
+            loadVideo();
+        };
+
+        document.addEventListener('scroll', handleInteraction, { passive: true, once: true });
+        document.addEventListener('touchstart', handleInteraction, { passive: true, once: true });
+        document.addEventListener('mousedown', handleInteraction, { passive: true, once: true });
+
+        return () => {
+            document.removeEventListener('scroll', handleInteraction);
+            document.removeEventListener('touchstart', handleInteraction);
+            document.removeEventListener('mousedown', handleInteraction);
+        };
+    }, [videoLoaded]);
 
     return (
         <>
             <Head>
-                {/* Preload Background Decoration Images (low priority — not LCP) */}
-                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" {...{ fetchpriority: 'low' }} />
-                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" {...{ fetchpriority: 'low' }} />
+                {/*
+                  * LCP FIX: Preload using plain static URLs.
+                  * These must EXACTLY match the src="" used in the <picture> below
+                  * so the browser reuses the preloaded bytes instead of re-fetching.
+                  */}
+                <link
+                    rel="preload"
+                    as="image"
+                    href={MOBILE_POSTER}
+                    media="(max-width: 767px)"
+                    fetchPriority="high"
+                />
+                <link
+                    rel="preload"
+                    as="image"
+                    href={DESKTOP_POSTER}
+                    media="(min-width: 768px)"
+                    fetchPriority="high"
+                />
+                {/* Preload Background Decoration Images */}
+                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" />
+                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" />
             </Head>
 
             <div className={styles.heroSectionWrapper}>
@@ -57,6 +99,30 @@ const Hero = () => {
 
                             <div className={`col-12 col-lg-5 col-xl-5 ${styles.heroRight}`}>
                                 <div className={styles.videoContainer}>
+                                    <div className={`${styles.posterOverlay} ${videoLoaded ? styles.posterHidden : ''}`}>
+                                        {/*
+                                          * LCP IMAGE: Using plain <img> + <picture> with static src="" paths.
+                                          * These MUST match the href="" in the <link rel="preload"> above
+                                          * to guarantee the browser reuses the preloaded resource.
+                                          * Do NOT use Next.js <Image> or getImageProps here — they generate
+                                          * /_next/image?url=... URLs that won't match static preload hrefs.
+                                          */}
+                                        <picture>
+                                            <source
+                                                media="(max-width: 767px)"
+                                                srcSet={MOBILE_POSTER}
+                                            />
+                                            <img
+                                                src={DESKTOP_POSTER}
+                                                alt="Ignite tutors in Dubai — IBDP, IGCSE, A-Level, IB MYP"
+                                                width={600}
+                                                height={660}
+                                                decoding="sync"
+                                                fetchPriority="high"
+                                                className={styles.posterImage}
+                                            />
+                                        </picture>
+                                    </div>
                                     <video
                                         ref={videoRef}
                                         className={styles.heroVideo}
@@ -65,9 +131,8 @@ const Hero = () => {
                                         loop
                                         playsInline
                                         preload="none"
-                                        poster={posterImage}
+                                        onCanPlay={() => setVideoLoaded(true)}
                                     >
-                                        <source src="/videos/hero-banner-video2.mp4" type="video/mp4" />
                                     </video>
                                 </div>
 

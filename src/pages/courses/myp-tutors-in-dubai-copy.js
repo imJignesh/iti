@@ -1,6 +1,4 @@
-import { ourApproachConfigs } from "@/data/ourApproachConfig";
-import OurApproach from "@/components/shared/OurApproach";
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
@@ -13,6 +11,7 @@ import CourseCard from '@/components/myp/CourseCard';
 import FAQSection from '@/components/myp/FaqSection';
 import IgniteAchievements from '@/components/myp/IgniteAchievements';
 import InfoCard from '@/components/myp-copy/InfoCard';
+import IgniteAboutCard from "@/components/myp/IgniteAboutCard";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 import Trainers from "@/components/myp/Trainers";
 import LifeAtIgniteCarousel from '@/components/myp/LifeAtIgniteCarousel';
@@ -143,6 +142,38 @@ const IBDP = ({ headerHeight }) => {
   // 👆 END OF SCHEMA DEFINITION
   // ----------------------------------------------------
 
+  const scrollRef = useRef(null);
+  const scrollInstanceRef = useRef(null);
+
+  useEffect(() => {
+    let scroll;
+
+    const initScroll = async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      if (!scrollRef.current) return;
+
+      scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.1,
+        // optional:
+        getDirection: true,
+        getSpeed: true,
+        multiplier: 1,
+      });
+
+      scrollInstanceRef.current = scroll;
+    };
+
+    if (typeof window !== "undefined") {
+      initScroll();
+    }
+
+    return () => {
+      scrollInstanceRef.current?.destroy();
+      scrollInstanceRef.current = null;
+    };
+  }, []);
 
   return (
     <>
@@ -176,7 +207,9 @@ const IBDP = ({ headerHeight }) => {
       </Head>
       {/* 3. APPLY the style for paddingTop */}
       <div
+        ref={scrollRef}
         className='overflow-hidden innerpage page-content-padding'
+        data-scroll-container
       >
         <section data-scroll-section className="hero-section">
           <div className="hero-container">
@@ -232,7 +265,7 @@ const IBDP = ({ headerHeight }) => {
         <SubjectsCard />
         <LazySection>
           <section data-scroll-section>
-            <OurApproach config={ourApproachConfigs.myp} />
+            <IgniteAboutCard />
           </section>
         </LazySection>
 

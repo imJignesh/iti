@@ -1,5 +1,3 @@
-import { ourApproachConfigs } from "@/data/ourApproachConfig";
-import OurApproach from "@/components/shared/OurApproach";
 import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
@@ -15,6 +13,7 @@ const CourseCard = dynamic(() => import('@/components/a-level/CourseCard'));
 const FAQSection = dynamic(() => import('@/components/a-level/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/a-level/IgniteAchievements'));
 import InfoCard from '@/components/a-level/InfoCard'; // ATF - keep static
+const IgniteAboutCard = dynamic(() => import('@/components/a-level/IgniteAboutCard'));
 const Trainers = dynamic(() => import('@/components/a-level/Trainers'));
 const WhatWeOfferSection = dynamic(() => import('@/components/a-level/WhatWeOfferSection'));
 const MarqueeBanner = dynamic(() => import('@/components/a-level/MarqueeBanner'));
@@ -374,7 +373,7 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <OurApproach config={ourApproachConfigs.aLevel} />
+            <IgniteAboutCard />
           </section>
         </LazySection>
 

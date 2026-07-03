@@ -1,5 +1,3 @@
-import { ourApproachConfigs } from "@/data/ourApproachConfig";
-import OurApproach from "@/components/shared/OurApproach";
 // import MovingBanner from '@/components/home/MovingBanner';
 import LazySection from "@/components/LazySection";
 import Head from "next/head";
@@ -12,6 +10,7 @@ const CourseCard = dynamic(() => import('@/components/ibdp/CourseCard'));
 const FAQSection = dynamic(() => import('@/components/ibdp/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/ibdp/IgniteAchievements'));
 import InfoCard from '@/components/ibdp/InfoCard'; // ATF - keep static
+const IgniteAboutCard = dynamic(() => import('@/components/ibdp/IgniteAboutCard'));
 const WhatWeOfferSection = dynamic(() => import('@/components/ibdp/WhatWeOfferSection'));
 const Trainers = dynamic(() => import('@/components/ibdp/Trainers'));
 const MarqueeBanner = dynamic(() => import('@/components/ibdp/MarqueeBanner'));
@@ -377,7 +376,7 @@ const IBDP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <OurApproach config={ourApproachConfigs.ibdp} />
+            <IgniteAboutCard />
           </section>
         </LazySection>
 
