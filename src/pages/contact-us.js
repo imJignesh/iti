@@ -168,7 +168,7 @@ const Contact = ({ headerHeight }) => {
             <JsonLd schema={educationalOrganizationSchema} />
 
             {/* 3. Apply the headerHeight as paddingTop to fix the sticky header issue. */}
-            <div style={{ paddingTop: `${headerHeight}px` }} className="innerpage">
+            <div className="innerpage page-content-padding">
                 <section data-scroll-section>
                     <ContactBanner />
                 </section>

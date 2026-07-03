@@ -447,7 +447,6 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
     });
 
 
-    const scrollInstanceRef = useRef(null);
     const post = data?.[0] || initialPost; // Define post once here
 
 
@@ -603,34 +602,6 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
     // --------------------------------------------------------------------------------
 
 
-    // Initialization and TOC generation effect
-    useEffect(() => {
-        // ... (Locomotive Scroll setup) ...
-        let scroll;
-        const initScroll = async () => {
-            const LocomotiveScroll = (await import("locomotive-scroll")).default;
-            scroll = new LocomotiveScroll({
-                el: document.body,
-                smooth: true,
-                lerp: 0.1,
-            });
-            scrollInstanceRef.current = scroll;
-            window.locomotiveScrollInstance = scroll; // Make scroll instance globally available for the inner component
-        };
-
-        if (typeof window !== "undefined") {
-            initScroll();
-        }
-
-        return () => {
-            scrollInstanceRef.current?.destroy();
-            scrollInstanceRef.current = null;
-            if (typeof window !== "undefined") {
-                delete window.locomotiveScrollInstance;
-            }
-        };
-    }, []);
-
     const [processedHtml, setProcessedHtml] = useState(null);
 
     useEffect(() => {
@@ -650,10 +621,6 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
             // Instead, we just use the result for TOC and potentially for rendering.
             setToc(generatedToc);
             setProcessedHtml(tempDiv.innerHTML);
-
-            if (scrollInstanceRef.current?.update) {
-                scrollInstanceRef.current.update();
-            }
         }
     }, [data, processedHtml]);
 

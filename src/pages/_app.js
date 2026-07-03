@@ -5,9 +5,9 @@ import Script from "next/script";
 import { useState, createContext, useEffect, useRef } from "react";
 
 
-import "@/styles/critical.css";
+// critical.css is inlined in _document.js as a <style> tag — zero network request
 import "@/styles/globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap is loaded deferred via Script below — critical Bootstrap utilities are in critical.css
 // --- Global Styles for specific sub-pages ---
 // Moved to individual pages via <link> tags in Head to prioritize home page LCP.
 
@@ -21,15 +21,7 @@ const LocomotiveScrollProvider = dynamic(() => import('../components/LocomotiveS
     ssr: false,
 });
 
-import { isPageSpeedInsights, isBot } from "@/utils/botDetection";
-
-const isMobileDevice = () => {
-    if (typeof window === 'undefined') return false;
-    return (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-        window.innerWidth <= 768
-    );
-};
+import { isPageSpeedInsights } from "@/utils/botDetection";
 
 
 
@@ -69,21 +61,11 @@ export default function MyApp({ Component, pageProps }) {
 
     const mobileBreakpoint = 2600;
 
+    // Set Locomotive once on client mount (avoids hydration mismatch)
     useEffect(() => {
-        const isMobile = isMobileDevice();
-        // --- MODIFIED: Disable for PSI/Bots as well ---
-        const isPageSpeed = isPageSpeedInsights();
-
-        // Ensure Locomotive Scroll is disabled for ALL mobile devices and bots
-        if (isMobile || isPageSpeed) {
-            console.log('Locomotive Scroll disabled for mobile/bot');
-            setShouldLoadLocomotiveScroll(false);
-        } else {
-            setShouldLoadLocomotiveScroll(true);
-        }
+        const shouldEnable = window.innerWidth > 991 && !isPageSpeedInsights();
+        setShouldLoadLocomotiveScroll(shouldEnable);
     }, []);
-
-
 
     useEffect(() => {
         const handleScroll = () => {
@@ -148,6 +130,19 @@ export default function MyApp({ Component, pageProps }) {
     // Minimal Return for Debugging
     return (
         <PopupProvider>
+            {/*
+              * Bootstrap loaded deferred from CDN — does NOT block LCP paint.
+              * The CDN URL is versioned so it never needs cache-busting.
+              * Critical Bootstrap utilities (row, col-*, flex, etc.) are
+              * inlined in critical.css to prevent FOUC on above-fold content.
+              */}
+            <Script
+                id="bootstrap-css"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css';l.crossOrigin='anonymous';document.head.appendChild(l);})();`
+                }}
+            />
             <Script
                 id="gtm-script"
                 strategy="afterInteractive"
@@ -178,6 +173,15 @@ export default function MyApp({ Component, pageProps }) {
                 `}
             </Script>
 
+            {/* Load non-critical CSS (animations, transitions) after interactive */}
+            <Script
+                id="load-non-critical-css"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/styles/non-critical.css';l.onload=function(){};document.head.appendChild(l);})();`
+                }}
+            />
+
             {/* Meta Pixel Code */}
             <Script id="meta-pixel" strategy="afterInteractive">
                 {`
@@ -205,32 +209,32 @@ export default function MyApp({ Component, pageProps }) {
 
             {shouldLoadLocomotiveScroll ? (
                 <LocomotiveScrollProvider>
-                    <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} showButton={showButton} handleDemoClick={handleDemoClick} />
+                    <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} />
                 </LocomotiveScrollProvider>
             ) : (
-                <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} showButton={showButton} handleDemoClick={handleDemoClick} />
+                <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} />
+            )}
+
+            {/* Outside data-scroll-container so Locomotive never sees this DOM mutation */}
+            {showButton && (
+                <a
+                    href="/join-free-demo-class"
+                    onClick={handleDemoClick}
+                    className="sticky-demo-button"
+                    aria-label="Go to Free Demo Class page"
+                >
+                    Get a Free Demo
+                </a>
             )}
         </PopupProvider>
     );
 }
 
-const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component, showButton, handleDemoClick }) => (
-    <>
-        <div className={`${montserrat.className} ${montserrat.variable}`}>
-            <Header setHeaderHeight={setHeaderHeight} />
-            <Component {...pageProps} headerHeight={headerHeight} />
-            <Footer />
-            <DelayedPopup />
-        </div>
-        {showButton && (
-            <a
-                href="/join-free-demo-class"
-                onClick={handleDemoClick}
-                className="sticky-demo-button"
-                aria-label="Go to Free Demo Class page"
-            >
-                Get a Free Demo
-            </a>
-        )}
-    </>
+const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component }) => (
+    <div className={`${montserrat.className} ${montserrat.variable}`}>
+        <Header setHeaderHeight={setHeaderHeight} />
+        <Component {...pageProps} headerHeight={headerHeight} />
+        <Footer />
+        <DelayedPopup />
+    </div>
 );

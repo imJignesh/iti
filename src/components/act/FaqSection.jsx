@@ -8,6 +8,7 @@ const FAQSection = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isHighDpi, setIsHighDpi] = useState(false);
 
+
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
@@ -205,23 +206,25 @@ const FAQSection = () => {
                   )}
                 </button>
                 <div
-                  className="overflow-hidden"
                   style={{
+                    display: "grid",
+                    gridTemplateRows: openIndex === index ? "1fr" : "0fr",
+                    transition: "grid-template-rows 0.3s ease-in-out",
                     marginBottom: isMobile ? "10px" : "20px",
-                    transition: "all 0.3s ease-in-out",
-                    maxHeight: openIndex === index ? "10rem" : "0",
                   }}
                 >
-                  <p
-                    style={{
-                      color: "#64748b",
-                      paddingRight: "1.5rem",
-                      fontSize: isHighDpi ? "16px" : isMobile ? "0.9rem" : "20px",
-                      lineHeight: isMobile ? "1.4" : "1.2"
-                    }}
-                  >
-                    {faq.answer}
-                  </p>
+                  <div style={{ overflow: "hidden" }}>
+                    <p
+                      style={{
+                        color: "#64748b",
+                        paddingRight: "1.5rem",
+                        fontSize: isHighDpi ? "16px" : isMobile ? "0.9rem" : "20px",
+                        lineHeight: isMobile ? "1.4" : "1.2"
+                      }}
+                    >
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}

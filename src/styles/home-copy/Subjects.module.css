@@ -24,6 +24,32 @@
   .mobileView {
     display: block;
   }
+
+  .subjectSectionInner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subjectSectionInner :global(.col-4),
+  .subjectSectionInner :global(.col-8) {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .subjectLeft {
+    min-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .subjectRight {
+    width: 100%;
+  }
 }
 
 /* Global utility classes successfully removed/commented out for purity */

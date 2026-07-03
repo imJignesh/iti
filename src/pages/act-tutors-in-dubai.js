@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
@@ -411,38 +411,6 @@ const act = ({ headerHeight }) => {
   // ----------------------------------------------------
 
 
-  const scrollRef = useRef(null);
-  const scrollInstanceRef = useRef(null);
-
-  useEffect(() => {
-    let scroll;
-
-    const initScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      if (!scrollRef.current) return;
-
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1,
-        // optional:
-        getDirection: true,
-        getSpeed: true,
-        multiplier: 1,
-      });
-
-      scrollInstanceRef.current = scroll;
-    };
-
-    if (typeof window !== "undefined") {
-      initScroll();
-    }
-
-    return () => {
-      scrollInstanceRef.current?.destroy();
-      scrollInstanceRef.current = null;
-    };
-  }, []);
 
 
   return (
@@ -476,9 +444,7 @@ const act = ({ headerHeight }) => {
 
       {/* 3. APPLY the style for paddingTop to the scroll container */}
       <div
-        ref={scrollRef}
         className='overflow-hidden innerpage page-content-padding'
-        data-scroll-container
       >
         <section data-scroll-section className="hero-section">
           <div className="hero-container">
