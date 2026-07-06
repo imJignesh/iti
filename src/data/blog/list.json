@@ -102074,11 +102074,11 @@
         ],
         "wp:featuredmedia": [
           {
-            "id": 15310,
-            "date": "2026-06-09T10:41:46",
-            "slug": "ignite-featured-images-5-2",
+            "id": 15551,
+            "date": "2026-06-19T07:44:22",
+            "slug": "what-is-cas-ib",
             "type": "attachment",
-            "link": "https://api.ignitetraininginstitute.com/blog/ib-cas-program/ignite-featured-images-5-2/",
+            "link": "https://api.ignitetraininginstitute.com/blog/ib-cas-program/what-is-cas-ib/",
             "title": {
               "rendered": "what Is cas ib"
             },
@@ -102093,55 +102093,55 @@
             "media_details": {
               "width": 1920,
               "height": 1280,
-              "file": "2023/01/Ignite-Featured-Images-5.webp",
-              "filesize": 72874,
+              "file": "2023/01/what-Is-cas-ib.webp",
+              "filesize": 68306,
               "sizes": {
                 "medium": {
-                  "file": "Ignite-Featured-Images-5-300x200.webp",
+                  "file": "what-Is-cas-ib-300x200.webp",
                   "width": 300,
                   "height": 200,
-                  "filesize": 5138,
+                  "filesize": 5188,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/Ignite-Featured-Images-5-300x200.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/what-Is-cas-ib-300x200.webp"
                 },
                 "large": {
-                  "file": "Ignite-Featured-Images-5-1024x683.webp",
+                  "file": "what-Is-cas-ib-1024x683.webp",
                   "width": 1024,
                   "height": 683,
-                  "filesize": 23004,
+                  "filesize": 23648,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/Ignite-Featured-Images-5-1024x683.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/what-Is-cas-ib-1024x683.webp"
                 },
                 "thumbnail": {
-                  "file": "Ignite-Featured-Images-5-150x150.webp",
+                  "file": "what-Is-cas-ib-150x150.webp",
                   "width": 150,
                   "height": 150,
-                  "filesize": 2458,
+                  "filesize": 2476,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/Ignite-Featured-Images-5-150x150.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/what-Is-cas-ib-150x150.webp"
                 },
                 "medium_large": {
-                  "file": "Ignite-Featured-Images-5-768x512.webp",
+                  "file": "what-Is-cas-ib-768x512.webp",
                   "width": 768,
                   "height": 512,
-                  "filesize": 16978,
+                  "filesize": 17354,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/Ignite-Featured-Images-5-768x512.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/what-Is-cas-ib-768x512.webp"
                 },
                 "1536x1536": {
-                  "file": "Ignite-Featured-Images-5-1536x1024.webp",
+                  "file": "what-Is-cas-ib-1536x1024.webp",
                   "width": 1536,
                   "height": 1024,
-                  "filesize": 36044,
+                  "filesize": 37094,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/Ignite-Featured-Images-5-1536x1024.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/what-Is-cas-ib-1536x1024.webp"
                 },
                 "full": {
-                  "file": "Ignite-Featured-Images-5.webp",
+                  "file": "what-Is-cas-ib.webp",
                   "width": 1920,
                   "height": 1280,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/Ignite-Featured-Images-5.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2023/01/what-Is-cas-ib.webp"
                 }
               },
               "image_meta": {
@@ -102164,7 +102164,7 @@
             "_links": {
               "self": [
                 {
-                  "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/media/15310",
+                  "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/media/15551",
                   "targetHints": {
                     "allow": [
                       "GET"
@@ -102191,7 +102191,7 @@
               "replies": [
                 {
                   "embeddable": true,
-                  "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/comments?post=15310"
+                  "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/comments?post=15551"
                 }
               ],
               "wp:attached-to": [
@@ -123845,5 +123845,5 @@
     }
   ],
   "total": 173,
-  "syncDate": "2026-06-16T12:21:13.521Z"
+  "syncDate": "2026-07-06T07:57:46.183Z"
 }
