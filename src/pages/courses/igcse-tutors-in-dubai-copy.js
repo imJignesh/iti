@@ -10,7 +10,9 @@ import Blog from "@/components/igcse/Blog";
 import CourseCard from '@/components/igcse/CourseCard';
 import FAQSection from '@/components/igcse/FaqSection';
 import IgniteAchievements from '@/components/igcse/IgniteAchievements';
-import InfoCard from '@/components/igcse-copy/InfoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/igcse/IgniteAboutCard";
 import Trainers from '@/components/igcse/Trainers';
 import WhatWeOfferSection from '@/components/igcse/WhatWeOfferSection';
@@ -214,7 +216,16 @@ const IGCSE = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft
+                title={subjectPages.igcse?.title || "IGCSE Tutors In Dubai, UAE For<br /> Assured Results"}
+                subtitle={subjectPages.igcse?.subtitle || "Pre-Prep For Higher Education"}
+                description={subjectPages.igcse?.description || "We offer expert IGCSE tutoring support through personalised mentorship across core & extended curriculum subjects. Our seasoned educators are dedicated to helping students achieve academic excellence consistently."}
+                infoRow={subjectPages.igcse?.infoRow || []}
+                buttons={subjectPages.igcse?.buttons || []}
+              />
+              <InfoCardForm formConfig={subjectFormConfigs.igcse} />
+            </div>
           </div>
         </section>
 

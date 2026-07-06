@@ -11,7 +11,9 @@ import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 
 // Updated imports to new duplicated components (assuming a new folder for components)
 import Accordion from '@/components/biology-tutoring/accordian';
-import BiologyTutorsInfoCard from '@/components/biology-tutoring/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import BiologyTutorsChooseApp from '@/components/biology-tutoring/choose-app';
 import BiologyTutorsACT from '@/components/biology-tutoring/ACT';
 import BiologyTutorsUsps from "@/components/biology-tutoring/Usps";
@@ -181,7 +183,10 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
                         </picture>
 
                         {/* Interactive Content */}
-                        <BiologyTutorsInfoCard />
+                        <div className="row g-0 h-100">
+                            <InfoCardLeft {...subjectPages.biology} />
+                        <InfoCardForm formConfig={subjectFormConfigs.biology} />
+                        </div>
                     </div>
 
                     <style jsx>{`

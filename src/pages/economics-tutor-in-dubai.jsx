@@ -11,7 +11,9 @@ import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 
 // Updated imports to new duplicated components (assuming a new folder for components)
 import Accordion from '@/components/economics-tutoring/accordian';
-import EconomicsTutorsInfoCard from '@/components/economics-tutoring/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import EconomicsTutorsChooseApp from '@/components/economics-tutoring/choose-app';
 import EconomicsTutorsACT from '@/components/economics-tutoring/ACT';
 import EconomicsTutorsUsps from "@/components/economics-tutoring/Usps";
@@ -180,7 +182,10 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
                         </picture>
 
                         {/* Interactive Content */}
-                        <EconomicsTutorsInfoCard />
+                        <div className="row g-0 h-100">
+                            <InfoCardLeft {...subjectPages.economics} />
+                        <InfoCardForm formConfig={subjectFormConfigs.economics} />
+                        </div>
                     </div>
 
                     <style jsx>{`

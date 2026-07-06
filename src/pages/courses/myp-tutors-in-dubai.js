@@ -13,7 +13,9 @@ const Blog = dynamic(() => import('@/components/myp/Blog'));
 const CourseCard = dynamic(() => import('@/components/myp/CourseCard'));
 const FAQSection = dynamic(() => import('@/components/myp/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/myp/IgniteAchievements'));
-import InfoCard from '@/components/myp/InfoCard'; // Keeps static because it's ATF
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 const IgniteAboutCard = dynamic(() => import('@/components/myp/IgniteAboutCard'));
 const WhatWeOfferSection = dynamic(() => import('@/components/ibdp/WhatWeOfferSection'));
 const Trainers = dynamic(() => import('@/components/myp/Trainers'));
@@ -316,25 +318,25 @@ const MYP = ({ headerHeight }) => {
   return (
     <>
       <SEO
-                loadInnerStyles={true}
+        loadInnerStyles={true}
         title="One-On-One Interactive Tutoring Classes For IB MYP In UAE"
         description="Improve grades with top IB MYP tutors in the UAE. Get subject-specific support, interactive lessons & tailored study plans from certified MYP trainers"
         url="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai"
         preloadImages={[
-            {
-                src: "/assets/myp_bg_mobile.webp",
-                type: "image/webp",
-                media: "(max-width: 768px)"
-            },
-            {
-                src: "/assets/myp_bg_main.webp",
-                type: "image/webp",
-                media: "(min-width: 769px)"
-            }
+          {
+            src: "/assets/myp_bg_mobile.webp",
+            type: "image/webp",
+            media: "(max-width: 768px)"
+          },
+          {
+            src: "/assets/myp_bg_main.webp",
+            type: "image/webp",
+            media: "(min-width: 769px)"
+          }
         ]}
       />
       <Head>
-<link rel="stylesheet" href="/styles/Ibdp.css" />
+        <link rel="stylesheet" href="/styles/Ibdp.css" />
       </Head>
       <JsonLd schema={mypSchema} />
 
@@ -357,7 +359,10 @@ const MYP = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.myp} />
+              <InfoCardForm formConfig={subjectFormConfigs.myp} />
+            </div>
           </div>
 
         </section>

@@ -11,7 +11,9 @@ import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 
 // Updated imports to new duplicated components (assuming a new folder for components)
 import Accordion from '@/components/english-tutoring/accordian';
-import EnglishTutorsInfoCard from '@/components/english-tutoring/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import EnglishTutorsChooseApp from '@/components/english-tutoring/choose-app';
 import EnglishTutorsACT from '@/components/english-tutoring/ACT';
 import EnglishTutorsUsps from "@/components/english-tutoring/Usps";
@@ -395,7 +397,10 @@ const EnglishTutorsInDubai = ({ headerHeight }) => {
                         </picture>
 
                         {/* Interactive Content */}
-                        <EnglishTutorsInfoCard />
+                        <div className="row g-0 h-100">
+                            <InfoCardLeft {...subjectPages.english} />
+                        <InfoCardForm formConfig={subjectFormConfigs.english} />
+                        </div>
                     </div>
 
                     <style jsx>{`

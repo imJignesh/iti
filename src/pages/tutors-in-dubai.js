@@ -9,7 +9,9 @@ import MarqueeBanner from '@/components/tutors/MarqueeBanner';
 import ReviewsSection from '@/components/tutors/ReviewsSection';
 import StudentAchievements from '@/components/tutors/StudentAchivement';
 import CurriculumTestsComponent from '@/components/tutors/curriculum';
-import InfoCard from '@/components/tutors/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import OurTrainers from '@/components/tutors/ourTrainers';
 import SubjectsCard1 from '@/components/tutors/SubjectCard1';
 import IgniteAchievements from '@/components/tutors/igniteAchivement';
@@ -517,7 +519,10 @@ const Tutors = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.tutorsDubai} />
+              <InfoCardForm formConfig={subjectFormConfigs.tutorsDubai} />
+            </div>
           </div>
 
           <style jsx>{`

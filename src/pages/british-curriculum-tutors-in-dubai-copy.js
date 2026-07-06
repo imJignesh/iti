@@ -11,7 +11,9 @@ import CourseCard from '@/components/bc/CourseCard';
 import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
 import FAQSection from '@/components/bc/FaqSection';
 import IgniteAchievements from '@/components/bc/IgniteAchievements';
-import InfoCard from '@/components/bc-copy/InfoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
 import Trainers from "@/components/bc/Trainers";
 import WhatWeOfferSection from '@/components/bc/WhatWeOfferSection';
@@ -196,7 +198,10 @@ const BC = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.bc} />
+              <InfoCardForm formConfig={subjectFormConfigs.bc} />
+            </div>
           </div>
 
           <style jsx>{`

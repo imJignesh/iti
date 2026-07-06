@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "clean-ignite-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/ankurpatel/www/clean-ignite"],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

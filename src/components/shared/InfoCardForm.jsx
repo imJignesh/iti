@@ -32,6 +32,7 @@ export default function InfoCardForm({ formConfig }) {
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
     const [submissionStatus, setSubmissionStatus] = useState(null);
+    const [isShaking, setIsShaking] = useState(false);
 
     const handlePhoneChange = (value) => {
         setFormData(prev => ({ ...prev, phone: value }));
@@ -48,6 +49,15 @@ export default function InfoCardForm({ formConfig }) {
             setPageInfo(`URL: ${url} | Title/Path: ${title}`);
         }
         return () => window.removeEventListener("resize", checkDevice);
+    }, []);
+
+    useEffect(() => {
+        const handleShake = () => {
+            setIsShaking(true);
+            setTimeout(() => setIsShaking(false), 500);
+        };
+        document.addEventListener("ignite:formShake", handleShake);
+        return () => document.removeEventListener("ignite:formShake", handleShake);
     }, []);
 
     const handleChange = (e) => {
@@ -117,7 +127,7 @@ export default function InfoCardForm({ formConfig }) {
 
     return (
         <div className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center position-relative right-form" style={{ animationDelay: "0.6s" }}>
-            <div className="w-100 text-white form-container">
+            <div className={`w-100 text-white form-container ${isShaking ? 'shake-animation' : ''}`}>
                 <form onSubmit={handleSubmit}>
                     <input type="hidden" name="pageinfo" value="" />
                     <p className="fw-bold text-uppercase mb-4 text-center form-heading" style={{ animationDelay: "0.65s" }}>
@@ -268,6 +278,18 @@ export default function InfoCardForm({ formConfig }) {
             </div>
 
             <style jsx>{`
+        .shake-animation {
+          animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+
+        @keyframes shake {
+          10%, 90% { transform: translateX(-1px); }
+          20%, 80% { transform: translateX(2px); }
+          30%, 50%, 70% { transform: translateX(-4px); }
+          40%, 60% { transform: translateX(4px); }
+          100% { transform: translateX(0); }
+        }
+
         .form-control::placeholder {
           color: #ffffff !important;
           opacity: 0.5;
@@ -281,7 +303,6 @@ export default function InfoCardForm({ formConfig }) {
           background-repeat: no-repeat;
           background-position: right 1rem center;
           background-size: 1em;
-          font-size: 14px;
         }
 
         select.form-control option {
@@ -408,7 +429,7 @@ export default function InfoCardForm({ formConfig }) {
                 padding: 1.2rem 1.7rem !important;
              }
              .form-heading { font-size: 1.5rem !important; margin-bottom: 1rem !important; }
-             .form-control { font-size: 0.8rem !important; padding: 13px 12px !important; }
+             .form-control { padding: 13px 12px !important; }
              textarea.form-control { padding: 12px 12px !important; }
              .form-container .btn { font-size: 0.85rem !important; padding: 10px 10px 10px 14px!important; }
              .bt-width { width: 60% !important; }
@@ -433,6 +454,14 @@ export default function InfoCardForm({ formConfig }) {
                  margin-top: 0 !important;
                  padding: 0 0.5rem 2rem !important;
              }
+             .form-container h2 {
+                font-size: 1.2rem !important;
+                text-align: center !important;
+                line-height: 1.2 !important;
+                margin-bottom: 1.2rem !important;
+                font-weight: 700 !important;
+                margin-top: 47px;
+             }
              .form-control { font-size: 0.8rem !important; padding: 10px 12px !important; }
              textarea.form-control { padding: 12px !important; }
              .width { width:70% !important; }
@@ -444,6 +473,16 @@ export default function InfoCardForm({ formConfig }) {
                 justify-content: space-between !important;
              }
         }
+
+        @media (max-width: 1100px) {
+           .removed {
+             opacity: 1 !important;
+             visibility: visible !important;
+             transform: none !important;
+             transition: none !important;
+             animation: none !important;
+           }
+         }
       `}</style>
         </div>
     );

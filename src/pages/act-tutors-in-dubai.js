@@ -8,7 +8,9 @@ import Blog from "@/components/act/Blog";
 import CourseCard from '@/components/act/CourseCard';
 import FAQSection from '@/components/act/FaqSection';
 import IgniteAchievements from '@/components/act/IgniteAchievements';
-import InfoCard from '@/components/act/InfoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/act/IgniteAboutCard";
 import LifeAtIgniteCarousel from '@/components/act/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/act/MarqueeBanner';
@@ -462,7 +464,16 @@ const act = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft
+                title={subjectPages.act?.title || "ACT Tutors In Dubai, UAE<br /> For Assured High Scores"}
+                subtitle={subjectPages.act?.subtitle || "Your Path To Test Success"}
+                description={subjectPages.act?.description || "We offer personalized ACT tutoring tailored to each student's unique learning style. Our expert-led programs deliver targeted guidance & proven strategies to help students excel confidently in the ACT."}
+                infoRow={subjectPages.act?.infoRow || []}
+                buttons={subjectPages.act?.buttons || []}
+              />
+              <InfoCardForm formConfig={subjectFormConfigs.act} />
+            </div>
           </div>
 
           <style jsx>{`

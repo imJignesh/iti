@@ -1,7 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import SEO from "@/components/SEO";
-import InfoCard from '@/components/test-series/InfoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import LazySection from "@/components/LazySection";
 import ChooseApp from '@/components/test-series/choose-app';
 import MarqueeBanner from '@/components/test-series/MarqueeBanner';
@@ -61,7 +63,10 @@ const TestSeries = ({ headerHeight }) => {
                             />
                         </picture>
 
-                        <InfoCard />
+                        <div className="row g-0 h-100">
+                            <InfoCardLeft {...subjectPages.testSeries} />
+                            <InfoCardForm formConfig={subjectFormConfigs.testSeries} />
+                        </div>
                     </div>
 
                     <style jsx>{`

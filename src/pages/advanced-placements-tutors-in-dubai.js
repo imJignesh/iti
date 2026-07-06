@@ -10,7 +10,9 @@ import APBenefits from '@/components/ap/chooseApp';
 import CourseCard from '@/components/ap/CourseCard';
 import FAQSection from '@/components/ap/FaqSection';
 import IgniteAchievements from '@/components/ap/IgniteAchievements';
-import InfoCard from '@/components/ap/InfoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/ap/IgniteAboutCard";
 import Trainers from "@/components/ap/Trainers";
 import WhatWeOfferSection from '@/components/ap/WhatWeOfferSection';
@@ -485,7 +487,16 @@ const ap = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft
+                title={subjectPages.ap?.title || "AP Tutors In Dubai, UAE<br /> For Confident Exam Prep"}
+                subtitle={subjectPages.ap?.subtitle || "NEW AP BATCHES STARTS FROM 22ND AUGUST, 2025"}
+                description={subjectPages.ap?.description || "Experience result-driven AP tutoring with programs tailored to each student's needs. Our AP courses build subject mastery & academic excellence in an interactive environment that prepares students for college."}
+                infoRow={subjectPages.ap?.infoRow || []}
+                buttons={subjectPages.ap?.buttons || []}
+              />
+              <InfoCardForm formConfig={subjectFormConfigs.ap} />
+            </div>
           </div>
 
           <style jsx>{`

@@ -9,7 +9,9 @@ const Advantages = dynamic(() => import('@/components/homeSchooling/Advantages')
 const Curriculum = dynamic(() => import('@/components/homeSchooling/Curriculum'));
 const CourseCard = dynamic(() => import('@/components/homeSchooling/CourseCard'));
 const FAQSection = dynamic(() => import('@/components/homeSchooling/FaqSection'));
-import InfoCard from '@/components/homeSchooling/InfoCard'; // ATF - keep static
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 const LifeAtIgniteCarousel = dynamic(() => import('@/components/homeSchooling/LifeAtIgniteCarousel'));
 const MarqueeBanner = dynamic(() => import('@/components/homeSchooling/MarqueeBanner'));
 const HomeschoolingMindset = dynamic(() => import('@/components/homeSchooling/mindset'));
@@ -415,7 +417,10 @@ const HomeSchooling = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.homeschooling} />
+              <InfoCardForm formConfig={subjectFormConfigs.homeschooling} />
+            </div>
           </div>
 
         </section>

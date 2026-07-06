@@ -10,7 +10,9 @@ import Blog from "@/components/myp/Blog";
 import CourseCard from '@/components/myp/CourseCard';
 import FAQSection from '@/components/myp/FaqSection';
 import IgniteAchievements from '@/components/myp/IgniteAchievements';
-import InfoCard from '@/components/myp-copy/InfoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/myp/IgniteAboutCard";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 import Trainers from "@/components/myp/Trainers";
@@ -193,7 +195,10 @@ const IBDP = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.myp} />
+              <InfoCardForm formConfig={subjectFormConfigs.myp} />
+            </div>
           </div>
 
           <style jsx>{`

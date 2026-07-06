@@ -7,7 +7,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation } from "swiper/modules";
-import InfoCard from '@/components/freedemo-copy/InfoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import SubjectsCard from '@/components/freedemo/SubjectCard';
 import MarqueeBanner from '@/components/freedemo/MarqueeBanner';
 import Testimonial from "@/components/freedemo/Testimonial";
@@ -125,7 +127,10 @@ const FreeDemo = ({ headerHeight }) => {
                             />
                         </picture>
 
-                        <InfoCard />
+                        <div className="row g-0 h-100">
+                            <InfoCardLeft {...subjectPages.freedemoCopy} />
+                            <InfoCardForm formConfig={subjectFormConfigs.freedemoCopy} />
+                        </div>
                     </div>
 
                     <style jsx>{`

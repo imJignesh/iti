@@ -12,7 +12,9 @@ const Blog = dynamic(() => import('@/components/a-level/Blog'));
 const CourseCard = dynamic(() => import('@/components/a-level/CourseCard'));
 const FAQSection = dynamic(() => import('@/components/a-level/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/a-level/IgniteAchievements'));
-import InfoCard from '@/components/a-level/InfoCard'; // ATF - keep static
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 const IgniteAboutCard = dynamic(() => import('@/components/a-level/IgniteAboutCard'));
 const Trainers = dynamic(() => import('@/components/a-level/Trainers'));
 const WhatWeOfferSection = dynamic(() => import('@/components/a-level/WhatWeOfferSection'));
@@ -367,7 +369,10 @@ const ALEVEL = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.aLevel} />
+              <InfoCardForm formConfig={subjectFormConfigs.aLevel} />
+            </div>
           </div>
         </section>
 

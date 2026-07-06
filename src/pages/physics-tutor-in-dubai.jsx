@@ -11,7 +11,9 @@ import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 
 // Updated imports to new duplicated components (assuming a new folder for components)
 import Accordion from '@/components/physics-tutoring/accordian';
-import PhysicsTutorsInfoCard from '@/components/physics-tutoring/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import PhysicsTutorsChooseApp from '@/components/physics-tutoring/choose-app';
 import PhysicsTutorsACT from '@/components/physics-tutoring/ACT';
 import PhysicsTutorsUsps from "@/components/physics-tutoring/Usps";
@@ -180,7 +182,10 @@ const PhysicsTutorsInDubai = ({ headerHeight }) => {
                         </picture>
 
                         {/* Interactive Content */}
-                        <PhysicsTutorsInfoCard />
+                        <div className="row g-0 h-100">
+                            <InfoCardLeft {...subjectPages.physics} />
+                        <InfoCardForm formConfig={subjectFormConfigs.physics} />
+                        </div>
                     </div>
 
                     <style jsx>{`

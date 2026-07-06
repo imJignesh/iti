@@ -9,7 +9,9 @@ import MarqueeBanner from '@/components/private-tutors-dubai/MarqueeBanner';
 import ReviewsSection from '@/components/private-tutors-dubai/ReviewsSection';
 import StudentAchievements from '@/components/private-tutors-dubai/StudentAchivement';
 import CurriculumTestsComponent from '@/components/private-tutors-dubai/curriculum';
-import InfoCard from '@/components/private-tutors-dubai/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import OurTrainers from '@/components/private-tutors-dubai/ourTrainers';
 import SubjectsCard1 from '@/components/private-tutors-dubai/SubjectCard1';
 import IgniteAchievements from '@/components/private-tutors-dubai/igniteAchivement';
@@ -162,7 +164,10 @@ const PrivateTutorsDubai = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.privateTutors} />
+              <InfoCardForm formConfig={subjectFormConfigs.privateTutors} />
+            </div>
           </div>
 
           <style jsx>{`

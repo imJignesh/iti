@@ -8,7 +8,9 @@ import CourseCard from '@/components/ibdp/CourseCard';
 
 import FAQSection from '@/components/ibdp/FaqSection';
 import IgniteAchievements from '@/components/ibdp/IgniteAchievements';
-import InfoCard from '@/components/ibdp-copy/InfoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/ibdp/IgniteAboutCard";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 import Trainers from "@/components/ibdp/Trainers";
@@ -73,7 +75,10 @@ const IBDP = ({ headerHeight }) => {
             </picture>
 
             {/* Interactive Content */}
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.ibdp} />
+              <InfoCardForm formConfig={subjectFormConfigs.ibdp} />
+            </div>
           </div>
 
           <style jsx>{`

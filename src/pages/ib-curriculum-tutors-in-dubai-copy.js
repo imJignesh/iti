@@ -4,7 +4,9 @@ import dynamic from 'next/dynamic';
 import LazySection from "@/components/LazySection";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
-import InfoCard from '@/components/ibc-copy/InfoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 
 const Accordion = dynamic(() => import('@/components/ibc-copy/accordian'));
 const Blog = dynamic(() => import("@/components/ibc-copy/Blog"));
@@ -404,7 +406,10 @@ const IBC = ({ headerHeight }) => {
               />
             </picture>
           </div>
-          <InfoCard />
+          <div className="row g-0 h-100">
+            <InfoCardLeft {...subjectPages.ibc} />
+            <InfoCardForm formConfig={subjectFormConfigs.ibc} />
+          </div>
         </div>
 
         <style jsx>{`

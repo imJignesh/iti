@@ -9,7 +9,9 @@ const Blog = dynamic(() => import('@/components/ibdp/Blog'));
 const CourseCard = dynamic(() => import('@/components/ibdp/CourseCard'));
 const FAQSection = dynamic(() => import('@/components/ibdp/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/ibdp/IgniteAchievements'));
-import InfoCard from '@/components/ibdp/InfoCard'; // ATF - keep static
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 const IgniteAboutCard = dynamic(() => import('@/components/ibdp/IgniteAboutCard'));
 const WhatWeOfferSection = dynamic(() => import('@/components/ibdp/WhatWeOfferSection'));
 const Trainers = dynamic(() => import('@/components/ibdp/Trainers'));
@@ -369,7 +371,10 @@ const IBDP = ({ headerHeight }) => {
             </picture>
 
             {/* Interactive Content */}
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.ibdp} />
+              <InfoCardForm formConfig={subjectFormConfigs.ibdp} />
+            </div>
           </div>
 
         </section>

@@ -9,7 +9,9 @@ import MarqueeBanner from '@/components/tutors-jlt-dubai/MarqueeBanner';
 import ReviewsSection from '@/components/tutors-jlt-dubai/ReviewsSection';
 import StudentAchievements from '@/components/tutors-jlt-dubai/StudentAchivement';
 import CurriculumTestsComponent from '@/components/tutors-jlt-dubai/curriculum';
-import InfoCard from '@/components/tutors-jlt-dubai/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import OurTrainers from '@/components/tutors-jlt-dubai/ourTrainers';
 import SubjectsCard1 from '@/components/tutors-jlt-dubai/SubjectCard1';
 import IgniteAchievements from '@/components/tutors-jlt-dubai/igniteAchivement';
@@ -501,7 +503,10 @@ const Tutors = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.tutorsJlt} />
+              <InfoCardForm formConfig={subjectFormConfigs.tutorsJlt} />
+            </div>
           </div>
 
           <style jsx>{`

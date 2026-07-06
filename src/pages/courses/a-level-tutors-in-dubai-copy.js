@@ -8,7 +8,9 @@ import Blog from "@/components/a-level/Blog";
 import CourseCard from '@/components/a-level/CourseCard';
 import FAQSection from '@/components/a-level/FaqSection';
 import IgniteAchievements from '@/components/a-level/IgniteAchievements';
-import InfoCard from '@/components/a-level-copy/InfoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/a-level/IgniteAboutCard";
 import Trainers from "@/components/a-level/Trainers";
 import WhatWeOfferSection from '@/components/a-level/WhatWeOfferSection';
@@ -195,7 +197,10 @@ const ALEVEL = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft {...subjectPages.aLevel} />
+              <InfoCardForm formConfig={subjectFormConfigs.aLevel} />
+            </div>
           </div>
         </section>
 

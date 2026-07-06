@@ -11,7 +11,9 @@ import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 
 // Updated imports to new duplicated components (assuming a new folder for components)
 import Accordion from '@/components/business-tutoring/accordian';
-import BusinessTutorsInfoCard from '@/components/business-tutoring/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import BusinessTutorsChooseApp from '@/components/business-tutoring/choose-app';
 import BusinessTutorsACT from '@/components/business-tutoring/ACT';
 import BusinessTutorsUsps from "@/components/business-tutoring/Usps";
@@ -180,7 +182,10 @@ const BusinessTutorsInDubai = ({ headerHeight }) => {
                         </picture>
 
                         {/* Interactive Content */}
-                        <BusinessTutorsInfoCard />
+                        <div className="row g-0 h-100">
+                            <InfoCardLeft {...subjectPages.business} />
+                        <InfoCardForm formConfig={subjectFormConfigs.business} />
+                        </div>
                     </div>
 
                     <style jsx>{`

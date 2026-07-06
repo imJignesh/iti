@@ -11,7 +11,9 @@ import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 
 // Updated imports to new duplicated components (assuming a new folder for components)
 import Accordion from '@/components/psychology-tutoring/accordian';
-import PsychologyTutorsInfoCard from '@/components/psychology-tutoring/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import PsychologyTutorsChooseApp from '@/components/psychology-tutoring/choose-app';
 import PsychologyTutorsACT from '@/components/psychology-tutoring/ACT';
 import PsychologyTutorsUsps from "@/components/psychology-tutoring/Usps";
@@ -179,7 +181,10 @@ const PsychologyTutorsInDubai = ({ headerHeight }) => {
                         </picture>
 
                         {/* Interactive Content */}
-                        <PsychologyTutorsInfoCard />
+                        <div className="row g-0 h-100">
+                            <InfoCardLeft {...subjectPages.psychology} />
+                        <InfoCardForm formConfig={subjectFormConfigs.psychology} />
+                        </div>
                     </div>
 
                     <style jsx>{`

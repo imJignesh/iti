@@ -10,7 +10,9 @@ const Blog = dynamic(() => import('@/components/igcse/Blog'));
 const CourseCard = dynamic(() => import('@/components/igcse/CourseCard'));
 const FAQSection = dynamic(() => import('@/components/igcse/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/igcse/IgniteAchievements'));
-import InfoCard from '@/components/igcse/InfoCard'; // ATF - keep static
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 const IgniteAboutCard = dynamic(() => import('@/components/igcse/IgniteAboutCard'));
 const Trainers = dynamic(() => import('@/components/igcse/Trainers'));
 const WhatWeOfferSection = dynamic(() => import('@/components/igcse/WhatWeOfferSection'));
@@ -435,7 +437,16 @@ const IGCSE = ({ headerHeight }) => {
               />
             </picture>
 
-            <InfoCard />
+            <div className="row g-0 h-100">
+              <InfoCardLeft
+                title={subjectPages.igcse?.title || "IGCSE Tutors In Dubai, UAE For<br /> Assured Results"}
+                subtitle={subjectPages.igcse?.subtitle || "Pre-Prep For Higher Education"}
+                description={subjectPages.igcse?.description || "We offer expert IGCSE tutoring support through personalised mentorship across core & extended curriculum subjects. Our seasoned educators are dedicated to helping students achieve academic excellence consistently."}
+                infoRow={subjectPages.igcse?.infoRow || []}
+                buttons={subjectPages.igcse?.buttons || []}
+              />
+              <InfoCardForm formConfig={subjectFormConfigs.igcse} />
+            </div>
           </div>
 
           <style jsx>{`

@@ -11,7 +11,9 @@ import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 
 // Updated imports to new duplicated components (assuming a new folder for components)
 import Accordion from '@/components/chemistry-tutoring/accordian';
-import ChemistryTutorsInfoCard from '@/components/chemistry-tutoring/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import ChemistryTutorsChooseApp from '@/components/chemistry-tutoring/choose-app';
 import ChemistryTutorsACT from '@/components/chemistry-tutoring/ACT';
 import ChemistryTutorsUsps from "@/components/chemistry-tutoring/Usps";
@@ -180,7 +182,10 @@ const ChemistryTutorsInDubai = ({ headerHeight }) => {
                         </picture>
 
                         {/* Interactive Content */}
-                        <ChemistryTutorsInfoCard />
+                        <div className="row g-0 h-100">
+                            <InfoCardLeft {...subjectPages.chemistry} />
+                        <InfoCardForm formConfig={subjectFormConfigs.chemistry} />
+                        </div>
                     </div>
 
                     <style jsx>{`

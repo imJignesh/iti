@@ -11,7 +11,9 @@ import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 
 // Updated imports to new duplicated components (assuming a new folder for components)
 import Accordion from '@/components/computer-tutoring/accordian';
-import ComputerTutorsInfoCard from '@/components/computer-tutoring/infoCard';
+import InfoCardLeft from '@/components/shared/InfoCardLeft';
+import InfoCardForm from '@/components/shared/InfoCardForm';
+import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import ComputerTutorsChooseApp from '@/components/computer-tutoring/choose-app';
 import ComputerTutorsACT from '@/components/computer-tutoring/ACT';
 import ComputerTutorsUsps from "@/components/computer-tutoring/Usps";
@@ -375,7 +377,10 @@ const ComputerTutorsInDubai = ({ headerHeight }) => {
                         </picture>
 
                         {/* Interactive Content */}
-                        <ComputerTutorsInfoCard />
+                        <div className="row g-0 h-100">
+                            <InfoCardLeft {...subjectPages.computer} />
+                        <InfoCardForm formConfig={subjectFormConfigs.computer} />
+                        </div>
                     </div>
 
                     <style jsx>{`
