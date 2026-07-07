@@ -17,7 +17,8 @@ import SubjectsCard1 from '@/components/private-tutors-dubai/SubjectCard1';
 import IgniteAchievements from '@/components/private-tutors-dubai/igniteAchivement';
 import Blog from "@/components/private-tutors-dubai/Blog";
 import UpsSection from '@/components/private-tutors-dubai/UspsSection';
-import Accordion from '@/components/private-tutors-dubai/accordian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
 import LifeAtIgniteCarousel from '@/components/private-tutors-dubai/LifeAtIgniteCarousel';
@@ -268,7 +269,7 @@ const PrivateTutorsDubai = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <Accordion />
+            <Accordion {...accordionSections.privateTutors} />
           </section>
         </LazySection>
       </div>

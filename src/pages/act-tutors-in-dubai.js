@@ -3,7 +3,8 @@ import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
-import Accordion from '@/components/act/accrodian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 import Blog from "@/components/act/Blog";
 import CourseCard from '@/components/act/CourseCard';
 import FAQSection from '@/components/shared/FaqSection';
@@ -570,7 +571,7 @@ const act = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <Accordion />
+            <Accordion {...accordionSections.act} />
           </section>
         </LazySection>
       </div>

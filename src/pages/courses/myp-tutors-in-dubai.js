@@ -8,7 +8,8 @@ import LazySection from "@/components/LazySection";
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-const Accordion = dynamic(() => import('@/components/myp/accordian'));
+const Accordion = dynamic(() => import('@/components/shared/Accordion'));
+import { accordionSections } from '@/data/accordionSections';
 const Blog = dynamic(() => import('@/components/myp/Blog'));
 const CourseCard = dynamic(() => import('@/components/myp/CourseCard'));
 const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
@@ -443,7 +444,7 @@ const MYP = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <Accordion />
+            <Accordion {...accordionSections.myp} />
           </section>
         </LazySection>
       </div>

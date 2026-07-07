@@ -4,7 +4,8 @@ import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
-import Accordion from '@/components/ap/accrodian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 import Blog from "@/components/ap/Blog";
 import APBenefits from '@/components/ap/chooseApp';
 import CourseCard from '@/components/ap/CourseCard';
@@ -611,7 +612,7 @@ const ap = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <Accordion />
+            <Accordion {...accordionSections.ap} />
           </section>
         </LazySection>
       </div>

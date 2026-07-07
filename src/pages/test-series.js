@@ -14,7 +14,8 @@ import Usps from '@/components/test-series/Usps';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
 import TutoringHeroSection from '@/components/test-series/BottomSub';
-import Accordion from '@/components/test-series/accordian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 
 const TestSeries = ({ headerHeight }) => {
 
@@ -154,7 +155,7 @@ const TestSeries = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <Accordion />
+                        <Accordion {...accordionSections.testSeries} />
                     </section>
                 </LazySection>
             </div>

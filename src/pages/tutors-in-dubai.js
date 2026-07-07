@@ -17,7 +17,8 @@ import SubjectsCard1 from '@/components/tutors/SubjectCard1';
 import IgniteAchievements from '@/components/tutors/igniteAchivement';
 import Blog from "@/components/tutors/Blog";
 import UpsSection from '@/components/tutors/UspsSection';
-import Accordion from '@/components/tutors/accordian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
 import LifeAtIgniteCarousel from '@/components/tutors/LifeAtIgniteCarousel';
@@ -623,7 +624,7 @@ const Tutors = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <Accordion />
+            <Accordion {...accordionSections.tutorsDubai} />
           </section>
         </LazySection>
       </div>

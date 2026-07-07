@@ -17,7 +17,8 @@ const LifeAtIgniteCarousel = dynamic(() => import('@/components/homeSchooling/Li
 const MarqueeBanner = dynamic(() => import('@/components/homeSchooling/MarqueeBanner'));
 const HomeschoolingMindset = dynamic(() => import('@/components/homeSchooling/mindset'));
 const WhatWeOfferSection = dynamic(() => import('@/components/homeSchooling/WhatWeOfferSection'));
-const Accordion = dynamic(() => import('@/components/homeSchooling/accrodian'));
+const Accordion = dynamic(() => import('@/components/shared/Accordion'));
+import { accordionSections } from '@/data/accordionSections';
 const Blog = dynamic(() => import('@/components/homeSchooling/Blog'));
 const ReviewsSection = dynamic(() => import('@/components/homeSchooling/ReviewsSection'));
 const StudentAchievements = dynamic(() => import('@/components/ibdp/StudentAchivement'));
@@ -479,7 +480,7 @@ const HomeSchooling = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section>
-            <Accordion />
+            <Accordion {...accordionSections.homeschooling} />
           </section>
         </LazySection>
       </div>

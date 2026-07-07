@@ -2,7 +2,8 @@
 import LazySection from "@/components/LazySection";
 import Head from "next/head";
 // import Testimonial from '@/components/home/Testimonial';
-import Accordion from '@/components/ibdp/accordian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 import Blog from "@/components/ibdp/Blog";
 import CourseCard from '@/components/ibdp/CourseCard';
 
@@ -192,7 +193,7 @@ const IBDP = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <Accordion />
+            <Accordion {...accordionSections.ibdp} />
           </section>
         </LazySection>
       </div>

@@ -5,7 +5,8 @@ import SEO from "@/components/SEO";
 import LazySection from "@/components/LazySection";
 // import MovingBanner from '@/components/home/MovingBanner';
 // import Testimonial from '@/components/home/Testimonial';
-import Accordion from '@/components/igcse/accordian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 import Blog from "@/components/igcse/Blog";
 import CourseCard from '@/components/igcse/CourseCard';
 import FAQSection from '@/components/shared/FaqSection';
@@ -314,7 +315,7 @@ const IGCSE = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <Accordion />
+            <Accordion {...accordionSections.igcse} />
           </section>
         </LazySection>
       </div>

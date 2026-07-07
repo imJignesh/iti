@@ -3,7 +3,8 @@ import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 import LazySection from "@/components/LazySection"
-import Accordion from '@/components/a-level/accordian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 import Blog from "@/components/a-level/Blog";
 import CourseCard from '@/components/a-level/CourseCard';
 import FAQSection from '@/components/shared/FaqSection';
@@ -288,7 +289,7 @@ const ALEVEL = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <Accordion />
+            <Accordion {...accordionSections.aLevel} />
           </section>
         </LazySection>
       </div>

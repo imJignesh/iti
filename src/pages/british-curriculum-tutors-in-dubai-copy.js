@@ -5,7 +5,8 @@ import LazySection from "@/components/LazySection";
 import JsonLd from "@/components/JsonLd";
 // import MovingBanner from '@/components/home/MovingBanner';
 // import Testimonial from '@/components/home/Testimonial';
-import Accordion from '@/components/bc/accordian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 import Blog from "@/components/bc/Blog";
 import CourseCard from '@/components/bc/CourseCard';
 import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
@@ -320,7 +321,7 @@ const BC = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <Accordion />
+            <Accordion {...accordionSections.bc} />
           </section>
         </LazySection>
       </div>

@@ -9,7 +9,8 @@ import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import { faqSections } from '@/data/faqSections';
 
-const Accordion = dynamic(() => import('@/components/bc/accordian'));
+const Accordion = dynamic(() => import('@/components/shared/Accordion'));
+import { accordionSections } from '@/data/accordionSections';
 const Blog = dynamic(() => import("@/components/bc/Blog"));
 const IBCurriculumStages = dynamic(() => import('@/components/bc/Curriculum.jsx'));
 const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
@@ -535,7 +536,7 @@ const BC = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <Accordion />
+            <Accordion {...accordionSections.bc} />
           </section>
         </LazySection>
       </div>

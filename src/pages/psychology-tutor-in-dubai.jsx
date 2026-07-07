@@ -10,7 +10,8 @@ import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 // import Hero from '@/components/home/Hero';
 
 // Updated imports to new duplicated components (assuming a new folder for components)
-import Accordion from '@/components/psychology-tutoring/accordian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
@@ -273,7 +274,7 @@ const PsychologyTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <Accordion />
+                        <Accordion {...accordionSections.psychology} />
                     </section>
                 </LazySection>
             </div>
