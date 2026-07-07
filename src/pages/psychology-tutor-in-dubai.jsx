@@ -19,7 +19,8 @@ import PsychologyTutorsACT from '@/components/psychology-tutoring/ACT';
 import PsychologyTutorsUsps from "@/components/psychology-tutoring/Usps";
 import PsychologyTutorsIgniteAchievements from '@/components/psychology-tutoring/IgniteAchievements';
 import PsychologyTutorsLifeAtIgniteCarousel from '@/components/psychology-tutoring/LifeAtIgniteCarousel';
-import PsychologyTutorsFAQSection from '@/components/psychology-tutoring/FaqSection';
+import PsychologyTutorsFAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import PsychologyTutorsStudentAchievements from '@/components/psychology-tutoring/StudentAchivement';
 
 //comment
@@ -266,7 +267,7 @@ const PsychologyTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <PsychologyTutorsFAQSection />
+                        <PsychologyTutorsFAQSection {...faqSections.psychology} />
                     </section>
                 </LazySection>
 

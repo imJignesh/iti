@@ -8,7 +8,8 @@ import LazySection from "@/components/LazySection";
 import Accordion from '@/components/igcse/accordian';
 import Blog from "@/components/igcse/Blog";
 import CourseCard from '@/components/igcse/CourseCard';
-import FAQSection from '@/components/igcse/FaqSection';
+import FAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import IgniteAchievements from '@/components/igcse/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
@@ -302,7 +303,7 @@ const IGCSE = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.igcse} />
           </section>
         </LazySection>
 

@@ -20,7 +20,8 @@ import AccountingTutorsUsps from "@/components/accounting-tutoring/Usps";
 import Trainers from "@/components/accounting-tutoring/Trainers";
 import AccountingTutorsIgniteAchievements from '@/components/accounting-tutoring/IgniteAchievements';
 import AccountingTutorsLifeAtIgniteCarousel from '@/components/accounting-tutoring/LifeAtIgniteCarousel';
-import AccountingTutorsFAQSection from '@/components/accounting-tutoring/FaqSection';
+import AccountingTutorsFAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import AccountingTutorsStudentAchievements from '@/components/accounting-tutoring/StudentAchivement';
 
 //comment
@@ -273,7 +274,7 @@ const AccountingTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <AccountingTutorsFAQSection />
+                        <AccountingTutorsFAQSection {...faqSections.accounting} />
                     </section>
                 </LazySection>
 

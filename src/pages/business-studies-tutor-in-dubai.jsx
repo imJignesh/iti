@@ -20,7 +20,8 @@ import BusinessTutorsUsps from "@/components/business-tutoring/Usps";
 import Trainers from "@/components/business-tutoring/Trainers";
 import BusinessTutorsIgniteAchievements from '@/components/business-tutoring/IgniteAchievements';
 import BusinessTutorsLifeAtIgniteCarousel from '@/components/business-tutoring/LifeAtIgniteCarousel';
-import BusinessTutorsFAQSection from '@/components/business-tutoring/FaqSection';
+import BusinessTutorsFAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import BusinessTutorsStudentAchievements from '@/components/business-tutoring/StudentAchivement';
 
 //comment
@@ -272,7 +273,7 @@ const BusinessTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <BusinessTutorsFAQSection />
+                        <BusinessTutorsFAQSection {...faqSections.business} />
                     </section>
                 </LazySection>
 

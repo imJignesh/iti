@@ -18,7 +18,8 @@ import IgniteAchievements from '@/components/private-tutors-dubai/igniteAchiveme
 import Blog from "@/components/private-tutors-dubai/Blog";
 import UpsSection from '@/components/private-tutors-dubai/UspsSection';
 import Accordion from '@/components/private-tutors-dubai/accordian';
-import FAQSection from '@/components/private-tutors-dubai/FaqSection';
+import FAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import LifeAtIgniteCarousel from '@/components/private-tutors-dubai/LifeAtIgniteCarousel';
 
 
@@ -255,7 +256,7 @@ const PrivateTutorsDubai = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.privateTutors} />
           </section>
         </LazySection>
 

@@ -8,7 +8,8 @@ import Accordion from '@/components/ap/accrodian';
 import Blog from "@/components/ap/Blog";
 import APBenefits from '@/components/ap/chooseApp';
 import CourseCard from '@/components/ap/CourseCard';
-import FAQSection from '@/components/ap/FaqSection';
+import FAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import IgniteAchievements from '@/components/ap/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
@@ -599,7 +600,7 @@ const ap = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.ap} />
           </section>
         </LazySection>
 

@@ -7,11 +7,12 @@ import SEO from "@/components/SEO";
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
+import { faqSections } from '@/data/faqSections';
 
 const Accordion = dynamic(() => import('@/components/bc/accordian'));
 const Blog = dynamic(() => import("@/components/bc/Blog"));
 const IBCurriculumStages = dynamic(() => import('@/components/bc/Curriculum.jsx'));
-const FAQSection = dynamic(() => import('@/components/bc/FaqSection'));
+const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/bc/IgniteAchievements'));
 const IgniteAboutCard = dynamic(() => import("@/components/bc/IgniteAboutCard"));
 const Trainers = dynamic(() => import("@/components/bc/Trainers"));
@@ -523,7 +524,7 @@ const BC = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.bc} />
           </section>
         </LazySection>
 

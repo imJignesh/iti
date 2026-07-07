@@ -6,7 +6,8 @@ import SEO from "@/components/SEO";
 import Accordion from '@/components/act/accrodian';
 import Blog from "@/components/act/Blog";
 import CourseCard from '@/components/act/CourseCard';
-import FAQSection from '@/components/act/FaqSection';
+import FAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import IgniteAchievements from '@/components/act/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
@@ -553,7 +554,7 @@ const act = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.act} />
           </section>
         </LazySection>
         <LazySection>

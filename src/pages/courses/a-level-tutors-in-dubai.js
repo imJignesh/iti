@@ -10,11 +10,12 @@ import dynamic from 'next/dynamic';
 const Accordion = dynamic(() => import('@/components/a-level/accordian'));
 const Blog = dynamic(() => import('@/components/a-level/Blog'));
 const CourseCard = dynamic(() => import('@/components/a-level/CourseCard'));
-const FAQSection = dynamic(() => import('@/components/a-level/FaqSection'));
+const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/a-level/IgniteAchievements'));
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
+import { faqSections } from '@/data/faqSections';
 const IgniteAboutCard = dynamic(() => import('@/components/a-level/IgniteAboutCard'));
 const Trainers = dynamic(() => import('@/components/a-level/Trainers'));
 const WhatWeOfferSection = dynamic(() => import('@/components/a-level/WhatWeOfferSection'));
@@ -448,7 +449,7 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.aLevel} />
           </section>
         </LazySection>
 

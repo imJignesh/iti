@@ -20,7 +20,8 @@ import MathsTutorsUsps from "@/components/maths-tutoring/Usps";
 import Trainers from "@/components/maths-tutoring/Trainers";
 import MathsTutorsIgniteAchievements from '@/components/maths-tutoring/IgniteAchievements';
 import MathsTutorsLifeAtIgniteCarousel from '@/components/maths-tutoring/LifeAtIgniteCarousel';
-import MathsTutorsFAQSection from '@/components/maths-tutoring/FaqSection';
+import MathsTutorsFAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import MathsTutorsStudentAchievements from '@/components/maths-tutoring/StudentAchivement';
 
 //comment
@@ -273,7 +274,7 @@ const MathsTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <MathsTutorsFAQSection />
+                        <MathsTutorsFAQSection {...faqSections.maths} />
                     </section>
                 </LazySection>
 

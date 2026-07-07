@@ -11,7 +11,8 @@ import CurriculumTestsComponent from '@/components/test-series/curriculum';
 import IgniteAchievements from '@/components/test-series/IgniteAchievements';
 import SubjectsCard from '@/components/test-series/SubjectCard';
 import Usps from '@/components/test-series/Usps';
-import FAQSection from '@/components/test-series/FaqSection';
+import FAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import TutoringHeroSection from '@/components/test-series/BottomSub';
 import Accordion from '@/components/test-series/accordian';
 
@@ -141,7 +142,7 @@ const TestSeries = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <FAQSection />
+                        <FAQSection {...faqSections.testSeries} />
                     </section>
                 </LazySection>
 

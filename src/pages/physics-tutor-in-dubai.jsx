@@ -20,7 +20,8 @@ import PhysicsTutorsUsps from "@/components/physics-tutoring/Usps";
 import Trainers from "@/components/physics-tutoring/Trainers";
 import PhysicsTutorsIgniteAchievements from '@/components/physics-tutoring/IgniteAchievements';
 import PhysicsTutorsLifeAtIgniteCarousel from '@/components/physics-tutoring/LifeAtIgniteCarousel';
-import PhysicsTutorsFAQSection from '@/components/physics-tutoring/FaqSection';
+import PhysicsTutorsFAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import PhysicsTutorsStudentAchievements from '@/components/physics-tutoring/StudentAchivement';
 
 //comment
@@ -273,7 +274,7 @@ const PhysicsTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <PhysicsTutorsFAQSection />
+                        <PhysicsTutorsFAQSection {...faqSections.physics} />
                     </section>
                 </LazySection>
 

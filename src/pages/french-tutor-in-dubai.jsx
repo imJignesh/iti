@@ -20,7 +20,8 @@ import FrenchTutorsUsps from "@/components/french-tutoring/Usps";
 import Trainers from "@/components/french-tutoring/Trainers";
 import FrenchTutorsIgniteAchievements from '@/components/french-tutoring/IgniteAchievements';
 import FrenchTutorsLifeAtIgniteCarousel from '@/components/french-tutoring/LifeAtIgniteCarousel';
-import FrenchTutorsFAQSection from '@/components/french-tutoring/FaqSection';
+import FrenchTutorsFAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import FrenchTutorsStudentAchievements from '@/components/french-tutoring/StudentAchivement';
 
 //comment
@@ -472,7 +473,7 @@ const FrenchTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <FrenchTutorsFAQSection />
+                        <FrenchTutorsFAQSection {...faqSections.french} />
                     </section>
                 </LazySection>
 

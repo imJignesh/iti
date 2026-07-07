@@ -20,7 +20,8 @@ import ComputerTutorsUsps from "@/components/computer-tutoring/Usps";
 import Trainers from "@/components/computer-tutoring/Trainers";
 import ComputerTutorsIgniteAchievements from '@/components/computer-tutoring/IgniteAchievements';
 import ComputerTutorsLifeAtIgniteCarousel from '@/components/computer-tutoring/LifeAtIgniteCarousel';
-import ComputerTutorsFAQSection from '@/components/computer-tutoring/FaqSection';
+import ComputerTutorsFAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import ComputerTutorsStudentAchievements from '@/components/computer-tutoring/StudentAchivement';
 
 //comment
@@ -468,7 +469,7 @@ const ComputerTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <ComputerTutorsFAQSection />
+                        <ComputerTutorsFAQSection {...faqSections.computer} />
                     </section>
                 </LazySection>
 

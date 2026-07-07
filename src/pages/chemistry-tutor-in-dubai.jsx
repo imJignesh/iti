@@ -20,7 +20,8 @@ import ChemistryTutorsUsps from "@/components/chemistry-tutoring/Usps";
 import Trainers from "@/components/chemistry-tutoring/Trainers";
 import ChemistryTutorsIgniteAchievements from '@/components/chemistry-tutoring/IgniteAchievements';
 import ChemistryTutorsLifeAtIgniteCarousel from '@/components/chemistry-tutoring/LifeAtIgniteCarousel';
-import ChemistryTutorsFAQSection from '@/components/chemistry-tutoring/FaqSection';
+import ChemistryTutorsFAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import ChemistryTutorsStudentAchievements from '@/components/chemistry-tutoring/StudentAchivement';
 
 //comment
@@ -273,7 +274,7 @@ const ChemistryTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <ChemistryTutorsFAQSection />
+                        <ChemistryTutorsFAQSection {...faqSections.chemistry} />
                     </section>
                 </LazySection>
 

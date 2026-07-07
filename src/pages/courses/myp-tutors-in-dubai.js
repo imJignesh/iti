@@ -11,7 +11,8 @@ import Image from 'next/image';
 const Accordion = dynamic(() => import('@/components/myp/accordian'));
 const Blog = dynamic(() => import('@/components/myp/Blog'));
 const CourseCard = dynamic(() => import('@/components/myp/CourseCard'));
-const FAQSection = dynamic(() => import('@/components/myp/FaqSection'));
+const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
+import { faqSections } from '@/data/faqSections';
 const IgniteAchievements = dynamic(() => import('@/components/myp/IgniteAchievements'));
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
@@ -431,7 +432,7 @@ const MYP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.myp} />
           </section>
         </LazySection>
 

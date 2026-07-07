@@ -7,11 +7,12 @@ import dynamic from 'next/dynamic';
 const Accordion = dynamic(() => import('@/components/ibdp/accordian'));
 const Blog = dynamic(() => import('@/components/ibdp/Blog'));
 const CourseCard = dynamic(() => import('@/components/ibdp/CourseCard'));
-const FAQSection = dynamic(() => import('@/components/ibdp/FaqSection'));
+const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/ibdp/IgniteAchievements'));
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
+import { faqSections } from '@/data/faqSections';
 const IgniteAboutCard = dynamic(() => import('@/components/ibdp/IgniteAboutCard'));
 const WhatWeOfferSection = dynamic(() => import('@/components/ibdp/WhatWeOfferSection'));
 const Trainers = dynamic(() => import('@/components/ibdp/Trainers'));
@@ -445,7 +446,7 @@ const IBDP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.ibdp} />
           </section>
         </LazySection>
 

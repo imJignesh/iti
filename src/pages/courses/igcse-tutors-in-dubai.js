@@ -8,7 +8,8 @@ import dynamic from 'next/dynamic';
 const Accordion = dynamic(() => import('@/components/igcse/accordian'));
 const Blog = dynamic(() => import('@/components/igcse/Blog'));
 const CourseCard = dynamic(() => import('@/components/igcse/CourseCard'));
-const FAQSection = dynamic(() => import('@/components/igcse/FaqSection'));
+const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
+import { faqSections } from '@/data/faqSections';
 const IgniteAchievements = dynamic(() => import('@/components/igcse/IgniteAchievements'));
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
@@ -535,7 +536,7 @@ const IGCSE = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.igcse} />
           </section>
         </LazySection>
 

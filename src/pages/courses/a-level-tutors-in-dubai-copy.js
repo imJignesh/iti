@@ -6,7 +6,8 @@ import LazySection from "@/components/LazySection"
 import Accordion from '@/components/a-level/accordian';
 import Blog from "@/components/a-level/Blog";
 import CourseCard from '@/components/a-level/CourseCard';
-import FAQSection from '@/components/a-level/FaqSection';
+import FAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import IgniteAchievements from '@/components/a-level/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
@@ -276,7 +277,7 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.aLevel} />
           </section>
         </LazySection>
 

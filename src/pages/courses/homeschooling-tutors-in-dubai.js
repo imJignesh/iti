@@ -8,7 +8,8 @@ import dynamic from 'next/dynamic';
 const Advantages = dynamic(() => import('@/components/homeSchooling/Advantages'));
 const Curriculum = dynamic(() => import('@/components/homeSchooling/Curriculum'));
 const CourseCard = dynamic(() => import('@/components/homeSchooling/CourseCard'));
-const FAQSection = dynamic(() => import('@/components/homeSchooling/FaqSection'));
+const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
+import { faqSections } from '@/data/faqSections';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
@@ -467,7 +468,7 @@ const HomeSchooling = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.homeschooling} />
           </section>
         </LazySection>
 

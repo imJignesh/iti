@@ -8,7 +8,8 @@ import LazySection from "@/components/LazySection";
 import Accordion from '@/components/myp/accordian';
 import Blog from "@/components/myp/Blog";
 import CourseCard from '@/components/myp/CourseCard';
-import FAQSection from '@/components/myp/FaqSection';
+import FAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import IgniteAchievements from '@/components/myp/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
@@ -299,7 +300,7 @@ const IBDP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.myp} />
           </section>
         </LazySection>
 

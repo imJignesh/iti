@@ -18,7 +18,8 @@ import IgniteAchievements from '@/components/tutors-jlt-dubai/igniteAchivement';
 import Blog from "@/components/tutors-jlt-dubai/Blog";
 import UpsSection from '@/components/tutors-jlt-dubai/UspsSection';
 import Accordion from '@/components/tutors-jlt-dubai/accordian';
-import FAQSection from '@/components/tutors-jlt-dubai/FaqSection';
+import FAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import LifeAtIgniteCarousel from '@/components/tutors-jlt-dubai/LifeAtIgniteCarousel';
 
 
@@ -593,7 +594,7 @@ const Tutors = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.tutorsJlt} />
           </section>
         </LazySection>
 

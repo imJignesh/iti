@@ -18,7 +18,8 @@ import IgniteAchievements from '@/components/tutors/igniteAchivement';
 import Blog from "@/components/tutors/Blog";
 import UpsSection from '@/components/tutors/UspsSection';
 import Accordion from '@/components/tutors/accordian';
-import FAQSection from '@/components/tutors/FaqSection';
+import FAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import LifeAtIgniteCarousel from '@/components/tutors/LifeAtIgniteCarousel';
 
 // 1. ACCEPT the headerHeight prop
@@ -610,7 +611,7 @@ const Tutors = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <FAQSection />
+            <FAQSection {...faqSections.tutorsDubai} />
           </section>
         </LazySection>
 

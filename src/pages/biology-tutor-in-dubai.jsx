@@ -20,7 +20,8 @@ import BiologyTutorsUsps from "@/components/biology-tutoring/Usps";
 import Trainers from "@/components/biology-tutoring/Trainers";
 import BiologyTutorsIgniteAchievements from '@/components/biology-tutoring/IgniteAchievements';
 import BiologyTutorsLifeAtIgniteCarousel from '@/components/biology-tutoring/LifeAtIgniteCarousel';
-import BiologyTutorsFAQSection from '@/components/biology-tutoring/FaqSection';
+import BiologyTutorsFAQSection from '@/components/shared/FaqSection';
+import { faqSections } from '@/data/faqSections';
 import BiologyTutorsStudentAchievements from '@/components/biology-tutoring/StudentAchivement';
 
 //comment
@@ -272,7 +273,7 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <BiologyTutorsFAQSection />
+                        <BiologyTutorsFAQSection {...faqSections.biology} />
                     </section>
                 </LazySection>
 
