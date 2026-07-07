@@ -19,12 +19,8 @@ import BiologyTutorsChooseApp from '@/components/biology-tutoring/choose-app';
 import BiologyTutorsACT from '@/components/biology-tutoring/ACT';
 import BiologyTutorsUsps from "@/components/biology-tutoring/Usps";
 import Trainers from "@/components/biology-tutoring/Trainers";
-import BiologyTutorsIgniteAchievements from '@/components/biology-tutoring/IgniteAchievements';
-import BiologyTutorsLifeAtIgniteCarousel from '@/components/biology-tutoring/LifeAtIgniteCarousel';
 import BiologyTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import BiologyTutorsStudentAchievements from '@/components/biology-tutoring/StudentAchivement';
-
 //comment
 // Renamed main component: SubjectTutoring -> BiologyTutorsInDubai
 const BiologyTutorsInDubai = ({ headerHeight }) => {
@@ -224,10 +220,6 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
           `}</style>
                 </section>
 
-                {/* <section data-scroll-section>
-                    <BiologyTutorsStudentAchievements />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <MarqueeBanner />
@@ -258,19 +250,11 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
                     </section>
                 </LazySection>
 
-                {/* <section data-scroll-section>
-                    <BiologyTutorsIgniteAchievements />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <BiologyTutorsUsps />
                     </section>
                 </LazySection>
-
-                {/* <section data-scroll-section>
-                    <BiologyTutorsLifeAtIgniteCarousel />
-                </section> */}
 
                 <LazySection>
                     <section data-scroll-section>

@@ -20,11 +20,8 @@ import PhysicsTutorsACT from '@/components/physics-tutoring/ACT';
 import PhysicsTutorsUsps from "@/components/physics-tutoring/Usps";
 import Trainers from "@/components/physics-tutoring/Trainers";
 import PhysicsTutorsIgniteAchievements from '@/components/physics-tutoring/IgniteAchievements';
-import PhysicsTutorsLifeAtIgniteCarousel from '@/components/physics-tutoring/LifeAtIgniteCarousel';
 import PhysicsTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import PhysicsTutorsStudentAchievements from '@/components/physics-tutoring/StudentAchivement';
-
 //comment
 // Renamed main component: SubjectTutoring -> PhysicsTutorsInDubai
 const PhysicsTutorsInDubai = ({ headerHeight }) => {
@@ -223,10 +220,6 @@ const PhysicsTutorsInDubai = ({ headerHeight }) => {
           `}</style>
                 </section>
 
-                {/* <section data-scroll-section>
-                    <PhysicsTutorsStudentAchievements />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <MarqueeBanner />
@@ -268,10 +261,6 @@ const PhysicsTutorsInDubai = ({ headerHeight }) => {
                         <PhysicsTutorsUsps />
                     </section>
                 </LazySection>
-
-                {/* <section data-scroll-section>
-                    <PhysicsTutorsLifeAtIgniteCarousel />
-                </section> */}
 
                 <LazySection>
                     <section data-scroll-section>

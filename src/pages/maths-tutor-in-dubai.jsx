@@ -20,11 +20,8 @@ import MathsTutorsACT from '@/components/maths-tutoring/ACT';
 import MathsTutorsUsps from "@/components/maths-tutoring/Usps";
 import Trainers from "@/components/maths-tutoring/Trainers";
 import MathsTutorsIgniteAchievements from '@/components/maths-tutoring/IgniteAchievements';
-import MathsTutorsLifeAtIgniteCarousel from '@/components/maths-tutoring/LifeAtIgniteCarousel';
 import MathsTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import MathsTutorsStudentAchievements from '@/components/maths-tutoring/StudentAchivement';
-
 //comment
 // Renamed main component: SubjectTutoring -> MathsTutorsInDubai
 const MathsTutorsInDubai = ({ headerHeight }) => {
@@ -223,10 +220,6 @@ const MathsTutorsInDubai = ({ headerHeight }) => {
           `}</style>
                 </section>
 
-                {/* <section data-scroll-section>
-                    <MathsTutorsStudentAchievements />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <MarqueeBanner />
@@ -268,10 +261,6 @@ const MathsTutorsInDubai = ({ headerHeight }) => {
                         <MathsTutorsUsps />
                     </section>
                 </LazySection>
-
-                {/* <section data-scroll-section>
-                    <MathsTutorsLifeAtIgniteCarousel />
-                </section> */}
 
                 <LazySection>
                     <section data-scroll-section>

@@ -20,11 +20,8 @@ import ChemistryTutorsACT from '@/components/chemistry-tutoring/ACT';
 import ChemistryTutorsUsps from "@/components/chemistry-tutoring/Usps";
 import Trainers from "@/components/chemistry-tutoring/Trainers";
 import ChemistryTutorsIgniteAchievements from '@/components/chemistry-tutoring/IgniteAchievements';
-import ChemistryTutorsLifeAtIgniteCarousel from '@/components/chemistry-tutoring/LifeAtIgniteCarousel';
 import ChemistryTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import ChemistryTutorsStudentAchievements from '@/components/chemistry-tutoring/StudentAchivement';
-
 //comment
 // Renamed main component: SubjectTutoring -> ChemistryTutorsInDubai
 const ChemistryTutorsInDubai = ({ headerHeight }) => {
@@ -223,10 +220,6 @@ const ChemistryTutorsInDubai = ({ headerHeight }) => {
           `}</style>
                 </section>
 
-                {/* <section data-scroll-section>
-                    <ChemistryTutorsStudentAchievements />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <MarqueeBanner />
@@ -268,10 +261,6 @@ const ChemistryTutorsInDubai = ({ headerHeight }) => {
                         <ChemistryTutorsUsps />
                     </section>
                 </LazySection>
-
-                {/* <section data-scroll-section>
-                    <ChemistryTutorsLifeAtIgniteCarousel />
-                </section> */}
 
                 <LazySection>
                     <section data-scroll-section>

@@ -11,7 +11,6 @@ import Usps from "@/components/homeCopy/Usps";
 import IgniteAchievements from '@/components/subject-tutoring/IgniteAchievements';
 import LifeAtIgniteCarousel from '@/components/subject-tutoring/LifeAtIgniteCarousel';
 import FAQSection from '@/components/subject-tutoring/FaqSection';
-import StudentAchievements from '@/components/subject-tutoring/StudentAchivement';
 // import Hero from '@/components/home/Hero';
 
 // 1. ACCEPT the headerHeight prop
@@ -129,11 +128,6 @@ const SubjectTutoring = ({ headerHeight }) => {
             }
           `}</style>
         </section>
-
-        {/* <section data-scroll-section>
-        <StudentAchievements />
-      </section> */}
-
 
         <section data-scroll-section>
           <MarqueeBanner />

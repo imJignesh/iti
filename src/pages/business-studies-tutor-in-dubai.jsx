@@ -20,11 +20,8 @@ import BusinessTutorsACT from '@/components/business-tutoring/ACT';
 import BusinessTutorsUsps from "@/components/business-tutoring/Usps";
 import Trainers from "@/components/business-tutoring/Trainers";
 import BusinessTutorsIgniteAchievements from '@/components/business-tutoring/IgniteAchievements';
-import BusinessTutorsLifeAtIgniteCarousel from '@/components/business-tutoring/LifeAtIgniteCarousel';
 import BusinessTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import BusinessTutorsStudentAchievements from '@/components/business-tutoring/StudentAchivement';
-
 //comment
 // Renamed main component: SubjectTutoring -> BusinessTutorsInDubai
 const BusinessTutorsInDubai = ({ headerHeight }) => {
@@ -223,10 +220,6 @@ const BusinessTutorsInDubai = ({ headerHeight }) => {
           `}</style>
                 </section>
 
-                {/* <section data-scroll-section>
-                    <BusinessTutorsStudentAchievements />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <MarqueeBanner />
@@ -268,10 +261,6 @@ const BusinessTutorsInDubai = ({ headerHeight }) => {
                         <BusinessTutorsUsps />
                     </section>
                 </LazySection>
-                {/* <section data-scroll-section>
-                    <BusinessTutorsLifeAtIgniteCarousel />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <BusinessTutorsFAQSection {...faqSections.business} />

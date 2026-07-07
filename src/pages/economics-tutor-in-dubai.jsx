@@ -20,11 +20,8 @@ import EconomicsTutorsACT from '@/components/economics-tutoring/ACT';
 import EconomicsTutorsUsps from "@/components/economics-tutoring/Usps";
 import Trainers from "@/components/economics-tutoring/Trainers";
 import EconomicsTutorsIgniteAchievements from '@/components/economics-tutoring/IgniteAchievements';
-import EconomicsTutorsLifeAtIgniteCarousel from '@/components/economics-tutoring/LifeAtIgniteCarousel';
 import EconomicsTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import EconomicsTutorsStudentAchievements from '@/components/economics-tutoring/StudentAchivement';
-
 //comment
 // Renamed main component: SubjectTutoring -> EconomicsTutorsInDubai
 const EconomicsTutorsInDubai = ({ headerHeight }) => {
@@ -223,10 +220,6 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
           `}</style>
                 </section>
 
-                {/* <section data-scroll-section>
-                    <EconomicsTutorsStudentAchievements />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <MarqueeBanner />
@@ -268,10 +261,6 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
                         <EconomicsTutorsUsps />
                     </section>
                 </LazySection>
-
-                {/* <section data-scroll-section>
-                    <EconomicsTutorsLifeAtIgniteCarousel />
-                </section> */}
 
                 <LazySection>
                     <section data-scroll-section>

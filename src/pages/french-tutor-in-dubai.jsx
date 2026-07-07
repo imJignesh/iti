@@ -20,11 +20,8 @@ import FrenchTutorsACT from '@/components/french-tutoring/ACT';
 import FrenchTutorsUsps from "@/components/french-tutoring/Usps";
 import Trainers from "@/components/french-tutoring/Trainers";
 import FrenchTutorsIgniteAchievements from '@/components/french-tutoring/IgniteAchievements';
-import FrenchTutorsLifeAtIgniteCarousel from '@/components/french-tutoring/LifeAtIgniteCarousel';
 import FrenchTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import FrenchTutorsStudentAchievements from '@/components/french-tutoring/StudentAchivement';
-
 //comment
 // Renamed main component: SubjectTutoring -> FrenchTutorsInDubai
 const FrenchTutorsInDubai = ({ headerHeight }) => {
@@ -422,10 +419,6 @@ const FrenchTutorsInDubai = ({ headerHeight }) => {
           `}</style>
                 </section>
 
-                {/* <section data-scroll-section>
-                    <FrenchTutorsStudentAchievements />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <MarqueeBanner />
@@ -467,10 +460,6 @@ const FrenchTutorsInDubai = ({ headerHeight }) => {
                         <FrenchTutorsUsps />
                     </section>
                 </LazySection>
-
-                {/* <section data-scroll-section>
-                    <FrenchTutorsLifeAtIgniteCarousel />
-                </section> */}
 
                 <LazySection>
                     <section data-scroll-section>

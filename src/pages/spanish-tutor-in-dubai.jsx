@@ -20,11 +20,8 @@ import SpanishTutorsACT from '@/components/spanish-tutoring/ACT';
 import SpanishTutorsUsps from "@/components/spanish-tutoring/Usps";
 import Trainers from "@/components/spanish-tutoring/Trainers";
 import SpanishTutorsIgniteAchievements from '@/components/spanish-tutoring/IgniteAchievements';
-import SpanishTutorsLifeAtIgniteCarousel from '@/components/spanish-tutoring/LifeAtIgniteCarousel';
 import SpanishTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import SpanishTutorsStudentAchievements from '@/components/spanish-tutoring/StudentAchivement';
-
 //comment
 // Renamed main component: SubjectTutoring -> SpanishTutorsInDubai
 const SpanishTutorsInDubai = ({ headerHeight }) => {
@@ -418,10 +415,6 @@ const SpanishTutorsInDubai = ({ headerHeight }) => {
           `}</style>
                 </section>
 
-                {/* <section data-scroll-section>
-                    <SpanishTutorsStudentAchievements />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <MarqueeBanner />
@@ -463,10 +456,6 @@ const SpanishTutorsInDubai = ({ headerHeight }) => {
                         <SpanishTutorsUsps />
                     </section>
                 </LazySection>
-
-                {/* <section data-scroll-section>
-                    <SpanishTutorsLifeAtIgniteCarousel />
-                </section> */}
 
                 <LazySection>
                     <section data-scroll-section>

@@ -19,11 +19,8 @@ import PsychologyTutorsChooseApp from '@/components/psychology-tutoring/choose-a
 import PsychologyTutorsACT from '@/components/psychology-tutoring/ACT';
 import PsychologyTutorsUsps from "@/components/psychology-tutoring/Usps";
 import PsychologyTutorsIgniteAchievements from '@/components/psychology-tutoring/IgniteAchievements';
-import PsychologyTutorsLifeAtIgniteCarousel from '@/components/psychology-tutoring/LifeAtIgniteCarousel';
 import PsychologyTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import PsychologyTutorsStudentAchievements from '@/components/psychology-tutoring/StudentAchivement';
-
 //comment
 // Renamed main component: SubjectTutoring -> PsychologyTutorsInDubai
 const PsychologyTutorsInDubai = ({ headerHeight }) => {
@@ -222,10 +219,6 @@ const PsychologyTutorsInDubai = ({ headerHeight }) => {
           `}</style>
                 </section>
 
-                {/* <section data-scroll-section>
-                    <PsychologyTutorsStudentAchievements />
-                </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <MarqueeBanner />
@@ -261,10 +254,6 @@ const PsychologyTutorsInDubai = ({ headerHeight }) => {
                         <PsychologyTutorsUsps />
                     </section>
                 </LazySection>
-
-                {/* <section data-scroll-section>
-                    <PsychologyTutorsLifeAtIgniteCarousel />
-                </section> */}
 
                 <LazySection>
                     <section data-scroll-section>
