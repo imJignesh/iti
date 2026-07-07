@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Head from "next/head";
-import Accordion from '@/components/ibdp/accordian';
+import Accordion from '@/components/shared/Accordion';
+import { accordionSections } from '@/data/accordionSections';
 import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
 import ReviewsSection from '@/components/ibdp/ReviewsSection';
 import InfoCard from '@/components/subject-tutoring/infoCard';
@@ -167,7 +168,7 @@ const SubjectTutoring = ({ headerHeight }) => {
         </section>
 
         <section data-scroll-section>
-          <Accordion />
+          <Accordion {...accordionSections.ibdp} />
         </section>
       </div>
     </>
