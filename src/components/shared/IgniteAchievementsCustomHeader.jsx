@@ -1,6 +1,18 @@
 "use client"
 
-export default function IgniteAchievements() {
+export default function IgniteAchievementsCustomHeader({ config }) {
+  const {
+    titleLine1,
+    titleLine2,
+    titleLine2Highlight,
+    titleLine2Highlight2,
+    description,
+    stats,
+    buttonText = "GET A FREE DEMO",
+    buttonLink = "/join-free-demo/",
+    altText = "achievements",
+  } = config;
+
   return (
     <div className=" py-md-5 py-4 fade-in-section" data-scroll
       data-scroll-class="is-inview"
@@ -12,7 +24,7 @@ export default function IgniteAchievements() {
         data-scroll-repeat
         style={{ maxWidth: '90vw', animationDelay: "0.15s" }}>
 
-        {/* Mobile Header Section - Only show on mobile */}
+        {/* Mobile Header Section */}
         <div className="d-md-none text-center mb-4 fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
@@ -37,13 +49,13 @@ export default function IgniteAchievements() {
               }}>
               <img
                 src="/assets/3color.webp"
-                alt="act"
+                alt={altText}
                 width={15}
                 height={18}
                 style={{ verticalAlign: "middle", marginLeft: "0.5rem" }}
               /> IGNITE ACHIEVEMENTS     <img
                 src="/assets/3color.webp"
-                alt="act"
+                alt={altText}
                 width={15}
                 height={18}
                 style={{ verticalAlign: "middle", marginLeft: "0.5rem" }}
@@ -63,7 +75,7 @@ export default function IgniteAchievements() {
               animationDelay: "0.35s",
               fontSize: "1.4rem"
             }}>
-            LOREM IPSUM DOLOR SIT AMET,
+            {titleLine1}
           </h2>
           <h2 className="fw-bold mb-3 lh-sm fade-in-section"
             data-scroll
@@ -76,13 +88,14 @@ export default function IgniteAchievements() {
               animationDelay: "0.4s",
               fontSize: "1.4rem"
             }}>
-            CONSECTETUR <span style={{
+            {titleLine2} <span style={{
               background: "#19245E",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               animationDelay: "0.4s",
               fontSize: "1.4rem"
-            }}>ADIPISCING</span>          </h2>
+            }}>{titleLine2Highlight}</span> {titleLine2Highlight2}
+          </h2>
 
           {/* Subtitle */}
           <p className="mx-auto lh-lg fade-in-section"
@@ -96,27 +109,23 @@ export default function IgniteAchievements() {
               animationDelay: "0.45s",
               fontSize: "0.9rem"
             }}>
-            Choosing us means partnering with experienced coaches
-            who are dedicated to unlocking your potential.
+            {description}
           </p>
         </div>
 
-        {/* Desktop Layout - Horizontal */}
+        {/* Desktop Layout */}
         <div className="d-none d-md-block fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.5s" }}>
 
-          {/* Desktop Stats Container */}
           <div className="desktop-stats-container">
-            {/* Left Side Content - Header + Button */}
+            {/* Left Side Content */}
             <div className="left-content">
-              {/* Desktop Header */}
               <div className="mb-4">
                 <div className="mb-3">
-                  <div className="SubHeading testSubheading">IGNITE ACHIEVEMENTS
-                  </div>
+                  <div className="SubHeading testSubheading">IGNITE ACHIEVEMENTS</div>
                 </div>
 
                 {/* Main Title */}
@@ -131,7 +140,7 @@ export default function IgniteAchievements() {
                     animationDelay: "0.35s",
                     fontSize: "2rem"
                   }}>
-                  LOREM IPSUM DOLOR SIT AMET,
+                  {titleLine1}
                 </h2>
                 <h2 className="fw-bold mb-3 lh-sm fade-in-section"
                   data-scroll
@@ -144,13 +153,13 @@ export default function IgniteAchievements() {
                     animationDelay: "0.4s",
                     fontSize: "2rem"
                   }}>
-                  CONSECTETUR <span style={{
+                  {titleLine2} <span style={{
                     background: "#19245E",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     animationDelay: "0.4s",
                     fontSize: "2rem"
-                  }}>ADIPISCING</span>
+                  }}>{titleLine2Highlight}</span>
                 </h2>
 
                 {/* Subtitle */}
@@ -165,35 +174,37 @@ export default function IgniteAchievements() {
                     animationDelay: "0.45s",
                     fontSize: "1.1rem"
                   }}>
-                  Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.
+                  {description}
                 </p>
               </div>
 
               {/* CTA Button */}
               <div className="mb-4">
-                <button
-                  className="btn fw-bold d-flex align-items-center rounded-pill"
-                  style={{
-                    background: "linear-gradient(90deg,#161664, #3F88BA)",
-                    color: 'white',
-                    padding: '1rem 2rem',
-                    border: 'none',
-                    transition: 'opacity 0.3s ease',
-                    fontSize: "1.1rem"
-                  }}
-                  onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-                  onMouseLeave={(e) => e.target.style.opacity = "1"}
-                >
-                  GET A FREE DEMO
-                  <div
-                    className="ms-3 rounded-circle d-flex align-items-center justify-content-center"
+                <a href={buttonLink}>
+                  <button
+                    className="btn fw-bold d-flex align-items-center rounded-pill"
+                    style={{
+                      background: "linear-gradient(90deg,#161664, #3F88BA)",
+                      color: 'white',
+                      padding: '1rem 2rem',
+                      border: 'none',
+                      transition: 'opacity 0.3s ease',
+                      fontSize: "1.1rem"
+                    }}
+                    onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+                    onMouseLeave={(e) => e.target.style.opacity = "1"}
                   >
-                    <img src="/assets/colr.webp" alt="rightar" style={{
-                      width: '2rem',
-                      height: '2rem',
-                    }} />
-                  </div>
-                </button>
+                    {buttonText}
+                    <div
+                      className="ms-3 rounded-circle d-flex align-items-center justify-content-center"
+                    >
+                      <img src="/assets/colr.webp" alt={altText} style={{
+                        width: '2rem',
+                        height: '2rem',
+                      }} />
+                    </div>
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -201,44 +212,28 @@ export default function IgniteAchievements() {
             <div className="stats-grid-desktop">
               {/* Top Row */}
               <div className="stats-row">
-                {/* Stat 1 */}
-                <div className="stat-card-desktop">
-                  <div className="stat-number teal-text">60%</div>
-                  <div className="stat-divider"></div>
-                  <div className="stat-content">
-                    <p className="stat-title teal-text">OF RICH TUTORING EXPERIENCE</p>
+                {stats.slice(0, 2).map((stat, i) => (
+                  <div key={i} className="stat-card-desktop">
+                    <div className={`stat-number ${stat.color}`}>{stat.number}</div>
+                    <div className="stat-divider"></div>
+                    <div className="stat-content">
+                      <p className={`stat-title ${stat.color}`}>{stat.title}</p>
+                    </div>
                   </div>
-                </div>
-
-                {/* Stat 2 */}
-                <div className="stat-card-desktop">
-                  <div className="stat-number blue-text">30+</div>
-                  <div className="stat-divider"></div>
-                  <div className="stat-content">
-                    <p className="stat-title blue-text">TRULY HAPPY STUDENTS FROM UAE</p>
-                  </div>
-                </div>
+                ))}
               </div>
 
               {/* Bottom Row */}
               <div className="stats-row">
-                {/* Stat 3 */}
-                <div className="stat-card-desktop">
-                  <div className="stat-number blue-text">60%</div>
-                  <div className="stat-divider"></div>
-                  <div className="stat-content">
-                    <p className="stat-title blue-text">OF RICH TUTORING EXPERIENCE</p>
+                {stats.slice(2, 4).map((stat, i) => (
+                  <div key={i} className="stat-card-desktop">
+                    <div className={`stat-number ${stat.color}`}>{stat.number}</div>
+                    <div className="stat-divider"></div>
+                    <div className="stat-content">
+                      <p className={`stat-title ${stat.color}`}>{stat.title}</p>
+                    </div>
                   </div>
-                </div>
-
-                {/* Stat 4 */}
-                <div className="stat-card-desktop">
-                  <div className="stat-number teal-text">30+</div>
-                  <div className="stat-divider"></div>
-                  <div className="stat-content">
-                    <p className="stat-title teal-text">TRULY HAPPY STUDENTS FROM UAE</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -253,63 +248,57 @@ export default function IgniteAchievements() {
 
           {/* Mobile CTA Button */}
           <div className="text-center mb-4">
-            <button
-              className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
-              style={{
-                background: "linear-gradient(90deg,#161664, #3F88BA)",
-                color: 'white',
-                padding: '0.8rem 1.8rem',
-                border: 'none',
-                transition: 'opacity 0.3s ease',
-                fontSize: "1rem"
-              }}
-              onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-              onMouseLeave={(e) => e.target.style.opacity = "1"}
-            >
-              GET A FREE DEMO
-              <div
-                className="ms-3 rounded-circle d-flex align-items-center justify-content-center"
+            <a href={buttonLink}>
+              <button
+                className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
+                style={{
+                  background: "linear-gradient(90deg,#161664, #3F88BA)",
+                  color: 'white',
+                  padding: '0.8rem 1.8rem',
+                  border: 'none',
+                  transition: 'opacity 0.3s ease',
+                  fontSize: "1rem"
+                }}
+                onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+                onMouseLeave={(e) => e.target.style.opacity = "1"}
               >
-                <img src="/assets/colr.webp" alt="rightar" style={{
-                  width: '2rem',
-                  height: '2rem',
-                }} />
-              </div>
-            </button>
+                {buttonText}
+                <div
+                  className="ms-3 rounded-circle d-flex align-items-center justify-content-center"
+                >
+                  <img src="/assets/colr.webp" alt={altText} style={{
+                    width: '2rem',
+                    height: '2rem',
+                  }} />
+                </div>
+              </button>
+            </a>
           </div>
 
           {/* Mobile Stats - 2x2 Grid */}
           <div className="stats-grid-mobile">
             {/* Row 1 */}
             <div className="row g-3 mb-3">
-              <div className="col-6">
-                <div className="stat-card-mobile">
-                  <div className="stat-number blue-text">60%</div>
-                  <p className="stat-title-mobile blue-text">OF RICH TUTORING EXPERIENCE</p>
+              {stats.slice(0, 2).map((stat, i) => (
+                <div key={i} className="col-6">
+                  <div className="stat-card-mobile">
+                    <div className={`stat-number ${stat.color}`}>{stat.number}</div>
+                    <p className={`stat-title-mobile ${stat.color}`}>{stat.title}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-6">
-                <div className="stat-card-mobile">
-                  <div className="stat-number teal-text">30+</div>
-                  <p className="stat-title-mobile teal-text">TRULY HAPPY STUDENTS FROM UAE</p>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Row 2 */}
             <div className="row g-3">
-              <div className="col-6">
-                <div className="stat-card-mobile">
-                  <div className="stat-number blue-text">60%</div>
-                  <p className="stat-title-mobile blue-text">OF RICH TUTORING EXPERIENCE</p>
+              {stats.slice(2, 4).map((stat, i) => (
+                <div key={i} className="col-6">
+                  <div className="stat-card-mobile">
+                    <div className={`stat-number ${stat.color}`}>{stat.number}</div>
+                    <p className={`stat-title-mobile ${stat.color}`}>{stat.title}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-6">
-                <div className="stat-card-mobile">
-                  <div className="stat-number teal-text">30+</div>
-                  <p className="stat-title-mobile teal-text">TRULY HAPPY STUDENTS FROM UAE</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -326,14 +315,13 @@ export default function IgniteAchievements() {
           transform: translateY(0);
         }
 
-        /* Color Classes */
         .teal-text {
           background: linear-gradient(90deg, #00A491, #003E37);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
-        
+
         .blue-text {
           background: linear-gradient(90deg, #3F88BA, #161664);
           -webkit-background-clip: text;
@@ -341,35 +329,32 @@ export default function IgniteAchievements() {
           background-clip: text;
         }
 
-        /* Desktop Layout */
         .desktop-stats-container {
           display: flex;
           align-items: flex-start;
           gap: 3rem;
           min-height: 500px;
         }
-        
+
         .left-content {
           flex: 0 0 45%;
-          /* No background color for left side */
         }
-        
- .stats-grid-desktop {
-  flex: 1;
-  background: url("/assets/Rectangle125.webp") no-repeat center/cover;
-  border-radius: 20px;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
 
-        
+        .stats-grid-desktop {
+          flex: 1;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
+          border-radius: 20px;
+          padding: 3rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+
         .stats-row {
           display: flex;
           gap: 2rem;
         }
-        
+
         .stat-card-desktop {
           flex: 1;
           display: flex;
@@ -377,26 +362,25 @@ export default function IgniteAchievements() {
           text-align: center;
           gap: 1rem;
         }
-        
+
         .stat-number {
           font-size: 4rem;
           font-weight: 700;
           line-height: 1;
         }
-        
- .stat-divider {
-  width: 9vw;
-  height: 1px;
-  background: linear-gradient(to right, #00A491, #003E37);
-  border-radius: 2px;
-  margin: 0 auto;
-}
 
-        
+        .stat-divider {
+          width: 9vw;
+          height: 1px;
+          background: linear-gradient(to right, #00A491, #003E37);
+          border-radius: 2px;
+          margin: 0 auto;
+        }
+
         .stat-content {
           flex: 1;
         }
-        
+
         .stat-title {
           font-size: 1rem;
           font-weight: 700;
@@ -405,43 +389,40 @@ export default function IgniteAchievements() {
           text-transform: uppercase;
         }
 
-        /* Mobile Layout */
         .stats-grid-mobile {
-  background: url("/assets/Rectangle125.webp") no-repeat center/cover;
+          background: url("/assets/Rectangle125.webp") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
         }
-        
+
         .stat-card-mobile {
           text-align: center;
           padding: 1.5rem 1rem;
         }
-        
+
         .stat-card-mobile .stat-number {
           font-size: 2.5rem;
           font-weight: 700;
           line-height: 1;
           margin-bottom: 1rem;
         }
-        
+
         .stat-title-mobile {
           font-size: 0.8rem;
           font-weight: 700;
           line-height: 1.2;
           margin: 0;
-          //text-transform: uppercase;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 575px) {
           .stat-card-mobile .stat-number {
             font-size: 2rem;
           }
-          
+
           .stat-title-mobile {
             font-size: 0.7rem;
           }
-          
+
           .stats-grid-mobile {
             padding: 1.5rem;
           }

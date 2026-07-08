@@ -2,5 +2,5 @@ import IgniteAchievementsCardGrid from '@/components/shared/IgniteAchievementsCa
 import { getCardGridConfig } from '@/data/achievementsCardGridConfigs';
 
 export default function IgniteAchievements() {
-  return <IgniteAchievementsCardGrid config={getCardGridConfig('ibdp')} />;
+  return <IgniteAchievementsCardGrid config={getCardGridConfig('homeschooling')} />;
 }

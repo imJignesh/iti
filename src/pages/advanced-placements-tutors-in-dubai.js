@@ -11,7 +11,6 @@ import APBenefits from '@/components/ap/chooseApp';
 import CourseCard from '@/components/ap/CourseCard';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import IgniteAchievements from '@/components/ap/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';

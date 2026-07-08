@@ -9,7 +9,6 @@ import Blog from "@/components/act/Blog";
 import CourseCard from '@/components/act/CourseCard';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import IgniteAchievements from '@/components/act/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
