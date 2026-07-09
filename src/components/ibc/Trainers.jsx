@@ -1,53 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import Image from '@/components/CustomImageWrapper';
+import TrainersShared from "@/components/shared/Trainers";
+import { getTrainersData } from "@/data/trainersData";
 
-// ----------------------------------------------------------------------
-// Trainer Data (No Change)
-// ----------------------------------------------------------------------
+const trainersData = getTrainersData("ibc");
 
-const trainers = [
-  {
-    name: "MASAB",
-    img: "/images/team/masab.webp",
-    subtitle: "Maths & Accounting",
-    experience: "10+ YEARS",
-    color: "blue",
-  },
-  {
-    name: "SHWETHA",
-    img: "/images/team/shwetha.webp",
-    subtitle: "Biology",
-    experience: "6+ YEARS",
-    color: "green",
-  },
-  {
-    name: "SARANYA",
-    img: "/images/team/saranya.webp",
-    subtitle: "Physics",
-    experience: "8+ YEARS",
-    color: "blue",
-  },
-  {
-    name: "ASHWANI",
-    img: "/images/team/ashwani.webp",
-    subtitle: "Maths",
-    experience: "7+ YEARS",
-    color: "green",
-  },
-  {
-    name: "IRTIQA",
-    img: "/images/team/Irtiqa.webp",
-    subtitle: "Computer Science, ICT",
-    experience: "6+ YEARS",
-    color: "blue",
-  },
-  {
-    name: "ABDUL",
+export default function Trainers() {
+  return <TrainersShared trainers={trainersData} />;
     img: "/images/team/abdul.webp",
     subtitle: "Maths",
     experience: "13+ YEARS",
