@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import LazySection from "@/components/LazySection";
 
 import SEO from "@/components/SEO";
-import SEOHead from "@/components/SEOHead";
 import Hero from "@/components/homeCopy/Hero";
 // import TestSeriesBanner from "@/components/homeCopy/TestSeriesBanner"; // Switched to dynamic
 

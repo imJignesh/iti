@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Head from 'next/head';
-import useSWR from 'swr';
 import SEO from "@/components/SEO";
 import Image from 'next/image';
 import JsonLd from "@/components/JsonLd";

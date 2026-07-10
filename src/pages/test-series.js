@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import SEO from "@/components/SEO";
 import InfoCardLeft from '@/components/shared/InfoCardLeft';

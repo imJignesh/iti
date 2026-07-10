@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component

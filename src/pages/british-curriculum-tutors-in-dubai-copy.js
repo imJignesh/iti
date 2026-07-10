@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from "next/head";
 import LazySection from "@/components/LazySection";
 // 1. Import the reusable schema component
@@ -26,7 +25,6 @@ import StudentAchievements from '@/components/bc/StudentAchivement';
 import SubjectsCard from '@/components/bc/SubjectCard';
 import UniImagesCard from '@/components/bc/universityCrad';
 import UspsSection from '@/components/bc/UspsSection';
-import { University } from 'lucide-react';
 import SEO from "@/components/SEO";
 
 
