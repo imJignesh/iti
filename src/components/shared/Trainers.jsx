@@ -10,6 +10,7 @@ export default function Trainers({ trainers }) {
   const trainersGridRef = useRef(null);
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
+  const hasFewerTrainers = trainers.length < 5;
 
   const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
 
@@ -83,6 +84,14 @@ export default function Trainers({ trainers }) {
           width: 70vw;
           margin: 0 auto;
           margin-bottom: 50px;
+        }
+
+        .trainersSection .trainersGrid.centered,
+        .trainersSection .trainersGrid[data-fewer-trainers="true"] {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          max-width: fit-content;
+          margin: 0 auto 50px;
+          justify-content: center;
         }
 
         .trainersSection .trainerCard {
@@ -587,7 +596,18 @@ export default function Trainers({ trainers }) {
             </div>
 
             <div className="trainersGridWrapper">
-              <div className="trainersGrid" ref={trainersGridRef} data-scroll data-scroll-class="is-inview">
+              <div
+                className={`trainersGrid ${hasFewerTrainers ? 'centered' : ''}`}
+                ref={trainersGridRef}
+                data-scroll
+                data-scroll-class="is-inview"
+                style={hasFewerTrainers ? {
+                  gridTemplateColumns: `repeat(${trainers.length}, calc((70vw - 96px) / 5))`,
+                  maxWidth: 'fit-content',
+                  margin: '0 auto 50px',
+                  justifyContent: 'center'
+                } : {}}
+              >
                 {displayTrainers.map((t, i) => (
                   <div key={`${t.name}-${i}`} className="trainer-animate-item" style={{ animationDelay: `${(i % 4) * 0.1}s` }}>
                     <a href="/our-team" className="nodecoration">

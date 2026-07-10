@@ -303,6 +303,27 @@ export default function SubjectsCard() {
           width: 480px;
         }
 
+        .subjectHeader .SubHeading {
+          color: #ffffff;
+          background: none;
+          -webkit-text-fill-color: #ffffff;
+        }
+
+        .subjectHeader .SubHeading:before,
+        .subjectHeader .SubHeading:after {
+          background: repeating-linear-gradient(
+            to bottom,
+            #ffffff,
+            #ffffff 4px,
+            transparent 4px,
+            transparent 8px
+          );
+          height: 20px;
+          width: 24px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
         .subjectTitle {
           color: white;
           font-size: 29px;
@@ -605,6 +626,18 @@ margin:0 !important;
             white-space: normal;
             text-align: center;
             font-size: 12px !important;
+          }
+          .subjectHeader .SubHeading:before,
+          .subjectHeader .SubHeading:after {
+            width: 16px;
+            height: 14px;
+            background: repeating-linear-gradient(
+              to bottom,
+              #ffffff,
+              #ffffff 3px,
+              transparent 3px,
+              transparent 5.5px
+            );
           }
         }
 
