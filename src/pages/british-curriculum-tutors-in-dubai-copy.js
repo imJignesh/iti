@@ -7,7 +7,6 @@ import JsonLd from "@/components/JsonLd";
 import Accordion from '@/components/shared/Accordion';
 import { accordionSections } from '@/data/accordionSections';
 import Blog from "@/components/bc/Blog";
-import CourseCard from '@/components/bc/CourseCard';
 import IBCurriculumStages from '@/components/bc/Curriculum.jsx';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
@@ -18,10 +17,8 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
 import Trainers from "@/components/bc/Trainers";
 import WhatWeOfferSection from '@/components/bc/WhatWeOfferSection';
-import LifeAtIgniteCarousel from '@/components/bc/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/bc/MarqueeBanner';
 import ReviewsSection from '@/components/bc/ReviewsSection';
-import StudentAchievements from '@/components/bc/StudentAchivement';
 import SubjectsCard from '@/components/bc/SubjectCard';
 import UniImagesCard from '@/components/bc/universityCrad';
 import UspsSection from '@/components/bc/UspsSection';
@@ -249,10 +246,6 @@ const BC = ({ headerHeight }) => {
           </section>
         </LazySection>
 
-        {/* <section data-scroll-section>
-            <StudentAchievements />
-          </section> */}
-
         <LazySection>
           <section data-scroll-section>
             <IBCurriculumStages />
@@ -301,10 +294,6 @@ const BC = ({ headerHeight }) => {
             <UspsSection />
           </section>
         </LazySection>
-
-        {/* <section data-scroll-section>
-            <LifeAtIgniteCarousel />
-          </section> */}
 
         <LazySection>
           <section data-scroll-section>

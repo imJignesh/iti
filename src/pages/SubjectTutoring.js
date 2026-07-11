@@ -9,7 +9,6 @@ import ChhoseApp from '@/components/subject-tutoring/choose-app';
 import ACT from '@/components/subject-tutoring/ACT';
 import Usps from "@/components/homeCopy/Usps";
 import IgniteAchievements from '@/components/subject-tutoring/IgniteAchievements';
-import LifeAtIgniteCarousel from '@/components/subject-tutoring/LifeAtIgniteCarousel';
 import FAQSection from '@/components/subject-tutoring/FaqSection';
 // import Hero from '@/components/home/Hero';
 
@@ -152,10 +151,6 @@ const SubjectTutoring = ({ headerHeight }) => {
         <section data-scroll-section>
           <Usps />
         </section>
-
-        {/* <section data-scroll-section>
-        <LifeAtIgniteCarousel />
-      </section> */}
 
         <section data-scroll-section>
           <FAQSection />

@@ -1,5 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
 import LazySection from "@/components/LazySection";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";

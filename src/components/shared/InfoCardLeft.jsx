@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 
 export default function InfoCardLeft({ title = "", subtitle = "Expert Help At Every IB Milestone", description = "", infoRow = [], buttons = [], altText = "IB Curriculum" }) {
     const handleAction = (action) => (e) => {

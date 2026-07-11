@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import LazySection from "@/components/LazySection";
 // Import the reusable schema component

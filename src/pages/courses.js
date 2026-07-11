@@ -1,21 +1,12 @@
-import AboutBanner from "@/components/aboutus/Banner";
 import LazySection from "@/components/LazySection";
-import IgniteAboutCard from "@/components/aboutus/IgniteAboutCard";
-import WhyChooseUs from "@/components/aboutus/WhyChooseUs";
-import Timeline from "@/components/aboutus/Timeline";
-import MeetOurFounders from "@/components/aboutus/MeetOurFounders";
 import { useEffect, useState } from "react";
-import TutoringHeroSection from "@/components/aboutus/BottomSub";
-import MarqueeBanner from "@/components/act/MarqueeBanner";
 import TutoringCourses from "@/components/maincourse/Banner";
 // import Test from "@/components/maincourse/StandardsedTest";
 import Test from "@/components/maincourse/Test";
 import CallToAction from "@/components/maincourse/CallToAction";
-import TrainersMessage from "@/components/maincourse/videoTrainer";
 import Testimonial from "@/components/ibdp/ReviewsSection";
 import Learning from "@/components/maincourse/Learning";
 import MainBanner from "@/components/maincourse/MainBanner";
-import LifeAtIgniteCarousel from "@/components/maincourse/LifeAtIgniteCarousel";
 import SEO from "@/components/SEO";
 
 // 1. ACCEPT the headerHeight prop
@@ -73,21 +64,11 @@ const About = ({ headerHeight }) => {
                         <Learning />
                     </section>
                 </LazySection>
-                {/* <section data-scroll-section>
-                <MarqueeBanner />
-            </section> */}
-                {/* <section data-scroll-section>
-                <TrainersMessage />
-            </section> */}
-
                 <LazySection>
                     <section data-scroll-section>
                         <Testimonial />
                     </section>
                 </LazySection>
-                {/* <section data-scroll-section>
-                <LifeAtIgniteCarousel />
-            </section> */}
                 <LazySection>
                     <section data-scroll-section>
                         <CallToAction />

@@ -6,7 +6,6 @@ import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
 import MarqueeBanner from '@/components/private-tutors-dubai/MarqueeBanner';
 import ReviewsSection from '@/components/private-tutors-dubai/ReviewsSection';
-import StudentAchievements from '@/components/private-tutors-dubai/StudentAchivement';
 import CurriculumTestsComponent from '@/components/private-tutors-dubai/curriculum';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
@@ -20,7 +19,6 @@ import Accordion from '@/components/shared/Accordion';
 import { accordionSections } from '@/data/accordionSections';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import LifeAtIgniteCarousel from '@/components/private-tutors-dubai/LifeAtIgniteCarousel';
 
 
 // 1. ACCEPT the headerHeight prop
@@ -204,10 +202,6 @@ const PrivateTutorsDubai = ({ headerHeight }) => {
           `}</style>
         </section>
 
-        {/* <section data-scroll-section>
-          <StudentAchievements />
-        </section> */}
-
         <LazySection>
           <section data-scroll-section>
             <CurriculumTestsComponent />
@@ -249,10 +243,6 @@ const PrivateTutorsDubai = ({ headerHeight }) => {
             <UpsSection />
           </section>
         </LazySection>
-
-        {/* <section data-scroll-section>
-          <LifeAtIgniteCarousel />
-        </section> */}
 
         <LazySection>
           <section data-scroll-section>

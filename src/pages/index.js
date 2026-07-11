@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import LazySection from "@/components/LazySection";
 
 import SEO from "@/components/SEO";

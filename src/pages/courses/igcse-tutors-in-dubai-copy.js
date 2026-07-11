@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
@@ -18,10 +17,8 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/igcse/IgniteAboutCard";
 import Trainers from '@/components/igcse/Trainers';
 import WhatWeOfferSection from '@/components/igcse/WhatWeOfferSection';
-import LifeAtIgniteCarousel from '@/components/igcse/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/igcse/MarqueeBanner';
 import ReviewsSection from '@/components/igcse/ReviewsSection';
-import StudentAchievements from '@/components/igcse/StudentAchivement';
 import SubjectsCard from '@/components/igcse/SubjectCard';
 import UspsSection from '@/components/igcse/UspsSection';
 import UniImagesCard from '@/components/igcse/universityCrad';
@@ -243,10 +240,6 @@ const IGCSE = ({ headerHeight }) => {
           </section>
         </LazySection>
 
-        {/* <section data-scroll-section>
-            <StudentAchievements />
-          </section> */}
-
         <LazySection>
           <section data-scroll-section>
             <CourseCard />
@@ -297,10 +290,6 @@ const IGCSE = ({ headerHeight }) => {
             <UspsSection />
           </section>
         </LazySection>
-
-        {/* <section data-scroll-section>
-            <LifeAtIgniteCarousel />
-          </section> */}
 
         <LazySection>
           <section data-scroll-section>

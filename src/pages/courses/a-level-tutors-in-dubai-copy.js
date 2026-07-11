@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
@@ -16,10 +15,8 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/a-level/IgniteAboutCard";
 import Trainers from "@/components/a-level/Trainers";
 import WhatWeOfferSection from '@/components/a-level/WhatWeOfferSection';
-import LifeAtIgniteCarousel from '@/components/a-level/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/a-level/MarqueeBanner';
 import ReviewsSection from '@/components/a-level/ReviewsSection';
-import StudentAchievements from '@/components/a-level/StudentAchivement';
 import SubjectsCard from '@/components/a-level/SubjectCard';
 import UspsSection from '@/components/a-level/UspsSection';
 import UniImagesCard from '@/components/a-level/universityCrad';
@@ -218,10 +215,6 @@ const ALEVEL = ({ headerHeight }) => {
           </section>
         </LazySection>
 
-        {/* <section data-scroll-section>
-            <StudentAchievements />
-          </section> */}
-
         <LazySection>
           <section data-scroll-section>
             <CourseCard />
@@ -271,10 +264,6 @@ const ALEVEL = ({ headerHeight }) => {
             <UspsSection />
           </section>
         </LazySection>
-
-        {/* <section data-scroll-section>
-            <LifeAtIgniteCarousel />
-          </section> */}
 
         <LazySection>
           <section data-scroll-section>

@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Image from '@/components/CustomImageWrapper';
 
 export default function IBCurriculumStages() {

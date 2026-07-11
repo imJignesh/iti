@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import SEO from "@/components/SEO";
 import Image from 'next/image';

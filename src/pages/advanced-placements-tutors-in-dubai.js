@@ -16,10 +16,8 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/ap/IgniteAboutCard";
 import Trainers from "@/components/ap/Trainers";
 import WhatWeOfferSection from '@/components/ap/WhatWeOfferSection';
-import LifeAtIgniteCarousel from '@/components/ap/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/ap/MarqueeBanner';
 import ReviewsSection from '@/components/ap/ReviewsSection';
-import StudentAchievements from '@/components/ap/StudentAchivement';
 import SubjectsCard1 from '@/components/ap/SubjectCard1';
 import UspsSection from '@/components/ap/UspsSection';
 
@@ -538,10 +536,6 @@ const ap = ({ headerHeight }) => {
           </section>
         </LazySection>
 
-        {/* <section data-scroll-section>
-            <StudentAchievements />
-          </section> */}
-
         <LazySection>
           <section data-scroll-section>
             <CourseCard />
@@ -592,10 +586,6 @@ const ap = ({ headerHeight }) => {
             <UspsSection />
           </section>
         </LazySection>
-
-        {/* <section data-scroll-section>
-            <LifeAtIgniteCarousel />
-          </section> */}
 
         <LazySection>
           <section data-scroll-section>

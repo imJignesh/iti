@@ -12,10 +12,8 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/act/IgniteAboutCard";
-import LifeAtIgniteCarousel from '@/components/act/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/act/MarqueeBanner';
 import ReviewsSection from '@/components/act/ReviewsSection';
-import StudentAchievements from '@/components/act/StudentAchivement';
 import SubjectsCard from '@/components/act/SubjectCard';
 import SubjectsCard1 from '@/components/act/SubjectCard1';
 import UspsSection from '@/components/act/UspsSection';
@@ -514,9 +512,6 @@ const act = ({ headerHeight }) => {
             <IgniteAboutCard />
           </section>
         </LazySection>
-        {/* <section data-scroll-section>
-            <StudentAchievements />
-          </section> */}
 
         <LazySection>
           <section data-scroll-section>
@@ -540,10 +535,6 @@ const act = ({ headerHeight }) => {
             <UspsSection />
           </section>
         </LazySection>
-
-        {/* <section data-scroll-section>
-            <LifeAtIgniteCarousel />
-          </section> */}
 
         <LazySection>
           <section data-scroll-section>

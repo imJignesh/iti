@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import styles from "@/styles/home-copy/TestSeriesBanner.module.css";
 
 const TestSeriesBanner = () => {

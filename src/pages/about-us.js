@@ -9,7 +9,6 @@ import Timeline from "@/components/aboutus/Timeline";
 import MeetOurFounders from "@/components/aboutus/MeetOurFounders";
 import TutoringHeroSection from "@/components/aboutus/BottomSub";
 import MarqueeBanner from "@/components/aboutus/MarqueeBanner";
-import LifeAtIgniteCarousel from "@/components/aboutus/LifeAtIgniteCarousel";
 
 // 1. ACCEPT the headerHeight prop
 const About = ({ headerHeight }) => {
@@ -87,9 +86,6 @@ const About = ({ headerHeight }) => {
             <MarqueeBanner />
           </section>
         </LazySection>
-        {/* <section data-scroll-section>
-          <LifeAtIgniteCarousel />
-        </section> */}
         <LazySection>
           <section data-scroll-section>
             <TutoringHeroSection />

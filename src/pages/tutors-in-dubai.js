@@ -6,7 +6,6 @@ import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
 import MarqueeBanner from '@/components/tutors/MarqueeBanner';
 import ReviewsSection from '@/components/tutors/ReviewsSection';
-import StudentAchievements from '@/components/tutors/StudentAchivement';
 import CurriculumTestsComponent from '@/components/tutors/curriculum';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
@@ -20,7 +19,6 @@ import Accordion from '@/components/shared/Accordion';
 import { accordionSections } from '@/data/accordionSections';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
-import LifeAtIgniteCarousel from '@/components/tutors/LifeAtIgniteCarousel';
 
 // 1. ACCEPT the headerHeight prop
 const Tutors = ({ headerHeight }) => {
@@ -559,10 +557,6 @@ const Tutors = ({ headerHeight }) => {
           `}</style>
         </section>
 
-        {/* <section data-scroll-section>
-          <StudentAchievements />
-        </section> */}
-
         <LazySection>
           <section data-scroll-section>
             <CurriculumTestsComponent />
@@ -604,10 +598,6 @@ const Tutors = ({ headerHeight }) => {
             <UpsSection />
           </section>
         </LazySection>
-
-        {/* <section data-scroll-section>
-          <LifeAtIgniteCarousel />
-        </section> */}
 
         <LazySection>
           <section data-scroll-section>

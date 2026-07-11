@@ -2,7 +2,7 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import useSWR from 'swr';
 import Link from 'next/link';
 import SEO from "@/components/SEO";

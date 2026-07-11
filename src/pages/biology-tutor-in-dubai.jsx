@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 import LazySection from "@/components/LazySection";
 import Head from "next/head";
 // 1. Import the reusable schema component

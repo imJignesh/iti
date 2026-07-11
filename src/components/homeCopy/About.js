@@ -1,5 +1,5 @@
 // src/components/homeCopy/About.js (Updated)
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from '@/components/CustomImageWrapper';
 //  Import the CSS Module
 import styles from '@/styles/home-copy/About.module.css';

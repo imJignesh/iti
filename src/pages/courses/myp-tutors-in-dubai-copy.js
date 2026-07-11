@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from "next/head";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
@@ -18,10 +17,8 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/myp/IgniteAboutCard";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 import Trainers from "@/components/myp/Trainers";
-import LifeAtIgniteCarousel from '@/components/myp/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/myp/MarqueeBanner';
 import ReviewsSection from '@/components/myp/ReviewsSection';
-import StudentAchievements from '@/components/myp/StudentAchivement';
 import SubjectsCard from '@/components/myp/SubjectCard';
 import UspsSection from '@/components/myp/UspsSection';
 
@@ -242,10 +239,6 @@ const IBDP = ({ headerHeight }) => {
           </section>
         </LazySection>
 
-        {/* <section data-scroll-section>
-            <StudentAchievements />
-          </section> */}
-
         <LazySection>
           <section data-scroll-section>
             <CourseCard />
@@ -294,10 +287,6 @@ const IBDP = ({ headerHeight }) => {
             <UspsSection />
           </section>
         </LazySection>
-
-        {/* <section data-scroll-section>
-            <LifeAtIgniteCarousel />
-          </section> */}
 
         <LazySection>
           <section data-scroll-section>
