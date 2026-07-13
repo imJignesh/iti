@@ -15,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import PsychologyTutorsChooseApp from '@/components/psychology-tutoring/choose-app';
-import PsychologyTutorsACT from '@/components/psychology-tutoring/ACT';
+import PsychologyTutorsSubjectSyllabus from '@/components/psychology-tutoring/SubjectSyllabus';
 import PsychologyTutorsUsps from "@/components/psychology-tutoring/Usps";
 import PsychologyTutorsIgniteAchievements from '@/components/psychology-tutoring/IgniteAchievements';
 import PsychologyTutorsFAQSection from '@/components/shared/FaqSection';
@@ -232,7 +232,7 @@ const PsychologyTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <PsychologyTutorsACT />
+                        <PsychologyTutorsSubjectSyllabus />
                     </section>
                 </LazySection>
 

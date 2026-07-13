@@ -15,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import EconomicsTutorsChooseApp from '@/components/economics-tutoring/choose-app';
-import EconomicsTutorsACT from '@/components/economics-tutoring/ACT';
+import EconomicsTutorsSubjectSyllabus from '@/components/economics-tutoring/SubjectSyllabus';
 import EconomicsTutorsUsps from "@/components/economics-tutoring/Usps";
 import Trainers from "@/components/economics-tutoring/Trainers";
 import EconomicsTutorsIgniteAchievements from '@/components/economics-tutoring/IgniteAchievements';
@@ -233,7 +233,7 @@ const EconomicsTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <EconomicsTutorsACT />
+                        <EconomicsTutorsSubjectSyllabus />
                     </section>
                 </LazySection>
 

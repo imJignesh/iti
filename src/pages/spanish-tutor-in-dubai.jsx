@@ -15,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import SpanishTutorsChooseApp from '@/components/spanish-tutoring/choose-app';
-import SpanishTutorsACT from '@/components/spanish-tutoring/ACT';
+import SpanishTutorsSubjectSyllabus from '@/components/spanish-tutoring/SubjectSyllabus';
 import SpanishTutorsUsps from "@/components/spanish-tutoring/Usps";
 import Trainers from "@/components/spanish-tutoring/Trainers";
 import SpanishTutorsIgniteAchievements from '@/components/spanish-tutoring/IgniteAchievements';
@@ -428,7 +428,7 @@ const SpanishTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <SpanishTutorsACT />
+                        <SpanishTutorsSubjectSyllabus />
                     </section>
                 </LazySection>
 

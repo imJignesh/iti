@@ -15,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import PhysicsTutorsChooseApp from '@/components/physics-tutoring/choose-app';
-import PhysicsTutorsACT from '@/components/physics-tutoring/ACT';
+import PhysicsTutorsSubjectSyllabus from '@/components/physics-tutoring/SubjectSyllabus';
 import PhysicsTutorsUsps from "@/components/physics-tutoring/Usps";
 import Trainers from "@/components/physics-tutoring/Trainers";
 import PhysicsTutorsIgniteAchievements from '@/components/physics-tutoring/IgniteAchievements';
@@ -233,7 +233,7 @@ const PhysicsTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <PhysicsTutorsACT />
+                        <PhysicsTutorsSubjectSyllabus />
                     </section>
                 </LazySection>
 

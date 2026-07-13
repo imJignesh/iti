@@ -15,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import AccountingTutorsChooseApp from '@/components/accounting-tutoring/choose-app';
-import AccountingTutorsACT from '@/components/accounting-tutoring/ACT';
+import AccountingTutorsSubjectSyllabus from '@/components/accounting-tutoring/SubjectSyllabus';
 import AccountingTutorsUsps from "@/components/accounting-tutoring/Usps";
 import Trainers from "@/components/accounting-tutoring/Trainers";
 import AccountingTutorsIgniteAchievements from '@/components/accounting-tutoring/IgniteAchievements';
@@ -233,7 +233,7 @@ const AccountingTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <AccountingTutorsACT />
+                        <AccountingTutorsSubjectSyllabus />
                     </section>
                 </LazySection>
 

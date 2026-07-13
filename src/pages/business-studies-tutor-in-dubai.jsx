@@ -15,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import BusinessTutorsChooseApp from '@/components/business-tutoring/choose-app';
-import BusinessTutorsACT from '@/components/business-tutoring/ACT';
+import BusinessTutorsSubjectSyllabus from '@/components/business-tutoring/SubjectSyllabus';
 import BusinessTutorsUsps from "@/components/business-tutoring/Usps";
 import Trainers from "@/components/business-tutoring/Trainers";
 import BusinessTutorsIgniteAchievements from '@/components/business-tutoring/IgniteAchievements';
@@ -233,7 +233,7 @@ const BusinessTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <BusinessTutorsACT />
+                        <BusinessTutorsSubjectSyllabus />
                     </section>
                 </LazySection>
 

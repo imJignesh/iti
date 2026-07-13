@@ -15,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import ComputerTutorsChooseApp from '@/components/computer-tutoring/choose-app';
-import ComputerTutorsACT from '@/components/computer-tutoring/ACT';
+import ComputerTutorsSubjectSyllabus from '@/components/computer-tutoring/SubjectSyllabus';
 import ComputerTutorsUsps from "@/components/computer-tutoring/Usps";
 import Trainers from "@/components/computer-tutoring/Trainers";
 import ComputerTutorsIgniteAchievements from '@/components/computer-tutoring/IgniteAchievements';
@@ -428,7 +428,7 @@ const ComputerTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <ComputerTutorsACT />
+                        <ComputerTutorsSubjectSyllabus />
                     </section>
                 </LazySection>
 

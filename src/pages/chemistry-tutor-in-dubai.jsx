@@ -15,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import ChemistryTutorsChooseApp from '@/components/chemistry-tutoring/choose-app';
-import ChemistryTutorsACT from '@/components/chemistry-tutoring/ACT';
+import ChemistryTutorsSubjectSyllabus from '@/components/chemistry-tutoring/SubjectSyllabus';
 import ChemistryTutorsUsps from "@/components/chemistry-tutoring/Usps";
 import Trainers from "@/components/chemistry-tutoring/Trainers";
 import ChemistryTutorsIgniteAchievements from '@/components/chemistry-tutoring/IgniteAchievements';
@@ -233,7 +233,7 @@ const ChemistryTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <ChemistryTutorsACT />
+                        <ChemistryTutorsSubjectSyllabus />
                     </section>
                 </LazySection>
 

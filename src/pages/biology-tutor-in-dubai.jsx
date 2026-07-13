@@ -15,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import BiologyTutorsChooseApp from '@/components/biology-tutoring/choose-app';
-import BiologyTutorsACT from '@/components/biology-tutoring/ACT';
+import BiologyTutorsSubjectSyllabus from '@/components/biology-tutoring/SubjectSyllabus';
 import BiologyTutorsUsps from "@/components/biology-tutoring/Usps";
 import Trainers from "@/components/biology-tutoring/Trainers";
 import BiologyTutorsFAQSection from '@/components/shared/FaqSection';
@@ -233,7 +233,7 @@ const BiologyTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <BiologyTutorsACT />
+                        <BiologyTutorsSubjectSyllabus />
                     </section>
                 </LazySection>
 
