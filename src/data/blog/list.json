@@ -13914,10 +13914,10 @@
       "date": "2025-03-26T04:59:52",
       "slug": "what-is-oxford-international-aqa",
       "title": {
-        "rendered": "What Is Oxford AQA? Subjects, Grades &amp; Past Papers"
+        "rendered": "What Is OxfordAQA? Subjects, Grades &amp; Past Papers"
       },
       "excerpt": {
-        "rendered": "<p>Key Summary If your school in the UAE uses Oxford AQA, or you are weighing it against Cambridge and Edexcel, the name alone can be confusing. It looks like AQA, the familiar British board, but it is not quite the same thing, and the differences shape how your child is taught, examined and graded. This [&hellip;]</p>\n",
+        "rendered": "<p>Key Summary If your school in the UAE uses OxfordAQA, or you are weighing it against Cambridge and Edexcel, the name alone can be confusing. It looks like AQA, the familiar British board, but it is not quite the same thing, and the differences shape how your child is taught, examined and graded. This guide [&hellip;]</p>\n",
         "protected": false
       },
       "categories": [
@@ -14071,11 +14071,11 @@
         ],
         "wp:featuredmedia": [
           {
-            "id": 15211,
-            "date": "2026-06-05T09:46:48",
-            "slug": "ignite-featuredimages2-converted-from-jpg-7",
+            "id": 15565,
+            "date": "2026-07-13T07:41:15",
+            "slug": "ignite-featuredimages-converted-from-jpg-11",
             "type": "attachment",
-            "link": "https://api.ignitetraininginstitute.com/blog/what-is-oxford-international-aqa/ignite-featuredimages2-converted-from-jpg-7/",
+            "link": "https://api.ignitetraininginstitute.com/blog/what-is-oxford-international-aqa/ignite-featuredimages-converted-from-jpg-11/",
             "title": {
               "rendered": "Oxford AQA"
             },
@@ -14090,47 +14090,47 @@
             "media_details": {
               "width": 1500,
               "height": 1000,
-              "file": "2025/03/Ignite-FeaturedImages2-converted-from-jpg.webp",
-              "filesize": 101154,
+              "file": "2025/03/Ignite-FeaturedImages-converted-from-jpg.webp",
+              "filesize": 100760,
               "sizes": {
                 "medium": {
-                  "file": "Ignite-FeaturedImages2-converted-from-jpg-300x200.webp",
+                  "file": "Ignite-FeaturedImages-converted-from-jpg-300x200.webp",
                   "width": 300,
                   "height": 200,
-                  "filesize": 5772,
+                  "filesize": 5724,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2025/03/Ignite-FeaturedImages2-converted-from-jpg-300x200.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2025/03/Ignite-FeaturedImages-converted-from-jpg-300x200.webp"
                 },
                 "large": {
-                  "file": "Ignite-FeaturedImages2-converted-from-jpg-1024x683.webp",
+                  "file": "Ignite-FeaturedImages-converted-from-jpg-1024x683.webp",
                   "width": 1024,
                   "height": 683,
-                  "filesize": 28368,
+                  "filesize": 28156,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2025/03/Ignite-FeaturedImages2-converted-from-jpg-1024x683.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2025/03/Ignite-FeaturedImages-converted-from-jpg-1024x683.webp"
                 },
                 "thumbnail": {
-                  "file": "Ignite-FeaturedImages2-converted-from-jpg-150x150.webp",
+                  "file": "Ignite-FeaturedImages-converted-from-jpg-150x150.webp",
                   "width": 150,
                   "height": 150,
-                  "filesize": 2722,
+                  "filesize": 2680,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2025/03/Ignite-FeaturedImages2-converted-from-jpg-150x150.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2025/03/Ignite-FeaturedImages-converted-from-jpg-150x150.webp"
                 },
                 "medium_large": {
-                  "file": "Ignite-FeaturedImages2-converted-from-jpg-768x512.webp",
+                  "file": "Ignite-FeaturedImages-converted-from-jpg-768x512.webp",
                   "width": 768,
                   "height": 512,
-                  "filesize": 19736,
+                  "filesize": 19706,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2025/03/Ignite-FeaturedImages2-converted-from-jpg-768x512.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2025/03/Ignite-FeaturedImages-converted-from-jpg-768x512.webp"
                 },
                 "full": {
-                  "file": "Ignite-FeaturedImages2-converted-from-jpg.webp",
+                  "file": "Ignite-FeaturedImages-converted-from-jpg.webp",
                   "width": 1500,
                   "height": 1000,
                   "mime_type": "image/webp",
-                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2025/03/Ignite-FeaturedImages2-converted-from-jpg.webp"
+                  "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2025/03/Ignite-FeaturedImages-converted-from-jpg.webp"
                 }
               },
               "image_meta": {
@@ -14153,7 +14153,7 @@
             "_links": {
               "self": [
                 {
-                  "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/media/15211",
+                  "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/media/15565",
                   "targetHints": {
                     "allow": [
                       "GET"
@@ -14180,7 +14180,7 @@
               "replies": [
                 {
                   "embeddable": true,
-                  "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/comments?post=15211"
+                  "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/comments?post=15565"
                 }
               ],
               "wp:attached-to": [
@@ -123845,5 +123845,5 @@
     }
   ],
   "total": 173,
-  "syncDate": "2026-07-10T06:06:40.307Z"
+  "syncDate": "2026-07-13T10:31:08.328Z"
 }
