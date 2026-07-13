@@ -36,7 +36,12 @@ function updateTopPosts(posts) {
 
             return {
                 img: imgSrc,
-                title: post.title?.rendered || post.slug,
+                title: (post.title?.rendered || post.slug)
+                    .replace(/&amp;/g, '&')
+                    .replace(/&quot;/g, '"')
+                    .replace(/&#039;/g, "'")
+                    .replace(/&lt;/g, '<')
+                    .replace(/&gt;/g, '>'),
                 desc,
                 link: post.slug,
                 width: 300,
