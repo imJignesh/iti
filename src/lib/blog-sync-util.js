@@ -15,6 +15,39 @@ function ensureDirs() {
     });
 }
 
+// Build top-posts.json from the 3 most recently published posts
+function updateTopPosts(posts) {
+    const TOP_POSTS_PATH = path.join(DATA_DIR, 'top-posts.json');
+
+    const topPosts = posts
+        .slice() // avoid mutating the original array
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .slice(0, 3)
+        .map(post => {
+            const featuredMedia = post._embedded?.['wp:featuredmedia']?.[0];
+            const imgSrc = featuredMedia?.source_url || '/images/blogs/default.webp';
+
+            // Strip HTML tags and whitespace from excerpt
+            const rawExcerpt = post.excerpt?.rendered || '';
+            const plainExcerpt = rawExcerpt.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+            const desc = plainExcerpt.length > 120
+                ? plainExcerpt.slice(0, 120) + '...'
+                : plainExcerpt;
+
+            return {
+                img: imgSrc,
+                title: post.title?.rendered || post.slug,
+                desc,
+                link: post.slug,
+                width: 300,
+                height: 200
+            };
+        });
+
+    fs.writeFileSync(TOP_POSTS_PATH, JSON.stringify(topPosts, null, 2));
+    console.log(`📝 Updated top-posts.json with latest ${topPosts.length} posts.`);
+}
+
 // Git Push Utility to sync back to GitHub
 function gitPushChanges(message) {
     try {
@@ -141,6 +174,9 @@ async function runMirrorSync() {
     };
     fs.writeFileSync(path.join(DATA_DIR, 'list.json'), JSON.stringify(listData, null, 2));
 
+    // Update top-posts.json with the 3 most recent posts
+    updateTopPosts(allLightweightPosts);
+
     // 3. Cleanup Deleted
     const localFiles = fs.readdirSync(POSTS_DIR);
     let deletedCount = 0;
@@ -211,6 +247,9 @@ async function syncSinglePost(slug) {
         }
         listData.syncDate = new Date().toISOString();
         fs.writeFileSync(listPath, JSON.stringify(listData, null, 2));
+
+        // Update top-posts.json based on the latest list
+        updateTopPosts(listData.posts);
     }
 
     // --- AUTO GITHUB PUSH ---
