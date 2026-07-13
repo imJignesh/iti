@@ -517,10 +517,6 @@ const BC = ({ headerHeight }) => {
           </section>
         </LazySection>
 
-        {/* <section data-scroll-section>
-            <LifeAtIgniteCarousel />
-          </section> */}
-
         <LazySection>
           <section data-scroll-section>
             <FAQSection {...faqSections.bc} />

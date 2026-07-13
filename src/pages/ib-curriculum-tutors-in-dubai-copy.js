@@ -509,10 +509,6 @@ const IBC = ({ headerHeight }) => {
           </section>
         </LazySection>
 
-        {/* <section data-scroll-section>
-                    <LifeAtIgniteCarousel />
-                </section> */}
-
         <LazySection>
           <section data-scroll-section>
             <FAQSection {...faqSections.ibc} />
