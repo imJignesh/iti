@@ -263,6 +263,18 @@ const aLevelSchema = [
         "name": "A Levels Year 13 Groups",
         "description": "A structured 10-month program from September to June with over 70 hours of focused tutoring across all A-Level subjects, helping Year 13 students achieve complete syllabus mastery and exam readiness in small groups of 3 to 6 writing finals in May.",
         "courseMode": ["Onsite", "Online"]
+      },
+      {
+        "@type": "CourseInstance",
+        "name": "AS Level Summer Head Start",
+        "description": "AS Level moves quickly, & the first term rarely waits for students to find their feet. This six-week course, running through July & August, gives students a real head start before Year 12 begins. Over 24 hours of subject-wise training, they build a firm grip on the core AS Level concepts, so the step up from IGCSE or another curriculum feels far less steep in September.",
+        "courseMode": ["Onsite", "Online"]
+      },
+      {
+        "@type": "CourseInstance",
+        "name": "A-Levels Oct/Nov Resit Success Program",
+        "description": "A Level grades decide university places, which means a borderline result or a missed offer carries real weight. This intensive course helps students improve their Oct/Nov A Level results through sharp revision, exam-style practice, & detailed feedback that pinpoints where they lost marks. The aim is straightforward: a stronger grade achieved with targeted exam strategies.",
+        "courseMode": ["Onsite", "Online"]
       }
     ],
     "aggregateRating": {

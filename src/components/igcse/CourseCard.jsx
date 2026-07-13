@@ -65,6 +65,22 @@ function CourseCard() {
       ],
       description:
         "A structured 10-month program from September to June, aligned with the school academic calendar. Offering 70+ hours of focused tutoring across all IGCSE subjects, it ensures complete syllabus coverage, improved understanding, and stronger subject mastery for Year 10 students."
+    },
+    {
+      title: "IGCSE Oct/Nov Resit Success Program",
+      bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.9) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
+      mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
+      highlights: [
+        "Fast, focused revision of the concepts that show up most in the papers",
+        "Targeted practice on your weakest topics for IGCSE grade improvement",
+        "Intensive past-paper practice, marked the way examiners actually mark",
+        "Full mock exams sat under real timing and exam conditions",
+        "Clear trainer feedback with a written action plan for every subject",
+        "Practical exam technique & time management, so easy marks are not left behind",
+        "A steady focus on turning steady practice into a higher grade this series"
+      ],
+      description:
+        "A couple of marks can sit between one IGCSE grade and the next, and those grades shape which sixth form and A Level paths stay open. This intensive course prepares students for the October & November IGCSE series with focused revision, heavy past-paper practice, & honest feedback on exactly where marks are slipping away, so the next result is a clear step up."
     }
   ];
 

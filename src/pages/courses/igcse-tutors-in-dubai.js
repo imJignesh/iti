@@ -264,6 +264,12 @@ const igcseSchema = [
         "name": "IGCSE / GCSE Year 10 Groups",
         "description": "A structured 10-month program for Year 10 students with 70+ hours of focused tutoring across all IGCSE subjects.",
         "courseMode": ["Blended", "Onsite", "Online"]
+      },
+      {
+        "@type": "CourseInstance",
+        "name": "IGCSE Oct/Nov Resit Success Program",
+        "description": "A couple of marks can sit between one IGCSE grade and the next, and those grades shape which sixth form and A Level paths stay open. This intensive course prepares students for the October & November IGCSE series with focused revision, heavy past-paper practice, & honest feedback on exactly where marks are slipping away, so the next result is a clear step up.",
+        "courseMode": ["Blended", "Onsite", "Online"]
       }
     ],
     "aggregateRating": {

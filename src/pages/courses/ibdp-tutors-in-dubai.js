@@ -259,13 +259,19 @@ const ibdpSchema = [
       {
         "@type": "CourseInstance",
         "name": "Pre IBDP Summer Bridge Course",
-        "description": "A 6-week head-start program in July and August with 24 hours of subject-wise training, designed to build a strong foundation in key IBDP concepts for students transitioning into the programme, especially from other curricula.",
+        "description": "A 6-week head-start program in July and August designed to build a strong foundation in key IBDP concepts. With 24 hours of subject-wise training, this course is ideal for students transitioning into the IBDP, especially those coming from other curricula, and prepares them for this demanding phase.",
         "courseMode": ["Onsite", "Online"]
       },
       {
         "@type": "CourseInstance",
         "name": "IBDP Spring Revision Course",
         "description": "A focused 2-week intensive revision program in March and April with 16 hours of expert-led training per subject, recapping key concepts and sharpening exam readiness through practice with IBDP-style questions and mock exams.",
+        "courseMode": ["Onsite", "Online"]
+      },
+      {
+        "@type": "CourseInstance",
+        "name": "IBDP Oct/Nov Resit Success Program",
+        "description": "In the IB, one or two points can decide a diploma or a conditional university offer, which is what makes the November session worth preparing for properly. This intensive course helps IBDP students raise their subject grades through concentrated revision, past-paper practice, and precise feedback tied to the IB mark bands in the written papers.",
         "courseMode": ["Onsite", "Online"]
       }
     ],

@@ -67,6 +67,37 @@ function CourseCard() {
       description:
         "A structured 10-month program from September to June, aligned with school schedules. With over 70 hours of focused tutoring across all A-Level subjects, this course helps Year 13 students achieve complete syllabus mastery, stronger subject confidence, and exam readiness."
     },
+    {
+      title: "AS Level Summer Head Start",
+      bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.9) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
+      mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
+      highlights: [
+        "Get to grips with AS Level question styles, grading & what examiners look for",
+        "Focused training on high-weight concepts, closing gaps from your previous grades",
+        "Full first-term syllabus covered alongside experienced subject mentors",
+        "Learn in small groups of 3 to 6 students & practise curriculum-specific questions",
+        "Clear guidance on mark schemes & grade boundaries (Edexcel, CAIE & OxfordAQA)",
+        "End-of-summer assessments that show where you stand & where to focus next"
+      ],
+      description:
+        "AS Level moves quickly, & the first term rarely waits for students to find their feet. This six-week course, running through July & August, gives students a real head start before Year 12 begins. Over 24 hours of subject-wise training, they build a firm grip on the core AS Level concepts, so the step up from IGCSE or another curriculum feels far less steep in September."
+    },
+    {
+      title: "A-Levels Oct/Nov Resit Success Program",
+      bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 1) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
+      mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
+      highlights: [
+        "Quick, high-yield revision of the topics that carry the most marks in your papers",
+        "Focused support on the specific areas that held your grade back last time",
+        "Intensive practice with real past papers & full mark scheme breakdowns",
+        "Timed mock exams under exam conditions to rebuild exam readiness",
+        "Detailed trainer feedback & a subject-by-subject action plan",
+        "Proven exam techniques & time management built for tight A Level papers",
+        "A clear focus on maximising marks & lifting your grade for university offers"
+      ],
+      description:
+        "A Level grades decide university places, which means a borderline result or a missed offer carries real weight. This intensive course helps students improve their Oct/Nov A Level results through sharp revision, exam-style practice, & detailed feedback that pinpoints where they lost marks. The aim is straightforward: a stronger grade achieved with targeted exam strategies."
+    }
   ];
 
 

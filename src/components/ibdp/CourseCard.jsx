@@ -55,14 +55,14 @@ function CourseCard() {
       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.7) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
       highlights: [
-        "Introduction to IBDP-style questions, grading, and expectations",
-        "Concept-focused training on essential topics across subjects",
-        "Complete first-term syllabus coverage with expert mentors",
-        "Small group sessions (3–6 students) starting IBDP in September",
-        "Guidance on Internal Assessments (IA) and Extended Essay (EE)",
-        "End-of-summer assessments to track progress and readiness"
+        "Get to grips with IBDP question styles, grading & what examiners look for",
+        "Concept-focused training on key topics, closing gaps from your previous grades",
+        "First-term syllabus coverage alongside expert subject mentors",
+        "Small groups of 3 to 6 students, all starting IBDP in September",
+        "Early guidance on Internal Assessments (IA) & the Extended Essay (EE)",
+        "End-of-summer assessments that show where you stand & where to focus next"
       ],
-      description: "A 6-week head-start program in July and August designed to build a strong foundation in key IBDP concepts. With 24 hours of subject-wise training, this course is ideal for students transitioning into the IBDP, especially those coming from other curricula, preparing them for this demanding phase."
+      description: "A 6-week head-start program in July and August designed to build a strong foundation in key IBDP concepts. With 24 hours of subject-wise training, this course is ideal for students transitioning into the IBDP, especially those coming from other curricula, and prepares them for this demanding phase."
     },
     {
       title: "IBDP Spring Revision Course",
@@ -78,6 +78,21 @@ function CourseCard() {
       ],
       description: "A focused 2-week intensive revision program held in March and April during the final school break, right before exams. With 16 hours of expert-led training in each IBDP subject, this course delivers a powerful recap of key concepts and sharpens exam readiness through rigorous practice with IBDP-style questions."
     },
+    {
+      title: "IBDP Oct/Nov Resit Success Program",
+      bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.9) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
+      mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
+      highlights: [
+        "Sharp revision of the highest-weight topics in each subject you are retaking",
+        "Targeted support on the exact areas costing you marks against the IB bands",
+        "Intensive past-paper practice mapped to IB command terms & mark schemes",
+        "Full mock papers sat under November session timing & conditions",
+        "Detailed trainer feedback with a clear points-improvement action plan",
+        "Exam technique & timing built around the demands of IB papers",
+        "A focused push to raise your subject grades & total point score"
+      ],
+      description: "In the IB, one or two points can decide a diploma or a conditional university offer, which is what makes the November session worth preparing for properly. This intensive course helps IBDP students raise their subject grades through concentrated revision, past-paper practice, and precise feedback tied to the IB mark bands in the written papers."
+    }
   ];
 
 
