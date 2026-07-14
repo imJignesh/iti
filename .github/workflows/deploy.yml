@@ -19,3 +19,4 @@ jobs:
         script: |
           cd /home/click4demos-ignite/htdocs/ignite.click4demos.co.in
           bash deploy.sh
+          pm2 restart ignite
