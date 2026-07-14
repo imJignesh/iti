@@ -7,7 +7,7 @@ import LazySection from "@/components/LazySection";
 import Accordion from '@/components/shared/Accordion';
 import { accordionSections } from '@/data/accordionSections';
 import Blog from "@/components/myp/Blog";
-import SubjectSupport from '@/components/myp/CourseCard';
+import SubjectSupport from '@/components/myp/SubjectSupport';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
 import IgniteAchievements from '@/components/myp/IgniteAchievements';

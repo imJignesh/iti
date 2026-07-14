@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 
 const Advantages = dynamic(() => import('@/components/homeSchooling/Advantages'));
 const Curriculum = dynamic(() => import('@/components/homeSchooling/Curriculum'));
-const CourseCard = dynamic(() => import('@/components/homeSchooling/CourseCard'));
+const SubjectSupport = dynamic(() => import('@/components/homeSchooling/SubjectSupport'));
 const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
 import { faqSections } from '@/data/faqSections';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';

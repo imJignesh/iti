@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 const Accordion = dynamic(() => import('@/components/shared/Accordion'));
 import { accordionSections } from '@/data/accordionSections';
 const Blog = dynamic(() => import('@/components/ibdp/Blog'));
-const CourseCard = dynamic(() => import('@/components/ibdp/CourseCard'));
+const SubjectSupport = dynamic(() => import('@/components/ibdp/SubjectSupport'));
 const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/ibdp/IgniteAchievements'));
 import InfoCardLeft from '@/components/shared/InfoCardLeft';

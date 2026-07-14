@@ -10,7 +10,7 @@ import Image from 'next/image';
 const Accordion = dynamic(() => import('@/components/shared/Accordion'));
 import { accordionSections } from '@/data/accordionSections';
 const Blog = dynamic(() => import('@/components/myp/Blog'));
-const CourseCard = dynamic(() => import('@/components/myp/CourseCard'));
+const SubjectSupport = dynamic(() => import('@/components/myp/SubjectSupport'));
 const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
 import { faqSections } from '@/data/faqSections';
 const IgniteAchievements = dynamic(() => import('@/components/myp/IgniteAchievements'));
