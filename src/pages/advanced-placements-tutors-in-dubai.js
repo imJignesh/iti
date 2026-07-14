@@ -7,7 +7,7 @@ import Accordion from '@/components/shared/Accordion';
 import { accordionSections } from '@/data/accordionSections';
 import Blog from "@/components/ap/Blog";
 import APBenefits from '@/components/ap/chooseApp';
-import CourseCard from '@/components/ap/CourseCard';
+import SubjectSupport from '@/components/ap/CourseCard';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
@@ -540,7 +540,7 @@ const ap = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <CourseCard />
+            <SubjectSupport />
           </section>
         </LazySection>
 

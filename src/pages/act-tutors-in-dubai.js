@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import Accordion from '@/components/shared/Accordion';
 import { accordionSections } from '@/data/accordionSections';
 import Blog from "@/components/act/Blog";
-import CourseCard from '@/components/act/CourseCard';
+import SubjectSupport from '@/components/act/CourseCard';
 import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
@@ -517,7 +517,7 @@ const act = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <CourseCard />
+            <SubjectSupport />
           </section>
         </LazySection>
 
