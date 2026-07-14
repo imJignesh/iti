@@ -16,7 +16,8 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/ibdp/IgniteAboutCard";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 import Trainers from "@/components/ibdp/Trainers";
-import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/ibdp/ReviewsSection';
 // import StudentAchievements from '@/components/ibdp/StudentAchivement';
 import SubjectsCard from '@/components/ibdp/SubjectCard';
@@ -166,7 +167,7 @@ const IBDP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <MarqueeBanner />
+            <MarqueeBanner config={getMarqueeData('standard')} />
           </section>
         </LazySection>
 

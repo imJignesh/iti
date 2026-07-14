@@ -5,7 +5,8 @@ import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import LazySection from "@/components/LazySection";
 import ChooseApp from '@/components/test-series/choose-app';
-import MarqueeBanner from '@/components/test-series/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import CurriculumTestsComponent from '@/components/test-series/curriculum';
 import IgniteAchievements from '@/components/test-series/IgniteAchievements';
 import SubjectsCard from '@/components/test-series/SubjectCard';
@@ -112,7 +113,7 @@ const TestSeries = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <MarqueeBanner />
+                        <MarqueeBanner config={getMarqueeData('testSeries')} />
                     </section>
                 </LazySection>
 

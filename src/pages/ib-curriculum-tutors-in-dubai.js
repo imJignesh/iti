@@ -436,7 +436,7 @@ const IBC = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <MarqueeBanner />
+            <MarqueeBanner config={getMarqueeData('standard')} />
           </section>
         </LazySection>
 

@@ -4,7 +4,8 @@ import LazySection from "@/components/LazySection";
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
-import MarqueeBanner from '@/components/tutors-jlt-dubai/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/tutors-jlt-dubai/ReviewsSection';
 import CurriculumTestsComponent from '@/components/tutors-jlt-dubai/curriculum';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
@@ -562,7 +563,7 @@ const Tutors = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <MarqueeBanner />
+            <MarqueeBanner config={getMarqueeData('standard')} />
           </section>
         </LazySection>
 

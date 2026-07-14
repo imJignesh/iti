@@ -17,7 +17,8 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
 import Trainers from "@/components/bc/Trainers";
 import WhatWeOfferSection from '@/components/bc/WhatWeOfferSection';
-import MarqueeBanner from '@/components/bc/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/bc/ReviewsSection';
 import SubjectsCard from '@/components/bc/SubjectCard';
 import UniImagesCard from '@/components/bc/universityCrad';
@@ -260,7 +261,7 @@ const BC = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <MarqueeBanner />
+            <MarqueeBanner config={getMarqueeData('standard')} />
           </section>
         </LazySection>
 

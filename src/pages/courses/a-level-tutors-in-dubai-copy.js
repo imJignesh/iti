@@ -15,7 +15,8 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/a-level/IgniteAboutCard";
 import Trainers from "@/components/a-level/Trainers";
 import WhatWeOfferSection from '@/components/a-level/WhatWeOfferSection';
-import MarqueeBanner from '@/components/a-level/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/a-level/ReviewsSection';
 import SubjectsCard from '@/components/a-level/SubjectCard';
 import OurPromise from '@/components/shared/OurPromise';
@@ -256,7 +257,7 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <MarqueeBanner />
+            <MarqueeBanner config={getMarqueeData('standard')} />
           </section>
         </LazySection>
 

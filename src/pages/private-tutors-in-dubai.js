@@ -4,7 +4,8 @@ import LazySection from "@/components/LazySection";
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
-import MarqueeBanner from '@/components/private-tutors-dubai/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/private-tutors-dubai/ReviewsSection';
 import CurriculumTestsComponent from '@/components/private-tutors-dubai/curriculum';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
@@ -223,7 +224,7 @@ const PrivateTutorsDubai = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <MarqueeBanner />
+            <MarqueeBanner config={getMarqueeData('standard')} />
           </section>
         </LazySection>
 

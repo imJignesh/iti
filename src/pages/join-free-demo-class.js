@@ -9,7 +9,8 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import SubjectsCard from '@/components/freedemo/SubjectCard';
-import MarqueeBanner from '@/components/freedemo/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import Testimonial from "@/components/freedemo/Testimonial";
 // import TrainersMessage from "@/components/freedemo/videoTrainer";
 import CallToAction from "@/components/freedemo/CallToAction";
@@ -344,7 +345,7 @@ const FreeDemo = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <MarqueeBanner />
+                        <MarqueeBanner config={getMarqueeData('freedemo')} />
                     </section>
                 </LazySection>
 

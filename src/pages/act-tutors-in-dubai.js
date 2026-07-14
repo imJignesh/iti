@@ -12,7 +12,8 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/act/IgniteAboutCard";
-import MarqueeBanner from '@/components/act/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/act/ReviewsSection';
 import SubjectsCard from '@/components/act/SubjectCard';
 import SubjectsCard1 from '@/components/act/SubjectCard1';
@@ -550,7 +551,7 @@ const act = ({ headerHeight }) => {
         </LazySection>
         <LazySection>
           <section data-scroll-section>
-            <MarqueeBanner />
+            <MarqueeBanner config={getMarqueeData('act')} />
           </section>
         </LazySection>
 

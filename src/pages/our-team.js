@@ -5,7 +5,8 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import SEO from "@/components/SEO";
 import TeamBanner from "@/components/team/Banner";
-import MarqueeBanner from '@/components/a-level/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import { ArrowRight } from 'lucide-react';
 // Correct import for the CSS Module
 import styles from '@/styles/team/team.module.css';
@@ -290,7 +291,7 @@ const OurTeam = ({ headerHeight }) => {
                 </LazySection>
 
                 <LazySection>
-                    <MarqueeBanner />
+                    <MarqueeBanner config={getMarqueeData('standard')} />
                 </LazySection>
 
                 {/* --- Section 3: Trainers --- */}

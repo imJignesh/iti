@@ -15,7 +15,8 @@ import Hero from "@/components/homeCopy/Hero";
 // Dynamic imports for below-the-fold components
 import dynamic from "next/dynamic";
 const Course = dynamic(() => import("@/components/homeCopy/Course"));
-const MarqueeBanner = dynamic(() => import("@/components/homeCopy/MarqueeBanner"));
+import MarqueeBanner from "@/components/shared/MarqueeBanner";
+import { getMarqueeData } from "@/data/marqueeConfig";
 const About = dynamic(() => import("@/components/homeCopy/About"));
 const Test = dynamic(() => import("@/components/homeCopy/Test"));
 const Subjects = dynamic(() => import("@/components/homeCopy/Subjects"));
@@ -57,7 +58,7 @@ const HomeCopy = ({ blogPosts = [] }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <MarqueeBanner />
+                        <MarqueeBanner config={getMarqueeData('homeCopy')} />
                     </section>
                 </LazySection>
 

@@ -16,7 +16,8 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import IgniteAboutCard from "@/components/ap/IgniteAboutCard";
 import Trainers from "@/components/ap/Trainers";
 import WhatWeOfferSection from '@/components/ap/WhatWeOfferSection';
-import MarqueeBanner from '@/components/ap/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/ap/ReviewsSection';
 import SubjectsCard1 from '@/components/ap/SubjectCard1';
 import OurPromise from '@/components/shared/OurPromise';
@@ -578,7 +579,7 @@ const ap = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <MarqueeBanner />
+            <MarqueeBanner config={getMarqueeData('ap')} />
           </section>
         </LazySection>
 
