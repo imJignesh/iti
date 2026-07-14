@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-
 function USPItem({ number, icon, title, desc }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isMediumScreen, setIsMediumScreen] = useState(false);
