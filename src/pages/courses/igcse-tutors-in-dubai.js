@@ -488,7 +488,7 @@ const IGCSE = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <CourseCard />
+            <SubjectSupport />
           </section>
         </LazySection>
 
