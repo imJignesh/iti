@@ -14,7 +14,7 @@ import IgniteAchievements from '@/components/igcse/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
-import IgniteAboutCard from "@/components/igcse/IgniteAboutCard";
+import OurApproach from "@/components/igcse/OurApproach";
 import Trainers from '@/components/igcse/Trainers';
 import WhatWeOfferSection from '@/components/igcse/WhatWeOfferSection';
 import MarqueeBanner from '@/components/shared/MarqueeBanner';
@@ -232,7 +232,7 @@ const IGCSE = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach />
           </section>
         </LazySection>
 

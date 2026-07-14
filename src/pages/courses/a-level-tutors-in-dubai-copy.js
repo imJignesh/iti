@@ -12,7 +12,7 @@ import IgniteAchievements from '@/components/a-level/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
-import IgniteAboutCard from "@/components/a-level/IgniteAboutCard";
+import OurApproach from "@/components/a-level/OurApproach";
 import Trainers from "@/components/a-level/Trainers";
 import WhatWeOfferSection from '@/components/a-level/WhatWeOfferSection';
 import MarqueeBanner from '@/components/shared/MarqueeBanner';
@@ -207,7 +207,7 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach />
           </section>
         </LazySection>
 

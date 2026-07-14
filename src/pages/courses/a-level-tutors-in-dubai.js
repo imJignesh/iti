@@ -15,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import { faqSections } from '@/data/faqSections';
-const IgniteAboutCard = dynamic(() => import('@/components/a-level/IgniteAboutCard'));
+const OurApproach = dynamic(() => import('@/components/a-level/OurApproach'));
 const Trainers = dynamic(() => import('@/components/a-level/Trainers'));
 const WhatWeOfferSection = dynamic(() => import('@/components/a-level/WhatWeOfferSection'));
 const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
@@ -392,7 +392,7 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach />
           </section>
         </LazySection>
 

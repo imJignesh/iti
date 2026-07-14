@@ -14,7 +14,7 @@ import IgniteAchievements from '@/components/bc/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
-import IgniteAboutCard from "@/components/bc/IgniteAboutCard";
+import OurApproach from "@/components/bc/OurApproach";
 import Trainers from "@/components/bc/Trainers";
 import WhatWeOfferSection from '@/components/bc/WhatWeOfferSection';
 import MarqueeBanner from '@/components/shared/MarqueeBanner';
@@ -238,7 +238,7 @@ const BC = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach />
           </section>
         </LazySection>
 

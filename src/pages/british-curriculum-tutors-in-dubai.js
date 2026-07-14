@@ -13,7 +13,7 @@ const Blog = dynamic(() => import("@/components/bc/Blog"));
 const IBCurriculumStages = dynamic(() => import('@/components/bc/Curriculum.jsx'));
 const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
 const IgniteAchievements = dynamic(() => import('@/components/bc/IgniteAchievements'));
-const IgniteAboutCard = dynamic(() => import("@/components/bc/IgniteAboutCard"));
+const OurApproach = dynamic(() => import("@/components/bc/OurApproach"));
 const Trainers = dynamic(() => import("@/components/bc/Trainers"));
 const WhatWeOfferSection = dynamic(() => import('@/components/bc/WhatWeOfferSection'));
 const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
@@ -456,7 +456,7 @@ const BC = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach />
           </section>
         </LazySection>
 

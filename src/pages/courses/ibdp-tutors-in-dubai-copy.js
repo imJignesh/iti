@@ -13,7 +13,7 @@ import IgniteAchievements from '@/components/ibdp/IgniteAchievements';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
-import IgniteAboutCard from "@/components/ibdp/IgniteAboutCard";
+import OurApproach from "@/components/ibdp/OurApproach";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 import Trainers from "@/components/ibdp/Trainers";
 import MarqueeBanner from '@/components/shared/MarqueeBanner';
@@ -119,7 +119,7 @@ const IBDP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach />
           </section>
         </LazySection>
 

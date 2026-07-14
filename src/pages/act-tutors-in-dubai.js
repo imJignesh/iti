@@ -11,7 +11,7 @@ import { faqSections } from '@/data/faqSections';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
-import IgniteAboutCard from "@/components/act/IgniteAboutCard";
+import OurApproach from "@/components/act/OurApproach";
 import MarqueeBanner from '@/components/shared/MarqueeBanner';
 import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/act/ReviewsSection';
@@ -511,7 +511,7 @@ const act = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach />
           </section>
         </LazySection>
 

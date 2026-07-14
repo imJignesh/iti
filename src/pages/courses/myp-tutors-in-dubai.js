@@ -17,7 +17,7 @@ const IgniteAchievements = dynamic(() => import('@/components/myp/IgniteAchievem
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
-const IgniteAboutCard = dynamic(() => import('@/components/myp/IgniteAboutCard'));
+const OurApproach = dynamic(() => import('@/components/myp/OurApproach'));
 const WhatWeOfferSection = dynamic(() => import('@/components/ibdp/WhatWeOfferSection'));
 const Trainers = dynamic(() => import('@/components/myp/Trainers'));
 const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
@@ -371,7 +371,7 @@ const MYP = ({ headerHeight }) => {
         </section>
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach />
           </section>
         </LazySection>
 

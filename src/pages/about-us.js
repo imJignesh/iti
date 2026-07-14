@@ -3,7 +3,7 @@ import LazySection from "@/components/LazySection";
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 import AboutBanner from "@/components/aboutus/Banner";
-import IgniteAboutCard from "@/components/aboutus/IgniteAboutCard";
+import OurApproach from "@/components/aboutus/OurApproach";
 import WhyChooseUs from "@/components/aboutus/WhyChooseUs";
 import Timeline from "@/components/aboutus/Timeline";
 import MeetOurFounders from "@/components/aboutus/MeetOurFounders";
@@ -60,7 +60,7 @@ const About = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach />
           </section>
         </LazySection>
 

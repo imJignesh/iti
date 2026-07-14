@@ -13,7 +13,7 @@ const IgniteAchievements = dynamic(() => import('@/components/igcse/IgniteAchiev
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
-const IgniteAboutCard = dynamic(() => import('@/components/igcse/IgniteAboutCard'));
+const OurApproach = dynamic(() => import('@/components/igcse/OurApproach'));
 const Trainers = dynamic(() => import('@/components/igcse/Trainers'));
 const WhatWeOfferSection = dynamic(() => import('@/components/igcse/WhatWeOfferSection'));
 const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
@@ -472,7 +472,7 @@ const IGCSE = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <IgniteAboutCard />
+            <OurApproach />
           </section>
         </LazySection>
 
