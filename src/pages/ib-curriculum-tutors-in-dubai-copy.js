@@ -17,11 +17,12 @@ const IgniteAchievements = dynamic(() => import('@/components/ibc-copy/IgniteAch
 const IgniteAboutCard = dynamic(() => import("@/components/ibc-copy/IgniteAboutCard"));
 const Trainers = dynamic(() => import("@/components/ibc-copy/Trainers"));
 const WhatWeOfferSection = dynamic(() => import('@/components/ibc-copy/WhatWeOfferSection'));
-const MarqueeBanner = dynamic(() => import('@/components/ibc-copy/MarqueeBanner'));
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/ibc-copy/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/ibc-copy/SubjectCard'));
 import OurPromise from '@/components/shared/OurPromise';
 import { getOurPromiseData } from '@/data/ourPromiseConfig';
+import { getMarqueeData } from "@/data/marqueeConfig";
 
 
 // 1. ACCEPT the headerHeight prop

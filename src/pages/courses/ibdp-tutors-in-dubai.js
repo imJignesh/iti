@@ -17,7 +17,7 @@ import { faqSections } from '@/data/faqSections';
 const IgniteAboutCard = dynamic(() => import('@/components/ibdp/IgniteAboutCard'));
 const WhatWeOfferSection = dynamic(() => import('@/components/ibdp/WhatWeOfferSection'));
 const Trainers = dynamic(() => import('@/components/ibdp/Trainers'));
-const MarqueeBanner = dynamic(() => import('@/components/ibdp/MarqueeBanner'));
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/ibdp/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/ibdp/SubjectCard'));
 import OurPromise from '@/components/shared/OurPromise';
@@ -25,6 +25,7 @@ import { getOurPromiseData } from '@/data/ourPromiseConfig';
 // Removed: { useEffect, useRef }
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
+import { getMarqueeData } from "@/data/marqueeConfig";
 
 const ibdpSchema = [
   {

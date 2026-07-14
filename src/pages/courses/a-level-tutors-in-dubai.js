@@ -18,11 +18,12 @@ import { faqSections } from '@/data/faqSections';
 const IgniteAboutCard = dynamic(() => import('@/components/a-level/IgniteAboutCard'));
 const Trainers = dynamic(() => import('@/components/a-level/Trainers'));
 const WhatWeOfferSection = dynamic(() => import('@/components/a-level/WhatWeOfferSection'));
-const MarqueeBanner = dynamic(() => import('@/components/a-level/MarqueeBanner'));
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/a-level/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/a-level/SubjectCard'));
 import OurPromise from '@/components/shared/OurPromise';
 import { getOurPromiseData } from '@/data/ourPromiseConfig';
+import { getMarqueeData } from "@/data/marqueeConfig";
 const UniImagesCard = dynamic(() => import('@/components/a-level/universityCrad'));
 
 const aLevelSchema = [

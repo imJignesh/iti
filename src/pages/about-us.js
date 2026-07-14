@@ -8,7 +8,8 @@ import WhyChooseUs from "@/components/aboutus/WhyChooseUs";
 import Timeline from "@/components/aboutus/Timeline";
 import MeetOurFounders from "@/components/aboutus/MeetOurFounders";
 import TutoringHeroSection from "@/components/aboutus/BottomSub";
-import MarqueeBanner from "@/components/aboutus/MarqueeBanner";
+import MarqueeBanner from "@/components/shared/MarqueeBanner";
+import { getMarqueeData } from "@/data/marqueeConfig";
 
 // 1. ACCEPT the headerHeight prop
 const About = ({ headerHeight }) => {

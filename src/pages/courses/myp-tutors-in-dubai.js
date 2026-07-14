@@ -20,11 +20,12 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 const IgniteAboutCard = dynamic(() => import('@/components/myp/IgniteAboutCard'));
 const WhatWeOfferSection = dynamic(() => import('@/components/ibdp/WhatWeOfferSection'));
 const Trainers = dynamic(() => import('@/components/myp/Trainers'));
-const MarqueeBanner = dynamic(() => import('@/components/myp/MarqueeBanner'));
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/myp/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/myp/SubjectCard'));
 import OurPromise from '@/components/shared/OurPromise';
 import { getOurPromiseData } from '@/data/ourPromiseConfig';
+import { getMarqueeData } from "@/data/marqueeConfig";
 
 
 // 1. ACCEPT the headerHeight prop

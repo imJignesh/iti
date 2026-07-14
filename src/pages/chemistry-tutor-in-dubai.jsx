@@ -4,7 +4,7 @@ import Head from "next/head";
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
-import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
+import MarqueeBanner from '@/components/shared/MarqueeBanner';
 import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 // import Hero from '@/components/home/Hero';
 

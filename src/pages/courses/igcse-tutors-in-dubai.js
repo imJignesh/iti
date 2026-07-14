@@ -16,11 +16,12 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 const IgniteAboutCard = dynamic(() => import('@/components/igcse/IgniteAboutCard'));
 const Trainers = dynamic(() => import('@/components/igcse/Trainers'));
 const WhatWeOfferSection = dynamic(() => import('@/components/igcse/WhatWeOfferSection'));
-const MarqueeBanner = dynamic(() => import('@/components/igcse/MarqueeBanner'));
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/igcse/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/igcse/SubjectCard'));
 import OurPromise from '@/components/shared/OurPromise';
 import { getOurPromiseData } from '@/data/ourPromiseConfig';
+import { getMarqueeData } from "@/data/marqueeConfig";
 const UniImagesCard = dynamic(() => import('@/components/igcse/universityCrad'));
 
 

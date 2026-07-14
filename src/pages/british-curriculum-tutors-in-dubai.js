@@ -16,12 +16,13 @@ const IgniteAchievements = dynamic(() => import('@/components/bc/IgniteAchieveme
 const IgniteAboutCard = dynamic(() => import("@/components/bc/IgniteAboutCard"));
 const Trainers = dynamic(() => import("@/components/bc/Trainers"));
 const WhatWeOfferSection = dynamic(() => import('@/components/bc/WhatWeOfferSection'));
-const MarqueeBanner = dynamic(() => import('@/components/bc/MarqueeBanner'));
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/bc/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/bc/SubjectCard'));
 const UniImagesCard = dynamic(() => import('@/components/bc/universityCrad'));
 import OurPromise from '@/components/shared/OurPromise';
 import { getOurPromiseData } from '@/data/ourPromiseConfig';
+import { getMarqueeData } from "@/data/marqueeConfig";
 
 
 

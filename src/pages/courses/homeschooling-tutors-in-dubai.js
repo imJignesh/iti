@@ -11,11 +11,12 @@ import { faqSections } from '@/data/faqSections';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
-const MarqueeBanner = dynamic(() => import('@/components/homeSchooling/MarqueeBanner'));
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const HomeschoolingMindset = dynamic(() => import('@/components/homeSchooling/mindset'));
 const WhatWeOfferSection = dynamic(() => import('@/components/homeSchooling/WhatWeOfferSection'));
 const Accordion = dynamic(() => import('@/components/shared/Accordion'));
 import { accordionSections } from '@/data/accordionSections';
+import { getMarqueeData } from "@/data/marqueeConfig";
 const Blog = dynamic(() => import('@/components/homeSchooling/Blog'));
 const ReviewsSection = dynamic(() => import('@/components/homeSchooling/ReviewsSection'));
 
