@@ -4,9 +4,9 @@ import SharedBlog from "../SharedBlog";
 const Blog = () => {
     return (
         <>
-            <SharedBlog showInnerStyles={true}
+            <SharedBlog
                 title="Expert Insights To Help You Learn, Grow & Excel"
-                showInnerStyles={true}
+               
             />
             <style jsx global>{`
                 .blogImg {

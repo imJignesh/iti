@@ -3,9 +3,9 @@ import SharedBlog from "../SharedBlog";
 
 const Blog = () => {
     return (
-        <SharedBlog showInnerStyles={true}
+        <SharedBlog
             title="Everything You Need To Learn, Improve & Succeed"
-            showInnerStyles={true}
+           
         />
     );
 };

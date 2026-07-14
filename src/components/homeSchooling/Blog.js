@@ -3,7 +3,7 @@ import SharedBlog from "../SharedBlog";
 
 const Blog = () => {
     return (
-        <SharedBlog showInnerStyles={true}
+        <SharedBlog
             title="Smarter Learning Starts With The Right Insights"
         />
     );
