@@ -158,6 +158,10 @@ async function runMirrorSync() {
 
             fs.writeFileSync(path.join(POSTS_DIR, `${slug}.json`), JSON.stringify(post, null, 2));
 
+            // Only keep the featured image URL from _embedded — author/wp:term are
+            // never read from list.json (they come from the full per-post file), and
+            // including them bloated list.json to 6.7MB across 173 posts, pushing raw
+            // HTML document size over Google's ~2MB crawl budget on every blog page.
             allLightweightPosts.push({
                 id: post.id,
                 date: post.date,
@@ -166,7 +170,9 @@ async function runMirrorSync() {
                 excerpt: post.excerpt,
                 categories: post.categories,
                 tags: post.tags,
-                _embedded: post._embedded
+                _embedded: featuredMedia && featuredMedia.source_url
+                    ? { 'wp:featuredmedia': [{ source_url: featuredMedia.source_url }] }
+                    : {}
             });
         }
         page++;
@@ -177,7 +183,7 @@ async function runMirrorSync() {
         total: allLightweightPosts.length,
         syncDate: new Date().toISOString()
     };
-    fs.writeFileSync(path.join(DATA_DIR, 'list.json'), JSON.stringify(listData, null, 2));
+    fs.writeFileSync(path.join(DATA_DIR, 'list.json'), JSON.stringify(listData));
 
     // Update top-posts.json with the 3 most recent posts
     updateTopPosts(allLightweightPosts);
@@ -242,7 +248,9 @@ async function syncSinglePost(slug) {
             excerpt: post.excerpt,
             categories: post.categories,
             tags: post.tags,
-            _embedded: post._embedded
+            _embedded: featuredMedia && featuredMedia.source_url
+                ? { 'wp:featuredmedia': [{ source_url: featuredMedia.source_url }] }
+                : {}
         };
 
         if (index > -1) {
@@ -251,7 +259,7 @@ async function syncSinglePost(slug) {
             listData.posts.unshift(slimPost);
         }
         listData.syncDate = new Date().toISOString();
-        fs.writeFileSync(listPath, JSON.stringify(listData, null, 2));
+        fs.writeFileSync(listPath, JSON.stringify(listData));
 
         // Update top-posts.json based on the latest list
         updateTopPosts(listData.posts);
