@@ -627,55 +627,47 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
 
     // --- Initialization of Likes/Dislikes state and NEW Related Posts Fetch ---
     useEffect(() => {
-        if (post) {
-            // Check for the custom fields added by register_rest_field from the new WP API
-            const initialCounts = post.ignite_vote_counts || { likes: 0, dislikes: 0 };
-            setLikes(initialCounts.likes);
-            setDislikes(initialCounts.dislikes);
+        if (!post) return;
 
-            // Check if user has already voted on this device
-            const storedVote = localStorage.getItem(`ignite_vote_${post.id}`);
-            if (storedVote) {
-                setHasVoted(true);
-            } else {
-                setHasVoted(false);
-            }
+        // Check for the custom fields added by register_rest_field from the new WP API
+        const initialCounts = post.ignite_vote_counts || { likes: 0, dislikes: 0 };
+        setLikes(initialCounts.likes);
+        setDislikes(initialCounts.dislikes);
 
-            // Set page info (existing logic)
-            if (typeof window !== 'undefined') {
-                const url = window.location.href;
-                const title = post.title.rendered.replace(/<\/?[^>]+(>|$)/g, "");
-                setPageInfo(`URL: ${url} | Title: ${title}`);
-            }
+        // Check if user has already voted on this device
+        const storedVote = localStorage.getItem(`ignite_vote_${post.id}`);
+        setHasVoted(!!storedVote);
 
-            // --- LOCAL RELATED POSTS MATCHING ---
-            const currentPostId = post.id;
-            const currentPostCategories = post.categories || [];
-
-            // 1. Find posts with matching categories
-            let localRelated = allPosts.filter(p =>
-                p.id !== currentPostId &&
-                p.categories.some(catId => currentPostCategories.includes(catId))
-            );
-
-            // 2. If not enough, fill with latest posts
-            if (localRelated.length < 3) {
-                const latestFound = allPosts.filter(p =>
-                    p.id !== currentPostId &&
-                    !localRelated.some(r => r.id === p.id)
-                );
-                localRelated = [...localRelated, ...latestFound].slice(0, 3);
-            } else {
-                localRelated = localRelated.slice(0, 3);
-            }
-
-            // Only update if changed (to prevent potential loops)
-            if (JSON.stringify(relatedPosts) !== JSON.stringify(localRelated)) {
-                setRelatedPosts(localRelated);
-            }
-            // --- END LOCAL MATCHING ---
-
+        // Set page info (existing logic)
+        if (typeof window !== 'undefined') {
+            const url = window.location.href;
+            const title = post.title.rendered.replace(/<\/?[^>]+(>|$)/g, "");
+            setPageInfo(`URL: ${url} | Title: ${title}`);
         }
+
+        // --- LOCAL RELATED POSTS MATCHING ---
+        const currentPostId = post.id;
+        const currentPostCategories = post.categories || [];
+
+        // 1. Find posts with matching categories
+        let localRelated = allPosts.filter(p =>
+            p.id !== currentPostId &&
+            p.categories.some(catId => currentPostCategories.includes(catId))
+        );
+
+        // 2. If not enough, fill with latest posts
+        if (localRelated.length < 3) {
+            const latestFound = allPosts.filter(p =>
+                p.id !== currentPostId &&
+                !localRelated.some(r => r.id === p.id)
+            );
+            localRelated = [...localRelated, ...latestFound].slice(0, 3);
+        } else {
+            localRelated = localRelated.slice(0, 3);
+        }
+
+        setRelatedPosts(localRelated);
+        // --- END LOCAL MATCHING ---
     }, [post]);
     // --------------------------------------------------------------------
 
