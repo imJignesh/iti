@@ -19,7 +19,8 @@ import WhatWeOfferSection from '@/components/ap/WhatWeOfferSection';
 import MarqueeBanner from '@/components/ap/MarqueeBanner';
 import ReviewsSection from '@/components/ap/ReviewsSection';
 import SubjectsCard1 from '@/components/ap/SubjectCard1';
-import UspsSection from '@/components/ap/UspsSection';
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 
 // 1. ACCEPT the headerHeight prop
 const ap = ({ headerHeight }) => {
@@ -583,7 +584,7 @@ const ap = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('ap')} />
           </section>
         </LazySection>
 

@@ -21,7 +21,8 @@ import MarqueeBanner from '@/components/bc/MarqueeBanner';
 import ReviewsSection from '@/components/bc/ReviewsSection';
 import SubjectsCard from '@/components/bc/SubjectCard';
 import UniImagesCard from '@/components/bc/universityCrad';
-import UspsSection from '@/components/bc/UspsSection';
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 import SEO from "@/components/SEO";
 
 
@@ -291,7 +292,7 @@ const BC = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('bc')} />
           </section>
         </LazySection>
 

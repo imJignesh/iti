@@ -20,7 +20,8 @@ const MarqueeBanner = dynamic(() => import('@/components/bc/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/bc/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/bc/SubjectCard'));
 const UniImagesCard = dynamic(() => import('@/components/bc/universityCrad'));
-const UspsSection = dynamic(() => import('@/components/bc/UspsSection'));
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 
 
 
@@ -513,7 +514,7 @@ const BC = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('bc')} />
           </section>
         </LazySection>
 

@@ -14,7 +14,8 @@ import OurTrainers from '@/components/private-tutors-dubai/ourTrainers';
 import SubjectsCard1 from '@/components/private-tutors-dubai/SubjectCard1';
 import IgniteAchievements from '@/components/private-tutors-dubai/igniteAchivement';
 import Blog from "@/components/private-tutors-dubai/Blog";
-import UpsSection from '@/components/private-tutors-dubai/UspsSection';
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 import Accordion from '@/components/shared/Accordion';
 import { accordionSections } from '@/data/accordionSections';
 import FAQSection from '@/components/shared/FaqSection';
@@ -240,7 +241,7 @@ const PrivateTutorsDubai = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UpsSection />
+            <OurPromise config={getOurPromiseData('privateTutors')} />
           </section>
         </LazySection>
 

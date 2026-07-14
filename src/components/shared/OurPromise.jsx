@@ -93,58 +93,25 @@ function USPItem({ number, icon, title, desc }) {
   );
 }
 
-function UpsSection() {
-  const uspItems = [
-    {
-      number: "01",
-      icon: <img src="/assets/01.webp" alt="act tutoring" width={205} height={134} />,
-      title: "ACT-Specific Tutors",
-      desc: "Highly qualified ACT-specific tutors delivering all-around support.",
-    },
-    {
-      number: "02",
-      icon: <img src="/assets/02.webp" alt="act tutoring" width={221} height={134} />,
-      title: "Individual Attention",
-      desc: "Small group training (SGT) to focus individually on every student.",
-    },
-    {
-      number: "03",
-      icon: <img src="/assets/03.webp" alt="act tutoring" width={221} height={134} />,
-      title: "Grade Improvement",
-      desc: "Better results assurance with critical testing & review methods.",
-    },
-    {
-      number: "04",
-      icon: <img src="/assets/04.webp" alt="act tutoring" width={226} height={134} />,
-      title: "Examination Prep",
-      desc: "Full ACT exam prep with tutoring, resources, testing, & review.",
-    },
-    {
-      number: "05",
-      icon: <img src="/assets/05.webp" alt="act tutoring" width={222} height={134} />,
-      title: "Strong Foundation",
-      desc: "Focus on fundamentals for an exceptionally strong foundation.",
-    },
-    {
-      number: "06",
-      icon: <img src="/assets/06.webp" alt="act tutoring" width={229} height={134} />,
-      title: "Stimulating Environment",
-      desc: "Result-oriented culture ensuring a fun & stimulating environment.",
-    },
-    {
-      number: "07",
-      icon: <img src="/assets/07.webp" alt="act tutoring" width={214} height={134} />,
-      title: "Structured Learning",
-      desc: "Comprehensive learning support for all the major ACT sections.",
-    },
-    {
-      number: "08",
-      icon: <img src="/assets/08.webp" alt="act tutoring" width={221} height={134} />,
-      title: "Progress Tracking",
-      desc: "Practice with unit tests & mock papers under exam-like conditions.",
-    },
-  ];
+function OurPromise({ config = {}, titleContent }) {
+  const [isMobileHeader, setIsMobileHeader] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+    const checkHeaderDevice = () => {
+      setIsMobileHeader(window.innerWidth < 576);
+    };
+
+    checkHeaderDevice();
+    window.addEventListener('resize', checkHeaderDevice);
+
+    return () => window.removeEventListener('resize', checkHeaderDevice);
+  }, []);
+
+  const uspItems = config.uspItems || [];
+  const title = config.title || "What Do Students Get From <br /><span className=\"highlight\">Ignite's</span> Support?";
+  const mobileTitle = config.mobileTitle || title;
 
   return (
     <div
@@ -179,10 +146,10 @@ function UpsSection() {
               data-scroll-repeat="true"
               className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
-            >
-              What Do Students Get From<br /><span className="highlight"> Ignite's</span> ACT Support?
-
-            </h3>
+              dangerouslySetInnerHTML={{
+                __html: mounted && isMobileHeader ? mobileTitle : title
+              }}
+            />
           </div>
         </div>
 
@@ -194,7 +161,6 @@ function UpsSection() {
             </div>
           ))}
         </div>
-
 
         {/* CTA Button */}
         <div
@@ -233,7 +199,7 @@ function UpsSection() {
                   marginLeft: "2.1rem",
                 }}
               >
-                <img src="/assets/arrowright.webp" alt="act tutoring" width={16} height={14} />
+                <img src="/assets/arrowright.webp" alt="ignite" width={16} height={14} />
               </div>
             </button>
           </a>
@@ -255,14 +221,14 @@ function UpsSection() {
         }
           .custom-grid {
   display: grid;
-  gap: 1.5rem; /* same as g-4 (24px gap) */
+  gap: 1.5rem;
   margin-bottom:3.5rem;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns by default (col-6) */
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @media (min-width: 768px) {
   .custom-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns on md and up (col-md-3) */
+    grid-template-columns: repeat(4, 1fr);
       margin-bottom:2rem;
   }
 }
@@ -270,8 +236,8 @@ function UpsSection() {
   height: 1px;
   background: linear-gradient(
     90deg,
-    rgba(0, 164, 145, 0.5) 0%,   /* opacity 0.5 */
-    rgba(0, 62, 55, 0.5) 100%    /* opacity 0.5 */
+    rgba(0, 164, 145, 0.5) 0%,
+    rgba(0, 62, 55, 0.5) 100%
   );
 }
 
@@ -344,10 +310,9 @@ padding: 10px 8px 10px 15px !important;
   }
 }
 
-
       `}</style>
     </div>
   );
 }
 
-export default UpsSection;
+export default OurPromise;

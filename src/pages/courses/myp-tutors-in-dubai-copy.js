@@ -20,7 +20,8 @@ import Trainers from "@/components/myp/Trainers";
 import MarqueeBanner from '@/components/myp/MarqueeBanner';
 import ReviewsSection from '@/components/myp/ReviewsSection';
 import SubjectsCard from '@/components/myp/SubjectCard';
-import UspsSection from '@/components/myp/UspsSection';
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 
 
 // 1. ACCEPT the headerHeight prop
@@ -284,7 +285,7 @@ const IBDP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('myp')} />
           </section>
         </LazySection>
 

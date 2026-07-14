@@ -14,7 +14,8 @@ import OurTrainers from '@/components/tutors-jlt-dubai/ourTrainers';
 import SubjectsCard1 from '@/components/tutors-jlt-dubai/SubjectCard1';
 import IgniteAchievements from '@/components/tutors-jlt-dubai/igniteAchivement';
 import Blog from "@/components/tutors-jlt-dubai/Blog";
-import UpsSection from '@/components/tutors-jlt-dubai/UspsSection';
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 import Accordion from '@/components/shared/Accordion';
 import { accordionSections } from '@/data/accordionSections';
 import FAQSection from '@/components/shared/FaqSection';
@@ -578,7 +579,7 @@ const Tutors = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UpsSection />
+            <OurPromise config={getOurPromiseData('tutors')} />
           </section>
         </LazySection>
 

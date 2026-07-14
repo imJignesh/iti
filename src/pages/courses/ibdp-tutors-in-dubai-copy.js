@@ -20,7 +20,8 @@ import MarqueeBanner from '@/components/ibdp/MarqueeBanner';
 import ReviewsSection from '@/components/ibdp/ReviewsSection';
 // import StudentAchievements from '@/components/ibdp/StudentAchivement';
 import SubjectsCard from '@/components/ibdp/SubjectCard';
-import UspsSection from '@/components/ibdp/UspsSection';
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 // Removed: { useEffect, useRef }
 import SEO from "@/components/SEO";
 
@@ -171,7 +172,7 @@ const IBDP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('ibdp')} />
           </section>
         </LazySection>
 

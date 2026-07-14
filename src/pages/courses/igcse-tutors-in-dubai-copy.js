@@ -20,7 +20,8 @@ import WhatWeOfferSection from '@/components/igcse/WhatWeOfferSection';
 import MarqueeBanner from '@/components/igcse/MarqueeBanner';
 import ReviewsSection from '@/components/igcse/ReviewsSection';
 import SubjectsCard from '@/components/igcse/SubjectCard';
-import UspsSection from '@/components/igcse/UspsSection';
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 import UniImagesCard from '@/components/igcse/universityCrad';
 
 
@@ -287,7 +288,7 @@ const IGCSE = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('igcse')} />
           </section>
         </LazySection>
 

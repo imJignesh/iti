@@ -19,7 +19,8 @@ const WhatWeOfferSection = dynamic(() => import('@/components/igcse/WhatWeOfferS
 const MarqueeBanner = dynamic(() => import('@/components/igcse/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/igcse/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/igcse/SubjectCard'));
-const UspsSection = dynamic(() => import('@/components/igcse/UspsSection'));
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 const UniImagesCard = dynamic(() => import('@/components/igcse/universityCrad'));
 
 
@@ -531,7 +532,7 @@ const IGCSE = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('igcse')} />
           </section>
         </LazySection>
 

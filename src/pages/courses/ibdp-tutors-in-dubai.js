@@ -20,7 +20,8 @@ const Trainers = dynamic(() => import('@/components/ibdp/Trainers'));
 const MarqueeBanner = dynamic(() => import('@/components/ibdp/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/ibdp/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/ibdp/SubjectCard'));
-const UspsSection = dynamic(() => import('@/components/ibdp/UspsSection'));
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 // Removed: { useEffect, useRef }
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
@@ -443,7 +444,7 @@ const IBDP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('ibdp')} />
           </section>
         </LazySection>
 

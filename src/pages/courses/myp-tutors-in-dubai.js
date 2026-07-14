@@ -23,7 +23,8 @@ const Trainers = dynamic(() => import('@/components/myp/Trainers'));
 const MarqueeBanner = dynamic(() => import('@/components/myp/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/myp/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/myp/SubjectCard'));
-const UspsSection = dynamic(() => import('@/components/myp/UspsSection'));
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 
 
 // 1. ACCEPT the headerHeight prop
@@ -422,7 +423,7 @@ const MYP = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('myp')} />
           </section>
         </LazySection>
 

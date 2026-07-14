@@ -14,7 +14,8 @@ import OurTrainers from '@/components/tutors/ourTrainers';
 import SubjectsCard1 from '@/components/tutors/SubjectCard1';
 import IgniteAchievements from '@/components/tutors/igniteAchivement';
 import Blog from "@/components/tutors/Blog";
-import UpsSection from '@/components/tutors/UspsSection';
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 import Accordion from '@/components/shared/Accordion';
 import { accordionSections } from '@/data/accordionSections';
 import FAQSection from '@/components/shared/FaqSection';
@@ -595,7 +596,7 @@ const Tutors = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UpsSection />
+            <OurPromise config={getOurPromiseData('tutors')} />
           </section>
         </LazySection>
 

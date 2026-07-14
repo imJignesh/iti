@@ -18,7 +18,8 @@ import WhatWeOfferSection from '@/components/a-level/WhatWeOfferSection';
 import MarqueeBanner from '@/components/a-level/MarqueeBanner';
 import ReviewsSection from '@/components/a-level/ReviewsSection';
 import SubjectsCard from '@/components/a-level/SubjectCard';
-import UspsSection from '@/components/a-level/UspsSection';
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 import UniImagesCard from '@/components/a-level/universityCrad';
 
 // 1. ACCEPT the headerHeight prop
@@ -261,7 +262,7 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('aLevel')} />
           </section>
         </LazySection>
 

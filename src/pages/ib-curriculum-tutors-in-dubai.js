@@ -20,7 +20,8 @@ const WhatWeOfferSection = dynamic(() => import('@/components/ibc/WhatWeOfferSec
 const MarqueeBanner = dynamic(() => import('@/components/ibc/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/ibc/ReviewsSection'));
 const SubjectsCard = dynamic(() => import('@/components/ibc/SubjectCard'));
-const UspsSection = dynamic(() => import('@/components/ibc/UspsSection'));
+import OurPromise from '@/components/shared/OurPromise';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
 
 
 // 1. ACCEPT the headerHeight prop
@@ -463,7 +464,7 @@ const IBC = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <UspsSection />
+            <OurPromise config={getOurPromiseData('ibc')} />
           </section>
         </LazySection>
 
