@@ -76,6 +76,29 @@ export const subjectCardCarouselConfig = {
       "IB MYP French"
     ],
     altText: "ib myp tutors in dubai"
+  },
+  ap: {
+    title: "Tutoring That Makes Every AP Subject Clear",
+    subjects: [
+      "AP Calculus AB",
+      "AP Calculus BC",
+      "AP Statistics",
+      "AP Physics 1 & 2: Algebra-Based",
+      "AP Physics C: Electricity & Magnetism",
+      "AP Physics C: Mechanics",
+      "AP Chemistry",
+      "AP Biology",
+      "AP Computer Science A",
+      "AP Computer Science Principles",
+      "AP Environmental Science",
+      "AP Macroeconomics",
+      "AP Microeconomics",
+      "AP Psychology",
+      "AP English Language And Composition",
+      "AP French Language And Culture",
+      "AP Spanish Language And Culture"
+    ],
+    altText: "ap tutors in dubai"
   }
 };
 
