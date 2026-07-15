@@ -42,6 +42,4 @@ yarn-error.log*
 next-env.d.ts
 
 # project notes
-PROJECT_AUDIT.md
-CLAUDE.md
-GOOGLE_INTEGRATIONS.md
+/analysis/
