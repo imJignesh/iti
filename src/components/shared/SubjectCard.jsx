@@ -4,7 +4,11 @@ export default function SubjectCard({ config = {} }) {
   const {
     subHeading = "SUBJECTS WE SUPPORT",
     title = "",
+    titleBefore = "",
+    titleAfter = "",
+    highlightWord = "",
     titleVariant,
+    titleMobileBreak = false,
     description = "",
     subjectRows = [],
     titleTag = "h2",
@@ -66,6 +70,19 @@ export default function SubjectCard({ config = {} }) {
                 {isMobile ? " " : <br />}
                 <span className="highlight"> Subject</span> Clear
               </h3>
+            ) : titleMobileBreak && titleBefore ? (
+              <h3
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section testTitle"
+                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+              >
+                {titleBefore}
+                {isMobile ? " " : <br />}
+                <span className="highlight">{highlightWord}</span>
+                {titleAfter}
+              </h3>
             ) : (
               <h3
                 data-scroll
@@ -76,6 +93,19 @@ export default function SubjectCard({ config = {} }) {
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             )
+          ) : titleMobileBreak && titleBefore ? (
+            <h2
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle"
+              style={{ animationDelay: "0.2s" }}
+            >
+              {titleBefore}
+              {isMobile ? " " : <br />}
+              <span className="highlight">{highlightWord}</span>
+              {titleAfter}
+            </h2>
           ) : (
             <h2
               data-scroll
