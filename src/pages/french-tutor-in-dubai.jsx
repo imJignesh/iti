@@ -5,6 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 // Assuming shared components are kept in their original path
 import MarqueeBanner from '@/components/shared/MarqueeBanner';
+import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/english-tutoring/ReviewsSection';
 // import Hero from '@/components/home/Hero';
 
@@ -420,7 +421,7 @@ const FrenchTutorsInDubai = ({ headerHeight }) => {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <MarqueeBanner />
+                        <MarqueeBanner config={getMarqueeData('standard')} />
                     </section>
                 </LazySection>
 
