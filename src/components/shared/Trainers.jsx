@@ -576,7 +576,7 @@ export default function Trainers({ trainers }) {
                         <div data-color={t.color} className="trainerCard">
                           <div className="trainerName">{t.name}</div>
                           <div className="trainerImgWrap">
-                            <img src={t.img} alt={t.name} className="trainerImg" />
+                            <img src={t.img} alt={t.name} className="trainerImg" width={812} height={1017} loading="lazy" decoding="async" />
                           </div>
                           <div className="trainerSubtitle">{t.subtitle}</div>
                           <div className="trainerExp">{t.experience}</div>
@@ -614,7 +614,7 @@ export default function Trainers({ trainers }) {
                       <div data-color={t.color} className="trainerCard">
                         <div className="trainerName">{t.name}</div>
                         <div className="trainerImgWrap">
-                          <img src={t.img} alt={t.name} className="trainerImg" />
+                          <img src={t.img} alt={t.name} className="trainerImg" width={812} height={1017} loading="lazy" decoding="async" />
                         </div>
                         <div className="trainerSubtitle">{t.subtitle}</div>
                         <div className="trainerExp">{t.experience}</div>
