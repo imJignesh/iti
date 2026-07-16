@@ -1,4 +1,5 @@
 import LazySection from "@/components/LazySection";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
@@ -18,7 +19,7 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import PhysicsTutorsChooseApp from '@/components/physics-tutoring/choose-app';
 import PhysicsTutorsSubjectSyllabus from '@/components/physics-tutoring/SubjectSyllabus';
 import PhysicsTutorsUsps from "@/components/physics-tutoring/Usps";
-import Trainers from "@/components/physics-tutoring/Trainers";
+const Trainers = dynamic(() => import("@/components/physics-tutoring/Trainers"));
 import PhysicsTutorsIgniteAchievements from '@/components/physics-tutoring/IgniteAchievements';
 import PhysicsTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';

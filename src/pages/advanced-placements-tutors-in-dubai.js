@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import dynamic from "next/dynamic";
 import LazySection from '@/components/LazySection';
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
@@ -14,7 +15,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import OurApproach from "@/components/ap/OurApproach";
-import Trainers from "@/components/ap/Trainers";
+const Trainers = dynamic(() => import("@/components/ap/Trainers"));
 import WhatWeOfferSection from '@/components/ap/WhatWeOfferSection';
 import MarqueeBanner from '@/components/shared/MarqueeBanner';
 import { getMarqueeData } from '@/data/marqueeConfig';

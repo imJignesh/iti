@@ -1,4 +1,5 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 import LazySection from "@/components/LazySection";
@@ -16,7 +17,7 @@ import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import OurApproach from "@/components/myp/OurApproach";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
-import Trainers from "@/components/myp/Trainers";
+const Trainers = dynamic(() => import("@/components/myp/Trainers"));
 import MarqueeBanner from '@/components/shared/MarqueeBanner';
 import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/myp/ReviewsSection';

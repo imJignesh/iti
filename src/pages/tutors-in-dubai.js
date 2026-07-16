@@ -1,4 +1,5 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import LazySection from "@/components/LazySection";
 // 1. Import the reusable schema component
 import SEO from "@/components/SEO";
@@ -11,7 +12,7 @@ import CurriculumTestsComponent from '@/components/tutors/curriculum';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
-import OurTrainers from '@/components/tutors/ourTrainers';
+const OurTrainers = dynamic(() => import('@/components/tutors/ourTrainers'));
 import SubjectsCard1 from '@/components/tutors/SubjectCard1';
 import IgniteAchievements from '@/components/tutors/igniteAchivement';
 import Blog from "@/components/tutors/Blog";

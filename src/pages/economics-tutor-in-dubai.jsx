@@ -1,4 +1,5 @@
 import LazySection from "@/components/LazySection";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 // 1. Import the reusable schema component
 import JsonLd from "@/components/JsonLd";
@@ -18,7 +19,7 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import EconomicsTutorsChooseApp from '@/components/economics-tutoring/choose-app';
 import EconomicsTutorsSubjectSyllabus from '@/components/economics-tutoring/SubjectSyllabus';
 import EconomicsTutorsUsps from "@/components/economics-tutoring/Usps";
-import Trainers from "@/components/economics-tutoring/Trainers";
+const Trainers = dynamic(() => import("@/components/economics-tutoring/Trainers"));
 import EconomicsTutorsIgniteAchievements from '@/components/economics-tutoring/IgniteAchievements';
 import EconomicsTutorsFAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';

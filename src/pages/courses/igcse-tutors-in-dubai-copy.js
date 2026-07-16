@@ -1,4 +1,5 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 import LazySection from "@/components/LazySection";
@@ -15,7 +16,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import OurApproach from "@/components/igcse/OurApproach";
-import Trainers from '@/components/igcse/Trainers';
+const Trainers = dynamic(() => import('@/components/igcse/Trainers'));
 import WhatWeOfferSection from '@/components/igcse/WhatWeOfferSection';
 import MarqueeBanner from '@/components/shared/MarqueeBanner';
 import { getMarqueeData } from '@/data/marqueeConfig';
