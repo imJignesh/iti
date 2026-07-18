@@ -16,7 +16,7 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import OurApproach from "@/components/a-level/OurApproach";
 const Trainers = dynamic(() => import("@/components/a-level/Trainers"));
 import WhatWeOfferSection from '@/components/a-level/WhatWeOfferSection';
-import MarqueeBanner from '@/components/shared/MarqueeBanner';
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/a-level/ReviewsSection';
 import SubjectsCard from '@/components/a-level/SubjectCard';

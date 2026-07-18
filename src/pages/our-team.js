@@ -1,11 +1,12 @@
 'use client';
+import dynamic from "next/dynamic";
 import LazySection from "@/components/LazySection";
 
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import SEO from "@/components/SEO";
 import TeamBanner from "@/components/team/Banner";
-import MarqueeBanner from '@/components/shared/MarqueeBanner';
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 import { getMarqueeData } from '@/data/marqueeConfig';
 import { ArrowRight } from 'lucide-react';
 // Correct import for the CSS Module

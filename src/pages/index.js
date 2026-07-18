@@ -15,7 +15,7 @@ import Hero from "@/components/homeCopy/Hero";
 // Dynamic imports for below-the-fold components
 import dynamic from "next/dynamic";
 const Course = dynamic(() => import("@/components/homeCopy/Course"));
-import MarqueeBanner from "@/components/shared/MarqueeBanner";
+const MarqueeBanner = dynamic(() => import("@/components/shared/MarqueeBanner"));
 import { getMarqueeData } from "@/data/marqueeConfig";
 const About = dynamic(() => import("@/components/homeCopy/About"));
 const Test = dynamic(() => import("@/components/homeCopy/Test"));

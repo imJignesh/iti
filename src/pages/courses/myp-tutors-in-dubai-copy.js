@@ -18,7 +18,7 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import OurApproach from "@/components/myp/OurApproach";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 const Trainers = dynamic(() => import("@/components/myp/Trainers"));
-import MarqueeBanner from '@/components/shared/MarqueeBanner';
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/myp/ReviewsSection';
 import SubjectsCard from '@/components/myp/SubjectCard';

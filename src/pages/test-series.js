@@ -1,11 +1,12 @@
 import Head from 'next/head';
+import dynamic from "next/dynamic";
 import SEO from "@/components/SEO";
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import LazySection from "@/components/LazySection";
 import ChooseApp from '@/components/test-series/choose-app';
-import MarqueeBanner from '@/components/shared/MarqueeBanner';
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 import { getMarqueeData } from '@/data/marqueeConfig';
 import CurriculumTestsComponent from '@/components/test-series/curriculum';
 import IgniteAchievements from '@/components/test-series/IgniteAchievements';

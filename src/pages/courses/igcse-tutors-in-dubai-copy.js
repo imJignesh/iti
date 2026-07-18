@@ -18,7 +18,7 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import OurApproach from "@/components/igcse/OurApproach";
 const Trainers = dynamic(() => import('@/components/igcse/Trainers'));
 import WhatWeOfferSection from '@/components/igcse/WhatWeOfferSection';
-import MarqueeBanner from '@/components/shared/MarqueeBanner';
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/igcse/ReviewsSection';
 import SubjectsCard from '@/components/igcse/SubjectCard';

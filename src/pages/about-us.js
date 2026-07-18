@@ -1,4 +1,5 @@
 import LazySection from "@/components/LazySection";
+import dynamic from "next/dynamic";
 // 1. Import the reusable JsonLd component
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
@@ -8,7 +9,7 @@ import WhyChooseUs from "@/components/aboutus/WhyChooseUs";
 import Timeline from "@/components/aboutus/Timeline";
 import MeetOurFounders from "@/components/aboutus/MeetOurFounders";
 import TutoringHeroSection from "@/components/aboutus/BottomSub";
-import MarqueeBanner from "@/components/shared/MarqueeBanner";
+const MarqueeBanner = dynamic(() => import("@/components/shared/MarqueeBanner"));
 import { getMarqueeData } from "@/data/marqueeConfig";
 
 // 1. ACCEPT the headerHeight prop

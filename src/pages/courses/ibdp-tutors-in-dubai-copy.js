@@ -1,4 +1,5 @@
 // import MovingBanner from '@/components/home/MovingBanner';
+import dynamic from "next/dynamic";
 import LazySection from "@/components/LazySection";
 import Head from "next/head";
 // import Testimonial from '@/components/home/Testimonial';
@@ -16,7 +17,7 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import OurApproach from "@/components/ibdp/OurApproach";
 import WhatWeOfferSection from '@/components/ibdp/WhatWeOfferSection';
 import Trainers from "@/components/ibdp/Trainers";
-import MarqueeBanner from '@/components/shared/MarqueeBanner';
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/ibdp/ReviewsSection';
 // import StudentAchievements from '@/components/ibdp/StudentAchivement';

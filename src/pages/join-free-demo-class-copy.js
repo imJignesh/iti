@@ -1,4 +1,5 @@
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import LazySection from "@/components/LazySection";
 import Image from "next/image";
@@ -9,7 +10,7 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import SubjectsCard from '@/components/freedemo/SubjectCard';
-import MarqueeBanner from '@/components/shared/MarqueeBanner';
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 import { getMarqueeData } from '@/data/marqueeConfig';
 import Testimonial from "@/components/freedemo/Testimonial";
 // import TrainersMessage from "@/components/freedemo/videoTrainer";

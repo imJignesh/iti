@@ -5,7 +5,7 @@ import LazySection from "@/components/LazySection";
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
 // Assuming shared components are kept in their original path
-import MarqueeBanner from '@/components/shared/MarqueeBanner';
+const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 import { getMarqueeData } from '@/data/marqueeConfig';
 import ReviewsSection from '@/components/tutors-jlt-dubai/ReviewsSection';
 import CurriculumTestsComponent from '@/components/tutors-jlt-dubai/curriculum';
