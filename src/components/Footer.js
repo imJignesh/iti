@@ -140,13 +140,13 @@ const Footer = () => {
             </div>
             <div className="socialmediafooter">
               <a href="https://www.facebook.com/ignitetraininginstitute" target="_blank">
-                <img src="/images/fb-footer.webp" alt="ignite facebook" width={36} height={36} />
+                <img src="/images/fb-footer.webp" alt="ignite facebook" width={36} height={36} loading="lazy" decoding="async" />
               </a>
               <a href="https://www.instagram.com/ignitetraininginstitute/?hl=en" target="_blank">
-                <img src="/images/insta-footer.webp" alt="ignite instagram" width={36} height={36} />
+                <img src="/images/insta-footer.webp" alt="ignite instagram" width={36} height={36} loading="lazy" decoding="async" />
               </a>
               <a href="https://www.linkedin.com/company/ignite-training-institute" target="_blank">
-                <img src="/images/linkedin-footer.webp" alt="ignite linkedin" width={36} height={36} />
+                <img src="/images/linkedin-footer.webp" alt="ignite linkedin" width={36} height={36} loading="lazy" decoding="async" />
               </a>
             </div>
 
@@ -162,7 +162,7 @@ const Footer = () => {
                   required
                 />
                 <button className="footerNewsletterBtn" type="submit" disabled={loading}>
-                  <img src="/images/right-arrow-blue.webp" alt="Footer Arrow" width={28} height={28} />
+                  <img src="/images/right-arrow-blue.webp" alt="Footer Arrow" width={28} height={28} loading="lazy" decoding="async" />
                 </button>
               </form>
               {status === 'error' && <p style={{ color: '#ff6b6b', fontSize: '0.8rem', marginTop: '5px' }}>Something went wrong. Please try again.</p>}

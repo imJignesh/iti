@@ -116,6 +116,7 @@ const SharedBlog = ({ title, posts = [] }) => {
                                                 width={blog.width || 300}
                                                 height={blog.height || 200}
                                                 loading="lazy"
+                                                decoding="async"
                                             />
                                         </a>
                                         <div className="blogCardContent">
