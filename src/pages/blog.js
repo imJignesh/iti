@@ -193,6 +193,8 @@ const Blogpg = ({ headerHeight, ...props }) => {
                 url="https://ignitetraininginstitute.com/blog"
             />
             <Head>
+                <link rel="preload" as="image" href="/images/blog-banner-mobile.webp" media="(max-width: 768px)" fetchPriority="high" />
+                <link rel="preload" as="image" href="/images/blog-banner-desktop.webp" media="(min-width: 769px)" fetchPriority="high" />
                 <link rel="stylesheet" href="/styles/Blogpg.css" />
             </Head>
             <JsonLd schema={blogSchema} />
