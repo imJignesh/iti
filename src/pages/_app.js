@@ -131,18 +131,10 @@ export default function MyApp({ Component, pageProps }) {
     return (
         <PopupProvider>
             {/*
-              * Bootstrap loaded deferred from CDN — does NOT block LCP paint.
-              * The CDN URL is versioned so it never needs cache-busting.
-              * Critical Bootstrap utilities (row, col-*, flex, etc.) are
-              * inlined in critical.css to prevent FOUC on above-fold content.
+              * Bootstrap loaded in _document.js via <link> with media="print" swap.
+              * Avoids script execution overhead. CDN is versioned.
+              * Critical utilities already inlined in critical.css.
               */}
-            <Script
-                id="bootstrap-css"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css';l.crossOrigin='anonymous';document.head.appendChild(l);})();`
-                }}
-            />
             <Script
                 id="gtm-script"
                 strategy="afterInteractive"
@@ -173,14 +165,7 @@ export default function MyApp({ Component, pageProps }) {
                 `}
             </Script>
 
-            {/* Load non-critical CSS (animations, transitions) after interactive */}
-            <Script
-                id="load-non-critical-css"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/styles/non-critical.css';l.onload=function(){};document.head.appendChild(l);})();`
-                }}
-            />
+            {/* Non-critical CSS loaded in _document.js via <link> with media="print" swap */}
 
             {/* Meta Pixel Code */}
             <Script id="meta-pixel" strategy="afterInteractive">

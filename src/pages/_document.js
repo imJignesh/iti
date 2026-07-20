@@ -25,6 +25,25 @@ export default function Document() {
           {...{ fetchpriority: 'low' }}
         />
 
+        {/* Bootstrap CSS — non-blocking load via media swap pattern */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          media="print"
+          onLoad={(e) => {
+            e.target.media = 'all';
+          }}
+        />
+
+        {/* Non-critical CSS (animations, transitions) — non-blocking load */}
+        <link
+          rel="stylesheet"
+          href="/styles/non-critical.css"
+          media="print"
+          onLoad={(e) => {
+            e.target.media = 'all';
+          }}
+        />
 
 
         {/* Critical CSS inlined — ships with HTML, zero extra network request */}
