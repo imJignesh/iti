@@ -92,6 +92,8 @@ const SharedBlog = ({ title, posts = [] }) => {
                                         alt="arrow"
                                         width={24}
                                         height={24}
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 </button>
                             </a>
@@ -158,6 +160,8 @@ const SharedBlog = ({ title, posts = [] }) => {
                                     alt="arrow"
                                     width={24}
                                     height={24}
+                                    loading="lazy"
+                                    decoding="async"
                                 />
                             </button>
                         </a>

@@ -36,9 +36,9 @@ export default function ReviewsSection({ testimonials = [] }) {
           style={{ animationDelay: "0.2s" }}
         >
           {/* Decorative rectangles */}
-          <img src="/images/rectangle-bg4.webp" alt="testimonials" className={styles.testimonialRect} width={585} height={120} />
-          <img src="/images/rectangle-bg4.webp" alt="testimonials" className={styles.testimonialRect} width={585} height={120} />
-          <img src="/images/rectangle-bg4.webp" alt="testimonials" className={styles.testimonialRect} width={585} height={120} />
+          <img src="/images/rectangle-bg4.webp" alt="testimonials" className={styles.testimonialRect} width={585} height={120} loading="lazy" decoding="async" />
+          <img src="/images/rectangle-bg4.webp" alt="testimonials" className={styles.testimonialRect} width={585} height={120} loading="lazy" decoding="async" />
+          <img src="/images/rectangle-bg4.webp" alt="testimonials" className={styles.testimonialRect} width={585} height={120} loading="lazy" decoding="async" />
 
           <img
             src="/images/google-logo.webp"
@@ -51,6 +51,8 @@ export default function ReviewsSection({ testimonials = [] }) {
             style={{ animationDelay: "0.2s" }}
             width={250}
             height={80}
+            loading="lazy"
+            decoding="async"
           />
 
           <h3
@@ -85,6 +87,8 @@ export default function ReviewsSection({ testimonials = [] }) {
             style={{ animationDelay: "0.5s" }}
             width={350}
             height={58}
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -126,6 +130,8 @@ export default function ReviewsSection({ testimonials = [] }) {
                       src={item.img}
                       alt={item.name}
                       className={styles.testimonialImg}
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className={styles.testimonialVideoOverlay}></div>
                     <div className={styles.testimonialPlayBtn}>
@@ -172,6 +178,8 @@ export default function ReviewsSection({ testimonials = [] }) {
               style={{ transform: "rotate(180deg)" }}
               width={32}
               height={32}
+              loading="lazy"
+              decoding="async"
             />
           </button>
           <button className="swiper-button-next" tabIndex={0} aria-label="Next testimonial">
@@ -181,6 +189,8 @@ export default function ReviewsSection({ testimonials = [] }) {
               className="btntest"
               width={32}
               height={32}
+              loading="lazy"
+              decoding="async"
             />
           </button>
 

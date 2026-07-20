@@ -586,10 +586,10 @@ export default function Trainers({ trainers }) {
                   ))}
                 </Swiper>
                 <button ref={navPrevRef} className="customNavBtn swiper-button-prev">
-                  <img src="/images/left-arrow-blue.webp" alt="Previous" width={57} height={57} />
+                  <img src="/images/left-arrow-blue.webp" alt="Previous" width={57} height={57} loading="lazy" decoding="async" />
                 </button>
                 <button ref={navNextRef} className="customNavBtn swiper-button-next">
-                  <img src="/images/right-arrow-blue.webp" alt="Next" width={57} height={57} />
+                  <img src="/images/right-arrow-blue.webp" alt="Next" width={57} height={57} loading="lazy" decoding="async" />
                 </button>
                 <div className="trainersPagination"></div>
               </div>

@@ -442,6 +442,8 @@ export default function Usps({ config }) {
                             className="usp-icon"
                             width={usp.width}
                             height={usp.height}
+                            loading="lazy"
+                            decoding="async"
                           />
                         </div>
                         <div className="usp-content">
