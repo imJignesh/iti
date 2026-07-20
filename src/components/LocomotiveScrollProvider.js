@@ -58,7 +58,7 @@ const LocomotiveScrollProvider = ({ children }) => {
         };
     }, []);
 
-    // Effect 2: Initialize/Destroy Locomotive Scroll based on isScrollEnabled
+    // Effect 2: Initialize/Destroy Locomotive Scroll based on isScrollEnabled (deferred via requestIdleCallback)
     useEffect(() => {
         const destroyScroll = () => {
             if (scrollInstanceRef.current) {
@@ -77,29 +77,42 @@ const LocomotiveScrollProvider = ({ children }) => {
             const LocomotiveScroll = (await import("locomotive-scroll")).default;
             if (!scrollRef.current) return;
 
-            // --- FIX: Use large negative rootMargin for mobile/tablet to stabilize detection ---
             const rootMarginValue = '0px';
 
             const scroll = new LocomotiveScroll({
                 el: scrollRef.current,
                 smooth: true,
                 lerp: 0.1,
-                // The rootMargin configuration is passed directly to the Intersection Observer instance 
-                // used internally by Locomotive Scroll for visibility detection.
                 rootMargin: rootMarginValue,
             });
-            // --- END FIX ---
 
             scrollInstanceRef.current = scroll;
             setScrollInstance(scroll);
             console.log("Locomotive Scroll Initialized");
         };
 
-        if (typeof window !== "undefined") {
-            initScroll();
+        let idleCallbackId = null;
+
+        if (typeof window !== "undefined" && isScrollEnabled && !scrollInstanceRef.current) {
+            // Lazy-load: defer initialization using requestIdleCallback (after page is interactive)
+            // Falls back to setTimeout (5s) if requestIdleCallback not available
+            if ('requestIdleCallback' in window) {
+                idleCallbackId = window.requestIdleCallback(() => initScroll(), { timeout: 5000 });
+            } else {
+                idleCallbackId = window.setTimeout(initScroll, 5000);
+            }
         }
 
-        return destroyScroll;
+        return () => {
+            if (idleCallbackId) {
+                if ('requestIdleCallback' in window) {
+                    window.cancelIdleCallback(idleCallbackId);
+                } else {
+                    window.clearTimeout(idleCallbackId);
+                }
+            }
+            destroyScroll();
+        };
     }, [isScrollEnabled]);
 
     return (
