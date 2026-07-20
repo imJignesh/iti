@@ -728,7 +728,6 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
             />
             <Head>
                 <link rel="stylesheet" href="/styles/slug.css" />
-                <link rel="stylesheet" href="/styles/Blogpg.css" />
             </Head>
             {/* Additional manual tags if needed (e.g. article specific) */}
             <Head>
@@ -1131,6 +1130,178 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
 
                 </div>
             </section>
+
+            <style jsx>{`
+                .category-button {
+                    border-radius: 10px !important;
+                    background-color: white;
+                    border: 2px solid transparent;
+                    background-image: linear-gradient(white, white), linear-gradient(to right, #161664, #3F88BA);
+                    background-origin: border-box;
+                    background-clip: padding-box, border-box;
+                    transition: all 0.3s ease;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1rem !important;
+                    color: #233467 !important;
+                    padding: 0.5rem 1.2rem !important;
+                    font-weight: 500 !important;
+                    margin: 0;
+                }
+                .category-button:hover {
+                    color: #233467;
+                    background-image: linear-gradient(white, white), linear-gradient(to right, #161664, #3F88BA);
+                }
+
+                .postsList {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 40px;
+                }
+                .postsList :global(.col) {
+                    position: relative;
+                }
+                .postsList :global(.col svg) {
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    object-fit: cover;
+                    pointer-events: none;
+                }
+                .postsList :global(.card) {
+                    border: 2px solid #dbe5ff;
+                    border-radius: 30px !important;
+                    overflow: visible;
+                    position: relative;
+                    padding: 0;
+                    background: rgb(255, 255, 255);
+                    font-family: 'Poppins', sans-serif;
+                    margin: 0 !important;
+                }
+                .postsList :global(.card .card-img-top) {
+                    width: 100%;
+                    border-radius: 1rem;
+                }
+                .postsList :global(.card .card-body-text) {
+                    position: relative;
+                    flex: 1 1 auto;
+                    padding: 1vw 0 0 0;
+                    color: var(--bs-card-color);
+                }
+                .postsList :global(.card .card-subtitle) {
+                    margin-top: 0;
+                    font-size: 0.8rem;
+                    color: #233467d9;
+                }
+                .postsList :global(.card .card-title) {
+                    font-size: 1.3vw;
+                    line-height: 1.1;
+                    font-weight: 700;
+                    margin: 0 0 0.8vw 0;
+                    color: #233467;
+                    width: 100%;
+                }
+                .postsList :global(.card .card-text) {
+                    font-size: 1vw;
+                    line-height: 1.2;
+                    color: #233467d9;
+                    width: 16vw;
+                }
+                .postsList :global(.card a.btn-primary) {
+                    position: absolute;
+                    bottom: -0.5vw;
+                    right: 0;
+                    width: 3.5vw;
+                    height: 3.5vw;
+                    background: linear-gradient(to left, #E7F6FF, #A3CAF5);
+                    border-radius: 50%;
+                    border: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 20;
+                    margin: 0 !important;
+                }
+                .postsList :global(.card a.btn-primary svg) {
+                    fill: #233467;
+                }
+                .postsList :global(.social-icon-hover:hover) {
+                    color: #0d6efd !important;
+                }
+                .postsList :global(.social-icon-hover:nth-child(2):hover) {
+                    color: #212529 !important;
+                }
+                .postsList :global(.social-icon-hover:nth-child(3):hover) {
+                    color: #dc3545 !important;
+                }
+
+                @media (max-width: 1200px) {
+                    .postsList :global(.card a.btn-primary) {
+                        bottom: -1rem;
+                        right: -1rem;
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+                @media (max-width: 991px) {
+                    .postsList {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 40px;
+                    }
+                    .postsList :global(.card .card-title) {
+                        font-size: 1.2rem;
+                    }
+                    .postsList :global(.card .card-text) {
+                        font-size: 1rem;
+                        width: 80%;
+                    }
+                }
+                @media (max-width: 767px) {
+                    .postsList {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 0;
+                    }
+                    .postsList :global(.card .card-text) {
+                        width: 80%;
+                        font-size: 15px;
+                        line-height: 22px;
+                    }
+                    .postsList :global(.card .card-img-top) {
+                        height: auto;
+                    }
+                    .postsList :global(.card .card-title) {
+                        font-size: 20px;
+                    }
+                    .postsList :global(.card) {
+                        padding: 20px 20px 16px;
+                    }
+                    .postsList :global(.card a.btn-primary) {
+                        bottom: -0.5rem;
+                        right: -1rem;
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                    .postsList :global(.card .card-subtitle) {
+                        margin-top: 0px;
+                        font-size: 14px;
+                    }
+                }
+                @media (max-width: 575px) {
+                    .postsList :global(.card .card-text) {
+                        width: 80%;
+                    }
+                    .postsList.p-4 {
+                        padding: 0 !important;
+                        margin-bottom: 0 !important;
+                    }
+                    .postsList {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            `}</style>
         </>
     );
 }

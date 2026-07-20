@@ -8,7 +8,6 @@ import useSWR from 'swr';
 import SEO from "@/components/SEO";
 import Image from 'next/image';
 import JsonLd from "@/components/JsonLd";
-import Head from 'next/head';
 
 
 /**
@@ -421,9 +420,6 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
                 keywords={metaKeywords}
             />
             <JsonLd schema={categorySchema} />
-            <Head>
-                <link rel="stylesheet" href="/styles/Blogpg.css" />
-            </Head>
 
             <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }} >
                 <section
@@ -668,6 +664,217 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
                     )}
                 </section>
             </div>
+
+            <style jsx>{`
+                .careers-banner {
+                    font-family: "Montserrat", sans-serif;
+                    position: relative;
+                    max-width: 90vw;
+                    width: 100%;
+                    height: calc(90vw / 2.98);
+                    margin: auto;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    background-image: url("/assets/career-banner-desktop.webp");
+                    background-size: cover;
+                    background-position: center;
+                }
+                .dark-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.3);
+                    border-radius: 12px;
+                }
+                .overlay {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 30px;
+                    color: white;
+                    z-index: 1;
+                }
+                .heading {
+                    margin: 0;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 70px;
+                }
+                .subHeading {
+                    margin: 0;
+                    font-size: 20px;
+                    font-weight: 700;
+                    opacity: 0.8;
+                }
+                @media (max-width: 768px) {
+                    .careers-banner {
+                        height: 90vw;
+                        background-image: url("/assets/career-banner-mobile.webp");
+                    }
+                    .subHeading {
+                        font-size: 15px;
+                    }
+                    .heading {
+                        line-height: 1.3;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .ibdpBanner {
+                    width: 95vw !important;
+                    max-width: 95vw !important;
+                    margin: 0 auto;
+                }
+
+                .postsList {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 40px;
+                }
+                .postsList :global(.col) {
+                    position: relative;
+                }
+                .postsList :global(.col svg) {
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    object-fit: cover;
+                    pointer-events: none;
+                }
+                .postsList :global(.card) {
+                    border: 2px solid #dbe5ff;
+                    border-radius: 30px !important;
+                    overflow: visible;
+                    position: relative;
+                    padding: 0;
+                    background: rgb(255, 255, 255);
+                    font-family: 'Poppins', sans-serif;
+                    margin: 0 !important;
+                }
+                .postsList :global(.card .card-img-top) {
+                    width: 100%;
+                    border-radius: 1rem;
+                }
+                .postsList :global(.card .card-body-text) {
+                    position: relative;
+                    flex: 1 1 auto;
+                    padding: 1vw 0 0 0;
+                    color: var(--bs-card-color);
+                }
+                .postsList :global(.card .card-subtitle) {
+                    margin-top: 0;
+                    font-size: 0.8rem;
+                    color: #233467d9;
+                }
+                .postsList :global(.card .card-title) {
+                    font-size: 1.3vw;
+                    line-height: 1.1;
+                    font-weight: 700;
+                    margin: 0 0 0.8vw 0;
+                    color: #233467;
+                    width: 100%;
+                }
+                .postsList :global(.card .card-text) {
+                    font-size: 1vw;
+                    line-height: 1.2;
+                    color: #233467d9;
+                    width: 16vw;
+                }
+                .postsList :global(.card a.btn-primary) {
+                    position: absolute;
+                    bottom: -0.5vw;
+                    right: 0;
+                    width: 3.5vw;
+                    height: 3.5vw;
+                    background: linear-gradient(to left, #E7F6FF, #A3CAF5);
+                    border-radius: 50%;
+                    border: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 20;
+                    margin: 0 !important;
+                }
+                .postsList :global(.card a.btn-primary svg) {
+                    fill: #233467;
+                }
+                .postsList :global(.social-icon-hover:hover) {
+                    color: #0d6efd !important;
+                }
+                .postsList :global(.social-icon-hover:nth-child(2):hover) {
+                    color: #212529 !important;
+                }
+                .postsList :global(.social-icon-hover:nth-child(3):hover) {
+                    color: #dc3545 !important;
+                }
+
+                @media (max-width: 1200px) {
+                    .postsList :global(.card a.btn-primary) {
+                        bottom: -1rem;
+                        right: -1rem;
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+                @media (max-width: 991px) {
+                    .postsList {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 40px;
+                    }
+                    .postsList :global(.card .card-title) {
+                        font-size: 1.2rem;
+                    }
+                    .postsList :global(.card .card-text) {
+                        font-size: 1rem;
+                        width: 80%;
+                    }
+                }
+                @media (max-width: 767px) {
+                    .postsList {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 0;
+                    }
+                    .postsList :global(.card .card-text) {
+                        width: 80%;
+                        font-size: 15px;
+                        line-height: 22px;
+                    }
+                    .postsList :global(.card .card-img-top) {
+                        height: auto;
+                    }
+                    .postsList :global(.card .card-title) {
+                        font-size: 20px;
+                    }
+                    .postsList :global(.card) {
+                        padding: 20px 20px 16px;
+                    }
+                    .postsList :global(.card a.btn-primary) {
+                        bottom: -0.5rem;
+                        right: -1rem;
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                    .postsList :global(.card .card-subtitle) {
+                        margin-top: 0px;
+                        font-size: 14px;
+                    }
+                }
+                @media (max-width: 575px) {
+                    .postsList :global(.card .card-text) {
+                        width: 80%;
+                    }
+                    .postsList.p-4 {
+                        padding: 0 !important;
+                        margin-bottom: 0 !important;
+                    }
+                    .postsList {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            `}</style>
         </>
     );
 };

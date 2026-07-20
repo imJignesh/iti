@@ -100,8 +100,8 @@ const CategoriesIndexPage = ({ headerHeight }) => {
 
                 <section className="ibdpBanner container py-5" data-scroll data-scroll-section>
                     <div className="text-center mb-5">
-                        <h3 className="mb-4">Browse Our Topics</h3>
-                        <p className="text-muted">Select a category below to view all related blog posts.</p>
+                        <h3 className="topicsTitle mb-3">Browse Our Topics</h3>
+                        <p className="topicsDesc">Select a category below to view all related blog posts.</p>
                     </div>
 
                     {isLoading && (
@@ -153,6 +153,117 @@ const CategoriesIndexPage = ({ headerHeight }) => {
                     )}
                 </section>
             </div>
+
+            <style jsx>{`
+                .careers-banner {
+                    font-family: "Montserrat", sans-serif;
+                    position: relative;
+                    max-width: 90vw;
+                    width: 100%;
+                    height: calc(90vw / 2.98);
+                    margin: auto;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    background-image: url("/assets/career-banner-desktop.webp");
+                    background-size: cover;
+                    background-position: center;
+                }
+                .dark-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.3);
+                    border-radius: 12px;
+                }
+                .overlay {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 30px;
+                    color: white;
+                    z-index: 1;
+                }
+                .heading {
+                    margin: 0;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 70px;
+                }
+                .subHeading {
+                    margin: 0;
+                    font-size: 20px;
+                    font-weight: 700;
+                    opacity: 0.8;
+                }
+                @media (max-width: 768px) {
+                    .careers-banner {
+                        height: 90vw;
+                        background-image: url("/assets/career-banner-mobile.webp");
+                    }
+                    .subHeading {
+                        font-size: 15px;
+                    }
+                    .heading {
+                        line-height: 1.3;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .ibdpBanner {
+                    width: 95vw !important;
+                    max-width: 95vw !important;
+                    margin: 0 auto;
+                }
+
+                :global(.category-card) {
+                    border: 2px solid #dbe5ff;
+                    border-radius: 30px !important;
+                    overflow: visible;
+                    position: relative;
+                    background: linear-gradient(180deg, #E7F6FF 0%, #ffffff 45%);
+                    font-family: 'Poppins', sans-serif;
+                    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+                }
+                :global(.category-card:hover) {
+                    transform: translateY(-6px);
+                    border-color: #3F88BA;
+                    box-shadow: 0 12px 24px rgba(63, 136, 186, 0.18) !important;
+                }
+                :global(.category-card .card-title) {
+                    color: #161664 !important;
+                }
+                :global(.category-card .btn-outline-primary) {
+                    border-color: #3F88BA;
+                    color: #3F88BA;
+                    transition: all 0.25s ease;
+                }
+                :global(.category-card:hover .btn-outline-primary) {
+                    background: #3F88BA;
+                    color: #fff;
+                }
+
+                .topicsTitle {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: var(--blue-color);
+                    line-height: 1.2;
+                    text-transform: uppercase;
+                }
+                .topicsDesc {
+                    color: var(--grey-text);
+                    font-size: 1.1rem;
+                    opacity: 0.85;
+                }
+                @media (max-width: 991px) {
+                    .topicsTitle {
+                        font-size: 1.5rem;
+                    }
+                    .topicsDesc {
+                        font-size: 1rem;
+                    }
+                }
+            `}</style>
         </>
     );
 };
