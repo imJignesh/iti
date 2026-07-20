@@ -313,6 +313,8 @@ const Blogpg = ({ headerHeight, ...props }) => {
                                                                     className="card-img-top"
                                                                     alt={post.title.rendered}
                                                                     style={{ objectFit: 'cover', objectPosition: 'center' }}
+                                                                    loading="lazy"
+                                                                    decoding="async"
                                                                     onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/600x400/E0F2F7/333333?text=No+Image`; }}
                                                                 />
                                                             </a>
