@@ -91,24 +91,47 @@ const LocomotiveScrollProvider = ({ children }) => {
             console.log("Locomotive Scroll Initialized");
         };
 
-        let idleCallbackId = null;
+        let scrollListener = null;
+        let timeoutId = null;
 
         if (typeof window !== "undefined" && isScrollEnabled && !scrollInstanceRef.current) {
-            // Lazy-load: defer initialization using requestIdleCallback (after page is interactive)
-            // Falls back to setTimeout (5s) if requestIdleCallback not available
-            if ('requestIdleCallback' in window) {
-                idleCallbackId = window.requestIdleCallback(() => initScroll(), { timeout: 5000 });
-            } else {
-                idleCallbackId = window.setTimeout(initScroll, 5000);
-            }
+            // Lazy-load: defer initialization until first scroll or idle timeout (whichever comes first)
+            // This avoids jank from mid-scroll initialization
+            const scheduleInit = () => {
+                // Initialize via requestIdleCallback if available, else setTimeout(100ms)
+                if ('requestIdleCallback' in window) {
+                    timeoutId = window.requestIdleCallback(() => initScroll(), { timeout: 2000 });
+                } else {
+                    timeoutId = window.setTimeout(initScroll, 100);
+                }
+            };
+
+            // Listen for first scroll to initialize immediately
+            scrollListener = () => {
+                window.removeEventListener('scroll', scrollListener);
+                if (timeoutId) {
+                    if ('requestIdleCallback' in window) {
+                        window.cancelIdleCallback(timeoutId);
+                    } else {
+                        window.clearTimeout(timeoutId);
+                    }
+                }
+                initScroll();
+            };
+
+            window.addEventListener('scroll', scrollListener, { passive: true });
+            scheduleInit(); // Fallback timeout in case user doesn't scroll
         }
 
         return () => {
-            if (idleCallbackId) {
+            if (scrollListener) {
+                window.removeEventListener('scroll', scrollListener);
+            }
+            if (timeoutId) {
                 if ('requestIdleCallback' in window) {
-                    window.cancelIdleCallback(idleCallbackId);
+                    window.cancelIdleCallback(timeoutId);
                 } else {
-                    window.clearTimeout(idleCallbackId);
+                    window.clearTimeout(timeoutId);
                 }
             }
             destroyScroll();
