@@ -7,6 +7,12 @@ const Hero = () => {
     // next time this subtree re-renders (e.g. _app.js's scroll listener
     // toggling showButton), since className would otherwise be static.
     const [isVideoVisible, setIsVideoVisible] = useState(false);
+    // Gates whether the <source> child is rendered at all. autoPlay +
+    // preload="none" still lets browsers start an eager fetch for the video
+    // on mount (autoplay intent overrides the preload hint) — the only way
+    // to keep that fetch from racing the poster image for bandwidth is to
+    // not give the <video> a <source> to discover until this flips true.
+    const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
 
     const handleVideoPlaying = () => {
         setIsVideoVisible(true);
@@ -15,13 +21,21 @@ const Hero = () => {
     useEffect(() => {
         // Load video after poster image is displayed, without blocking page load
         const timerId = setTimeout(() => {
-            if (videoRef.current) {
-                videoRef.current.load();
-            }
+            setShouldLoadVideo(true);
         }, 1500);
 
         return () => clearTimeout(timerId);
     }, []);
+
+    useEffect(() => {
+        // No autoPlay attribute (see below), so once the <source> mounts we
+        // drive load + play from JS — this is the point the network request
+        // actually fires, on our schedule instead of the browser's.
+        if (shouldLoadVideo && videoRef.current) {
+            videoRef.current.load();
+            videoRef.current.play().catch(() => {});
+        }
+    }, [shouldLoadVideo]);
 
 
     return (
@@ -77,14 +91,15 @@ const Hero = () => {
                                     <video
                                         ref={videoRef}
                                         className={`heroVideo${isVideoVisible ? ' heroVideoVisible' : ''}`}
-                                        autoPlay
                                         muted
                                         loop
                                         playsInline
                                         preload="none"
                                         onPlaying={handleVideoPlaying}
                                     >
-                                        <source src="/videos/hero-banner-video-c1.mp4" type="video/mp4" />
+                                        {shouldLoadVideo && (
+                                            <source src="/videos/hero-banner-video-c1.mp4" type="video/mp4" />
+                                        )}
                                     </video>
                                 </div>
 
