@@ -1,5 +1,4 @@
 // components/CustomImageWrapper.js
-
 import NextImage from 'next/image';
 import { useRouter } from 'next/router';
 import { PAGE_DEFAULT_ALT_MAP, FALLBACK_ALT_TEXT } from '../../data/altConfig';
