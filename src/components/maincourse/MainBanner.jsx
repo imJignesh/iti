@@ -2,11 +2,7 @@
 
 export default function CareersBanner() {
   return (
-    <section className="careers-banner fade-in-section" data-scroll
-      data-scroll-class="is-inview"
-      data-scroll-repeat style={{
-        animationDelay: "0.3s",
-      }}>
+    <section className="careers-banner">
       {/* Dark overlay */}
       <div className="dark-overlay"></div>
 
@@ -25,15 +21,6 @@ export default function CareersBanner() {
       </div>
 
       <style jsx>{`
-          .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-          }
-          .fade-in-section.is-inview {
-            opacity: 1;
-            transform: translateY(0);
-          }
           .careers-banner {
             font-family: 'Montserrat', sans-serif;
             position: relative;

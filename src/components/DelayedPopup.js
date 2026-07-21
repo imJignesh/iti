@@ -2,8 +2,12 @@
 
 import React, { useState, useEffect, useContext } from 'react';
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
 import { PopupContext } from '../pages/_app';
-import GlobalPhoneInput from './GlobalPhoneInput'; // Ensure the path to your new component is correct
+const GlobalPhoneInput = dynamic(() => import('./GlobalPhoneInput'), {
+    ssr: false,
+    loading: () => <div style={{ height: '50px', width: '100%', borderRadius: '40px', border: '1.5px solid rgba(0,0,0,0.15)' }} />
+});
 
 const POPUP_DELAY_MS = 15000;
 const HAS_SEEN_POPUP_KEY = 'hasSeenPopupSession';
