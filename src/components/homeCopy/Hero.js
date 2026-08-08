@@ -1,29 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 
 const Hero = () => {
-    const videoRef = useRef(null);
-    // React state, not classList.add — an imperative DOM class gets wiped the
-    // next time this subtree re-renders (e.g. _app.js's scroll listener
-    // toggling showButton), since className would otherwise be static.
-    const [isVideoVisible, setIsVideoVisible] = useState(false);
-
-    const handleVideoPlaying = () => {
-        setIsVideoVisible(true);
-    };
-
-    useEffect(() => {
-        // Load video after poster image is displayed, without blocking page load
-        const timerId = setTimeout(() => {
-            if (videoRef.current) {
-                videoRef.current.load();
-            }
-        }, 1500);
-
-        return () => clearTimeout(timerId);
-    }, []);
-
-
     return (
         <>
             <Head>
@@ -58,13 +36,7 @@ const Hero = () => {
 
                             <div className="col-12 col-lg-5 col-xl-5 heroRight">
                                 <div className="videoContainer">
-                                    {/*
-                                      * SSR-safe poster: rendered in the initial HTML (no
-                                      * client-only useState gating it behind hydration), and
-                                      * the CSS below mirrors this element's box to whatever
-                                      * .heroVideo does at each breakpoint, so they can never
-                                      * size differently from each other.
-                                      */}
+                                    {/* Poster-only for PSI testing. Video is commented out temporarily. */}
                                     <img
                                         src="/images/hero-banner-video-c1-poster.webp"
                                         alt="Ignite tutor guiding a student through a live online tutoring class"
@@ -74,6 +46,7 @@ const Hero = () => {
                                         decoding="async"
                                         fetchPriority="high"
                                     />
+                                    {/*
                                     <video
                                         ref={videoRef}
                                         className={`heroVideo${isVideoVisible ? ' heroVideoVisible' : ''}`}
@@ -86,6 +59,7 @@ const Hero = () => {
                                     >
                                         <source src="/videos/hero-banner-video-c1.mp4" type="video/mp4" />
                                     </video>
+                                    */}
                                 </div>
 
                                 <div className="buttonGroup">
