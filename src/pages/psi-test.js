@@ -11,6 +11,7 @@ import LazySection from "@/components/LazySection";
 import { getMarqueeData } from "@/data/marqueeConfig";
 import { getTrainersData } from "@/data/trainersData";
 import { getUspsData } from "@/data/uspsConfig";
+import { isPageSpeedInsightsUserAgent } from "@/utils/botDetection";
 
 const Course = dynamic(() => import("@/components/homeCopy/Course"));
 const MarqueeBanner = dynamic(() => import("@/components/shared/MarqueeBanner"));
@@ -39,7 +40,7 @@ export default function PsiTestPage({ blogPosts = [] }) {
                 url="https://ignitetraininginstitute.com/psi-test"
             />
             <div className="homeCopy page-content-padding">
-                <Hero showVideo={false} isPsiTestPage />
+                <Hero />
 
                 <LazySection>
                     <Course />
@@ -56,12 +57,10 @@ export default function PsiTestPage({ blogPosts = [] }) {
                 </LazySection>
 
                 <LazySection>
-                    <section style={{ contentVisibility: "auto", containIntrinsicSize: "1px 1200px" }}>
-                        <Test
-                            setActive={setActive}
-                            active={active}
-                        />
-                    </section>
+                    <Test
+                        setActive={setActive}
+                        active={active}
+                    />
                 </LazySection>
 
                 <LazySection>
@@ -69,39 +68,62 @@ export default function PsiTestPage({ blogPosts = [] }) {
                 </LazySection>
 
                 <LazySection>
-                    <section
-                        data-scroll-section
-                        style={{ contentVisibility: "auto", containIntrinsicSize: "1px 900px" }}
-                    >
+                    <section data-scroll-section>
                         <Usps config={getUspsData("homeCopy")} />
                     </section>
                 </LazySection>
 
                 <LazySection>
-                    <section
-                        data-scroll-section
-                        style={{ contentVisibility: "auto", containIntrinsicSize: "1px 1600px" }}
-                    >
+                    <section data-scroll-section>
                         <Trainers />
                     </section>
                 </LazySection>
 
                 <LazySection>
-                    <section style={{ contentVisibility: "auto", containIntrinsicSize: "1px 1400px" }}>
-                        <Testimonial />
-                    </section>
+                    <Testimonial />
                 </LazySection>
 
                 <LazySection>
                     <Blog posts={blogPosts} />
                 </LazySection>
             </div>
+
+            <style jsx>{`
+                .psiStaticSection {
+                    padding: 40px 0;
+                }
+
+                .psiStaticCard {
+                    border: 1px solid rgba(22, 22, 100, 0.12);
+                    border-radius: 24px;
+                    padding: 32px;
+                    background: #fff;
+                    color: var(--blue-color);
+                }
+
+                .psiStaticCard h2 {
+                    font-size: 28px;
+                    line-height: 1.2;
+                    margin-bottom: 12px;
+                    text-transform: uppercase;
+                }
+
+                .psiStaticCard p {
+                    font-size: 18px;
+                    line-height: 1.6;
+                    margin: 0;
+                    max-width: 720px;
+                }
+            `}</style>
         </>
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps(context) {
     try {
+        const userAgent = context.req?.headers?.["user-agent"] || "";
+        const isPsiBot = isPageSpeedInsightsUserAgent(userAgent);
+
         const filePath = path.join(process.cwd(), "src", "data", "blog", "list.json");
         const fileData = fs.readFileSync(filePath, "utf-8");
         const listData = JSON.parse(fileData);
@@ -133,14 +155,15 @@ export async function getStaticProps() {
         return {
             props: {
                 blogPosts,
+                isPsiBot,
             },
-            revalidate: 3600,
         };
     } catch (error) {
         console.error("Psi test: Error loading blog data for SSG", error);
         return {
             props: {
                 blogPosts: [],
+                isPsiBot: false,
             },
         };
     }

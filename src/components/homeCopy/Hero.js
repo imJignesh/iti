@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import Head from "next/head";
-import Image from "next/image";
 
 const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = {}) => {
     const videoRef = useRef(null);
@@ -64,14 +63,15 @@ const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = 
                                 <div className="videoContainer">
                                     {/* SSR-safe poster rendered immediately, while the video loads after a short delay. */}
                                     {isPsiTestPage ? (
-                                        <Image
+                                        <img
                                             src="/images/hero-banner-video-c1-poster.webp"
                                             alt="Ignite tutor guiding a student through a live online tutoring class"
                                             width={552}
                                             height={620}
                                             className="heroPoster"
-                                            priority
-                                            sizes="(max-width: 767px) 90vw, 552px"
+                                            decoding="async"
+                                            loading="eager"
+                                            fetchPriority="high"
                                         />
                                     ) : (
                                         <img

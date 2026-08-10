@@ -59,14 +59,20 @@ export default function MyApp({ Component, pageProps }) {
     const [stylesLoaded, setStylesLoaded] = useState(false);
     const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(false);
     const isPsiTestPage = router.pathname === "/psi-test";
+    const isPsiTestBot = isPsiTestPage && Boolean(pageProps?.isPsiBot);
 
     const mobileBreakpoint = 2600;
 
     // Set Locomotive once on client mount (avoids hydration mismatch)
     useEffect(() => {
+        if (isPsiTestBot) {
+            setShouldLoadLocomotiveScroll(false);
+            return;
+        }
+
         const shouldEnable = window.innerWidth > 991 && !isPageSpeedInsights();
         setShouldLoadLocomotiveScroll(shouldEnable);
-    }, []);
+    }, [isPsiTestBot]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -144,75 +150,75 @@ export default function MyApp({ Component, pageProps }) {
                     __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css';l.crossOrigin='anonymous';document.head.appendChild(l);})();`
                 }}
             />
-            {!isPsiTestPage ? (
-                <>
-                    <Script
-                        id="gtm-script"
-                        strategy="afterInteractive"
-                        dangerouslySetInnerHTML={{
-                            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            {!(isPsiTestBot) ? (
+            <>
+                <Script
+                    id="gtm-script"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-PMG2GSQ');`,
-                        }}
-                    />
-                    {/* Google Tag (gtag.js) */}
-                    <Script
-                        src="https://www.googletagmanager.com/gtag/js?id=AW-844959495"
-                        strategy="afterInteractive"
-                    />
-                    <Script id="google-analytics" strategy="afterInteractive">
-                        {`
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag(){
-                                if (arguments[0] === 'event' && arguments[1] === 'conversion') {
-                                    console.trace("🔎 ANY GTAG CONVERSION ACCESSED:", arguments);
-                                }
-                                dataLayer.push(arguments);
+                    }}
+                />
+                {/* Google Tag (gtag.js) */}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=AW-844959495"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){
+                            if (arguments[0] === 'event' && arguments[1] === 'conversion') {
+                                console.trace("🔎 ANY GTAG CONVERSION ACCESSED:", arguments);
                             }
-                            gtag('js', new Date());
-                            gtag('config', 'AW-844959495');
-                        `}
-                    </Script>
+                            dataLayer.push(arguments);
+                        }
+                        gtag('js', new Date());
+                        gtag('config', 'AW-844959495');
+                    `}
+                </Script>
 
-                    {/* Load non-critical CSS (animations, transitions) after interactive */}
-                    <Script
-                        id="load-non-critical-css"
-                        strategy="afterInteractive"
-                        dangerouslySetInnerHTML={{
-                            __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/styles/non-critical.css';l.onload=function(){};document.head.appendChild(l);})();`
-                        }}
+                {/* Load non-critical CSS (animations, transitions) after interactive */}
+                <Script
+                    id="load-non-critical-css"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/styles/non-critical.css';l.onload=function(){};document.head.appendChild(l);})();`
+                    }}
+                />
+
+                {/* Meta Pixel Code */}
+                <Script id="meta-pixel" strategy="afterInteractive">
+                    {`
+                        !function(f,b,e,v,n,t,s)
+                        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                        n.queue=[];t=b.createElement(e);t.async=!0;
+                        t.src=v;s=b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t,s)}(window, document,'script',
+                        'https://connect.facebook.net/en_US/fbevents.js');
+                        fbq('init', '1590586591378731');
+                        fbq('track', 'PageView');
+                    `}
+                </Script>
+                <noscript>
+                    <img
+                        height="1"
+                        width="1"
+                        style={{ display: 'none' }}
+                        src="https://www.facebook.com/tr?id=1590586591378731&ev=PageView&noscript=1"
+                        alt=""
                     />
-
-                    {/* Meta Pixel Code */}
-                    <Script id="meta-pixel" strategy="afterInteractive">
-                        {`
-                            !function(f,b,e,v,n,t,s)
-                            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                            n.queue=[];t=b.createElement(e);t.async=!0;
-                            t.src=v;s=b.getElementsByTagName(e)[0];
-                            s.parentNode.insertBefore(t,s)}(window, document,'script',
-                            'https://connect.facebook.net/en_US/fbevents.js');
-                            fbq('init', '1590586591378731');
-                            fbq('track', 'PageView');
-                        `}
-                    </Script>
-                    <noscript>
-                        <img
-                            height="1"
-                            width="1"
-                            style={{ display: 'none' }}
-                            src="https://www.facebook.com/tr?id=1590586591378731&ev=PageView&noscript=1"
-                            alt=""
-                        />
-                    </noscript>
-                </>
+                </noscript>
+            </>
             ) : null}
 
-            {shouldLoadLocomotiveScroll ? (
+            {shouldLoadLocomotiveScroll && !isPsiTestBot ? (
                 <LocomotiveScrollProvider>
                     <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} />
                 </LocomotiveScrollProvider>

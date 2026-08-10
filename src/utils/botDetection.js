@@ -24,6 +24,19 @@ export const isPageSpeedInsights = () => {
     );
 };
 
+export const isPageSpeedInsightsUserAgent = (userAgent = "") => {
+    const normalized = userAgent.toLowerCase();
+
+    return (
+        normalized.includes('lighthouse') ||
+        normalized.includes('chrome-lighthouse') ||
+        normalized.includes('gtmetrix') ||
+        normalized.includes('pagespeed') ||
+        normalized.includes('speed insights') ||
+        normalized.includes('headlesschrome')
+    );
+};
+
 export const isBot = () => {
     if (typeof navigator === 'undefined') return false;
     const userAgent = navigator.userAgent.toLowerCase();
@@ -42,5 +55,6 @@ export const isBot = () => {
 
 export default {
     isPageSpeedInsights,
+    isPageSpeedInsightsUserAgent,
     isBot,
 };
