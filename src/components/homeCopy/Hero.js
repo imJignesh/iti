@@ -185,6 +185,16 @@ const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = 
                     content: none !important;
                     background: none !important;
                 }
+
+                .heroPoster {
+                    width: 95%;
+                    height: auto;
+                }
+
+                .heroVideo {
+                    width: 95%;
+                    height: auto;
+                }
                 ` : ""}
 
                 .heroMain {
@@ -508,6 +518,18 @@ const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = 
                 }
 
                 @media (max-width: 575px) {
+                    ${isPsiTestPage ? `
+                    .heroPoster {
+                        width: 90%;
+                        height: auto;
+                    }
+
+                    .heroVideo {
+                        width: 90%;
+                        height: auto;
+                    }
+                    ` : ""}
+
                     .hero {
                         padding: 10px 0 0 0;
                         background: url(/images/banner-bg-mobile.webp) no-repeat;
@@ -522,16 +544,14 @@ const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = 
                         justify-content: center;
                     }
 
-                    /* The video is centered here via the container's flex
-                       justify-content, but that doesn't affect .heroPoster
-                       since it's position:absolute — so it needs the
-                       equivalent centering done explicitly. */
                     .heroPoster {
-                        top: 0;
-                        left: 50%;
+                        position: relative;
+                        top: auto;
+                        left: auto;
                         width: auto;
                         height: 100%;
-                        transform: translateX(-50%);
+                        max-width: 100%;
+                        transform: none;
                     }
 
                     .heroVideo {
