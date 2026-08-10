@@ -14,7 +14,7 @@ export default function PsiTestPage() {
                 url="https://ignitetraininginstitute.com/psi-test"
             />
             <div className="page-content-padding">
-                <Hero showVideo={false} />
+                <Hero showVideo={false} isPsiTestPage />
             </div>
         </>
     );

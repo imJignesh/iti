@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Head from "next/head";
 
-const Hero = ({ showVideo = true, showButtons = true } = {}) => {
+const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = {}) => {
     const videoRef = useRef(null);
     const [isVideoVisible, setIsVideoVisible] = useState(false);
 
@@ -26,9 +26,13 @@ const Hero = ({ showVideo = true, showButtons = true } = {}) => {
     return (
         <>
             <Head>
-                {/* Preload Background Decoration Images (low priority — not LCP) */}
-                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" {...{ fetchpriority: 'low' }} />
-                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" {...{ fetchpriority: 'low' }} />
+                {!isPsiTestPage ? (
+                    <>
+                        {/* Preload Background Decoration Images (low priority — not LCP) */}
+                        <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" {...{ fetchpriority: 'low' }} />
+                        <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" {...{ fetchpriority: 'low' }} />
+                    </>
+                ) : null}
             </Head>
 
             <div className="heroSectionWrapper">
@@ -158,6 +162,17 @@ const Hero = ({ showVideo = true, showButtons = true } = {}) => {
                     aspect-ratio: 81 / 32;
                     background-size: cover;
                 }
+
+                ${isPsiTestPage ? `
+                .hero {
+                    background: none !important;
+                }
+
+                .homeherosection > div::after {
+                    content: none !important;
+                    background: none !important;
+                }
+                ` : ""}
 
                 .heroMain {
                     display: flex;
