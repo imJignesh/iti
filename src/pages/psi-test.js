@@ -56,10 +56,12 @@ export default function PsiTestPage({ blogPosts = [] }) {
                 </LazySection>
 
                 <LazySection>
-                    <Test
-                        setActive={setActive}
-                        active={active}
-                    />
+                    <section style={{ contentVisibility: "auto", containIntrinsicSize: "1px 1200px" }}>
+                        <Test
+                            setActive={setActive}
+                            active={active}
+                        />
+                    </section>
                 </LazySection>
 
                 <LazySection>
@@ -67,19 +69,27 @@ export default function PsiTestPage({ blogPosts = [] }) {
                 </LazySection>
 
                 <LazySection>
-                    <section data-scroll-section>
+                    <section
+                        data-scroll-section
+                        style={{ contentVisibility: "auto", containIntrinsicSize: "1px 900px" }}
+                    >
                         <Usps config={getUspsData("homeCopy")} />
                     </section>
                 </LazySection>
 
                 <LazySection>
-                    <section data-scroll-section>
+                    <section
+                        data-scroll-section
+                        style={{ contentVisibility: "auto", containIntrinsicSize: "1px 1600px" }}
+                    >
                         <Trainers />
                     </section>
                 </LazySection>
 
                 <LazySection>
-                    <Testimonial />
+                    <section style={{ contentVisibility: "auto", containIntrinsicSize: "1px 1400px" }}>
+                        <Testimonial />
+                    </section>
                 </LazySection>
 
                 <LazySection>
