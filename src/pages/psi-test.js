@@ -1,17 +1,14 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
-import fs from "fs";
-import path from "path";
-import he from "he";
 import { useState } from "react";
-
+import dynamic from "next/dynamic";
+import LazySection from "@/components/LazySection";
 import SEO from "@/components/SEO";
 import Hero from "@/components/homeCopy/Hero";
-import LazySection from "@/components/LazySection";
 import { getMarqueeData } from "@/data/marqueeConfig";
 import { getTrainersData } from "@/data/trainersData";
-import { getUspsData } from "@/data/uspsConfig";
-import { isPageSpeedInsightsUserAgent } from "@/utils/botDetection";
+import path from "path";
+import fs from "fs";
+import he from "he";
 
 const Course = dynamic(() => import("@/components/homeCopy/Course"));
 const MarqueeBanner = dynamic(() => import("@/components/shared/MarqueeBanner"));
@@ -41,7 +38,6 @@ export default function PsiTestPage({ blogPosts = [] }) {
             />
             <div className="homeCopy page-content-padding">
                 <Hero />
-
                 <LazySection>
                     <Course />
                 </LazySection>
@@ -57,10 +53,7 @@ export default function PsiTestPage({ blogPosts = [] }) {
                 </LazySection>
 
                 <LazySection>
-                    <Test
-                        setActive={setActive}
-                        active={active}
-                    />
+                    <Test setActive={setActive} active={active} />
                 </LazySection>
 
                 <LazySection>
@@ -69,7 +62,7 @@ export default function PsiTestPage({ blogPosts = [] }) {
 
                 <LazySection>
                     <section data-scroll-section>
-                        <Usps config={getUspsData("homeCopy")} />
+                        <Usps />
                     </section>
                 </LazySection>
 
@@ -87,47 +80,15 @@ export default function PsiTestPage({ blogPosts = [] }) {
                     <Blog posts={blogPosts} />
                 </LazySection>
             </div>
-
-            <style jsx>{`
-                .psiStaticSection {
-                    padding: 40px 0;
-                }
-
-                .psiStaticCard {
-                    border: 1px solid rgba(22, 22, 100, 0.12);
-                    border-radius: 24px;
-                    padding: 32px;
-                    background: #fff;
-                    color: var(--blue-color);
-                }
-
-                .psiStaticCard h2 {
-                    font-size: 28px;
-                    line-height: 1.2;
-                    margin-bottom: 12px;
-                    text-transform: uppercase;
-                }
-
-                .psiStaticCard p {
-                    font-size: 18px;
-                    line-height: 1.6;
-                    margin: 0;
-                    max-width: 720px;
-                }
-            `}</style>
         </>
     );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps() {
     try {
-        const userAgent = context.req?.headers?.["user-agent"] || "";
-        const isPsiBot = isPageSpeedInsightsUserAgent(userAgent);
-
         const filePath = path.join(process.cwd(), "src", "data", "blog", "list.json");
         const fileData = fs.readFileSync(filePath, "utf-8");
         const listData = JSON.parse(fileData);
-
         const rawPosts = listData.posts ? listData.posts.slice(0, 3) : [];
 
         const blogPosts = rawPosts.map((post) => {
@@ -153,18 +114,11 @@ export async function getServerSideProps(context) {
         });
 
         return {
-            props: {
-                blogPosts,
-                isPsiBot,
-            },
+            props: { blogPosts },
+            revalidate: 3600,
         };
-    } catch (error) {
-        console.error("Psi test: Error loading blog data for SSG", error);
-        return {
-            props: {
-                blogPosts: [],
-                isPsiBot: false,
-            },
-        };
+    } catch (e) {
+        console.error("PSI Test: Error loading blog data for SSG", e);
+        return { props: { blogPosts: [] } };
     }
 }

@@ -1,38 +1,13 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 
-const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = {}) => {
-    const videoRef = useRef(null);
-    const [isVideoVisible, setIsVideoVisible] = useState(false);
-
-    const handleVideoPlaying = () => {
-        setIsVideoVisible(true);
-    };
-
-    useEffect(() => {
-        if (!showVideo) {
-            return undefined;
-        }
-
-        const timerId = setTimeout(() => {
-            if (videoRef.current) {
-                videoRef.current.load();
-            }
-        }, 1500);
-
-        return () => clearTimeout(timerId);
-    }, [showVideo]);
-
+const Hero = () => {
     return (
         <>
             <Head>
-                {!isPsiTestPage ? (
-                    <>
-                        {/* Preload Background Decoration Images (low priority — not LCP) */}
-                        <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" {...{ fetchpriority: 'low' }} />
-                        <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" {...{ fetchpriority: 'low' }} />
-                    </>
-                ) : null}
+                {/* Preload Background Decoration Images (low priority — not LCP) */}
+                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" {...{ fetchpriority: 'low' }} />
+                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" {...{ fetchpriority: 'low' }} />
             </Head>
 
             <div className="heroSectionWrapper">
@@ -61,69 +36,54 @@ const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = 
 
                             <div className="col-12 col-lg-5 col-xl-5 heroRight">
                                 <div className="videoContainer">
-                                    {/* SSR-safe poster rendered immediately, while the video loads after a short delay. */}
-                                    {isPsiTestPage ? (
-                                        <img
-                                            src="/images/hero-banner-video-c1-poster.webp"
-                                            alt="Ignite tutor guiding a student through a live online tutoring class"
-                                            width={552}
-                                            height={620}
-                                            className="heroPoster"
-                                            decoding="async"
-                                            loading="eager"
-                                            fetchPriority="high"
-                                        />
-                                    ) : (
-                                        <img
-                                            src="/images/hero-banner-video-c1-poster.webp"
-                                            alt="Ignite tutor guiding a student through a live online tutoring class"
-                                            width={552}
-                                            height={620}
-                                            className="heroPoster"
-                                            decoding="async"
-                                            fetchPriority="high"
-                                        />
-                                    )}
-                                    {showVideo ? (
-                                        <video
-                                            ref={videoRef}
-                                            className={`heroVideo${isVideoVisible ? ' heroVideoVisible' : ''}`}
-                                            autoPlay
-                                            muted
-                                            loop
-                                            playsInline
-                                            preload="none"
-                                            onPlaying={handleVideoPlaying}
-                                        >
-                                            <source src="/videos/hero-banner-video-c1.mp4" type="video/mp4" />
-                                        </video>
-                                    ) : null}
+                                    {/* Poster-only for PSI testing. Video is commented out temporarily. */}
+                                    <img
+                                        src="/images/hero-banner-video-c1-poster.webp"
+                                        alt="Ignite tutor guiding a student through a live online tutoring class"
+                                        width={552}
+                                        height={620}
+                                        className="heroPoster"
+                                        decoding="async"
+                                        fetchPriority="high"
+                                    />
+                                    {/*
+                                    <video
+                                        ref={videoRef}
+                                        className={`heroVideo${isVideoVisible ? ' heroVideoVisible' : ''}`}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        preload="none"
+                                        onPlaying={handleVideoPlaying}
+                                    >
+                                        <source src="/videos/hero-banner-video-c1.mp4" type="video/mp4" />
+                                    </video>
+                                    */}
                                 </div>
 
-                                {showButtons ? (
-                                    <div className="buttonGroup">
-                                        <a href="/join-free-demo-class/" className="buttonBlue">
-                                            Get A Free Demo{" "}
-                                            <img
-                                                src="/images/right-arrow-skyblue.webp"
-                                                width={40}
-                                                height={40}
-                                                alt="Right arrow"
-                                                loading="eager"
-                                            />
-                                        </a>
-                                        <a href="/courses/" className="buttonSkyBlue">
-                                            Explore Classes{" "}
-                                            <img
-                                                src="/images/right-arrow-blue.webp"
-                                                width={40}
-                                                height={40}
-                                                alt="Right arrow"
-                                                loading="eager"
-                                            />
-                                        </a>
-                                    </div>
-                                ) : null}
+                                <div className="buttonGroup">
+                                    <a href="/join-free-demo-class/" className="buttonBlue">
+                                        Get A Free Demo{" "}
+                                        <img
+                                            src="/images/right-arrow-skyblue.webp"
+                                            width={40}
+                                            height={40}
+                                            alt="Right arrow"
+                                            loading="eager"
+                                        />
+                                    </a>
+                                    <a href="/courses/" className="buttonSkyBlue">
+                                        Explore Classes{" "}
+                                        <img
+                                            src="/images/right-arrow-blue.webp"
+                                            width={40}
+                                            height={40}
+                                            alt="Right arrow"
+                                            loading="eager"
+                                        />
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -175,27 +135,6 @@ const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = 
                     aspect-ratio: 81 / 32;
                     background-size: cover;
                 }
-
-                ${isPsiTestPage ? `
-                .hero {
-                    background: none !important;
-                }
-
-                .homeherosection > div::after {
-                    content: none !important;
-                    background: none !important;
-                }
-
-                .heroPoster {
-                    width: 95%;
-                    height: auto;
-                }
-
-                .heroVideo {
-                    width: 95%;
-                    height: auto;
-                }
-                ` : ""}
 
                 .heroMain {
                     display: flex;
@@ -518,17 +457,6 @@ const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = 
                 }
 
                 @media (max-width: 575px) {
-                    ${isPsiTestPage ? `
-                    .heroPoster {
-                        width: 90%;
-                        height: auto;
-                    }
-
-                    .heroVideo {
-                        display: none !important;
-                    }
-                    ` : ""}
-
                     .hero {
                         padding: 10px 0 0 0;
                         background: url(/images/banner-bg-mobile.webp) no-repeat;
@@ -543,14 +471,23 @@ const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = 
                         justify-content: center;
                     }
 
+                    /* The video is centered here via the container's flex
+                       justify-content, but that doesn't affect .heroPoster
+                       since it's position:absolute — so it needs the
+                       equivalent centering done explicitly. */
                     .heroPoster {
-                        position: relative;
-                        top: auto;
-                        left: auto;
+                        top: 0;
+                        left: 50%;
                         width: auto;
                         height: 100%;
-                        max-width: 100%;
-                        transform: none;
+                        transform: translateX(-50%);
+                    }
+
+                    .heroVideo {
+                        height: 100%;
+                        width: auto;
+                        text-align: center;
+                        margin: 0 auto;
                     }
 
                     .heroRight .buttonGroup :global(.buttonBlue),
