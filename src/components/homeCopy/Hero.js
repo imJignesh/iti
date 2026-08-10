@@ -525,8 +525,7 @@ const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = 
                     }
 
                     .heroVideo {
-                        width: 90%;
-                        height: auto;
+                        display: none !important;
                     }
                     ` : ""}
 
@@ -552,13 +551,6 @@ const Hero = ({ showVideo = true, showButtons = true, isPsiTestPage = false } = 
                         height: 100%;
                         max-width: 100%;
                         transform: none;
-                    }
-
-                    .heroVideo {
-                        height: 100%;
-                        width: auto;
-                        text-align: center;
-                        margin: 0 auto;
                     }
 
                     .heroRight .buttonGroup :global(.buttonBlue),
