@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Head from "next/head";
 
-const Hero = ({ showVideo = true } = {}) => {
+const Hero = ({ showVideo = true, showButtons = true } = {}) => {
     const videoRef = useRef(null);
     const [isVideoVisible, setIsVideoVisible] = useState(false);
 
@@ -83,28 +83,30 @@ const Hero = ({ showVideo = true } = {}) => {
                                     ) : null}
                                 </div>
 
-                                <div className="buttonGroup">
-                                    <a href="/join-free-demo-class/" className="buttonBlue">
-                                        Get A Free Demo{" "}
-                                        <img
-                                            src="/images/right-arrow-skyblue.webp"
-                                            width={40}
-                                            height={40}
-                                            alt="Right arrow"
-                                            loading="eager"
-                                        />
-                                    </a>
-                                    <a href="/courses/" className="buttonSkyBlue">
-                                        Explore Classes{" "}
-                                        <img
-                                            src="/images/right-arrow-blue.webp"
-                                            width={40}
-                                            height={40}
-                                            alt="Right arrow"
-                                            loading="eager"
-                                        />
-                                    </a>
-                                </div>
+                                {showButtons ? (
+                                    <div className="buttonGroup">
+                                        <a href="/join-free-demo-class/" className="buttonBlue">
+                                            Get A Free Demo{" "}
+                                            <img
+                                                src="/images/right-arrow-skyblue.webp"
+                                                width={40}
+                                                height={40}
+                                                alt="Right arrow"
+                                                loading="eager"
+                                            />
+                                        </a>
+                                        <a href="/courses/" className="buttonSkyBlue">
+                                            Explore Classes{" "}
+                                            <img
+                                                src="/images/right-arrow-blue.webp"
+                                                width={40}
+                                                height={40}
+                                                alt="Right arrow"
+                                                loading="eager"
+                                            />
+                                        </a>
+                                    </div>
+                                ) : null}
                             </div>
                         </div>
                     </div>
