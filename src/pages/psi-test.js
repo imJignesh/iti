@@ -14,12 +14,7 @@ export default function PsiTestPage() {
                 url="https://ignitetraininginstitute.com/psi-test"
             />
             <div className="page-content-padding">
-                <Hero />
-                <section className="container" style={{ paddingTop: "24px", paddingBottom: "24px" }}>
-                    <p style={{ margin: 0, textAlign: "center", color: "var(--blue-color)", fontSize: "16px" }}>
-                        PSI sandbox: hero-only baseline for performance testing.
-                    </p>
-                </section>
+                <Hero showVideo={false} />
             </div>
         </>
     );

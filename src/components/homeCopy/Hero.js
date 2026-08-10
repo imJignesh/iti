@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Head from "next/head";
 
-const Hero = () => {
+const Hero = ({ showVideo = true } = {}) => {
     const videoRef = useRef(null);
     const [isVideoVisible, setIsVideoVisible] = useState(false);
 
@@ -10,6 +10,10 @@ const Hero = () => {
     };
 
     useEffect(() => {
+        if (!showVideo) {
+            return undefined;
+        }
+
         const timerId = setTimeout(() => {
             if (videoRef.current) {
                 videoRef.current.load();
@@ -17,7 +21,7 @@ const Hero = () => {
         }, 1500);
 
         return () => clearTimeout(timerId);
-    }, []);
+    }, [showVideo]);
 
     return (
         <>
@@ -63,18 +67,20 @@ const Hero = () => {
                                         decoding="async"
                                         fetchPriority="high"
                                     />
-                                    <video
-                                        ref={videoRef}
-                                        className={`heroVideo${isVideoVisible ? ' heroVideoVisible' : ''}`}
-                                        autoPlay
-                                        muted
-                                        loop
-                                        playsInline
-                                        preload="none"
-                                        onPlaying={handleVideoPlaying}
-                                    >
-                                        <source src="/videos/hero-banner-video-c1.mp4" type="video/mp4" />
-                                    </video>
+                                    {showVideo ? (
+                                        <video
+                                            ref={videoRef}
+                                            className={`heroVideo${isVideoVisible ? ' heroVideoVisible' : ''}`}
+                                            autoPlay
+                                            muted
+                                            loop
+                                            playsInline
+                                            preload="none"
+                                            onPlaying={handleVideoPlaying}
+                                        >
+                                            <source src="/videos/hero-banner-video-c1.mp4" type="video/mp4" />
+                                        </video>
+                                    ) : null}
                                 </div>
 
                                 <div className="buttonGroup">
