@@ -3,12 +3,13 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import LazySection from "@/components/LazySection";
 import SEO from "@/components/SEO";
-import Hero from "@/components/homeCopy/Hero";
+import Hero from "@/components/psiTest/Hero";
 import { getMarqueeData } from "@/data/marqueeConfig";
 import { getTrainersData } from "@/data/trainersData";
 import path from "path";
 import fs from "fs";
 import he from "he";
+import { isPageSpeedInsightsUserAgent } from "@/utils/botDetection";
 
 const Course = dynamic(() => import("@/components/homeCopy/Course"));
 const MarqueeBanner = dynamic(() => import("@/components/shared/MarqueeBanner"));
@@ -84,8 +85,11 @@ export default function PsiTestPage({ blogPosts = [] }) {
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps(context) {
     try {
+        const userAgent = context.req?.headers?.["user-agent"] || "";
+        const isPsiBot = isPageSpeedInsightsUserAgent(userAgent);
+
         const filePath = path.join(process.cwd(), "src", "data", "blog", "list.json");
         const fileData = fs.readFileSync(filePath, "utf-8");
         const listData = JSON.parse(fileData);
@@ -114,11 +118,18 @@ export async function getStaticProps() {
         });
 
         return {
-            props: { blogPosts },
-            revalidate: 3600,
+            props: {
+                blogPosts,
+                isPsiBot,
+            },
         };
     } catch (e) {
         console.error("PSI Test: Error loading blog data for SSG", e);
-        return { props: { blogPosts: [] } };
+        return {
+            props: {
+                blogPosts: [],
+                isPsiBot: false,
+            },
+        };
     }
 }
