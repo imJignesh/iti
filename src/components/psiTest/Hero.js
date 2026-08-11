@@ -478,6 +478,10 @@ const Hero = () => {
                         justify-content: center;
                     }
 
+                    .heroVideo {
+                        display: none !important;
+                    }
+
                     .heroPoster {
                         top: 0;
                         left: 50%;
