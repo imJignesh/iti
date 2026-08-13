@@ -110,7 +110,9 @@ async function fetchAll(endpoint) {
     let totalPages = 1;
     do {
         const res = await fetch(`${API_BASE}/${endpoint}?per_page=100&page=${page}`);
-        if (!res.ok) break;
+        if (!res.ok) {
+            throw new Error(`${endpoint} sync failed on page ${page}: HTTP ${res.status}`);
+        }
         if (page === 1) totalPages = parseInt(res.headers.get('X-WP-TotalPages'), 10) || 1;
         const data = await res.json();
         results = results.concat(data);
@@ -138,7 +140,9 @@ async function runMirrorSync() {
     do {
         const fetchUrl = `${API_BASE}/posts?per_page=50&page=${page}&_embed`;
         const response = await fetch(fetchUrl);
-        if (!response.ok) break;
+        if (!response.ok) {
+            throw new Error(`posts sync failed on page ${page}: HTTP ${response.status}`);
+        }
         if (page === 1) totalPages = parseInt(response.headers.get('X-WP-TotalPages'), 10) || 1;
 
         const posts = await response.json();
@@ -199,7 +203,9 @@ async function runMirrorSync() {
     }
 
     // --- AUTO GITHUB PUSH ---
-    const pushed = gitPushChanges(`Blog Sync: Full Mirror Update [${new Date().toISOString()}]`);
+    const pushed = process.env.BLOG_SYNC_AUTO_PUSH === 'true'
+        ? gitPushChanges(`Blog Sync: Full Mirror Update [${new Date().toISOString()}]`)
+        : false;
 
     return {
         success: true,
@@ -266,7 +272,9 @@ async function syncSinglePost(slug) {
     }
 
     // --- AUTO GITHUB PUSH ---
-    const pushed = gitPushChanges(`Blog Sync: Updated "${post.title?.rendered || slug}"`);
+    const pushed = process.env.BLOG_SYNC_AUTO_PUSH === 'true'
+        ? gitPushChanges(`Blog Sync: Updated "${post.title?.rendered || slug}"`)
+        : false;
 
     return { success: true, slug: slug, date: new Date().toISOString(), pushedToGithub: pushed };
 }

@@ -1,0 +1,824 @@
+{
+  "id": 15574,
+  "date": "2026-08-05T06:18:40",
+  "date_gmt": "2026-08-05T06:18:40",
+  "guid": {
+    "rendered": "https://api.ignitetraininginstitute.com/?p=15574"
+  },
+  "modified": "2026-08-05T07:04:22",
+  "modified_gmt": "2026-08-05T07:04:22",
+  "slug": "edexcel-igcse-computer-science",
+  "status": "publish",
+  "type": "post",
+  "link": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/",
+  "title": {
+    "rendered": "Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources"
+  },
+  "content": {
+    "rendered": "\n<div class=\"wp-block-columns key-features is-layout-flex wp-container-core-columns-is-layout-7387b849 wp-block-columns-is-layout-flex\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\">\n<h3 class=\"wp-block-heading\">Key Summary</h3>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Two Papers, Equal Weight: </strong>Edexcel IGCSE Computer Science splits evenly between a written theory paper and a practical programming paper, each worth half the final grade.</li>\n\n\n\n<li><strong>9-1 Grading Only: </strong>Unlike Cambridge, which offers UAE schools a choice of scales, Edexcel International GCSE Computer Science is graded 9-1 with no A*-G option.</li>\n\n\n\n<li><strong>Python, C#, or Java: </strong>Paper 2 is a practical coding exam, and students choose one of three languages, most commonly Python, to write and test their solutions.</li>\n\n\n\n<li><strong>June-Only Entry: </strong>Based on the current specification and the published 2026 exam timetable, Computer Science is only offered in the June exam series.</li>\n\n\n\n<li><strong>Past Papers Are The Best Prep: </strong>Working through official Pearson past papers under timed conditions, especially for the programming paper, is the most reliable way to prepare.</li>\n</ul>\n</div>\n</div>\n\n\n\n<p class=\"wp-block-paragraph\">If your child&#8217;s school has just confirmed Edexcel IGCSE Computer Science, the first question most parents ask is simple. What does this subject actually involve?</p>\n\n\n\n<p class=\"wp-block-paragraph\">This guide covers the syllabus, both papers, the weighting of the assessment objectives, and where to find official past papers. <a href=\"https://ignitetraininginstitute.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Ignite Training Institute</a> works with Edexcel, Cambridge, &amp; OxfordAQA Computer Science students across Dubai, UAE.</p>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>What Is Edexcel IGCSE Computer Science (4CP0)?</strong></h2>\n\n\n\n<p class=\"wp-block-paragraph\">Edexcel IGCSE Computer Science is Pearson&#8217;s International GCSE qualification in computer science, assessed through two equally weighted papers covering computational thinking, programming, and how computer systems work. It carries the subject code 4CP0 and uses the 9-1 grading scale exclusively.</p>\n\n\n\n<figure class=\"wp-block-table\"><table class=\"has-fixed-layout\"><tbody><tr><td>Detail</td><td>Information</td></tr><tr><td>Subject code</td><td>4CP0</td></tr><tr><td>First teaching</td><td>September 2017</td></tr><tr><td>First examination</td><td>June 2019</td></tr><tr><td>Grading scale</td><td>9-1 only, no A*-G option</td></tr><tr><td>Number of papers</td><td>2, both compulsory</td></tr><tr><td>Total marks</td><td>160 (80 per paper)</td></tr><tr><td>Assessment</td><td>100% exam, no coursework</td></tr></tbody></table></figure>\n\n\n\n<p class=\"wp-block-paragraph\">Most British curriculum schools in Dubai use Cambridge IGCSE Computer Science (0478) instead, which follows a different paper structure and, in the UAE, gives schools a choice between A*-G and 9-1 grading. Edexcel does not offer that choice, it is 9-1 across the board.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Edexcel International GCSE subjects generally run in January, May and June, and October or November sessions. Computer Science is an exception. Confirm current entry windows with your school, since this can change between specification issues.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Know More About: </strong><a href=\"https://ignitetraininginstitute.com/computer-science-tutor-in-dubai\" target=\"_blank\" rel=\"noreferrer noopener\">Computer Science Tutors In Dubai – IB, IGCSE, A-Levels, &amp; AP</a></p>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>The Edexcel IGCSE Computer Science Syllabus Explained</strong></h2>\n\n\n\n<p class=\"wp-block-paragraph\">The syllabus is organised into six topics, and all six are examinable on both papers rather than being split cleanly by paper.</p>\n\n\n\n<h3 class=\"wp-block-heading\"><strong>Topics 1 To 3: Problem Solving, Programming, And Data</strong></h3>\n\n\n\n<p class=\"wp-block-paragraph\">Topic 1, Problem Solving, covers algorithms, decomposition, and abstraction, including four standard algorithms you need to know inside out: bubble sort, merge sort, linear search, and binary search. Expect to interpret, trace, and create algorithms using flowcharts, pseudocode, and written descriptions, not just recognise them.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Topic 2, Programming, is the core coding topic and the one most closely tied to Paper 2. It covers writing and debugging programs, constructs like sequence, selection, and iteration, data types and structures including one and two-dimensional arrays, input and output handling, operators, and subprograms that use parameters.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Topic 3, Data, covers binary and hexadecimal representation, how text, images, and sound are stored in binary, data storage units from bits to terabytes, lossy and lossless compression, and four named encryption methods including the Caesar and Vigenere ciphers.</p>\n\n\n\n<h3 class=\"wp-block-heading\"><strong>Topics 4 To 6: Computers, Communication, And The Bigger Picture</strong></h3>\n\n\n\n<p class=\"wp-block-paragraph\">Topic 4, Computers, covers the input-process-output model, hardware components, the fetch-decode-execute cycle, factors affecting CPU performance, logic gates and truth tables, operating systems, utility software, and high-level versus low-level programming languages.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Topic 5, Communication and the internet, covers network types and topologies, protocols including TCP/IP and HTTP, network security threats like phishing and eavesdropping, and how the internet and World Wide Web are structured through IP addressing and DNS.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Topic 6, The bigger picture, is the shortest topic. It covers the environmental, ethical, and legal impact of technology, along with awareness of emerging trends such as quantum computing, DNA computing, and artificial intelligence.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Know More About: </strong><a href=\"https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai\" target=\"_blank\" rel=\"noreferrer noopener\">IGCSE Tutors In Dubai, UAE For Assured Results</a></p>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>How Are Paper 1 And Paper 2 Structured?</strong></h2>\n\n\n\n<p class=\"wp-block-paragraph\">Both papers draw on all six topics, but they test different skills, and they weight the three assessment objectives very differently.</p>\n\n\n\n<h3 class=\"wp-block-heading\"><strong>Paper 1 And Paper 2 At A Glance</strong></h3>\n\n\n\n<p class=\"wp-block-paragraph\">Paper 1, Principles of Computer Science, is a two-hour written exam worth 80 marks, testing understanding through multiple-choice, short, and extended written questions. Paper 2, Application of Computational Thinking, is a three-hour practical exam worth 80 marks, sat on a computer in Python, C#, or Java, with a pseudocode reference document provided.</p>\n\n\n\n<figure class=\"wp-block-table\"><table class=\"has-fixed-layout\"><tbody><tr><td>Detail</td><td>Paper 1</td><td>Paper 2</td></tr><tr><td>Paper code</td><td>4CP0/01</td><td>4CP0/02</td></tr><tr><td>Title</td><td>Principles Of Computer Science</td><td>Application Of Computational Thinking</td></tr><tr><td>Duration</td><td>2 hours</td><td>3 hours</td></tr><tr><td>Format</td><td>Written, paper-based</td><td>Practical, computer-based</td></tr><tr><td>Marks</td><td>80</td><td>80</td></tr><tr><td>Weighting</td><td>50%</td><td>50%</td></tr></tbody></table></figure>\n\n\n\n<h3 class=\"wp-block-heading\"><strong>How Are The Assessment Objectives Weighted?</strong></h3>\n\n\n\n<p class=\"wp-block-paragraph\">AO1 tests knowledge and understanding of key principles, the kind of question that asks you to state or describe. AO2 tests applying that knowledge to a given context, such as completing a program or interpreting a scenario. AO3 tests analysing problems computationally: designing, writing, testing, and evaluating a solution rather than just describing one.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Paper 1 leans heavily on AO1 and AO2 combined, which is why solid recall and clear written explanation earn most of its marks. Paper 2 leans heavily on AO2 and AO3, which is why programming practice matters more for that paper than an even revision split across both.</p>\n\n\n\n<figure class=\"wp-block-table\"><table class=\"has-fixed-layout\"><tbody><tr><td>Assessment Objective</td><td>Weighting In Paper 1</td><td>Weighting In Paper 2</td><td>Weighting Overall</td></tr><tr><td>AO1: Knowledge and understanding</td><td>21.5%</td><td>6%</td><td>27.5%</td></tr><tr><td>AO2: Application</td><td>21%</td><td>21.5%</td><td>42.5%</td></tr><tr><td>AO3: Analysis and problem solving</td><td>7.5%</td><td>22.5%</td><td>30%</td></tr></tbody></table></figure>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Know More About: </strong><a href=\"https://ignitetraininginstitute.com/blog/what-is-the-difference-between-edexcel-and-cambridge\" target=\"_blank\" rel=\"noreferrer noopener\">Edexcel vs Cambridge: Key Differences You Should Know 2026</a></p>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>Where To Find Edexcel IGCSE Computer Science Past Papers &amp; Other Resources?</strong></h2>\n\n\n\n<p class=\"wp-block-paragraph\">Past papers are the most reliable preparation tool, since question formats and command words stay consistent across sessions. Always use the official Pearson source, since only Pearson&#8217;s own papers come paired with the correct mark scheme, and a paper without its matching scheme is only half useful.</p>\n\n\n\n<figure class=\"wp-block-table\"><table class=\"has-fixed-layout\"><tbody><tr><td><strong>Resource</strong></td><td><strong>Where To Find It</strong></td><td><strong>Notes</strong></td></tr><tr><td>Past papers and mark schemes</td><td><a href=\"https://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html?Qualification-Family=International-GCSE\" target=\"_blank\" rel=\"noreferrer noopener nofollow\">Pearson&#8217;s Official Past Papers Search</a></td><td>Covers every public session since first examination in June 2019</td></tr><tr><td>Specification and sample assessments</td><td><a href=\"https://qualifications.pearson.com/en/qualifications/edexcel-international-gcses/international-gcse-computer-science-2017.html\" target=\"_blank\" rel=\"noreferrer noopener nofollow\">Pearson&#8217;s International Gcse Computer Science Page</a></td><td>Always confirm the current specification issue</td></tr><tr><td>Grade boundaries</td><td><a href=\"https://qualifications.pearson.com/en/support/support-topics/results-certification/grade-boundaries.html\" target=\"_blank\" rel=\"noreferrer noopener nofollow\">Pearson&#8217;s Grade Boundaries Page</a></td><td>Boundaries shift slightly year to year based on paper difficulty</td></tr><tr><td>Exam timetable</td><td><a href=\"https://qualifications.pearson.com/en/support/support-topics/exams/exam-timetables.html\" target=\"_blank\" rel=\"noreferrer noopener nofollow\">Pearson&#8217;s Exam Timetables Page</a></td><td>Confirms exact Paper 1 and Paper 2 dates</td></tr></tbody></table></figure>\n\n\n\n<p class=\"wp-block-paragraph\">For Paper 2, sit past papers on a computer in your chosen language and time yourself, rather than only reading through them on paper. Mark strictly against the official scheme afterward, since it shows exactly what level of detail earns each mark, not just whether the final answer was correct.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Know More About: </strong><a href=\"https://ignitetraininginstitute.com/blog/pearson-edexcel-igcse\" target=\"_blank\" rel=\"noreferrer noopener\">Edexcel IGCSE Explained: Subjects, Grading &amp; Exam Updates</a></p>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>Is Edexcel IGCSE Computer Science Hard, And How Should You Study For It?</strong></h2>\n\n\n\n<p class=\"wp-block-paragraph\">Edexcel IGCSE Computer Science is not the hardest IGCSE subject, but it is one of the more skill-based ones, and that catches some students off guard. Paper 1&#8217;s theory is manageable with structured revision, while Paper 2&#8217;s programming questions reward consistent practice in a way memorisation alone cannot replace.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Students who trip up most often struggle with algorithm tracing, writing correct pseudocode under exam conditions, and logic-heavy topics like truth tables and binary arithmetic. None of these are conceptually difficult on their own, they simply need regular, hands-on repetition rather than passive review the week before the exam.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Because Paper 2 carries far more weight on AO3 than Paper 1 does, lean your revision toward programming practice rather than an even split between the two papers. Code weekly rather than only in the run-up to the exam, and practise tracing algorithms by hand so you can predict what a piece of code will output under pressure.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Sit at least one full past paper under timed conditions before results day, ideally on a computer for Paper 2 since typing and debugging under time pressure is a different skill from writing pseudocode on paper. Our guide on <a href=\"https://ignitetraininginstitute.com/blog/how-to-study-for-igcse\" target=\"_blank\" rel=\"noreferrer noopener\">How To Study For IGCSE</a> covers the underlying revision technique in more depth.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Know More About: </strong><a href=\"https://ignitetraininginstitute.com/blog/a-level-computer-science-course\" target=\"_blank\" rel=\"noreferrer noopener\">A Level Computer Science Course: A CIE &amp; AQA Overview</a></p>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>Ignite: Computer Science Tutors In Dubai For Edexcel Success</strong></h2>\n\n\n\n<p class=\"wp-block-paragraph\">Computer Science is a subject where one clear explanation, especially on the programming side, can turn a stuck student into a confident one. Our tutors work through the exact 4CP0 specification line by line, pairing structured Paper 1 revision with the kind of algorithm-tracing and coding practice that Paper 2 actually rewards.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Sessions are built around where a student is genuinely stuck, not a generic syllabus walkthrough, using real past papers and mark-scheme-level feedback so progress is measurable, not just felt. We support Computer Science through <a href=\"https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai\" target=\"_blank\" rel=\"noreferrer noopener\">A-Level Tutors</a> as well as <a href=\"https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai\" target=\"_blank\" rel=\"noreferrer noopener\">IGCSE</a>, and for students who find the logic-heavy topics tricky, pairing sessions with our <a href=\"https://ignitetraininginstitute.com/maths-tutor-in-dubai\" target=\"_blank\" rel=\"noreferrer noopener\">Maths Tutors</a> often closes that gap faster than Computer Science tuition alone.</p>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>FAQs</strong></h2>\n\n\n\n<h3 class=\"wp-block-heading\"><strong>1. What Is Edexcel IGCSE Computer Science?</strong></h3>\n\n\n\n<p class=\"wp-block-paragraph\">Edexcel IGCSE Computer Science, subject code 4CP0, is Pearson&#8217;s International GCSE in computer science, assessed through two equally weighted papers covering computational thinking, programming, and computer systems. It is graded on the 9-1 scale with no A*-G option.</p>\n\n\n\n<h3 class=\"wp-block-heading\"><strong>2. How Many Papers Are In Edexcel IGCSE Computer Science?</strong></h3>\n\n\n\n<p class=\"wp-block-paragraph\">There are two papers. Paper 1, Principles of Computer Science, is a two-hour written exam worth 80 marks. Paper 2, Application of Computational Thinking, is a three-hour practical programming exam also worth 80 marks. Each paper is worth 50% of the final grade.</p>\n\n\n\n<h3 class=\"wp-block-heading\"><strong>3. What Programming Language Is Used In Edexcel IGCSE Computer Science?</strong></h3>\n\n\n\n<p class=\"wp-block-paragraph\">Students choose one of three languages for Paper 2: Python, C#, or Java. Python is the most commonly taught option in schools. A pseudocode reference document is also provided during the exam.</p>\n\n\n\n<h3 class=\"wp-block-heading\"><strong>4. Is Edexcel IGCSE Computer Science Hard?</strong></h3>\n\n\n\n<p class=\"wp-block-paragraph\">It is moderately challenging rather than the hardest IGCSE option. Paper 1&#8217;s theory is manageable with regular revision, while Paper 2&#8217;s programming questions reward consistent coding practice throughout the course.</p>\n\n\n\n<h3 class=\"wp-block-heading\"><strong>5. Where can I locate past papers for Edexcel IGCSE Computer Science?</strong></h3>\n\n\n\n<p class=\"wp-block-paragraph\">Use Pearson&#8217;s official past papers archive, which covers every public session since the qualification&#8217;s first examination in June 2019 and comes with the correct mark schemes.</p>\n\n\n\n<h3 class=\"wp-block-heading\"><strong>6. How Is Edexcel IGCSE Computer Science Graded?</strong></h3>\n\n\n\n<p class=\"wp-block-paragraph\">Edexcel International GCSE Computer Science uses the 9-1 numerical scale exclusively, with grade 9 the highest and grade 4 the standard pass. There is no A*-G option for this qualification.</p>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>Conclusion</strong></h2>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"768\" height=\"1024\" src=\"https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/pexels-fotios-photos-16129705-768x1024.webp\" alt=\"Edexcel IGCSE Computer Science\" class=\"wp-image-15576\" srcset=\"https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/pexels-fotios-photos-16129705-768x1024.webp 768w, https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/pexels-fotios-photos-16129705-225x300.webp 225w, https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/pexels-fotios-photos-16129705-1152x1536.webp 1152w, https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/pexels-fotios-photos-16129705-1536x2048.webp 1536w, https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/pexels-fotios-photos-16129705-scaled.webp 1920w\" sizes=\"auto, (max-width: 768px) 100vw, 768px\" /></figure>\n\n\n\n<p class=\"wp-block-paragraph\">Edexcel IGCSE Computer Science rewards students who treat it as two connected skills, a body of theory to understand and a coding skill to build through repetition. Know how the six topics map across both papers, and remember that Paper 2&#8217;s heavier AO3 weighting means programming practice deserves more of your revision time than a straight fifty-fifty split.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Lean on official Pearson past papers, sit Paper 2 on a computer under real timed conditions, and treat algorithm tracing as its own weekly habit rather than a last-minute review topic. If your child would benefit from structured, board-specific support, <a href=\"https://ignitetraininginstitute.com/join-free-demo-class\" target=\"_blank\" rel=\"noreferrer noopener\">Book A Free Demo Class</a> with Ignite Training Institute and see how targeted preparation changes the result.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Know More About: </strong><a href=\"https://ignitetraininginstitute.com/blog/igcse-grades-explained\" target=\"_blank\" rel=\"noreferrer noopener\">IGCSE Grades Explained: Grading System, Pass Marks 2026</a></p>\n\n\n\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"What Is Edexcel IGCSE Computer Science?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Edexcel IGCSE Computer Science, subject code 4CP0, is Pearson's International GCSE in computer science, assessed through two equally weighted papers covering computational thinking, programming, and computer systems. It is graded on the 9-1 scale with no A*-G option.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"How Many Papers Are In Edexcel IGCSE Computer Science?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"There are two papers. Paper 1, Principles of Computer Science, is a two-hour written exam worth 80 marks. Paper 2, Application of Computational Thinking, is a three-hour practical programming exam also worth 80 marks. Each paper is worth 50% of the final grade.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"What Programming Language Is Used In Edexcel IGCSE Computer Science?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Students choose one of three languages for Paper 2: Python, C#, or Java. Python is the most commonly taught option in schools. A pseudocode reference document is also provided during the exam.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Is Edexcel IGCSE Computer Science Hard?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"It is moderately challenging rather than the hardest IGCSE option. Paper 1's theory is manageable with regular revision, while Paper 2's programming questions reward consistent coding practice throughout the course.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Where can I locate past papers for Edexcel IGCSE Computer Science?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Use Pearson's official past papers archive, which covers every public session since the qualification's first examination in June 2019 and comes with the correct mark schemes.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"How Is Edexcel IGCSE Computer Science Graded?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Edexcel International GCSE Computer Science uses the 9-1 numerical scale exclusively, with grade 9 the highest and grade 4 the standard pass. There is no A*-G option for this qualification.\"\n      }\n    }\n  ]\n}\n</script>\n\n\n\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"Home\",\n      \"item\": \"https://ignitetraininginstitute.com/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"Blog\",\n      \"item\": \"https://ignitetraininginstitute.com/blog\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"IGCSE\",\n      \"item\": \"https://ignitetraininginstitute.com/category/igcse\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"Edexcel IGCSE Computer Science (4CP0): Syllabus & Resources\",\n      \"item\": \"https://ignitetraininginstitute.com/blog/edexcel-igcse-computer-science\"\n    }\n  ]\n}\n</script>\n\n\n\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BlogPosting\",\n  \"headline\": \"Edexcel IGCSE Computer Science (4CP0): Syllabus & Resources\",\n  \"description\": \"Edexcel IGCSE Computer Science (4CP0) explained: full syllabus, Paper 1 and Paper 2 details, AO weighting, and where to find past papers.\",\n  \"image\": [\n    \"https://ignitetraininginstitute.com/images/blogs/edexcel-igcse-computer-science.webp\",\n    \"https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images.webp\"\n  ],\n  \"datePublished\": \"2026-08-05T00:00:00+04:00\",\n  \"dateModified\": \"2026-08-05T00:00:00+04:00\",\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"Sumit Advani\",\n    \"jobTitle\": \"Co-Founder, Ignite Training Institute\",\n    \"description\": \"Sumit Advani, Co-Founder of Ignite Training Institute, brings over 10 years of education expertise in the UAE. With a B.Sc. in IT and a Diploma in Advertising & PR, he designs personalised academic programs that empower students to achieve their goals.\",\n    \"url\": \"https://ignitetraininginstitute.com/our-team\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Ignite Training Institute\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://ignitetraininginstitute.com/images/logo.svg\"\n    }\n  },\n  \"mainEntityOfPage\": {\n    \"@type\": \"WebPage\",\n    \"@id\": \"https://ignitetraininginstitute.com/blog/edexcel-igcse-computer-science\"\n  },\n  \"articleSection\": \"IGCSE\",\n  \"inLanguage\": \"en\"\n}\n</script>\n\n\n\n\n\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Organization\",\n  \"name\": \"Ignite Training Institute\",\n  \"url\": \"https://ignitetraininginstitute.com/\",\n  \"logo\": \"https://ignitetraininginstitute.com/images/logo.webp\",\n  \"sameAs\": [\n    \"https://www.facebook.com/ignitetraininginstitute\",\n    \"https://www.instagram.com/ignitetraininginstitute\",\n    \"https://www.linkedin.com/company/ignitetraininginstitute\"\n  ],\n  \"contactPoint\": [\n    {\n      \"@type\": \"ContactPoint\",\n      \"telephone\": \"+971568357374\",\n      \"contactType\": \"customer service\",\n      \"areaServed\": \"AE\"\n    }\n  ],\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"streetAddress\": \"1503, Al Moosa Tower 1, Sheikh Zayed Road, Near Emirates Towers Metro\",\n    \"addressLocality\": \"Dubai\",\n    \"addressCountry\": \"AE\"\n  },\n  \"description\": \"Ignite Training Institute provides expert academic guides and tutoring including A-Level school insights and tutoring support.\",\n  \"founder\": {\n    \"@type\": \"Person\",\n    \"name\": \"Sumit Advani\"\n  }\n}\n</script>\n\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>Key Summary If your child&#8217;s school has just confirmed Edexcel IGCSE Computer Science, the first question most parents ask is simple. What does this subject actually involve? This guide covers the syllabus, both papers, the weighting of the assessment objectives, and where to find official past papers. Ignite Training Institute works with Edexcel, Cambridge, &amp; [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 5,
+  "featured_media": 15577,
+  "comment_status": "open",
+  "ping_status": "open",
+  "sticky": false,
+  "template": "",
+  "format": "standard",
+  "meta": {
+    "footnotes": ""
+  },
+  "categories": [
+    17
+  ],
+  "tags": [
+    18
+  ],
+  "class_list": [
+    "post-15574",
+    "post",
+    "type-post",
+    "status-publish",
+    "format-standard",
+    "has-post-thumbnail",
+    "hentry",
+    "category-igcse",
+    "tag-igcse"
+  ],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources - ignite</title>\n<meta name=\"description\" content=\"Edexcel IGCSE Computer Science (4CP0) explained: full syllabus, Paper 1 and Paper 2 details, AO weighting, and where to find past papers\" />\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources - ignite\" />\n<meta property=\"og:description\" content=\"Edexcel IGCSE Computer Science (4CP0) explained: full syllabus, Paper 1 and Paper 2 details, AO weighting, and where to find past papers\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta property=\"article:published_time\" content=\"2026-08-05T06:18:40+00:00\" />\n<meta property=\"article:modified_time\" content=\"2026-08-05T07:04:22+00:00\" />\n<meta property=\"og:image\" content=\"https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images.webp\" />\n\t<meta property=\"og:image:width\" content=\"1920\" />\n\t<meta property=\"og:image:height\" content=\"1280\" />\n\t<meta property=\"og:image:type\" content=\"image/webp\" />\n<meta name=\"author\" content=\"Sumit Advani\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Written by\" />\n\t<meta name=\"twitter:data1\" content=\"Sumit Advani\" />\n\t<meta name=\"twitter:label2\" content=\"Est. reading time\" />\n\t<meta name=\"twitter:data2\" content=\"9 minutes\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/#article\",\"isPartOf\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/\"},\"author\":{\"name\":\"Sumit Advani\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#\\/schema\\/person\\/cd8abad46058e9c00377d48154e5c6c3\"},\"headline\":\"Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources\",\"datePublished\":\"2026-08-05T06:18:40+00:00\",\"dateModified\":\"2026-08-05T07:04:22+00:00\",\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/\"},\"wordCount\":1817,\"commentCount\":0,\"image\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/api.ignitetraininginstitute.com\\/wp-content\\/uploads\\/2026\\/08\\/Ignite-Featured-Images.webp\",\"keywords\":[\"IGCSE\"],\"articleSection\":[\"IGCSE\"],\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"CommentAction\",\"name\":\"Comment\",\"target\":[\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/#respond\"]}]},{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/\",\"url\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/\",\"name\":\"Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources - ignite\",\"isPartOf\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#website\"},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/#primaryimage\"},\"image\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/api.ignitetraininginstitute.com\\/wp-content\\/uploads\\/2026\\/08\\/Ignite-Featured-Images.webp\",\"datePublished\":\"2026-08-05T06:18:40+00:00\",\"dateModified\":\"2026-08-05T07:04:22+00:00\",\"author\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#\\/schema\\/person\\/cd8abad46058e9c00377d48154e5c6c3\"},\"description\":\"Edexcel IGCSE Computer Science (4CP0) explained: full syllabus, Paper 1 and Paper 2 details, AO weighting, and where to find past papers\",\"breadcrumb\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/#primaryimage\",\"url\":\"https:\\/\\/api.ignitetraininginstitute.com\\/wp-content\\/uploads\\/2026\\/08\\/Ignite-Featured-Images.webp\",\"contentUrl\":\"https:\\/\\/api.ignitetraininginstitute.com\\/wp-content\\/uploads\\/2026\\/08\\/Ignite-Featured-Images.webp\",\"width\":1920,\"height\":1280,\"caption\":\"Edexcel IGCSE Computer Science\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/edexcel-igcse-computer-science\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/api.ignitetraininginstitute.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#website\",\"url\":\"https:\\/\\/api.ignitetraininginstitute.com\\/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/api.ignitetraininginstitute.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#\\/schema\\/person\\/cd8abad46058e9c00377d48154e5c6c3\",\"name\":\"Sumit Advani\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g\",\"url\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g\",\"contentUrl\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g\",\"caption\":\"Sumit Advani\"},\"url\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/author\\/sumit-advani\\/\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+    "title": "Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources - ignite",
+    "description": "Edexcel IGCSE Computer Science (4CP0) explained: full syllabus, Paper 1 and Paper 2 details, AO weighting, and where to find past papers",
+    "robots": {
+      "index": "noindex",
+      "follow": "follow",
+      "max-snippet": "max-snippet:-1",
+      "max-image-preview": "max-image-preview:large",
+      "max-video-preview": "max-video-preview:-1"
+    },
+    "og_locale": "en_US",
+    "og_type": "article",
+    "og_title": "Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources - ignite",
+    "og_description": "Edexcel IGCSE Computer Science (4CP0) explained: full syllabus, Paper 1 and Paper 2 details, AO weighting, and where to find past papers",
+    "og_url": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/",
+    "og_site_name": "ignite",
+    "article_published_time": "2026-08-05T06:18:40+00:00",
+    "article_modified_time": "2026-08-05T07:04:22+00:00",
+    "og_image": [
+      {
+        "width": 1920,
+        "height": 1280,
+        "url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images.webp",
+        "type": "image/webp"
+      }
+    ],
+    "author": "Sumit Advani",
+    "twitter_card": "summary_large_image",
+    "twitter_misc": {
+      "Written by": "Sumit Advani",
+      "Est. reading time": "9 minutes"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/#article",
+          "isPartOf": {
+            "@id": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/"
+          },
+          "author": {
+            "name": "Sumit Advani",
+            "@id": "https://api.ignitetraininginstitute.com/#/schema/person/cd8abad46058e9c00377d48154e5c6c3"
+          },
+          "headline": "Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources",
+          "datePublished": "2026-08-05T06:18:40+00:00",
+          "dateModified": "2026-08-05T07:04:22+00:00",
+          "mainEntityOfPage": {
+            "@id": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/"
+          },
+          "wordCount": 1817,
+          "commentCount": 0,
+          "image": {
+            "@id": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/#primaryimage"
+          },
+          "thumbnailUrl": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images.webp",
+          "keywords": [
+            "IGCSE"
+          ],
+          "articleSection": [
+            "IGCSE"
+          ],
+          "inLanguage": "en-US",
+          "potentialAction": [
+            {
+              "@type": "CommentAction",
+              "name": "Comment",
+              "target": [
+                "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/#respond"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/",
+          "url": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/",
+          "name": "Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources - ignite",
+          "isPartOf": {
+            "@id": "https://api.ignitetraininginstitute.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/#primaryimage"
+          },
+          "image": {
+            "@id": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/#primaryimage"
+          },
+          "thumbnailUrl": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images.webp",
+          "datePublished": "2026-08-05T06:18:40+00:00",
+          "dateModified": "2026-08-05T07:04:22+00:00",
+          "author": {
+            "@id": "https://api.ignitetraininginstitute.com/#/schema/person/cd8abad46058e9c00377d48154e5c6c3"
+          },
+          "description": "Edexcel IGCSE Computer Science (4CP0) explained: full syllabus, Paper 1 and Paper 2 details, AO weighting, and where to find past papers",
+          "breadcrumb": {
+            "@id": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/#breadcrumb"
+          },
+          "inLanguage": "en-US",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "ImageObject",
+          "inLanguage": "en-US",
+          "@id": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/#primaryimage",
+          "url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images.webp",
+          "contentUrl": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images.webp",
+          "width": 1920,
+          "height": 1280,
+          "caption": "Edexcel IGCSE Computer Science"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://api.ignitetraininginstitute.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Edexcel IGCSE Computer Science (4CP0): Syllabus &amp; Resources"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://api.ignitetraininginstitute.com/#website",
+          "url": "https://api.ignitetraininginstitute.com/",
+          "name": "ignite",
+          "description": "",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://api.ignitetraininginstitute.com/#/schema/person/cd8abad46058e9c00377d48154e5c6c3",
+          "name": "Sumit Advani",
+          "image": {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g",
+            "url": "https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g",
+            "contentUrl": "https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g",
+            "caption": "Sumit Advani"
+          },
+          "url": "https://api.ignitetraininginstitute.com/blog/author/sumit-advani/"
+        }
+      ]
+    }
+  },
+  "reading_time": "12 min read",
+  "ignite_vote_counts": {
+    "likes": 0,
+    "dislikes": 0
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts/15574",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/types/post"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/users/5"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/comments?post=15574"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 3,
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts/15574/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 15600,
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts/15574/revisions/15600"
+      }
+    ],
+    "wp:featuredmedia": [
+      {
+        "embeddable": true,
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/media/15577"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/media?parent=15574"
+      }
+    ],
+    "wp:term": [
+      {
+        "taxonomy": "category",
+        "embeddable": true,
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories?post=15574"
+      },
+      {
+        "taxonomy": "post_tag",
+        "embeddable": true,
+        "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags?post=15574"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  },
+  "_embedded": {
+    "author": [
+      {
+        "id": 5,
+        "name": "Sumit Advani",
+        "url": "",
+        "description": "",
+        "link": "https://api.ignitetraininginstitute.com/blog/author/sumit-advani/",
+        "slug": "sumit-advani",
+        "avatar_urls": {
+          "24": "https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=24&d=mm&r=g",
+          "48": "https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=48&d=mm&r=g",
+          "96": "https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g"
+        },
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Sumit Advani, Author at ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"profile\" />\n<meta property=\"og:title\" content=\"Sumit Advani, Author at ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/author/sumit-advani/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta property=\"og:image\" content=\"https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=500&d=mm&r=g\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"ProfilePage\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/author\\/sumit-advani\\/\",\"url\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/author\\/sumit-advani\\/\",\"name\":\"Sumit Advani, Author at ignite\",\"isPartOf\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/author\\/sumit-advani\\/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/author\\/sumit-advani\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/author\\/sumit-advani\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/api.ignitetraininginstitute.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Archives for Sumit Advani\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#website\",\"url\":\"https:\\/\\/api.ignitetraininginstitute.com\\/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/api.ignitetraininginstitute.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#\\/schema\\/person\\/cd8abad46058e9c00377d48154e5c6c3\",\"name\":\"Sumit Advani\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g\",\"url\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g\",\"contentUrl\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g\",\"caption\":\"Sumit Advani\"},\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/author\\/sumit-advani\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+        "yoast_head_json": {
+          "title": "Sumit Advani, Author at ignite",
+          "robots": {
+            "index": "noindex",
+            "follow": "follow",
+            "max-snippet": "max-snippet:-1",
+            "max-image-preview": "max-image-preview:large",
+            "max-video-preview": "max-video-preview:-1"
+          },
+          "og_locale": "en_US",
+          "og_type": "profile",
+          "og_title": "Sumit Advani, Author at ignite",
+          "og_url": "https://api.ignitetraininginstitute.com/blog/author/sumit-advani/",
+          "og_site_name": "ignite",
+          "og_image": [
+            {
+              "url": "https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=500&d=mm&r=g",
+              "type": "",
+              "width": "",
+              "height": ""
+            }
+          ],
+          "twitter_card": "summary_large_image",
+          "schema": {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "ProfilePage",
+                "@id": "https://api.ignitetraininginstitute.com/blog/author/sumit-advani/",
+                "url": "https://api.ignitetraininginstitute.com/blog/author/sumit-advani/",
+                "name": "Sumit Advani, Author at ignite",
+                "isPartOf": {
+                  "@id": "https://api.ignitetraininginstitute.com/#website"
+                },
+                "breadcrumb": {
+                  "@id": "https://api.ignitetraininginstitute.com/blog/author/sumit-advani/#breadcrumb"
+                },
+                "inLanguage": "en-US",
+                "potentialAction": [
+                  {
+                    "@type": "ReadAction",
+                    "target": [
+                      "https://api.ignitetraininginstitute.com/blog/author/sumit-advani/"
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": "https://api.ignitetraininginstitute.com/blog/author/sumit-advani/#breadcrumb",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://api.ignitetraininginstitute.com/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Archives for Sumit Advani"
+                  }
+                ]
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://api.ignitetraininginstitute.com/#website",
+                "url": "https://api.ignitetraininginstitute.com/",
+                "name": "ignite",
+                "description": "",
+                "potentialAction": [
+                  {
+                    "@type": "SearchAction",
+                    "target": {
+                      "@type": "EntryPoint",
+                      "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                    },
+                    "query-input": {
+                      "@type": "PropertyValueSpecification",
+                      "valueRequired": true,
+                      "valueName": "search_term_string"
+                    }
+                  }
+                ],
+                "inLanguage": "en-US"
+              },
+              {
+                "@type": "Person",
+                "@id": "https://api.ignitetraininginstitute.com/#/schema/person/cd8abad46058e9c00377d48154e5c6c3",
+                "name": "Sumit Advani",
+                "image": {
+                  "@type": "ImageObject",
+                  "inLanguage": "en-US",
+                  "@id": "https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g",
+                  "url": "https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g",
+                  "contentUrl": "https://secure.gravatar.com/avatar/ae589e92a07a2e5e09cc85cbb9db9a7c72d30304a2877191b3d99349fe354f0f?s=96&d=mm&r=g",
+                  "caption": "Sumit Advani"
+                },
+                "mainEntityOfPage": {
+                  "@id": "https://api.ignitetraininginstitute.com/blog/author/sumit-advani/"
+                }
+              }
+            ]
+          }
+        },
+        "_links": {
+          "self": [
+            {
+              "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/users/5",
+              "targetHints": {
+                "allow": [
+                  "GET"
+                ]
+              }
+            }
+          ],
+          "collection": [
+            {
+              "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/users"
+            }
+          ]
+        }
+      }
+    ],
+    "wp:featuredmedia": [
+      {
+        "id": 15577,
+        "date": "2026-08-05T06:15:12",
+        "slug": "ignite-featured-images-28",
+        "type": "attachment",
+        "link": "https://api.ignitetraininginstitute.com/blog/edexcel-igcse-computer-science/ignite-featured-images-28/",
+        "title": {
+          "rendered": "Edexcel IGCSE Computer Science"
+        },
+        "author": 1,
+        "featured_media": 0,
+        "caption": {
+          "rendered": ""
+        },
+        "alt_text": "Edexcel IGCSE Computer Science",
+        "media_type": "image",
+        "mime_type": "image/webp",
+        "media_details": {
+          "width": 1920,
+          "height": 1280,
+          "file": "2026/08/Ignite-Featured-Images.webp",
+          "filesize": 117320,
+          "sizes": {
+            "medium": {
+              "file": "Ignite-Featured-Images-300x200.webp",
+              "width": 300,
+              "height": 200,
+              "filesize": 6012,
+              "mime_type": "image/webp",
+              "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images-300x200.webp"
+            },
+            "large": {
+              "file": "Ignite-Featured-Images-1024x683.webp",
+              "width": 1024,
+              "height": 683,
+              "filesize": 28338,
+              "mime_type": "image/webp",
+              "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images-1024x683.webp"
+            },
+            "thumbnail": {
+              "file": "Ignite-Featured-Images-150x150.webp",
+              "width": 150,
+              "height": 150,
+              "filesize": 2840,
+              "mime_type": "image/webp",
+              "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images-150x150.webp"
+            },
+            "medium_large": {
+              "file": "Ignite-Featured-Images-768x512.webp",
+              "width": 768,
+              "height": 512,
+              "filesize": 20270,
+              "mime_type": "image/webp",
+              "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images-768x512.webp"
+            },
+            "1536x1536": {
+              "file": "Ignite-Featured-Images-1536x1024.webp",
+              "width": 1536,
+              "height": 1024,
+              "filesize": 45930,
+              "mime_type": "image/webp",
+              "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images-1536x1024.webp"
+            },
+            "full": {
+              "file": "Ignite-Featured-Images.webp",
+              "width": 1920,
+              "height": 1280,
+              "mime_type": "image/webp",
+              "source_url": "https://api.ignitetraininginstitute.com/wp-content/uploads/2026/08/Ignite-Featured-Images.webp"
+            }
+          },
+          "image_meta": {
+            "aperture": "0",
+            "credit": "",
+            "camera": "",
+            "caption": "",
+            "created_timestamp": "0",
+            "copyright": "",
+            "focal_length": "0",
+            "iso": "0",
+            "shutter_speed": "0",
+            "title": "",
+            "orientation": "0",
+            "keywords": [],
+            "alt": ""
+          }
+        },
+        "source_url": "/images/blogs/edexcel-igcse-computer-science.webp",
+        "_links": {
+          "self": [
+            {
+              "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/media/15577",
+              "targetHints": {
+                "allow": [
+                  "GET"
+                ]
+              }
+            }
+          ],
+          "collection": [
+            {
+              "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/media"
+            }
+          ],
+          "about": [
+            {
+              "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/types/attachment"
+            }
+          ],
+          "author": [
+            {
+              "embeddable": true,
+              "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/users/1"
+            }
+          ],
+          "replies": [
+            {
+              "embeddable": true,
+              "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/comments?post=15577"
+            }
+          ],
+          "wp:attached-to": [
+            {
+              "embeddable": true,
+              "post_type": "post",
+              "id": 15574,
+              "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts/15574"
+            }
+          ],
+          "curies": [
+            {
+              "name": "wp",
+              "href": "https://api.w.org/{rel}",
+              "templated": true
+            }
+          ]
+        }
+      }
+    ],
+    "wp:term": [
+      [
+        {
+          "id": 17,
+          "link": "https://api.ignitetraininginstitute.com/blog/category/igcse/",
+          "name": "IGCSE",
+          "slug": "igcse",
+          "taxonomy": "category",
+          "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>IGCSE Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"IGCSE Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/category/igcse/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/category\\/igcse\\/\",\"url\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/category\\/igcse\\/\",\"name\":\"IGCSE Archives - ignite\",\"isPartOf\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/category\\/igcse\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/category\\/igcse\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/api.ignitetraininginstitute.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"IGCSE\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#website\",\"url\":\"https:\\/\\/api.ignitetraininginstitute.com\\/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/api.ignitetraininginstitute.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+          "yoast_head_json": {
+            "title": "IGCSE Archives - ignite",
+            "robots": {
+              "index": "noindex",
+              "follow": "follow",
+              "max-snippet": "max-snippet:-1",
+              "max-image-preview": "max-image-preview:large",
+              "max-video-preview": "max-video-preview:-1"
+            },
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "IGCSE Archives - ignite",
+            "og_url": "https://api.ignitetraininginstitute.com/blog/category/igcse/",
+            "og_site_name": "ignite",
+            "twitter_card": "summary_large_image",
+            "schema": {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "CollectionPage",
+                  "@id": "https://api.ignitetraininginstitute.com/blog/category/igcse/",
+                  "url": "https://api.ignitetraininginstitute.com/blog/category/igcse/",
+                  "name": "IGCSE Archives - ignite",
+                  "isPartOf": {
+                    "@id": "https://api.ignitetraininginstitute.com/#website"
+                  },
+                  "breadcrumb": {
+                    "@id": "https://api.ignitetraininginstitute.com/blog/category/igcse/#breadcrumb"
+                  },
+                  "inLanguage": "en-US"
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "@id": "https://api.ignitetraininginstitute.com/blog/category/igcse/#breadcrumb",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://api.ignitetraininginstitute.com/"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "IGCSE"
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://api.ignitetraininginstitute.com/#website",
+                  "url": "https://api.ignitetraininginstitute.com/",
+                  "name": "ignite",
+                  "description": "",
+                  "potentialAction": [
+                    {
+                      "@type": "SearchAction",
+                      "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                      },
+                      "query-input": {
+                        "@type": "PropertyValueSpecification",
+                        "valueRequired": true,
+                        "valueName": "search_term_string"
+                      }
+                    }
+                  ],
+                  "inLanguage": "en-US"
+                }
+              ]
+            }
+          },
+          "_links": {
+            "self": [
+              {
+                "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories/17",
+                "targetHints": {
+                  "allow": [
+                    "GET"
+                  ]
+                }
+              }
+            ],
+            "collection": [
+              {
+                "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories"
+              }
+            ],
+            "about": [
+              {
+                "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/category"
+              }
+            ],
+            "wp:post_type": [
+              {
+                "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?categories=17"
+              }
+            ],
+            "curies": [
+              {
+                "name": "wp",
+                "href": "https://api.w.org/{rel}",
+                "templated": true
+              }
+            ]
+          }
+        }
+      ],
+      [
+        {
+          "id": 18,
+          "link": "https://api.ignitetraininginstitute.com/blog/tag/igcse/",
+          "name": "IGCSE",
+          "slug": "igcse",
+          "taxonomy": "post_tag",
+          "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>IGCSE Archives - ignite</title>\n<meta name=\"robots\" content=\"noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"IGCSE Archives - ignite\" />\n<meta property=\"og:url\" content=\"https://api.ignitetraininginstitute.com/blog/tag/igcse/\" />\n<meta property=\"og:site_name\" content=\"ignite\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/tag\\/igcse\\/\",\"url\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/tag\\/igcse\\/\",\"name\":\"IGCSE Archives - ignite\",\"isPartOf\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/tag\\/igcse\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/blog\\/tag\\/igcse\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/api.ignitetraininginstitute.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"IGCSE\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/api.ignitetraininginstitute.com\\/#website\",\"url\":\"https:\\/\\/api.ignitetraininginstitute.com\\/\",\"name\":\"ignite\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/api.ignitetraininginstitute.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+          "yoast_head_json": {
+            "title": "IGCSE Archives - ignite",
+            "robots": {
+              "index": "noindex",
+              "follow": "follow",
+              "max-snippet": "max-snippet:-1",
+              "max-image-preview": "max-image-preview:large",
+              "max-video-preview": "max-video-preview:-1"
+            },
+            "og_locale": "en_US",
+            "og_type": "article",
+            "og_title": "IGCSE Archives - ignite",
+            "og_url": "https://api.ignitetraininginstitute.com/blog/tag/igcse/",
+            "og_site_name": "ignite",
+            "twitter_card": "summary_large_image",
+            "schema": {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "CollectionPage",
+                  "@id": "https://api.ignitetraininginstitute.com/blog/tag/igcse/",
+                  "url": "https://api.ignitetraininginstitute.com/blog/tag/igcse/",
+                  "name": "IGCSE Archives - ignite",
+                  "isPartOf": {
+                    "@id": "https://api.ignitetraininginstitute.com/#website"
+                  },
+                  "breadcrumb": {
+                    "@id": "https://api.ignitetraininginstitute.com/blog/tag/igcse/#breadcrumb"
+                  },
+                  "inLanguage": "en-US"
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "@id": "https://api.ignitetraininginstitute.com/blog/tag/igcse/#breadcrumb",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://api.ignitetraininginstitute.com/"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "IGCSE"
+                    }
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://api.ignitetraininginstitute.com/#website",
+                  "url": "https://api.ignitetraininginstitute.com/",
+                  "name": "ignite",
+                  "description": "",
+                  "potentialAction": [
+                    {
+                      "@type": "SearchAction",
+                      "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://api.ignitetraininginstitute.com/?s={search_term_string}"
+                      },
+                      "query-input": {
+                        "@type": "PropertyValueSpecification",
+                        "valueRequired": true,
+                        "valueName": "search_term_string"
+                      }
+                    }
+                  ],
+                  "inLanguage": "en-US"
+                }
+              ]
+            }
+          },
+          "_links": {
+            "self": [
+              {
+                "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags/18",
+                "targetHints": {
+                  "allow": [
+                    "GET"
+                  ]
+                }
+              }
+            ],
+            "collection": [
+              {
+                "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags"
+              }
+            ],
+            "about": [
+              {
+                "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/taxonomies/post_tag"
+              }
+            ],
+            "wp:post_type": [
+              {
+                "href": "https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?tags=18"
+              }
+            ],
+            "curies": [
+              {
+                "name": "wp",
+                "href": "https://api.w.org/{rel}",
+                "templated": true
+              }
+            ]
+          }
+        }
+      ]
+    ]
+  }
+}
