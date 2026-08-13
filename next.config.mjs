@@ -198,6 +198,36 @@ const nextConfig = {
   async redirects() {
     const redirects = [
       {
+        source: '/free-consultation',
+        destination: '/join-free-demo-class',
+        permanent: true,
+      },
+      {
+        source: '/ib-curriculum-tutors',
+        destination: '/ib-curriculum-tutors-in-dubai',
+        permanent: true,
+      },
+      {
+        source: '/a-levels-subjects',
+        destination: '/blog/a-level-subjects',
+        permanent: true,
+      },
+      {
+        source: '/blog/a-levels-vs-ibdp',
+        destination: '/blog/a-levels-vs-ibdp-comparison',
+        permanent: true,
+      },
+      {
+        source: '/blog/ib-extended-essay',
+        destination: '/blog/what-is-ib-extended-essay',
+        permanent: true,
+      },
+      {
+        source: '/blog/ib-subjects-difficulty-ranking',
+        destination: '/blog/ib-subject-choices',
+        permanent: true,
+      },
+      {
         source: '/blog/benefits-of-ib-curriculum',
         destination: '/blog/ib-program-pros-and-cons',
         permanent: true,
