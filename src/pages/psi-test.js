@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import LazySection from "@/components/LazySection";
 import SEO from "@/components/SEO";
 import Hero from "@/components/psiTest/Hero";
+import PsiSection from "@/components/psiTest/PsiSection";
 import { getMarqueeData } from "@/data/marqueeConfig";
 import { getTrainersData } from "@/data/trainersData";
 import path from "path";
@@ -39,47 +39,47 @@ export default function PsiTestPage({ blogPosts = [] }) {
             />
             <div className="homeCopy page-content-padding">
                 <Hero />
-                <LazySection>
+                <PsiSection intrinsicHeight={900}>
                     <Course />
-                </LazySection>
+                </PsiSection>
 
-                <LazySection>
+                <PsiSection intrinsicHeight={180}>
                     <section data-scroll-section>
                         <MarqueeBanner config={getMarqueeData("homeCopy")} />
                     </section>
-                </LazySection>
+                </PsiSection>
 
-                <LazySection>
+                <PsiSection intrinsicHeight={850}>
                     <About />
-                </LazySection>
+                </PsiSection>
 
-                <LazySection>
+                <PsiSection intrinsicHeight={850}>
                     <Test setActive={setActive} active={active} />
-                </LazySection>
+                </PsiSection>
 
-                <LazySection>
+                <PsiSection intrinsicHeight={750}>
                     <Subjects />
-                </LazySection>
+                </PsiSection>
 
-                <LazySection>
+                <PsiSection intrinsicHeight={900}>
                     <section data-scroll-section>
                         <Usps />
                     </section>
-                </LazySection>
+                </PsiSection>
 
-                <LazySection>
+                <PsiSection intrinsicHeight={900}>
                     <section data-scroll-section>
                         <Trainers />
                     </section>
-                </LazySection>
+                </PsiSection>
 
-                <LazySection>
+                <PsiSection intrinsicHeight={700}>
                     <Testimonial />
-                </LazySection>
+                </PsiSection>
 
-                <LazySection>
+                <PsiSection intrinsicHeight={700}>
                     <Blog posts={blogPosts} />
-                </LazySection>
+                </PsiSection>
             </div>
         </>
     );

@@ -60,6 +60,7 @@ export default function MyApp({ Component, pageProps }) {
     const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(false);
     const isPsiTestPage = router.pathname === "/psi-test";
     const isPsiTestBot = isPsiTestPage && Boolean(pageProps?.isPsiBot);
+    const thirdPartyScriptStrategy = isPsiTestPage ? "lazyOnload" : "afterInteractive";
 
     const mobileBreakpoint = 2600;
 
@@ -150,11 +151,10 @@ export default function MyApp({ Component, pageProps }) {
                     __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css';l.crossOrigin='anonymous';document.head.appendChild(l);})();`
                 }}
             />
-            {!(isPsiTestBot) ? (
             <>
                 <Script
                     id="gtm-script"
-                    strategy="afterInteractive"
+                    strategy={thirdPartyScriptStrategy}
                     dangerouslySetInnerHTML={{
                         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -166,9 +166,9 @@ export default function MyApp({ Component, pageProps }) {
                 {/* Google Tag (gtag.js) */}
                 <Script
                     src="https://www.googletagmanager.com/gtag/js?id=AW-844959495"
-                    strategy="afterInteractive"
+                    strategy={thirdPartyScriptStrategy}
                 />
-                <Script id="google-analytics" strategy="afterInteractive">
+                <Script id="google-analytics" strategy={thirdPartyScriptStrategy}>
                     {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){
@@ -192,7 +192,7 @@ export default function MyApp({ Component, pageProps }) {
                 />
 
                 {/* Meta Pixel Code */}
-                <Script id="meta-pixel" strategy="afterInteractive">
+                <Script id="meta-pixel" strategy={thirdPartyScriptStrategy}>
                     {`
                         !function(f,b,e,v,n,t,s)
                         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -216,7 +216,6 @@ export default function MyApp({ Component, pageProps }) {
                     />
                 </noscript>
             </>
-            ) : null}
 
             {shouldLoadLocomotiveScroll && !isPsiTestBot ? (
                 <LocomotiveScrollProvider>
