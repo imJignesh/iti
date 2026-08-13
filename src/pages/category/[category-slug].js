@@ -4,7 +4,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
-import useSWR from 'swr';
+import Head from 'next/head';
 import SEO from "@/components/SEO";
 import Image from 'next/image';
 import JsonLd from "@/components/JsonLd";
@@ -204,7 +204,7 @@ export async function getStaticProps(context) {
         const categoryPosts = (listData.posts || []).filter(post =>
             Array.isArray(post.categories) && post.categories.includes(categoryId)
         );
-        const initialPosts = categoryPosts.slice(0, 9);
+        const initialPosts = categoryPosts;
         const totalPages = Math.max(1, Math.ceil(categoryPosts.length / 9));
         const tags = JSON.parse(fs.readFileSync(path.join(dataDir, 'tags.json'), 'utf8'));
         const tagsMapFallback = {};
@@ -231,13 +231,12 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
     const router = useRouter();
 
     // --- State & Hooks ---
-    const [posts, setPosts] = useState(initialPosts || []);
     const [page, setPage] = useState(1);
-    const [tagsMap, setTagsMap] = useState(tagsMapFallback || {});
-    const [categories, setCategories] = useState([]);
+    const posts = (initialPosts || []).slice(0, page * 9);
+    const tagsMap = tagsMapFallback || {};
     const [searchTerm, setSearchTerm] = useState('');
     const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
-    const [hasMore, setHasMore] = useState((initialTotalPages || 1) > 1);
+    const hasMore = page < (initialTotalPages || 1);
 
     // Using server-provided category
     const currentCategory = fallbackCategory;
@@ -245,9 +244,7 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
 
     useEffect(() => {
         // Hydrate when category slug changes via client navigation
-        setPosts(initialPosts || []);
         setPage(1);
-        setHasMore((initialTotalPages || 1) > 1);
         setSearchTerm('');
     }, [categorySlug, initialPosts, initialTotalPages]);
 
@@ -263,83 +260,14 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
         };
     }, [searchTerm]);
 
-    // Construct the API URL for posts, now including the category ID
-    const categoryId = currentCategory?.id;
-    const postsApiUrl = categoryId
-        ? `/api/wp/posts?per_page=9&page=${page}&_embed&categories=${categoryId}${debouncedSearchTerm ? `&search=${debouncedSearchTerm}` : ''}`
-        : null;
-
-    const { data, error: postsError, isLoading, isValidating } = useSWR(postsApiUrl, fetcher);
-
-    // Effect to accumulate posts (copied from blog.js)
-    useEffect(() => {
-        if (data && data.data) {
-            // Check if page === 1 and no search: data is already initialPosts
-            if (page === 1 && !debouncedSearchTerm) {
-                // We already have initialPosts, but update SWR cache if divergent
-                setPosts(data.data);
-            } else if (page === 1) {
-                // When search term changes
-                setPosts(data.data);
-            } else {
-                setPosts(prevPosts => {
-                    // prevent duplicating data on react strict mode
-                    const newItems = data.data.filter(d => !prevPosts.find(p => p.id === d.id));
-                    return [...prevPosts, ...newItems];
-                });
-            }
-            setHasMore(page < data.totalPages);
-        }
-    }, [data]); // Depend on data only to append properly, page is implicitly correct in data
-
-    // Fetch tags and categories (copied from blog.js)
-    useEffect(() => {
-        const fetchTags = async () => {
-            try {
-                const res = await fetch('/api/wp/tags?per_page=100');
-                const tags = await res.json();
-                const map = {};
-                tags.forEach(tag => (map[tag.id] = tag.name));
-                setTagsMap(map);
-            } catch (err) {
-                console.error("Failed to fetch tags:", err);
-            }
-        };
-        fetchTags();
-
-        const fetchCategories = async () => {
-            try {
-                const res = await fetch('/api/wp/categories?per_page=100');
-                const cats = await res.json();
-                setCategories(cats);
-            } catch (err) {
-                console.error("Failed to fetch categories:", err);
-            }
-        };
-        fetchCategories();
-    }, []);
-
-
-    const handleCategoryClick = useCallback((categoryId) => {
-        // Redirect to the new category page
-        const categoryToRoute = categories.find(cat => cat.id === categoryId);
-        if (categoryToRoute) {
-            router.push(`/category/${categoryToRoute.slug}`);
-        }
-    }, [categories, router]);
-
-    const handleAllCategoriesClick = useCallback(() => {
-        // Redirect to the main blog page
-        router.push('/blog');
-    }, [router]);
-
     const handleSearchChange = useCallback((event) => {
-        // Reset state for new search in the current category
-        setPosts([]);
         setSearchTerm(event.target.value);
         setPage(1);
-        setHasMore(true);
     }, []);
+
+    const postsError = null;
+    const isLoading = false;
+    const isValidating = false;
 
     // --- JSON-LD Schema (Use BlogPosting for the list, though Blog is also fine) ---
     const categorySchema = {
@@ -431,6 +359,10 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
                 url={currentUrl}
                 keywords={metaKeywords}
             />
+            <Head>
+                <link rel="preload" as="image" href="/assets/career-banner-mobile.webp" media="(max-width: 768px)" fetchPriority="high" />
+                <link rel="preload" as="image" href="/assets/career-banner-desktop.webp" media="(min-width: 769px)" fetchPriority="high" />
+            </Head>
             <JsonLd schema={categorySchema} />
 
             <div style={{ minHeight: 'calc(100vh - 200px)', paddingTop: `${headerHeight}px` }} >
@@ -537,7 +469,7 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
                                 <div className="text-center text-muted h4 py-5">No posts found for this category or search term.</div>
                             ) : (
                                 <div className="mb-4 p-4 postsList ">
-                                    {posts.map((post) => {
+                                    {posts.map((post, index) => {
                                         const featuredImage = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
                                         const postTags = post.tags.map(tagId => tagsMap[tagId]).filter(Boolean);
                                         const postLink = post.link;
@@ -555,6 +487,11 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
                                                                     src={featuredImage}
                                                                     className="card-img-top"
                                                                     alt={post.title.rendered}
+                                                                    width="600"
+                                                                    height="400"
+                                                                    loading={index === 0 ? 'eager' : 'lazy'}
+                                                                    fetchPriority={index === 0 ? 'high' : 'auto'}
+                                                                    decoding="async"
                                                                     style={{ objectFit: 'cover', objectPosition: 'center' }}
                                                                     onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/600x400/E0F2F7/333333?text=No+Image`; }}
                                                                 />
@@ -766,6 +703,9 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
                 }
                 .postsList :global(.card .card-img-top) {
                     width: 100%;
+                    height: auto;
+                    aspect-ratio: 3 / 2;
+                    object-fit: cover;
                     border-radius: 1rem;
                 }
                 .postsList :global(.card .card-body-text) {
