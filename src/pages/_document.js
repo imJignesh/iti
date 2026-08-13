@@ -9,14 +9,6 @@ export default function Document() {
 
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
-        {/* Hero LCP image preload — single poster asset, one size, used at every breakpoint */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero-banner-video-c1-poster.webp"
-          {...{ fetchpriority: 'high' }}
-        />
-
         <link
           rel="preload"
           href="/images/logo.svg"

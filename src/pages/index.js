@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from "next/head";
 import LazySection from "@/components/LazySection";
 
 import SEO from "@/components/SEO";
@@ -39,6 +40,14 @@ const HomeCopy = ({ blogPosts = [] }) => {
 
     return (
         <>
+            <Head>
+                <link
+                    rel="preload"
+                    as="image"
+                    href="/images/hero-banner-video-c1-poster.webp"
+                    fetchPriority="high"
+                />
+            </Head>
             <SEO
                 title="Ignite Training Institute - Tutors In UAE For Exam Success"
                 description="As Dubai's leading coaching institute, we empower students to embark on their academic journey by offering expert tutoring for IB, IGCSE, A Levels & AP"

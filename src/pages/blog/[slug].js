@@ -709,14 +709,6 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
             />
             <Head>
                 <link rel="stylesheet" href="/styles/slug.css" />
-                {featuredImage && (
-                    <link
-                        rel="preload"
-                        as="image"
-                        href={featuredImage}
-                        fetchPriority="high"
-                    />
-                )}
             </Head>
             {/* Additional manual tags if needed (e.g. article specific) */}
             <Head>
@@ -901,7 +893,13 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
                             {/* --- END UPDATED: Like/Dislike Block --- */}
                             <div className="author-bio-section" >
                                 <div className="author-bio-image">
-                                    <img src="/images/sumit.webp" alt="Author image" />
+                                    <img
+                                        src="/images/sumit.webp"
+                                        alt="Author image"
+                                        loading="lazy"
+                                        decoding="async"
+                                        fetchPriority="low"
+                                    />
                                 </div>
 
                                 <div className="author-bio-content">
@@ -925,6 +923,9 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
                                                 alt="arrow"
                                                 width={24}
                                                 height={24}
+                                                loading="lazy"
+                                                decoding="async"
+                                                fetchPriority="low"
                                             />
                                         </button>
                                     </a>
@@ -1009,6 +1010,9 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
                                                                         src={featuredImage}
                                                                         className="card-img-top"
                                                                         alt={post.title.rendered}
+                                                                        loading="lazy"
+                                                                        decoding="async"
+                                                                        fetchPriority="low"
                                                                         style={{ objectFit: "cover", objectPosition: "center" }}
                                                                         onError={(e) => {
                                                                             e.target.onerror = null;
@@ -1036,7 +1040,7 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
                                                                             rel="noopener noreferrer"
                                                                             className="text-muted social-icon-hover"
                                                                         >
-                                                                            <img src="/images/facebk.webp" width="18" height="18" alt="Facebook" />
+                                                                            <img src="/images/facebk.webp" width="18" height="18" alt="Facebook" loading="lazy" decoding="async" fetchPriority="low" />
                                                                         </a>
 
                                                                         <a
@@ -1045,14 +1049,14 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
                                                                             rel="noopener noreferrer"
                                                                             className="text-muted social-icon-hover"
                                                                         >
-                                                                            <img src="/images/x.webp" width="18" height="18" alt="Twitter/X" />
+                                                                            <img src="/images/x.webp" width="18" height="18" alt="Twitter/X" loading="lazy" decoding="async" fetchPriority="low" />
                                                                         </a>
 
                                                                         <a
                                                                             href={`mailto:?subject=${postTitle}&body=${postLink}`}
                                                                             className="text-muted social-icon-hover"
                                                                         >
-                                                                            <img src="/images/mail.webp" width="18" height="18" alt="Email" />
+                                                                            <img src="/images/mail.webp" width="18" height="18" alt="Email" loading="lazy" decoding="async" fetchPriority="low" />
                                                                         </a>
                                                                     </div>
                                                                 </div>

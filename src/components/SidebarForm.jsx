@@ -147,7 +147,7 @@ export default function SidebarForm({ pageInfo, formType }) {
                     <label htmlFor="phone">Phone Number</label>
                     <div className="phone-input">
                         <img src="https://flagcdn.com/w40/ae.webp" alt="UAE Flag" className="flag" height={50}
-                            width={100} />
+                            width={100} loading="lazy" decoding="async" fetchPriority="low" />
                         <input
                             type="text"
                             id="phone"
@@ -201,7 +201,8 @@ export default function SidebarForm({ pageInfo, formType }) {
                             marginLeft: "2.1rem "
                         }}
                     >
-                        <img src="/assets/arrowright.webp" alt="ibdp tutor in dubai" width={16} height={16} />
+                        <img src="/assets/arrowright.webp" alt="ibdp tutor in dubai" width={16} height={16}
+                            loading="lazy" decoding="async" fetchPriority="low" />
                     </div>
                 </button>
             </form>
