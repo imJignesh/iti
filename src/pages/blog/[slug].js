@@ -368,7 +368,21 @@ const TOCPostContent = ({ content, toc }) => {
     );
 };
 
-export async function getServerSideProps(context) {
+export async function getStaticPaths() {
+    const fs = require('fs');
+    const path = require('path');
+    const listPath = path.join(process.cwd(), 'src', 'data', 'blog', 'list.json');
+    const listData = fs.existsSync(listPath)
+        ? JSON.parse(fs.readFileSync(listPath, 'utf8'))
+        : { posts: [] };
+
+    return {
+        paths: (listData.posts || []).map(post => ({ params: { slug: post.slug } })),
+        fallback: 'blocking'
+    };
+}
+
+export async function getStaticProps(context) {
     const { slug } = context.params;
     const fs = require('fs');
     const path = require('path');
@@ -394,6 +408,17 @@ export async function getServerSideProps(context) {
         // 2. Load the lightweight "Related Posts Pool" (list.json)
         const listPath = path.join(dataDir, 'list.json');
         const listData = fs.existsSync(listPath) ? JSON.parse(fs.readFileSync(listPath, 'utf8')) : { posts: [] };
+        const currentCategories = post.categories || [];
+        const postPool = listData.posts || [];
+        const matchingPosts = postPool.filter(candidate =>
+            candidate.id !== post.id &&
+            candidate.categories?.some(categoryId => currentCategories.includes(categoryId))
+        );
+        const fallbackPosts = postPool.filter(candidate =>
+            candidate.id !== post.id &&
+            !matchingPosts.some(related => related.id === candidate.id)
+        );
+        const relatedPosts = [...matchingPosts, ...fallbackPosts].slice(0, 3);
 
         // 3. Load tags for display
         const tagsPath = path.join(dataDir, 'tags.json');
@@ -404,9 +429,10 @@ export async function getServerSideProps(context) {
         return {
             props: {
                 initialPost: post,
-                allPosts: listData.posts || [],
+                initialRelatedPosts: relatedPosts,
                 tagsMap: tagsMap
             },
+            revalidate: 3600
         };
     } catch (error) {
         console.error(`Server-side error fetching post for slug ${slug}:`, error);
@@ -416,7 +442,7 @@ export async function getServerSideProps(context) {
 
 
 
-export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsTagsMap = {} }) {
+export default function PostDetail({ initialPost, initialRelatedPosts = [], tagsMap: propsTagsMap = {} }) {
     const router = useRouter();
     const [pageInfo, setPageInfo] = useState('');
     const { slug } = router.query;
@@ -432,7 +458,7 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
     // --------------------------------------------
 
     // --- NEW: State for Related Posts ---
-    const [relatedPosts, setRelatedPosts] = useState([]);
+    const [relatedPosts] = useState(initialRelatedPosts);
 
     // ------------------------------------
 
@@ -645,29 +671,6 @@ export default function PostDetail({ initialPost, allPosts = [], tagsMap: propsT
             setPageInfo(`URL: ${url} | Title: ${title}`);
         }
 
-        // --- LOCAL RELATED POSTS MATCHING ---
-        const currentPostId = post.id;
-        const currentPostCategories = post.categories || [];
-
-        // 1. Find posts with matching categories
-        let localRelated = allPosts.filter(p =>
-            p.id !== currentPostId &&
-            p.categories.some(catId => currentPostCategories.includes(catId))
-        );
-
-        // 2. If not enough, fill with latest posts
-        if (localRelated.length < 3) {
-            const latestFound = allPosts.filter(p =>
-                p.id !== currentPostId &&
-                !localRelated.some(r => r.id === p.id)
-            );
-            localRelated = [...localRelated, ...latestFound].slice(0, 3);
-        } else {
-            localRelated = localRelated.slice(0, 3);
-        }
-
-        setRelatedPosts(localRelated);
-        // --- END LOCAL MATCHING ---
     }, [post]);
     // --------------------------------------------------------------------
 

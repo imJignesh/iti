@@ -168,34 +168,45 @@ const categorySeoMap = {
 };
 // ------------------------
 
-export async function getServerSideProps(context) {
+export async function getStaticPaths() {
+    const fs = require('fs');
+    const path = require('path');
+    const categoriesPath = path.join(process.cwd(), 'src', 'data', 'blog', 'categories.json');
+    const categories = fs.existsSync(categoriesPath)
+        ? JSON.parse(fs.readFileSync(categoriesPath, 'utf8'))
+        : [];
+
+    return {
+        paths: categories.map(category => ({
+            params: { 'category-slug': category.slug }
+        })),
+        fallback: 'blocking'
+    };
+}
+
+export async function getStaticProps(context) {
     const { params } = context;
     const categorySlug = params['category-slug'];
 
     try {
-        const categoryRes = await fetch(`https://api.ignitetraininginstitute.com/wp-json/wp/v2/categories?slug=${categorySlug}`);
-        const categoryData = await categoryRes.json();
+        const fs = require('fs');
+        const path = require('path');
+        const dataDir = path.join(process.cwd(), 'src', 'data', 'blog');
+        const categoryData = JSON.parse(fs.readFileSync(path.join(dataDir, 'categories.json'), 'utf8'));
 
-        if (!Array.isArray(categoryData) || categoryData.length === 0) {
+        const currentCategory = categoryData.find(category => category.slug === categorySlug);
+        if (!currentCategory) {
             return { notFound: true };
         }
 
-        const currentCategory = categoryData[0];
         const categoryId = currentCategory.id;
-
-        // Fetch Posts initially
-        const postsRes = await fetch(`https://api.ignitetraininginstitute.com/wp-json/wp/v2/posts?per_page=9&page=1&_embed&categories=${categoryId}`);
-        let initialPosts = [];
-        let totalPages = 1;
-
-        if (postsRes.ok) {
-            initialPosts = await postsRes.json();
-            totalPages = parseInt(postsRes.headers.get('X-WP-TotalPages'), 10) || 1;
-        }
-
-        // Fetch tags natively (can be optimized later)
-        const tagsRes = await fetch('https://api.ignitetraininginstitute.com/wp-json/wp/v2/tags?per_page=100');
-        const tags = await tagsRes.json();
+        const listData = JSON.parse(fs.readFileSync(path.join(dataDir, 'list.json'), 'utf8'));
+        const categoryPosts = (listData.posts || []).filter(post =>
+            Array.isArray(post.categories) && post.categories.includes(categoryId)
+        );
+        const initialPosts = categoryPosts.slice(0, 9);
+        const totalPages = Math.max(1, Math.ceil(categoryPosts.length / 9));
+        const tags = JSON.parse(fs.readFileSync(path.join(dataDir, 'tags.json'), 'utf8'));
         const tagsMapFallback = {};
         if (Array.isArray(tags)) {
             tags.forEach(tag => (tagsMapFallback[tag.id] = tag.name));
@@ -208,7 +219,8 @@ export async function getServerSideProps(context) {
                 initialPosts,
                 initialTotalPages: totalPages,
                 tagsMapFallback
-            }
+            },
+            revalidate: 3600
         };
     } catch (err) {
         return { notFound: true };

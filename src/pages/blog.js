@@ -738,7 +738,7 @@ const Blogpg = ({ headerHeight, ...props }) => {
     );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const fs = require('fs');
     const path = require('path');
 
@@ -765,7 +765,8 @@ export async function getServerSideProps() {
                 categories: categories,
                 tagsMap: tagsMap,
                 lastSync: listData.syncDate || null
-            }
+            },
+            revalidate: 3600
         };
 
     } catch (error) {
@@ -775,7 +776,8 @@ export async function getServerSideProps() {
                 allPosts: [],
                 categories: [],
                 tagsMap: {}
-            }
+            },
+            revalidate: 300
         };
     }
 }
