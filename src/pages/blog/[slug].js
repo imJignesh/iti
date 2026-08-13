@@ -59,6 +59,15 @@ const slugify = (text) => {
         .replace(/-+$/, '');
 };
 
+const deprioritizeContentImages = (html = '') => html.replace(/<img\b([^>]*)>/gi, (tag, attributes) => {
+    let nextAttributes = attributes
+        .replace(/\sloading=(['"])[^'"]*\1/gi, '')
+        .replace(/\sdecoding=(['"])[^'"]*\1/gi, '')
+        .replace(/\sfetchpriority=(['"])[^'"]*\1/gi, '');
+
+    return `<img loading="lazy" decoding="async" fetchpriority="low"${nextAttributes}>`;
+});
+
 // const getSidebarHtmlImage = () => {
 //     return `
 //         <div class="sidebar-image mb-3 sticky-gif">
@@ -145,7 +154,7 @@ const TOCPostContent = ({ content, toc }) => {
     const contentRef = useRef(null);
     const gif2PlaceholderClass = 'gif2-placeholder'; // Define the placeholder class
 
-    const [displayContent, setDisplayContent] = useState(content);
+    const [displayContent, setDisplayContent] = useState(() => deprioritizeContentImages(content));
 
     useEffect(() => {
         if (!content) return;
@@ -198,7 +207,7 @@ const TOCPostContent = ({ content, toc }) => {
                 <a href="/test-series/" style="display: block; line-height: 0;">
                     <picture>
                         <source media="(min-width: 768px)" srcset="/videos/blog-bnr-1-desktop.webp" />
-                        <img src="/videos/blog-bnr-1-mobile.webp" alt="Promo Banner" class="img-fluid desktop-gif-banner rounded" />
+                        <img src="/videos/blog-bnr-1-mobile.webp" alt="Promo Banner" loading="lazy" decoding="async" fetchpriority="low" class="img-fluid desktop-gif-banner rounded" />
                     </picture>
                 </a>
             </div>
@@ -209,7 +218,7 @@ const TOCPostContent = ({ content, toc }) => {
                 <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
                      <picture>
                         <source media="(min-width: 768px)" srcset="/videos/blog-bnr-2-desktop.webp" />
-                        <img src="/videos/blog-bnr-2-mobile.webp" alt="Join Free Demo Class" class="img-fluid gif-1 desktop-gif-banner w-100 rounded" style="object-fit: cover;" />
+                        <img src="/videos/blog-bnr-2-mobile.webp" alt="Join Free Demo Class" loading="lazy" decoding="async" fetchpriority="low" class="img-fluid gif-1 desktop-gif-banner w-100 rounded" style="object-fit: cover;" />
                     </picture>
                 </a>
             </div>
@@ -220,7 +229,7 @@ const TOCPostContent = ({ content, toc }) => {
                 <a href="/join-free-demo-class/" style="display: block; line-height: 0;">
                      <picture>
                         <source media="(min-width: 768px)" srcset="/videos/blog-bnr-3-desktop.webp" />
-                        <img src="/videos/blog-bnr-3-mobile.webp" alt="Join Free Demo Class" class="img-fluid gif-2 desktop-gif-banner w-100 rounded" style="object-fit: cover;" />
+                        <img src="/videos/blog-bnr-3-mobile.webp" alt="Join Free Demo Class" loading="lazy" decoding="async" fetchpriority="low" class="img-fluid gif-2 desktop-gif-banner w-100 rounded" style="object-fit: cover;" />
                     </picture>
                 </a>
             </div>
@@ -253,60 +262,29 @@ const TOCPostContent = ({ content, toc }) => {
             newContent = newContent.replace(tocPlaceholder, tocHtml);
         }
 
-        setDisplayContent(newContent);
+        setDisplayContent(deprioritizeContentImages(newContent));
 
     }, [content, toc]);
 
-    // --- BoundingClientRect Polling Logic for Spotlight ---
+    // Observe promotional banners only when they enter the viewport instead of polling every frame.
     useEffect(() => {
-        let animationFrameId;
+        const wrapperElements = Array.from(contentRef.current?.querySelectorAll('.highlight-on-scroll') || []);
+        if (!wrapperElements.length) return;
 
-        const checkHighlight = () => {
-            const wrapperElements = contentRef.current?.querySelectorAll('.highlight-on-scroll');
-            let currentlyHighlightedCount = 0;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => entry.target.classList.toggle('is-highlighted', entry.isIntersecting));
+            document.body.classList.toggle(
+                'has-highlighted-video',
+                wrapperElements.some((element) => element.classList.contains('is-highlighted'))
+            );
+        }, { rootMargin: '-20% 0px -20% 0px' });
 
-            if (wrapperElements) {
-                const wh = window.innerHeight;
-
-                wrapperElements.forEach((el) => {
-                    const rect = el.getBoundingClientRect();
-                    // Check if the center of the element is within the middle 60% of the screen
-                    const elementCenter = rect.top + (rect.height / 2);
-                    const isVisible = elementCenter > (wh * 0.2) && elementCenter < (wh * 0.8);
-
-                    if (isVisible) {
-                        if (!el.classList.contains('is-highlighted')) {
-                            el.classList.add('is-highlighted');
-                        }
-                        currentlyHighlightedCount++;
-                    } else {
-                        if (el.classList.contains('is-highlighted')) {
-                            el.classList.remove('is-highlighted');
-                        }
-                    }
-                });
-            }
-
-            if (currentlyHighlightedCount > 0) {
-                document.body.classList.add('has-highlighted-video');
-            } else {
-                document.body.classList.remove('has-highlighted-video');
-            }
-
-            animationFrameId = requestAnimationFrame(checkHighlight);
-        };
-
-        // Start polling
-        animationFrameId = requestAnimationFrame(checkHighlight);
+        wrapperElements.forEach((element) => observer.observe(element));
 
         return () => {
-            cancelAnimationFrame(animationFrameId);
+            observer.disconnect();
             document.body.classList.remove('has-highlighted-video');
-
-            if (contentRef.current) {
-                const highlighted = contentRef.current.querySelectorAll('.is-highlighted');
-                highlighted.forEach(el => el.classList.remove('is-highlighted'));
-            }
+            wrapperElements.forEach((element) => element.classList.remove('is-highlighted'));
         };
 
     }, [displayContent]);
