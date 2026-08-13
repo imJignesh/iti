@@ -731,6 +731,14 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
             />
             <Head>
                 <link rel="stylesheet" href="/styles/slug.css" />
+                {featuredImage && (
+                    <link
+                        rel="preload"
+                        as="image"
+                        href={featuredImage}
+                        fetchPriority="high"
+                    />
+                )}
             </Head>
             {/* Additional manual tags if needed (e.g. article specific) */}
             <Head>
@@ -838,8 +846,9 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
                                 width={1200}
                                 height={800}
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 1200px"
-                                priority
-                                unoptimized={true}
+                                loading="eager"
+                                fetchPriority="high"
+                                unoptimized
                             />
                         </div>
                     )}
