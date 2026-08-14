@@ -14,7 +14,8 @@ import { isPageSpeedInsightsUserAgent } from "@/utils/botDetection";
 const Course = dynamic(() => import("@/components/homeCopy/Course"));
 const MarqueeBanner = dynamic(() => import("@/components/shared/MarqueeBanner"));
 const About = dynamic(() => import("@/components/homeCopy/About"));
-const Test = dynamic(() => import("@/components/homeCopy/Test"));
+const TestInteractive = dynamic(() => import("@/components/homeCopy/Test"));
+const TestStatic = dynamic(() => import("@/components/homeCopy/TestStatic"));
 const Subjects = dynamic(() => import("@/components/homeCopy/Subjects"));
 const Usps = dynamic(() => import("@/components/homeCopy/Usps"));
 const TrainersShared = dynamic(() => import("@/components/shared/Trainers"));
@@ -54,7 +55,11 @@ export default function PsiTestPage({ blogPosts = [], isPsiBot = false }) {
                 </PsiSection>
 
                 <PsiSection intrinsicHeight={850}>
-                    <Test setActive={setActive} active={active} />
+                    {isPsiBot ? (
+                        <TestStatic setActive={setActive} active={active} />
+                    ) : (
+                        <TestInteractive setActive={setActive} active={active} />
+                    )}
                 </PsiSection>
 
                 <PsiSection intrinsicHeight={750}>

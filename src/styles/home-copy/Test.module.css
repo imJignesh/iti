@@ -13,6 +13,10 @@
   display: none;
 }
 
+.testStaticMobile {
+  display: none;
+}
+
 .testDesktopWrapper {
   display: block;
 }
@@ -260,6 +264,42 @@
 @media (max-width: 991px) {
   .testMobileWrapper {
     display: block;
+  }
+
+  .testStaticMobile {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .testStaticMobile .testCardMobile {
+    width: 100%;
+    max-width: none;
+    gap: 18px;
+  }
+
+  .testStaticMobile .testCardImageWrap,
+  .testStaticMobile .mobileActiveImageArea {
+    height: 220px;
+  }
+
+  .testStaticMobile .testCardDetailsWrap {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .testStaticMobile .mobileActiveTitle {
+    left: 50%;
+    transform: translateX(-50%) !important;
+    font-size: 2rem;
+    bottom: 15px;
   }
 
   .testDesktopWrapper {
@@ -519,6 +559,17 @@
 }
 
 @media (max-width: 575px) {
+  .testStaticMobile {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    padding: 0 16px;
+  }
+
+  .testStaticMobile .testCardImageWrap,
+  .testStaticMobile .mobileActiveImageArea {
+    height: 260px;
+  }
+
   .testSubheading {
     font-size: 0.9rem;
     margin-bottom: 8px;
