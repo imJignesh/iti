@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
-const Hero = () => {
+const Hero = ({ disableVideo = false }) => {
     const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
     const [isVideoVisible, setIsVideoVisible] = useState(false);
 
@@ -10,10 +10,12 @@ const Hero = () => {
     };
 
     useEffect(() => {
+        if (disableVideo) return undefined;
+
         const timerId = setTimeout(() => setShouldLoadVideo(true), 1500);
 
         return () => clearTimeout(timerId);
-    }, []);
+    }, [disableVideo]);
 
     return (
         <>

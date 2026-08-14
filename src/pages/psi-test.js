@@ -24,7 +24,7 @@ const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
 const trainersData = getTrainersData("home");
 const Trainers = () => <TrainersShared trainers={trainersData} />;
 
-export default function PsiTestPage({ blogPosts = [] }) {
+export default function PsiTestPage({ blogPosts = [], isPsiBot = false }) {
     const [active, setActive] = useState(1);
 
     return (
@@ -38,7 +38,7 @@ export default function PsiTestPage({ blogPosts = [] }) {
                 url="https://ignitetraininginstitute.com/psi-test"
             />
             <div className="homeCopy page-content-padding">
-                <Hero />
+                <Hero disableVideo={isPsiBot} />
                 <PsiSection intrinsicHeight={900}>
                     <Course />
                 </PsiSection>
