@@ -1,10 +1,13 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { isPageSpeedInsightsUserAgent } from "@/utils/botDetection";
 
-export default function Document() {
+export default function Document({ isPsiTestBot = false }) {
   return (
     <Html lang="en">
       <Head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {!isPsiTestBot && (
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+        )}
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
@@ -39,3 +42,17 @@ export default function Document() {
     </Html>
   );
 }
+
+Document.getInitialProps = async (ctx) => {
+  const initialProps = await ctx.defaultGetInitialProps(ctx);
+  const requestUrl = ctx.req?.url || "";
+  const userAgent = ctx.req?.headers?.["user-agent"] || "";
+  const isPsiTestBot =
+    requestUrl.split("?", 1)[0] === "/psi-test" &&
+    isPageSpeedInsightsUserAgent(userAgent);
+
+  return {
+    ...initialProps,
+    isPsiTestBot,
+  };
+};

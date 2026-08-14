@@ -87,6 +87,10 @@ export default function PsiTestPage({ blogPosts = [], isPsiBot = false }) {
 
 export async function getServerSideProps(context) {
     try {
+        // Keep the bot-specific response from being reused by normal visitors.
+        // This route is an internal test page and is already noindex/nofollow.
+        context.res.setHeader("Cache-Control", "private, no-store, max-age=0");
+
         const userAgent = context.req?.headers?.["user-agent"] || "";
         const isPsiBot = isPageSpeedInsightsUserAgent(userAgent);
 
