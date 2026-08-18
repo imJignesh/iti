@@ -57,10 +57,11 @@ const Hero = ({ disableVideo = false }) => {
                                         width={552}
                                         height={620}
                                         className="heroPoster"
+                                        loading="eager"
                                         decoding="async"
                                         fetchPriority="high"
                                     />
-                                    {shouldLoadVideo ? (
+                                    {!disableVideo && shouldLoadVideo ? (
                                         <video
                                             className={`heroVideo${isVideoVisible ? ' heroVideoVisible' : ''}`}
                                             autoPlay

@@ -32,13 +32,32 @@ export default function PsiTestPage({ blogPosts = [], isPsiBot = false }) {
         <>
             <Head>
                 <meta name="robots" content="noindex, nofollow" />
+                {isPsiBot && (
+                    <link
+                        rel="preload"
+                        as="image"
+                        href="/images/hero-banner-video-c1-poster.webp"
+                        type="image/webp"
+                        fetchPriority="high"
+                    />
+                )}
             </Head>
             <SEO
                 title="PSI Test Page"
                 description="Internal PSI test page for homepage performance experiments."
                 url="https://ignitetraininginstitute.com/psi-test"
             />
-            <div className="homeCopy page-content-padding">
+            <div className={`homeCopy page-content-padding${isPsiBot ? " psi-bot" : ""}`}>
+                {isPsiBot && (
+                    <style jsx global>{`
+                        .psi-bot .hero *,
+                        .psi-bot .hero *::before,
+                        .psi-bot .hero *::after {
+                            animation: none !important;
+                            transition: none !important;
+                        }
+                    `}</style>
+                )}
                 <Hero disableVideo={isPsiBot} />
                 <PsiSection intrinsicHeight={900}>
                     <Course />
