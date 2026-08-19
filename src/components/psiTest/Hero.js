@@ -58,7 +58,7 @@ const Hero = ({ disableVideo = false }) => {
                                         height={620}
                                         className="heroPoster"
                                         loading="eager"
-                                        decoding="async"
+                                        decoding={disableVideo ? 'sync' : 'async'}
                                         fetchPriority="high"
                                     />
                                     {!disableVideo && shouldLoadVideo ? (

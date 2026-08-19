@@ -56,7 +56,27 @@ export default function PsiTestPage({ blogPosts = [], isPsiBot = false }) {
                             animation: none !important;
                             transition: none !important;
                         }
-                    `}</style>
+                        .psi-bot .heroSectionWrapper,
+                        .psi-bot .heroSectionWrapper .hero,
+                        .psi-bot .heroSectionWrapper .heroMain,
+                        .psi-bot .heroSectionWrapper .heroLeft,
+                        .psi-bot .heroSectionWrapper .heroRight,
+                        .psi-bot .heroSectionWrapper .videoContainer,
+                        .psi-bot .heroPoster {
+                            opacity: 1 !important;
+                            visibility: visible !important;
+                            animation: none !important;
+                            transition: none !important;
+                        }
+                        .psi-bot .heroSectionWrapper,
+                        .psi-bot .heroSectionWrapper .hero,
+                        .psi-bot .heroSectionWrapper .heroMain,
+                        .psi-bot .heroSectionWrapper .heroLeft,
+                        .psi-bot .heroSectionWrapper .heroRight,
+                        .psi-bot .heroSectionWrapper .videoContainer {
+                            transform: none !important;
+                        }
+            `}</style>
                 )}
                 <Hero disableVideo={isPsiBot} />
                 <PsiSection intrinsicHeight={900}>
