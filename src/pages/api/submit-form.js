@@ -171,6 +171,8 @@ export default async function handler(req, res) {
         if (!submittedFormConfig) {
             submittedFormConfig = FORM_CONFIGS.find(config => config.type === 'POPUP_FORM');
         }
+    } else if (formType === 'POPUP_FORM_COPY') {
+        submittedFormConfig = FORM_CONFIGS.find(config => config.type === 'POPUP_FORM_COPY');
     } else {
         submittedFormConfig = formType ? FORM_CONFIGS.find(config => config.type === formType) : null;
     }
@@ -184,6 +186,22 @@ export default async function handler(req, res) {
     }
 
     const { zohoUrl, fieldMap, redirectUrl } = submittedFormConfig;
+
+    // --- 3.1 REQUIRED FIELD CHECKS FOR POPUP FORMS ---
+    const isPopupForm = submittedFormConfig.type === 'POPUP_FORM' || submittedFormConfig.type === 'POPUP_FORM_COPY';
+    if (isPopupForm) {
+        const missingFields = [];
+
+        if (!phone || !String(phone).trim()) missingFields.push('phone');
+        if (!curriculum || !String(curriculum).trim()) missingFields.push('curriculum');
+
+        if (missingFields.length > 0) {
+            return res.status(400).json({
+                success: false,
+                message: `Missing required field(s): ${missingFields.join(', ')}`,
+            });
+        }
+    }
 
     // --- 4. SUBMIT TO BREVO ---
     if (formType !== 'CAREER_FORM') {

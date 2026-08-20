@@ -25,10 +25,11 @@ const DelayedPopup = () => {
         name: "",
         email: "",
         phone: "",
-        curriculum: "-Select-",
+        curriculum: "",
     });
 
     const [errors, setErrors] = useState({});
+    const [touched, setTouched] = useState({});
     const [loading, setLoading] = useState(false);
     const [submissionStatus, setSubmissionStatus] = useState(null);
 
@@ -63,65 +64,99 @@ const DelayedPopup = () => {
                 closeManualPopup();
             }
             setErrors({});
+            setTouched({});
             setSubmissionStatus(null);
         }
     };
 
+    const getValidationErrors = (data) => {
+        const newErrors = {};
+
+        if (!data.name.trim()) {
+            newErrors.name = "Name is required.";
+        }
+        if (!data.email.trim()) {
+            newErrors.email = "Email is required.";
+        } else if (!/\S+@\S+\.\S+/.test(data.email)) {
+            newErrors.email = "Email address is invalid.";
+        }
+
+        if (!data.phone || !data.phone.trim()) {
+            newErrors.phone = "Phone number is required.";
+        } else if (!/^[\d\s()+-]{6,20}$/.test(data.phone.trim())) {
+            newErrors.phone = "Invalid phone format.";
+        }
+
+        if (!data.curriculum) {
+            newErrors.curriculum = "Please select a curriculum.";
+        }
+
+        return newErrors;
+    };
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
+        const nextData = {
+            ...formData,
             [name]: value,
+        };
+
+        setFormData(nextData);
+        setSubmissionStatus(null);
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            ...getValidationErrors(nextData),
         }));
+
         if (errors[name]) {
             setErrors(prevErrors => ({ ...prevErrors, [name]: '' }));
         }
     };
 
+    const handleBlur = (e) => {
+        const { name } = e.target;
+        setTouched(prevTouched => ({ ...prevTouched, [name]: true }));
+        setErrors(getValidationErrors(formData));
+    };
+
+    const handleSelectBlur = () => {
+        setTouched(prevTouched => ({ ...prevTouched, curriculum: true }));
+        setErrors(getValidationErrors(formData));
+    };
+
+    const handlePhoneBlur = () => {
+        setTouched(prevTouched => ({ ...prevTouched, phone: true }));
+        setErrors(getValidationErrors(formData));
+    };
+
     // New handler for the GlobalPhoneInput to capture formattedValue
     const handlePhoneChange = (formattedValue) => {
-        setFormData((prevData) => ({
-            ...prevData,
+        const nextData = {
+            ...formData,
             phone: formattedValue,
+        };
+
+        setFormData(nextData);
+        setSubmissionStatus(null);
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            ...getValidationErrors(nextData),
         }));
-        if (errors.phone) {
-            setErrors(prevErrors => ({ ...prevErrors, phone: '' }));
-        }
     };
 
     const validate = () => {
-        const newErrors = {};
-        let isValid = true;
-
-        if (!formData.name.trim()) {
-            newErrors.name = "Name is required.";
-            isValid = false;
-        }
-        if (!formData.email.trim()) {
-            newErrors.email = "Email is required.";
-            isValid = false;
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email = "Email address is invalid.";
-            isValid = false;
-        }
-
-        // Updated validation for the formatted phone string
-        if (!formData.phone || !formData.phone.trim()) {
-            newErrors.phone = "Phone number is required.";
-            isValid = false;
-        } else if (!/^[\d\s()+-]{6,20}$/.test(formData.phone.trim())) {
-            newErrors.phone = "Invalid phone format.";
-            isValid = false;
-        }
-
-        if (formData.curriculum === '-Select-') {
-            newErrors.curriculum = "Please select a curriculum.";
-            isValid = false;
-        }
-
+        const newErrors = getValidationErrors(formData);
         setErrors(newErrors);
-        return isValid;
+        setTouched({
+            name: true,
+            email: true,
+            phone: true,
+            curriculum: true,
+        });
+        return Object.keys(newErrors).length === 0;
     };
+
+    const isFormValid = Object.keys(getValidationErrors(formData)).length === 0;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -188,10 +223,11 @@ const DelayedPopup = () => {
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
+                                onBlur={handleBlur}
                                 placeholder="Enter your name"
                                 className="formInput"
                             />
-                            {errors.name && <p className="error-text">{errors.name}</p>}
+                            {touched.name && errors.name && <p className="error-text">{errors.name}</p>}
                         </div>
                         <div className="col-6">
                             <label>Email</label>
@@ -200,10 +236,11 @@ const DelayedPopup = () => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
+                                onBlur={handleBlur}
                                 placeholder="Enter your email"
                                 className="formInput"
                             />
-                            {errors.email && <p className="error-text">{errors.email}</p>}
+                            {touched.email && errors.email && <p className="error-text">{errors.email}</p>}
                         </div>
                     </div>
 
@@ -212,7 +249,8 @@ const DelayedPopup = () => {
                     <GlobalPhoneInput
                         value={formData.phone}
                         onChange={handlePhoneChange}
-                        error={errors.phone}
+                        error={touched.phone && errors.phone}
+                        onBlur={handlePhoneBlur}
                     />
 
                     <label>Curriculum</label>
@@ -221,9 +259,10 @@ const DelayedPopup = () => {
                             name="curriculum"
                             value={formData.curriculum}
                             onChange={handleChange}
+                            onBlur={handleSelectBlur}
                             className="formInput"
                         >
-                            <option value="-Select-">-Select-</option>
+                            <option value="" disabled>Select curriculum</option>
                             <option value="IB Diploma">IB Diploma</option>
                             <option value="IB MYP">IB MYP</option>
                             <option value="IGCSE/GCSE">IGCSE/GCSE</option>
@@ -236,9 +275,9 @@ const DelayedPopup = () => {
                             <option value="STEM (Others)">STEM (Others)</option>
                         </select>
                     </div>
-                    {errors.curriculum && <p className="error-text">{errors.curriculum}</p>}
+                    {touched.curriculum && errors.curriculum && <p className="error-text">{errors.curriculum}</p>}
 
-                    <button type="submit" className="btn popup-cust-text fw-bold d-flex align-items-center rounded-pill " disabled={loading}
+                    <button type="submit" className="btn popup-cust-text fw-bold d-flex align-items-center rounded-pill " disabled={loading || !isFormValid}
                         style={{
                             background: "linear-gradient(90deg,#161664, #3F88BA)",
                             color: 'white',
