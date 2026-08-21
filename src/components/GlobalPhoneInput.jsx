@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
+import { formatIncompletePhoneNumber } from 'libphonenumber-js';
 
 const countries = [
     { name: "Afghanistan", code: "af", dial: "93" },
@@ -122,7 +123,7 @@ const getCountryMaxDigits = (country) => {
     return dialCode.length + 10;
 };
 
-const GlobalPhoneInput = ({ value, onChange, error, onCountryChange, strictLength = true }) => {
+const GlobalPhoneInput = ({ value, onChange, error, onCountryChange, strictLength = true, nativeInput = false }) => {
     const [selectedCountry, setSelectedCountry] = useState({
         name: 'United Arab Emirates',
         code: 'ae',
@@ -134,7 +135,6 @@ const GlobalPhoneInput = ({ value, onChange, error, onCountryChange, strictLengt
     const [flagFailed, setFlagFailed] = useState(false);
 
     const flagIso = selectedCountry?.code || 'ae';
-    const inputCountryIso2 = selectedCountry?.iso2 || selectedCountry?.code || 'ae';
     const maxDigits = getCountryMaxDigits(selectedCountry);
 
     const resolveCountryByCode = (countryCode) => {
@@ -172,6 +172,32 @@ const GlobalPhoneInput = ({ value, onChange, error, onCountryChange, strictLengt
         }
     }, [value, onCountryChange, selectedCountry.code]);
 
+    const handleInputChange = (event) => {
+        const inputValue = event.target.value;
+        const digits = inputValue.replace(/\D/g, '');
+
+        if (!digits) {
+            setFlagFailed(false);
+            onChange('');
+            return;
+        }
+
+        const withDialCode = inputValue.trim().startsWith('+')
+            ? `+${digits}`
+            : `+${selectedCountry.dial}${digits}`;
+        const formattedValue = formatIncompletePhoneNumber(
+            withDialCode,
+            String(selectedCountry.iso2 || selectedCountry.code).toUpperCase()
+        );
+
+        if (strictLength && formattedValue.replace(/\D/g, '').length > maxDigits) {
+            return;
+        }
+
+        setFlagFailed(false);
+        onChange(formattedValue);
+    };
+
     return (
         <div className="position-relative"
             data-scroll
@@ -195,70 +221,72 @@ const GlobalPhoneInput = ({ value, onChange, error, onCountryChange, strictLengt
                 )}
             </div>
 
-            <PhoneInput
-                country={inputCountryIso2}
-                value={value}
-                inputProps={{
-                    maxLength: 24,
-                }}
-                onChange={(val, country, e, formattedValue) => {
-                    const reportedCountry = {
-                        ...country,
-                        dialCode: country.dialCode || country.dial || '',
-                        iso2: country.iso2 || country.countryCode || country.code || '',
-                        code: country.iso2 || country.countryCode || country.code || '',
-                    };
-                    const isSharedDialCode = selectedCountry?.dialCode === reportedCountry.dialCode &&
-                        selectedCountry?.dialCode === '1';
-                    const nextCountry = isSharedDialCode
-                        ? selectedCountry
-                        : reportedCountry;
+            {nativeInput ? (
+                <input
+                    type="tel"
+                    value={value || ''}
+                    onChange={handleInputChange}
+                    placeholder="Ph.No"
+                    className="global-phone-input-field form-control"
+                    inputMode="tel"
+                    autoComplete="tel"
+                    aria-label="Phone number"
+                />
+            ) : (
+                <PhoneInput
+                    country={selectedCountry?.iso2 || selectedCountry?.code || 'ae'}
+                    value={value}
+                    inputProps={{ maxLength: 24 }}
+                    onChange={(val, country, e, formattedValue) => {
+                        const reportedCountry = {
+                            ...country,
+                            dialCode: country.dialCode || country.dial || '',
+                            iso2: country.iso2 || country.countryCode || country.code || '',
+                            code: country.iso2 || country.countryCode || country.code || '',
+                        };
+                        const isSharedDialCode = selectedCountry?.dialCode === reportedCountry.dialCode &&
+                            selectedCountry?.dialCode === '1';
+                        const nextCountry = isSharedDialCode ? selectedCountry : reportedCountry;
+                        const strictMaxDigits = getCountryMaxDigits(nextCountry);
+                        const rawDigits = val.replace(/\D/g, '');
+                        const nextFormattedValue = formattedValue || val;
 
-                    setFlagFailed(false);
-                    setSelectedCountry(nextCountry);
+                        setFlagFailed(false);
+                        setSelectedCountry(nextCountry);
+                        onCountryChange?.(nextCountry);
 
-                    if (onCountryChange) {
-                        onCountryChange(nextCountry);
-                    }
-
-                    const strictMaxDigits = getCountryMaxDigits(nextCountry);
-                    const rawDigits = val.replace(/\D/g, '');
-                    const nextFormattedValue = formattedValue || val;
-
-                    if (strictLength && rawDigits.length > strictMaxDigits) {
-                        let digitCount = 0;
-                        let truncated = '';
-                        for (let char of nextFormattedValue) {
-                            if (/\d/.test(char)) digitCount++;
-                            if (digitCount <= strictMaxDigits) {
-                                truncated += char;
-                            } else {
-                                break;
+                        if (strictLength && rawDigits.length > strictMaxDigits) {
+                            let digitCount = 0;
+                            let truncated = '';
+                            for (const char of nextFormattedValue) {
+                                if (/\d/.test(char)) digitCount++;
+                                if (digitCount <= strictMaxDigits) truncated += char;
+                                else break;
                             }
+                            onChange(truncated);
+                        } else {
+                            onChange(nextFormattedValue);
                         }
-                        onChange(truncated);
-                    } else {
-                        onChange(nextFormattedValue);
-                    }
-                }}
-                disableDropdown={true}
-                specialLabel=""
-                placeholder="Ph.No"
-                inputStyle={{
-                    width: '100%',
-                    background: 'transparent',
-                    color: 'white',
-                    border: '1.5px solid #FFFFFF',
-                    borderRadius: '40px',
-                    fontSize: '1rem',
-                }}
-                buttonStyle={{
-                    background: 'transparent',
-                    border: 'none',
-                    borderRadius: '40px 0 0 40px',
-                    width: '45px'
-                }}
-            />
+                    }}
+                    disableDropdown
+                    specialLabel=""
+                    placeholder="Ph.No"
+                    inputStyle={{
+                        width: '100%',
+                        background: 'transparent',
+                        color: 'white',
+                        border: '1.5px solid #FFFFFF',
+                        borderRadius: '40px',
+                        fontSize: '1rem',
+                    }}
+                    buttonStyle={{
+                        background: 'transparent',
+                        border: 'none',
+                        borderRadius: '40px 0 0 40px',
+                        width: '45px',
+                    }}
+                />
+            )}
 
             {/* Invisible Native Select for Scroll Fix */}
             <select
@@ -327,6 +355,23 @@ const GlobalPhoneInput = ({ value, onChange, error, onCountryChange, strictLengt
                 align-items: center;
                 justify-content: center;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+            }
+
+            .global-phone-input-field {
+                width: 100%;
+                height: 50px;
+                padding: 10px 15px 10px 60px;
+                border: 1.5px solid #FFFFFF;
+                border-radius: 40px;
+                background: transparent;
+                color: white;
+                font-size: 1rem;
+                outline: none;
+            }
+
+            .global-phone-input-field::placeholder {
+                color: inherit;
+                opacity: 1;
             }
 
             .phone-field-error {

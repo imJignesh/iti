@@ -274,6 +274,7 @@ const DelayedPopup = () => {
                             error=""
                             onCountryChange={setPhoneCountry}
                             strictLength
+                            nativeInput
                         />
                         {showPhoneError && (
                             <div className="popup-phone-error" role="alert">
