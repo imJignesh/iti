@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import { parsePhoneNumberFromString } from 'libphonenumber-js';
 const GlobalPhoneInput = dynamic(() => import('../GlobalPhoneInput'), {
     ssr: false,
     loading: () => <div style={{ height: '50px', width: '100%', borderRadius: '40px', border: '1.5px solid rgba(255,255,255,0.3)' }} />
@@ -16,6 +17,7 @@ const inputStyle = {
 export default function InfoCardForm({ formConfig }) {
     const [isMobile, setIsMobile] = useState(false);
     const [pageInfo, setPageInfo] = useState('');
+    const [phoneCountry, setPhoneCountry] = useState(null);
 
     const formHeading = formConfig?.formHeading || "GET A FREE DEMO CLASS+ FREE STUDY RESOURCES";
     const submitButtonText = formConfig?.submitButtonText || "SUBMIT";
@@ -35,9 +37,25 @@ export default function InfoCardForm({ formConfig }) {
     const [isShaking, setIsShaking] = useState(false);
 
     const handlePhoneChange = (value) => {
-        setFormData(prev => ({ ...prev, phone: value }));
-        if (errors.phone) setErrors(prev => ({ ...prev, phone: '' }));
+        const nextData = { ...formData, phone: value };
+        setFormData(nextData);
+
+        const countryLabel = getCountryLabel();
+        const selectedIso2 = String(phoneCountry?.iso2 || '').toUpperCase();
+        const parsedPhone = value
+            ? parsePhoneNumberFromString(String(value), selectedIso2 || undefined)
+            : null;
+
+        if (!value || !String(value).trim()) {
+            setErrors(prev => ({ ...prev, phone: "Phone number is required." }));
+        } else if (!parsedPhone || !parsedPhone.isPossible() || !parsedPhone.isValid()) {
+            setErrors(prev => ({ ...prev, phone: `Please enter a valid ${countryLabel} phone number.` }));
+        } else {
+            setErrors(prev => ({ ...prev, phone: '' }));
+        }
     };
+
+    const getCountryLabel = () => String(phoneCountry?.name || 'country').trim() || 'country';
 
     useEffect(() => {
         const checkDevice = () => setIsMobile(window.innerWidth <= 1100);
@@ -69,6 +87,7 @@ export default function InfoCardForm({ formConfig }) {
     const validate = () => {
         const newErrors = {};
         let isValid = true;
+        const countryLabel = getCountryLabel();
 
         fields.forEach(field => {
             if (field.required && !formData[field.name]?.trim()) {
@@ -88,8 +107,16 @@ export default function InfoCardForm({ formConfig }) {
             }
         });
 
-        if (formData.phone && !formData.phone.trim()) {
+        const selectedIso2 = String(phoneCountry?.iso2 || '').toUpperCase();
+        const parsedPhone = formData.phone
+            ? parsePhoneNumberFromString(String(formData.phone), selectedIso2 || undefined)
+            : null;
+
+        if (!formData.phone || !formData.phone.trim()) {
             newErrors.phone = "Phone number is required.";
+            isValid = false;
+        } else if (!parsedPhone || !parsedPhone.isPossible() || !parsedPhone.isValid()) {
+            newErrors.phone = `Please enter a valid ${countryLabel} phone number.`;
             isValid = false;
         }
 
@@ -158,7 +185,12 @@ export default function InfoCardForm({ formConfig }) {
                                         {errors[field.name] && <div className="invalid-feedback d-block fw-bold text-warning">{errors[field.name]}</div>}
                                     </div>
                                     <div className="col-6">
-                                        <GlobalPhoneInput value={formData.phone || ""} onChange={handlePhoneChange} error={errors.phone} />
+                                        <GlobalPhoneInput
+                                            value={formData.phone || ""}
+                                            onChange={handlePhoneChange}
+                                            error={errors.phone}
+                                            onCountryChange={setPhoneCountry}
+                                        />
                                     </div>
                                 </div>
                             );

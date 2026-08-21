@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
+import { parsePhoneNumberFromString } from 'libphonenumber-js';
 import { PopupContext } from '../pages/_app';
 const GlobalPhoneInput = dynamic(() => import('./GlobalPhoneInput'), {
     ssr: false,
@@ -11,7 +12,6 @@ const GlobalPhoneInput = dynamic(() => import('./GlobalPhoneInput'), {
 
 const POPUP_DELAY_MS = 15000;
 const HAS_SEEN_POPUP_KEY = 'hasSeenPopupSession';
-
 const DelayedPopup = () => {
     const { isManualOpen, closeManualPopup } = useContext(PopupContext);
     const router = useRouter();
@@ -30,6 +30,7 @@ const DelayedPopup = () => {
 
     const [errors, setErrors] = useState({});
     const [touched, setTouched] = useState({});
+    const [phoneCountry, setPhoneCountry] = useState(null);
     const [loading, setLoading] = useState(false);
     const [submissionStatus, setSubmissionStatus] = useState(null);
 
@@ -56,6 +57,18 @@ const DelayedPopup = () => {
         }
     }, []);
 
+    useEffect(() => {
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            ...getValidationErrors(formData),
+        }));
+    }, [formData, phoneCountry]);
+
+    const getCountryLabel = () => {
+        const countryName = String(phoneCountry?.name || '').trim();
+        return countryName || 'country';
+    };
+
     const closePopup = (e) => {
         if (e) e.preventDefault();
         if (!loading) {
@@ -71,6 +84,7 @@ const DelayedPopup = () => {
 
     const getValidationErrors = (data) => {
         const newErrors = {};
+        const countryLabel = getCountryLabel();
 
         if (!data.name.trim()) {
             newErrors.name = "Name is required.";
@@ -81,10 +95,15 @@ const DelayedPopup = () => {
             newErrors.email = "Email address is invalid.";
         }
 
+        const selectedIso2 = String(phoneCountry?.iso2 || '').toUpperCase();
+        const parsedPhone = data.phone
+            ? parsePhoneNumberFromString(String(data.phone), selectedIso2 || undefined)
+            : null;
+
         if (!data.phone || !data.phone.trim()) {
             newErrors.phone = "Phone number is required.";
-        } else if (!/^[\d\s()+-]{6,20}$/.test(data.phone.trim())) {
-            newErrors.phone = "Invalid phone format.";
+        } else if (!parsedPhone || !parsedPhone.isPossible() || !parsedPhone.isValid()) {
+            newErrors.phone = `Please enter a valid ${countryLabel} phone number.`;
         }
 
         if (!data.curriculum) {
@@ -156,7 +175,9 @@ const DelayedPopup = () => {
         return Object.keys(newErrors).length === 0;
     };
 
-    const isFormValid = Object.keys(getValidationErrors(formData)).length === 0;
+    const currentValidationErrors = getValidationErrors(formData);
+    const isFormValid = Object.keys(currentValidationErrors).length === 0;
+    const showPhoneError = Boolean(formData.phone && currentValidationErrors.phone);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -246,12 +267,20 @@ const DelayedPopup = () => {
 
                     {/* Updated Phone Field */}
                     <label>Phone</label>
-                    <GlobalPhoneInput
-                        value={formData.phone}
-                        onChange={handlePhoneChange}
-                        error={touched.phone && errors.phone}
-                        onBlur={handlePhoneBlur}
-                    />
+                    <div className="popup-phone-field">
+                        <GlobalPhoneInput
+                            value={formData.phone}
+                            onChange={handlePhoneChange}
+                            error=""
+                            onCountryChange={setPhoneCountry}
+                            strictLength
+                        />
+                        {showPhoneError && (
+                            <div className="popup-phone-error" role="alert">
+                                {currentValidationErrors.phone}
+                            </div>
+                        )}
+                    </div>
 
                     <label>Curriculum</label>
                     <div className="selectWrapper">

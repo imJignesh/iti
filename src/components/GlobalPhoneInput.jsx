@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 
 const countries = [
@@ -109,10 +109,68 @@ const countries = [
     { name: "Zimbabwe", code: "zw", dial: "263" }
 ];
 
-const GlobalPhoneInput = ({ value, onChange, error }) => {
-    // Determine current flag based on value
-    const activeCountry = countries.find(c => value?.replace(/\D/g, '').startsWith(c.dial)) || countries.find(c => c.code === 'ae');
-    const flagIso = activeCountry ? activeCountry.code : 'ae';
+const getCountryMaxDigits = (country) => {
+    if (!country) return 15;
+
+    const dialCode = String(country.dialCode || '');
+    const nationalDigits = String(country.format || '').match(/\./g)?.length || null;
+
+    if (nationalDigits) {
+        return dialCode.length + nationalDigits;
+    }
+
+    return dialCode.length + 10;
+};
+
+const GlobalPhoneInput = ({ value, onChange, error, onCountryChange, strictLength = true }) => {
+    const [selectedCountry, setSelectedCountry] = useState({
+        name: 'United Arab Emirates',
+        code: 'ae',
+        dial: '971',
+        dialCode: '971',
+        format: '+... ... ... ...',
+        iso2: 'ae',
+    });
+    const [flagFailed, setFlagFailed] = useState(false);
+
+    const flagIso = selectedCountry?.code || 'ae';
+    const inputCountryIso2 = selectedCountry?.iso2 || selectedCountry?.code || 'ae';
+    const maxDigits = getCountryMaxDigits(selectedCountry);
+
+    const resolveCountryByCode = (countryCode) => {
+        const match = countries.find((country) => country.code === String(countryCode || '').toLowerCase());
+        return match ? { ...match, dialCode: match.dial, iso2: match.code } : null;
+    };
+
+    useEffect(() => {
+        const digits = String(value || '').replace(/\D/g, '');
+        if (!digits) return;
+
+        const matchingCountries = [...countries]
+            .sort((a, b) => b.dial.length - a.dial.length)
+            .filter((country) => digits.startsWith(country.dial));
+
+        const matchingDialCodes = matchingCountries
+            .map((country) => country.dial)
+            .filter((dial, index, all) => all.indexOf(dial) === index);
+
+        // +1 is shared by the US and Canada. Keep the user's selected country
+        // while the value contains only the shared dial code.
+        const currentDialMatches = matchingCountries.some(
+            (country) => country.code === selectedCountry.code
+        );
+        const hasSharedDialCode = matchingDialCodes.length === 1 && matchingCountries.length > 1;
+
+        const match = hasSharedDialCode && currentDialMatches
+            ? null
+            : matchingCountries[0];
+
+        if (match && match.code !== selectedCountry.code) {
+            const nextCountry = { ...match, dialCode: match.dial, iso2: match.code };
+            setSelectedCountry(nextCountry);
+            onCountryChange?.(nextCountry);
+        }
+    }, [value, onCountryChange, selectedCountry.code]);
 
     return (
         <div className="position-relative"
@@ -122,39 +180,57 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
 
             {/* SVG Flag display */}
             <div className="custom-flag-container">
-                <img
-                    src={`https://flagcdn.com/${flagIso}.svg`}
-                    alt="flag"
-                    height={50}
-                    width={100}
-                />
+                {!flagFailed ? (
+                    <img
+                        src={`https://flagcdn.com/${flagIso}.svg`}
+                        alt={selectedCountry?.name || 'flag'}
+                        height={50}
+                        width={100}
+                        onError={() => setFlagFailed(true)}
+                    />
+                ) : (
+                    <span className="flag-fallback" aria-label={selectedCountry?.name || 'country'}>
+                        {String(selectedCountry?.code || '??').toUpperCase()}
+                    </span>
+                )}
             </div>
 
             <PhoneInput
-                country={'ae'}
+                country={inputCountryIso2}
                 value={value}
-                // Hard limit on total characters including format symbols (spaces, +, brackets)
                 inputProps={{
-                    maxLength: flagIso === 'ae' ? 16 : 20, // Strict 16 for UAE (+971 50 123 4567)
+                    maxLength: 24,
                 }}
-                // Use the 4th argument (formattedValue) to keep +, brackets, and spaces for Zoho
                 onChange={(val, country, e, formattedValue) => {
-                    const dialCode = country.dialCode || '';
-                    const iso2 = country.iso2 || '';
+                    const reportedCountry = {
+                        ...country,
+                        dialCode: country.dialCode || country.dial || '',
+                        iso2: country.iso2 || country.countryCode || country.code || '',
+                        code: country.iso2 || country.countryCode || country.code || '',
+                    };
+                    const isSharedDialCode = selectedCountry?.dialCode === reportedCountry.dialCode &&
+                        selectedCountry?.dialCode === '1';
+                    const nextCountry = isSharedDialCode
+                        ? selectedCountry
+                        : reportedCountry;
 
-                    // Explicitly enforce 12 digits for UAE (+971 + 9 digits)
-                    const totalMaxDigits = (iso2 === 'ae' || dialCode === '971') ? 12 : 15;
+                    setFlagFailed(false);
+                    setSelectedCountry(nextCountry);
 
-                    // Remove all non-numeric characters to check actual digit count
+                    if (onCountryChange) {
+                        onCountryChange(nextCountry);
+                    }
+
+                    const strictMaxDigits = getCountryMaxDigits(nextCountry);
                     const rawDigits = val.replace(/\D/g, '');
+                    const nextFormattedValue = formattedValue || val;
 
-                    if (rawDigits.length > totalMaxDigits) {
+                    if (strictLength && rawDigits.length > strictMaxDigits) {
                         let digitCount = 0;
                         let truncated = '';
-                        // Re-build formatted string but stop when reached totalMaxDigits
-                        for (let char of formattedValue) {
+                        for (let char of nextFormattedValue) {
                             if (/\d/.test(char)) digitCount++;
-                            if (digitCount <= totalMaxDigits) {
+                            if (digitCount <= strictMaxDigits) {
                                 truncated += char;
                             } else {
                                 break;
@@ -162,12 +238,12 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
                         }
                         onChange(truncated);
                     } else {
-                        onChange(formattedValue);
+                        onChange(nextFormattedValue);
                     }
                 }}
                 disableDropdown={true}
                 specialLabel=""
-                placeholder="PH.NO"
+                placeholder="Ph.No"
                 inputStyle={{
                     width: '100%',
                     background: 'transparent',
@@ -187,19 +263,27 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
             {/* Invisible Native Select for Scroll Fix */}
             <select
                 className="native-select-overlay"
-                onChange={(e) => onChange(`+${e.target.value}`)}
-                value=""
+                onChange={(e) => {
+                    const nextCountry = resolveCountryByCode(e.target.value);
+                    if (nextCountry) {
+                        setSelectedCountry(nextCountry);
+                        onCountryChange?.(nextCountry);
+                        setFlagFailed(false);
+                        onChange(`+${nextCountry.dial}`);
+                    }
+                }}
+                value={selectedCountry?.code || ''}
             >
-                <option value="" disabled>Select Country</option>
+                <option value="" disabled hidden />
                 {countries.map((c) => (
-                    <option key={`${c.code}-${c.dial}`} value={c.dial}>
+                    <option key={`${c.code}-${c.dial}`} value={c.code}>
                         {c.name} (+{c.dial})
                     </option>
                 ))}
             </select>
 
             {error && (
-                <div className="invalid-feedback d-block fw-bold text-warning">
+                <div className="phone-field-error" role="alert">
                     {error}
                 </div>
             )}
@@ -228,6 +312,66 @@ const GlobalPhoneInput = ({ value, onChange, error }) => {
                 max-width: 30px;
                 border-radius: 4px;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            }
+
+            .flag-fallback {
+                min-width: 30px;
+                min-height: 20px;
+                padding: 2px 4px;
+                border-radius: 4px;
+                background: rgba(255,255,255,0.18);
+                color: #152f63;
+                font-size: 0.65rem;
+                font-weight: 700;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+            }
+
+            .phone-field-error {
+                position: absolute;
+                top: calc(100% + 6px);
+                right: 0;
+                z-index: 30;
+                width: max-content;
+                max-width: min(560px, calc(100vw - 32px));
+                padding: 6px 10px;
+                border-radius: 6px;
+                background: rgba(91, 8, 23, 0.96);
+                color: #ffd9df;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                font-size: clamp(0.65rem, 1vw, 0.875rem);
+                font-weight: 700;
+                line-height: 1.25;
+                white-space: nowrap;
+                pointer-events: none;
+            }
+
+            .phone-field-error::before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                right: 18px;
+                width: 10px;
+                height: 10px;
+                background: rgba(91, 8, 23, 0.96);
+                transform: rotate(45deg);
+            }
+
+            @media (max-width: 575.98px) {
+                .phone-field-error {
+                    left: auto;
+                    right: 0;
+                    white-space: normal;
+                    width: max-content;
+                    max-width: calc(100vw - 32px);
+                }
+
+                .phone-field-error::before {
+                    left: auto;
+                    right: 18px;
+                }
             }
 
             .native-select-overlay {

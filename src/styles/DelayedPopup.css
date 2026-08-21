@@ -120,6 +120,56 @@
     gap: 0.5rem;
 }
 
+.popup-phone-field {
+    position: relative;
+}
+
+.popup-phone-field .react-tel-input .form-control {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.popup-phone-field .react-tel-input {
+    border: 1px solid #152f63;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.popup-phone-field .react-tel-input .flag-dropdown {
+    border: none !important;
+    background: transparent !important;
+}
+
+.popup-phone-error {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 30;
+    width: max-content;
+    max-width: min(560px, calc(100vw - 32px));
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(91, 8, 23, 0.96);
+    color: #ffd9df;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: clamp(0.65rem, 1vw, 0.875rem);
+    font-weight: 700;
+    line-height: 1.25;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.popup-phone-error::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 18px;
+    width: 10px;
+    height: 10px;
+    background: rgba(91, 8, 23, 0.96);
+    transform: rotate(45deg);
+}
+
 .popupContent .formInput {
     padding: 0.8rem;
     border: 1px solid #152f63;
@@ -157,6 +207,19 @@ button.popup-cust-text {
 }
 
 @media(max-width:575px) {
+    .popup-phone-error {
+        left: auto;
+        right: 0;
+        white-space: normal;
+        width: max-content;
+        max-width: calc(100vw - 32px);
+    }
+
+    .popup-phone-error::before {
+        left: auto;
+        right: 18px;
+    }
+
     .popupContent h3 {
         font-size: 1.1rem;
     }
