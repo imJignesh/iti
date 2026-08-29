@@ -1,25 +1,25 @@
 [
   {
+    "img": "/images/blogs/edexcel-a-level-chemistry.webp",
+    "title": "Edexcel A Level Chemistry: Syllabus, Grades & Resources",
+    "desc": "Key Summary Chemistry is one of the toughest and most respected A Level choices in Dubai. It sits at the entry gate for ...",
+    "link": "edexcel-a-level-chemistry",
+    "width": 300,
+    "height": 200
+  },
+  {
+    "img": "/images/blogs/edexcel-a-level-physics.webp",
+    "title": "Edexcel A Level Physics: Syllabus & Key Resources",
+    "desc": "Key Summary Most students searching for Edexcel A Level Physics hit the same wall: the official specification is a dense...",
+    "link": "edexcel-a-level-physics",
+    "width": 300,
+    "height": 200
+  },
+  {
     "img": "/images/blogs/cambridge-igcse-physics.webp",
-    "title": "Cambridge IGCSE Physics (0625): Syllabus Guide & Past Papers",
+    "title": "Cambridge IGCSE Physics 0625: Syllabus & Past Papers",
     "desc": "Key Summary One Syllabus, Two Tiers: Cambridge IGCSE Physics (0625) is offered at Core (grades C to G) or Extended (grad...",
     "link": "cambridge-igcse-physics",
-    "width": 300,
-    "height": 200
-  },
-  {
-    "img": "/images/blogs/cambridge-igcse-biology.webp",
-    "title": "Cambridge IGCSE Biology: Syllabus, Grading & Resources",
-    "desc": "Key Summary Biology looks like the science you can simply memorise. Learn the definitions, label the diagrams, and the m...",
-    "link": "cambridge-igcse-biology",
-    "width": 300,
-    "height": 200
-  },
-  {
-    "img": "/images/blogs/edexcel-igcse-computer-science.webp",
-    "title": "Edexcel IGCSE Computer Science (4CP0): Syllabus & Resources",
-    "desc": "Key Summary If your child&#8217;s school has just confirmed Edexcel IGCSE Computer Science, the first question most pare...",
-    "link": "edexcel-igcse-computer-science",
     "width": 300,
     "height": 200
   }
