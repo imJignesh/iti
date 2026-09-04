@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import Head from "next/head";
 
 const Hero = () => {
     const videoRef = useRef(null);
@@ -10,23 +9,26 @@ const Hero = () => {
     };
 
     useEffect(() => {
-        const timerId = setTimeout(() => {
-            if (videoRef.current) {
-                videoRef.current.load();
-            }
-        }, 1500);
+        // Keep the poster as the mobile hero image. Loading the 1.4 MB video
+        // on a phone competes with the image and delays the LCP paint.
+        if (window.matchMedia('(max-width: 991px)').matches) return undefined;
 
-        return () => clearTimeout(timerId);
+        const loadVideo = () => videoRef.current?.load();
+        const idleId = 'requestIdleCallback' in window
+            ? window.requestIdleCallback(loadVideo, { timeout: 4000 })
+            : window.setTimeout(loadVideo, 3000);
+
+        return () => {
+            if ('cancelIdleCallback' in window && typeof idleId === 'number') {
+                window.cancelIdleCallback(idleId);
+            } else {
+                window.clearTimeout(idleId);
+            }
+        };
     }, []);
 
     return (
         <>
-            <Head>
-                {/* Preload Background Decoration Images (low priority — not LCP) */}
-                <link rel="preload" as="image" href="/images/banner-bg.webp" media="(min-width: 768px)" {...{ fetchpriority: 'low' }} />
-                <link rel="preload" as="image" href="/images/banner-bg-mobile.webp" media="(max-width: 767px)" {...{ fetchpriority: 'low' }} />
-            </Head>
-
             <div className="heroSectionWrapper">
                 <section className="hero homeherosection">
                     <div className="container">
@@ -59,7 +61,8 @@ const Hero = () => {
                                         width={552}
                                         height={620}
                                         className="heroPoster"
-                                        decoding="async"
+                                        loading="eager"
+                                        decoding="sync"
                                         fetchPriority="high"
                                     />
                                     <video

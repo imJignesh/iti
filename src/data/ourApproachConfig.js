@@ -6,15 +6,15 @@ export const getOurApproachData = (key) => {
       items: [
         {
           heading: "TRAINING",
-          text: "Engaging expert-led sessions to           build a solid academic base.",
+          text: "Engaging expert-led sessions to build a solid academic base.",
         },
         {
           heading: "RESOURCES",
-          text: "Extensive learning materials that\naid independent preparation.",
+          text: "Extensive learning materials that aid independent preparation.",
         },
         {
           heading: "TESTING",
-          text: "Ongoing assessments & mocks           to fine-tune exam strategies.",
+          text: "Ongoing assessments & mocks to fine-tune exam strategies.",
         },
       ],
     },
@@ -24,15 +24,15 @@ export const getOurApproachData = (key) => {
       items: [
         {
           heading: "TRAINING",
-          text: "Dynamic lessons led by expert           tutors to reinforce key skills.",
+          text: "Dynamic lessons led by expert tutors to reinforce key skills.",
         },
         {
           heading: "RESOURCES",
-          text: "In-depth guides tailored for\neffective learning & revision.",
+          text: "In-depth guides tailored for effective learning & revision.",
         },
         {
           heading: "TESTING",
-          text: "Systematic testing to measure           improvement & exam confidence.",
+          text: "Systematic testing to measure improvement & exam confidence.",
         },
       ],
     },
@@ -42,15 +42,15 @@ export const getOurApproachData = (key) => {
       items: [
         {
           heading: "TRAINING",
-          text: "Engaging sessions with experts to           strengthen core foundations.",
+          text: "Engaging sessions with experts to strengthen core foundations.",
         },
         {
           heading: "RESOURCES",
-          text: "Detailed study materials designed to\nupport self-paced learning.",
+          text: "Detailed study materials designed to support self-paced learning.",
         },
         {
           heading: "TESTING",
-          text: "Assessments & mocks to track progress           & refine exam strategies.",
+          text: "Assessments & mocks to track progress & refine exam strategies.",
         },
       ],
     },
@@ -60,15 +60,15 @@ export const getOurApproachData = (key) => {
       items: [
         {
           heading: "TRAINING",
-          text: "Interactive lessons led by experts           to build strong foundations.",
+          text: "Interactive lessons led by experts to build strong foundations.",
         },
         {
           heading: "RESOURCES",
-          text: "Comprehensive study guides to\nsupport independent learning.",
+          text: "Comprehensive study guides to support independent learning.",
         },
         {
           heading: "TESTING",
-          text: "Regular tests & mocks to measure           growth & sharpen exam skills.",
+          text: "Regular tests & mocks to measure growth & sharpen exam skills.",
         },
       ],
     },
@@ -78,15 +78,15 @@ export const getOurApproachData = (key) => {
       items: [
         {
           heading: "TRAINING",
-          text: "Interactive lessons led by experts           to build strong foundations.",
+          text: "Interactive lessons led by experts to build strong foundations.",
         },
         {
           heading: "RESOURCES",
-          text: "Comprehensive study guides to\nsupport independent learning.",
+          text: "Comprehensive study guides to support independent learning.",
         },
         {
           heading: "TESTING",
-          text: "Regular tests & mocks to measure           growth & sharpen exam skills.",
+          text: "Regular tests & mocks to measure growth & sharpen exam skills.",
         },
       ],
     },
@@ -96,15 +96,15 @@ export const getOurApproachData = (key) => {
       items: [
         {
           heading: "TRAINING",
-          text: "Expert-led ACT sessions designed           to build clarity & confidence.",
+          text: "Expert-led ACT sessions designed to build clarity & confidence.",
         },
         {
           heading: "RESOURCES",
-          text: "Targeted ACT study guides &\npractice materials for self-prep.",
+          text: "Targeted ACT study guides & practice materials for self-prep.",
         },
         {
           heading: "TESTING",
-          text: "Regular mock tests to measure           progress & boost exam readiness.",
+          text: "Regular mock tests to measure progress & boost exam readiness.",
         },
       ],
     },
@@ -114,15 +114,15 @@ export const getOurApproachData = (key) => {
       items: [
         {
           heading: "TRAINING",
-          text: "Expert-led classes to clarify           concepts & strengthen foundations.",
+          text: "Expert-led classes to clarify concepts & strengthen foundations.",
         },
         {
           heading: "RESOURCES",
-          text: "Comprehensive guides that aid\neffective self-study & revision.",
+          text: "Comprehensive guides that aid effective self-study & revision.",
         },
         {
           heading: "TESTING",
-          text: "Regular mock exams to monitor           progress & refine exam skills.",
+          text: "Regular mock exams to monitor progress & refine exam skills.",
         },
       ],
     },
@@ -132,15 +132,15 @@ export const getOurApproachData = (key) => {
       items: [
         {
           heading: "TRAINING",
-          text: "Expert-led lessons for clear           concepts & robust, solid foundations.",
+          text: "Expert-led lessons for clear concepts & robust, solid foundations.",
         },
         {
           heading: "RESOURCES",
-          text: "Comprehensive guides & materials\nto empower self-learning.",
+          text: "Comprehensive guides & materials to empower self-learning.",
         },
         {
           heading: "TESTING",
-          text: "Regular mock exams to monitor           growth & sharpen performance.",
+          text: "Regular mock exams to monitor growth & sharpen performance.",
         },
       ],
     },
@@ -150,15 +150,15 @@ export const getOurApproachData = (key) => {
       items: [
         {
           heading: "TRAINING",
-          text: "Expert sessions that simplify           concepts & strengthen foundations.",
+          text: "Expert sessions that simplify concepts & strengthen foundations.",
         },
         {
           heading: "RESOURCES",
-          text: "Well-structured guides to support\nindependent study & revision.",
+          text: "Well-structured guides to support independent study & revision.",
         },
         {
           heading: "TESTING",
-          text: "Systematic testing to monitor           progress & boost exam readiness.",
+          text: "Systematic testing to monitor progress & boost exam readiness.",
         },
       ],
     },
@@ -168,15 +168,15 @@ export const getOurApproachData = (key) => {
       items: [
         {
           heading: "TRAINING",
-          text: "Expert-led sessions focused on           concept clarity & real learning.",
+          text: "Expert-led sessions focused on concept clarity & real learning.",
         },
         {
           heading: "RESOURCES",
-          text: "Curriculum-aligned materials\ntailored for effective self-study.",
+          text: "Curriculum-aligned materials tailored for effective self-study.",
         },
         {
           heading: "TESTING",
-          text: "Frequent assessments to track           progress & boost performance.",
+          text: "Frequent assessments to track progress & boost performance.",
         },
       ],
     },
