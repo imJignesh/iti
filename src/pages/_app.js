@@ -239,7 +239,7 @@ export default function MyApp({ Component, pageProps }) {
 
 const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component }) => (
     <div className={`${montserrat.className} ${montserrat.variable}`}>
-        <Header setHeaderHeight={setHeaderHeight} />
+        {!pageProps?.isPsiBot && <Header setHeaderHeight={setHeaderHeight} />}
         <Component {...pageProps} headerHeight={headerHeight} />
         {!pageProps?.isPsiBot && <Footer />}
         {!pageProps?.isPsiBot && <DelayedPopup />}

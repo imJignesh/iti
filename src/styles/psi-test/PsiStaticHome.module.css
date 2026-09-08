@@ -1,0 +1,34 @@
+.page { color: var(--blue-color); background: #fff; }
+.section { max-width: 1180px; margin: 0 auto; padding: 70px 24px; }
+.hero { max-width: 1280px; display: grid; grid-template-columns: 1fr 0.8fr; gap: 50px; align-items: center; min-height: 680px; }
+.heroCopy h1, .section h2 { margin: 18px 0 26px; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.12; text-transform: uppercase; }
+.heroCopy h1 span, .section h2 span { color: var(--lightgreen-color); }
+.heroCopy h2 { margin: 0 0 22px; font-size: 1.35rem; text-transform: uppercase; }
+.heroCopy > p:last-child, .intro, .about > p, .subjectSection > p { max-width: 760px; line-height: 1.6; font-size: 1.05rem; }
+.kicker { color: var(--skyblue-color); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.heroMedia { position: relative; max-width: 552px; }
+.heroMedia > img { display: block; width: 100%; height: auto; }
+.heroActions { position: absolute; right: 4%; bottom: 5%; display: grid; gap: 12px; width: 62%; }
+.heroActions a, .textLink { display: block; padding: 15px 22px; border-radius: 40px; color: #fff; background: linear-gradient(90deg, var(--blue-color), #3f88ba); font-weight: 700; text-transform: uppercase; text-align: center; }
+.heroActions a:last-child { color: var(--blue-color); background: linear-gradient(90deg, var(--border-color), #e7f6ff); }
+.cardGrid, .testGrid, .trainerGrid, .uspGrid, .reviewGrid, .blogGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.courseCard, .testCard, .blogGrid a { position: relative; display: flex; min-height: 260px; overflow: hidden; border-radius: 22px; color: #fff; background: #162264; flex-direction: column; justify-content: flex-end; padding: 24px; }
+.courseCard img, .testCard img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .48; }
+.courseCard strong, .courseCard span, .testCard b, .testCard span { position: relative; z-index: 1; }
+.courseCard strong, .testCard b { font-size: 1.4rem; }
+.marquee { display: flex; gap: 48px; overflow: hidden; padding: 20px 24px; color: #e7f6ff; background: linear-gradient(90deg, #161d58, #2f648e); font-weight: 700; white-space: nowrap; }
+.about, .subjectSection, .uspSection, .reviewSection { border-radius: 28px; background: linear-gradient(135deg, #effaff, #a3caf5); }
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+.textLink { width: max-content; }
+.subjectGrid { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.subjectGrid a { padding: 14px 20px; border-radius: 30px; color: var(--blue-color); background: #e7f6ff; font-weight: 700; }
+.uspGrid { grid-template-columns: repeat(4, 1fr); }
+.uspGrid article, .trainerGrid article, .reviewQuote { padding: 22px; border-radius: 18px; background: rgba(255,255,255,.65); }
+.uspGrid h3, .trainerGrid h3, .blogGrid h3 { margin: 12px 0 8px; }
+.uspGrid p, .trainerGrid p, .blogGrid p { line-height: 1.45; }
+.trainerGrid img, .blogGrid img { width: 100%; height: 220px; object-fit: cover; border-radius: 14px; }
+.reviewGrid { grid-template-columns: repeat(3, 1fr); }
+.reviewQuote p { line-height: 1.6; } .reviewQuote cite { font-style: normal; font-weight: 700; }
+.blogGrid a { min-height: 0; color: var(--blue-color); background: rgba(255,255,255,.7); }
+@media (max-width: 768px) { .section, .hero { padding: 45px 18px; } .hero, .about { display: block; } .heroMedia { margin: 30px auto 0; } .heroCopy h1, .section h2 { font-size: 2rem; } .cardGrid, .testGrid, .trainerGrid, .uspGrid, .reviewGrid, .blogGrid { grid-template-columns: repeat(2, 1fr); } .heroActions { width: 58%; } }
+@media (max-width: 480px) { .cardGrid, .testGrid, .trainerGrid, .uspGrid, .reviewGrid, .blogGrid { grid-template-columns: 1fr; } .marquee { gap: 24px; font-size: .8rem; } }

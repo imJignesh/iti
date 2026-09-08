@@ -1,36 +1,17 @@
 import Head from "next/head";
-import { useState } from "react";
-import dynamic from "next/dynamic";
-import SEO from "@/components/SEO";
-import Hero from "@/components/psiTest/Hero";
-import PsiSection from "@/components/psiTest/PsiSection";
-import { getMarqueeData } from "@/data/marqueeConfig";
-import { getTrainersData } from "@/data/trainersData";
+import PsiStaticHome from "@/components/psiTest/PsiStaticHome";
 import path from "path";
 import fs from "fs";
 import he from "he";
 import { isPageSpeedInsightsUserAgent } from "@/utils/botDetection";
 
-const Course = dynamic(() => import("@/components/homeCopy/Course"));
-const MarqueeBanner = dynamic(() => import("@/components/shared/MarqueeBanner"));
-const About = dynamic(() => import("@/components/homeCopy/About"));
-const TestInteractive = dynamic(() => import("@/components/homeCopy/Test"));
-const TestStatic = dynamic(() => import("@/components/homeCopy/TestStatic"));
-const Subjects = dynamic(() => import("@/components/homeCopy/Subjects"));
-const Usps = dynamic(() => import("@/components/homeCopy/Usps"));
-const TrainersShared = dynamic(() => import("@/components/shared/Trainers"));
-const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"));
-const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
-
-const trainersData = getTrainersData("home");
-const Trainers = () => <TrainersShared trainers={trainersData} />;
-
 export default function PsiTestPage({ blogPosts = [], isPsiBot = false }) {
-    const [active, setActive] = useState(1);
 
     return (
         <>
             <Head>
+                <title>PSI Test Page</title>
+                <meta name="description" content="Internal PSI test page for homepage performance experiments." />
                 <meta name="robots" content="noindex, nofollow" />
                 {isPsiBot && (
                     <link
@@ -42,89 +23,7 @@ export default function PsiTestPage({ blogPosts = [], isPsiBot = false }) {
                     />
                 )}
             </Head>
-            <SEO
-                title="PSI Test Page"
-                description="Internal PSI test page for homepage performance experiments."
-                url="https://ignitetraininginstitute.com/psi-test"
-            />
-            <div className={`homeCopy page-content-padding${isPsiBot ? " psi-bot" : ""}`}>
-                {isPsiBot && (
-                    <style jsx global>{`
-                        .psi-bot .hero *,
-                        .psi-bot .hero *::before,
-                        .psi-bot .hero *::after {
-                            animation: none !important;
-                            transition: none !important;
-                        }
-                        .psi-bot .heroSectionWrapper,
-                        .psi-bot .heroSectionWrapper .hero,
-                        .psi-bot .heroSectionWrapper .heroMain,
-                        .psi-bot .heroSectionWrapper .heroLeft,
-                        .psi-bot .heroSectionWrapper .heroRight,
-                        .psi-bot .heroSectionWrapper .videoContainer,
-                        .psi-bot .heroPoster {
-                            opacity: 1 !important;
-                            visibility: visible !important;
-                            animation: none !important;
-                            transition: none !important;
-                        }
-                        .psi-bot .heroSectionWrapper,
-                        .psi-bot .heroSectionWrapper .hero,
-                        .psi-bot .heroSectionWrapper .heroMain,
-                        .psi-bot .heroSectionWrapper .heroLeft,
-                        .psi-bot .heroSectionWrapper .heroRight,
-                        .psi-bot .heroSectionWrapper .videoContainer {
-                            transform: none !important;
-                        }
-            `}</style>
-                )}
-                <Hero disableVideo={isPsiBot} />
-                <PsiSection intrinsicHeight={900}>
-                    <Course />
-                </PsiSection>
-
-                <PsiSection intrinsicHeight={180}>
-                    <section data-scroll-section>
-                        <MarqueeBanner config={getMarqueeData("homeCopy")} />
-                    </section>
-                </PsiSection>
-
-                <PsiSection intrinsicHeight={850}>
-                    <About />
-                </PsiSection>
-
-                <PsiSection intrinsicHeight={850}>
-                    {isPsiBot ? (
-                        <TestStatic setActive={setActive} active={active} />
-                    ) : (
-                        <TestInteractive setActive={setActive} active={active} />
-                    )}
-                </PsiSection>
-
-                <PsiSection intrinsicHeight={750}>
-                    <Subjects />
-                </PsiSection>
-
-                <PsiSection intrinsicHeight={900}>
-                    <section data-scroll-section>
-                        <Usps />
-                    </section>
-                </PsiSection>
-
-                <PsiSection intrinsicHeight={900}>
-                    <section data-scroll-section>
-                        <Trainers />
-                    </section>
-                </PsiSection>
-
-                <PsiSection intrinsicHeight={700}>
-                    <Testimonial />
-                </PsiSection>
-
-                <PsiSection intrinsicHeight={700}>
-                    <Blog posts={blogPosts} />
-                </PsiSection>
-            </div>
+            <div className="page-content-padding"><PsiStaticHome blogPosts={blogPosts} /></div>
         </>
     );
 }
