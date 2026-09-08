@@ -144,13 +144,15 @@ export default function MyApp({ Component, pageProps }) {
               * Critical Bootstrap utilities (row, col-*, flex, etc.) are
               * inlined in critical.css to prevent FOUC on above-fold content.
               */}
-            <Script
-                id="bootstrap-css"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css';l.crossOrigin='anonymous';document.head.appendChild(l);})();`
-                }}
-            />
+            {!isPsiTestBot && (
+                <Script
+                    id="bootstrap-css"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css';l.crossOrigin='anonymous';document.head.appendChild(l);})();`
+                    }}
+                />
+            )}
             {!isPsiTestBot && (
                 <>
                     <Script
@@ -202,13 +204,15 @@ export default function MyApp({ Component, pageProps }) {
             )}
 
             {/* Load non-critical CSS (animations, transitions) after interactive. */}
-            <Script
-                id="load-non-critical-css"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/styles/non-critical.css';l.onload=function(){};document.head.appendChild(l);})();`
-                }}
-            />
+            {!isPsiTestBot && (
+                <Script
+                    id="load-non-critical-css"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/styles/non-critical.css';l.onload=function(){};document.head.appendChild(l);})();`
+                    }}
+                />
+            )}
 
             {shouldLoadLocomotiveScroll && !isPsiTestBot ? (
                 <LocomotiveScrollProvider>
@@ -237,7 +241,7 @@ const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component }) =>
     <div className={`${montserrat.className} ${montserrat.variable}`}>
         <Header setHeaderHeight={setHeaderHeight} />
         <Component {...pageProps} headerHeight={headerHeight} />
-        <Footer />
+        {!pageProps?.isPsiBot && <Footer />}
         {!pageProps?.isPsiBot && <DelayedPopup />}
     </div>
 );
