@@ -126,11 +126,11 @@
     border: 0;
 }
 
-.popup-phone-field .react-tel-input {
+.popup-phone-field :global(.react-tel-input) {
     border: 0 !important;
 }
 
-.popup-phone-field .react-tel-input .form-control {
+.popup-phone-field :global(.react-tel-input) :global(.form-control) {
     border: 0 !important;
     outline: none !important;
     box-shadow: none !important;
@@ -140,13 +140,13 @@
     background: transparent !important;
 }
 
-.popup-phone-field .react-tel-input .flag-dropdown {
+.popup-phone-field :global(.react-tel-input) :global(.flag-dropdown) {
     border: none !important;
     background: transparent !important;
     box-shadow: none !important;
 }
 
-.popupForm .popup-phone-field .global-phone-input-field {
+.popupForm .popup-phone-field :global(.global-phone-input-field) {
     height: 50px !important;
     padding: 6px 12px 6px 60px !important;
     border: 1px solid #152f63 !important;
@@ -156,7 +156,7 @@
     font-size: 1rem !important;
 }
 
-.popupForm .popup-phone-field .global-phone-input-field::placeholder {
+.popupForm .popup-phone-field :global(.global-phone-input-field)::placeholder {
     color: #152f63 !important;
     opacity: 1;
     font-family: inherit !important;
@@ -232,11 +232,11 @@ button.popup-cust-text {
 }
 
 @media(max-width:575px) {
-    .popupForm .popup-phone-field .global-phone-input-field {
+    .popupForm .popup-phone-field :global(.global-phone-input-field) {
         height: 34px !important;
     }
 
-    .popupForm .popup-phone-field .global-phone-input-field::placeholder {
+    .popupForm .popup-phone-field :global(.global-phone-input-field)::placeholder {
         font-size: 0.8rem !important;
     }
 

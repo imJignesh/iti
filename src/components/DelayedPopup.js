@@ -1,5 +1,6 @@
 // components/DelayedPopup.js
 
+import styles from "@/styles/DelayedPopup.module.css";
 import React, { useState, useEffect, useContext } from 'react';
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
@@ -222,13 +223,13 @@ const DelayedPopup = () => {
     if (!isVisible) return null;
 
     return (
-        <div className="popupOverlay">
-            <div className="popupContent">
-                <button className="closeButton" onClick={closePopup} disabled={loading}>
+        <div className={styles['popupOverlay']}>
+            <div className={styles['popupContent']}>
+                <button className={styles['closeButton']} onClick={closePopup} disabled={loading}>
                     &times;
                 </button>
 
-                <form onSubmit={handleSubmit} className="popupForm">
+                <form onSubmit={handleSubmit} className={`popupForm ${styles.popupForm}`}>
                     <h3>Prepare Like A Top Scorer This Season</h3>
                     <p>Register for a free consultation and study resources.</p>
 
@@ -246,7 +247,7 @@ const DelayedPopup = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 placeholder="Enter your name"
-                                className="formInput"
+                                className={styles['formInput']}
                             />
                             {touched.name && errors.name && <p className="error-text">{errors.name}</p>}
                         </div>
@@ -259,7 +260,7 @@ const DelayedPopup = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 placeholder="Enter your email"
-                                className="formInput"
+                                className={styles['formInput']}
                             />
                             {touched.email && errors.email && <p className="error-text">{errors.email}</p>}
                         </div>
@@ -267,7 +268,7 @@ const DelayedPopup = () => {
 
                     {/* Updated Phone Field */}
                     <label>Phone</label>
-                    <div className="popup-phone-field">
+                    <div className={styles['popup-phone-field']}>
                         <GlobalPhoneInput
                             value={formData.phone}
                             onChange={handlePhoneChange}
@@ -277,20 +278,20 @@ const DelayedPopup = () => {
                             nativeInput
                         />
                         {showPhoneError && (
-                            <div className="popup-phone-error" role="alert">
+                            <div className={styles['popup-phone-error']} role="alert">
                                 {currentValidationErrors.phone}
                             </div>
                         )}
                     </div>
 
                     <label>Curriculum</label>
-                    <div className="selectWrapper">
+                    <div className={styles['selectWrapper']}>
                         <select
                             name="curriculum"
                             value={formData.curriculum}
                             onChange={handleChange}
                             onBlur={handleSelectBlur}
-                            className="formInput"
+                            className={styles['formInput']}
                         >
                             <option value="" disabled>Select curriculum</option>
                             <option value="IB Diploma">IB Diploma</option>
@@ -307,7 +308,7 @@ const DelayedPopup = () => {
                     </div>
                     {touched.curriculum && errors.curriculum && <p className="error-text">{errors.curriculum}</p>}
 
-                    <button type="submit" className="btn popup-cust-text fw-bold d-flex align-items-center rounded-pill " disabled={loading || !isFormValid}
+                    <button type="submit" className={`btn ${styles['popup-cust-text']} fw-bold d-flex align-items-center rounded-pill`} disabled={loading || !isFormValid}
                         style={{
                             background: "linear-gradient(90deg,#161664, #3F88BA)",
                             color: 'white',
@@ -322,7 +323,7 @@ const DelayedPopup = () => {
                     >
                         {loading ? 'Submitting...' : 'SUBMIT'}
                         <div
-                            className="popup-custom-height rounded-circle d-flex align-items-center justify-content-center"
+                            className={`${styles['popup-custom-height']} rounded-circle d-flex align-items-center justify-content-center`}
 
                             style={{
                                 background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",

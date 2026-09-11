@@ -141,7 +141,7 @@ const Header = ({ setHeaderHeight }) => {
                             <div className={styles.megaMenu}>
                                 <div className={styles.megaMenuContent}>
                                     <div className={styles.megaMenuLeft}>
-                                        <h3><span>01</span> <a href='/ib-curriculum-tutors-in-dubai'>International baccalaureate<div><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></div></a></h3>
+                                        <h3><span>01</span> <a href='/ib-curriculum-tutors-in-dubai'>International baccalaureate<span><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></span></a></h3>
                                         <a href='/courses/ibdp-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/ibdp-tutors-in-dubai') ? styles.activeLink : ''}`}>
                                             <img height={25} width={30} src="/images/header-menu1.webp" alt="IBDP" loading="lazy" />
                                             <h4>IBDP</h4>
@@ -152,7 +152,7 @@ const Header = ({ setHeaderHeight }) => {
                                         </a>
                                     </div>
                                     <div className={styles.megaMenuLeft}>
-                                        <h3><span>02</span> <a href='/british-curriculum-tutors-in-dubai'>British curriculum<div><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></div></a></h3>
+                                        <h3><span>02</span> <a href='/british-curriculum-tutors-in-dubai'>British curriculum<span><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></span></a></h3>
                                         <a href='/courses/a-level-tutors-in-dubai' className={`${styles.megaMenuBox} ${isLinkActive('/courses/a-level-tutors-in-dubai') ? styles.activeLink : ''}`}>
                                             <img height={25} width={30} src="/images/header-menu3.webp" alt="A-LEVELS" loading="lazy" />
                                             <h4>A LEVELS</h4>
@@ -164,8 +164,8 @@ const Header = ({ setHeaderHeight }) => {
                                     </div>
 
                                     <div className={styles.megaMenuLeft} style={{ gridTemplateColumns: "1fr 1fr" }}>
-                                        <h3><span>03</span><a href='/courses/homeschooling-tutors-in-dubai'> Homeschooling<div><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></div></a></h3>
-                                        <h3><span>04</span><a href='/test-series'> Test Series<div><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></div></a></h3>
+                                        <h3><span>03</span><a href='/courses/homeschooling-tutors-in-dubai'> Homeschooling<span><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></span></a></h3>
+                                        <h3><span>04</span><a href='/test-series'> Test Series<span><img src="/images/btn-arrow.webp" alt="Arrow" loading="lazy" width="20" height="20" /></span></a></h3>
                                     </div>
 
                                 </div>

@@ -2,6 +2,8 @@ import { Montserrat } from 'next/font/google';
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import Script from "next/script";
+import Head from "next/head";
+import { legacyHeroStyles } from "@/styles/legacyHeroStyles";
 import { useState, createContext, useEffect, useRef } from "react";
 
 
@@ -15,7 +17,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 const DelayedPopup = dynamic(() => import("../components/DelayedPopup"), { ssr: false });
 
-import "@/styles/DelayedPopup.css";
 
 const LocomotiveScrollProvider = dynamic(() => import('../components/LocomotiveScrollProvider'), {
     ssr: false,
@@ -59,6 +60,7 @@ export default function MyApp({ Component, pageProps }) {
     const [stylesLoaded, setStylesLoaded] = useState(false);
     const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(false);
     const isPsiTestPage = router.pathname === "/psi-test";
+    const isHomeV1Page = router.pathname === "/homev1";
     const isPsiTestBot = isPsiTestPage && Boolean(pageProps?.isPsiBot);
     const thirdPartyScriptStrategy = isPsiTestPage ? "lazyOnload" : "afterInteractive";
 
@@ -66,7 +68,7 @@ export default function MyApp({ Component, pageProps }) {
 
     // Set Locomotive once on client mount (avoids hydration mismatch)
     useEffect(() => {
-        if (isPsiTestBot) {
+        if (isPsiTestBot || isHomeV1Page) {
             setShouldLoadLocomotiveScroll(false);
             return;
         }
@@ -138,6 +140,11 @@ export default function MyApp({ Component, pageProps }) {
     // Minimal Return for Debugging
     return (
         <PopupProvider>
+            {!isHomeV1Page && (
+                <Head>
+                    <style key="legacy-hero-styles" dangerouslySetInnerHTML={{ __html: legacyHeroStyles }} />
+                </Head>
+            )}
             {/*
               * Bootstrap loaded deferred from CDN — does NOT block LCP paint.
               * The CDN URL is versioned so it never needs cache-busting.
@@ -216,10 +223,10 @@ export default function MyApp({ Component, pageProps }) {
 
             {shouldLoadLocomotiveScroll && !isPsiTestBot ? (
                 <LocomotiveScrollProvider>
-                    <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} />
+                    <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} isHomeV1Page={isHomeV1Page} />
                 </LocomotiveScrollProvider>
             ) : (
-                <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} />
+                <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} isHomeV1Page={isHomeV1Page} />
             )}
 
             {/* Outside data-scroll-container so Locomotive never sees this DOM mutation */}
@@ -237,11 +244,11 @@ export default function MyApp({ Component, pageProps }) {
     );
 }
 
-const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component }) => (
+const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component, isHomeV1Page }) => (
     <div className={`${montserrat.className} ${montserrat.variable}`}>
         {!pageProps?.isPsiBot && <Header setHeaderHeight={setHeaderHeight} />}
         <Component {...pageProps} headerHeight={headerHeight} />
-        {!pageProps?.isPsiBot && <Footer />}
-        {!pageProps?.isPsiBot && <DelayedPopup />}
+        {!pageProps?.isPsiBot && !isHomeV1Page && <Footer />}
+        {!pageProps?.isPsiBot && !isHomeV1Page && <DelayedPopup />}
     </div>
 );
