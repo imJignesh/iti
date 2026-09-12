@@ -47,7 +47,7 @@ export default function Hero() {
 
                             <div className="mediaColumn">
                                 <div className="media">
-                                    <img className="poster" src="/images/hero-banner-video-c1-poster.webp" alt="Ignite tutor guiding a student through a live online tutoring class" width="552" height="620" loading="eager" decoding="sync" fetchPriority="high" />
+                                    <img className="poster" src="/images/hero-banner-video-c1-poster.webp" alt="Teacher helping students with their classwork" width="552" height="620" loading="eager" decoding="sync" fetchPriority="high" />
                                     <video ref={videoRef} className={`video ${videoVisible ? "videoVisible" : ""}`} autoPlay muted loop playsInline preload="none" onPlaying={() => setVideoVisible(true)}>
                                         <source src="/videos/hero-banner-video-c1.mp4" type="video/mp4" />
                                     </video>

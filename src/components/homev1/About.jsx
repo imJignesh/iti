@@ -47,7 +47,7 @@ export default function About() {
                             <Image
                                 className="aboutImage"
                                 src="/images/home-about-us.webp"
-                                alt="Teacher supporting a student"
+                                alt="Portrait of a teacher"
                                 width={500}
                                 height={400}
                             />

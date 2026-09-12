@@ -249,6 +249,6 @@ const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component, isHo
         {!pageProps?.isPsiBot && <Header setHeaderHeight={setHeaderHeight} />}
         <Component {...pageProps} headerHeight={headerHeight} />
         {!pageProps?.isPsiBot && !isHomeV1Page && <Footer />}
-        {!pageProps?.isPsiBot && !isHomeV1Page && <DelayedPopup />}
+        {!pageProps?.isPsiBot && <DelayedPopup />}
     </div>
 );

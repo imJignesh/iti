@@ -110,7 +110,7 @@ export default function Course() {
                                 <div className="cardImage">
                                     <Image
                                         src={course.image}
-                                        alt={`${course.title} course background`}
+                                        alt=""
                                         fill
                                         className="cardImageAsset"
                                         sizes="(max-width: 991px) 100vw, 23vw"
