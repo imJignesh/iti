@@ -271,7 +271,7 @@ const Footer = () => {
           data-scroll-repeat="true"
           className="fade-in-section"
           style={{ animationDelay: "0.8s" }}>
-          <div className="footerContactLabel">CONTACT</div>
+          <div className="footerContactLabel">CONTACT00</div>
           <div className="footerContact">
             <span><a href={phoneNumberObj.href} onClick={handleCallClick}>{phoneNumberObj.display}</a></span>
             <br />
