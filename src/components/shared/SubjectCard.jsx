@@ -18,6 +18,12 @@ export default function SubjectCard({ config = {} }) {
     bubblePaddingMobile = "0.5rem 1rem",
     altText = "bg-shape",
     subjectLinks,
+    background = "linear-gradient(90deg, #00A491 0%, #003E37 127.82%)",
+    innerPadding = "85px 30px",
+    gridMaxWidth = "none",
+    rowGap = "15px",
+    bubbleFontSize = "1.4vw",
+    hideRightDecoration = false,
   } = config;
 
   const [isMobile, setIsMobile] = useState(false);
@@ -139,7 +145,9 @@ export default function SubjectCard({ config = {} }) {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          className="subjects-card1-inner fade-in-section">
+          className="subjects-card1-inner fade-in-section"
+          style={{ background }}
+        >
           <img
             data-scroll
             data-scroll-class="is-clipped"
@@ -158,16 +166,18 @@ export default function SubjectCard({ config = {} }) {
             width="383"
             height="108"
           />
-          <img
-            data-scroll
-            data-scroll-class="is-clipped"
-            data-scroll-offset="-10%"
-            src={isMobile ? "/assets/lb.webp" : "/assets/rm.webp"}
-            alt={altText}
-            className="subjects-card1-bg-rect"
-            width={isMobile ? 383 : 444}
-            height="108"
-          />
+          {!hideRightDecoration && (
+            <img
+              data-scroll
+              data-scroll-class="is-clipped"
+              data-scroll-offset="-10%"
+              src={isMobile ? "/assets/lb.webp" : "/assets/rm.webp"}
+              alt={altText}
+              className="subjects-card1-bg-rect"
+              width={isMobile ? 383 : 444}
+              height="108"
+            />
+          )}
           <div className="subjects-card1-right">
             <div className="subjects-card1-bubbles-grid">
               {subjectRows.map((row, rowIdx) => (
@@ -224,7 +234,7 @@ export default function SubjectCard({ config = {} }) {
           background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
           background-size: cover;
           background-position: center;
-          padding: 85px 30px;
+          padding: ${innerPadding};
           display: flex;
           align-items: center;
           justify-content: center;
@@ -278,10 +288,11 @@ export default function SubjectCard({ config = {} }) {
         .subjects-card1-section .subjects-card1-bubbles-grid {
           display: flex;
           flex-direction: column;
-          gap: 15px;
+          gap: ${rowGap};
           align-items: center;
           justify-content: center;
           width: 100%;
+          max-width: ${gridMaxWidth};
           position: relative;
           z-index: 1;
         }
@@ -301,7 +312,7 @@ export default function SubjectCard({ config = {} }) {
           position: relative;
           border-radius: 40px;
           color: var(--green-text);
-          font-size: 1.4vw;
+          font-size: ${bubbleFontSize};
           font-weight: 400;
           padding: ${bubblePadding};
           cursor: pointer;
@@ -312,9 +323,10 @@ export default function SubjectCard({ config = {} }) {
           min-width: 120px;
           text-align: center;
           letter-spacing: 0.02em;
+          white-space: nowrap;
           outline: none;
           z-index: 1;
-          flex-shrink: 1;
+          flex-shrink: 0;
           background: transparent;
           border: 1px solid transparent;
         }
@@ -344,7 +356,7 @@ export default function SubjectCard({ config = {} }) {
 
         @media (max-width: 1280px) {
           .subjects-card1-section .subjects-card1-bubble {
-            padding: 10px 45px;
+            padding: ${bubblePadding};
           }
         }
 
@@ -363,6 +375,7 @@ export default function SubjectCard({ config = {} }) {
 
           .subjects-card1-section .subjects-card1-bubble {
             padding: ${bubblePadding1199};
+            flex-shrink: 1;
           }
         }
 
@@ -460,6 +473,7 @@ export default function SubjectCard({ config = {} }) {
             .subjects-card1-section .subjects-card1-bubble{
               padding: ${bubblePaddingMobile};
               font-size: 1rem;
+              white-space: normal;
             }
         }
         @media (max-width: 414px) {

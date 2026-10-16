@@ -15,12 +15,14 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import { faqSections } from '@/data/faqSections';
+import YearPlanner from '@/components/a-level/YearPlanner';
+import SubjectsCard from '@/components/a-level/SubjectCard';
+import StartSteps from '@/components/a-level/StartSteps';
 const OurApproach = dynamic(() => import('@/components/a-level/OurApproach'));
 const Trainers = dynamic(() => import('@/components/a-level/Trainers'));
 const WhatWeOfferSection = dynamic(() => import('@/components/a-level/WhatWeOfferSection'));
 const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/a-level/ReviewsSection'));
-const SubjectsCard = dynamic(() => import('@/components/a-level/SubjectCard'));
 import OurPromise from '@/components/shared/OurPromise';
 import { getOurPromiseData } from '@/data/ourPromiseConfig';
 import { getMarqueeData } from "@/data/marqueeConfig";
@@ -408,6 +410,12 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
+            <YearPlanner />
+          </section>
+        </LazySection>
+
+        <LazySection>
+          <section data-scroll-section>
             <SubjectSupport />
           </section>
         </LazySection>
@@ -459,6 +467,12 @@ const ALEVEL = ({ headerHeight }) => {
         {/* <section data-scroll-section>
             <LifeAtIgniteCarousel />
           </section> */}
+
+        <LazySection>
+          <section data-scroll-section>
+            <StartSteps />
+          </section>
+        </LazySection>
 
         <LazySection>
           <section data-scroll-section>

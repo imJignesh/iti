@@ -2,6 +2,31 @@
 // Each page has its own config object with data only (no structure/CSS)
 
 export const subjectCardConfig = {
+  "a-level": {
+    title:
+      'Tutoring That Makes Every A Levels <br /> <span class="highlight"> Subject </span> Clear',
+    subjectRows: [
+      ["A-Level Pure Math", "A-Level Statistics"],
+      ["A-Level Further Math", "A-Level Physics", "A-Level Chemistry"],
+      ["A-Level Biology", "A-Level Computer Science"],
+      ["AS Level EVM (Environmental Management)"],
+      ["A-Level Business Studies", "A-Level Economics", "A-Level Accounting"],
+      ["A-Level English Language & Literature", "A-Level French"],
+      ["A-Level Spanish", "A-Level Psychology"],
+    ],
+    titleTag: "h3",
+    bubbleTag: "h3",
+    bubblePadding: "11px 24px",
+    bubblePadding1199: "10px 20px",
+    bubblePaddingMobile: "0.5rem 1rem",
+    altText: "a level tutors in dubai",
+    background: "url(/images/subject-bg.webp) center / cover no-repeat",
+    innerPadding: "55px 45px",
+    gridMaxWidth: "1400px",
+    rowGap: "15px",
+    bubbleFontSize: "clamp(18px, 1.15vw, 26px)",
+    hideRightDecoration: true,
+  },
   bc: {
     title:
       'Tutoring That Makes Every <br /> <span class="highlight"> Subject </span>Clear',
