@@ -314,6 +314,17 @@ option {
   text-transform: uppercase;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.sticky-demo-button-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {

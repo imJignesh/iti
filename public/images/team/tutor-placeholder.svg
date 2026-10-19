@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 812 1017" role="img" aria-labelledby="title desc">
+  <title id="title">Tutor photo placeholder</title>
+  <desc id="desc">Neutral silhouette used until a tutor photograph is supplied.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e4eafb"/>
+      <stop offset="1" stop-color="#dcf5e9"/>
+    </linearGradient>
+    <linearGradient id="silhouette" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#9dbce4"/>
+      <stop offset="1" stop-color="#74aaad"/>
+    </linearGradient>
+  </defs>
+  <rect width="812" height="1017" fill="url(#background)"/>
+  <circle cx="406" cy="340" r="155" fill="url(#silhouette)"/>
+  <path d="M118 1017c11-242 113-390 288-390s277 148 288 390H118Z" fill="url(#silhouette)"/>
+  <circle cx="406" cy="455" r="306" fill="none" stroke="#fff" stroke-opacity=".42" stroke-width="4"/>
+</svg>

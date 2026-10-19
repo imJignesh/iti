@@ -163,6 +163,10 @@ header .header_right_content button img {
   height: 15px;
 }
 
+.demoMobileLabel {
+  display: none;
+}
+
 header .megaMenuWrapper {
   position: relative;
   display: inline-block;
@@ -626,6 +630,22 @@ header .toggleButton img {
 
 @media (max-width: 767px) {
 
+  .header {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  header .header_left_content {
+    flex: 0 1 auto;
+    min-width: 0;
+    width: auto !important;
+  }
+
+  header .header_right_content {
+    flex: 0 0 auto;
+    gap: 8px;
+  }
+
   header .header_left_content .logo img,
   header .header_left_content .logo svg {
     width: 100px;
@@ -658,6 +678,47 @@ header .toggleButton img {
   header .header_right_content button img {
     width: 18px;
     height: 18px;
+  }
+
+  .callButton {
+    width: 40px;
+    height: 40px;
+    padding: 0 !important;
+    justify-content: center;
+    flex: 0 0 40px;
+  }
+
+  .callButton,
+  .demoButton {
+    height: 40px;
+    box-sizing: border-box;
+  }
+
+  .callButton img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .callLabel,
+  .demoFullLabel {
+    display: none !important;
+  }
+
+  .demoMobileLabel {
+    display: inline !important;
+  }
+
+  .demoButton {
+    white-space: nowrap;
+    gap: 6px;
+    padding: 7px 11px !important;
+    font-size: 13px;
+  }
+
+  .demoButton svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
   }
 }
 
@@ -705,7 +766,7 @@ header .toggleButton img {
 
 @media (max-width: 425px) {
   .header {
-    gap: 10px;
+    gap: 6px;
   }
 
   header .header_left_content .logo img,
@@ -714,7 +775,12 @@ header .toggleButton img {
   }
 
   header .header_right_content {
-    gap: 5px;
+    gap: 6px;
+  }
+
+  .demoButton {
+    padding: 6px 9px !important;
+    font-size: 12px;
   }
 
   header .header_right_content button {

@@ -39,7 +39,15 @@ const testData = [
   },
 ];
 
-const Test = ({ active, setActive }) => {
+const Test = ({
+  active,
+  setActive,
+  cards = testData,
+  eyebrow = "STANDARDISED TESTS",
+  heading = "Power Your Academic Goals With Expert Prep",
+  headingHighlight = "Support",
+  description = "Whether you're aiming for top scores or a strong foundation, Ignite’s courses give you the edge to succeed.",
+}) => {
   useEffect(() => {
     setActive(1);
   }, [setActive]);
@@ -58,7 +66,7 @@ const Test = ({ active, setActive }) => {
             style={{ animationDelay: "0.1s" }}
           >
             {/* Global Class used as string, local class used with styles */}
-            <h2 className={`SubHeading ${styles.testSubheading}`}>STANDARDISED TESTS</h2>
+            <h2 className={`SubHeading ${styles.testSubheading}`}>{eyebrow}</h2>
           </div>
           <h3
             data-scroll
@@ -68,8 +76,8 @@ const Test = ({ active, setActive }) => {
             className={`fade-in-section ${styles.testTitle}`}
             style={{ animationDelay: "0.2s" }}
           >
-            Power Your Academic Goals With Expert Prep{" "}
-            <span className="highlight">Support</span>
+            {heading}{" "}
+            <span className="highlight">{headingHighlight}</span>
           </h3>
 
           <div
@@ -80,7 +88,7 @@ const Test = ({ active, setActive }) => {
             style={{ animationDelay: "0.4s" }}
           >
             <p>
-              Whether you're aiming for top scores or a strong foundation, Ignite’s courses give you the edge to succeed.
+              {description}
             </p>
           </div>
         </div>
@@ -109,7 +117,7 @@ const Test = ({ active, setActive }) => {
             900: { slidesPerView: 1.8, spaceBetween: 30, centeredSlides: true, },
           }}
         >
-          {testData.map((card, idx) => {
+          {cards.map((card, idx) => {
             const isCardActive = active === idx;
             return (
               <SwiperSlide key={idx}>
@@ -153,7 +161,7 @@ const Test = ({ active, setActive }) => {
       <div className={styles.testDesktopWrapper}>
         <div className="container">
           <div className={`row ${styles.testCardsRow}`}>
-            {testData.slice(0, 3).map((card, idx) => {
+            {cards.slice(0, 3).map((card, idx) => {
               const isCardActive = active === idx;
               return (
                 <div

@@ -17,7 +17,7 @@ const trainersData = [
     {
         name: "MASAB",
         experience: "10+ Years",
-        image: "/images/team/masab-team.webp",
+        image: "/images/team/masab-placeholder.png",
         width: 470,
         height: 581,
         description: "Masab, an ACCA member with a Bachelor’s in Commerce, brings over a decade of expertise in teaching Mathematics & Accounting. Known for his ability to simplify complex concepts, he inspires students to achieve academic excellence while fostering a genuine love for learning. Teaching is his true passion, & he approaches every lesson with energy & commitment. Beyond academics, Masab enjoys playing table tennis, a sport that reflects his focus, precision, & competitive spirit.",
@@ -57,7 +57,7 @@ const trainersData = [
     {
         name: "ABDUL",
         experience: "13+ Years",
-        image: "/images/team/abdul-team.webp",
+        image: "/images/team/abdul-placeholder.png",
         width: 470,
         height: 581,
         description: "Abdul, with 13 years of teaching experience, holds a Master’s in Mathematics & is passionate about making the subject clear & approachable. Inspired by friends who recognized his strong explanation skills, he embraced teaching as a fulfilling career. By placing himself in the student’s shoes, Abdul creates a supportive learning environment that strengthens understanding & builds confidence. Outside the classroom, he enjoys playing carrom, traveling, & pursuing a balanced, independent life.",
@@ -81,7 +81,7 @@ const trainersData = [
     {
         name: "KRITIKA",
         experience: "3+ Years",
-        image: "/images/team/kritika-team.webp",
+        image: "/images/team/kritika-placeholder.png",
         width: 470,
         height: 581,
         description: "Kritika, with 3 years of teaching experience, is a passionate Mathematics educator holding a Bachelor’s in Physics (Honours) from Punjab University & a Bachelor of Education. She strives to make math engaging & empowering, connecting concepts to real-world applications through her physics background. Known for creating a supportive & motivating learning environment, Kritika encourages curiosity, confidence, & critical thinking. Outside the classroom, she enjoys stargazing & exploring innovative teaching methods to inspire a lifelong love for learning.",
@@ -129,7 +129,7 @@ const trainersData = [
     {
         name: "DR. HAYA",
         experience: "9+ Years",
-        image: "/images/team/dr-haya-team.webp",
+        image: "/images/team/dr-haya-placeholder.png",
         width: 470,
         height: 581,
         description: "Dr. Haya Khalid is a doctor by profession and a teacher by passion, with 9 years of teaching experience in Chemistry, Physics, & Biology. Holding an MBBS degree, her deep-rooted love for the sciences extends beyond medicine into inspiring young learners. During her academic journey, she discovered not only her affinity for the hard sciences but also her natural flair for teaching, igniting a career dedicated to shaping curious minds & guiding students toward academic excellence.",

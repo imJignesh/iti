@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/Header.module.css';
 import Image from 'next/image';
+import { CalendarCheck } from 'lucide-react';
 import { isPageSpeedInsights } from "@/utils/botDetection";
 
 const Header = ({ setHeaderHeight }) => {
@@ -77,18 +78,17 @@ const Header = ({ setHeaderHeight }) => {
         }
     };
 
-    // --- Google Ads Click Conversion Tracking for WhatsApp Button ---
-    const handleWhatsappClick = (e) => {
+    // --- Google Ads Click Conversion Tracking for "Get a Free Demo" ---
+    const handleDemoClick = (e) => {
         if (isReportingRef.current) return;
 
         e.preventDefault();
-        const url = `https://wa.me/${phoneNumber}`;
+        const url = '/join-free-demo-class';
 
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
             isReportingRef.current = true;
-            console.trace('🟡 WHATSAPP conversion fired — stack trace:');
             window.gtag('event', 'conversion', {
-                'send_to': 'AW-844959495/qUVOCIHriP4bEIee9JID',
+                'send_to': 'AW-844959495/i6DpCNnjiP4bEIee9JID',
                 'event_callback': function () {
                     window.location.href = url;
                     isReportingRef.current = false;
@@ -237,15 +237,16 @@ const Header = ({ setHeaderHeight }) => {
 
                 <div className={`d-flex justify-content-end m-0 ${styles.header_right_content}`}>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href={`tel:${phoneNumber}`} onClick={handleCallClick} className={styles.headerRightBtn}>
+                        <a href={`tel:${phoneNumber}`} onClick={handleCallClick} className={`${styles.headerRightBtn} ${styles.callButton}`} aria-label={`Call ${phoneNumber}`}>
                             <Image src="/images/mobile.webp" width={25} height={25} alt="Call" />
-                            Call
+                            <span className={styles.callLabel}>Call</span>
                         </a>
                     </div>
                     <div className="col-auto p-0 d-sm-block">
-                        <a href={`https://wa.me/${phoneNumber}`} onClick={handleWhatsappClick} className={styles.headerRightBtn}>
-                            <Image src="/images/whatsapp.webp" width={25} height={25} alt='Whatsapp' />
-                            Whatsapp
+                        <a href="/join-free-demo-class" onClick={handleDemoClick} className={`${styles.headerRightBtn} ${styles.demoButton}`}>
+                            <CalendarCheck width={22} height={22} strokeWidth={2} aria-hidden="true" />
+                            <span className={styles.demoFullLabel}>Get a Free Demo</span>
+                            <span className={styles.demoMobileLabel}>Free Demo</span>
                         </a>
                     </div>
                     <button

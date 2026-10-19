@@ -65,6 +65,16 @@ export default function MyApp({ Component, pageProps }) {
     const thirdPartyScriptStrategy = isPsiTestPage ? "lazyOnload" : "afterInteractive";
 
     const mobileBreakpoint = 2600;
+    const copyPages = [
+        '/courses/ibdp-tutors-in-dubai-copy',
+        '/british-curriculum-tutors-in-dubai-copy',
+        '/courses/myp-tutors-in-dubai-copy',
+        '/courses/igcse-tutors-in-dubai-copy',
+        '/courses/a-level-tutors-in-dubai-copy',
+        '/join-free-demo-class-copy'
+    ];
+    const isCopyPage = copyPages.includes(router.pathname);
+    const whatsappNumber = isCopyPage ? '+971588589958' : '+971568357374';
 
     // Set Locomotive once on client mount (avoids hydration mismatch)
     useEffect(() => {
@@ -107,17 +117,17 @@ export default function MyApp({ Component, pageProps }) {
 
     const isReportingRef = useRef(false);
 
-    // --- Google Ads Click Conversion Tracking for "Get a Free Demo" ---
-    const handleDemoClick = (e) => {
+    // --- Google Ads Click Conversion Tracking for WhatsApp Button ---
+    const handleWhatsappClick = (e) => {
         if (isReportingRef.current) return;
 
         e.preventDefault();
-        const url = '/join-free-demo-class';
+        const url = `https://wa.me/${whatsappNumber}`;
 
         if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
             isReportingRef.current = true;
             window.gtag('event', 'conversion', {
-                'send_to': 'AW-844959495/i6DpCNnjiP4bEIee9JID',
+                'send_to': 'AW-844959495/qUVOCIHriP4bEIee9JID',
                 'event_callback': function () {
                     window.location.href = url;
                     isReportingRef.current = false;
@@ -232,12 +242,20 @@ export default function MyApp({ Component, pageProps }) {
             {/* Outside data-scroll-container so Locomotive never sees this DOM mutation */}
             {showButton && (
                 <a
-                    href="/join-free-demo-class"
-                    onClick={handleDemoClick}
+                    href={`https://wa.me/${whatsappNumber}`}
+                    onClick={handleWhatsappClick}
                     className="sticky-demo-button"
-                    aria-label="Go to Free Demo Class page"
+                    aria-label="Chat with Ignite Training Institute on WhatsApp"
                 >
-                    Get a Free Demo
+                    <img
+                        src="/images/whatsapp-footer.webp"
+                        alt=""
+                        width="20"
+                        height="20"
+                        aria-hidden="true"
+                        className="sticky-demo-button-icon"
+                    />
+                    WhatsApp
                 </a>
             )}
         </PopupProvider>
