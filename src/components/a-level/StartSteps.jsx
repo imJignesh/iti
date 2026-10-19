@@ -47,7 +47,7 @@ export default function StartSteps() {
 
       <style jsx>{`
         .startSteps {
-          padding: 80px 0;
+          padding: 0;
         }
 
         .startStepsHeader {
@@ -138,10 +138,6 @@ export default function StartSteps() {
         }
 
         @media (max-width: 991px) {
-          .startSteps {
-            padding: 60px 0;
-          }
-
           .stepsGrid {
             grid-template-columns: 1fr;
           }
@@ -152,10 +148,6 @@ export default function StartSteps() {
         }
 
         @media (max-width: 575px) {
-          .startSteps {
-            padding: 45px 0;
-          }
-
           .stepCard {
             border-radius: 18px;
             padding: 22px 20px;

@@ -64,7 +64,7 @@ export default function YearPlanner() {
 
       <style jsx>{`
         .yearPlanner {
-          padding: 72px 0 78px;
+          padding: 0;
           background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
         }
 
@@ -152,10 +152,6 @@ export default function YearPlanner() {
         }
 
         @media (max-width: 991px) {
-          .yearPlanner {
-            padding: 58px 0 64px;
-          }
-
           .yearPlannerInner {
             padding-right: 24px;
             padding-left: 24px;
@@ -171,10 +167,6 @@ export default function YearPlanner() {
         }
 
         @media (max-width: 575px) {
-          .yearPlanner {
-            padding: 46px 0 52px;
-          }
-
           .yearPlannerInner {
             padding-right: 18px;
             padding-left: 18px;

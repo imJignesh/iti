@@ -20,6 +20,7 @@ import SubjectsCard from '@/components/a-level/SubjectCard';
 import StartSteps from '@/components/a-level/StartSteps';
 const OurApproach = dynamic(() => import('@/components/a-level/OurApproach'));
 const Trainers = dynamic(() => import('@/components/a-level/Trainers'));
+const AlevelGallery = dynamic(() => import('@/components/a-level/AlevelGallery'));
 const WhatWeOfferSection = dynamic(() => import('@/components/a-level/WhatWeOfferSection'));
 const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/a-level/ReviewsSection'));
@@ -436,6 +437,10 @@ const ALEVEL = ({ headerHeight }) => {
           <section data-scroll-section>
             <Trainers />
           </section>
+        </LazySection>
+
+        <LazySection>
+          <AlevelGallery />
         </LazySection>
 
         {/* what we offer Start */}
