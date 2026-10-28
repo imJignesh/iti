@@ -60,6 +60,7 @@ const ThankYouGmb = ({ headerHeight }) => {
           </div>
         </section>
       </div>
+
     </>
   );
 };
