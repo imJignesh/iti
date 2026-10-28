@@ -123,7 +123,7 @@ export default function WhyChooseUs() {
                       data-scroll-class="is-inview"
                       data-scroll-repeat="true"
                       className="fade-in-section testTitle"
-                      style={{ animationDelay: "0.2s" }}
+                      style={{ "--reveal-delay": "0.2s" }}
                     >
                       A Legacy Of Success Built On Trust &
                       <span className="highlight"> Learning</span>
@@ -471,7 +471,7 @@ export default function WhyChooseUs() {
                       data-scroll-class="is-inview"
                       data-scroll-repeat="true"
                       className="fade-in-section testTitle"
-                    // style={{ animationDelay: "0.2s" }}
+                    // style={{ "--reveal-delay": "0.2s" }}
                     >
                       LOREM IPSUM DOLOR SIT AMET,
                       CONSECTETUR <span className="highlight">ADIPISCING</span>

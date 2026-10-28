@@ -83,7 +83,7 @@ const IBCurriculumStages = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               <h2 className="SubHeading">
                 Final Exam Success Requires Strategy, Not Just Revision
@@ -94,14 +94,14 @@ const IBCurriculumStages = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.25s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               <h3
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s" }}
+                style={{ "--reveal-delay": "0.2s" }}
               >
                 Why Do Students Need A
                 <span className="highlight"> Structured Test Series </span>Before The Finals
@@ -112,14 +112,14 @@ const IBCurriculumStages = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat
               className="divider desktop-fade-in"
-              style={{ animationDelay: "0.25s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               <p
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat
                 className="fade-in-section"
-                style={{ animationDelay: "0.25s" }}
+                style={{ "--reveal-delay": "0.2s" }}
               >Our structured test series ensures students are guided, challenged, & strategically prepared to perform at their highest potential.</p>
             </div>
           </div>

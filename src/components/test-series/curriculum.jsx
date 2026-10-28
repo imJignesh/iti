@@ -35,7 +35,7 @@ const IBCurriculumStages = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               <h2 className="SubHeading">
                 Step-By-Step Assessment Plan
@@ -46,7 +46,7 @@ const IBCurriculumStages = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.25s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               <h3 className="achievementsTitle">
 
@@ -58,14 +58,14 @@ const IBCurriculumStages = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat
               className="divider desktop-fade-in"
-              style={{ animationDelay: "0.25s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               <p
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat
                 className="fade-in-section"
-                style={{ animationDelay: "0.25s" }}
+                style={{ "--reveal-delay": "0.2s" }}
               >Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.</p>
             </div>
           </div>

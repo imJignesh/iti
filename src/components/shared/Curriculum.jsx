@@ -8,7 +8,7 @@ export default function IBCurriculumStages() {
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s" }}
+      style={{ "--reveal-delay": "0.1s" }}
     >
       {/* Header Section - Separate from cards */}
       <div
@@ -16,7 +16,7 @@ export default function IBCurriculumStages() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: "1140px", animationDelay: "0.15s" }}
+        style={{ maxWidth: "1140px", "--reveal-delay": "0.15s" }}
       >
         <div
           className="curriculumSubSection"
@@ -30,7 +30,7 @@ export default function IBCurriculumStages() {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+              style={{ "--reveal-delay": "0.2s", fontSize: "2rem" }}
             >
               Step-By-Step Guidance Through The{" "}
               <span className="highlight">IB Curriculum</span>
@@ -70,7 +70,7 @@ export default function IBCurriculumStages() {
                 data-scroll-class="is-inview"
                 data-scroll-repeat
                 style={{
-                  animationDelay: "0.25s",
+                  "--reveal-delay": "0.2s",
                 }}></div>
               <div className="card-description">
                 Ignite's expert IBDP tutors provide tailored guidance, curated resources, & exam-focused strategies to help students master all 6 subject groups. With focused support, we empower learners to excel academically.
@@ -149,7 +149,7 @@ export default function IBCurriculumStages() {
                 data-scroll-class="is-inview"
                 data-scroll-repeat
                 style={{
-                  animationDelay: "0.25s",
+                  "--reveal-delay": "0.2s",
                 }}></div>
               <div className="card-description">
                 MYP tutors at Ignite help students build a strong foundation in their subjects & apply concepts to real-world contexts. With focused exam prep & strategic support, we guide learners to excel in e-assessments & beyond.

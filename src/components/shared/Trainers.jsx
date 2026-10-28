@@ -535,16 +535,16 @@ export default function Trainers({ trainers }) {
       <section className="trainersSection">
         <div className="container">
           <div>
-            <h2 className="SubHeading trainersSubheading fade-in-section" data-scroll data-scroll-class="is-inview" style={{ animationDelay: "0.1s" }}>
+            <h2 className="SubHeading trainersSubheading fade-in-section" data-scroll data-scroll-class="is-inview" style={{ "--reveal-delay": "0.1s" }}>
               OUR TUTORS
             </h2>
           </div>
 
-          <h3 className="trainersTitle fade-in-section" data-scroll data-scroll-class="is-inview" style={{ animationDelay: "0.2s" }}>
+          <h3 className="trainersTitle fade-in-section" data-scroll data-scroll-class="is-inview" style={{ "--reveal-delay": "0.2s" }}>
             {currentTitle}
           </h3>
 
-          <div data-scroll data-scroll-class="is-inview" className="fade-in-section" style={{ animationDelay: "0.3s" }}>
+          <div data-scroll data-scroll-class="is-inview" className="fade-in-section" style={{ "--reveal-delay": "0.2s" }}>
             <div className="trainersSwiperWrapper">
               <div className="trainersSwiperWrap">
                 <Swiper
@@ -609,7 +609,7 @@ export default function Trainers({ trainers }) {
                 } : {}}
               >
                 {displayTrainers.map((t, i) => (
-                  <div key={`${t.name}-${i}`} className="trainer-animate-item" style={{ animationDelay: `${(i % 4) * 0.1}s` }}>
+                  <div key={`${t.name}-${i}`} className="trainer-animate-item" style={{ "--reveal-delay": `${(i % 4) * 0.1}s` }}>
                     <a href="/our-team" className="nodecoration">
                       <div data-color={t.color} className="trainerCard">
                         <div className="trainerName">{t.name}</div>
@@ -623,7 +623,7 @@ export default function Trainers({ trainers }) {
                   </div>
                 ))}
               </div>
-              <div data-scroll data-scroll-class="is-inview" className="fade-in-section" style={{ animationDelay: "0.3s" }}>
+              <div data-scroll data-scroll-class="is-inview" className="fade-in-section" style={{ "--reveal-delay": "0.2s" }}>
                 {trainers.length > 10 && (
                   !showAll ? (
                     <button onClick={handleSeeMore} className="trainersSeeMore">

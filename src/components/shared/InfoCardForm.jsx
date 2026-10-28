@@ -153,11 +153,11 @@ export default function InfoCardForm({ formConfig }) {
     };
 
     return (
-        <div className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center position-relative right-form" style={{ animationDelay: "0.6s" }}>
+        <div className="col-lg-4 form-bg mt-4 mt-lg-0 d-flex align-items-center position-relative right-form" style={{ "--reveal-delay": "0.2s" }}>
             <div className={`w-100 text-white form-container ${isShaking ? 'shake-animation' : ''}`}>
                 <form onSubmit={handleSubmit}>
                     <input type="hidden" name="pageinfo" value="" />
-                    <p className="fw-bold text-uppercase mb-4 text-center form-heading" style={{ animationDelay: "0.65s" }}>
+                    <p className="fw-bold text-uppercase mb-4 text-center form-heading" style={{ "--reveal-delay": "0.2s" }}>
                         {formHeading}
                     </p>
 
@@ -171,7 +171,7 @@ export default function InfoCardForm({ formConfig }) {
 
                         if (field.type === 'email' && field.withPhone) {
                             return (
-                                <div key={field.name} className="row g-2 mb-3" style={{ animationDelay: field.delay }}>
+                                <div key={field.name} className="row g-2 mb-3" style={{ "--reveal-delay": field.delay }}>
                                     <div className="col-6">
                                         <input
                                             type={field.type}
@@ -200,7 +200,7 @@ export default function InfoCardForm({ formConfig }) {
                         if (field.name === 'grade' && formConfig?.type === 'Organic_Subject') {
                             const schoolField = fields.find(f => f.name === 'school');
                             return (
-                                <div key="grade-school" className="row g-2 mb-3" style={{ animationDelay: field.delay }}>
+                                <div key="grade-school" className="row g-2 mb-3" style={{ "--reveal-delay": field.delay }}>
                                     <div className="col-4">
                                         <input
                                             type={field.type}
@@ -230,7 +230,7 @@ export default function InfoCardForm({ formConfig }) {
                         }
 
                         return (
-                            <div key={field.name} className="mb-3" style={{ animationDelay: field.delay }}>
+                            <div key={field.name} className="mb-3" style={{ "--reveal-delay": field.delay }}>
                                 <input
                                     type={field.type}
                                     name={field.name}
@@ -247,7 +247,7 @@ export default function InfoCardForm({ formConfig }) {
 
                     {/* Render Select Fields */}
                     {selectFields.map(field => (
-                        <div key={field.name} className="mb-3" style={{ animationDelay: field.delay }}>
+                        <div key={field.name} className="mb-3" style={{ "--reveal-delay": field.delay }}>
                             <select
                                 name={field.name}
                                 value={formData[field.name] || ""}
@@ -265,7 +265,7 @@ export default function InfoCardForm({ formConfig }) {
                     ))}
 
                     {/* Message Textarea */}
-                    <div className="mb-4" style={{ animationDelay: messageConfig.delay }}>
+                    <div className="mb-4" style={{ "--reveal-delay": messageConfig.delay }}>
                         <textarea
                             name={messageConfig.name}
                             value={formData[messageConfig.name] || ""}
@@ -295,7 +295,7 @@ export default function InfoCardForm({ formConfig }) {
                             border: "1.5px solid rgba(255, 255, 255, 0.7)",
                             borderRadius: "40px",
                             transition: "all 0.3s ease",
-                            animationDelay: "0.85s"
+                            "--reveal-delay": "0.2s"
                         }}
                     >
                         {loading ? 'SUBMITTING...' : submitButtonText}

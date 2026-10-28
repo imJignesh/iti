@@ -77,13 +77,15 @@ const LocomotiveScrollProvider = ({ children }) => {
             const LocomotiveScroll = (await import("locomotive-scroll")).default;
             if (!scrollRef.current) return;
 
-            const rootMarginValue = '0px';
+            const revealTriggerDistance = getComputedStyle(document.documentElement)
+                .getPropertyValue('--reveal-trigger-distance')
+                .trim() || '120px';
 
             const scroll = new LocomotiveScroll({
                 el: scrollRef.current,
                 smooth: true,
                 lerp: 0.1,
-                rootMargin: rootMarginValue,
+                triggerRootMargin: `0px 0px ${revealTriggerDistance} 0px`,
             });
 
             scrollInstanceRef.current = scroll;

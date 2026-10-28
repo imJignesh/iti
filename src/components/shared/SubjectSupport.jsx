@@ -27,7 +27,7 @@ export default function SubjectSupport({ config = {} }) {
         data-scroll-class="is-inview"
         data-scroll-repeat="true"
       >
-        <div className="container" style={{ maxWidth: "74.166vw", animationDelay: "0.5s" }}
+        <div className="container" style={{ maxWidth: "74.166vw", "--reveal-delay": "0.2s" }}
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
@@ -238,7 +238,7 @@ export default function SubjectSupport({ config = {} }) {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               <div className="SubHeading testSubheading">courses</div>
             </div>
@@ -248,7 +248,7 @@ export default function SubjectSupport({ config = {} }) {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               Learning Starts Here With <span className="highlight"> {courseTitle} </span> Courses
             </h2>

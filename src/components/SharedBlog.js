@@ -59,7 +59,7 @@ const SharedBlog = ({ title, posts = [] }) => {
                                 className="fade-in-section blogHeadingRow"
                                 data-scroll
                                 data-scroll-class="is-inview"
-                                style={{ animationDelay: "0.1s" }}
+                                style={{ "--reveal-delay": "0.1s" }}
                             >
                                 <h2 className="SubHeading">BLOGS</h2>
                             </div>
@@ -67,7 +67,7 @@ const SharedBlog = ({ title, posts = [] }) => {
                                 data-scroll
                                 data-scroll-class="is-inview"
                                 className="fade-in-section blogTitle"
-                                style={{ animationDelay: "0.2s" }}
+                                style={{ "--reveal-delay": "0.2s" }}
                             >
                                 {title}
                             </h3>
@@ -75,7 +75,7 @@ const SharedBlog = ({ title, posts = [] }) => {
                                 data-scroll
                                 data-scroll-class="is-inview"
                                 className="fade-in-section blogSubtitle"
-                                style={{ animationDelay: "0.3s" }}
+                                style={{ "--reveal-delay": "0.2s" }}
                             >
                                 Dive Into Our Signature Blogs
                             </div>
@@ -84,7 +84,7 @@ const SharedBlog = ({ title, posts = [] }) => {
                                     data-scroll
                                     data-scroll-class="is-inview"
                                     className="blogAllBtn buttonBlue fade-in-section"
-                                    style={{ animationDelay: "0.4s" }}
+                                    style={{ "--reveal-delay": "0.2s" }}
                                 >
                                     VIEW ALL BLOGS
                                     <img
@@ -108,7 +108,7 @@ const SharedBlog = ({ title, posts = [] }) => {
                                         className="fade-in-section blogCard"
                                         data-scroll
                                         data-scroll-class="is-inview"
-                                        style={{ animationDelay: "0.2s" }}
+                                        style={{ "--reveal-delay": "0.2s" }}
                                     >
                                         <a href={`/blog/${blog.link}`} className="nodecoration">
                                             <img
@@ -152,7 +152,7 @@ const SharedBlog = ({ title, posts = [] }) => {
                                 data-scroll
                                 data-scroll-class="is-inview"
                                 className="blogAllBtnmobile buttonBlue fade-in-section"
-                                style={{ animationDelay: "0.4s" }}
+                                style={{ "--reveal-delay": "0.2s" }}
                             >
                                 VIEW ALL BLOGS
                                 <img

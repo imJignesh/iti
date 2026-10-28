@@ -65,7 +65,7 @@ export default function MeetOurFounders() {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.15s" }}
+          style={{ "--reveal-delay": "0.15s" }}
         >
           {/* Gradient subtitle with lines */}
           <div
@@ -73,7 +73,7 @@ export default function MeetOurFounders() {
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
+            style={{ "--reveal-delay": "0.1s" }}
           >
             <h2 className="SubHeading testSubheading">meet our founders</h2>
           </div>
@@ -84,7 +84,7 @@ export default function MeetOurFounders() {
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section testTitle"
-            style={{ animationDelay: "0.2s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             The Visionaries Behind The Ignite's
             <span className="highlight"> Purpose</span>

@@ -127,7 +127,7 @@ export default function CareerForm() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ animationDelay: "0.1s" }}
+        style={{ "--reveal-delay": "0.1s" }}
       >
         ADVANCE YOUR CAREER WITH{" "}<br />
         THE RIGHT <span>OPPORTUNITIES</span>
@@ -154,7 +154,7 @@ export default function CareerForm() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ animationDelay: "0.2s" }}
+        style={{ "--reveal-delay": "0.2s" }}
       >
         {/* Hidden Fields for Zoho */}
         <input type="hidden" name="zf_referrer_name" value="" />
@@ -218,7 +218,7 @@ export default function CareerForm() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.25s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <label htmlFor="location">CURRENT LOCATION</label>
             <input type="text" id="location" name="location" value={formData.location} onChange={handleChange} />
@@ -227,7 +227,7 @@ export default function CareerForm() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.3s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <label htmlFor="department">DEPARTMENT*</label>
 
@@ -254,7 +254,7 @@ export default function CareerForm() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.35s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <label htmlFor="position">POSITION/ROLE*</label>
             <input
@@ -272,7 +272,7 @@ export default function CareerForm() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.4s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <label htmlFor="subjects" className="subject">SUBJECTS</label>
             <input
@@ -289,7 +289,7 @@ export default function CareerForm() {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.45s" }}
+          style={{ "--reveal-delay": "0.2s" }}
         >
           <button
             type="button"
@@ -312,7 +312,7 @@ export default function CareerForm() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.5s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <label htmlFor="notice_period">NOTICE PERIOD</label>
             <input type="text" id="notice_period" name="notice_period" value={formData.notice_period} onChange={handleChange} />
@@ -321,7 +321,7 @@ export default function CareerForm() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.55s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <label htmlFor="experience">YEARS OF EXPERIENCE*</label>
             <input
@@ -341,7 +341,7 @@ export default function CareerForm() {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.6s" }}
+          style={{ "--reveal-delay": "0.2s" }}
         >
           <p className="file-note">
             Max Size: 1MB Support: PDF, DOC

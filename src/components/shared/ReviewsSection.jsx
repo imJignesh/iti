@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -10,6 +10,73 @@ import {
 } from "swiper/modules";
 import styles from "@/styles/home-copy/Testimonial.module.css";
 
+function ReviewTextScroller({ text, name }) {
+  const textRef = useRef(null);
+  const [hasOverflow, setHasOverflow] = useState(false);
+  const [isAtBottom, setIsAtBottom] = useState(false);
+
+  const updateScrollState = useCallback(() => {
+    const element = textRef.current;
+    if (!element) return;
+
+    const overflow = element.scrollHeight > element.clientHeight + 2;
+    setHasOverflow(overflow);
+    setIsAtBottom(
+      overflow && element.scrollTop + element.clientHeight >= element.scrollHeight - 2
+    );
+  }, []);
+
+  useEffect(() => {
+    updateScrollState();
+
+    const element = textRef.current;
+    if (!element || typeof ResizeObserver === "undefined") return undefined;
+
+    const observer = new ResizeObserver(updateScrollState);
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [text, updateScrollState]);
+
+  const handleArrowClick = () => {
+    const element = textRef.current;
+    if (!element) return;
+
+    element.scrollTo({
+      top: isAtBottom ? 0 : element.scrollTop + element.clientHeight * 0.8,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <div className={styles.testimonialTextWrap}>
+      <div
+        ref={textRef}
+        className={styles.testimonialText}
+        data-lenis-prevent
+        tabIndex={0}
+        aria-label={`Review from ${name}`}
+        onScroll={updateScrollState}
+      >
+        {text}
+      </div>
+
+      {hasOverflow && (
+        <button
+          type="button"
+          className={`${styles.reviewScrollIndicator} ${isAtBottom ? styles.reviewScrollIndicatorUp : ""}`}
+          onClick={handleArrowClick}
+          aria-label={isAtBottom ? "Scroll review to the top" : "Scroll down to read more"}
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.5 9.5 12 15l5.5-5.5" />
+          </svg>
+        </button>
+      )}
+    </div>
+  );
+}
+
 export default function ReviewsSection({ testimonials = [] }) {
   return (
     <>
@@ -19,7 +86,7 @@ export default function ReviewsSection({ testimonials = [] }) {
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
           className="fade-in-section"
-          style={{ animationDelay: "0.1s" }}
+          style={{ "--reveal-delay": "0.1s" }}
         >
           <div className={styles.testimonialHeader}>
             <h2 className="SubHeading">REVIEWS & TESTIMONIALS</h2>
@@ -31,7 +98,7 @@ export default function ReviewsSection({ testimonials = [] }) {
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
           className={`fade-in-section ${styles.testimonialBgBox}`}
-          style={{ animationDelay: "0.2s" }}
+          style={{ "--reveal-delay": "0.2s" }}
         >
           {/* Decorative rectangles */}
           <img src="/images/rectangle-bg4.webp" alt="testimonials" className={styles.testimonialRect} width={585} height={120} loading="lazy" decoding="async" />
@@ -46,7 +113,7 @@ export default function ReviewsSection({ testimonials = [] }) {
             data-scroll-repeat="true"
             data-scroll-offset="-10%"
             className={styles.googlelogo}
-            style={{ animationDelay: "0.2s" }}
+            style={{ "--reveal-delay": "0.2s" }}
             width={250}
             height={80}
             loading="lazy"
@@ -58,7 +125,7 @@ export default function ReviewsSection({ testimonials = [] }) {
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className={`fade-in-section ${styles.testimonialTitle}`}
-            style={{ animationDelay: "0.3s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             IGNITE TRAINING INSTITUTE - TUTORS IN DUBAI
           </h3>
@@ -68,7 +135,7 @@ export default function ReviewsSection({ testimonials = [] }) {
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className={`fade-in-section ${styles.googleReview}`}
-            style={{ animationDelay: "0.4s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <span>4.9 </span>
             Google Reviews
@@ -82,7 +149,7 @@ export default function ReviewsSection({ testimonials = [] }) {
             data-scroll-repeat="true"
             data-scroll-offset="-10%"
             className={`fade-in-section ${styles.starReview}`}
-            style={{ animationDelay: "0.5s" }}
+            style={{ "--reveal-delay": "0.2s" }}
             width={350}
             height={58}
             loading="lazy"
@@ -109,7 +176,8 @@ export default function ReviewsSection({ testimonials = [] }) {
             }}
             autoplay={{
               delay: 3000,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
             }}
             breakpoints={{
               0: { slidesPerView: 2, slidesPerGroup: 2 },
@@ -157,7 +225,7 @@ export default function ReviewsSection({ testimonials = [] }) {
                   </div>
                 ) : (
                   <div className={`${styles.testimonialCard} ${styles.testimonialCardText}`}>
-                    <div className={styles.testimonialText}>{item.text}</div>
+                    <ReviewTextScroller text={item.text} name={item.name} />
                     <div className={styles.testimonialTextName}>
                       <b>{item.name}</b>
                     </div>

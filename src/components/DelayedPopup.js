@@ -327,7 +327,7 @@ const DelayedPopup = () => {
 
                             style={{
                                 background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                                animationDelay: "0.75s",
+                                "--reveal-delay": "0.2s",
                                 marginLeft: "2.1rem "
                             }}
                         >

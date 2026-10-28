@@ -65,7 +65,7 @@ export default function Subjects({ }) {
       data-scroll-class="is-inview"
 
       className={`fade-in-section ${styles.subjectSection}`}
-      style={{ animationDelay: "0.2s" }}
+      style={{ "--reveal-delay": "0.2s" }}
     >
       <div className="container">
         <div className={`${styles.subjectSectionInner} ${styles.blue}`}>
@@ -110,7 +110,7 @@ export default function Subjects({ }) {
               data-scroll-class="is-inview"
 
               className="fade-in-section SubHeading"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               SUBJECT TUTORING
             </h2>
@@ -119,7 +119,7 @@ export default function Subjects({ }) {
               data-scroll-class="is-inview"
 
               className={`fade-in-section ${styles.subjectTitle}`}
-              style={{ animationDelay: "0.2s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               Expert Guidance For Every Subject In Every{" "}
               <span className={styles.subjectHighlight}>Way</span>
@@ -129,7 +129,7 @@ export default function Subjects({ }) {
               data-scroll-class="is-inview"
 
               className={`fade-in-section ${styles.subjectDesc}`}
-              style={{ animationDelay: "0.3s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               We help students strengthen subject knowledge, choose the right curriculum path, & build the academic confidence needed to excel.
             </p>
@@ -146,7 +146,7 @@ export default function Subjects({ }) {
                     data-scroll
                     data-scroll-class="is-inview"
                     className={`fade-in-section ${styles.subjectBubbleRow}`}
-                    style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
+                    style={{ "--reveal-delay": `${0.4 + rowIdx * 0.12}s` }}
                   >
                     {row.map((subj) => (
                       <h3 key={subj.name}>
@@ -169,7 +169,7 @@ export default function Subjects({ }) {
                     data-scroll
                     data-scroll-class="is-inview"
                     className={`fade-in-section ${styles.subjectBubbleRow}`}
-                    style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
+                    style={{ "--reveal-delay": `${0.4 + rowIdx * 0.12}s` }}
                   >
                     {row.map((subj) => (
                       <h3 key={subj.name}>

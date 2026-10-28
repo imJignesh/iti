@@ -60,13 +60,13 @@ export default function IgniteCareerCard() {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
-              style={{ animationDelay: "0.25s" }}>
+              style={{ "--reveal-delay": "0.2s" }}>
               <div
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section"
-                style={{ animationDelay: "0.1s" }}
+                style={{ "--reveal-delay": "0.1s" }}
               >
                 <h2 className="SubHeading testSubheading">Work With Ignite
                 </h2>
@@ -77,7 +77,7 @@ export default function IgniteCareerCard() {
           <h3 className="ignite-main-title fade-in-section" data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat style={{
-              animationDelay: "0.3s",
+              "--reveal-delay": "0.2s",
             }}>
             {/* Conditional Main Title Content */}
             {mainTitleContent}
@@ -86,7 +86,7 @@ export default function IgniteCareerCard() {
           <p className="ignite-description fade-in-section" data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat style={{
-              animationDelay: "0.3s",
+              "--reveal-delay": "0.2s",
             }}>
             At Ignite, tutoring goes beyond the classroom - it's a journey of personal growth, flexibility, & purpose. We’re always seeking passionate educators who believe in the power of teaching & learning. Join our team & grow with us as we inspire students every day.
           </p>
@@ -94,7 +94,7 @@ export default function IgniteCareerCard() {
           <h3 className="ignite-secondary-title fade-in-section" data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat style={{
-              animationDelay: "0.3s",
+              "--reveal-delay": "0.2s",
             }}>
             {/* Conditional Secondary Title Content */}
             {secondaryTitleContent}
@@ -114,7 +114,7 @@ export default function IgniteCareerCard() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat style={{
-              animationDelay: "0.3s",
+              "--reveal-delay": "0.2s",
             }}>
             <img
               src="/assets/person1.webp"
@@ -131,7 +131,7 @@ export default function IgniteCareerCard() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.3s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <div className="check-box d-flex justify-content-between">
 

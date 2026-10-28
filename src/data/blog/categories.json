@@ -1,7 +1,7 @@
 [
   {
     "id": 15,
-    "count": 38,
+    "count": 37,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/a-levels/",
     "name": "A-Levels",
@@ -120,7 +120,7 @@
   },
   {
     "id": 3,
-    "count": 26,
+    "count": 25,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/advanced-placements/",
     "name": "Advanced Placements (AP)",
@@ -477,7 +477,7 @@
   },
   {
     "id": 26,
-    "count": 14,
+    "count": 13,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/gcse/",
     "name": "GCSE",
@@ -834,7 +834,7 @@
   },
   {
     "id": 17,
-    "count": 44,
+    "count": 43,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/igcse/",
     "name": "IGCSE",
@@ -953,7 +953,7 @@
   },
   {
     "id": 9,
-    "count": 38,
+    "count": 37,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/international-baccalaureate/",
     "name": "International Baccalaureate (IB)",
@@ -1191,7 +1191,7 @@
   },
   {
     "id": 49,
-    "count": 1,
+    "count": 0,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/news-mentions/",
     "name": "News Mentions",
@@ -1548,7 +1548,7 @@
   },
   {
     "id": 12,
-    "count": 26,
+    "count": 25,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/study-tips/",
     "name": "Study Tips",
@@ -1786,7 +1786,7 @@
   },
   {
     "id": 13,
-    "count": 8,
+    "count": 5,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/tutoring/",
     "name": "Tutoring",
@@ -1905,7 +1905,7 @@
   },
   {
     "id": 1,
-    "count": 1,
+    "count": 0,
     "description": "",
     "link": "https://api.ignitetraininginstitute.com/blog/category/uncategorized/",
     "name": "Uncategorized",

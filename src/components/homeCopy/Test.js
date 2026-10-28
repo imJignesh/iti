@@ -63,7 +63,7 @@ const Test = ({
             data-scroll-class="is-inview"
 
             className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
+            style={{ "--reveal-delay": "0.1s" }}
           >
             {/* Global Class used as string, local class used with styles */}
             <h2 className={`SubHeading ${styles.testSubheading}`}>{eyebrow}</h2>
@@ -74,7 +74,7 @@ const Test = ({
 
             // Apply local module class. Global class used as string
             className={`fade-in-section ${styles.testTitle}`}
-            style={{ animationDelay: "0.2s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             {heading}{" "}
             <span className="highlight">{headingHighlight}</span>
@@ -85,7 +85,7 @@ const Test = ({
             data-scroll-class="is-inview"
 
             className="fade-in-section"
-            style={{ animationDelay: "0.4s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <p>
               {description}
@@ -170,7 +170,7 @@ const Test = ({
                   data-scroll-class="is-inview"
 
                   className={`fade-in-section col-4 px-3 ${styles.testCard}`}
-                  style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
+                  style={{ "--reveal-delay": `${0.3 + idx * 0.15}s` }}
                   onMouseEnter={() => setActive(idx)}
                   onMouseLeave={() => setActive(1)}
                 >

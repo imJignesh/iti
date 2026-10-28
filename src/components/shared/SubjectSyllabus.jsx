@@ -134,7 +134,7 @@ export default function SubjectSyllabus({ config }) {
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
+            style={{ "--reveal-delay": "0.1s" }}
           >
             <h2 className="SubHeading">{title}</h2>
           </div>
@@ -143,7 +143,7 @@ export default function SubjectSyllabus({ config }) {
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section"
-            style={{ animationDelay: "0.25s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <h3 className="achievementsTitle text-uppercase">
               {subtitlePrefix} <br></br>{" "}
@@ -164,7 +164,7 @@ export default function SubjectSyllabus({ config }) {
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
-                style={{ animationDelay: "0.1s" }}
+                style={{ "--reveal-delay": "0.1s" }}
               >
                 <div className="counts">{String(idx + 1).padStart(2, "0")}.</div>
                 <h3 className="subjects-name">{name}</h3>

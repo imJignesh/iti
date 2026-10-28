@@ -220,13 +220,13 @@ const OurTeam = ({ headerHeight }) => {
                         <div className="container">
                             <div className="text-center mb-5">
                                 <div className={styles['meet-team-Headings']}>
-                                    <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className={styles['fade-in-section']} style={{ animationDelay: "0.1s" }}>
+                                    <div data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className={styles['fade-in-section']} style={{ "--reveal-delay": "0.1s" }}>
                                         <h2 className="SubHeading">MEET OUR TEAM</h2>
                                     </div>
-                                    <h3 data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className={`${styles['fade-in-section']} ${styles.meetTitle}`} style={{ animationDelay: "0.2s" }}>
+                                    <h3 data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className={`${styles['fade-in-section']} ${styles.meetTitle}`} style={{ "--reveal-delay": "0.2s" }}>
                                         Dedicated Ignite Trainers Shaping Bright<span className={styles.highlight}> Futures </span>
                                     </h3>
-                                    <h2 data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className={`${styles['fade-in-section']} ${styles.cofounderTitle}`} style={{ animationDelay: "0.2s" }}>
+                                    <h2 data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" className={`${styles['fade-in-section']} ${styles.cofounderTitle}`} style={{ "--reveal-delay": "0.2s" }}>
                                         CO-FOUNDERS
                                     </h2>
                                 </div>
@@ -236,7 +236,7 @@ const OurTeam = ({ headerHeight }) => {
                                     const key = `founder-${index}`;
                                     const isExpanded = expandedCards[key];
                                     return (
-                                        <div className={styles['team-card']} key={key} data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
+                                        <div className={styles['team-card']} key={key} data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" style={{ "--reveal-delay": `${0.3 + index * 0.1}s` }}>
                                             <div className={styles['team-card-image']}>
                                                 <img src={founder.image} alt={founder.name} width={founder.width} height={founder.height} />
                                             </div>
@@ -271,7 +271,7 @@ const OurTeam = ({ headerHeight }) => {
                                     const key = `admin-${index}`;
                                     const isExpanded = expandedCards[key];
                                     return (
-                                        <div className={styles['admin-card']} key={key} data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
+                                        <div className={styles['admin-card']} key={key} data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" style={{ "--reveal-delay": `${0.3 + index * 0.1}s` }}>
                                             <div className={styles['admin-card-image']}><img src={admin.image} alt={admin.name} width={admin.width} height={admin.height} /></div>
                                             <div className={styles['admin-card-info']}>
                                                 <div className={styles['admin-card-content']}>
@@ -307,7 +307,7 @@ const OurTeam = ({ headerHeight }) => {
                                     const key = `trainer-${index}`;
                                     const isExpanded = expandedCards[key];
                                     return (
-                                        <div className={styles['trainer-card']} key={key} data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" style={{ animationDelay: `${0.3 + index * 0.05}s` }}>
+                                        <div className={styles['trainer-card']} key={key} data-scroll data-scroll-class="is-inview" data-scroll-repeat="true" style={{ "--reveal-delay": `${0.3 + index * 0.05}s` }}>
                                             <div className={styles['trainer-name']}><h3>{trainer.name}</h3></div>
                                             <div className={styles['trainer-image']}><img src={trainer.image} alt={trainer.name} width={trainer.width} height={trainer.height} /></div>
                                             <div className={styles['trainer-info']}>

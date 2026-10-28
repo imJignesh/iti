@@ -16,7 +16,7 @@ const TestDesktopCards = ({ active = 1, setActive }) => (
               data-scroll
               data-scroll-class="is-inview"
               className={`fade-in-section col-4 px-3 ${styles.testCard}`}
-              style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
+              style={{ "--reveal-delay": `${0.3 + idx * 0.15}s` }}
               onMouseEnter={() => setActive?.(idx)}
               onMouseLeave={() => setActive?.(1)}
             >

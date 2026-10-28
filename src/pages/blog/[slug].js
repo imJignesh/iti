@@ -915,7 +915,7 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
                                             data-scroll-class="is-inview"
                                             data-scroll-repeat="true"
                                             className="buttonBlue author-section-cta"
-                                            style={{ animationDelay: "0.4s" }}
+                                            style={{ "--reveal-delay": "0.2s" }}
                                         >
                                             Get Tutor Help
                                             <img
@@ -978,14 +978,14 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
                                             data-scroll
                                             data-scroll-class="is-inview"
                                             data-scroll-repeat
-                                            style={{ animationDelay: "0.25s" }}
+                                            style={{ "--reveal-delay": "0.2s" }}
                                         >
                                             <div
                                                 data-scroll
                                                 data-scroll-class="is-inview"
                                                 data-scroll-repeat="true"
                                                 className=""
-                                                style={{ animationDelay: "0.1s" }}
+                                                style={{ "--reveal-delay": "0.1s" }}
                                             >
                                                 <div className="SubHeading testSubheading">More Blogs</div>
                                             </div>

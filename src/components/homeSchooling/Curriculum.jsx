@@ -9,7 +9,7 @@ export default function Curriculum() {
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
           className="fade-in-section"
-          style={{ animationDelay: "0.1s" }}
+          style={{ "--reveal-delay": "0.1s" }}
         >
           <h2 className="SubHeading testSubheading">Curriculum Offerings For Private Candidates
           </h2>
@@ -19,7 +19,7 @@ export default function Curriculum() {
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
           className="fade-in-section testTitle"
-          style={{ animationDelay: "0.2s", fontSize: '2rem' }}
+          style={{ "--reveal-delay": "0.2s", fontSize: '2rem' }}
         >
 
           <span className="highlight">Choose A Program </span>That Suits Your Private Path

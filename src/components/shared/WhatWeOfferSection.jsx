@@ -11,14 +11,14 @@ const WhatWeOfferSection = ({ config }) => {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.2s" }}>
+            style={{ "--reveal-delay": "0.2s" }}>
             <div className="testHeadings">
               <div
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section"
-                style={{ animationDelay: "0.1s" }}
+                style={{ "--reveal-delay": "0.1s" }}
               >
                 <h2 className="SubHeading testSubheading">WHAT MORE DO WE OFFER?</h2>
               </div>
@@ -27,7 +27,7 @@ const WhatWeOfferSection = ({ config }) => {
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                style={{ "--reveal-delay": "0.2s", fontSize: "2rem" }}
               >
                 {config.heading} <span className="highlight">Milestone</span>
               </h3>
@@ -41,7 +41,7 @@ const WhatWeOfferSection = ({ config }) => {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               <div className="icon-wrap" data-step={step.number}>
                 <img src="/images/school.webp" alt={step.title} width={134} height={134} />

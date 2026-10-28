@@ -8,7 +8,7 @@ export default function ContactBanner() {
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{
-        animationDelay: "0.3s",
+        "--reveal-delay": "0.2s",
       }}
     >
       {/* Dark overlay */}

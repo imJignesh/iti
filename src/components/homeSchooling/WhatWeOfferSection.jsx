@@ -10,14 +10,14 @@ const WhatWeOfferSection = () => {
                         data-scroll
                         data-scroll-class="is-inview"
                         data-scroll-repeat
-                        style={{ animationDelay: "0.2s" }}>
+                        style={{ "--reveal-delay": "0.2s" }}>
                         <div className="testHeadings">
                             <div
                                 data-scroll
                                 data-scroll-class="is-inview"
                                 data-scroll-repeat="true"
                                 className="fade-in-section"
-                                style={{ animationDelay: "0.1s" }}
+                                style={{ "--reveal-delay": "0.1s" }}
                             >
                                 <h2 className="SubHeading testSubheading">WHAT MORE DO WE OFFER?</h2>
                             </div>
@@ -26,7 +26,7 @@ const WhatWeOfferSection = () => {
                                 data-scroll-class="is-inview"
                                 data-scroll-repeat="true"
                                 className="fade-in-section testTitle"
-                                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                                style={{ "--reveal-delay": "0.2s", fontSize: "2rem" }}
                             >
                                 Comprehensive Guidance For Every Academic <span className="highlight">Milestone</span>
                             </h3>
@@ -40,7 +40,7 @@ const WhatWeOfferSection = () => {
                         data-scroll
                         data-scroll-class="is-inview"
                         data-scroll-repeat="true"
-                        style={{ animationDelay: "0.1s" }}
+                        style={{ "--reveal-delay": "0.1s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="01">
                             <img src="/images/idealcur.webp" alt="Ideal Curriculum" width={134} height={134} />
@@ -54,7 +54,7 @@ const WhatWeOfferSection = () => {
                         data-scroll
                         data-scroll-class="is-inview"
                         data-scroll-repeat="true"
-                        style={{ animationDelay: "0.2s" }}
+                        style={{ "--reveal-delay": "0.2s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="02">
                             <img src="/images/subject.webp" alt="Subject Choices" width={134} height={134} />
@@ -68,7 +68,7 @@ const WhatWeOfferSection = () => {
                         data-scroll
                         data-scroll-class="is-inview"
                         data-scroll-repeat="true"
-                        style={{ animationDelay: "0.3s" }}
+                        style={{ "--reveal-delay": "0.2s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="03">
                             <img src="/images/school.webp" alt="Registration Support" width={134} height={134} />
@@ -82,7 +82,7 @@ const WhatWeOfferSection = () => {
                         data-scroll
                         data-scroll-class="is-inview"
                         data-scroll-repeat="true"
-                        style={{ animationDelay: "0.4s" }}
+                        style={{ "--reveal-delay": "0.2s" }}
                     >
                         <div className={styles['icon-wrap']} data-step="04">
                             <img src="/images/universitypath.webp" alt="University Pathways" width={134} height={134} />

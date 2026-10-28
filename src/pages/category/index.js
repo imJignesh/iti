@@ -70,7 +70,7 @@ const CategoriesIndexPage = ({ headerHeight }) => {
                 <section
                     className="careers-banner fade-in-section is-inview"
 
-                    style={{ animationDelay: "0.3s" }}
+                    style={{ "--reveal-delay": "0.2s" }}
                 >
                     <div className="dark-overlay"></div>
                     <div className="overlay">

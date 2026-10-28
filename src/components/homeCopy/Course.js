@@ -66,7 +66,7 @@ const Course = () => {
                         data-scroll-class="is-inview"
 
                         className="fade-in-section"
-                        style={{ animationDelay: "0.1s" }}
+                        style={{ "--reveal-delay": "0.1s" }}
                     >
                         {/* Global Class used as string */}
                         <h2 className="SubHeading">TUTORING PROGRAMS</h2>
@@ -76,7 +76,7 @@ const Course = () => {
                         data-scroll-class="is-inview"
 
                         className="fade-in-section"
-                        style={{ animationDelay: "0.25s" }}
+                        style={{ "--reveal-delay": "0.2s" }}
                     >
                         {/* Apply local module class. Global class used as string */}
                         <h3 className={styles.courseTitle}>
@@ -88,7 +88,7 @@ const Course = () => {
                         data-scroll-class="is-inview"
 
                         className="fade-in-section"
-                        style={{ animationDelay: "0.4s" }}
+                        style={{ "--reveal-delay": "0.2s" }}
                     >
                         {/* Global element, styles applied via :global(p) in module */}
                         <p>
@@ -102,7 +102,7 @@ const Course = () => {
                     data-scroll-class="is-inview"
 
                     className={styles.courseInner}
-                    style={{ animationDelay: "0.4s" }}
+                    style={{ "--reveal-delay": "0.2s" }}
                 >
                     {courseData.map((card, idx) => {
                         const isActive = hovered === idx;
@@ -113,7 +113,7 @@ const Course = () => {
 
                                 // Apply local module classes
                                 className={isActive ? styles.mainCard : styles.sideCard}
-                                style={{ animationDelay: `${0.3 + idx * 0.25}s`, background: "none" }}
+                                style={{ "--reveal-delay": `${0.3 + idx * 0.25}s`, background: "none" }}
                                 key={idx}
                                 onMouseEnter={() => setHovered(idx)}
                             >

@@ -60,7 +60,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
+            style={{ "--reveal-delay": "0.1s" }}
           >
             {/* Global Class used as string, local class used with styles */}
             <h2 className={`SubHeading ${styles.testSubheading}`}>STANDARDISED TESTS</h2>
@@ -71,7 +71,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             data-scroll-repeat="true"
             // Apply local module class. Global class used as string
             className={`fade-in-section ${styles.testTitle}`}
-            style={{ animationDelay: "0.2s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             Power Your Academic Goals With Expert Prep{" "}
             <span className="highlight">Support</span>
@@ -82,7 +82,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section"
-            style={{ animationDelay: "0.4s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <p>
               Whether you're aiming for top scores or a strong foundation, Ignite’s courses give you the edge to succeed.
@@ -176,7 +176,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
                   data-scroll-repeat="true"
                   // Apply local module class and global classes
                   className={`fade-in-section col-4 px-3 ${styles.testCard}`}
-                  style={{ animationDelay: `${0.3 + idx * 0.15}s` }}
+                  style={{ "--reveal-delay": `${0.3 + idx * 0.15}s` }}
                   onMouseEnter={() => setActive(idx)}
                   onMouseLeave={() => setActive(1)}
                 >

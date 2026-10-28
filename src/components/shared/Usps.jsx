@@ -351,7 +351,7 @@ export default function Usps({ config }) {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.2s" }}
+          style={{ "--reveal-delay": "0.2s" }}
         >
           <div className="row justify-content-between gx-5">
             <div className={`col-lg-4${config.wrapperClass ? ' ' + config.wrapperClass : ''}`}>
@@ -366,7 +366,7 @@ export default function Usps({ config }) {
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat
-                  style={{ animationDelay: "0.1s" }}
+                  style={{ "--reveal-delay": "0.1s" }}
                 >
                   {config.subheading || "OUR PROMISE"}
                 </h2>
@@ -376,7 +376,7 @@ export default function Usps({ config }) {
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat
-                  style={{ animationDelay: "0.2s" }}
+                  style={{ "--reveal-delay": "0.2s" }}
                 >
                   {config.heading}
                 </h3>
@@ -386,7 +386,7 @@ export default function Usps({ config }) {
                     className="usp-subtitle fade-in-section"
                     data-scroll
                     data-scroll-class="is-inview"
-                    style={{ animationDelay: "0.3s" }}
+                    style={{ "--reveal-delay": "0.2s" }}
                   >
                     {config.subtitle}
                   </h4>
@@ -397,7 +397,7 @@ export default function Usps({ config }) {
                     className="usp-desc fade-in-section d-none d-lg-block"
                     data-scroll
                     data-scroll-class="is-inview"
-                    style={{ animationDelay: "0.4s" }}
+                    style={{ "--reveal-delay": "0.2s" }}
                   >
                     {config.description}
                   </p>
@@ -409,7 +409,7 @@ export default function Usps({ config }) {
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat
-                  style={{ animationDelay: config.description ? "0.5s" : "0.5s" }}
+                  style={{ "--reveal-delay": config.description ? "0.5s" : "0.5s" }}
                 >
                   {config.ctaText || "KNOW MORE ABOUT IGNITE"}{" "}
                   <Image

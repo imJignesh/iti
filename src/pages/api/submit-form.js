@@ -83,6 +83,13 @@ export default async function handler(req, res) {
             redirectUrl: '/thank-you-organic',
         },
         {
+            type: 'GMB_FORM',
+            slugs: ['/gmb'],
+            zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/GMBPage/formperma/7BY0qo5yyyBG6IhJ0IugBdx-BVGb48vzrbNj8N5W67o/htmlRecords/submit',
+            fieldMap: { name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode', grade: 'SingleLine1', course: 'SingleLine3', message: 'MultiLine', pageinfo: 'SingleLine2' },
+            redirectUrl: '/thank-you-gmb',
+        },
+        {
             type: 'Freedemo-copy',
             slugs: ["/join-free-demo-class-copy"],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/FreedemoCopy/formperma/ryYEivQL7G8wp5ZgriKcktZqwFKODzJPAKlzB35api0/htmlRecords/submit',

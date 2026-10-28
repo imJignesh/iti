@@ -95,7 +95,7 @@ export default function FaqSection({
               data-scroll-repeat="true"
               className="fade-in-section text-uppercase"
               style={{
-                animationDelay: "0.2s",
+                "--reveal-delay": "0.2s",
                 color: "#19245E",
                 fontWeight: 700,
                 margin: isMobile ? "20px auto" : "0 0 20px 0",

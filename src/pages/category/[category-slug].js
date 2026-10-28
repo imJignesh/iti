@@ -370,7 +370,7 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
                     className="careers-banner fade-in-section is-inview"
 
                     style={{
-                        animationDelay: "0.3s",
+                        "--reveal-delay": "0.2s",
                     }}
                 >
                     {/* Dark overlay */}

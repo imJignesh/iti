@@ -27,7 +27,7 @@ const CurriculumTutors = ({ config }) => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               <h2 className="SubHeading">
                 {subheading}
@@ -38,7 +38,7 @@ const CurriculumTutors = ({ config }) => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.25s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               <h3 className="achievementsTitle">
                 Curriculum-Based Learning &{isMobile ? " " : <br />}

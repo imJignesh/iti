@@ -5,7 +5,7 @@ export default function CareersBanner() {
     <section className="careers-banner fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat style={{
-        animationDelay: "0.3s",
+        "--reveal-delay": "0.2s",
       }}>
       {/* Dark overlay */}
       <div className="dark-overlay"></div>

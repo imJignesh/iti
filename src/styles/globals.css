@@ -28,6 +28,13 @@ body a {
   --white-color: #f8fbff;
   --white-bg: #ffffff;
   --black-color: #000000;
+  /* Global scroll-reveal timing controls */
+  --reveal-trigger-distance: 150px;
+  --reveal-duration: 0.45s;
+  --reveal-delay-default: 0.05s;
+  --reveal-delay-max: 0.2s;
+  --reveal-distance: 30px;
+  --reveal-easing: cubic-bezier(0.4, 0, 0.2, 1);
   /* --font-montserrat: "Montserrat", sans-serif; */
 }
 
@@ -95,7 +102,7 @@ option {
 .fade-in-section {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(30px);
+  transform: translateY(var(--reveal-distance));
 }
 
 /* Your existing Mobile Override */

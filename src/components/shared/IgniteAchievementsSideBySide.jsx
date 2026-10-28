@@ -31,19 +31,19 @@ export default function IgniteAchievementsSideBySide({ config }) {
     <div className="mobileign fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s" }}>
+      style={{ "--reveal-delay": "0.1s" }}>
       <div className="container fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: '90vw', animationDelay: "0.15s" }}>
+        style={{ maxWidth: '90vw', "--reveal-delay": "0.15s" }}>
 
         {/* Mobile Header Section */}
         <div className="d-md-none text-center mb-4 fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.2s" }}>
+          style={{ "--reveal-delay": "0.2s" }}>
           <h2 className="SubHeading testSubheading">OUR ACHIEVEMENTS</h2>
 
           <h3
@@ -51,7 +51,7 @@ export default function IgniteAchievementsSideBySide({ config }) {
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section testTitle text-uppercase"
-            style={{ animationDelay: "0.2s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             {title.split('<highlight>').map((part, i) => {
               if (i === 0) return part;
@@ -73,7 +73,7 @@ export default function IgniteAchievementsSideBySide({ config }) {
               background: "#233467",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              animationDelay: "0.45s",
+              "--reveal-delay": "0.2s",
               fontSize: "0.9rem",
               lineHeight: isMobile ? "1.3" : "1.2",
             }}>
@@ -86,7 +86,7 @@ export default function IgniteAchievementsSideBySide({ config }) {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.5s" }}>
+          style={{ "--reveal-delay": "0.2s" }}>
 
           <div className="desktop-stats-container">
             {/* Left Side Content */}
@@ -101,7 +101,7 @@ export default function IgniteAchievementsSideBySide({ config }) {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className="fade-in-section testTitle text-uppercase margin-0"
-                  style={{ animationDelay: "0.2s" }}
+                  style={{ "--reveal-delay": "0.2s" }}
                 >
                   {title.split('<highlight>').map((part, i) => {
                     if (i === 0) return part;
@@ -123,7 +123,7 @@ export default function IgniteAchievementsSideBySide({ config }) {
                     background: "#233467",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
-                    animationDelay: "0.45s",
+                    "--reveal-delay": "0.2s",
                     fontSize: "1.2rem",
                     marginTop: "16px",
                   }}>
@@ -158,7 +158,7 @@ export default function IgniteAchievementsSideBySide({ config }) {
                         width: "2.5rem",
                         height: "2.5rem",
                         background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                        animationDelay: "0.75s",
+                        "--reveal-delay": "0.2s",
                         marginLeft: "2.1rem"
                       }}
                     >
@@ -207,7 +207,7 @@ export default function IgniteAchievementsSideBySide({ config }) {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.5s" }}>
+          style={{ "--reveal-delay": "0.2s" }}>
 
           {/* Mobile CTA Button */}
           <div className="text-center mb-4">

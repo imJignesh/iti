@@ -30,26 +30,26 @@ export default function IgniteAchievementsCardGrid({ config }) {
     <div className=" fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s" }}>
+      style={{ "--reveal-delay": "0.1s" }}>
       <div className="fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: isMobile ? "95vw" : '70vw', animationDelay: "0.15s", margin: "0 auto", padding: isMobile ? "0 0px 0px 0px" : "0 0px 0 0px", }}>
+        style={{ maxWidth: isMobile ? "95vw" : '70vw', "--reveal-delay": "0.15s", margin: "0 auto", padding: isMobile ? "0 0px 0px 0px" : "0 0px 0 0px", }}>
 
         {/* Header Section */}
         <div className="text-center mb-md-5 mb-4 fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.2s" }}>
+          style={{ "--reveal-delay": "0.2s" }}>
           <div className="testHeadings">
             <div
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               <h2 className="SubHeading testSubheading">OUR ACHIEVEMENTS</h2>
             </div>
@@ -58,7 +58,7 @@ export default function IgniteAchievementsCardGrid({ config }) {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s", color: "#19245E !important", maxWidth: "700px !important", fontSize: '2rem' }}
+              style={{ "--reveal-delay": "0.2s", color: "#19245E !important", maxWidth: "700px !important", fontSize: '2rem' }}
             >
               {title.split('<highlight>').map((part, i) => {
                 if (i === 0) return part;
@@ -81,7 +81,7 @@ export default function IgniteAchievementsCardGrid({ config }) {
               background: "linear-gradient(90deg,#161664, #3F88BA)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              animationDelay: "0.45s",
+              "--reveal-delay": "0.2s",
               fontSize: isMobile ? "14px" : "23px"
             }}>
             {subtitle}
@@ -95,7 +95,7 @@ export default function IgniteAchievementsCardGrid({ config }) {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
-              style={{ animationDelay: `${0.5 + index * 0.05}s` }}>
+              style={{ "--reveal-delay": `${0.5 + index * 0.05}s` }}>
               <div className="stat-card p-md-4 px-3 py-2 d-flex flex-md-row flex-column align-items-center" style={{
                 backgroundImage: `url('${stat.bgImage}')`,
                 backgroundSize: 'cover',
@@ -148,7 +148,7 @@ export default function IgniteAchievementsCardGrid({ config }) {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.7s" }}>
+          style={{ "--reveal-delay": "0.2s" }}>
           <a href={buttonLink}>
             <button
               className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
@@ -172,7 +172,7 @@ export default function IgniteAchievementsCardGrid({ config }) {
                   width: "2.5rem",
                   height: "2.5rem",
                   background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                  animationDelay: "0.75s",
+                  "--reveal-delay": "0.2s",
                   marginLeft: "2.1rem "
                 }}
               >

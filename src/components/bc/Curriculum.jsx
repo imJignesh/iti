@@ -34,7 +34,7 @@ export default function IBCurriculumStages() {
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s" }}
+      style={{ "--reveal-delay": "0.1s" }}
     >
       {/* Header Section - Separate from cards */}
       <div
@@ -42,7 +42,7 @@ export default function IBCurriculumStages() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: "1140px", animationDelay: "0.15s", padding: isMobile ? "0" : undefined }}
+        style={{ maxWidth: "1140px", "--reveal-delay": "0.15s", padding: isMobile ? "0" : undefined }}
       >
         <div className="curriculumSubSection">
           <h2 className="SubHeading testSubheading">
@@ -54,7 +54,7 @@ export default function IBCurriculumStages() {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               Step-By-Step Guidance Through The
               {/* 3. Conditional rendering of <br /> and space */}
@@ -84,7 +84,7 @@ export default function IBCurriculumStages() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.45s" }}
+            style={{ "--reveal-delay": "0.2s" }}
           >
             <div>
               <div className="card-title card-title-ibdp">
@@ -101,7 +101,7 @@ export default function IBCurriculumStages() {
                 data-scroll-class="is-inview"
                 data-scroll-repeat
                 style={{
-                  animationDelay: "0.25s",
+                  "--reveal-delay": "0.2s",
                 }}></div>
               <div className="card-description">
                 Ignite’s expert British Curriculum tutors offer tailored support,
@@ -182,7 +182,7 @@ export default function IBCurriculumStages() {
                 data-scroll-class="is-inview"
                 data-scroll-repeat
                 style={{
-                  animationDelay: "0.25s",
+                  "--reveal-delay": "0.2s",
                 }}></div>
               <div className="card-description">
                 At Ignite, our subject-specialist A-Level tutors offer expert

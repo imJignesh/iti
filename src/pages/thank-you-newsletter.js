@@ -68,7 +68,7 @@ const About = ({ headerHeight }) => {
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section"
-                style={{ animationDelay: "0.1s" }}
+                style={{ "--reveal-delay": "0.1s" }}
               >
                 <h3 class="courseTitle">Thank you for filling out the contact form. Our team will get in touch with you within 24 hours.</h3>
                 <h3 class="courseTitle">For any urgency, please feel free to Call / WhatsApp us.</h3>

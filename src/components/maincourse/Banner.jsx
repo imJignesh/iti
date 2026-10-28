@@ -33,14 +33,14 @@ export default function TutoringCourses() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
-            style={{ animationDelay: "0.15s" }}
+            style={{ "--reveal-delay": "0.15s" }}
           >
             <div
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               <h2 className="SubHeading testSubheading">TUTORING COURSES</h2>
             </div>
@@ -50,7 +50,7 @@ export default function TutoringCourses() {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle font-sizet"
-              style={{ animationDelay: "0.2s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               Courses That Build Confidence & <span className="highlight">
                 Academic</span> Excellence
@@ -575,14 +575,14 @@ export default function TutoringCourses() {
 //             data-scroll
 //             data-scroll-class="is-inview"
 //             data-scroll-repeat
-//             style={{ animationDelay: "0.15s" }}
+//             style={{ "--reveal-delay": "0.15s" }}
 //           >
 //             <div
 //               data-scroll
 //               data-scroll-class="is-inview"
 //               data-scroll-repeat="true"
 //               className="fade-in-section"
-//               style={{ animationDelay: "0.1s" }}
+//               style={{ "--reveal-delay": "0.1s" }}
 //             >
 //               <div className="SubHeading testSubheading">TUTORING COURSES</div>
 //             </div>
@@ -593,7 +593,7 @@ export default function TutoringCourses() {
 //               data-scroll-class="is-inview"
 //               data-scroll-repeat
 //               style={{
-//                 animationDelay: "0.3s",
+//                 "--reveal-delay": "0.2s",
 //                 fontSize: isMobile ? "1.5rem" : "2.5rem",
 //                 lineHeight: "1.1",
 //                 textTransform: "uppercase",

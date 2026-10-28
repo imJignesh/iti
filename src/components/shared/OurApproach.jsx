@@ -23,14 +23,14 @@ export default function OurApproach({ config = {} }) {
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s" }}
+      style={{ "--reveal-delay": "0.1s" }}
     >
       <div
         className="container fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: "1140px", animationDelay: "0.15s" }}
+        style={{ maxWidth: "1140px", "--reveal-delay": "0.15s" }}
       >
         <div className="curriculumSubSection">
           <h2 className="SubHeading testSubheading">OUR APPROACH</h2>
@@ -40,7 +40,7 @@ export default function OurApproach({ config = {} }) {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+              style={{ "--reveal-delay": "0.2s", fontSize: "2rem" }}
             >
               {title}
               <span className="highlight"> {highlightText} </span>
@@ -54,7 +54,7 @@ export default function OurApproach({ config = {} }) {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ animationDelay: "0.3s" }}
+        style={{ "--reveal-delay": "0.2s" }}
       >
         <div className="check-box d-flex flex-md-row flex-column justify-content-around">
           {items.map((item, idx) => (

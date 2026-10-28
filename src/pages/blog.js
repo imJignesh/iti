@@ -205,7 +205,7 @@ const Blogpg = ({ headerHeight, ...props }) => {
                     data-scroll-class="is-inview"
                     data-scroll-repeat
                     style={{
-                        animationDelay: "0.3s",
+                        "--reveal-delay": "0.2s",
                     }}
                 >
                     <div className="dark-overlay"></div>

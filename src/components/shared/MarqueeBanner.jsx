@@ -10,7 +10,7 @@ const MarqueeBanner = ({ config = {} }) => {
         data-scroll-class="is-inview"
         data-scroll-repeat="true"
         className="fade-in-section bannerScroll1"
-        style={{ animationDelay: "0.4s" }}
+        style={{ "--reveal-delay": "0.2s" }}
       >
         <div className="scrollContent1">
           {/* Repeat twice for infinite effect */}

@@ -12,7 +12,7 @@ const TestStatic = ({ active = 1, setActive }) => (
           data-scroll
           data-scroll-class="is-inview"
           className="fade-in-section"
-          style={{ animationDelay: "0.1s" }}
+          style={{ "--reveal-delay": "0.1s" }}
         >
           <h2 className={`SubHeading ${styles.testSubheading}`}>
             STANDARDISED TESTS
@@ -22,7 +22,7 @@ const TestStatic = ({ active = 1, setActive }) => (
           data-scroll
           data-scroll-class="is-inview"
           className={`fade-in-section ${styles.testTitle}`}
-          style={{ animationDelay: "0.2s" }}
+          style={{ "--reveal-delay": "0.2s" }}
         >
           Power Your Academic Goals With Expert Prep{" "}
           <span className="highlight">Support</span>
@@ -31,7 +31,7 @@ const TestStatic = ({ active = 1, setActive }) => (
           className="fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
-          style={{ animationDelay: "0.4s" }}
+          style={{ "--reveal-delay": "0.2s" }}
         >
           <p>
             Whether you're aiming for top scores or a strong foundation,

@@ -11,7 +11,7 @@ const UniversityLogosCard = ({ logos }) => {
         style={{
           maxWidth: "90vw",
           margin: "0 auto",
-          animationDelay: "0.3s",
+          "--reveal-delay": "0.2s",
         }}
       >
         <div className="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 gap-4 gap-md-0">
@@ -22,7 +22,7 @@ const UniversityLogosCard = ({ logos }) => {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
-              style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+              style={{ "--reveal-delay": `${0.2 + index * 0.1}s` }}
             >
               <img
                 src={logo.src}

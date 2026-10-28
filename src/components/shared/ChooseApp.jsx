@@ -140,7 +140,7 @@ export default function ChooseApp({ config }) {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: '0.1s' }}
+              style={{ "--reveal-delay": '0.1s' }}
             >
               <h2 className="SubHeading">{heading}</h2>
             </div>
@@ -149,14 +149,14 @@ export default function ChooseApp({ config }) {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: '0.25s' }}
+              style={{ "--reveal-delay": '0.25s' }}
             >
               <h3
                 data-scroll
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
-                style={{ animationDelay: '0.2s' }}
+                style={{ "--reveal-delay": '0.2s' }}
               >
                 {subtitlePrefix}
                 <span className="highlight"> {subtitleHighlight} </span>{subtitleSuffix}

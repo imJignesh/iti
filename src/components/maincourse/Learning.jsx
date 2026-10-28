@@ -115,7 +115,7 @@ const Learning = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               <h2 className="SubHeading testSubheading">HOW ARE WE DIFFERENT?
               </h2>
@@ -125,7 +125,7 @@ const Learning = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+              style={{ "--reveal-delay": "0.2s", fontSize: "2rem" }}
             >
               Here's How Our Approach Makes <span className="highlight"> All The </span> Difference
             </h3>
@@ -134,7 +134,7 @@ const Learning = () => {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            style={{ animationDelay: "0.3s" }}>
+            style={{ "--reveal-delay": "0.2s" }}>
             We blend expertise, structure, & care to help students thrive academically & personally, ensuring every learner gets the clarity & support they need.
           </p>
         </div>
@@ -222,7 +222,7 @@ const Learning = () => {
                 data-scroll-class="is-inview"
                 data-scroll-repeat
                 style={{
-                  animationDelay: "0.3s",
+                  "--reveal-delay": "0.2s",
                   fontSize: isMobile ? "1.5rem" : "2rem",
                   lineHeight: "1.1",
                   textTransform: "uppercase",

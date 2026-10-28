@@ -45,20 +45,20 @@ export default function SubjectCard({ config = {} }) {
       data-scroll-class="is-inview"
       data-scroll-repeat="true"
       className="fade-in-section subjects-card1-section"
-      style={{ animationDelay: "0.2s" }}
+      style={{ "--reveal-delay": "0.2s" }}
     >
       <div className="text-center mb-md-5 mb-4 fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ animationDelay: "0.2s" }}>
+        style={{ "--reveal-delay": "0.2s" }}>
         <div className="testHeadings">
           <div
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
             className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
+            style={{ "--reveal-delay": "0.1s" }}
           >
             <h2 className="SubHeading testSubheading">{subHeading}
             </h2>
@@ -70,7 +70,7 @@ export default function SubjectCard({ config = {} }) {
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s", fontSize: "2rem", padding: isMobile ? "0 10px" : "0" }}
+                style={{ "--reveal-delay": "0.2s", fontSize: "2rem", padding: isMobile ? "0 10px" : "0" }}
               >
                 In-Depth Tutoring That Makes Every
                 {isMobile ? " " : <br />}
@@ -82,7 +82,7 @@ export default function SubjectCard({ config = {} }) {
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                style={{ "--reveal-delay": "0.2s", fontSize: "2rem" }}
               >
                 {titleBefore}
                 {isMobile ? " " : <br />}
@@ -95,7 +95,7 @@ export default function SubjectCard({ config = {} }) {
                 data-scroll-class="is-inview"
                 data-scroll-repeat="true"
                 className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                style={{ "--reveal-delay": "0.2s", fontSize: "2rem" }}
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             )
@@ -105,7 +105,7 @@ export default function SubjectCard({ config = {} }) {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               {titleBefore}
               {isMobile ? " " : <br />}
@@ -118,7 +118,7 @@ export default function SubjectCard({ config = {} }) {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s" }}
+              style={{ "--reveal-delay": "0.2s" }}
               dangerouslySetInnerHTML={{ __html: title }}
             />
           )}
@@ -131,7 +131,7 @@ export default function SubjectCard({ config = {} }) {
                 background: "#233467",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
-                animationDelay: "0.45s",
+                "--reveal-delay": "0.2s",
                 fontSize: "1rem",
                 lineHeight: isMobile ? "1.3" : "1.2",
               }}>
@@ -187,7 +187,7 @@ export default function SubjectCard({ config = {} }) {
                   data-scroll-class="is-inview"
                   data-scroll-repeat="true"
                   className={`fade-in-section subjects-card1-bubble-row`}
-                  style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
+                  style={{ "--reveal-delay": `${0.4 + rowIdx * 0.12}s` }}
                 >
                   {row.map((subj) => {
                     const link = subjectLinks && subjectLinks[subj];

@@ -109,7 +109,7 @@ const AdvantagesCarousel = () => {
                         data-scroll
                         data-scroll-class="is-inview"
                         data-scroll-repeat
-                        style={{ animationDelay: "0.15s" }}
+                        style={{ "--reveal-delay": "0.15s" }}
                     >
                         {/* Gradient subtitle with lines */}
                         <div
@@ -117,7 +117,7 @@ const AdvantagesCarousel = () => {
                             data-scroll-class="is-inview"
                             data-scroll-repeat="true"
                             className="fade-in-section"
-                            style={{ animationDelay: "0.1s" }}
+                            style={{ "--reveal-delay": "0.1s" }}
                         >
                             <h2 className="SubHeading testSubheading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?
                             </h2>
@@ -129,7 +129,7 @@ const AdvantagesCarousel = () => {
                             data-scroll-class="is-inview"
                             data-scroll-repeat="true"
                             className="fade-in-section testTitle"
-                            style={{ animationDelay: "0.2s" }}
+                            style={{ "--reveal-delay": "0.2s" }}
                         >
 
                             Breaking Free From The <span className="highlight">One-Size-Fits-All </span>Model
@@ -174,7 +174,7 @@ const AdvantagesCarousel = () => {
                                 data-scroll-class="is-inview"
                                 data-scroll-repeat="true"
                                 className="fade-in-section testTitle text-uppercase"
-                                style={{ animationDelay: "0.2s", fontSize: "2rem" }}
+                                style={{ "--reveal-delay": "0.2s", fontSize: "2rem" }}
                             >
                                 Breaking Free From The<br /> <span className="highlight">One-Size-Fits-All </span>Model
 

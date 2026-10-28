@@ -25,7 +25,7 @@ const About = () => {
           data-scroll
           data-scroll-class="is-inview"
 
-          style={{ animationDelay: "0.1s" }}
+          style={{ "--reveal-delay": "0.1s" }}
           className={`${styles.aboutHeading} fade-in-section`}
 
         >
@@ -138,7 +138,7 @@ const About = () => {
                 // data-scroll-class="is-inview"
                 // 
                 className={`${styles.verticalLabel} `}
-                style={{ animationDelay: "0.8s" }}
+                style={{ "--reveal-delay": "0.2s" }}
               >
                 <span>4.9</span> RATED ON GOOGLE
               </div>
@@ -152,7 +152,7 @@ const About = () => {
               data-scroll-class="is-inview"
 
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               {/*  Apply local module class. Global class used as string */}
               <div className={styles.aboutHeadingRow}>
@@ -165,7 +165,7 @@ const About = () => {
               data-scroll-class="is-inview"
 
               className={`fade-in-section ${styles.aboutTitle}`}
-              style={{ animationDelay: "0.2s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               EXAM-READY SUPPORT WITH TRUSTED CURRICULA{" "}
               {/* Global class used as string */}
@@ -177,7 +177,7 @@ const About = () => {
               data-scroll-class="is-inview"
 
               className={`fade-in-section ${styles.aboutDesc}`}
-              style={{ animationDelay: "0.3s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               At Ignite Training Institute, every student can thrive with the right guidance & support. Our experienced trainers & tailored learning methods help unlock true potential, inside & outside the classroom.
             </p>
@@ -187,7 +187,7 @@ const About = () => {
               data-scroll-class="is-inview"
 
               className="fade-in-section w-100"
-              style={{ animationDelay: "0.4s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               {/*  Apply local module class */}
               <div className={styles.aboutStatsRow}>
@@ -219,7 +219,7 @@ const About = () => {
               data-scroll-class="is-inview"
 
               className={`fade-in-section ${styles.aboutDesc} ${styles.mobilePaddingTop}`}
-              style={{ animationDelay: "0.3s" }}
+              style={{ "--reveal-delay": "0.2s" }}
             >
               <a href="/join-free-demo-class/" className="nodecoration mobile-mt-2">
                 {/* Global classes used as strings */}

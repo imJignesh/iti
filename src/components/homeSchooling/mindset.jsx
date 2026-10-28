@@ -71,7 +71,7 @@ export default function HomeschoolingMindset() {
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
           className="fade-in-section"
-          style={{ animationDelay: "0.1s" }}
+          style={{ "--reveal-delay": "0.1s" }}
         >
           <h2 className="SubHeading testSubheading">MINDSET FOR PURSUING PRIVATE SCHOOLING
           </h2>
@@ -81,7 +81,7 @@ export default function HomeschoolingMindset() {
           data-scroll-class="is-inview"
           data-scroll-repeat="true"
           className="fade-in-section testTitle"
-          style={{ animationDelay: "0.2s", fontSize: '2rem' }}
+          style={{ "--reveal-delay": "0.2s", fontSize: '2rem' }}
         >
 
           When <span className="highlight">  Learning </span>Becomes A Lifestyle, Not A Limitation

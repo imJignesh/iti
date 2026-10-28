@@ -24,7 +24,7 @@ function USPItem({ number, icon, title, desc }) {
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: `${0.2 + number * 0.05}s`, padding: "0 10px" }}
+      style={{ "--reveal-delay": `${0.2 + number * 0.05}s`, padding: "0 10px" }}
     >
       <div className="d-flex align-items-start">
         <div
@@ -119,7 +119,7 @@ function OurPromise({ config = {}, titleContent }) {
       data-scroll-class="is-inview"
       data-scroll-repeat
       className="usps px-2 fade-in-section"
-      style={{ animationDelay: "0.1s" }}
+      style={{ "--reveal-delay": "0.1s" }}
     >
       <div className="container">
         {/* Header Section */}
@@ -128,7 +128,7 @@ function OurPromise({ config = {}, titleContent }) {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.15s" }}
+          style={{ "--reveal-delay": "0.15s" }}
         >
           <div className="testHeadings">
             <div
@@ -136,7 +136,7 @@ function OurPromise({ config = {}, titleContent }) {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.1s" }}
+              style={{ "--reveal-delay": "0.1s" }}
             >
               <h2 className="SubHeading testSubheading">OUR PROMISE</h2>
             </div>
@@ -145,7 +145,7 @@ function OurPromise({ config = {}, titleContent }) {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle text-uppercase"
-              style={{ animationDelay: "0.2s" }}
+              style={{ "--reveal-delay": "0.2s" }}
               dangerouslySetInnerHTML={{
                 __html: mounted && isMobileHeader ? mobileTitle : title
               }}
@@ -168,7 +168,7 @@ function OurPromise({ config = {}, titleContent }) {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.7s" }}
+          style={{ "--reveal-delay": "0.2s" }}
         >
           <a
             href="/about-us/"
@@ -195,7 +195,7 @@ function OurPromise({ config = {}, titleContent }) {
                   width: "2.5rem",
                   height: "2.5rem",
                   background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                  animationDelay: "0.75s",
+                  "--reveal-delay": "0.2s",
                   marginLeft: "2.1rem",
                 }}
               >

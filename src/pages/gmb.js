@@ -10,6 +10,7 @@ import { getReviewsData } from "@/data/reviewsData";
 import GmbInsideCentre from "@/components/gmb/GmbInsideCentre";
 import GmbFindUs from "@/components/gmb/GmbFindUs";
 import FaqSection from "@/components/shared/FaqSection";
+import GmbFormSection from "@/components/gmb/GmbFormSection";
 
 const gmbReviews = getReviewsData("homeCopy");
 
@@ -86,6 +87,9 @@ export default function GmbLandingPage() {
               faqData={gmbFaqs}
             />
           </section>
+        </LazySection>
+        <LazySection>
+          <GmbFormSection />
         </LazySection>
       </main>
 
