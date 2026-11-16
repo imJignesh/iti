@@ -34,6 +34,8 @@ const Hero = () => {
                     <div className="container">
                         <div className="row heroMain">
                             <div className="col-12 col-lg-7 col-xl-7 pe-lg-5 heroLeft">
+                                <div className="SubHeading">TUITION CENTRES IN DUBAI</div>
+
                                 <h1 className="heroTitle">
                                     Tuition Centres in Dubai for <span className="highlight">IGCSE, A-Level, IB &amp; AP</span>
                                 </h1>
