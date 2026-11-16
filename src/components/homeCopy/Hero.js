@@ -34,22 +34,15 @@ const Hero = () => {
                     <div className="container">
                         <div className="row heroMain">
                             <div className="col-12 col-lg-7 col-xl-7 pe-lg-5 heroLeft">
-                                <div className="heroMainHeading">
-                                    <h1 className="SubHeading">BEST TUTORS IN UAE</h1>
-                                </div>
-
-                                <h2 className="heroTitle">
-                                    Empower Your Academic Goals With <span className="highlight">Ignite's</span> Tutors
-                                </h2>
+                                <h1 className="heroTitle">
+                                    Tuition Centres in Dubai for <span className="highlight">IGCSE, A-Level, IB &amp; AP</span>
+                                </h1>
 
                                 <div className="heroParagraph">
                                     <h3>Improve Your Grades Today!</h3>
                                     <b>
-                                        We support students in progressing across IBDP, IB MYP, IGCSE, A-Levels, AP, &amp; more through our curriculum-specific approach &amp; expert tutors in Dubai, guiding them toward a stronger understanding &amp; lasting growth.
+                                        Whether your child studies IGCSE, A-Level, IBDP, IB MYP or AP, our tuition centre in Dubai gives them the right help at the right time. Our tutors explain every topic clearly, so your child feels confident and exam-ready.
                                     </b>
-                                    <strong>
-                                        Ignite's experienced tutors in Dubai help students thrive in IBDP, IB MYP, IGCSE, A-Levels, AP, &amp; more with personalized support &amp; structured programs.
-                                    </strong>
                                 </div>
                             </div>
 

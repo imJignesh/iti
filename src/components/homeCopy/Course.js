@@ -69,7 +69,7 @@ const Course = () => {
                         style={{ "--reveal-delay": "0.1s" }}
                     >
                         {/* Global Class used as string */}
-                        <h2 className="SubHeading">TUTORING PROGRAMS</h2>
+                        <div className="SubHeading">TUTORING PROGRAMS</div>
                     </div>
                     <div
                         data-scroll
@@ -79,9 +79,9 @@ const Course = () => {
                         style={{ "--reveal-delay": "0.2s" }}
                     >
                         {/* Apply local module class. Global class used as string */}
-                        <h3 className={styles.courseTitle}>
-                            Become Exam-Ready With Targeted Prep <span className="highlight">Courses</span>
-                        </h3>
+                        <h2 className={styles.courseTitle}>
+                            Exam Preparation Centre in Dubai for Every <span className="highlight">Curriculum</span>
+                        </h2>
                     </div>
                     <div
                         data-scroll
@@ -92,7 +92,7 @@ const Course = () => {
                     >
                         {/* Global element, styles applied via :global(p) in module */}
                         <p>
-                            Whether you're aiming for top scores or a strong foundation, Ignite’s courses give you the edge to succeed.
+                            Aiming for top scores or a stronger base? Ignite’s courses help you get there with expert tutors in Dubai.
                         </p>
                     </div>
                 </div>

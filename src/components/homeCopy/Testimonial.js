@@ -4,5 +4,5 @@ import { getReviewsData } from "@/data/reviewsData";
 const testimonialData = getReviewsData("homeCopy");
 
 export default function Testimonial() {
-  return <ReviewsSection testimonials={testimonialData} />;
+  return <ReviewsSection testimonials={testimonialData} title="What Parents and Students Say About Us" />;
 }

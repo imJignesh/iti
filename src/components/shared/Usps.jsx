@@ -394,7 +394,7 @@ export default function Usps({ config }) {
 
                 {config.description && (
                   <p
-                    className="usp-desc fade-in-section d-none d-lg-block"
+                    className={`usp-desc fade-in-section${config.showDescriptionOnMobile ? "" : " d-none d-lg-block"}`}
                     data-scroll
                     data-scroll-class="is-inview"
                     style={{ "--reveal-delay": "0.2s" }}

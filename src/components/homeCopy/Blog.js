@@ -4,7 +4,7 @@ import SharedBlog from "../SharedBlog";
 const Blog = ({ posts = [] }) => {
     return (
         <SharedBlog
-            title="Explore Expert Insights, Study Tips, & Success Stories"
+            title="Study Tips, Exam Advice & Success Stories"
             posts={posts}
         />
     );

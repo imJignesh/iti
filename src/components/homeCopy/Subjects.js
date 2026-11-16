@@ -35,22 +35,22 @@ const mobileSubjectRows = [
     { name: "French", link: "/french-tutor-in-dubai/" },
   ],
   [
+    { name: "Spanish", link: "/spanish-tutor-in-dubai/" },
     { name: "Computer Science", link: "/computer-science-tutor-in-dubai/" },
-    { name: "Maths", link: "/maths-tutor-in-dubai/" },
   ],
   [
     { name: "Economics", link: "/economics-tutor-in-dubai/" },
-    { name: "Accounting", link: "/accounting-tutor-in-dubai/" },
+    { name: "Biology", link: "/biology-tutor-in-dubai/" },
   ],
   [
     { name: "Chemistry", link: "/chemistry-tutor-in-dubai/" },
     { name: "Physics", link: "/physics-tutor-in-dubai/" },
-    { name: "Business Studies", link: "/business-studies-tutor-in-dubai/" },
-    { name: "Spanish", link: "/spanish-tutor-in-dubai/" },
+    { name: "Maths", link: "/maths-tutor-in-dubai/" },
+    { name: "Accounting", link: "/accounting-tutor-in-dubai/" },
   ],
   [
+    { name: "Business Studies", link: "/business-studies-tutor-in-dubai/" },
     { name: "Psychology", link: "/psychology-tutor-in-dubai/" },
-    { name: "Biology", link: "/biology-tutor-in-dubai/" },
   ],
 ];
 
@@ -121,8 +121,7 @@ export default function Subjects({ }) {
               className={`fade-in-section ${styles.subjectTitle}`}
               style={{ "--reveal-delay": "0.2s" }}
             >
-              Expert Guidance For Every Subject In Every{" "}
-              <span className={styles.subjectHighlight}>Way</span>
+              Expert Help for Every <span className={styles.subjectHighlight}>Subject</span>
             </h3>
             <p
               data-scroll
@@ -131,7 +130,7 @@ export default function Subjects({ }) {
               className={`fade-in-section ${styles.subjectDesc}`}
               style={{ "--reveal-delay": "0.2s" }}
             >
-              We help students strengthen subject knowledge, choose the right curriculum path, & build the academic confidence needed to excel.
+              We help students build strong subject knowledge, pick the right path and feel more confident. Choose from these subjects:
             </p>
           </div>
           <div className={`col-8 ${styles.subjectRight}`}>

@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function Trainers({ trainers }) {
+export default function Trainers({ trainers, title, subHeading = "OUR TUTORS" }) {
   const [showAll, setShowAll] = useState(false);
   const trainersGridRef = useRef(null);
   const navPrevRef = useRef(null);
@@ -25,7 +25,7 @@ export default function Trainers({ trainers }) {
     }
   };
 
-  const currentTitle = (
+  const currentTitle = title || (
     <span className="trainersTitleInner">
       <span className="trainersTitleDesktop">
         The Best <span className="trainersHighlight">Trainers</span> For Your<br />Success Journey
@@ -536,7 +536,7 @@ export default function Trainers({ trainers }) {
         <div className="container">
           <div>
             <h2 className="SubHeading trainersSubheading fade-in-section" data-scroll data-scroll-class="is-inview" style={{ "--reveal-delay": "0.1s" }}>
-              OUR TUTORS
+              {subHeading}
             </h2>
           </div>
 

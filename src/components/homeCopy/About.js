@@ -29,7 +29,7 @@ const About = () => {
           className={`${styles.aboutHeading} fade-in-section`}
 
         >
-          <h2 className="SubHeading">ABOUT IGNITE</h2>
+          <div className="SubHeading">ABOUT IGNITE TRAINING INSTITUTE</div>
         </div>
         <div className={`row ${styles.aboutSectionInner}`}>
           {/* Global Bootstrap class used as string, local class used with styles */}
@@ -116,7 +116,7 @@ const About = () => {
                 {/*  Apply local module classes */}
                 <div className={styles.statBig}>10 YEARS</div>
                 <div className={styles.statSmall}>
-                  OF RICH TUTORING EXPERIENCE
+                  OF TUTORING EXPERIENCE
                 </div>
               </div>
               <div
@@ -129,7 +129,7 @@ const About = () => {
                 {/*  Apply local module classes */}
                 <div className={styles.statBig}>1000+</div>
                 <div className={styles.statSmall}>
-                  RESOURCES THAT HELP YOU JOIN THE TOP 1%
+                  RESOURCES TO HELP YOU AIM FOR THE TOP 1%
                 </div>
               </div>
               {/*  Apply local module class */}
@@ -140,7 +140,7 @@ const About = () => {
                 className={`${styles.verticalLabel} `}
                 style={{ "--reveal-delay": "0.2s" }}
               >
-                <span>4.9</span> RATED ON GOOGLE
+                <span>4.9</span> RATING ON GOOGLE
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ const About = () => {
             >
               {/*  Apply local module class. Global class used as string */}
               <div className={styles.aboutHeadingRow}>
-                <span className="SubHeading" >ABOUT IGNITE</span>
+                <span className="SubHeading" >ABOUT IGNITE TRAINING INSTITUTE</span>
               </div>
             </div>
 
@@ -167,9 +167,7 @@ const About = () => {
               className={`fade-in-section ${styles.aboutTitle}`}
               style={{ "--reveal-delay": "0.2s" }}
             >
-              EXAM-READY SUPPORT WITH TRUSTED CURRICULA{" "}
-              {/* Global class used as string */}
-              <span className="aboutHighlight">EXPERTS</span>
+              A Trusted Tutoring Centre in Dubai for Exam <span className="aboutHighlight">Success</span>
             </h3>
 
             <p
@@ -179,7 +177,7 @@ const About = () => {
               className={`fade-in-section ${styles.aboutDesc}`}
               style={{ "--reveal-delay": "0.2s" }}
             >
-              At Ignite Training Institute, every student can thrive with the right guidance & support. Our experienced trainers & tailored learning methods help unlock true potential, inside & outside the classroom.
+              At Ignite, we believe every student can do well with the right help. For 10 years, we have run one of the trusted tutoring centres in Dubai, helping students understand their subjects and feel confident in exams. Our tutors use simple, clear teaching methods that bring out each student’s best, both in class and at home. If you are comparing the best coaching institute in Dubai for your child, we suggest you start with a free demo class and judge the teaching for yourself.
             </p>
 
             <div
@@ -196,7 +194,7 @@ const About = () => {
                   {/*  Apply local module classes */}
                   <div className={styles.aboutStatBig}>2300+</div>
                   <div className={styles.aboutStatLabel}>
-                    TRULY HAPPY STUDENTS FROM UAE
+                    HAPPY STUDENTS FROM THE UAE
                   </div>
                 </div>
                 {/*  Apply local module class */}

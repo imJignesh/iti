@@ -77,7 +77,7 @@ function ReviewTextScroller({ text, name }) {
   );
 }
 
-export default function ReviewsSection({ testimonials = [] }) {
+export default function ReviewsSection({ testimonials = [], title = "" }) {
   return (
     <>
       <section className={styles.testimonialSection}>
@@ -127,7 +127,7 @@ export default function ReviewsSection({ testimonials = [] }) {
             className={`fade-in-section ${styles.testimonialTitle}`}
             style={{ "--reveal-delay": "0.2s" }}
           >
-            IGNITE TRAINING INSTITUTE - TUTORS IN DUBAI
+            {title || "IGNITE TRAINING INSTITUTE - TUTORS IN DUBAI"}
           </h3>
 
           <p
