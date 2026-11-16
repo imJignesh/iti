@@ -150,8 +150,8 @@ const mypSchema = [
     "logo": "https://ignitetraininginstitute.com/images/logo.webp",
     "description": "Ignite Training Institute is a leading tutoring centre in Dubai, UAE offering expert IB, IGCSE, A-Level, AP, ACT, and Homeschooling support for students.",
     "foundingDate": "2015",
-    "telephone": "+971568357374",
-    "email": "hello@ignitetraininginstitute.com",
+    "telephone": "+971588589958",
+    "email": "connect@ignitetraininginstitute.com",
     "address": [
       {
         "@type": "PostalAddress",
@@ -179,17 +179,17 @@ const mypSchema = [
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+971568357374",
+        "telephone": "+971588589958",
         "contactType": "customer service",
-        "email": "hello@ignitetraininginstitute.com",
+        "email": "connect@ignitetraininginstitute.com",
         "areaServed": "AE",
         "availableLanguage": ["English", "Arabic"]
       },
       {
         "@type": "ContactPoint",
-        "telephone": "+971568357374",
+        "telephone": "+971588589958",
         "contactType": "sales",
-        "url": "https://wa.me/+971568357374",
+        "url": "https://wa.me/+971588589958",
         "contactOption": "TollFree",
         "availableLanguage": "English"
       }

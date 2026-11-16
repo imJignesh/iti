@@ -60,11 +60,11 @@ const footerColumns = [
 
 export default function Footer() {
   const router = useRouter();
-  const copyPages = ["/courses/ibdp-tutors-in-dubai-copy", "/british-curriculum-tutors-in-dubai-copy", "/courses/myp-tutors-in-dubai-copy", "/courses/igcse-tutors-in-dubai-copy", "/courses/a-level-tutors-in-dubai-copy", "/join-free-demo-class-copy"];
-  const isCopyPage = copyPages.includes(router.pathname);
-  const phoneNumberObj = { href: isCopyPage ? "tel:+971588589958" : "tel:+971568357374", display: isCopyPage ? "+971 58 858 9958" : "+971 56 835 7374" };
-  const emailObj = { href: isCopyPage ? "mailto:connect@ignitetraininginstitute.com" : "mailto:hello@ignitetraininginstitute.com", display: isCopyPage ? "connect@ignitetraininginstitute.com" : "hello@ignitetraininginstitute.com" };
-  const whatsappNumber = isCopyPage ? "971588589958" : "971568357374";
+  const legacyContactCopyPages = ["/ib-curriculum-tutors-in-dubai-copy", "/thank-you-organic-copy"];
+  const usesLegacyCopyContact = legacyContactCopyPages.includes(router.pathname);
+  const phoneNumberObj = { href: usesLegacyCopyContact ? "tel:+971568357374" : "tel:+971588589958", display: usesLegacyCopyContact ? "+971 56 835 7374" : "+971 58 858 9958" };
+  const emailObj = { href: usesLegacyCopyContact ? "mailto:hello@ignitetraininginstitute.com" : "mailto:connect@ignitetraininginstitute.com", display: usesLegacyCopyContact ? "hello@ignitetraininginstitute.com" : "connect@ignitetraininginstitute.com" };
+  const whatsappNumber = usesLegacyCopyContact ? "971568357374" : "971588589958";
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);

@@ -380,14 +380,14 @@ const Contact = ({ headerHeight }) => {
                                 <img src="/images/email.webp" alt="contact ignite training institute" width={117} height={117} />
                                 <h3>EMAIL US</h3>
                                 <p>Email us now for expert tutoring and tailored growth solutions.</p>
-                                <a href="mailto:hello@ignitetraininginstitute.com">hello@ignitetraininginstitute.com</a>
+                                <a href="mailto:connect@ignitetraininginstitute.com">connect@ignitetraininginstitute.com</a>
                             </div>
 
                             <div className="contact-card green">
                                 <img src="/images/call.webp" alt="contact ignite training institute" width={117} height={117} />
                                 <h3>CALL US</h3>
                                 <p>Call us today for personalised tutoring and transformative growth.</p>
-                                <a href="tel:+971568357374">+971 56835 7374</a>
+                                <a href="tel:+971588589958">+971 58 858 9958</a>
                             </div>
                         </div>
 

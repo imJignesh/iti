@@ -33,7 +33,7 @@ const gmbFaqs = [
   },
   {
     question: "How do I book a demo class?",
-    answer: "Use the form below, message us on WhatsApp at +971 56 835 7374, or call the centre.",
+    answer: "Use the form below, message us on WhatsApp at +971 58 858 9958, or call the centre.",
   },
   {
     question: "How much do private tutors in JLT charge?",

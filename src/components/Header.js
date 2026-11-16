@@ -11,16 +11,12 @@ const Header = ({ setHeaderHeight }) => {
     const currentPath = router.pathname;
     const headerRef = useRef(null);
 
-    const copyPages = [
-        '/courses/ibdp-tutors-in-dubai-copy',
-        '/british-curriculum-tutors-in-dubai-copy',
-        '/courses/myp-tutors-in-dubai-copy',
-        '/courses/igcse-tutors-in-dubai-copy',
-        '/courses/a-level-tutors-in-dubai-copy',
-        '/join-free-demo-class-copy'
+    const legacyContactCopyPages = [
+        '/ib-curriculum-tutors-in-dubai-copy',
+        '/thank-you-organic-copy',
     ];
-    const isCopyPage = copyPages.includes(currentPath);
-    const phoneNumber = isCopyPage ? '+971588589958' : '+971568357374';
+    const usesLegacyCopyContact = legacyContactCopyPages.includes(currentPath);
+    const phoneNumber = usesLegacyCopyContact ? '+971568357374' : '+971588589958';
 
     useEffect(() => {
         const handleResize = () => {

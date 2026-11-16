@@ -18,7 +18,7 @@ const ThankYouGmb = ({ headerHeight }) => {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+971561890917",
+      telephone: "+971588589958",
       contactType: "customer service",
       areaServed: "AE",
       availableLanguage: ["English", "Arabic"],

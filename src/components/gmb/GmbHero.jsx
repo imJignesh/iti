@@ -57,7 +57,7 @@ export default function GmbHero() {
             </a>
             <a
               className="action actionWhatsApp"
-              href="https://wa.me/971561890917"
+              href="https://wa.me/971588589958"
               target="_blank"
               rel="noreferrer"
             >
@@ -126,7 +126,7 @@ export default function GmbHero() {
               </span>
               <div>
                 <dt>Phone</dt>
-                <dd><a href="tel:+971561890917">+971 56 189 0917</a></dd>
+                <dd><a href="tel:+971588589958">+971 58 858 9958</a></dd>
               </div>
             </div>
             <div className="detailRow">
@@ -139,8 +139,8 @@ export default function GmbHero() {
               <div>
                 <dt>Email</dt>
                 <dd>
-                  <a href="mailto:hello@ignitetraininginstitute.com">
-                    hello@ignitetraininginstitute.com
+                  <a href="mailto:connect@ignitetraininginstitute.com">
+                    connect@ignitetraininginstitute.com
                   </a>
                 </dd>
               </div>

@@ -65,16 +65,12 @@ export default function MyApp({ Component, pageProps }) {
     const thirdPartyScriptStrategy = isPsiTestPage ? "lazyOnload" : "afterInteractive";
 
     const mobileBreakpoint = 2600;
-    const copyPages = [
-        '/courses/ibdp-tutors-in-dubai-copy',
-        '/british-curriculum-tutors-in-dubai-copy',
-        '/courses/myp-tutors-in-dubai-copy',
-        '/courses/igcse-tutors-in-dubai-copy',
-        '/courses/a-level-tutors-in-dubai-copy',
-        '/join-free-demo-class-copy'
+    const legacyContactCopyPages = [
+        '/ib-curriculum-tutors-in-dubai-copy',
+        '/thank-you-organic-copy',
     ];
-    const isCopyPage = copyPages.includes(router.pathname);
-    const whatsappNumber = isCopyPage ? '+971588589958' : '+971568357374';
+    const usesLegacyCopyContact = legacyContactCopyPages.includes(router.pathname);
+    const whatsappNumber = usesLegacyCopyContact ? '+971568357374' : '+971588589958';
 
     // Set Locomotive once on client mount (avoids hydration mismatch)
     useEffect(() => {
