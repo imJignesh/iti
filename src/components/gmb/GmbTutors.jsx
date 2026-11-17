@@ -25,5 +25,11 @@ const trainersData = [
 ];
 
 export default function GmbTutors() {
-  return <Trainers trainers={trainersData} />;
+  return (
+    <Trainers
+      trainers={trainersData}
+      subHeading="OUR TUTORS"
+      title={<>Experienced <span className="trainersHighlight">Tutors</span> for Your Success Journey</>}
+    />
+  );
 }

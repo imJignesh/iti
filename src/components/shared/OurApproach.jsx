@@ -15,7 +15,7 @@ export default function OurApproach({ config = {} }) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const { title = "", highlightText = "", items = [] } = config;
+  const { title = "", highlightText = "", description = "", items = [] } = config;
 
   return (
     <div
@@ -45,6 +45,7 @@ export default function OurApproach({ config = {} }) {
               {title}
               <span className="highlight"> {highlightText} </span>
             </h3>
+            {description && <p className="approachIntro">{description}</p>}
           </div>
         </div>
       </div>
@@ -79,6 +80,14 @@ export default function OurApproach({ config = {} }) {
 
         .aboutignite-card {
           text-align: center;
+        }
+
+        .approachIntro {
+          max-width: 760px;
+          margin: 18px auto 0;
+          color: #475578;
+          font-size: 1rem;
+          line-height: 1.65;
         }
 
         .my-text {

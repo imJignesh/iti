@@ -11,79 +11,140 @@ import GmbInsideCentre from "@/components/gmb/GmbInsideCentre";
 import GmbFindUs from "@/components/gmb/GmbFindUs";
 import FaqSection from "@/components/shared/FaqSection";
 import GmbFormSection from "@/components/gmb/GmbFormSection";
+import JsonLd from "@/components/JsonLd";
 
 const gmbReviews = getReviewsData("homeCopy");
 
 const gmbFaqs = [
   {
-    question: "Where is the Ignite centre in JLT?",
-    answer: "We are in Tiffany Tower, Level 11, Cluster W, Jumeirah Lakes Towers, Dubai.",
+    question: "Where is your tuition centre in Sheikh Zayed Road, Dubai?",
+    answer: "Our tuition centre is at Al Moosa Tower 1, Office 1503, on Sheikh Zayed Road. It is a short walk from Emirates Towers Metro and close to DIFC, Trade Centre and Business Bay. See the map on this page for directions.",
   },
   {
-    question: "What are your opening hours?",
-    answer: "The JLT centre is open every day from 9 am to 9 pm, according to our Google profile.",
+    question: "Is there a tuition centre near Emirates Towers?",
+    answer: "Yes. We offer tuition near Emirates Towers, with lessons in person at Al Moosa Tower or online. Students from DIFC, Trade Centre and Business Bay can reach us easily by Metro or car.",
   },
   {
-    question: "Do you offer one-to-one and group classes?",
-    answer: "Yes. You can choose one-to-one tutoring or a small group, at the centre or online.",
+    question: "Which curricula do your tutors in Sheikh Zayed Road, Dubai teach?",
+    answer: "Our tutors in Sheikh Zayed Road, Dubai teach IGCSE, A Level, IBDP, IB MYP, AP and more. Choose your curriculum and subject to see the tutors, topics and exam preparation for each.",
   },
   {
-    question: "Which curricula do you cover?",
-    answer: "IB Diploma and MYP, IGCSE and GCSE, A-Levels, AP, ACT and homeschooling support.",
+    question: "How much does tutoring cost in Dubai?",
+    answer: "Fees depend on the curriculum, subject, year group and whether lessons are 1:1 or in a small group. Book a free demo class and we will share a clear fee for your child’s needs, with no obligation.",
   },
   {
-    question: "How do I book a demo class?",
-    answer: "Use the form below, message us on WhatsApp at +971 58 858 9958, or call the centre.",
+    question: "Do you offer a free demo class?",
+    answer: "Yes. Every student can start with a free demo class, in person at our tutoring centre in Al Moosa Tower or online. Tell us the curriculum, subject and year, and we will confirm a slot.",
   },
   {
-    question: "How much do private tutors in JLT charge?",
-    answer: "Fees depend on the subject, level and format. Send us your requirement and we will quote you.",
+    question: "Can my child study online instead of coming to the centre?",
+    answer: "Yes. All subjects are available online as well as at our local tutoring centre, with the same tutors and the same progress tracking.",
+  },
+  {
+    question: "How do I find a good tuition centre in Dubai?",
+    answer: "Look for tutors who teach your exact board and subject, a level check to find gaps, small groups or 1:1 teaching, and regular progress updates. Our tuition centre on Sheikh Zayed Road offers all of these, and we are rated 4.9 from 96 Google reviews.",
+  },
+  {
+    question: "How do you track my child’s progress?",
+    answer: "Parents receive regular feedback, and we compare mock results against the target grade set after the level check. This shows clearly where your child is improving and what to work on next.",
   },
 ];
+
+const pageUrl = "https://ignitetraininginstitute.com/gmb";
+
+const gmbSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: "Tuition Centre in Sheikh Zayed Road Dubai | Ignite",
+      description: "Ignite Training Institute is a tuition centre in Sheikh Zayed Road, Dubai, at Al Moosa Tower 1, Office 1503, near Emirates Towers Metro. Our tutors in Sheikh Zayed Road, Dubai teach IB Diploma, IB MYP, IGCSE, A Level, AP and ACT, and support homeschooled students and private candidates, one-to-one or in small groups, in person at the centre or online. Students from DIFC, Trade Centre and Business Bay can find tuition near Emirates Towers by Metro or car. Every student starts with a free demo class and a level check, then follows a clear study plan with regular feedback and mock results compared against a target grade.",
+      isPartOf: { "@id": "https://ignitetraininginstitute.com/#website" },
+      about: { "@id": "https://ignitetraininginstitute.com/#localbusiness-szr" },
+      breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
+      inLanguage: "en",
+      mainEntity: { "@id": "https://ignitetraininginstitute.com/#localbusiness-szr" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://ignitetraininginstitute.com/" },
+        { "@type": "ListItem", position: 2, name: "Tuition Centre in Sheikh Zayed Road", item: pageUrl },
+      ],
+    },
+    {
+      "@type": "Service",
+      "@id": `${pageUrl}#service`,
+      name: "Tuition and tutoring in Sheikh Zayed Road, Dubai",
+      description: "Our tutoring centre in Al Moosa Tower offers tutoring in Sheikh Zayed Road, Dubai for students following IB, IGCSE, A Level, AP and ACT courses. Lessons run one-to-one or in small groups, in person at Al Moosa Tower 1, Office 1503, close to Emirates Towers Metro, or online with the same tutors and the same progress tracking. Parents book a free demo class, tell us the curriculum, subject and year, and meet a tutor who teaches their exact board. A level check finds gaps and sets a realistic target grade, and regular feedback and mock results show how the student is improving.",
+      url: pageUrl,
+      serviceType: "Tutoring",
+      provider: { "@id": "https://ignitetraininginstitute.com/#localbusiness-szr" },
+      areaServed: [
+        { "@type": "City", name: "Dubai" },
+        { "@type": "Place", name: "Sheikh Zayed Road" },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      mainEntity: gmbFaqs.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
+  ],
+};
 
 export default function GmbLandingPage() {
   return (
     <>
       <Head>
-        <title>Ignite Training Institute</title>
+        <title>Tuition Centre in Sheikh Zayed Road Dubai | Ignite</title>
+        <meta name="description" content="Tuition centre in Sheikh Zayed Road, Dubai, near Emirates Towers Metro. IB, IGCSE, A-Level and AP tutors, online or in person. Book a free demo class." />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
+      <JsonLd schema={gmbSchema} />
 
       <main className="gmbLandingPage innerpage page-content-padding" aria-label="GMB landing page">
         <GmbHero />
         <GmbWhatWeTeach />
         <GmbHowItWorks />
         <LazySection>
-          <section data-scroll-section>
+          <div data-scroll-section>
             <GmbTutors />
-          </section>
+          </div>
         </LazySection>
         <LazySection>
-          <section className="gmbResultsSection" data-scroll-section>
+          <div className="gmbResultsSection" data-scroll-section>
             <GmbResults />
-          </section>
+          </div>
         </LazySection>
         <LazySection>
-          <section className="gmbReviewsSection" data-scroll-section>
+          <div className="gmbReviewsSection" data-scroll-section>
             <ReviewsSection testimonials={gmbReviews} />
-          </section>
+          </div>
         </LazySection>
         <LazySection>
-          <section className="gmbInsideCentreSection" data-scroll-section>
+          <div className="gmbInsideCentreSection" data-scroll-section>
             <GmbInsideCentre />
-          </section>
+          </div>
         </LazySection>
         <LazySection>
-          <section className="gmbFindUsSection" data-scroll-section>
+          <div className="gmbFindUsSection" data-scroll-section>
             <GmbFindUs />
-          </section>
+          </div>
         </LazySection>
         <LazySection>
           <section className="gmbFaqSection" data-scroll-section>
             <FaqSection
               subHeading="FAQs"
-              title={'Questions about tutoring at our <highlight>JLT centre</highlight>'}
-              description="Everything families need to know about visiting the centre and starting tuition."
+              title={'Common Questions About Our Tutors in <highlight>Sheikh Zayed Road, Dubai</highlight>'}
+              description="Got questions about tuition near Emirates Towers? Read quick answers on location, fees, free demo classes and curricula before you book."
               faqData={gmbFaqs}
             />
           </section>

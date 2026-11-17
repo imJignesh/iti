@@ -1,58 +1,18 @@
-const plannerItems = [
-  {
-    period: "July – August",
-    title: "Summer Head Start",
-    description:
-      "Year 11 students bridge from IGCSE with the AS Level Summer Head Start.",
-  },
-  {
-    period: "September – October",
-    title: "Year 12 AS Classes Begin",
-    description:
-      "Join the 10-month AS group or start one-to-one tutoring in the first term.",
-  },
-  {
-    period: "After Autumn Mocks",
-    title: "Year 13 A2 Classes",
-    description:
-      "Predicted grades land. Year 13 students sharpen paper technique ahead of UCAS.",
-  },
-  {
-    period: "14 Jan / 15 Oct",
-    title: "UCAS Deadlines",
-    description:
-      "14 January for most UK universities, 15 October for Oxbridge and medicine.",
-  },
-  {
-    period: "May – June",
-    title: "Main Exam Series",
-    description:
-      "Timed mocks and paper reviews continue through to the final papers.",
-  },
-  {
-    period: "October – November",
-    title: "Resit Series",
-    description:
-      "The October/November Resit Success Programme targets a stronger grade for university offers.",
-  },
-];
+export default function YearPlanner({ config }) {
+  const { subHeading, title, description, items = [] } = config;
 
-export default function YearPlanner() {
   return (
     <div className="yearPlanner">
       <div className="container yearPlannerInner">
         <div className="yearPlannerHeader">
-          <h2 className="SubHeading testSubheading">A-Level Year Planner</h2>
+          <h2 className="SubHeading testSubheading">{subHeading}</h2>
 
-          <h3 className="plannerTitle">When To Start A-Level Tuition In Dubai</h3>
-          <p className="intro">
-            Every step of the AS and A2 calendar, and the Ignite course that fits it.
-            Dates follow the May/June and October/November exam series.
-          </p>
+          <h3 className="plannerTitle">{title}</h3>
+          <p className="intro">{description}</p>
         </div>
 
         <div className="plannerGrid">
-          {plannerItems.map((item) => (
+          {items.map((item) => (
             <article className="plannerCard" key={item.title}>
               <span className="period">{item.period}</span>
               <h4 className="cardTitle">{item.title}</h4>

@@ -6,7 +6,12 @@ import fallbackPosts from "../data/blog/top-posts.json";
  * SHARED BLOG COMPONENT
  * Self-contained: styles live inside <style jsx> — no external CSS file needed.
  */
-const SharedBlog = ({ title, posts = [] }) => {
+const SharedBlog = ({
+    title,
+    subtitle = "Dive Into Our Signature Blogs",
+    subHeading = "BLOGS",
+    posts = [],
+}) => {
     // 🔥 DATA FLOW:
     // Uses posts from Props (Home Page) OR Fallback JSON (Inner Pages)
     const [blogData] = useState(() => {
@@ -61,7 +66,7 @@ const SharedBlog = ({ title, posts = [] }) => {
                                 data-scroll-class="is-inview"
                                 style={{ "--reveal-delay": "0.1s" }}
                             >
-                                <h2 className="SubHeading">BLOGS</h2>
+                                <h2 className="SubHeading">{subHeading}</h2>
                             </div>
                             <h3
                                 data-scroll
@@ -77,7 +82,7 @@ const SharedBlog = ({ title, posts = [] }) => {
                                 className="fade-in-section blogSubtitle"
                                 style={{ "--reveal-delay": "0.2s" }}
                             >
-                                Dive Into Our Signature Blogs
+                                {subtitle}
                             </div>
                             <a href="/blog" className="nodecoration">
                                 <button

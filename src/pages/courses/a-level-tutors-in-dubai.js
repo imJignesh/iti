@@ -15,18 +15,23 @@ import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 import { faqSections } from '@/data/faqSections';
-import YearPlanner from '@/components/a-level/YearPlanner';
+import YearPlanner from '@/components/shared/YearPlanner';
 import SubjectsCard from '@/components/a-level/SubjectCard';
-import StartSteps from '@/components/a-level/StartSteps';
+import StartSteps from '@/components/shared/StartSteps';
 const OurApproach = dynamic(() => import('@/components/a-level/OurApproach'));
 const Trainers = dynamic(() => import('@/components/a-level/Trainers'));
-const AlevelGallery = dynamic(() => import('@/components/a-level/AlevelGallery'));
+const CourseGallery = dynamic(() => import('@/components/shared/CourseGallery'));
 const WhatWeOfferSection = dynamic(() => import('@/components/a-level/WhatWeOfferSection'));
 const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const ReviewsSection = dynamic(() => import('@/components/a-level/ReviewsSection'));
 import OurPromise from '@/components/shared/OurPromise';
 import { getOurPromiseData } from '@/data/ourPromiseConfig';
 import { getMarqueeData } from "@/data/marqueeConfig";
+import {
+  getCourseGalleryData,
+  getStartStepsData,
+  getYearPlannerData,
+} from "@/data/coursePageSectionsConfig";
 const UniImagesCard = dynamic(() => import('@/components/a-level/universityCrad'));
 
 const aLevelSchema = [
@@ -411,7 +416,7 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <YearPlanner />
+            <YearPlanner config={getYearPlannerData('aLevel')} />
           </section>
         </LazySection>
 
@@ -440,7 +445,7 @@ const ALEVEL = ({ headerHeight }) => {
         </LazySection>
 
         <LazySection>
-          <AlevelGallery />
+          <CourseGallery config={getCourseGalleryData('aLevel')} />
         </LazySection>
 
         {/* what we offer Start */}
@@ -475,7 +480,7 @@ const ALEVEL = ({ headerHeight }) => {
 
         <LazySection>
           <section data-scroll-section>
-            <StartSteps />
+            <StartSteps config={getStartStepsData('aLevel')} />
           </section>
         </LazySection>
 

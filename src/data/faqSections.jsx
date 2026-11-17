@@ -281,49 +281,53 @@ export const faqSections = {
 
   "ibdp": {
     "subHeading": "FAQS",
-    "title": "Everything You Need To Know About <highlight> IBDP</highlight> Tutoring",
-    "description": "Get answers on personalized IBDP study plans, exam prep, & subject support.",
+    "title": "Questions Parents and Students Ask About <highlight>IBDP Tutoring</highlight>",
+    "description": "Have questions about IB Diploma tutoring in Dubai? Here are simple answers on how our classes work, how to start, and what to expect in your first demo class.",
     "backgroundImage": "/assets/faqbg.webp",
     "faqData": [
       {
-        "question": "What Is The Focus Of IBDP Tutoring At Ignite Training Institute?",
-        "answer": "Ignite's IBDP tutoring focuses on subject mastery across HL and SL, Internal Assessment guidance, Extended Essay supervision, TOK essay support, and Paper 1, Paper 2, and Paper 3 exam technique. Programmes are calibrated for both Year 1 and Year 2 students and aligned with May and November exam sessions."
+        "question": "How much does IBDP tutoring in Dubai cost?",
+        "schemaAnswer": "The price depends on three things: Your subject and level (HL or SL); One-on-one or small group classes; How many sessions you need each week. Group classes cost less per student. Book a free demo and we’ll give you a clear quote before you start.",
+        "answer": () => <><p>The price depends on three things:</p><ul><li>Your subject and level (HL or SL)</li><li>One-on-one or small group classes</li><li>How many sessions you need each week</li></ul><p>Group classes cost less per student. Book a free demo and we’ll give you a clear quote before you start.</p></>
       },
       {
-        "question": "Do Ignite's IBDP Tutors Cover All Subjects Across HL And SL?",
-        "answer": "Yes. Ignite's IBDP tutors cover Maths AA, Maths AI, Physics, Chemistry, Biology, Economics, Business Management, Computer Science, English Language and Literature, French Ab Initio and B, Spanish, and Psychology, at both HL and SL. HL coverage includes extension topics, option topics, and Paper 3 components."
+        "question": "Why do some IB tutors in Dubai charge more than others?",
+        "answer": "Experience is the main reason. Tutors who know the IB marking well and have taught your exact subject for years usually charge more, because they can guide your IA, EE, and exam technique too. Don’t choose on price alone. Ask about their experience and try a demo first."
       },
       {
-        "question": "How Are Ignite's IBDP Tutoring Sessions Customised For Each Student?",
-        "answer": "Every new IBDP student starts with a diagnostic to map subject gaps and learning style. The tutor then builds a personalised plan around HL or SL choices, school pacing, target IB score, and university goals. The plan is reviewed every few weeks and adjusted as the student's predicted grade moves."
+        "question": "Is online IB tutoring as good as in-person classes?",
+        "schemaAnswer": "For most students, yes. Our online classes are live, so you can ask questions as you go. You also get: Mark schemes explained on screen; Recordings to watch again before exams. Prefer face to face? We also teach in person at Sheikh Zayed Road and JLT.",
+        "answer": () => <><p>For most students, yes. Our online classes are live, so you can ask questions as you go. You also get:</p><ul><li>Mark schemes explained on screen</li><li>Recordings to watch again before exams</li></ul><p>Prefer face to face? We also teach in person at Sheikh Zayed Road and JLT.</p></>
       },
       {
-        "question": "Can Students Try A Free Demo Class Before Enrolling In IBDP Tuition?",
-        "answer": "Yes. Every new IBDP student is offered a free demo class with the matched tutor before any enrolment commitment. The demo lets the student assess teaching style, ask subject-specific questions, and see how a real IBDP session runs. Parents typically use it to confirm fit before discussing a regular schedule."
+        "question": "Can I get a tutor for just one subject, like an IB maths tutor in Dubai or an IB chemistry tutor?",
+        "answer": "Yes. Pick one subject or several. We cover Maths AA and AI, Chemistry, Biology, Physics, Economics, Business, and more, at HL and SL. You’ll be matched with a tutor who has taught your exact subject."
       },
       {
-        "question": "How Does Ignite's IBDP Tutoring Support The Extended Essay, IA, And TOK?",
-        "answer": "Ignite tutors guide students through EE research question framing, supervisor meeting preparation, and final-draft polish. IA support covers topic selection and criterion-based drafting (typically Criteria A to E). For TOK, we work through prescribed essay titles, real-life-situation framing, and exhibition object selection with markscheme-aligned feedback."
+        "question": "My HL subjects feel much harder than my SL ones. Can a tutor help?",
+        "answer": "Yes, and it’s very common. We start with a short test to find your gaps. Then your tutor builds lessons around them, including HL extension topics and the longer exam papers."
       },
       {
-        "question": "Can IBDP Tutoring Help Improve Predicted Grades And Final Diploma Scores?",
-        "answer": "Yes. Predicted grades are built from school mocks and IA scores submitted to UCAS by 14 January and US applications from November 1\\. Ignite's IBDP coaching focuses Year 2 work on the highest-leverage push to lift those grades before submission, then shifts to paper technique and timed practice for final exams."
+        "question": "My predicted grades are lower than I need. Can IB Diploma tutoring in Dubai help?",
+        "answer": "It can help. Predicted grades come from your mocks and IAs, so we work on the areas where you lose marks before your school sends them in. No tutor can promise a grade, but regular practice and feedback make a real difference."
       },
       {
-        "question": "How Early Should Students Start IBDP Tutoring In Dubai?",
-        "answer": "Most students benefit from starting at the beginning of Year 1 (Grade 11\\) to build subject foundations, plan IA topics, and register the Extended Essay early. Year 2 students still gain from focused tutoring on predicted-grade improvement and paper technique, though the timeline is tighter once university applications open."
+        "question": "Can a tutor help me with my IA?",
+        "schemaAnswer": "Yes. Your tutor can help you: Choose a topic that works; Plan your research or experiment; Understand the marking criteria; Improve your drafts with feedback. The work stays yours. We guide you, we don’t write it. Starting early gives you more time to improve.",
+        "answer": () => <><p>Yes. Your tutor can help you:</p><ul><li>Choose a topic that works</li><li>Plan your research or experiment</li><li>Understand the marking criteria</li><li>Improve your drafts with feedback</li></ul><p>The work stays yours. We guide you, we don’t write it. Starting early gives you more time to improve.</p></>
       },
       {
-        "question": "Are Online IBDP Classes In Dubai Available For Year 1 And Year 2 Students?",
-        "answer": "Yes. Online IBDP classes are available across both Year 1 and Year 2, with live interactive sessions, real-time mark scheme annotation, and session recordings for review. Online suits Year 12 students particularly well because it returns 3 to 5 hours per week of commute time straight into revision during the heaviest workload year."
+        "question": "What does an IB extended essay tutor in Dubai actually do?",
+        "answer": "Your tutor helps you shape a clear research question, plan your research, and get ready for meetings with your school supervisor. They also give feedback on your drafts. They never write any part of the essay for you."
       },
       {
-        "question": "How Many IBDP Coaching Sessions Per Week Does A Student Need?",
-        "answer": "Most IBDP students benefit from 1 to 2 sessions per week per weak subject during the regular term. Closer to school mocks or May or November final exams, students often increase to 3 sessions per week or add intensive revision blocks. Ignite reviews session frequency every few weeks based on the student's pace."
+        "question": "Do you have a TOK tutor in Dubai for the essay and exhibition?",
+        "answer": "Yes. We help you understand the essay titles, choose strong real-life examples, and plan your exhibition. You’ll get feedback based on the TOK marking guide, so you know what examiners look for."
       },
       {
-        "question": "What Should Parents Look For When Hiring An IBDP Tutor In Dubai?",
-        "answer": "Look for subject and level match (Maths AA HL is different from AI SL), genuine IBDP curriculum knowledge (IA criteria, EE supervision, TOK rubric), transparent progress reporting, and a teaching style your child responds to. Ask whether the tutor has taught your child's exact subject and level. A free demo class confirms fit."
+        "question": "How can I get a 7 in an IB subject?",
+        "schemaAnswer": "There’s no shortcut, but these habits help the most: Understand the ideas, don’t just memorise; Practise past papers often; Study the mark scheme and command terms; Fix the topics where you lose marks. A good tutor helps you do all four faster.",
+        "answer": () => <><p>There’s no shortcut, but these habits help the most:</p><ul><li>Understand the ideas, don’t just memorise</li><li>Practise past papers often</li><li>Study the mark scheme and command terms</li><li>Fix the topics where you lose marks</li></ul><p>A good tutor helps you do all four faster.</p></>
       }
     ]
   },
@@ -430,147 +434,147 @@ export const faqSections = {
 
   "igcse": {
     "subHeading": "FAQS",
-    "title": "Frequently Asked Questions About<highlight> IGCSE</highlight> Tutoring Support",
-    "description": "Discover how Ignite’s expert tutors guide you toward better grades & deeper understanding.",
+    "title": "IGCSE Tutors in Dubai: Your <highlight>Questions</highlight> Answered",
+    "description": "Parents often ask us about IGCSE tuition, fees, exam boards and online and in-person classes. Here are straight answers to the most common questions.",
     "backgroundImage": "/assets/faqbg.webp",
     "faqData": [
       {
-        "question": "Which IGCSE Subjects Does Ignite Tutor For In Dubai?",
-        "answer": "Ignite covers IGCSE Maths (Core and Extended), Further Maths, Statistics, Physics, Chemistry, Biology, Computer Science and ICT, Double Award Science, Economics, Business Studies, Accounting, English Language, English Literature, French, Spanish, and Psychology. GCSE equivalents are also supported. Each subject is matched to the student's specific board across CAIE, Pearson Edexcel, or Oxford AQA."
+        "question": "How much is a GCSE tutor per hour?",
+        "answer": "It depends on the subject, your child’s level and the type of lesson. One-to-one lessons cost more than group classes. Most students in Dubai take IGCSE, but GCSE tutors are priced in the same way. Tell us the subject and we’ll give you a clear price after the free demo class."
       },
       {
-        "question": "Which Exam Boards Does Ignite Cover (Edexcel, CAIE, Oxford AQA)?",
-        "answer": "Ignite tutors across all three IGCSE exam boards: Cambridge International (CAIE), Pearson Edexcel International, and Oxford International AQA. Tutors are matched to the student's specific board for each subject, with past paper practice, mark-scheme work, and unit-wise worksheets tailored to that board's exact syllabus code and specification."
+        "question": "How much does a tutor charge in Dubai?",
+        "answer": "Prices are different from one tutor to the next. Tutors, centres and online sites all set their own rates. When you compare, check what’s included. Some fees cover mock exams and notes, and others charge extra for them."
       },
       {
-        "question": "Does Ignite Offer Both One-On-One And Small Group IGCSE Tutoring?",
-        "answer": "Yes. Bespoke One-to-One Tutoring runs year-round for students who need individualised pacing across Years 8 to 10\\. Small Group programmes (3 to 6 students) include the IGCSE Year 10 Group and the IGCSE Finals Prep Group for Year 11 students writing May/June finals, with a structured 10-month syllabus coverage."
+        "question": "Do you have an IGCSE tuition centre in Dubai?",
+        "answer": "Yes. We teach at our Sheikh Zayed Road and JLT centres. If you’re searching for IGCSE tuition near me, pick the one that’s closer to home or school. You can also learn online."
       },
       {
-        "question": "How Does Ignite Prepare Students For IGCSE Exams And Past Papers?",
-        "answer": "Sessions work through past papers across Edexcel, CAIE, and Oxford AQA based on the student's specific board. Each question is mapped to the official mark scheme, command terms are decoded, and students sit timed mock papers under exam conditions. Detailed paper review sessions follow each mock so students see exactly where marks were lost."
+        "question": "Is IGCSE online tuition as good as in-person classes?",
+        "answer": "For most students, yes. Our online lessons follow the same plan as classroom lessons. Your child can go through past papers with the tutor on screen. Some students focus better in the room, so try the free demo class and see which feels right."
       },
       {
-        "question": "Can Students Try A Free Demo Class Before Enrolling In IGCSE Tuition?",
-        "answer": "Yes. Every new student is offered a free demo class with the matched IGCSE tutor before any enrolment commitment. The demo lets the student assess teaching style, ask exam-board-specific questions, and see how a real session runs. Parents typically use it to confirm fit before discussing a regular schedule."
+        "question": "Which IGCSE subjects do your tutors teach?",
+        "answer": "We teach Maths, Further Maths, Statistics, Physics, Chemistry, Biology, Economics, Business Studies, Accounting, English, Computer Science, Psychology, French and Spanish. If you need an IGCSE science tutor, we can match your child with a tutor for each science."
       },
       {
-        "question": "When Should Students Start IGCSE Tutoring In Dubai?",
-        "answer": "Year 9 students benefit from starting at the IGCSE option-choice point. Year 10 students ideally start in September at the beginning of the two-year syllabus, the most common entry point at Ignite. Year 11 students benefit from starting after autumn mocks. Year 8 students with curriculum-switch gaps should start earlier."
+        "question": "Which exam board should my child choose?",
+        "answer": "The three main boards are Cambridge IGCSE, Pearson Edexcel International GCSE and OxfordAQA. If your child is in school, the school has usually picked already. Students studying at home can choose. Read our page on homeschooling in UAE to learn how private candidates enter exams."
       },
       {
-        "question": "Are Online IGCSE Classes Available In Dubai And Abu Dhabi?",
-        "answer": "Yes. Online IGCSE classes are available across Years 8 to 11 for students in Dubai, Abu Dhabi, Sharjah, Ajman, and the wider UAE. Sessions run live with interactive whiteboards, real-time mark-scheme annotation, and recordings for review. Year 11 students particularly benefit from online learning to save commute time during the heaviest workload year."
+        "question": "What is the difference between IGCSE and GCSE?",
+        "answer": "GCSE is the UK qualification. IGCSE is made for students around the world, and most Dubai students take it. The subjects are similar, but the exams and some topics are different. Our blog explains this in more detail in IGCSE vs GCSE."
       },
       {
-        "question": "Do Ignite's IGCSE Tutors Help With Coursework And Practical Assessments?",
-        "answer": "Yes. Tutors guide students through IGCSE Sciences practical assessments (Paper 6 for CAIE), coursework components in subjects like English and Languages, and project-based assessments. Work is structured against the official mark scheme to align with exam board criteria while building genuine subject understanding rather than surface compliance."
+        "question": "How do IGCSE grades work?",
+        "answer": "Some subjects use grades 9 to 1, where 9 is the highest. Others still use A* to G. In Cambridge IGCSE, many subjects have Core and Extended papers. Core covers less, and the top grades are only open through Extended. Ask your child’s teacher or tutor which one is right."
       },
       {
-        "question": "How Many IGCSE Coaching Sessions Per Week Does A Student Usually Need?",
-        "answer": "Most IGCSE students benefit from 1 to 2 sessions per week per weak subject during the regular term. Year 11 students often increase to 2 to 3 sessions per week closer to mocks or May/June finals, with added past paper blocks. Frequency is reviewed every few weeks based on the student's pace."
+        "question": "How many IGCSE classes does my child need each week?",
+        "answer": "Most students need one or two lessons a week for each subject they find hard. Year 11 students often move to two or three lessons a week as mocks and finals get closer. We review the plan every few weeks and change it if needed."
       },
       {
-        "question": "What Should Parents Look For When Hiring An IGCSE Tutor In Dubai?",
-        "answer": "Look for exam-board-specific knowledge (CAIE 0580 Maths is structured differently from Edexcel 4MA1), genuine subject and year-level match, transparent progress tracking against mark schemes, and a teaching style your child responds to. Ask whether the tutor has taught your child's exact board before. A free demo class confirms fit."
+        "question": "When should my child start IGCSE tuition?",
+        "answer": "Early is best. Many families start in Year 9 or at the beginning of Year 10, when the two-year course begins. Others join after the Year 11 mock exams to lift their grades. Once IGCSEs are done, the next step is A Level tutors in Dubai, or IBDP tutors in Dubai for the IB route."
       }
     ]
   },
 
   "myp": {
     "subHeading": "FAQS",
-    "title": "Common Questions About Our<highlight> Ignite</highlight> Tutoring Programs",
-    "description": "Learn how Ignite helps MYP students strengthen skills & confidence for future grades.",
+    "title": "MYP Tutors in Dubai: Your <highlight>Questions</highlight> Answered",
+    "description": "Parents often ask about MYP subjects, assessments, tutoring options and the transition to the next academic programme. Here are answers to some common questions.",
     "backgroundImage": "/assets/faqbg.webp",
     "faqData": [
       {
-        "question": "What Subjects Are Covered In IB MYP Tutoring At Ignite?",
-        "answer": "Ignite's IB MYP tutoring covers Maths Standard and Extended, Physics, Chemistry, Biology, Computer Science, Economics, Business Management, English Language and Literature, and French. Subjects are taught across all four MYP criteria for each year level, with Year 5 support extended to eAssessment preparation and Personal Project supervision."
+        "question": "What Is the Difference Between Standard and Extended MYP Mathematics?",
+        "answer": "Standard Maths covers the core topics of the course. Extended Maths adds harder content in algebra, geometry and trigonometry, and suits students who plan to take mathematics at a higher level later. Not sure which one fits your child? Our MYP mathematics tutoring in Dubai supports students studying both levels."
       },
       {
-        "question": "Is Ignite's MYP Tutoring Aligned With IB Criterion-Based Assessment?",
-        "answer": "Yes. Sessions are structured around the four MYP criteria (A, B, C, D, each scored out of 8\\) used by IB World Schools in Dubai. Tutors map student work against criterion descriptors, identify weak strands, and align ATL skill-building with what the IB rubric actually rewards."
+        "question": "What Does the MYP eAssessment Include?",
+        "answer": "The MYP eAssessment has two parts: on-screen exams and ePortfolios. The on-screen exams test how students apply what they know to unfamiliar questions. The ePortfolios are made up of coursework that students prepare during the year. Practising on a screen early helps students feel at ease."
       },
       {
-        "question": "How Are Ignite's MYP Tutoring Sessions Personalised For Each Student?",
-        "answer": "Every new MYP student starts with a diagnostic in their weak subject. Tutors map current performance against each of the four MYP criteria for that subject, identify the specific criterion strands dragging the grade down, and build a personalised lesson plan around closing those gaps rather than re-teaching what the student already knows."
+        "question": "How Early Should We Start MYP eAssessment Preparation?",
+        "answer": "Starting at the beginning of Grade 10 gives students time to learn the format and fix weak topics. Students in Grade 9 can also begin with light practice. A regular plan works better than cramming in the last few weeks, and an IB MYP tutor can build that plan around your child’s school calendar."
       },
       {
-        "question": "Does Ignite Help With MYP Personal Projects And eAssessments?",
-        "answer": "Yes. Year 5 students get full Personal Project support across topic selection, supervisor meeting preparation, process journal review, and final report drafting against the four criteria. eAssessment support covers on-screen exam practice, ePortfolio structuring for Arts, Design, and PHE, and timed mock papers ahead of May and November sessions."
+        "question": "How Long Does It Take to See Better MYP Results?",
+        "answer": "Most students improve gradually. Many families notice better confidence and clearer answers within a few weeks, and higher criteria scores often follow after a full unit or two. Progress depends on the subject, how often your child practises and how much feedback they act on."
       },
       {
-        "question": "Can Students Try A Free Demo Class Before Enrolling In MYP Tuition?",
-        "answer": "Yes. Every new student is offered a free demo class with the matched MYP tutor before any enrolment commitment. The demo lets the student assess teaching style, ask subject-specific questions, and see how a real session runs. Parents typically use it to confirm fit before discussing a regular schedule."
+        "question": "What Is a Process Journal in the MYP Personal Project?",
+        "answer": "A process journal is where students record their ideas, research, plans and thoughts during the personal project. It shows how the work developed, not only the final product. Teachers use it when marking the criteria, so keeping it up to date matters."
       },
       {
-        "question": "How Does Ignite's MYP Tutoring Support The Transition To IBDP?",
-        "answer": "Year 5 MYP support is built to feed directly into IBDP readiness. We focus on the ATL skills the IBDP demands (academic writing, source evaluation, time management across multi-week tasks), help students choose between Maths Standard and Extended at MYP 4, and align Year 5 subject work with the HL or SL choices students will lock in at the start of Year 11\\."
+        "question": "Do MYP Students Need Help With Language Acquisition?",
+        "answer": "Some do. Language acquisition is one of the eight subject groups, and students learn a second or third language, such as Arabic, French, or English. Marks come from listening, reading, speaking, and writing tasks. A tutor can give extra speaking practice and help with writing structure."
       },
       {
-        "question": "When Should Students Start MYP Tutoring In Dubai?",
-        "answer": "Most Grade 8-10 students benefit from starting MYP tutoring in Year 3 or Year 4 to build criterion-based understanding before Year 5\\. Year 5 students often start in the summer before Grade 10 to prepare for eAssessment and the Personal Project. Students switching curricula into the MYP usually benefit from starting in the first term."
+        "question": "Is MYP Design Different From Other Subjects?",
+        "answer": "Yes. In Design, students follow a cycle of researching a problem, creating a plan, building a solution and evaluating it. Marks are based on the process as well as the product. Students who keep clear notes and explain their choices usually score higher."
       },
       {
-        "question": "How Many MYP Coaching Sessions Should A Student Attend Each Week?",
-        "answer": "Most MYP students benefit from 1 to 2 sessions per week per weak subject during the regular term. Year 5 students often increase to 2 to 3 sessions per week closer to mocks or May or November eAssessments, with added Personal Project supervision blocks. Frequency is reviewed every few weeks based on the student's pace."
+        "question": "Can My Child Take Online MYP Classes From Home?",
+        "answer": "Yes. Online MYP tutoring lets students join lessons from home with a tutor who shares notes, practice questions and feedback on screen. It suits busy families and students who prefer a quiet study space. In-person sessions are also available at our centres."
       },
       {
-        "question": "Are Online IB MYP Classes In Dubai Available For Grade 8-10 Students?",
-        "answer": "Yes. Online IB MYP classes are available across Year 3, Year 4, and Year 5, with live interactive sessions, real-time rubric annotation, and session recordings for review. Online suits MYP students with packed school and activity schedules. In-person at the DIFC and JLT centres remains available for students who prefer face-to-face sessions."
+        "question": "How Do MYP Skills Help in IGCSE, AP or the Diploma Programme?",
+        "answer": "Research, writing, time management and teamwork are useful in every route. Students moving through the MYP to DP or MYP to IGCSE transition often find that the habits they built in the IB Middle Years Programme help them settle into longer courses and tougher exams. Our IBDP tutors in Dubai and IGCSE tutors in Dubai can support the next step."
       },
       {
-        "question": "What Should Parents Look For When Hiring An MYP Tutor In Dubai?",
-        "answer": "Look for genuine MYP curriculum knowledge (the four criteria, ATL skills, Personal Project, eAssessment format), subject specialisation at the right year level, transparent progress reporting against the rubric, and a teaching style your child responds to. A free demo class confirms fit before committing to a regular schedule."
+        "question": "What Should I Ask Before Booking an MYP Science Tutor?",
+        "answer": "Ask whether the tutor has taught MYP Sciences, how they explain the assessment criteria and how they give feedback on lab reports. Ask how lessons are planned around your child's school units. A good MYP science tutor will also share clear goals and progress updates."
       }
     ]
   },
 
   "homeschooling": {
     "subHeading": "FAQS",
-    "title": "Common Questions About <highlight> Homeschooling & Private</highlight> Candidacy Support",
-    "description": "Learn how Ignite supports independent learners through flexible, structured homeschooling programs.",
+    "title": "Homeschooling in UAE: <highlight>Your Questions Answered</highlight>",
+    "description": "Clear answers to the questions families ask most about homeschooling and private candidacy in the UAE, from cost and curriculum to exams and university entry.",
     "backgroundImage": "/assets/faqbg.webp",
     "faqData": [
       {
-        "question": "Which Levels And Curricula Does Ignite Support For Homeschooling In Dubai?",
-        "answer": "Ignite supports homeschooling and private candidate students across IGCSE (Years 10-11), A-Levels (Years 12-13), and AP (typically Years 11-12 or 12-13 in the US system). Subject coverage spans Maths, Sciences, English, Economics, Business Studies, Accounting, Computer Science, Languages, and Psychology across all three curricula."
+        "question": "Can I homeschool my kids in Dubai?",
+        "answer": "For most expat families, yes, in practice. There’s no single “homeschooling licence” you apply for, and many parents run homeschooling in UAE through an accredited online school or a structured self-study plan. The catch is that the rules aren’t spelled out clearly in one place, and what you read online often contradicts itself. Before you pull a child out of school, ask KHDA or the Ministry of Education what applies to your situation, and ask the British Council about exam access."
       },
       {
-        "question": "Is Ignite's Homeschooling Programme Fully Flexible With Individual Schedules?",
-        "answer": "Yes. Sessions are scheduled around the student's pace, academic goals, and daily calendar, with full flexibility on subject combinations and timing. Customised One-on-One programmes run weekday daytime sessions in a school-like format. Full Syllabus Group programmes follow a fixed 10-month September-to-June calendar with weekly cohort sessions for structure."
+        "question": "How much does homeschooling in Dubai cost?",
+        "answer": "It depends on how you set it up. Textbooks and past papers are the cheapest route. An accredited online school costs more, and homeschool tutors in Dubai add to that if you want help in a few subjects. Whichever route you take, budget for three things: curriculum materials, exam fees for each subject, and some tutoring. If you tell us the subjects, we can work out a realistic figure with you."
       },
       {
-        "question": "Do Homeschooled Students Get Exam And Assessment Support At Ignite?",
-        "answer": "Yes. Students receive targeted exam preparation, past paper practice, board-specific mark-scheme work, and mock exams under timed conditions. Registration guidance for IGCSE, A-Level, and AP exam centre bookings is included, alongside support with deadlines, candidate registration codes, and any subject-specific practical components that affect board choice."
+        "question": "What’s the biggest disadvantage of homeschooling?",
+        "answer": "Most people think of social life first, and it’s a fair worry. But academically, the bigger risk is the gaps you don’t see. When nobody marks work every week, a weak topic can sit quietly for months and only show up in the results. Short weekly check-ins and regular mock papers catch it while there’s still time to fix it."
       },
       {
-        "question": "Can Ignite Help With Selecting And Planning A Complete Homeschool Curriculum?",
-        "answer": "Yes. Academic advisors assist with curriculum planning across IGCSE, A-Levels, and AP, subject selection aligned to university targets, exam registration guidance for the relevant boards (CAIE, Pearson Edexcel, College Board), and personalised learning roadmaps that map subject pacing to the student's exam calendar."
+        "question": "What age is best to start?",
+        "answer": "There isn’t one. Some parents begin in the early years, and others switch to international homeschooling a year or two before IGCSE. What matters more is whether your child can work without someone standing over them, and whether you’ve mapped out the exams they’re aiming for."
       },
       {
-        "question": "Can Students Try A Free Demo Class Before Enrolling In Homeschooling Tutoring?",
-        "answer": "Yes. Every new student is offered a free demo class with the matched homeschooling tutor before enrolment. The demo lets the student assess teaching style, ask exam-board-specific questions, and see how a real session runs. Parents typically use it to confirm fit before discussing a regular schedule."
+        "question": "Online school or a tutor?",
+        "answer": "Often it’s both. An accredited online school gives you the full curriculum and a routine. A tutor deals with the subjects where your child is stuck, such as maths or chemistry, without replacing the school. Our IGCSE tutors in Dubai work this way alongside online providers, and older students can move on to A Level tutors in Dubai or IBDP tutors in Dubai later."
       },
       {
-        "question": "Is Private Candidacy Accepted By Universities In The UAE?",
-        "answer": "Yes. Private universities in the UAE generally accept private candidate qualifications, provided students hold recognised IGCSE, A-Level, or AP results that meet course entry requirements. UK and US universities also routinely accept private candidates, with applications going through UCAS for UK and the Common App for US universities."
+        "question": "How do I register as a private candidate for IGCSE in Dubai?",
+        "answer": "A private candidate IGCSE student normally sits the exams at a British Council exam centre. Registration deadlines are fixed and close months before each exam series, and late entries are often refused. If your child is still enrolled in a school, you may need a No Objection Certificate (NOC) from them first. Our advice is to start the paperwork well ahead of time."
       },
       {
-        "question": "Can Homeschooled Students Sit IGCSE, A-Level, And AP Exams As Private Candidates In Dubai?",
-        "answer": "Yes. Homeschooled students register directly through approved exam centres in Dubai. The British Council and select international schools host CAIE and Edexcel exams. Specific test centres host AP. The exam paper, mark scheme, and grade are identical to what a school-registered student receives, and registration deadlines run several months before the sitting."
+        "question": "Which curriculum should we pick for IGCSE homeschooling?",
+        "answer": "Most families choose Cambridge or Edexcel. Both are widely recognised, and you can sit the exams here in the UAE. A-Level and AP are also options later on. Your child’s target university and subjects should decide it, so look at those entry requirements before you choose."
       },
       {
-        "question": "Which Curriculum Is Best For Homeschooling In Dubai (IGCSE, A-Levels, Or AP)?",
-        "answer": "IGCSE works as the Year 10-11 foundation for most homeschooled students. A-Levels suit students targeting UK universities and want depth in 3-4 subjects. AP suits students targeting US universities and benefits from external College Board grading. Many homeschooled students combine routes, taking IGCSE first and then A-Levels or AP depending on university targets."
+        "question": "Will universities accept a homeschooled student?",
+        "answer": "Yes, if the grades meet the entry requirements. A Cambridge or Edexcel certificate carries the same weight whether the student sat it through a school or as a private candidate, and the transcript comes from the exam board rather than a school. If your child wants to study at a UAE university, check recognition with that institution directly, since policies differ."
       },
       {
-        "question": "Does Ignite Offer One-On-One And Small Group Homeschooling Sessions?",
-        "answer": "Yes. The Customised One-on-One Programme suits students who need fully individualised pacing, mid-year curriculum switches, or focused weak-subject support. The Full Syllabus Group Programme runs 3-6 students in small cohorts across a 10-month structured calendar. Both programmes are available online and in-person at the DIFC and JLT centres."
+        "question": "What is the Rahhal programme?",
+        "answer": "Rahhal is a UAE initiative that gives some students a more flexible way to learn. It isn’t homeschooling, and it won’t suit every family. If you’re comparing it with homeschooling in Dubai, we’re happy to walk you through how it differs from studying as a private candidate."
       },
       {
-        "question": "How Much Does Homeschooling Cost In Dubai?",
-        "answer": "Homeschooling costs vary widely based on tutor hours, exam registrations, and any online curriculum providers used. Total costs are typically lower than private school fees (AED 25,000 to 100,000 per year for Years 10-13 at most British schools). Ignite provides upfront pricing per programme during the demo class so families can plan budgets accurately."
+        "question": "How do we get started?",
+        "answer": "Book a free demo class and meet a tutor. We’ll look at your child’s curriculum, exam board and target exam dates. Then a short diagnostic test shows what’s solid and what needs work, and we build the study plan from the results. You’re also free to check anything about residency visa requirements with the relevant authority at the same time."
       }
     ]
   },

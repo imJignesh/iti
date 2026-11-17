@@ -1,77 +1,78 @@
 export const subjectSupportConfig = {
   ibdp: {
     courseTitle: "Tailored IBDP",
+    heading: "Choose Your IBDP Tutoring Course in Dubai",
     accordionItems: [
       {
         title: "Bespoke One-On-One Tutoring For IBDP",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.3) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Year-round personalized support for IB Diploma students",
-          "Customized lesson plans and flexible scheduling",
-          "One-on-one attention with pace-adapted learning",
-          "Continuous progress tracking through review and feedback",
-          "Guidance on internal assessments (IA) & extended essay (EE)",
-          "Regular evaluation through unit tests and mock exams"
+          "Support all year for IB Diploma students",
+          "Lesson plans and timings that fit your schedule",
+          "Full attention from your tutor, at your pace",
+          "Regular feedback to track progress",
+          "Help with your IA and Extended Essay (EE)",
+          "Unit tests and mock exams to check your level"
         ],
-        description: "A year-long IBDP course tailored to meet individual learning goals. Each student begins with a diagnostic assessment to identify their strengths and learning needs. This flexible program supports students at their own pace with focused guidance throughout the academic year."
+        description: "A year-long course built around your goals. We start with a short test to find your strengths and weak areas. Then your tutor plans lessons at your pace, with support all year. It’s a flexible option for IBDP tutoring in Dubai, whether you need help in one subject or all six."
       },
       {
         title: "IBDP Finals Prep Program In Groups",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.5) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Full IBDP syllabus coverage under experts' guidance",
-          "Small group training (3-6) for students' writing finals in May",
-          "Structured exam preparation plan spanning 10 months",
-          "Problem-based learning aligned with IBDP-style questions",
-          "Series of mock exams conducted in real exam-like settings",
-          "In-depth paper reviews sessions for critical improvement"
+          "Full IBDP syllabus covered by expert tutors",
+          "Small groups of 3 to 6 students",
+          "A clear study plan from start to finish",
+          "Practice with IB-style questions",
+          "Mock exams that feel like the real ones",
+          "Paper reviews to show you where to improve"
         ],
-        description: "A comprehensive 9-month program, running from August to April, is ideal for students entering the 2nd year of their Diploma Programme. With 80+ hours of focused training per subject, the course is well-balanced with expert tutoring, regular testing, and targeted review sessions."
+        description: "A 9-month course from August to April for students starting Year 2 of the IB Diploma. You get 80+ hours of teaching in each subject, plus regular tests and review sessions to get you ready for the May exams."
       },
       {
-        title: "Pre IBDP Summer Bridge Course",
+        title: "Pre-IBDP Summer Bridge Course",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.7) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Get to grips with IBDP question styles, grading & what examiners look for",
-          "Concept-focused training on key topics, closing gaps from your previous grades",
-          "First-term syllabus coverage alongside expert subject mentors",
+          "Learn IB question styles, grading, and what examiners look for",
+          "Fill gaps from your earlier grades",
+          "Start your first-term topics early",
           "Small groups of 3 to 6 students, all starting IBDP in September",
-          "Early guidance on Internal Assessments (IA) & the Extended Essay (EE)",
-          "End-of-summer assessments that show where you stand & where to focus next"
+          "Early help with your IA and EE",
+          "End-of-summer test to show where you stand"
         ],
-        description: "A 6-week head-start program in July and August designed to build a strong foundation in key IBDP concepts. With 24 hours of subject-wise training, this course is ideal for students transitioning into the IBDP, especially those coming from other curricula, and prepares them for this demanding phase."
+        description: "A 6-week head start in July and August, with 24 hours of teaching in each subject. It’s ideal if you’re starting the IB Diploma Programme, especially if you’re coming from IGCSE or another curriculum. You’ll learn how IB questions work and feel ready before school begins. Students moving from the Middle Years Programme can also explore our IB MYP tutors in Dubai to prepare for the transition to the Diploma Programme."
       },
       {
         title: "IBDP Spring Revision Course",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 1) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Targeted concept training in high-difficulty topics",
-          "Practice with unit-wise past paper questions",
-          "Mock exam series conducted under exam-like conditions",
-          "Structured progress through tutoring, testing, and review",
-          "In-depth past paper analysis and feedback sessions",
-          "Predicted paper solutions for high success rates"
+          "Extra help with the hardest topics",
+          "Past paper questions, topic by topic",
+          "Mock exams under real exam conditions",
+          "Teaching, testing, and review in one plan",
+          "Feedback after every past paper",
+          "Predicted paper solutions to practise with"
         ],
-        description: "A focused 2-week intensive revision program held in March and April during the final school break, right before exams. With 16 hours of expert-led training in each IBDP subject, this course delivers a powerful recap of key concepts and sharpens exam readiness through rigorous practice with IBDP-style questions."
+        description: "A 2-week revision course in March and April, just before your final exams. You get 16 hours of teaching in each subject, covering key topics and plenty of practice with IB-style questions."
       },
       {
-        title: "IBDP Oct/Nov Resit Success Program",
+        title: "IBDP Oct/Nov Resit Success Programme",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.9) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Sharp revision of the highest-weight topics in each subject you are retaking",
-          "Targeted support on the exact areas costing you marks against the IB bands",
-          "Intensive past-paper practice mapped to IB command terms & mark schemes",
-          "Full mock papers sat under November session timing & conditions",
-          "Detailed trainer feedback with a clear points-improvement action plan",
-          "Exam technique & timing built around the demands of IB papers",
-          "A focused push to raise your subject grades & total point score"
+          "Revise the topics that carry the most marks",
+          "Find exactly where you’re losing marks",
+          "Practise past papers using IB command terms and mark schemes",
+          "Full mock papers timed like the November exam",
+          "Clear feedback with a plan to gain more points",
+          "Better exam technique and time management",
+          "A focused push to raise your grades and total score"
         ],
-        description: "In the IB, one or two points can decide a diploma or a conditional university offer, which is what makes the November session worth preparing for properly. This intensive course helps IBDP students raise their subject grades through concentrated revision, past-paper practice, and precise feedback tied to the IB mark bands in the written papers."
+        description: "In the IB, one or two points can make the difference for your diploma or a university offer. This course helps you raise your subject grades in the November session with focused revision, past papers, and clear feedback based on IB mark bands."
       }
     ]
   },
@@ -218,7 +219,9 @@ export const subjectSupportConfig = {
     ]
   },
   igcse: {
-    courseTitle: "Tailored IGCSE",
+    subHeading: "IGCSE COURSES",
+    courseTitle: "IGCSE Tuition",
+    heading: "Choose the Right IGCSE Tuition for Your Child",
     accordionItems: [
       {
         title: "IGCSE / GCSE Finals Prep In Groups",
@@ -232,115 +235,116 @@ export const subjectSupportConfig = {
           "Full mock exam series conducted under real test conditions",
           "Detailed paper review sessions for critical evaluation"
         ],
-        description: "A 10-month program from September to June, designed for Year 11 students entering the final stage of Key Stage 4. With 80+ hours of expert-led tutoring across all IGCSE subjects, this course blends concept training with intensive exam practice to help students master multiple subjects."
+        description: "A 10-month course running from September to June for Year 11 students heading into their final exams. It includes 80+ hours of tutoring across all IGCSE subjects, mixing concept teaching with plenty of exam practice."
       },
       {
-        title: "Bespoke One-To-One Tutoring For IGCSE / GCSE",
+        title: "One-to-One IGCSE / GCSE Tutoring",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.5) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Year-round tutoring support for IGCSE learners",
-          "Personalized lesson plans and flexible scheduling",
-          "One-on-one attention with a focus on the student's pace",
-          "Ongoing progress tracking through testing and feedback",
-          "Diagnostic assessments to tailor the learning journey",
-          "Best suited for students of Years 8, 9, and 10"
+          "Year-round support for IGCSE students",
+          "Personal lesson plans and flexible timings",
+          "One-to-one attention at your child’s speed",
+          "Regular progress checks through tests and feedback",
+          "Diagnostic assessment before lessons begin",
+          "Best suited to students in Years 8, 9 and 10"
         ],
-        description: "A year-round IGCSE program built around individual learning objectives. Starting with a diagnostic test to assess current strengths and learning gaps, the course helps students progress at their own pace with flexible schedules and subject-specific mastery."
+        description: "A year-round IGCSE tutor for students who want lessons built around their own goals. We start with a diagnostic test to find strengths and gaps, then plan lessons and a schedule around your child’s pace."
       },
       {
         title: "IGCSE / GCSE Year 10 Groups",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 1) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         highlights: [
-          "Small-group sessions (3–6 students) with school peers",
-          "Consistent weekly schedules throughout the academic year",
-          "Preparation ahead of school formative and summative tests",
-          "Continuous progress tracking through testing and feedback",
-          "Best suited for IGCSE-focused students in Year 10",
-          "Exclusive group enrollment discounts and added benefits"
+          "Small groups of 3 to 6 students, often with school classmates",
+          "Steady weekly schedule through the academic year",
+          "Preparation ahead of school tests and end-of-term exams",
+          "Ongoing progress tracking through tests and feedback",
+          "Best suited to Year 10 students",
+          "Group enrolment discounts and extra benefits"
         ],
-        description: "A structured 10-month program from September to June, aligned with the school academic calendar. Offering 70+ hours of focused tutoring across all IGCSE subjects, it ensures complete syllabus coverage, improved understanding, and stronger subject mastery for Year 10 students."
+        description: "A 10-month course from September to June that follows the school year. With 70+ hours of IGCSE tuition across all subjects, students cover the full syllabus and build a stronger grip on each subject before Year 11."
       },
       {
-        title: "IGCSE Oct/Nov Resit Success Program",
+        title: "IGCSE Oct/Nov Resit Success Course",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.9) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Fast, focused revision of the concepts that show up most in the papers",
-          "Targeted practice on your weakest topics for IGCSE grade improvement",
-          "Intensive past-paper practice, marked the way examiners actually mark",
-          "Full mock exams sat under real timing and exam conditions",
-          "Clear trainer feedback with a written action plan for every subject",
-          "Practical exam technique & time management, so easy marks are not left behind",
-          "A steady focus on turning steady practice into a higher grade this series"
+          "Quick revision of the topics that appear most often in papers",
+          "Extra practice on your weakest topics to lift the grade",
+          "Past papers marked the way examiners mark them",
+          "Full mock exams under real timing",
+          "Written action plan from the tutor for every subject",
+          "Exam technique and time management, so easy marks aren’t missed"
         ],
-        description: "A couple of marks can sit between one IGCSE grade and the next, and those grades shape which sixth form and A Level paths stay open. This intensive course prepares students for the October & November IGCSE series with focused revision, heavy past-paper practice, & honest feedback on exactly where marks are slipping away, so the next result is a clear step up."
+        description: "A couple of marks can separate one IGCSE grade from the next, and those grades decide which sixth form and A Level options stay open. This short, focused course prepares students for the October and November series with targeted revision, past paper practice and honest feedback on where marks are slipping."
       }
     ]
   },
   myp: {
-    courseTitle: "Tailored MYP",
+    subHeading: "MYP COURSES",
+    courseTitle: "MYP Tutoring",
+    heading: "Choose the Right MYP Tutoring for Your Child",
     accordionItems: [
       {
-        title: "Bespoke One-On-One Tutoring For IB MYP",
+        title: "Bespoke One-to-One Tutoring for IB MYP",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.3) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Year-round personalized support for MYP students",
-          "Customized lessons and flexible learning schedules",
-          "One-on-one attention with student-centric pacing",
-          "Continuous progress tracking with detailed feedback",
-          "End-to-end guidance for the MYP Personal Project",
-          "Ongoing assessment through unit tests and mock exams"
+          "Year-round personalised support for MYP students",
+          "Customised lessons and flexible schedules",
+          "One-to-one attention based on learning needs",
+          "Regular progress checks and detailed feedback",
+          "Guidance with the MYP Personal Project",
+          "Unit tests and mock examination practice"
         ],
-        description: "An all-year-round MYP program thoughtfully designed to align with each student's unique learning objectives. With customized lesson plans and a strong diagnostic approach to assess learning needs, students can learn, adapt, and excel at their own pace while receiving complete academic support."
+        description: "Our year-round IB MYP tutoring in Dubai programme is designed around each student's learning needs. We begin by identifying subject difficulties and setting clear learning goals. Lessons then follow a personalised plan, allowing students to work at their own pace."
       },
       {
-        title: "IB MYP eAssessments Prep Program In Groups",
+        title: "IB MYP eAssessment Prep Programme in Groups",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.5) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Small group training (3–6 students) with schoolmates",
-          "Fixed weekly schedules aligned with the school term",
-          "Preparation ahead of formative and summative assessments",
-          "Progress tracked through continuous feedback and evaluation",
-          "Complete support for all units and core assessments",
-          "Special group enrollment discounts and added benefits"
+          "Small groups of 3 to 6 students",
+          "Fixed weekly class schedules",
+          "Preparation for formative and summative assessments",
+          "Regular progress tracking and feedback",
+          "Support across subject units and core assessments",
+          "Group enrolment discounts and additional benefits"
         ],
-        description: "This comprehensive 9-month program, running from August to April, is designed for students entering the final year of the Middle Years Programme. Offering 80+ hours of in-depth training per subject, it combines expert tutoring, regular assessments, and targeted review sessions to ensure a balanced and effective learning experience."
+        description: "This nine-month programme runs from August to April and is designed for students entering their final MYP year. It includes 80+ hours of training per subject, with teaching, assessments and revision sessions to help students prepare."
       }
     ]
   },
   homeSchooling: {
-    courseTitle: "Tailored HomeSchooling",
+    courseTitle: "Tailored Homeschooling",
+    heading: "Learning Starts Here With Tailored Homeschooling Courses",
     accordionItems: [
       {
-        title: "Customized One-On-One Training Program",
+        title: "Customised One-on-One Training Programme",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.3) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Flexible weekday daytime classes in a school-like format",
-          "Comprehensive preparation with in-depth subject-specific guidance",
-          "Structured learning through unit tests and mock examinations",
-          "Term-wise PTMs for progress reviews and personalized feedback",
-          "Complete registration guidance for IGCSE, A Levels, and AP",
-          "Tailored approach bridging gaps for diverse learning abilities"
+          "Lessons and schedules planned around your homeschooling routine",
+          "Covers Cambridge (CAIE), Pearson Edexcel IAL, and Oxford AQA",
+          "One-to-one attention for private candidate IGCSE in Dubai students sitting exams externally",
+          "Regular feedback and progress checks",
+          "Unit tests and mock exams under timed conditions"
         ],
-        description: "A personalized course designed exclusively for private candidates with flexible weekday classes, structured exam prep, and individualized support. From filling learning gaps to ensuring full readiness through tests and reviews, the program is tailored to match different timelines and learning needs for IGCSE, A Levels, and AP exams."
+        description: "A fully personalised programme for homeschooling Dubai families who need subject-specific depth, flexible pacing, or support for a single weak subject."
       },
       {
         title: "Full Syllabus Group Training For Private Candidates",
         bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.5) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
         mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
         highlights: [
-          "Full syllabus coverage with structured group-based learning",
-          "Small-group sessions fostering peer interaction and collaboration",
-          "Consistent weekly schedules aligned with academic milestones",
-          "Regular unit tests and mock exams under real conditions",
-          "Detailed paper reviews and targeted feedback for improvement",
-          "Focused exam strategies tailored for private candidates' success"
+          "Full syllabus coverage across your chosen subjects",
+          "Small groups of 3 to 6 private candidate IGCSE and A-Level students",
+          "Unit-wise worksheets for Edexcel and CAIE specifications",
+          "Complete mock exam series under real conditions",
+          "Guidance on exam registration and British Council requirements",
+          "Support for students transitioning from an accredited online school"
         ],
-        description: "A structured 10-month program running from September to June, designed to cover the entire syllabus in small peer groups. With over 70+ hours of guided instruction per subject, the course ensures private candidates gain academic confidence, thorough exam readiness, and complete syllabus mastery across IGCSE, A Levels, and AP exams."
+        description: "A structured programme with the accountability of a classroom, without enrolling in a traditional school. Small groups of 3 to 6 students."
       }
     ]
   }

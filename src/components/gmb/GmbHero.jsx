@@ -1,5 +1,5 @@
 const DIRECTIONS_URL =
-  "https://www.google.com/maps/dir/?api=1&destination=Ignite+Training+Institute+-+Tutors+In+JLT+Dubai%2C+Tiffany+Tower%2C+Cluster+W%2C+Dubai&destination_place_id=ChIJyXrTXsptXz4Rd6QlegZ6lkk";
+  "https://www.google.com/maps/dir/?api=1&destination=Ignite+Training+Institute%2C+Al+Moosa+Tower+1%2C+Sheikh+Zayed+Road%2C+Dubai&destination_place_id=ChIJs57i-LhDXz4R3ADMkpobs0Q";
 
 export default function GmbHero() {
   return (
@@ -18,18 +18,18 @@ export default function GmbHero() {
 
         <div className="gmbHeroContent">
           <h1 id="gmb-hero-title">
-            <span>Expert Tutors in JLT, Dubai</span>
-            <span>for Academic Growth</span>
+            <span>Trusted Tuition Centre in Sheikh Zayed Road,</span>
+            <span>Dubai for All Grades</span>
           </h1>
 
           <span className="titleDivider" aria-hidden="true" />
 
-          <h2 className="eyebrow">Tuition Centre in Jumeirah Lake Towers</h2>
+          <h2 className="eyebrow">Tuition Centre Near Emirates Towers Metro</h2>
 
-          <div className="heroHighlights" aria-label="JLT tuition centre highlights">
+          <div className="heroHighlights" aria-label="Sheikh Zayed Road tuition centre highlights">
             <div className="heroHighlight">
-              <strong>Open 7 days</strong>
-              <span>9 am to 9 pm</span>
+              <strong>Open daily</strong>
+              <span>9:30 am to 9 pm</span>
             </div>
             <div className="heroHighlight">
               <strong>Online and in person</strong>
@@ -40,14 +40,15 @@ export default function GmbHero() {
               <span>No commitment to start</span>
             </div>
             <div className="heroHighlight">
-              <strong>Cluster W, JLT</strong>
-              <span>On the lake side</span>
+              <strong>Sheikh Zayed Road</strong>
+              <span>Near Emirates Towers Metro</span>
             </div>
           </div>
 
           <p className="description">
-            IB, IGCSE, A-Level, AP and more, taught at our centre in Tiffany
-            Tower, Cluster W, or online. Start with a free demo class.
+            Ignite Training Institute is a tuition centre in Sheikh Zayed Road, Dubai, near
+            Al Moosa Tower. We offer IB, IGCSE, A-Level, AP and more, in person at Al Moosa
+            Tower 1, Office 1503, or online. Start with a free demo class.
           </p>
 
           <div className="actions">
@@ -76,7 +77,7 @@ export default function GmbHero() {
           </div>
         </div>
 
-        <aside className="locationCard" aria-label="JLT centre information">
+        <aside className="locationCard" aria-label="Sheikh Zayed Road centre information">
           <div className="cardHeader">
             <span className="headerIcon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -85,7 +86,7 @@ export default function GmbHero() {
               </svg>
             </span>
             <div>
-              <h2>Visit the JLT Centre</h2>
+              <h2>Visit the Sheikh Zayed Road Centre</h2>
               <p>Ignite Training Institute · Dubai</p>
             </div>
           </div>
@@ -101,8 +102,8 @@ export default function GmbHero() {
               <div>
                 <dt>Address</dt>
                 <dd>
-                  Tiffany Tower, Level 11, Cluster W, Al Thanyah Fifth,
-                  Jumeirah Lakes Towers, Dubai, UAE
+                  Al Moosa Tower 1, Office 1503, Sheikh Zayed Road, near Emirates Towers
+                  Metro, Dubai, UAE
                 </dd>
               </div>
             </div>
@@ -115,7 +116,7 @@ export default function GmbHero() {
               </span>
               <div>
                 <dt>Hours</dt>
-                <dd><span className="statusDot" />Open daily, 9 am to 9 pm</dd>
+                <dd><span className="statusDot" />Open daily, 9:30 am to 9 pm</dd>
               </div>
             </div>
             <div className="detailRow">

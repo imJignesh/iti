@@ -64,11 +64,11 @@ export default function GmbWhatWeTeach() {
         <div className="sectionIntro">
           <h2 className="SubHeading">What We Teach</h2>
           <h3 id="what-we-teach-title" className="testTitle">
-            Curricula and exams taught at the <span className="highlight">JLT centre</span>
+            Curricula and exams taught at our <span className="highlight">Sheikh Zayed Road centre</span>
           </h3>
           <p>
-            Choose your curriculum or your subject. Each link opens the full page with tutors,
-            topics and exam preparation.
+            Select your curriculum or subject to meet your tutors and see the topics and exam
+            preparation we cover.
           </p>
         </div>
 

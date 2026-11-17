@@ -22,7 +22,7 @@ export default function HomeschoolingMindset() {
   const cards = [
     {
       title: "Clarity In Thought Process",
-      desc: "A successful journey begins with self-awareness. Whether you're an independent learner or require guidance, recognizing how you learn best & openly communicating your evolving needs lays the foundation for long-term success.",
+      desc: "Know how you learn best, and speak up when you need help. Self-awareness sets the foundation for success.",
       color: "blue",
       mobileTitle: "blue",
       mobileColor: "mobileBlue",
@@ -32,7 +32,7 @@ export default function HomeschoolingMindset() {
     },
     {
       title: "Create Your Own Processes",
-      desc: "Private schooling allows students to move beyond rigid classroom routines & discover what truly works for them. By designing their schedules, setting goals, & embracing a results-driven mindset, they excel on their own terms.",
+      desc: "Homeschooling lets students skip rigid routines and find what actually works. They set their own schedules and goals, then grow on their own terms.",
       color: "green",
       mobileTitle: "green",
       icon: "/assets/2setting.webp",
@@ -42,7 +42,7 @@ export default function HomeschoolingMindset() {
     },
     {
       title: "Effective Time Management",
-      desc: "Success as private students hinges on managing time purposefully. We guide students to balance academic focus with extracurricular pursuits & personal growth. This harmony boosts performance, well-being, & lifelong learning skills.",
+      desc: "We help private students balance study, hobbies, and personal growth, so they perform better and feel better.",
       color: "green",
       mobileTitle: "blue",
       icon: "/assets/4setting.webp",
@@ -52,7 +52,7 @@ export default function HomeschoolingMindset() {
     },
     {
       title: "Take Ownership Of Actions",
-      desc: "Private schooling teaches more than subjects; it instills accountability. Students learn to own their actions & recognize their efforts. This sense of ownership prepares them for the independent demands of university life & beyond.",
+      desc: "Private schooling builds accountability. Students learn to own their choices and efforts, which prepares them for university and beyond.",
       color: "blue",
       icon: "/assets/3setting.webp",
       upbutton: "/assets/grup.svg",
@@ -73,7 +73,7 @@ export default function HomeschoolingMindset() {
           className="fade-in-section"
           style={{ "--reveal-delay": "0.1s" }}
         >
-          <h2 className="SubHeading testSubheading">MINDSET FOR PURSUING PRIVATE SCHOOLING
+          <h2 className="SubHeading testSubheading">HOMESCHOOLING & PRIVATE CANDIDATES
           </h2>
         </div>
         <h3
@@ -84,8 +84,11 @@ export default function HomeschoolingMindset() {
           style={{ "--reveal-delay": "0.2s", fontSize: '2rem' }}
         >
 
-          When <span className="highlight">  Learning </span>Becomes A Lifestyle, Not A Limitation
+          When Learning Becomes a <span className="highlight">Lifestyle, Not a Limitation</span>
         </h3>
+        <p className="mindsetIntro">
+          Learning outside school isn't a step back - it's a different way forward. Four habits that turn flexibility into results.
+        </p>
       </div>
 
 
@@ -137,6 +140,14 @@ export default function HomeschoolingMindset() {
           padding: 0 1rem;
           max-width: 1500px;
           margin: 0 auto;
+        }
+
+        .mindsetIntro {
+          max-width: 760px;
+          margin: 18px auto 0;
+          color: #475578;
+          font-size: 1rem;
+          line-height: 1.65;
         }
         
         .divider{

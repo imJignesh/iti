@@ -1,31 +1,15 @@
 import { useEffect, useState } from "react";
 
-// Replace these image paths with the final centre/classroom photographs when supplied.
-// Keeping the full set here means the five-image preview and lightbox stay in sync.
-const galleryImages = [
-  { src: "/assets/aboutbanner.webp", alt: "Students learning at Ignite Training Institute" },
-  { src: "/assets/subject-tutoring.webp", alt: "Focused A-Level tutoring session" },
-  { src: "/assets/tutors.webp", alt: "Ignite tutors supporting students" },
-  { src: "/assets/banner.webp", alt: "Students studying together at Ignite" },
-  { src: "/assets/alevel_bg_main.webp", alt: "A-Level students in a guided lesson" },
-  { src: "/assets/aboutbanner.webp", alt: "Students learning together at Ignite" },
-  { src: "/assets/subject-tutoring.webp", alt: "One-to-one A-Level tutoring at Ignite" },
-  { src: "/assets/tutors.webp", alt: "Expert tutors at Ignite Training Institute" },
-  { src: "/assets/banner.webp", alt: "Collaborative learning at Ignite" },
-  { src: "/assets/alevel_bg_main.webp", alt: "Guided A-Level study session" },
-  { src: "/assets/aboutbanner.webp", alt: "Students working together in class" },
-  { src: "/assets/subject-tutoring.webp", alt: "Personalised subject tutoring" },
-  { src: "/assets/tutors.webp", alt: "Ignite teaching team" },
-  { src: "/assets/banner.webp", alt: "Students studying at the centre" },
-  { src: "/assets/alevel_bg_main.webp", alt: "Focused A-Level classroom learning" },
-  { src: "/assets/aboutbanner.webp", alt: "A-Level students learning at Ignite" },
-  { src: "/assets/subject-tutoring.webp", alt: "Individual academic support" },
-  { src: "/assets/tutors.webp", alt: "Experienced Ignite tutors" },
-  { src: "/assets/banner.webp", alt: "Active student learning" },
-  { src: "/assets/alevel_bg_main.webp", alt: "A-Level lesson at Ignite" },
-];
-
-export default function AlevelGallery() {
+export default function CourseGallery({ config }) {
+  const {
+    id,
+    subHeading,
+    titlePrefix,
+    titleHighlight,
+    description,
+    dialogLabel,
+    images: galleryImages = [],
+  } = config;
   const [activeIndex, setActiveIndex] = useState(null);
   const [showAll, setShowAll] = useState(false);
   const isOpen = activeIndex !== null;
@@ -58,17 +42,14 @@ export default function AlevelGallery() {
   }, [isOpen]);
 
   return (
-    <section className="aLevelGallery" aria-labelledby="a-level-gallery-title">
+    <section className="aLevelGallery" aria-labelledby={`${id}-title`}>
       <div className="container">
         <div className="galleryHeader text-center">
-          <h2 className="SubHeading testSubheading">LIFE AT IGNITE</h2>
-          <h3 id="a-level-gallery-title" className="testTitle">
-            A Look Inside Our <span className="highlight">A-Level Classes</span>
+          <h2 className="SubHeading testSubheading">{subHeading}</h2>
+          <h3 id={`${id}-title`} className="testTitle">
+            {titlePrefix} <span className="highlight">{titleHighlight}</span>
           </h3>
-          <p>
-            Explore the focused lessons, guided practice and collaborative learning
-            that help our A-Level students grow in confidence.
-          </p>
+          <p>{description}</p>
         </div>
 
         <div className="galleryGrid">
@@ -91,7 +72,7 @@ export default function AlevelGallery() {
                   type="button"
                   onClick={() => setShowAll(true)}
                   aria-expanded={showAll}
-                  aria-controls="a-level-full-gallery"
+                  aria-controls={`${id}-full-gallery`}
                 >
                   <strong>+{galleryImages.length - 5}</strong>
                   <span>View all photos</span>
@@ -103,7 +84,7 @@ export default function AlevelGallery() {
                   type="button"
                   onClick={() => setShowAll(true)}
                   aria-expanded={showAll}
-                  aria-controls="a-level-full-gallery"
+                  aria-controls={`${id}-full-gallery`}
                 >
                   <strong>+{galleryImages.length - 3}</strong>
                   <span>View all photos</span>
@@ -114,7 +95,7 @@ export default function AlevelGallery() {
         </div>
 
         <div
-          id="a-level-full-gallery"
+          id={`${id}-full-gallery`}
           className={`expandedGallery ${showAll ? "expandedGalleryOpen" : ""}`}
           aria-hidden={!showAll}
         >
@@ -147,7 +128,7 @@ export default function AlevelGallery() {
       </div>
 
       {isOpen && (
-        <div className="lightbox" role="dialog" aria-modal="true" aria-label="A-Level photo gallery">
+        <div className="lightbox" role="dialog" aria-modal="true" aria-label={dialogLabel}>
           <button className="lightboxBackdrop" type="button" onClick={() => setActiveIndex(null)} aria-label="Close gallery" />
           <div className="lightboxContent">
             <button className="closeButton" type="button" onClick={() => setActiveIndex(null)} aria-label="Close gallery">×</button>

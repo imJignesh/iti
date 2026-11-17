@@ -1,5 +1,5 @@
 const DIRECTIONS_URL =
-  "https://www.google.com/maps/dir/?api=1&destination=Ignite+Training+Institute+-+Tutors+In+JLT+Dubai%2C+Tiffany+Tower%2C+Cluster+W%2C+Dubai&destination_place_id=ChIJyXrTXsptXz4Rd6QlegZ6lkk";
+  "https://www.google.com/maps/dir/?api=1&destination=Ignite+Training+Institute%2C+Al+Moosa+Tower+1%2C+Sheikh+Zayed+Road%2C+Dubai&destination_place_id=ChIJs57i-LhDXz4R3ADMkpobs0Q";
 
 const OPENING_HOURS = [
   "Monday",
@@ -18,11 +18,11 @@ export default function GmbFindUs() {
         <div className="sectionIntro">
           <h2 className="SubHeading">Find Us</h2>
           <h3 id="find-us-title" className="testTitle">
-            Tiffany Tower, Level 11, <span className="highlight">Cluster W</span>
+            Al Moosa Tower 1, Office 1503, <span className="highlight">Sheikh Zayed Road</span>
           </h3>
           <p>
-            Visit our JLT tuition centre seven days a week, or open the location directly in
-            Google Maps.
+            Visit our tuition centre in Sheikh Zayed Road, Dubai, or open the location directly
+            in Google Maps. We are open seven days a week, 9:30 am to 9 pm, including Sunday.
           </p>
         </div>
 
@@ -45,28 +45,28 @@ export default function GmbFindUs() {
               {OPENING_HOURS.map((day) => (
                 <div className="hoursRow" key={day}>
                   <dt>{day}</dt>
-                  <dd>9 am to 9 pm</dd>
+                  <dd>9:30 am to 9 pm</dd>
                 </div>
               ))}
             </dl>
 
             <p className="hoursNote">Hours as listed on our Google profile. Public holidays may differ.</p>
             <p className="metroNote">
-              <strong>Nearest Metro:</strong> Sobha Realty Metro Station
-              <span>Confirm walking time, parking and landmarks before travelling.</span>
+              <strong>Nearest Metro:</strong> Emirates Towers Metro Station
+              <span>Close to DIFC, Trade Centre and Business Bay.</span>
             </p>
           </div>
 
-          <aside className="mapCard" aria-label="JLT centre Google Maps details">
+          <aside className="mapCard" aria-label="Sheikh Zayed Road centre Google Maps details">
             <span className="mapIcon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
                 <circle cx="12" cy="10" r="2.5" />
               </svg>
             </span>
-            <span className="mapLabel">Plus code</span>
-            <strong className="plusCode">34GX+VW</strong>
-            <p>Tiffany Tower, Cluster W, Jumeirah Lakes Towers, Dubai</p>
+            <span className="mapLabel">Address</span>
+            <strong className="plusCode">Al Moosa Tower 1, Office 1503</strong>
+            <p>Sheikh Zayed Road, near Emirates Towers Metro, Dubai</p>
             <a href={DIRECTIONS_URL} target="_blank" rel="noreferrer">
               <span>Open in Google Maps</span>
               <img src="/assets/rar.webp" alt="" width="35" height="35" aria-hidden="true" />

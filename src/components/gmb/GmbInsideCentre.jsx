@@ -10,8 +10,8 @@ const SPACES = [
     type: "study",
   },
   {
-    title: "Reception, Level 11",
-    description: "A welcoming arrival point at our Tiffany Tower centre.",
+    title: "Reception",
+    description: "A welcoming arrival point at our Al Moosa Tower centre.",
     type: "reception",
   },
 ];
@@ -233,11 +233,11 @@ export default function GmbInsideCentre() {
         <div className="sectionIntro">
           <h2 className="SubHeading">Inside the Centre</h2>
           <h3 id="inside-centre-title" className="testTitle">
-            A look at our <span className="highlight">JLT learning space</span>
+            A look at our <span className="highlight">Sheikh Zayed Road learning space</span>
           </h3>
           <p>
-            Purpose-built spaces for focused lessons, individual support and a comfortable
-            learning experience.
+            Our tutoring centre in Al Moosa Tower offers calm, purpose-built spaces for focused
+            learning and individual attention.
           </p>
         </div>
 
@@ -255,7 +255,7 @@ export default function GmbInsideCentre() {
         </div>
 
         <p className="placeholderNote">
-          Centre illustrations are temporary placeholders and can be replaced with JLT photos.
+          Centre illustrations are temporary placeholders and can be replaced with Sheikh Zayed Road photos.
         </p>
       </div>
 

@@ -9,7 +9,7 @@ const resultsData = [
     label: "IGCSE MATHS, YEAR 11",
     details: [
       "Grade 5 predicted in October, grade 7 achieved in the May series.",
-      "Student R.S., JLT centre.",
+      "Student R.S., Sheikh Zayed Road centre.",
     ],
     btn: "BOOK A FREE DEMO",
     link: "/join-free-demo-class",
@@ -21,7 +21,7 @@ const resultsData = [
     label: "IB PHYSICS HL",
     details: [
       "Predicted 5 at the start of Year 13, final 6 in May.",
-      "Student A.T., JLT centre.",
+      "Student A.T., Sheikh Zayed Road centre.",
     ],
     btn: "BOOK A FREE DEMO",
     link: "/join-free-demo-class",
@@ -33,7 +33,7 @@ const resultsData = [
     label: "A-LEVEL CHEMISTRY",
     details: [
       "Mock result C in January, A in the summer exam.",
-      "Student M.H., JLT centre.",
+      "Student M.H., Sheikh Zayed Road centre.",
     ],
     btn: "BOOK A FREE DEMO",
     link: "/join-free-demo-class",
@@ -49,8 +49,8 @@ export default function GmbResults() {
       setActive={setActive}
       cards={resultsData}
       eyebrow="RESULTS"
-      heading="Grade improvements at the"
-      headingHighlight="JLT centre"
+      heading="Grade improvements from our"
+      headingHighlight="Sheikh Zayed Road tutors"
       description="Each result is shown with the family's consent, and names are replaced by initials and year group. Sample results are for layout only and will be replaced with verified results and written consent."
     />
   );

@@ -19,38 +19,39 @@ export const getOurApproachData = (key) => {
       ],
     },
     igcse: {
-      title: "How We Make IGCSE Learning Truly",
-      highlightText: "Effective",
+      title: "What Makes Our IGCSE Tutors in Dubai",
+      highlightText: "Different",
+      description: "Most students don't struggle because they're not clever enough. They struggle because nobody has shown them where they're losing marks. That's what we focus on.",
       items: [
         {
           heading: "TRAINING",
-          text: "Dynamic lessons led by expert tutors to reinforce key skills.",
+          text: "Every lesson follows your child’s exact exam board and syllabus.",
         },
         {
           heading: "RESOURCES",
-          text: "In-depth guides tailored for effective learning & revision.",
+          text: "Notes and worksheets matched to Cambridge, Edexcel or OxfordAQA specifications.",
         },
         {
           heading: "TESTING",
-          text: "Systematic testing to measure improvement & exam confidence.",
+          text: "Timed topic tests and mock papers make exam day feel familiar.",
         },
       ],
     },
     ibdp: {
-      title: "How We Make IBDP Learning Truly",
-      highlightText: "Effective",
+      title: "How We Support Your Child at Every",
+      highlightText: "IBDP Step",
       items: [
         {
           heading: "TRAINING",
-          text: "Engaging sessions with experts to strengthen core foundations.",
+          text: "Learn from expert IBDP tutors in Dubai who make tough topics easy and build strong basics.",
         },
         {
           heading: "RESOURCES",
-          text: "Detailed study materials designed to support self-paced learning.",
+          text: "Simple notes and practice questions made for the IB, so you can study at your own pace.",
         },
         {
           heading: "TESTING",
-          text: "Assessments & mocks to track progress & refine exam strategies.",
+          text: "Regular mock exams show your progress and help you fix weak areas before the real exam.",
         },
       ],
     },
@@ -145,20 +146,38 @@ export const getOurApproachData = (key) => {
       ],
     },
     myp: {
-      title: "How We Make IB MYP Learning Truly",
-      highlightText: "Effective",
+      title: "What Makes Our IB MYP Tutors in Dubai",
+      highlightText: "Different",
       items: [
         {
           heading: "TRAINING",
-          text: "Expert sessions that simplify concepts & strengthen foundations.",
+          text: "Expert sessions that explain difficult concepts and strengthen subject knowledge.",
         },
         {
           heading: "RESOURCES",
-          text: "Well-structured guides to support independent study & revision.",
+          text: "Study guides and worksheets to support independent learning and revision.",
         },
         {
           heading: "TESTING",
-          text: "Systematic testing to monitor progress & boost exam readiness.",
+          text: "Regular assessments to check progress and prepare students for MYP examinations.",
+        },
+      ],
+    },
+    homeschooling: {
+      title: "What Makes Our Homeschooling Tutors in Dubai",
+      highlightText: "Different",
+      items: [
+        {
+          heading: "TRAINING",
+          text: "Structured, tutor-led sessions built around your child's IGCSE homeschooling or A-Level syllabus, not a generic grade level.",
+        },
+        {
+          heading: "RESOURCES",
+          text: "Comprehensive study materials matched to Cambridge (CAIE) and Pearson Edexcel specifications.",
+        },
+        {
+          heading: "TESTING",
+          text: "Regular assessments and mock exams to sharpen exam technique ahead of private candidate IGCSE sittings at British Council exam centres.",
         },
       ],
     },

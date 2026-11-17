@@ -1,29 +1,13 @@
-const steps = [
-  {
-    number: "1",
-    title: "Book a free demo class",
-    text: "Meet the matched A Level tutor, ask board-specific questions and see a real session.",
-  },
-  {
-    number: "2",
-    title: "Take the diagnostic test",
-    text: "We map strengths and gaps against your exam board's mark scheme.",
-  },
-  {
-    number: "3",
-    title: "Follow your study plan",
-    text: "One-to-one or small group, online or in person at Sheikh Zayed Road or JLT.",
-  },
-];
+export default function StartSteps({ config }) {
+  const { subHeading, title, steps = [], ctaText, ctaHref } = config;
 
-export default function StartSteps() {
   return (
     <section className="startSteps">
       <div className="container">
         <div className="startStepsHeader text-center mb-md-5 mb-4">
           <div className="testHeadings">
-            <h2 className="SubHeading testSubheading">How To Start</h2>
-            <h3 className="testTitle">Start A Level Tuition In Three Steps</h3>
+            <h2 className="SubHeading testSubheading">{subHeading}</h2>
+            <h3 className="testTitle">{title}</h3>
           </div>
         </div>
 
@@ -37,8 +21,8 @@ export default function StartSteps() {
           ))}
         </div>
 
-        <a className="stepsCta" href="/join-free-demo-class/">
-          <span>Book Your Free Demo</span>
+        <a className="stepsCta" href={ctaHref}>
+          <span>{ctaText}</span>
           <span className="stepsCtaArrow" aria-hidden="true">
             <img src="/assets/arrowright.webp" alt="" width="16" height="14" />
           </span>

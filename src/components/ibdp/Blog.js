@@ -4,8 +4,9 @@ import SharedBlog from "../SharedBlog";
 const Blog = () => {
     return (
         <SharedBlog
-            title="Explore Expert Tips, Study Hacks & Student Stories"
-           
+            title="Study Smarter With Resources, Tips & Student Stories"
+            subtitle="Dive Into Our Signature Blogs"
+      subHeading="OUR BLOGS"
         />
     );
 };

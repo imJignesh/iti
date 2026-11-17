@@ -129,7 +129,7 @@ export default function GmbFormSection() {
             <div className="formIntro">
               <h2 className="SubHeading">Start Here</h2>
               <h3 id="gmb-form-title" className="testTitle">
-                Book a free demo at our <span className="highlight">JLT centre</span>
+                Book a free demo at our <span className="highlight">Sheikh Zayed Road centre</span>
               </h3>
               <p>
                 Tell us what support you need and our academic team will contact you to arrange the right tutor and demo class.
@@ -142,7 +142,7 @@ export default function GmbFormSection() {
 
               <div className="availability">
                 <strong>Open daily</strong>
-                <span>9 am to 9 pm · Online and in-person</span>
+                <span>9:30 am to 9 pm · Online and in-person</span>
               </div>
             </div>
 

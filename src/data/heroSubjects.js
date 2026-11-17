@@ -76,9 +76,9 @@ export const subjectPages = {
   },
 
   "ibdp": {
-    title: "IBDP Tutors In Dubai, UAE<br /> For Curriculum Excellence",
+    title: "Top-Rated IBDP Tutors in Dubai:<br /> Trusted by 2,000+ Students",
     subtitle: "Max Out To 45 Scores In IBDP",
-    description: "We specialize in expert tutoring support for the IB Diploma Programme across all subject groups. Our structured approach combines in-depth resources, focused training, & rigorous testing for consistent results.",
+    description: "Want to score higher in your IB Diploma? Our expert IBDP tutors in Dubai are here to help. We cover all subjects with easy lessons, detailed study notes, and regular tests, so you stay confident and see real progress.",
     infoRow: [
       {
         icon: "/assets/medal.webp",
@@ -196,14 +196,14 @@ export const subjectPages = {
   },
 
   "igcse": {
-    title: "IGCSE Tutors In Dubai, UAE For<br /> Assured Results",
-    subtitle: "Pre-Prep For Higher Education",
-    description: "We offer expert IGCSE tutoring support through personalised mentorship across core & extended curriculum subjects. Our seasoned educators are dedicated to helping students achieve academic excellence consistently.",
+    title: "IGCSE Tutors in Dubai for<br /> Grades 9 to 11",
+    subtitle: "IGCSE TUTORS IN DUBAI",
+    description: "IGCSE is where school work starts to count. The topics get harder, the exam papers get longer, and one missed concept can quietly pull a grade down for months. Our IGCSE tutors in Dubai work with your child on the syllabus they are actually sitting, whether that's Cambridge, Pearson Edexcel or OxfordAQA, so they know what to revise and how to write it up for marks.",
     infoRow: [
       {
         icon: "/assets/medal.webp",
         iconAlt: "Grade Support",
-        text: "Year 10<br /> & Year 11 Support"
+        text: "Grades 9<br /> to 11 Support"
       },
       {
         icon: "/assets/person.webp",
@@ -218,7 +218,7 @@ export const subjectPages = {
     ],
     buttons: [
       {
-        text: "Get A Free Demo",
+        text: "Get a Free Demo Class + Free Study Resources",
         href: "/join-free-demo-class/",
         ariaLabel: "IGCSE Demo Class"
       }
@@ -226,14 +226,14 @@ export const subjectPages = {
   },
 
   "myp": {
-    title: "IB MYP Tutors In UAE To Begin<br /> Your Academic Journey",
-    subtitle: "Ace Your eAssessments Strategically",
-    description: "At Ignite, we provide year-round academic support through engaging, concept-driven MYP tutoring & expertly designed study resources, empowering students to approach their MYP exams with clarity & confidence.",
+    title: "MYP Tutors in Dubai for<br /> Grades 6 to 10",
+    subtitle: "MYP TUTORS IN DUBAI",
+    description: "The IB Middle Years Programme asks students to do more than learn facts. They need to understand concepts, apply knowledge and explain their thinking. Our MYP tutors in Dubai help students understand their school lessons, work on difficult topics and prepare for assessments. Whether your child needs regular subject support or eAssessment preparation, we build lessons around their learning needs.",
     infoRow: [
       {
         icon: "/assets/medal.webp",
         iconAlt: "Grade Support",
-        text: "Grade 8<br /> To 10 Support"
+        text: "Grades 6<br /> to 10 Support"
       },
       {
         icon: "/assets/person.webp",
@@ -248,7 +248,7 @@ export const subjectPages = {
     ],
     buttons: [
       {
-        text: "Get A Free Demo",
+        text: "Get a Free Demo Class + Free Study Resources",
         href: "/join-free-demo-class/",
         ariaLabel: "MYP Demo Class"
       }
@@ -256,9 +256,9 @@ export const subjectPages = {
   },
 
   "homeschooling": {
-    title: "Homeschooling In Dubai To<br /> Thrive As A Private Candidate",
-    subtitle: "IGCSE, A Levels, & AP Supported",
-    description: "Experience customized, expert-led support across IGCSE, A-Levels, & AP as a private candidate. We offer flexible, high-quality education tailored to your goals, ensuring every learner feels seen & empowered.",
+    title: "Homeschooling in UAE: Expert Tutors for<br /> IGCSE & A-Level Private Candidates",
+    subtitle: "IGCSE, A-Levels, & AP Supported",
+    description: "Your child's education doesn't have to follow the traditional school path. Our expert homeschool tutors in Dubai work with you one step at a time - across IGCSE, A-Levels, and AP - to build confidence, close gaps, and keep university pathways open.",
     infoRow: [
       {
         icon: "/assets/medal.webp",
@@ -273,12 +273,12 @@ export const subjectPages = {
       {
         icon: "/assets/location.webp",
         iconAlt: "Location",
-        text: "Dubai <br /> (DIFC, JLT)"
+        text: "Dubai <br /> (Sheikh Zayed Road, JLT)"
       }
     ],
     buttons: [
       {
-        text: "Get A Free Demo",
+        text: "Get a Free Demo Class + Free Study Resources",
         href: "/join-free-demo-class/",
         ariaLabel: "Homeschooling Demo Class"
       }

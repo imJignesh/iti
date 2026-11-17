@@ -18,7 +18,7 @@ export default function SubjectSupport({ config = {} }) {
     setHoveredIndex(null);
   };
 
-  const { courseTitle = "", accordionItems = [] } = config;
+  const { subHeading = "COURSES", courseTitle = "", heading = "", accordionItems = [] } = config;
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function SubjectSupport({ config = {} }) {
                 data-scroll-repeat="true"
                 className="fade-in-section"
               >
-                <h2 className="SubHeading testSubheading">courses</h2>
+                <h2 className="SubHeading testSubheading">{subHeading}</h2>
               </div>
               <h3
                 data-scroll
@@ -54,7 +54,7 @@ export default function SubjectSupport({ config = {} }) {
                 className="fade-in-section testTitle"
                 style={{ fontSize: "2rem" }}
               >
-                Learning Starts Here With <br /><span className="highlight"> {courseTitle} </span> Courses
+                {heading || <>Learning Starts Here With <br /><span className="highlight"> {courseTitle} </span> Courses</>}
               </h3>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function SubjectSupport({ config = {} }) {
               className="fade-in-section"
               style={{ "--reveal-delay": "0.1s" }}
             >
-              <div className="SubHeading testSubheading">courses</div>
+              <div className="SubHeading testSubheading">{subHeading}</div>
             </div>
 
             <h2
@@ -250,7 +250,7 @@ export default function SubjectSupport({ config = {} }) {
               className="fade-in-section testTitle"
               style={{ "--reveal-delay": "0.2s" }}
             >
-              Learning Starts Here With <span className="highlight"> {courseTitle} </span> Courses
+              {heading || <>Learning Starts Here With <span className="highlight"> {courseTitle} </span> Courses</>}
             </h2>
           </div>
 

@@ -3,22 +3,38 @@ import JsonLd from "@/components/JsonLd";
 import SEO from "@/components/SEO";
 import dynamic from 'next/dynamic';
 
-const Advantages = dynamic(() => import('@/components/homeSchooling/Advantages'));
-const Curriculum = dynamic(() => import('@/components/homeSchooling/Curriculum'));
-const SubjectSupport = dynamic(() => import('@/components/homeSchooling/SubjectSupport'));
-const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
+const OurApproach = dynamic(() => import('@/components/shared/OurApproach'));
+const SubjectSupport = dynamic(() => import('@/components/shared/SubjectSupport'));
+const SubjectCard = dynamic(() => import('@/components/shared/SubjectCard'));
+const Trainers = dynamic(() => import('@/components/shared/Trainers'));
+const YearPlanner = dynamic(() => import('@/components/shared/YearPlanner'));
+const CourseGallery = dynamic(() => import('@/components/shared/CourseGallery'));
+const StartSteps = dynamic(() => import('@/components/shared/StartSteps'));
+const OurPromise = dynamic(() => import('@/components/shared/OurPromise'));
+import FAQSection from '@/components/shared/FaqSection';
 import { faqSections } from '@/data/faqSections';
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const HomeschoolingMindset = dynamic(() => import('@/components/homeSchooling/mindset'));
-const WhatWeOfferSection = dynamic(() => import('@/components/homeSchooling/WhatWeOfferSection'));
+const WhatWeOfferSection = dynamic(() => import('@/components/shared/WhatWeOfferSection'));
 const Accordion = dynamic(() => import('@/components/shared/Accordion'));
 import { accordionSections } from '@/data/accordionSections';
 import { getMarqueeData } from "@/data/marqueeConfig";
 const Blog = dynamic(() => import('@/components/homeSchooling/Blog'));
 const ReviewsSection = dynamic(() => import('@/components/homeSchooling/ReviewsSection'));
+import { getOurApproachData } from '@/data/ourApproachConfig';
+import { getSubjectSupportData } from '@/data/subjectSupportConfig';
+import { getSubjectCardData } from '@/data/subjectCardConfig';
+import { getTrainersData } from '@/data/trainersData';
+import { getWhatWeOfferData } from '@/data/whatWeOfferConfig';
+import { getOurPromiseData } from '@/data/ourPromiseConfig';
+import {
+  getCourseGalleryData,
+  getStartStepsData,
+  getYearPlannerData,
+} from '@/data/coursePageSectionsConfig';
 
 
 // 1. ACCEPT the headerHeight prop
@@ -370,17 +386,78 @@ const homeschoolingSchema = [
   }
 ];
 
-const HomeSchooling = ({ headerHeight }) => {
+const homeschoolingPageUrl = "https://ignitetraininginstitute.com/courses/homeschooling-tutors-in-dubai";
+
+const homeschoolingPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${homeschoolingPageUrl}#webpage`,
+      url: homeschoolingPageUrl,
+      name: "Homeschooling in UAE | IGCSE & A-Level Private Tutors",
+      description: "Ignite Training Institute offers expert tutoring for homeschooling in UAE families, including international homeschooling and private candidate IGCSE in Dubai. Our homeschool tutors in Dubai support students sitting IGCSE and A Level exams with Cambridge and Pearson Edexcel, with a clear study plan, subject tutoring, past paper practice and mock exams under timed conditions. We guide families on exam registration at British Council exam centres and on the route from an accredited online school to university. Classes run one-to-one or in small groups of 3 to 6 students, online or in person at our Sheikh Zayed Road and JLT centres, and families can book a free demo class first.",
+      isPartOf: { "@id": "https://ignitetraininginstitute.com/#website" },
+      about: { "@id": "https://ignitetraininginstitute.com/#organization" },
+      breadcrumb: { "@id": `${homeschoolingPageUrl}#breadcrumb` },
+      inLanguage: "en",
+      mainEntity: { "@id": `${homeschoolingPageUrl}#course` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${homeschoolingPageUrl}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://ignitetraininginstitute.com/" },
+        { "@type": "ListItem", position: 2, name: "Courses", item: "https://ignitetraininginstitute.com/courses" },
+        { "@type": "ListItem", position: 3, name: "Homeschooling Tutors in Dubai", item: homeschoolingPageUrl },
+      ],
+    },
+    {
+      "@type": "Course",
+      "@id": `${homeschoolingPageUrl}#course`,
+      name: "Homeschooling and private candidate tutoring in Dubai",
+      description: "Our homeschooling tutors in Dubai support families who choose homeschooling in the UAE and need expert help for IGCSE and A Level private candidacy. We help students prepare to sit Cambridge and Edexcel exams as private candidates, with a clear study plan, subject tutoring, past paper practice and mock exams. Homeschooling in UAE works best with structure, so our tutors set regular targets and give honest feedback on progress. Classes run one-to-one or in small groups, online or in person at our Sheikh Zayed Road and JLT centres. Families can also ask about homeschooling in Dubai and private candidate IGCSE entry. Book a free demo class to talk it through with a tutor.",
+      url: homeschoolingPageUrl,
+      provider: { "@id": "https://ignitetraininginstitute.com/#organization" },
+      educationalLevel: "IGCSE and A Level (private candidates)",
+      teaches: "IGCSE and A Level for homeschooled students",
+      inLanguage: "en",
+      hasCourseInstance: [
+        {
+          "@type": "CourseInstance",
+          courseMode: "Onsite",
+          location: [
+            { "@id": "https://ignitetraininginstitute.com/#localbusiness-szr" },
+            { "@id": "https://ignitetraininginstitute.com/#localbusiness-jlt" },
+          ],
+        },
+        { "@type": "CourseInstance", courseMode: "Online" },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${homeschoolingPageUrl}#faq`,
+      mainEntity: faqSections.homeschooling.faqData.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
+  ],
+};
+
+const HomeSchooling = ({ headerHeight, faqConfig }) => {
+  const pageFaqConfig = faqConfig || faqSections.homeschooling;
 
 
 
   return (
     <>
-      <JsonLd schema={homeschoolingSchema} />
+      <JsonLd schema={homeschoolingPageSchema} />
       <SEO
                 loadInnerStyles={true}
-        title="Best Homeschooling In UAE For Full Academic Support"
-        description="Choose the top homeschooling center in UAE for your child's academic success. Get one-on-one sessions, comprehensive resources & flexible study plans"
+        title="Homeschooling in UAE | IGCSE & A-Level Private Tutors"
+        description="Homeschooling in UAE made simple. Expert tutors for IGCSE and A Level private candidates in Dubai, one-to-one or in small groups. Book a free demo class."
         url="https://ignitetraininginstitute.com/courses/homeschooling-tutors-in-dubai"
         preloadImages={[
           {
@@ -424,56 +501,73 @@ const HomeSchooling = ({ headerHeight }) => {
 
         </section>
 
-
         <LazySection>
           <section data-scroll-section>
-            <Curriculum />
+            <OurApproach config={getOurApproachData('homeschooling')} />
           </section>
         </LazySection>
 
         <LazySection>
           <section data-scroll-section>
-            <SubjectSupport />
+            <YearPlanner config={getYearPlannerData('homeschooling')} />
           </section>
         </LazySection>
 
         <LazySection>
           <section data-scroll-section>
-            <Advantages />
-          </section>
-        </LazySection>
-        <LazySection>
-          <section data-scroll-section>
-            <MarqueeBanner config={getMarqueeData('standard')} />
+            <SubjectSupport config={getSubjectSupportData('homeSchooling')} />
           </section>
         </LazySection>
 
         <LazySection>
-          <section data-scroll-section>
-            <HomeschoolingMindset />
-          </section>
+          <SubjectCard config={getSubjectCardData('homeschooling')} />
         </LazySection>
+
+        <LazySection>
+          <ReviewsSection />
+        </LazySection>
+
+        <LazySection>
+          <Trainers
+            trainers={getTrainersData('home')}
+            title="Experienced Tutors to Support Your Learning Journey"
+          />
+        </LazySection>
+
+        <LazySection>
+          <CourseGallery config={getCourseGalleryData('homeschooling')} />
+        </LazySection>
+
+        <LazySection>
+          <WhatWeOfferSection config={getWhatWeOfferData('homeschooling')} />
+        </LazySection>
+
+        <LazySection>
+          <HomeschoolingMindset />
+        </LazySection>
+
+        <LazySection>
+          <MarqueeBanner config={getMarqueeData('standard')} />
+        </LazySection>
+
         <LazySection>
           <section data-scroll-section>
-            <ReviewsSection />
+            <OurPromise config={getOurPromiseData('homeschooling')} />
           </section>
         </LazySection>
 
         <LazySection>
-          <WhatWeOfferSection />
-        </LazySection>
-
-
-        <LazySection>
-          <section data-scroll-section>
-            <FAQSection {...faqSections.homeschooling} />
-          </section>
+          <StartSteps config={getStartStepsData('homeschooling')} />
         </LazySection>
 
         <LazySection>
           <section data-scroll-section>
-            <Blog />
+            <FAQSection {...pageFaqConfig} />
           </section>
+        </LazySection>
+
+        <LazySection>
+          <Blog />
         </LazySection>
         <LazySection>
           <section>
@@ -486,3 +580,11 @@ const HomeSchooling = ({ headerHeight }) => {
 };
 
 export default HomeSchooling;
+
+export function getStaticProps() {
+  return {
+    props: {
+      faqConfig: faqSections.homeschooling,
+    },
+  };
+}

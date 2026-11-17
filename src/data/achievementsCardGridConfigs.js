@@ -91,8 +91,8 @@ export const cardGridConfigs = {
 
   ibdp: {
     title: "Success Measured By <highlight>Real</highlight> Academic Impact",
-    subtitle: "Each achievement at Ignite reflects the dedication & academic growth of our IBDP students over the years.",
-    description: "Each achievement at Ignite reflects the dedication & academic growth of our IBDP students over the years.",
+    subtitle: "Every result here comes from the hard work of our IBDP students. Here’s a look at what we’ve achieved together over the years.",
+    description: "Every result here comes from the hard work of our IBDP students. Here’s a look at what we’ve achieved together over the years.",
     stats: [
       {
         number: "10+",
@@ -176,14 +176,14 @@ export const cardGridConfigs = {
   },
 
   igcse: {
-    title: "Success Measured By <highlight>Real</highlight> Academic Impact",
-    subtitle: "Each achievement at Ignite reflects the dedication & academic growth of our IGCSE students over the years.",
-    description: "Each achievement at Ignite reflects the dedication & academic growth of our IGCSE students over the years.",
+    title: "Real <highlight>Progress</highlight> from Our IGCSE Students",
+    subtitle: "Each number below reflects the effort of students who came to us for IGCSE tuition and left with stronger grades and more confidence.",
+    description: "Each number below reflects the effort of students who came to us for IGCSE tuition and left with stronger grades and more confidence.",
     stats: [
       {
         number: "10+",
         title: "Years Of Experience",
-        description: "Proven expertise in guiding students toward excellence",
+        description: "A decade of helping students through IGCSE exams.",
         bgImage: "/assets/linear1.webp",
         gradient: ["#00A491", "#003E37"],
         color: "teal-text"
@@ -191,7 +191,7 @@ export const cardGridConfigs = {
       {
         number: "1K+",
         title: "Exam Prep Resources",
-        description: "Extensive IGCSE-specific guides to master all subjects",
+        description: "Notes, worksheets and past paper guides for IGCSE subjects.",
         bgImage: "/assets/linear2.webp",
         gradient: ["#161664", "#3F88BA"],
         color: "blue-text"
@@ -199,7 +199,7 @@ export const cardGridConfigs = {
       {
         number: "A*",
         title: "Scores Across Subjects",
-        description: "Strategic IGCSE tutoring that helps you aim for excellence",
+        description: "Our IGCSE tuition helps students aim for the top grades.",
         bgImage: "/assets/linear3.webp",
         gradient: ["#161664", "#3F88BA"],
         color: "blue-text"
@@ -207,7 +207,7 @@ export const cardGridConfigs = {
       {
         number: "2K+",
         title: "Student Success Stories",
-        description: "Trusted outcomes through personalised IGCSE student journeys",
+        description: "Students we’ve supported on their way to better results.",
         bgImage: "/assets/linear4.webp",
         gradient: ["#00A491", "#003E37"],
         color: "teal-text"
@@ -262,14 +262,14 @@ export const cardGridConfigs = {
   },
 
   myp: {
-    title: "Success Measured By <highlight>Real</highlight> Academic Impact",
-    subtitle: "Each achievement at Ignite reflects the dedication & academic growth of our MYP students over the years.",
-    description: "Each achievement at Ignite reflects the dedication & academic growth of our MYP students over the years.",
+    title: "Real <highlight>Progress</highlight> from Our MYP Students",
+    subtitle: "Each achievement reflects the work of students and tutors who have been part of the Ignite learning journey.",
+    description: "Each achievement reflects the work of students and tutors who have been part of the Ignite learning journey.",
     stats: [
       {
         number: "10+",
         title: "Years Of Experience",
-        description: "Proven expertise in guiding students toward excellence",
+        description: "Supporting students across international curricula.",
         bgImage: "/assets/linear1.webp",
         gradient: ["#00A491", "#003E37"],
         color: "teal-text"
@@ -277,7 +277,7 @@ export const cardGridConfigs = {
       {
         number: "1K+",
         title: "Exam Prep Resources",
-        description: "Extensive MYP-specific guides to master all subjects",
+        description: "Study materials and practice resources for different subjects.",
         bgImage: "/assets/linear2.webp",
         gradient: ["#161664", "#3F88BA"],
         color: "blue-text"
@@ -285,7 +285,7 @@ export const cardGridConfigs = {
       {
         number: "7/7",
         title: "Scores Across Subjects",
-        description: "Strategic MYP tutoring that helps you aim for excellence",
+        description: "Helping students work towards the highest MYP subject grades.",
         bgImage: "/assets/linear3.webp",
         gradient: ["#161664", "#3F88BA"],
         color: "blue-text"
@@ -293,7 +293,7 @@ export const cardGridConfigs = {
       {
         number: "2K+",
         title: "Student Success Stories",
-        description: "Trusted outcomes through personalised MYP student journeys",
+        description: "Students supported through different academic stages.",
         bgImage: "/assets/linear4.webp",
         gradient: ["#00A491", "#003E37"],
         color: "teal-text"

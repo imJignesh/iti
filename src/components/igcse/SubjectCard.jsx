@@ -1,7 +1,7 @@
-import SubjectCardCarousel from "@/components/shared/SubjectCardCarousel";
-import { getSubjectCardCarouselData } from "@/data/subjectCardCarouselConfig";
+import SubjectCard from "@/components/shared/SubjectCard";
+import { getSubjectCardData } from "@/data/subjectCardConfig";
 
 export default function SubjectsCard() {
-  const config = getSubjectCardCarouselData("igcse");
-  return <SubjectCardCarousel config={config} />;
+  const config = getSubjectCardData("igcse");
+  return <SubjectCard config={config} />;
 }

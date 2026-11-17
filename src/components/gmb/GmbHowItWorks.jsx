@@ -2,7 +2,7 @@ const STEPS = [
   {
     title: "Book a free demo",
     description:
-      "Tell us the curriculum, subject and year. We confirm a slot at the JLT centre or online.",
+      "Tell us the curriculum, subject and year. We confirm a slot at our tutoring centre in Al Moosa Tower or online.",
   },
   {
     title: "Level check",
@@ -12,12 +12,12 @@ const STEPS = [
   {
     title: "Match with a tutor",
     description:
-      "You get a tutor who teaches your board and subject, 1:1 or in a small group.",
+      "You get one of our tutors in Sheikh Zayed Road, Dubai, who teaches your board and subject (IGCSE, A Level, IBDP or IB MYP), 1:1 or in a small group.",
   },
   {
     title: "Track progress",
     description:
-      "Regular feedback to parents and mock results against the target grade.",
+      "Regular feedback to parents and mock results against the target grade, whether you study near Emirates Towers or online.",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function GmbHowItWorks() {
         <div className="sectionIntro">
           <h2 className="SubHeading">How It Works</h2>
           <h3 id="how-it-works-title" className="testTitle">
-            From first call to <span className="highlight">first lesson</span>
+            Four steps to your first lesson in <span className="highlight">Sheikh Zayed Road, Dubai</span>
           </h3>
         </div>
 

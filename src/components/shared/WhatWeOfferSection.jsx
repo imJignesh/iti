@@ -20,7 +20,7 @@ const WhatWeOfferSection = ({ config }) => {
                 className="fade-in-section"
                 style={{ "--reveal-delay": "0.1s" }}
               >
-                <h2 className="SubHeading testSubheading">WHAT MORE DO WE OFFER?</h2>
+                <h2 className="SubHeading testSubheading">{config.subHeading || "WHAT MORE DO WE OFFER?"}</h2>
               </div>
               <h3
                 data-scroll
@@ -29,7 +29,7 @@ const WhatWeOfferSection = ({ config }) => {
                 className="fade-in-section testTitle"
                 style={{ "--reveal-delay": "0.2s", fontSize: "2rem" }}
               >
-                {config.heading} <span className="highlight">Milestone</span>
+                {config.heading} {!config.fullHeading && <span className="highlight">Milestone</span>}
               </h3>
             </div>
           </div>
