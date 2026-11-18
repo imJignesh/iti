@@ -6,8 +6,6 @@ import LazySection from "@/components/LazySection";
 // import Testimonial from '@/components/home/Testimonial';
 import dynamic from 'next/dynamic';
 
-const Accordion = dynamic(() => import('@/components/shared/Accordion'));
-import { accordionSections } from '@/data/accordionSections';
 const Blog = dynamic(() => import('@/components/myp/Blog'));
 const SubjectSupport = dynamic(() => import('@/components/myp/SubjectSupport'));
 const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
@@ -225,11 +223,6 @@ const MYP = () => {
         <LazySection>
           <section data-scroll-section>
             <Blog />
-          </section>
-        </LazySection>
-        <LazySection>
-          <section data-scroll-section>
-            <Accordion {...accordionSections.myp} />
           </section>
         </LazySection>
       </div>

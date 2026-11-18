@@ -3,8 +3,6 @@ import SEO from "@/components/SEO";
 import LazySection from "@/components/LazySection";
 import dynamic from 'next/dynamic';
 
-const Accordion = dynamic(() => import('@/components/shared/Accordion'));
-import { accordionSections } from '@/data/accordionSections';
 const Blog = dynamic(() => import('@/components/igcse/Blog'));
 const SubjectSupport = dynamic(() => import('@/components/igcse/SubjectSupport'));
 const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
@@ -265,11 +263,6 @@ const IGCSE = ({ headerHeight }) => {
         <LazySection>
           <section data-scroll-section>
             <Blog />
-          </section>
-        </LazySection>
-        <LazySection>
-          <section data-scroll-section>
-            <Accordion {...accordionSections.igcse} />
           </section>
         </LazySection>
       </div>

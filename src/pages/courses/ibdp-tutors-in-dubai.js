@@ -4,8 +4,6 @@ import Head from "next/head";
 // import Testimonial from '@/components/home/Testimonial';
 import dynamic from 'next/dynamic';
 
-const Accordion = dynamic(() => import('@/components/shared/Accordion'));
-import { accordionSections } from '@/data/accordionSections';
 const Blog = dynamic(() => import('@/components/ibdp/Blog'));
 const SubjectSupport = dynamic(() => import('@/components/ibdp/SubjectSupport'));
 const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
@@ -260,11 +258,6 @@ const IBDP = ({ headerHeight }) => {
         <LazySection>
           <section data-scroll-section>
             <Blog />
-          </section>
-        </LazySection>
-        <LazySection>
-          <section data-scroll-section>
-            <Accordion {...accordionSections.ibdp} />
           </section>
         </LazySection>
       </div>

@@ -5,8 +5,6 @@ import LazySection from "@/components/LazySection"
 // import Testimonial from '@/components/home/Testimonial';
 import dynamic from 'next/dynamic';
 
-const Accordion = dynamic(() => import('@/components/shared/Accordion'));
-import { accordionSections } from '@/data/accordionSections';
 const Blog = dynamic(() => import('@/components/a-level/Blog'));
 const SubjectSupport = dynamic(() => import('@/components/a-level/SubjectSupport'));
 const FAQSection = dynamic(() => import('@/components/shared/FaqSection'));
@@ -493,11 +491,6 @@ const ALEVEL = ({ headerHeight }) => {
         <LazySection>
           <section data-scroll-section>
             <Blog />
-          </section>
-        </LazySection>
-        <LazySection>
-          <section data-scroll-section>
-            <Accordion {...accordionSections.aLevel} />
           </section>
         </LazySection>
       </div>

@@ -19,8 +19,6 @@ import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
 const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 const HomeschoolingMindset = dynamic(() => import('@/components/homeSchooling/mindset'));
 const WhatWeOfferSection = dynamic(() => import('@/components/shared/WhatWeOfferSection'));
-const Accordion = dynamic(() => import('@/components/shared/Accordion'));
-import { accordionSections } from '@/data/accordionSections';
 import { getMarqueeData } from "@/data/marqueeConfig";
 const Blog = dynamic(() => import('@/components/homeSchooling/Blog'));
 const ReviewsSection = dynamic(() => import('@/components/homeSchooling/ReviewsSection'));
@@ -568,11 +566,6 @@ const HomeSchooling = ({ headerHeight, faqConfig }) => {
 
         <LazySection>
           <Blog />
-        </LazySection>
-        <LazySection>
-          <section>
-            <Accordion {...accordionSections.homeschooling} />
-          </section>
         </LazySection>
       </div>
     </>
