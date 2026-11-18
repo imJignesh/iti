@@ -50,7 +50,7 @@ const gmbFaqs = [
   },
 ];
 
-const pageUrl = "https://ignitetraininginstitute.com/gmb";
+const pageUrl = "https://ignitetraininginstitute.com/tutors-in-sheikh-zayed-road-dubai";
 
 const gmbSchema = {
   "@context": "https://schema.org",

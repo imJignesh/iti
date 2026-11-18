@@ -198,6 +198,11 @@ const nextConfig = {
   async redirects() {
     const redirects = [
       {
+        source: '/gmb',
+        destination: '/tutors-in-sheikh-zayed-road-dubai',
+        permanent: true,
+      },
+      {
         source: '/free-consultation',
         destination: '/join-free-demo-class',
         permanent: true,

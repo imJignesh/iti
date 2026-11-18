@@ -7,7 +7,7 @@ const ThankYouGmb = ({ headerHeight }) => {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     name: "Ignite Training Institute, JLT",
-    url: "https://ignitetraininginstitute.com/gmb",
+    url: "https://ignitetraininginstitute.com/tutors-in-sheikh-zayed-road-dubai",
     logo: "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
     description: "Ignite Training Institute provides personalised tutoring at its JLT centre in Dubai.",
     address: {

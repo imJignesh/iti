@@ -84,7 +84,7 @@ export default async function handler(req, res) {
         },
         {
             type: 'GMB_FORM',
-            slugs: ['/gmb'],
+            slugs: ['/tutors-in-sheikh-zayed-road-dubai'],
             zohoUrl: 'https://forms.zohopublic.com/sumitignitetrain1/form/GMBPage/formperma/7BY0qo5yyyBG6IhJ0IugBdx-BVGb48vzrbNj8N5W67o/htmlRecords/submit',
             fieldMap: { name: 'SingleLine', email: 'Email', phone: 'PhoneNumber_countrycode', grade: 'SingleLine1', course: 'SingleLine3', message: 'MultiLine', pageinfo: 'SingleLine2' },
             redirectUrl: '/thank-you-gmb',
