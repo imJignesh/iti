@@ -302,6 +302,17 @@ export const trainersData = {
   ],
 };
 
+const tutorsToShowLast = ["MASAB", "ABDUL", "KRITIKA", "DR. HAYA"];
+
+export const moveSelectedTutorsToEnd = (tutors) => {
+  const regularTutors = tutors.filter(({ name }) => !tutorsToShowLast.includes(name));
+  const selectedTutors = tutorsToShowLast.flatMap((name) =>
+    tutors.filter((tutor) => tutor.name === name)
+  );
+
+  return [...regularTutors, ...selectedTutors];
+};
+
 export const getTrainersData = (pageKey) => {
   return trainersData[pageKey] || trainersData.home;
 };

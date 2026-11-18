@@ -5,14 +5,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const tutorsToShowLast = ["MASAB", "ABDUL", "KRITIKA", "DR. HAYA"];
+
 export default function Trainers({ trainers, title, subHeading = "OUR TUTORS" }) {
   const [showAll, setShowAll] = useState(false);
   const trainersGridRef = useRef(null);
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
-  const hasFewerTrainers = trainers.length < 5;
+  const regularTrainers = trainers.filter(({ name }) => !tutorsToShowLast.includes(name));
+  const selectedTrainers = tutorsToShowLast.flatMap((name) =>
+    trainers.filter((trainer) => trainer.name === name)
+  );
+  const orderedTrainers = [...regularTrainers, ...selectedTrainers];
+  const hasFewerTrainers = orderedTrainers.length < 5;
 
-  const displayTrainers = showAll ? trainers : trainers.slice(0, 10);
+  const displayTrainers = showAll ? orderedTrainers : orderedTrainers.slice(0, 10);
 
   const handleSeeMore = () => {
     setShowAll(true);
@@ -570,10 +577,10 @@ export default function Trainers({ trainers, title, subHeading = "OUR TUTORS" })
                     }
                   }}
                 >
-                  {trainers.map((t, i) => (
-                    <SwiperSlide key={i}>
+                  {orderedTrainers.map((t, index) => (
+                    <SwiperSlide key={t.name}>
                       <a href="/our-team" className="nodecoration">
-                        <div data-color={t.color} className="trainerCard">
+                        <div data-color={index % 2 === 0 ? "green" : "blue"} className="trainerCard">
                           <div className="trainerName">{t.name}</div>
                           <div className="trainerImgWrap">
                             <img src={t.img} alt={t.name} className="trainerImg" width={812} height={1017} loading="lazy" decoding="async" />
@@ -602,7 +609,7 @@ export default function Trainers({ trainers, title, subHeading = "OUR TUTORS" })
                 data-scroll
                 data-scroll-class="is-inview"
                 style={hasFewerTrainers ? {
-                  gridTemplateColumns: `repeat(${trainers.length}, calc((70vw - 96px) / 5))`,
+                  gridTemplateColumns: `repeat(${orderedTrainers.length}, calc((70vw - 96px) / 5))`,
                   maxWidth: 'fit-content',
                   margin: '0 auto 50px',
                   justifyContent: 'center'
@@ -611,7 +618,7 @@ export default function Trainers({ trainers, title, subHeading = "OUR TUTORS" })
                 {displayTrainers.map((t, i) => (
                   <div key={`${t.name}-${i}`} className="trainer-animate-item" style={{ "--reveal-delay": `${(i % 4) * 0.1}s` }}>
                     <a href="/our-team" className="nodecoration">
-                      <div data-color={t.color} className="trainerCard">
+                      <div data-color={i % 2 === 0 ? "green" : "blue"} className="trainerCard">
                         <div className="trainerName">{t.name}</div>
                         <div className="trainerImgWrap">
                           <img src={t.img} alt={t.name} className="trainerImg" width={812} height={1017} loading="lazy" decoding="async" />
@@ -624,7 +631,7 @@ export default function Trainers({ trainers, title, subHeading = "OUR TUTORS" })
                 ))}
               </div>
               <div data-scroll data-scroll-class="is-inview" className="fade-in-section" style={{ "--reveal-delay": "0.2s" }}>
-                {trainers.length > 10 && (
+                {orderedTrainers.length > 10 && (
                   !showAll ? (
                     <button onClick={handleSeeMore} className="trainersSeeMore">
                       SEE MORE

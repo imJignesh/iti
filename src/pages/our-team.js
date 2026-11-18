@@ -11,6 +11,7 @@ import { getMarqueeData } from '@/data/marqueeConfig';
 import { ArrowRight } from 'lucide-react';
 // Correct import for the CSS Module
 import styles from '@/styles/team/team.module.css';
+import { moveSelectedTutorsToEnd } from '@/data/trainersData';
 
 
 const trainersData = [
@@ -303,7 +304,7 @@ const OurTeam = ({ headerHeight }) => {
                                 <h2 className={styles.cofounderTitle}>Trainers</h2>
                             </div>
                             <div className={styles['trainer-cards']}>
-                                {trainersData.map((trainer, index) => {
+                                {moveSelectedTutorsToEnd(trainersData).map((trainer, index) => {
                                     const key = `trainer-${index}`;
                                     const isExpanded = expandedCards[key];
                                     return (
