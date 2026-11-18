@@ -1,40 +1,32 @@
-const sharedGalleryImages = [
-  "/assets/aboutbanner.webp",
-  "/assets/subject-tutoring.webp",
-  "/assets/tutors.webp",
-  "/assets/banner.webp",
-];
-
-const buildGalleryImages = (courseName, courseImage) => {
-  const sources = [...sharedGalleryImages, courseImage];
-
-  return Array.from({ length: 20 }, (_, index) => ({
-    src: sources[index % sources.length],
-    alt: `${courseName} learning at Ignite Training Institute`,
-  }));
-};
-
-const aLevelGalleryImages = [
-  { src: "/assets/aboutbanner.webp", alt: "Students learning at Ignite Training Institute" },
-  { src: "/assets/subject-tutoring.webp", alt: "Focused A-Level tutoring session" },
-  { src: "/assets/tutors.webp", alt: "Ignite tutors supporting students" },
-  { src: "/assets/banner.webp", alt: "Students studying together at Ignite" },
-  { src: "/assets/alevel_bg_main.webp", alt: "A-Level students in a guided lesson" },
-  { src: "/assets/aboutbanner.webp", alt: "Students learning together at Ignite" },
-  { src: "/assets/subject-tutoring.webp", alt: "One-to-one A-Level tutoring at Ignite" },
-  { src: "/assets/tutors.webp", alt: "Expert tutors at Ignite Training Institute" },
-  { src: "/assets/banner.webp", alt: "Collaborative learning at Ignite" },
-  { src: "/assets/alevel_bg_main.webp", alt: "Guided A-Level study session" },
-  { src: "/assets/aboutbanner.webp", alt: "Students working together in class" },
-  { src: "/assets/subject-tutoring.webp", alt: "Personalised subject tutoring" },
-  { src: "/assets/tutors.webp", alt: "Ignite teaching team" },
-  { src: "/assets/banner.webp", alt: "Students studying at the centre" },
-  { src: "/assets/alevel_bg_main.webp", alt: "Focused A-Level classroom learning" },
-  { src: "/assets/aboutbanner.webp", alt: "A-Level students learning at Ignite" },
-  { src: "/assets/subject-tutoring.webp", alt: "Individual academic support" },
-  { src: "/assets/tutors.webp", alt: "Experienced Ignite tutors" },
-  { src: "/assets/banner.webp", alt: "Active student learning" },
-  { src: "/assets/alevel_bg_main.webp", alt: "A-Level lesson at Ignite" },
+const courseGalleryImages = [
+  {
+    src: "/images/course-gallery/classroom-team.webp",
+    alt: "Ignite tutors in a classroom at the JLT centre",
+  },
+  {
+    src: "/images/course-gallery/group-tutoring.webp",
+    alt: "Small-group tutoring session at Ignite Training Institute",
+  },
+  {
+    src: "/images/course-gallery/one-to-one-tutoring.webp",
+    alt: "One-to-one tutoring session at Ignite Training Institute",
+  },
+  {
+    src: "/images/course-gallery/study-resources.webp",
+    alt: "Course books and study resources used by Ignite students",
+  },
+  {
+    src: "/images/course-gallery/jlt-reception.webp",
+    alt: "Reception area at the Ignite JLT centre",
+  },
+  {
+    src: "/images/course-gallery/ignite-team.webp",
+    alt: "Ignite Training Institute teaching and support team",
+  },
+  {
+    src: "/images/course-gallery/ignite-team-group.webp",
+    alt: "Ignite Training Institute team at the JLT centre",
+  },
 ];
 
 export const yearPlannerConfig = {
@@ -367,6 +359,16 @@ export const startStepsConfig = {
 };
 
 export const courseGalleryConfig = {
+  home: {
+    id: "home-gallery",
+    subHeading: "LIFE AT IGNITE",
+    titlePrefix: "A Look Inside",
+    titleHighlight: "Ignite Training Institute",
+    description:
+      "Explore focused lessons, guided practice and collaborative learning across our online and in-person classes in Dubai.",
+    dialogLabel: "Ignite Training Institute photo gallery",
+    images: courseGalleryImages,
+  },
   aLevel: {
     id: "a-level-gallery",
     subHeading: "LIFE AT IGNITE",
@@ -375,7 +377,7 @@ export const courseGalleryConfig = {
     description:
       "Explore the focused lessons, guided practice and collaborative learning that help our A-Level students grow in confidence.",
     dialogLabel: "A-Level photo gallery",
-    images: aLevelGalleryImages,
+    images: courseGalleryImages,
   },
   ibdp: {
     id: "ibdp-gallery",
@@ -385,7 +387,7 @@ export const courseGalleryConfig = {
     description:
       "Take a look at our IBDP classes in Dubai. See how our IB tutors teach clear lessons, guide practice, and help students feel more confident in every subject.",
     dialogLabel: "IBDP photo gallery",
-    images: buildGalleryImages("IBDP", "/assets/ibdp_bg_main.webp"),
+    images: courseGalleryImages,
   },
   igcse: {
     id: "igcse-gallery",
@@ -395,7 +397,7 @@ export const courseGalleryConfig = {
     description:
       "Take a look inside our IGCSE classes and see how tutors break down tough topics, guide practice and help students feel ready for exams.",
     dialogLabel: "IGCSE photo gallery",
-    images: buildGalleryImages("IGCSE", "/assets/igcse.webp"),
+    images: courseGalleryImages,
   },
   myp: {
     id: "myp-gallery",
@@ -405,7 +407,7 @@ export const courseGalleryConfig = {
     description:
       "Take a look inside our MYP classes and see how tutors explain difficult concepts, guide students through practice questions and help them prepare for assessments.",
     dialogLabel: "MYP photo gallery",
-    images: buildGalleryImages("MYP", "/assets/myp_bg_main.webp"),
+    images: courseGalleryImages,
   },
   homeschooling: {
     id: "homeschooling-gallery",
@@ -415,7 +417,7 @@ export const courseGalleryConfig = {
     description:
       "Get a closer look at our homeschooling programmes. See how our homeschool tutors in Dubai keep lessons clear, guide practice, and build student confidence across IGCSE, A-Levels, and AP.",
     dialogLabel: "Homeschooling photo gallery",
-    images: buildGalleryImages("Homeschooling", "/assets/homeschooling_bg_main.webp"),
+    images: courseGalleryImages,
   },
 };
 

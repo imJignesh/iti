@@ -27,6 +27,8 @@ import { getTrainersData } from "@/data/trainersData";
 const trainersData = getTrainersData("home");
 const TrainersShared = dynamic(() => import("@/components/shared/Trainers"));
 const Trainers = () => <TrainersShared trainers={trainersData} subHeading="MEET OUR TUTORS" title="Teachers Who Care About Your Success" />;
+const CourseGallery = dynamic(() => import("@/components/shared/CourseGallery"));
+import { getCourseGalleryData } from "@/data/coursePageSectionsConfig";
 const Testimonial = dynamic(() => import("@/components/homeCopy/Testimonial"));
 const Blog = dynamic(() => import("@/components/homeCopy/Blog"));
 const FAQSection = dynamic(() => import("@/components/shared/FaqSection"));
@@ -139,6 +141,10 @@ const HomeCopy = ({ blogPosts = [] }) => {
                     <section data-scroll-section>
                         <Trainers />
                     </section>
+                </LazySection>
+
+                <LazySection>
+                    <CourseGallery config={getCourseGalleryData("home")} />
                 </LazySection>
 
                 <LazySection>

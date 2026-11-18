@@ -52,7 +52,7 @@ export default function CourseGallery({ config }) {
           <p>{description}</p>
         </div>
 
-        <div className="galleryGrid">
+        <div className={`galleryGrid ${showAll ? "galleryGridExpanded" : ""}`}>
           {galleryImages.slice(0, 5).map((image, index) => (
             <div
               className={`galleryItem galleryItem${index + 1}`}
@@ -394,6 +394,11 @@ export default function CourseGallery({ config }) {
           .galleryItem4,
           .galleryItem5 {
             display: none;
+          }
+
+          .galleryGridExpanded .galleryItem4,
+          .galleryGridExpanded .galleryItem5 {
+            display: block;
           }
 
           .galleryItem3 .viewAll {
