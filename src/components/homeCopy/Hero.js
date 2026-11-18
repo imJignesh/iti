@@ -317,9 +317,19 @@ const Hero = () => {
                 }
 
                 @media (max-width: 575px) {
+                    .hero {
+                        background-size: 100%;
+                    }
+
                     .SubHeading {
-                        font-size: 15px;
-                        padding: 0 24px;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 88%;
+                        margin: 0 auto;
+                        padding: 16px 36px;
+                        font-size: clamp(12px, 4vw, 15px);
+                        text-align: center;
+                        white-space: nowrap;
                     }
 
                     .SubHeading:before,
@@ -328,6 +338,14 @@ const Hero = () => {
                         height: 24px;
                         top: 50%;
                         transform: translateY(-50%);
+                    }
+
+                    .SubHeading:before {
+                        left: 14px;
+                    }
+
+                    .SubHeading:after {
+                        right: 14px;
                     }
                 }
 
@@ -549,7 +567,7 @@ const Hero = () => {
                 @media (max-width: 425px) {
                     .hero {
                         padding: 20px 0 0 0 !important;
-                        background-size: 90%;
+                        background-size: 100%;
                     }
 
                     .videoContainer {

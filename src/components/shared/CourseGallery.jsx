@@ -453,7 +453,7 @@ export default function CourseGallery({ config }) {
           }
 
 
-          .tabletViewAll {
+          .galleryItem3 .tabletViewAll {
             display: none;
           }
 
