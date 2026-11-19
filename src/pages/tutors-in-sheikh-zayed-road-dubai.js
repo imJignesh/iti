@@ -106,7 +106,6 @@ export default function GmbLandingPage() {
       <Head>
         <title>Tuition Centre in Sheikh Zayed Road Dubai | Ignite</title>
         <meta name="description" content="Tuition centre in Sheikh Zayed Road, Dubai, near Emirates Towers Metro. IB, IGCSE, A-Level and AP tutors, online or in person. Book a free demo class." />
-        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <JsonLd schema={gmbSchema} />
 
