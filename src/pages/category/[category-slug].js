@@ -472,7 +472,7 @@ const CategoryPage = ({ headerHeight, fallbackCategory, categorySlug, initialPos
                                     {posts.map((post, index) => {
                                         const featuredImage = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
                                         const postTags = post.tags.map(tagId => tagsMap[tagId]).filter(Boolean);
-                                        const postLink = post.link;
+                                        const postLink = encodeURIComponent(`https://ignitetraininginstitute.com/blog/${post.slug}`);
                                         const postSlug = post.slug; // Assuming your post detail page is at /post-detail/[slug] or similar based on [slug].js
                                         const postTitle = encodeURIComponent(post.title.rendered);
 

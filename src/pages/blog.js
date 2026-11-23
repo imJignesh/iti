@@ -296,7 +296,7 @@ const Blogpg = ({ headerHeight, ...props }) => {
                                     {posts.map((post) => {
                                         const featuredImage = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
                                         // const postTags = post.tags.map(tagId => tagsMap[tagId]).filter(Boolean);
-                                        const postLink = post.link;
+                                        const postLink = encodeURIComponent(`https://ignitetraininginstitute.com/blog/${post.slug}`);
                                         const postSlug = post.slug;
                                         const postTitle = encodeURIComponent(post.title.rendered);
 

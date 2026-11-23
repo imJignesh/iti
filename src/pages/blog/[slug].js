@@ -997,7 +997,7 @@ export default function PostDetail({ initialPost, initialRelatedPosts = [], tags
                                             const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
                                             const postSlug = post.slug;
                                             const postTitle = encodeURIComponent(post.title.rendered);
-                                            const postLink = post.link;
+                                            const postLink = encodeURIComponent(`https://ignitetraininginstitute.com/blog/${post.slug}`);
 
                                             return (
                                                 <div className="col" key={post.id}>
