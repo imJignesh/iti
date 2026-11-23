@@ -39,7 +39,6 @@ import path from "path";
 import fs from "fs";
 import he from "he";
 import { homepageFaqs, homepageFaqSchema, homepageServicesSchema } from "@/data/homepageContent";
-import { homepageOrganizationNodes } from "@/data/homepageOrganizationSchema";
 
 const homepageSchema = {
     "@context": "https://schema.org",
@@ -72,7 +71,6 @@ const homepageSchema = {
                 },
             ],
         },
-        ...homepageOrganizationNodes,
         homepageServicesSchema,
         homepageFaqSchema,
     ],

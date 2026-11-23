@@ -1,7 +1,7 @@
-// Organization, founder, WebSite and the two LocalBusiness branches (SZR, JLT) for the home page @graph.
+// Sitewide schema: Organization, founder, WebSite and the two LocalBusiness branches (SZR, JLT). Loaded once for every page from _app.js.
 // Source: Google Doc "Ignite Training Institute: Home page", tab "Organization and Local Business Schema" (approved text, hours 9:30 am to 9 pm, 7 days).
 // No aggregateRating on purpose (see audit/44 issue 8). SZR branch url stays the home page until the SZR page is live.
-export const homepageOrganizationNodes = [
+export const organizationSchemaNodes = [
   {
     "@type": "EducationalOrganization",
     "@id": "https://ignitetraininginstitute.com/#organization",
@@ -249,3 +249,8 @@ export const homepageOrganizationNodes = [
     }
   }
 ];
+
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": organizationSchemaNodes,
+};

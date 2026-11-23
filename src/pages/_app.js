@@ -15,6 +15,7 @@ import "@/styles/globals.css";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { organizationSchema } from "@/data/organizationSchema";
 const DelayedPopup = dynamic(() => import("../components/DelayedPopup"), { ssr: false });
 
 
@@ -146,6 +147,16 @@ export default function MyApp({ Component, pageProps }) {
     // Minimal Return for Debugging
     return (
         <PopupProvider>
+            {/* Sitewide Organization + LocalBusiness schema (one block on every indexable page) */}
+            {!isPsiTestPage && !isHomeV1Page && !router.pathname.startsWith("/thank-you") && (
+                <Head>
+                    <script
+                        type="application/ld+json"
+                        key="sitewide-organization-schema"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+                    />
+                </Head>
+            )}
             {!isHomeV1Page && (
                 <Head>
                     <style key="legacy-hero-styles" dangerouslySetInnerHTML={{ __html: legacyHeroStyles }} />
