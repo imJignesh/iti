@@ -1,6 +1,6 @@
 // Organization, founder, WebSite and the two LocalBusiness branches (SZR, JLT) for the home page @graph.
-// Source: Ignite institute/schema/01_head_global_organization_localbusiness.html (opening hours added: 9:30 am to 9 pm, 7 days).
-// No aggregateRating on purpose (see audit/44 issue 8).
+// Source: Google Doc "Ignite Training Institute: Home page", tab "Organization and Local Business Schema" (approved text, hours 9:30 am to 9 pm, 7 days).
+// No aggregateRating on purpose (see audit/44 issue 8). SZR branch url stays the home page until the SZR page is live.
 export const homepageOrganizationNodes = [
   {
     "@type": "EducationalOrganization",
@@ -13,7 +13,7 @@ export const homepageOrganizationNodes = [
       "url": "https://ignitetraininginstitute.com/images/logo.webp"
     },
     "image": "https://ignitetraininginstitute.com/images/hero-banner-video-c1-poster.webp",
-    "description": "Ignite Training Institute is a Dubai tutoring centre offering IB (IBDP, MYP), IGCSE, A-Level, AP, ACT and homeschooling support, one-to-one and in small groups, online and in person.",
+    "description": "Ignite Training Institute is a tuition centre in Dubai that has helped students with exam preparation since 2015. We teach IGCSE, A-Level, IBDP, IB MYP and AP, and we also support ACT preparation and homeschooling (private candidacy) for students in Grades 6 to 13. Families choose our tutoring centre in Dubai for experienced tutors, clear study plans, past paper practice and mock exams, in one-to-one or small-group classes, online or in person. We have two centres, one on Sheikh Zayed Road near Emirates Towers Metro and one in Jumeirah Lakes Towers (JLT), and our tutors cover Cambridge, Edexcel and AQA. Book a free demo class to meet a tutor first.",
     "foundingDate": "2015",
     "email": "hello@ignitetraininginstitute.com",
     "telephone": "+971588589958",
@@ -111,7 +111,7 @@ export const homepageOrganizationNodes = [
     "logo": "https://ignitetraininginstitute.com/images/logo.webp",
     "telephone": "+971588589958",
     "email": "hello@ignitetraininginstitute.com",
-    "description": "Ignite Training Institute tutoring centre on Sheikh Zayed Road, Dubai, near Emirates Towers Metro. IB, IGCSE, A-Level, AP, ACT and homeschooling tutors.",
+    "description": "Ignite Training Institute is a tuition centre on Sheikh Zayed Road, Dubai, in Al Moosa Tower 1, near Emirates Towers Metro. Students from DIFC, Trade Centre, Business Bay and nearby areas can join one-to-one or small-group classes with experienced tutors in IGCSE, A-Level, IBDP, IB MYP and AP. This tutoring centre in Dubai also supports ACT preparation and homeschooling for private candidates. Each student gets a clear study plan, past paper practice, mock exams and regular progress checks, with Cambridge, Edexcel and AQA covered. Classes run in person at the centre or online, and parents can book a free demo class before they decide to join.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1503, Al Moosa Tower 1, Sheikh Zayed Road, near Emirates Towers Metro (Sea Side)",
@@ -147,22 +147,30 @@ export const homepageOrganizationNodes = [
       "longitude": 55.2777655
     },
     "hasMap": "https://www.google.com/maps?cid=4950330766112063708",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "09:30",
-        "closes": "21:00"
-      }
-    ]
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "09:30",
+      "closes": "21:00"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+971588589958",
+      "areaServed": "AE",
+      "availableLanguage": [
+        "English",
+        "Arabic"
+      ]
+    }
   },
   {
     "@type": [
@@ -179,7 +187,7 @@ export const homepageOrganizationNodes = [
     "logo": "https://ignitetraininginstitute.com/images/logo.webp",
     "telephone": "+971588589958",
     "email": "hello@ignitetraininginstitute.com",
-    "description": "Ignite Training Institute tutoring centre in Jumeirah Lakes Towers (JLT), Dubai, serving Dubai Marina, JBR and The Greens. IB, IGCSE, A-Level and AP tutors.",
+    "description": "Ignite Training Institute is a tuition centre in Jumeirah Lakes Towers (JLT), Dubai, at Tiffany Tower, Level 11, Cluster W. Our JLT tutors serve families in Dubai Marina, JBR, The Greens and nearby communities with one-to-one and small-group tutoring for IGCSE, A-Level, IBDP, IB MYP and AP. As a tutoring centre in Dubai, we also support ACT preparation and homeschooling for private candidates. Every student follows a clear study plan with past paper practice, mock exams and regular progress checks, covering Cambridge, Edexcel and AQA. Students can join in person at the JLT centre or online, and a free demo class is available before enrolment.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Tiffany Tower, Level 11, Cluster W, Jumeirah Lakes Towers",
@@ -215,21 +223,29 @@ export const homepageOrganizationNodes = [
       "longitude": 55.1498108
     },
     "hasMap": "https://www.google.com/maps?cid=5302559779513017463",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "09:30",
-        "closes": "21:00"
-      }
-    ]
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "09:30",
+      "closes": "21:00"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+971588589958",
+      "areaServed": "AE",
+      "availableLanguage": [
+        "English",
+        "Arabic"
+      ]
+    }
   }
 ];
