@@ -57,7 +57,6 @@ const PopupProvider = ({ children }) => {
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
     const [headerHeight, setHeaderHeight] = useState(102); // Default to approx header height to prevent CLS
-    const [showButton, setShowButton] = useState(false);
     const [stylesLoaded, setStylesLoaded] = useState(false);
     const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(false);
     const isPsiTestPage = router.pathname === "/psi-test";
@@ -67,7 +66,6 @@ export default function MyApp({ Component, pageProps }) {
     const isPsiTestBot = isPsiTestPage && Boolean(pageProps?.isPsiBot);
     const thirdPartyScriptStrategy = isPsiTestPage ? "lazyOnload" : "afterInteractive";
 
-    const mobileBreakpoint = 2600;
     const legacyContactCopyPages = [
         '/ib-curriculum-tutors-in-dubai-copy',
         '/thank-you-organic-copy',
@@ -85,34 +83,6 @@ export default function MyApp({ Component, pageProps }) {
         const shouldEnable = window.innerWidth > 991 && !isPageSpeedInsights();
         setShouldLoadLocomotiveScroll(shouldEnable);
     }, [isPsiTestBot]);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.innerWidth <= mobileBreakpoint) {
-                const shouldShow = window.scrollY > 100;
-                setShowButton(shouldShow);
-            } else {
-                setShowButton(true);
-            }
-        };
-
-        const handleResize = () => {
-            if (window.innerWidth > mobileBreakpoint) {
-                setShowButton(true);
-            } else {
-                handleScroll();
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        window.addEventListener('resize', handleResize, { passive: true });
-        handleScroll();
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
     const isReportingRef = useRef(false);
 
@@ -249,24 +219,22 @@ export default function MyApp({ Component, pageProps }) {
             )}
 
             {/* Outside data-scroll-container so Locomotive never sees this DOM mutation */}
-            {showButton && (
-                <a
-                    href={`https://wa.me/${whatsappNumber}`}
-                    onClick={handleWhatsappClick}
-                    className="sticky-demo-button"
-                    aria-label="Chat with Ignite Training Institute on WhatsApp"
-                >
-                    <img
-                        src="/images/whatsapp-footer.webp"
-                        alt=""
-                        width="20"
-                        height="20"
-                        aria-hidden="true"
-                        className="sticky-demo-button-icon"
-                    />
-                    WhatsApp
-                </a>
-            )}
+            <a
+                href={`https://wa.me/${whatsappNumber}`}
+                onClick={handleWhatsappClick}
+                className="sticky-demo-button"
+                aria-label="Chat with Ignite Training Institute on WhatsApp"
+            >
+                <img
+                    src="/images/whatsapp-footer.webp"
+                    alt=""
+                    width="20"
+                    height="20"
+                    aria-hidden="true"
+                    className="sticky-demo-button-icon"
+                />
+                WhatsApp
+            </a>
         </PopupProvider>
     );
 }
