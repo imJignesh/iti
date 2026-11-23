@@ -158,7 +158,7 @@ export default function Footer() {
           <nav className="footerNav" aria-label="Footer navigation">
             {footerColumns.map((column) => <div className="footerNavColumn" key={column.title}><h3>{column.title}</h3><ul>{column.links.map(([label, href]) => <li key={href}><a href={href}>{label}</a></li>)}</ul></div>)}
           </nav>
-          <div className="footerLegal"><p>© Ignite Training Institute. All rights reserved.</p><div><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms &amp; Conditions</a></div></div>
+          <div className="footerLegal"><p>© Ignite Training Institute. All rights reserved.</p></div>
         </div>
       </section>
 
