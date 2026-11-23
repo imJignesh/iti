@@ -40,8 +40,11 @@ const About = ({ headerHeight }) => {
 
   return (
     <>
-      <SEO title="About Ignite Training Institute: Expert Tutors In Dubai"
-        description="Learn about Ignite Training Institute, Dubai's leading tutoring center for IB, IGCSE, A-Levels, & AP. Our experienced tutors and proven methodology ensure academic success." />
+      <SEO
+        title="Thank You | Ignite Training Institute"
+        description="Thank you for contacting Ignite Training Institute. Our academic team will get in touch with you shortly."
+        noindex
+      />
       {/* Event snippet for Sign-up - new website main form conversion page */}
       <Script
         id="google-conversion-tracking"

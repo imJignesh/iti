@@ -68,7 +68,7 @@ const getPageHeroImage = (pageUrl) => {
     }
 };
 
-const SEO = ({ title, description, url, image, imageAlt, keywords, preloadImages, loadInnerStyles }) => {
+const SEO = ({ title, description, url, image, imageAlt, keywords, preloadImages, loadInnerStyles, noindex }) => {
     // 1. We use the provided title directly (no global site name appended).
     const pageTitle = title || 'Ignite Training Institute';
     const pageDescription = description || DEFAULT_DESCRIPTION;
@@ -108,6 +108,7 @@ const SEO = ({ title, description, url, image, imageAlt, keywords, preloadImages
                 key="desc"
             />
             {keywords && <meta name="keywords" content={keywords} key="keywords" />}
+            {noindex && <meta name="robots" content="noindex, follow" key="robots" />}
 
             {/* Canonical URL (Highly Recommended) */}
             {url && <link rel="canonical" href={url} />}

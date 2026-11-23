@@ -30,6 +30,7 @@ const ThankYouGmb = ({ headerHeight }) => {
       <SEO
         title="Thank You | Ignite Training Institute JLT"
         description="Thank you for requesting a free demo at Ignite Training Institute's JLT centre. Our academic team will contact you shortly."
+        noindex
       />
       <Script
         id="google-conversion-tracking-gmb"
