@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import dynamic from "next/dynamic";
 import SEO from "@/components/SEO";
+import JsonLd from "@/components/JsonLd";
+import { pageSchemas } from "@/data/pageSchemas";
 import InfoCardLeft from '@/components/shared/InfoCardLeft';
 import InfoCardForm from '@/components/shared/InfoCardForm';
 import { subjectPages, subjectFormConfigs } from '@/data/heroSubjects';
@@ -40,6 +42,7 @@ const TestSeries = ({ headerHeight }) => {
                     fetchPriority="high"
                 />
             </Head>
+            <JsonLd schema={pageSchemas["test-series"]} />
             <SEO
                 loadInnerStyles={true}
                 title="Test Series | Ignite Training Institute"

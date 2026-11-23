@@ -8,6 +8,8 @@ import Testimonial from "@/components/ibdp/ReviewsSection";
 import Learning from "@/components/maincourse/Learning";
 import MainBanner from "@/components/maincourse/MainBanner";
 import SEO from "@/components/SEO";
+import JsonLd from "@/components/JsonLd";
+import { pageSchemas } from "@/data/pageSchemas";
 
 // 1. ACCEPT the headerHeight prop
 const About = ({ headerHeight }) => {
@@ -31,6 +33,7 @@ const About = ({ headerHeight }) => {
 
     return (
         <>
+            <JsonLd schema={pageSchemas["courses"]} />
             <SEO
                 title="Top Courses In UAE For IB, IGCSE, A Levels, & AP Tutoring"
                 description="Learn with certified tutors for IB, IGCSE, A-Levels, AP, ACT & UCAT. Get expert coaching with personalized support & proven strategies. Enroll today"

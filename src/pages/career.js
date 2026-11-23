@@ -2,12 +2,15 @@ import CareersBanner from '@/components/career/Banner';
 import CareerForm from '@/components/career/CareerForm';
 import IgniteCareerCard from '@/components/career/IgniteCareerCard';
 import SEO from "@/components/SEO";
+import JsonLd from "@/components/JsonLd";
+import { pageSchemas } from "@/data/pageSchemas";
 import LazySection from "@/components/LazySection";
 // 1. ACCEPT the headerHeight prop
 const act = ({ headerHeight }) => {
 
   return (
     <>
+      <JsonLd schema={pageSchemas["career"]} />
       <SEO title="Career - Ignite Training Institute l Tutor Jobs In Dubai"
         url="https://ignitetraininginstitute.com/career"
         description="Join Ignite’s team of expert tutors in Dubai. Explore tutoring jobs, growth opportunities & benefits while helping students achieve academic success" />

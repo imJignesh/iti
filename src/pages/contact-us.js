@@ -3,6 +3,7 @@ import Head from "next/head";
 import LazySection from "@/components/LazySection";
 // Import the reusable schema component
 import SEO from "@/components/SEO";
+import { pageSchemas } from "@/data/pageSchemas";
 import JsonLd from "@/components/JsonLd";
 import ContactBanner from "@/components/contact/Banner";
 
@@ -124,36 +125,6 @@ const Contact = ({ headerHeight }) => {
     };
 
 
-    // ----------------------------------------------------
-    // 燥 JSON-LD SCHEMA DEFINITION FOR THIS PAGE
-    // ----------------------------------------------------
-    const educationalOrganizationSchema = {
-        "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Ignite Training Institute",
-        "url": "https://ignitetraininginstitute.com/",
-        "logo": "https://ignitetraininginstitute.com/wp-content/uploads/2023/02/ignitefinallogos_1.svg",
-        "description": "Ignite Training Institute offers expert tutoring in Dubai for IB, IGCSE, A-Levels, AP, SAT, ACT, MYP, and homeschooling programs. With qualified tutors and personalized learning, Ignite supports students in achieving academic success.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Al Moosa Tower 1 - 1503 - Sheikh Zayed Rd - near Emirates Towers Metro (Sea Side - Trade Centre - Trade Centre 1",
-            "addressLocality": "Dubai",
-            "addressCountry": "United Arab Emirates"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+971588589958",
-            "contactType": "customer service",
-            "areaServed": "AE",
-            "availableLanguage": ["English", "Arabic"]
-        },
-        "sameAs": [
-            "https://www.instagram.com/ignitetraininginstitute/",
-            "https://ae.linkedin.com/company/ignite-training-institute",
-            "https://www.facebook.com/ignitetraininginstitute"
-        ]
-    };
-
 
     return (
         <>
@@ -165,7 +136,7 @@ const Contact = ({ headerHeight }) => {
                 <link rel="stylesheet" href="/styles/contact.css" />
             </Head>
             {/* 燥 SCHEMA INJECTION: Use the reusable component here */}
-            <JsonLd schema={educationalOrganizationSchema} />
+            <JsonLd schema={pageSchemas["contact-us"]} />
 
             {/* 3. Apply the headerHeight as paddingTop to fix the sticky header issue. */}
             <div className="innerpage page-content-padding">

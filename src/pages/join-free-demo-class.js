@@ -16,6 +16,8 @@ import Testimonial from "@/components/freedemo/Testimonial";
 // import TrainersMessage from "@/components/freedemo/videoTrainer";
 import CallToAction from "@/components/freedemo/CallToAction";
 import SEO from "@/components/SEO";
+import JsonLd from "@/components/JsonLd";
+import { pageSchemas } from "@/data/pageSchemas";
 
 import styles from "@/styles/freedemo/freedemo.module.css";
 import achievementStyles from "@/styles/freedemo/Acheivements.module.css";
@@ -83,6 +85,7 @@ const FreeDemo = ({ headerHeight }) => {
 
     return (
         <>
+            <JsonLd schema={pageSchemas["join-free-demo-class"]} />
             <SEO
                 loadInnerStyles={true}
                 title="Free Demo Class At Ignite Training Institute | Join Today"

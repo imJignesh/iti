@@ -5,6 +5,8 @@ import LazySection from "@/components/LazySection";
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import SEO from "@/components/SEO";
+import JsonLd from "@/components/JsonLd";
+import { pageSchemas } from "@/data/pageSchemas";
 import TeamBanner from "@/components/team/Banner";
 const MarqueeBanner = dynamic(() => import('@/components/shared/MarqueeBanner'));
 import { getMarqueeData } from '@/data/marqueeConfig';
@@ -203,6 +205,7 @@ const OurTeam = ({ headerHeight }) => {
 
     return (
         <>
+            <JsonLd schema={pageSchemas["our-team"]} />
             <SEO
                 title="Meet Our Expert Trainers | Know Our Team Better"
                 description="Get to know Ignite Training Institute’s expert mentors in the UAE, shaping bright futures with 2000+ trained students & remarkable academic results"
