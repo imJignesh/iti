@@ -1,4 +1,4 @@
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import GmbHero from "@/components/gmb/GmbHero";
 import GmbWhatWeTeach from "@/components/gmb/GmbWhatWeTeach";
 import GmbHowItWorks from "@/components/gmb/GmbHowItWorks";
@@ -103,10 +103,11 @@ const gmbSchema = {
 export default function GmbLandingPage() {
   return (
     <>
-      <Head>
-        <title>Tuition Centre in Sheikh Zayed Road Dubai | Ignite</title>
-        <meta name="description" content="Tuition centre in Sheikh Zayed Road, Dubai, near Emirates Towers Metro. IB, IGCSE, A-Level and AP tutors, online or in person. Book a free demo class." />
-      </Head>
+      <SEO
+        title="Tuition Centre in Sheikh Zayed Road Dubai | Ignite"
+        description="Tuition centre in Sheikh Zayed Road, Dubai, near Emirates Towers Metro. IB, IGCSE, A-Level and AP tutors, online or in person. Book a free demo class."
+        url={pageUrl}
+      />
       <JsonLd schema={gmbSchema} />
 
       <main className="gmbLandingPage innerpage page-content-padding" aria-label="GMB landing page">
