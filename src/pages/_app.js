@@ -62,6 +62,8 @@ export default function MyApp({ Component, pageProps }) {
     const [shouldLoadLocomotiveScroll, setShouldLoadLocomotiveScroll] = useState(false);
     const isPsiTestPage = router.pathname === "/psi-test";
     const isHomeV1Page = router.pathname === "/homev1";
+    // Local landing pages carry their own single-branch schema, so they must not get the sitewide block (it lists both locations).
+    const isLocalLandingPage = ["/tutors-in-sheikh-zayed-road-dubai", "/tutors-in-jlt-dubai"].includes(router.pathname);
     const isPsiTestBot = isPsiTestPage && Boolean(pageProps?.isPsiBot);
     const thirdPartyScriptStrategy = isPsiTestPage ? "lazyOnload" : "afterInteractive";
 
@@ -148,7 +150,7 @@ export default function MyApp({ Component, pageProps }) {
     return (
         <PopupProvider>
             {/* Sitewide Organization + LocalBusiness schema (one block on every indexable page) */}
-            {!isPsiTestPage && !isHomeV1Page && !router.pathname.startsWith("/thank-you") && (
+            {!isPsiTestPage && !isHomeV1Page && !isLocalLandingPage && !router.pathname.startsWith("/thank-you") && (
                 <Head>
                     <script
                         type="application/ld+json"

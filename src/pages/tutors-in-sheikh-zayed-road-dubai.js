@@ -12,6 +12,7 @@ import GmbFindUs from "@/components/gmb/GmbFindUs";
 import FaqSection from "@/components/shared/FaqSection";
 import GmbFormSection from "@/components/gmb/GmbFormSection";
 import JsonLd from "@/components/JsonLd";
+import { getBranchOrganizationNodes } from "@/data/organizationSchema";
 
 const gmbReviews = getReviewsData("homeCopy");
 
@@ -55,6 +56,7 @@ const pageUrl = "https://ignitetraininginstitute.com/tutors-in-sheikh-zayed-road
 const gmbSchema = {
   "@context": "https://schema.org",
   "@graph": [
+    ...getBranchOrganizationNodes("szr"),
     {
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,

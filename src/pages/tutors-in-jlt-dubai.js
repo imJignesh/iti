@@ -116,12 +116,6 @@ const Tutors = ({ headerHeight }) => {
       "address": [
         {
           "@type": "PostalAddress",
-          "streetAddress": "1503, Al Moosa Tower 1, Sheikh Zayed Road, Near Emirates Towers Metro (Sea Side)",
-          "addressLocality": "Dubai",
-          "addressCountry": "AE"
-        },
-        {
-          "@type": "PostalAddress",
           "streetAddress": "Tiffany Tower, Level 11, Cluster W, Jumeirah Lake Towers",
           "addressLocality": "Dubai",
           "addressCountry": "AE"

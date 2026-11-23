@@ -250,7 +250,29 @@ export const organizationSchemaNodes = [
   }
 ];
 
+const SZR_PAGE_URL = "https://ignitetraininginstitute.com/tutors-in-sheikh-zayed-road-dubai";
+const ORGANIZATION_ID = "https://ignitetraininginstitute.com/#organization";
+const BRANCH_IDS = {
+  szr: "https://ignitetraininginstitute.com/#localbusiness-szr",
+  jlt: "https://ignitetraininginstitute.com/#localbusiness-jlt",
+};
+
+// The Sheikh Zayed Road branch points to its own landing page.
+const withSzrPageUrl = (node) => (node["@id"] === BRANCH_IDS.szr ? { ...node, url: SZR_PAGE_URL } : node);
+
+// For a local landing page: the same nodes, but only that page's own branch (no other location).
+// Use this on /tutors-in-sheikh-zayed-road-dubai and /tutors-in-jlt-dubai instead of the sitewide block.
+export function getBranchOrganizationNodes(branch) {
+  const keepId = BRANCH_IDS[branch];
+  if (!keepId) throw new Error("Unknown branch: " + branch);
+  const dropId = Object.values(BRANCH_IDS).find((id) => id !== keepId);
+  return organizationSchemaNodes
+    .filter((node) => node["@id"] !== dropId)
+    .map(withSzrPageUrl)
+    .map((node) => (node["@id"] === ORGANIZATION_ID ? { ...node, location: [{ "@id": keepId }] } : node));
+}
+
 export const organizationSchema = {
   "@context": "https://schema.org",
-  "@graph": organizationSchemaNodes,
+  "@graph": organizationSchemaNodes.map(withSzrPageUrl),
 };
