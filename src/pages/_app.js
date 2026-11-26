@@ -212,10 +212,10 @@ export default function MyApp({ Component, pageProps }) {
 
             {shouldLoadLocomotiveScroll && !isPsiTestBot ? (
                 <LocomotiveScrollProvider>
-                    <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} isHomeV1Page={isHomeV1Page} />
+                    <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} isHomeV1Page={isHomeV1Page} hidePopup={router.pathname === "/tutors-in-sheikh-zayed-road-dubai"} />
                 </LocomotiveScrollProvider>
             ) : (
-                <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} isHomeV1Page={isHomeV1Page} />
+                <MainContent setHeaderHeight={setHeaderHeight} headerHeight={headerHeight} pageProps={pageProps} Component={Component} isHomeV1Page={isHomeV1Page} hidePopup={router.pathname === "/tutors-in-sheikh-zayed-road-dubai"} />
             )}
 
             {/* Outside data-scroll-container so Locomotive never sees this DOM mutation */}
@@ -239,11 +239,11 @@ export default function MyApp({ Component, pageProps }) {
     );
 }
 
-const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component, isHomeV1Page }) => (
+const MainContent = ({ setHeaderHeight, headerHeight, pageProps, Component, isHomeV1Page, hidePopup }) => (
     <div className={`${montserrat.className} ${montserrat.variable}`}>
         {!pageProps?.isPsiBot && <Header setHeaderHeight={setHeaderHeight} />}
         <Component {...pageProps} headerHeight={headerHeight} />
         {!pageProps?.isPsiBot && !isHomeV1Page && <Footer />}
-        {!pageProps?.isPsiBot && router.pathname !== "/tutors-in-sheikh-zayed-road-dubai" && <DelayedPopup />}
+        {!pageProps?.isPsiBot && !hidePopup && <DelayedPopup />}
     </div>
 );
