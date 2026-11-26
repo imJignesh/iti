@@ -13,6 +13,8 @@ import GmbFormSection from "@/components/gmb/GmbFormSection";
 import GmbClasses from "@/components/gmb/GmbClasses";
 import GmbAreas from "@/components/gmb/GmbAreas";
 import GmbGuides from "@/components/gmb/GmbGuides";
+import GmbCourses from "@/components/gmb/GmbCourses";
+import GmbMap from "@/components/gmb/GmbMap";
 import JsonLd from "@/components/JsonLd";
 import { getBranchOrganizationNodes } from "@/data/organizationSchema";
 
@@ -30,6 +32,10 @@ const gmbFaqs = [
   {
     question: "Which curricula do your tutors in Sheikh Zayed Road, Dubai teach?",
     answer: "Our tutors in Sheikh Zayed Road, Dubai teach IGCSE, A Level, IBDP, IB MYP, AP and ACT. Choose your curriculum and subject to see the tutors, topics and exam preparation for each.",
+  },
+  {
+    question: "Where can I find a tuition centre in Dubai?",
+    answer: "Ignite Training Institute has a centre on Sheikh Zayed Road at Al Moosa Tower 1, Office 1503, near Emirates Towers Metro, and another in Jumeirah Lake Towers. Lessons are also available online.",
   },
   {
     question: "How much does tutoring cost in Dubai?",
@@ -129,6 +135,7 @@ export default function GmbLandingPage() {
       <main className="gmbLandingPage innerpage page-content-padding" aria-label="GMB landing page">
         <GmbHero />
         <GmbWhatWeTeach />
+        <GmbCourses />
         <GmbClasses />
         <GmbAreas />
         <GmbHowItWorks />
@@ -152,6 +159,7 @@ export default function GmbLandingPage() {
             <GmbFindUs />
           </div>
         </LazySection>
+        <GmbMap />
         <LazySection>
           <section className="gmbFaqSection" data-scroll-section>
             <FaqSection
