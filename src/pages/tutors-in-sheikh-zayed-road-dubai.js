@@ -12,7 +12,6 @@ import FaqSection from "@/components/shared/FaqSection";
 import GmbFormSection from "@/components/gmb/GmbFormSection";
 import GmbAreas from "@/components/gmb/GmbAreas";
 import GmbGuides from "@/components/gmb/GmbGuides";
-import GmbCourses from "@/components/gmb/GmbCourses";
 import JsonLd from "@/components/JsonLd";
 import { getBranchOrganizationNodes } from "@/data/organizationSchema";
 
@@ -129,7 +128,6 @@ export default function GmbLandingPage() {
       <main className="gmbLandingPage innerpage page-content-padding" aria-label="GMB landing page">
         <GmbHero />
         <GmbWhatWeTeach />
-        <GmbCourses />
         <GmbAreas />
         <GmbHowItWorks />
         <LazySection>

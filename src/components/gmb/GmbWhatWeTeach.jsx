@@ -2,24 +2,36 @@ const CURRICULA = [
   {
     category: "IB",
     title: "IB Diploma (IBDP)",
+    years: "Grades 11 and 12, HL and SL",
+    subjects: "Maths AA, Maths AI, Physics, Chemistry, Biology, Computer Science, Business Management, Economics, English Language and Literature, French, Spanish and Psychology.",
+    formats: ["One-to-one tutoring", "Group finals preparation", "Pre-IBDP summer bridge course", "Spring revision course"],
     description: "IB tuition on Sheikh Zayed Road: HL and SL subjects, IAs, Extended Essay and TOK.",
     links: [{ label: "View IBDP tutors", href: "/courses/ibdp-tutors-in-dubai" }],
   },
   {
     category: "IB",
     title: "IB MYP",
-    description: "Years 6 to 10 support in maths, sciences, languages and personal project.",
+    years: "Grades 6 to 10",
+    subjects: "Maths (Standard and Extended), Physics, Chemistry, Biology, English Language and Literature, and French.",
+    formats: ["One-to-one tutoring", "eAssessment preparation in groups"],
+    description: "Support in maths, sciences, languages and the personal project.",
     links: [{ label: "View MYP tutors", href: "/courses/myp-tutors-in-dubai" }],
   },
   {
     category: "British",
     title: "IGCSE and GCSE",
+    years: "Grades 9 to 11",
+    subjects: "Maths (Core and Extended), Further Maths, Statistics, Physics, Chemistry, Biology, Combined and Double Award Science, Computer Science and ICT, Business Studies, Economics, Accounting, English, French, Spanish, Psychology and Environmental Management.",
+    formats: ["One-to-one tutoring", "Year 10 groups", "Group finals preparation", "Resit course"],
     description: "IGCSE tuition near Emirates Towers, taught to your board: Cambridge, Edexcel or AQA.",
     links: [{ label: "View IGCSE tutors", href: "/courses/igcse-tutors-in-dubai" }],
   },
   {
     category: "British",
     title: "A-Levels",
+    years: "Years 12 and 13",
+    subjects: "Pure Maths, Statistics, Further Maths, Physics, Chemistry, Biology, Computer Science, Business Studies, Economics, Accounting, English, French, Spanish, Psychology and Environmental Management.",
+    formats: ["One-to-one tutoring", "AS (Year 12) groups", "A2 (Year 13) groups", "AS summer head start", "Resit programme"],
     description: "A-Level classes at Al Moosa Tower for AS and A2, with past papers and mock exams.",
     links: [{ label: "View A-Level tutors", href: "/courses/a-level-tutors-in-dubai" }],
   },
@@ -67,8 +79,9 @@ export default function GmbWhatWeTeach() {
             Curricula and exams taught at our <span className="highlight">Sheikh Zayed Road centre</span>
           </h3>
           <p>
-            Select your curriculum or subject to meet your tutors and see the topics and exam
-            preparation we cover.
+            Find your child&apos;s curriculum to see the year groups, subjects and course options, or start
+            from a subject. You can also compare our programmes as a whole on our{" "}
+            <a href="/">tuition centres in Dubai</a> page.
           </p>
         </div>
 
@@ -77,7 +90,16 @@ export default function GmbWhatWeTeach() {
             <article className="curriculumCard" key={item.title}>
               <span className="cardCategory">{item.category}</span>
               <h3>{item.title}</h3>
+              {item.years && <p className="cardYears">{item.years}</p>}
               <p>{item.description}</p>
+              {item.subjects && <p className="cardSubjects">{item.subjects}</p>}
+              {item.formats && (
+                <ul className="cardFormats">
+                  {item.formats.map((format) => (
+                    <li key={format}>{format}</li>
+                  ))}
+                </ul>
+              )}
               <div className="cardLinks">
                 {item.links.map((link) => (
                   <a href={link.href} key={link.href}>
@@ -105,6 +127,11 @@ export default function GmbWhatWeTeach() {
             ))}
           </nav>
         </div>
+
+        <p className="teachNote">
+          Batch timings and availability are confirmed when you book your free demo class. For individual
+          support, see our <a href="/private-tutors-in-dubai">private tutors in Dubai</a>.
+        </p>
       </div>
 
       <style jsx>{`
@@ -130,12 +157,11 @@ export default function GmbWhatWeTeach() {
           color: var(--grey-text);
           font-size: 1vw;
           line-height: 1.5vw;
-          opacity: 0.5;
         }
 
         .curriculumGrid {
           display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+          grid-template-columns: repeat(2, minmax(0, 1fr));
           gap: 22px;
         }
 
@@ -187,6 +213,48 @@ export default function GmbWhatWeTeach() {
           color: #4f526a;
           font-size: 1rem;
           line-height: 1.65;
+        }
+
+        .curriculumCard .cardYears {
+          margin: -6px 0 10px;
+          color: #078f7c;
+          font-weight: 800;
+        }
+
+        .curriculumCard .cardSubjects {
+          font-size: 0.95rem;
+        }
+
+        .cardFormats {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin: 0 0 20px;
+          padding: 0;
+          list-style: none;
+        }
+
+        .cardFormats li {
+          padding: 6px 12px;
+          color: #201d6d;
+          background: #fff;
+          border: 1px solid rgba(32, 29, 109, 0.18);
+          border-radius: 999px;
+          font-size: 0.85rem;
+          font-weight: 600;
+        }
+
+        .sectionIntro p a,
+        .teachNote a {
+          color: #078f7c;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+
+        .teachNote {
+          margin: 30px 0 0;
+          color: #4f526a;
+          text-align: center;
         }
 
         .cardLinks {
@@ -280,10 +348,6 @@ export default function GmbWhatWeTeach() {
 
           .sectionContainer {
             width: 92vw;
-          }
-
-          .curriculumGrid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
           }
 
           .sectionIntro p {
