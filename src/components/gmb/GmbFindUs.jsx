@@ -1,5 +1,3 @@
-const DIRECTIONS_URL = "https://maps.app.goo.gl/wA94yvAvyNqSWje37";
-
 const OPENING_HOURS = [
   "Monday",
   "Tuesday",
