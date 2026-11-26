@@ -65,15 +65,6 @@ export default function GmbHero() {
               <span>Chat on WhatsApp</span>
               <img src="/assets/rar.webp" alt="" width="35" height="35" aria-hidden="true" />
             </a>
-            <a
-              className="action actionDirections"
-              href={DIRECTIONS_URL}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Get directions</span>
-              <img src="/assets/rar.webp" alt="" width="35" height="35" aria-hidden="true" />
-            </a>
           </div>
         </div>
 
@@ -356,16 +347,18 @@ export default function GmbHero() {
           transform: translateY(-2px);
         }
 
+        /* Primary: solid and bright. Secondary: outline only. */
         .actionPrimary {
-          color: #1d1b70;
+          color: #fff;
+          background: linear-gradient(90deg, #078f7c, #0bb497);
+          box-shadow: 0 10px 24px rgba(8, 169, 144, 0.45);
         }
 
         .actionWhatsApp {
-          color: #1d1b70;
-        }
-
-        .actionDirections {
-          color: #1d1b70;
+          color: #fff;
+          background: rgba(5, 17, 28, 0.35);
+          border: 2px solid rgba(255, 255, 255, 0.85);
+          box-shadow: none;
         }
 
         .locationCard {
@@ -587,7 +580,7 @@ export default function GmbHero() {
           .actions {
             order: 1;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 10px;
             margin-top: 20px;
           }
@@ -627,10 +620,6 @@ export default function GmbHero() {
             gap: 8px;
             padding: 8px 10px;
             font-size: 0.8rem;
-          }
-
-          .actionPrimary {
-            grid-column: 1 / -1;
           }
 
           .action img {
