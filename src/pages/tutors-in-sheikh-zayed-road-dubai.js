@@ -10,6 +10,9 @@ import GmbInsideCentre from "@/components/gmb/GmbInsideCentre";
 import GmbFindUs from "@/components/gmb/GmbFindUs";
 import FaqSection from "@/components/shared/FaqSection";
 import GmbFormSection from "@/components/gmb/GmbFormSection";
+import GmbClasses from "@/components/gmb/GmbClasses";
+import GmbAreas from "@/components/gmb/GmbAreas";
+import GmbGuides from "@/components/gmb/GmbGuides";
 import JsonLd from "@/components/JsonLd";
 import { getBranchOrganizationNodes } from "@/data/organizationSchema";
 
@@ -114,6 +117,8 @@ export default function GmbLandingPage() {
       <main className="gmbLandingPage innerpage page-content-padding" aria-label="GMB landing page">
         <GmbHero />
         <GmbWhatWeTeach />
+        <GmbClasses />
+        <GmbAreas />
         <GmbHowItWorks />
         <LazySection>
           <div data-scroll-section>
@@ -145,6 +150,7 @@ export default function GmbLandingPage() {
             />
           </section>
         </LazySection>
+        <GmbGuides />
         <LazySection>
           <GmbFormSection />
         </LazySection>
