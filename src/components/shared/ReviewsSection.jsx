@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -10,69 +11,99 @@ import {
 } from "swiper/modules";
 import styles from "@/styles/home-copy/Testimonial.module.css";
 
-function ReviewTextScroller({ text, name }) {
+function ReviewText({ text, name, subtitle }) {
+  const wrapRef = useRef(null);
   const textRef = useRef(null);
+  const closeRef = useRef(null);
   const [hasOverflow, setHasOverflow] = useState(false);
-  const [isAtBottom, setIsAtBottom] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const updateScrollState = useCallback(() => {
+  // Show as many full lines as fit in the card, then "…" and a Read more link.
+  const fitLines = useCallback(() => {
+    const wrap = wrapRef.current;
     const element = textRef.current;
-    if (!element) return;
+    if (!wrap || !element) return;
 
-    const overflow = element.scrollHeight > element.clientHeight + 2;
+    const lineHeight = parseFloat(window.getComputedStyle(element).lineHeight) || 20;
+    element.style.webkitLineClamp = "unset";
+    const overflow = element.scrollHeight > wrap.clientHeight + 2;
+    const space = wrap.clientHeight - (overflow ? 32 : 0);
+    element.style.webkitLineClamp = String(Math.max(1, Math.floor(space / lineHeight)));
     setHasOverflow(overflow);
-    setIsAtBottom(
-      overflow && element.scrollTop + element.clientHeight >= element.scrollHeight - 2
-    );
   }, []);
 
   useEffect(() => {
-    updateScrollState();
+    fitLines();
 
-    const element = textRef.current;
-    if (!element || typeof ResizeObserver === "undefined") return undefined;
+    const wrap = wrapRef.current;
+    if (!wrap || typeof ResizeObserver === "undefined") return undefined;
 
-    const observer = new ResizeObserver(updateScrollState);
-    observer.observe(element);
+    const observer = new ResizeObserver(fitLines);
+    observer.observe(wrap);
 
     return () => observer.disconnect();
-  }, [text, updateScrollState]);
+  }, [text, fitLines]);
 
-  const handleArrowClick = () => {
-    const element = textRef.current;
-    if (!element) return;
+  useEffect(() => {
+    if (!isOpen) return undefined;
 
-    element.scrollTo({
-      top: isAtBottom ? 0 : element.scrollTop + element.clientHeight * 0.8,
-      behavior: "smooth",
-    });
-  };
+    const opener = document.activeElement;
+    closeRef.current?.focus();
+    const onKey = (event) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      opener?.focus?.({ preventScroll: true });
+    };
+  }, [isOpen]);
 
   return (
-    <div className={styles.testimonialTextWrap}>
-      <div
-        ref={textRef}
-        className={styles.testimonialText}
-        data-lenis-prevent
-        tabIndex={0}
-        aria-label={`Review from ${name}`}
-        onScroll={updateScrollState}
-      >
+    <div ref={wrapRef} className={styles.testimonialTextWrap}>
+      <div ref={textRef} className={styles.testimonialText}>
         {text}
       </div>
 
       {hasOverflow && (
         <button
           type="button"
-          className={`${styles.reviewScrollIndicator} ${isAtBottom ? styles.reviewScrollIndicatorUp : ""}`}
-          onClick={handleArrowClick}
-          aria-label={isAtBottom ? "Scroll review to the top" : "Scroll down to read more"}
+          className={styles.reviewMore}
+          onClick={() => setIsOpen(true)}
+          aria-label={`Read the full review from ${name}`}
         >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6.5 9.5 12 15l5.5-5.5" />
-          </svg>
+          Read more
         </button>
       )}
+
+      {isOpen &&
+        createPortal(
+          <div className={styles.reviewOverlay} onClick={() => setIsOpen(false)}>
+            <div
+              className={styles.reviewDialog}
+              role="dialog"
+              aria-modal="true"
+              aria-label={`Review from ${name}`}
+              data-lenis-prevent
+              onClick={(event) => event.stopPropagation()}
+            >
+              <button
+                ref={closeRef}
+                type="button"
+                className={styles.reviewClose}
+                onClick={() => setIsOpen(false)}
+                aria-label="Close review"
+              >
+                ×
+              </button>
+              <p>{text}</p>
+              <b>{name}</b>
+              <span>{subtitle}</span>
+            </div>
+          </div>,
+          document.body
+        )}
     </div>
   );
 }
@@ -225,7 +256,7 @@ export default function ReviewsSection({ testimonials = [], title = "" }) {
                   </div>
                 ) : (
                   <div className={`${styles.testimonialCard} ${styles.testimonialCardText}`}>
-                    <ReviewTextScroller text={item.text} name={item.name} />
+                    <ReviewText text={item.text} name={item.name} subtitle={item.subtitle} />
                     <div className={styles.testimonialTextName}>
                       <b>{item.name}</b>
                     </div>
