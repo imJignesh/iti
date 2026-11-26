@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,127 +11,74 @@ import {
 } from "swiper/modules";
 import styles from "@/styles/home-copy/Testimonial.module.css";
 
+// Long reviews are cut so that "…read more" ends on the card's last line; it opens the full review.
+// The full text stays in the server HTML and is only shortened in the browser.
 function ReviewText({ text, name, subtitle }) {
   const wrapRef = useRef(null);
-  const textRef = useRef(null);
-  const closeRef = useRef(null);
   const [shortText, setShortText] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Cut a long review at a word so that "…read more" ends on the last visible line of the card.
-  // The full text is in the server HTML; it is only shortened in the browser.
-  const fitText = useCallback(() => {
+  useEffect(() => {
     const wrap = wrapRef.current;
-    const element = textRef.current;
-    if (!wrap || !element || !wrap.clientHeight) return;
+    const fit = () => {
+      if (!wrap.clientHeight) return;
+      const probe = wrap.firstChild.cloneNode(false);
+      probe.style.cssText = "position:absolute;visibility:hidden";
+      wrap.appendChild(probe);
 
-    const probe = element.cloneNode(false);
-    probe.style.position = "absolute";
-    probe.style.visibility = "hidden";
-    wrap.appendChild(probe);
-
-    const link = document.createElement("span");
-    link.className = styles.reviewMore;
-    link.textContent = "read more";
-    const words = String(text).match(/\S+\s*/g) || [];
-    const fits = () => probe.scrollHeight <= wrap.clientHeight + 1;
-
-    probe.textContent = text;
-    let result = null;
-    if (!fits()) {
-      let low = 1;
-      let high = words.length;
-      while (low < high) {
-        const middle = Math.ceil((low + high) / 2);
-        probe.textContent = `${words.slice(0, middle).join("").trimEnd()}… `;
-        probe.appendChild(link);
-        if (fits()) low = middle;
-        else high = middle - 1;
+      const words = text.match(/\S+\s*/g) || [];
+      const fits = (value) => {
+        probe.textContent = value;
+        return probe.scrollHeight <= wrap.clientHeight + 1;
+      };
+      const cut = (count) => words.slice(0, count).join("").trimEnd();
+      let result = null;
+      if (!fits(text)) {
+        let low = 1;
+        let high = words.length;
+        while (low < high) {
+          const middle = Math.ceil((low + high) / 2);
+          if (fits(`${cut(middle)}… read more`)) low = middle;
+          else high = middle - 1;
+        }
+        result = cut(low);
       }
-      result = words.slice(0, low).join("").trimEnd();
-    }
+      probe.remove();
+      setShortText(result);
+    };
 
-    probe.remove();
-    setShortText(result);
-  }, [text]);
-
-  useEffect(() => {
-    fitText();
-    // Line breaks change once the web font has loaded.
-    document.fonts?.ready.then(fitText);
-
-    const wrap = wrapRef.current;
-    if (!wrap || typeof ResizeObserver === "undefined") return undefined;
-
-    const observer = new ResizeObserver(fitText);
+    // Runs again when the card is resized or the web font has loaded.
+    const observer = new ResizeObserver(fit);
     observer.observe(wrap);
-
+    document.fonts?.ready.then(fit);
     return () => observer.disconnect();
-  }, [fitText]);
-
-  useEffect(() => {
-    if (!isOpen) return undefined;
-
-    const opener = document.activeElement;
-    closeRef.current?.focus();
-    const onKey = (event) => {
-      if (event.key === "Escape") setIsOpen(false);
-    };
-    document.addEventListener("keydown", onKey);
-
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      opener?.focus?.({ preventScroll: true });
-    };
-  }, [isOpen]);
+  }, [text]);
 
   return (
     <div ref={wrapRef} className={styles.testimonialTextWrap}>
-      <div ref={textRef} className={styles.testimonialText}>
-        {shortText === null ? (
-          text
-        ) : (
-          <>
-            {`${shortText}… `}
-            <button
-              type="button"
-              className={styles.reviewMore}
-              onClick={() => setIsOpen(true)}
-              aria-label={`Read the full review from ${name}`}
-            >
-              read more
-            </button>
-          </>
-        )}
+      <div className={styles.testimonialText}>
+        {shortText === null ? text : <>{shortText}… <button type="button" className={styles.reviewMore} onClick={() => setIsOpen(true)} aria-label={`Read the full review from ${name}`}>read more</button></>}
       </div>
 
-      {isOpen &&
-        createPortal(
-          <div className={styles.reviewOverlay} onClick={() => setIsOpen(false)}>
-            <div
-              className={styles.reviewDialog}
-              role="dialog"
-              aria-modal="true"
-              aria-label={`Review from ${name}`}
-              data-lenis-prevent
-              onClick={(event) => event.stopPropagation()}
-            >
-              <button
-                ref={closeRef}
-                type="button"
-                className={styles.reviewClose}
-                onClick={() => setIsOpen(false)}
-                aria-label="Close review"
-              >
-                ×
-              </button>
-              <p>{text}</p>
-              <b>{name}</b>
-              <span>{subtitle}</span>
-            </div>
-          </div>,
-          document.body
-        )}
+      {isOpen && createPortal(
+        // Native dialog: Esc, focus handling and the dark backdrop come from the browser.
+        <dialog
+          ref={(node) => node && !node.open && node.showModal()}
+          className={styles.reviewDialog}
+          aria-label={`Review from ${name}`}
+          data-lenis-prevent
+          onClose={() => setIsOpen(false)}
+          onClick={(event) => event.target === event.currentTarget && event.currentTarget.close()}
+        >
+          <form method="dialog">
+            <button className={styles.reviewClose} aria-label="Close review">×</button>
+            <p>{text}</p>
+            <b>{name}</b>
+            <span>{subtitle}</span>
+          </form>
+        </dialog>,
+        document.body
+      )}
     </div>
   );
 }
