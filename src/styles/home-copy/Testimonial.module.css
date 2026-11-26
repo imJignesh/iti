@@ -218,25 +218,25 @@
     font-weight: 500;
     line-height: 1.6;
     letter-spacing: 0.8px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
     overflow: hidden;
+    /* room so the "read more" link is not clipped when it starts a line */
+    padding: 0 4px;
 }
 
 .reviewMore {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 4px 6px !important;
-    margin-left: -4px;
+    display: inline;
+    padding: 0 !important;
+    margin: 0 !important;
     white-space: nowrap;
     border: 0 !important;
     background: none !important;
     box-shadow: none !important;
     color: var(--blue-color) !important;
-    font-size: 0.9rem;
-    font-weight: 700;
-    line-height: 1.4;
+    font: inherit;
+    font-size: 0.85em;
+    letter-spacing: normal;
+    font-weight: 600;
+    vertical-align: baseline;
     cursor: pointer;
 }
 

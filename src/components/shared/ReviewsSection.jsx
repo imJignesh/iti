@@ -15,34 +15,59 @@ function ReviewText({ text, name, subtitle }) {
   const wrapRef = useRef(null);
   const textRef = useRef(null);
   const closeRef = useRef(null);
-  const [hasOverflow, setHasOverflow] = useState(false);
+  const [shortText, setShortText] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Show as many full lines as fit in the card, then "…" and a Read more link.
-  const fitLines = useCallback(() => {
+  // Cut a long review at a word so that "…read more" ends on the last visible line of the card.
+  // The full text is in the server HTML; it is only shortened in the browser.
+  const fitText = useCallback(() => {
     const wrap = wrapRef.current;
     const element = textRef.current;
-    if (!wrap || !element) return;
+    if (!wrap || !element || !wrap.clientHeight) return;
 
-    const lineHeight = parseFloat(window.getComputedStyle(element).lineHeight) || 20;
-    element.style.webkitLineClamp = "unset";
-    const overflow = element.scrollHeight > wrap.clientHeight + 2;
-    const space = wrap.clientHeight - (overflow ? 32 : 0);
-    element.style.webkitLineClamp = String(Math.max(1, Math.floor(space / lineHeight)));
-    setHasOverflow(overflow);
-  }, []);
+    const probe = element.cloneNode(false);
+    probe.style.position = "absolute";
+    probe.style.visibility = "hidden";
+    wrap.appendChild(probe);
+
+    const link = document.createElement("span");
+    link.className = styles.reviewMore;
+    link.textContent = "read more";
+    const words = String(text).match(/\S+\s*/g) || [];
+    const fits = () => probe.scrollHeight <= wrap.clientHeight + 1;
+
+    probe.textContent = text;
+    let result = null;
+    if (!fits()) {
+      let low = 1;
+      let high = words.length;
+      while (low < high) {
+        const middle = Math.ceil((low + high) / 2);
+        probe.textContent = `${words.slice(0, middle).join("").trimEnd()}… `;
+        probe.appendChild(link);
+        if (fits()) low = middle;
+        else high = middle - 1;
+      }
+      result = words.slice(0, low).join("").trimEnd();
+    }
+
+    probe.remove();
+    setShortText(result);
+  }, [text]);
 
   useEffect(() => {
-    fitLines();
+    fitText();
+    // Line breaks change once the web font has loaded.
+    document.fonts?.ready.then(fitText);
 
     const wrap = wrapRef.current;
     if (!wrap || typeof ResizeObserver === "undefined") return undefined;
 
-    const observer = new ResizeObserver(fitLines);
+    const observer = new ResizeObserver(fitText);
     observer.observe(wrap);
 
     return () => observer.disconnect();
-  }, [text, fitLines]);
+  }, [fitText]);
 
   useEffect(() => {
     if (!isOpen) return undefined;
@@ -63,19 +88,22 @@ function ReviewText({ text, name, subtitle }) {
   return (
     <div ref={wrapRef} className={styles.testimonialTextWrap}>
       <div ref={textRef} className={styles.testimonialText}>
-        {text}
+        {shortText === null ? (
+          text
+        ) : (
+          <>
+            {`${shortText}… `}
+            <button
+              type="button"
+              className={styles.reviewMore}
+              onClick={() => setIsOpen(true)}
+              aria-label={`Read the full review from ${name}`}
+            >
+              read more
+            </button>
+          </>
+        )}
       </div>
-
-      {hasOverflow && (
-        <button
-          type="button"
-          className={styles.reviewMore}
-          onClick={() => setIsOpen(true)}
-          aria-label={`Read the full review from ${name}`}
-        >
-          Read more
-        </button>
-      )}
 
       {isOpen &&
         createPortal(
