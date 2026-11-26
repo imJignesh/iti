@@ -67,6 +67,15 @@ export default function GmbFindUs() {
             <span className="mapLabel">Address</span>
             <strong className="plusCode">Al Moosa Tower 1, Office 1503</strong>
             <p>Sheikh Zayed Road, near Emirates Towers Metro, Dubai</p>
+            <div className="mapFrame">
+              <iframe
+                title="Map showing Ignite Training Institute at Al Moosa Tower 1, Sheikh Zayed Road"
+                src="https://www.google.com/maps?q=Ignite+Training+Institute,+Al+Moosa+Tower+1,+Sheikh+Zayed+Road,+Dubai&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
             <a href={DIRECTIONS_URL} target="_blank" rel="noreferrer">
               <span>Open in Google Maps</span>
               <img src="/assets/rar.webp" alt="" width="35" height="35" aria-hidden="true" />
@@ -239,7 +248,7 @@ export default function GmbFindUs() {
         .mapIcon {
           position: relative;
           z-index: 1;
-          margin-bottom: 30px;
+          margin-bottom: 18px;
         }
 
         .mapLabel {
@@ -265,10 +274,31 @@ export default function GmbFindUs() {
           position: relative;
           z-index: 1;
           max-width: 520px;
-          margin: 24px 0 34px;
+          margin: 14px 0 20px;
           color: rgba(255, 255, 255, 0.86);
           font-size: 1.05rem;
           line-height: 1.6;
+        }
+
+        .mapFrame {
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          min-height: 240px;
+          flex: 1 1 auto;
+          margin-bottom: 20px;
+          overflow: hidden;
+          background: #e8efe9;
+          border: 1px solid rgba(172, 242, 214, 0.55);
+          border-radius: 16px;
+        }
+
+        .mapFrame iframe {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
         }
 
         .mapCard a {
@@ -308,7 +338,7 @@ export default function GmbFindUs() {
           .sectionContainer { width: 92vw; }
           .sectionIntro p { max-width: 700px; font-size: 20px; line-height: 1.5; }
           .locationLayout { grid-template-columns: 1fr; max-width: 88vw; }
-          .mapCard { min-height: 410px; }
+          .mapCard { min-height: 520px; }
         }
 
         @media (max-width: 575px) {
@@ -321,9 +351,10 @@ export default function GmbFindUs() {
           .hoursCard { padding: 24px 20px; }
           .hoursRow { padding: 11px 0; }
           .hoursRow dt, .hoursRow dd { font-size: 0.92rem; }
-          .mapCard { min-height: 360px; padding: 26px 22px; }
+          .mapCard { min-height: 480px; padding: 26px 22px; }
+          .mapFrame { min-height: 220px; }
           .mapIcon { margin-bottom: 24px; }
-          .mapCard p { margin: 20px 0 28px; font-size: 0.96rem; }
+          .mapCard p { margin: 12px 0 16px; font-size: 0.96rem; }
           .mapCard a { min-height: 46px; padding-left: 17px; font-size: 0.76rem; }
           .mapCard a img { width: 31px; height: 31px; }
         }

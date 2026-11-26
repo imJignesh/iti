@@ -14,7 +14,6 @@ import GmbClasses from "@/components/gmb/GmbClasses";
 import GmbAreas from "@/components/gmb/GmbAreas";
 import GmbGuides from "@/components/gmb/GmbGuides";
 import GmbCourses from "@/components/gmb/GmbCourses";
-import GmbMap from "@/components/gmb/GmbMap";
 import JsonLd from "@/components/JsonLd";
 import { getBranchOrganizationNodes } from "@/data/organizationSchema";
 
@@ -159,7 +158,6 @@ export default function GmbLandingPage() {
             <GmbFindUs />
           </div>
         </LazySection>
-        <GmbMap />
         <LazySection>
           <section className="gmbFaqSection" data-scroll-section>
             <FaqSection
