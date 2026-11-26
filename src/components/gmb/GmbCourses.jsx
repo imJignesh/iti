@@ -53,7 +53,10 @@ export default function GmbCourses() {
             </article>
           ))}
         </div>
-        <p className="note">Batch timings and availability are confirmed when you book your free demo class.</p>
+        <p className="note">
+          Batch timings and availability are confirmed when you book your free demo class. For individual support, see our{" "}
+          <a href="/private-tutors-in-dubai">private tutors in Dubai</a>.
+        </p>
       </div>
       <style jsx>{`
         .block { padding: 60px 0; background: #fff; }
@@ -70,6 +73,7 @@ export default function GmbCourses() {
         .card ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
         .card li { padding: 6px 12px; background: #fff; border: 1px solid rgba(32, 29, 109, 0.18); border-radius: 999px; color: #201d6d; font-size: 0.85rem; font-weight: 600; }
         .note { margin: 24px 0 0; color: #4f526a; text-align: center; }
+        .note a { color: #078f7c; font-weight: 700; text-decoration: underline; }
         @media (max-width: 767px) { .block { padding: 44px 0; } .grid { grid-template-columns: 1fr; } .card { padding: 20px; } }
       `}</style>
     </section>

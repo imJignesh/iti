@@ -10,7 +10,6 @@ import GmbInsideCentre from "@/components/gmb/GmbInsideCentre";
 import GmbFindUs from "@/components/gmb/GmbFindUs";
 import FaqSection from "@/components/shared/FaqSection";
 import GmbFormSection from "@/components/gmb/GmbFormSection";
-import GmbClasses from "@/components/gmb/GmbClasses";
 import GmbAreas from "@/components/gmb/GmbAreas";
 import GmbGuides from "@/components/gmb/GmbGuides";
 import GmbCourses from "@/components/gmb/GmbCourses";
@@ -135,7 +134,6 @@ export default function GmbLandingPage() {
         <GmbHero />
         <GmbWhatWeTeach />
         <GmbCourses />
-        <GmbClasses />
         <GmbAreas />
         <GmbHowItWorks />
         <LazySection>
