@@ -266,17 +266,10 @@
     cursor: pointer;
 }
 
-.reviewScrollIndicator::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -4px;
-    z-index: -1;
-    width: 130px;
-    height: 52px;
-    background: linear-gradient(to bottom, rgba(234, 248, 255, 0), #eaf8ff 58%);
-    transform: translateX(-50%);
-    pointer-events: none;
+/* Full-width fade on the text itself while there is more to read; removed once scrolled to the end */
+.testimonialTextWrap:has(.reviewScrollIndicator:not(.reviewScrollIndicatorUp)) .testimonialText {
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 72px), transparent calc(100% - 34px));
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 72px), transparent calc(100% - 34px));
 }
 
 .reviewScrollIndicator svg {
