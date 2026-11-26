@@ -14,7 +14,7 @@ export default function GmbAreas() {
           <h3 id="szr-areas-title" className="title">
             Tuition near <span className="highlight">DIFC and Business Bay</span>
           </h3>
-          <p>Students visit our Al Moosa Tower centre from nearby neighbourhoods, or join the same lessons online.</p>
+          <p>Students visit our Al Moosa Tower centre from nearby neighbourhoods.</p>
         </header>
         <ul className="grid">
           {AREAS.map(([name, text]) => (

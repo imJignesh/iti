@@ -142,7 +142,7 @@ export default function GmbFormSection() {
 
               <div className="availability">
                 <strong>Open daily</strong>
-                <span>9:30 am to 9 pm · Online and in-person</span>
+                <span>9:30 am to 9 pm · At Al Moosa Tower</span>
               </div>
             </div>
 

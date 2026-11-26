@@ -25,7 +25,7 @@ const gmbFaqs = [
   },
   {
     question: "Is there a tuition centre near Emirates Towers?",
-    answer: "Yes. We offer tuition near Emirates Towers, with lessons in person at Al Moosa Tower or online. Students from DIFC, Trade Centre and Business Bay can reach us easily by Metro or car.",
+    answer: "Yes. We offer tuition near Emirates Towers, with lessons in person at Al Moosa Tower. Students from DIFC, Trade Centre and Business Bay can reach us easily by Metro or car.",
   },
   {
     question: "Which curricula do your tutors in Sheikh Zayed Road, Dubai teach?",
@@ -33,7 +33,7 @@ const gmbFaqs = [
   },
   {
     question: "Where can I find a tuition centre in Dubai?",
-    answer: "Ignite Training Institute has a centre on Sheikh Zayed Road at Al Moosa Tower 1, Office 1503, near Emirates Towers Metro, and another in Jumeirah Lake Towers. Lessons are also available online.",
+    answer: "Ignite Training Institute has a centre on Sheikh Zayed Road at Al Moosa Tower 1, Office 1503, near Emirates Towers Metro, and another in Jumeirah Lake Towers.",
   },
   {
     question: "How much does tutoring cost in Dubai?",
@@ -41,11 +41,7 @@ const gmbFaqs = [
   },
   {
     question: "Do you offer a free demo class?",
-    answer: "Yes. Every student can start with a free demo class, in person at our tutoring centre in Al Moosa Tower or online. Tell us the curriculum, subject and year, and we will confirm a slot.",
-  },
-  {
-    question: "Can my child study online instead of coming to the centre?",
-    answer: "Yes. All subjects are available online as well as at our local tutoring centre, with the same tutors and the same progress tracking.",
+    answer: "Yes. Every student can start with a free demo class, in person at our tutoring centre in Al Moosa Tower. Tell us the curriculum, subject and year, and we will confirm a slot.",
   },
   {
     question: "How do I find a good tuition centre in Dubai?",
@@ -61,7 +57,7 @@ const gmbFaqs = [
   },
   {
     question: "Do you offer one-to-one tuition near Emirates Towers?",
-    answer: "Yes. You can choose one-to-one tuition or a small group, at Al Moosa Tower or online.",
+    answer: "Yes. You can choose one-to-one tuition or a small group, at Al Moosa Tower.",
   },
   {
     question: "How do you track my child’s progress?",
@@ -80,7 +76,7 @@ const gmbSchema = {
       "@id": `${pageUrl}#webpage`,
       url: pageUrl,
       name: "Tuition Centre in Sheikh Zayed Road Dubai | Ignite",
-      description: "Ignite Training Institute is a tuition centre in Sheikh Zayed Road, Dubai, at Al Moosa Tower 1, Office 1503, near Emirates Towers Metro. Our tutors in Sheikh Zayed Road, Dubai teach IB Diploma, IB MYP, IGCSE, A Level, AP and ACT, and support homeschooled students and private candidates, one-to-one or in small groups, in person at the centre or online. Students from DIFC, Trade Centre and Business Bay can find tuition near Emirates Towers by Metro or car. Every student starts with a free demo class and a level check, then follows a clear study plan with regular feedback and mock results compared against a target grade.",
+      description: "Ignite Training Institute is a tuition centre in Sheikh Zayed Road, Dubai, at Al Moosa Tower 1, Office 1503, near Emirates Towers Metro. Our tutors in Sheikh Zayed Road, Dubai teach IB Diploma, IB MYP, IGCSE, A Level, AP and ACT, and support homeschooled students and private candidates, one-to-one or in small groups, in person at the centre. Students from DIFC, Trade Centre and Business Bay can find tuition near Emirates Towers by Metro or car. Every student starts with a free demo class and a level check, then follows a clear study plan with regular feedback and mock results compared against a target grade.",
       isPartOf: { "@id": "https://ignitetraininginstitute.com/#website" },
       about: { "@id": "https://ignitetraininginstitute.com/#localbusiness-szr" },
       breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
@@ -99,7 +95,7 @@ const gmbSchema = {
       "@type": "Service",
       "@id": `${pageUrl}#service`,
       name: "Tuition and tutoring in Sheikh Zayed Road, Dubai",
-      description: "Our tutoring centre in Al Moosa Tower offers tutoring in Sheikh Zayed Road, Dubai for students following IB, IGCSE, A Level, AP and ACT courses. Lessons run one-to-one or in small groups, in person at Al Moosa Tower 1, Office 1503, close to Emirates Towers Metro, or online with the same tutors and the same progress tracking. Parents book a free demo class, tell us the curriculum, subject and year, and meet a tutor who teaches their exact board. A level check finds gaps and sets a realistic target grade, and regular feedback and mock results show how the student is improving.",
+      description: "Our tutoring centre in Al Moosa Tower offers tutoring in Sheikh Zayed Road, Dubai for students following IB, IGCSE, A Level, AP and ACT courses. Lessons run one-to-one or in small groups, in person at Al Moosa Tower 1, Office 1503, close to Emirates Towers Metro. Parents book a free demo class, tell us the curriculum, subject and year, and meet a tutor who teaches their exact board. A level check finds gaps and sets a realistic target grade, and regular feedback and mock results show how the student is improving.",
       url: pageUrl,
       serviceType: "Tutoring",
       provider: { "@id": "https://ignitetraininginstitute.com/#localbusiness-szr" },
@@ -125,7 +121,7 @@ export default function GmbLandingPage() {
     <>
       <SEO
         title="Tuition Centre in Sheikh Zayed Road Dubai | Ignite"
-        description="Tuition centre in Sheikh Zayed Road, Dubai, near Emirates Towers Metro. IB, IGCSE, A-Level and AP tutors, online or in person. Book a free demo class."
+        description="Tuition centre in Sheikh Zayed Road, Dubai, near Emirates Towers Metro. IB, IGCSE, A-Level and AP tutors, in person. Book a free demo class."
         url={pageUrl}
       />
       <JsonLd schema={gmbSchema} />

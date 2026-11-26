@@ -2,7 +2,7 @@ const STEPS = [
   {
     title: "Book a free demo",
     description:
-      "Tell us the curriculum, subject and year. We confirm a slot at our tutoring centre in Al Moosa Tower or online.",
+      "Tell us the curriculum, subject and year. We confirm a slot at our tutoring centre in Al Moosa Tower.",
   },
   {
     title: "Level check",
@@ -17,7 +17,7 @@ const STEPS = [
   {
     title: "Track progress",
     description:
-      "Regular feedback to parents and mock results against the target grade, whether you study near Emirates Towers or online.",
+      "Regular feedback to parents and mock results against the target grade at our centre near Emirates Towers.",
   },
 ];
 
