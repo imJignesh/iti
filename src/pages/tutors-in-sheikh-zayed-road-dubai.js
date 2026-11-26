@@ -48,6 +48,18 @@ const gmbFaqs = [
     answer: "Look for tutors who teach your exact board and subject, a level check to find gaps, small groups or 1:1 teaching, and regular progress updates. Our tuition centre on Sheikh Zayed Road offers all of these, and we are rated 4.9 from 96 Google reviews.",
   },
   {
+    question: "Do you teach on weekends?",
+    answer: "Yes. Our Sheikh Zayed Road centre is open seven days a week, 9:30 am to 9 pm, including Saturday and Sunday.",
+  },
+  {
+    question: "Which exam boards do you cover?",
+    answer: "For IGCSE and GCSE we teach to Cambridge, Edexcel and AQA papers. Tell us your board and subject when you book the free demo class.",
+  },
+  {
+    question: "Do you offer one-to-one tuition near Emirates Towers?",
+    answer: "Yes. You can choose one-to-one tuition or a small group, at Al Moosa Tower or online.",
+  },
+  {
     question: "How do you track my child’s progress?",
     answer: "Parents receive regular feedback, and we compare mock results against the target grade set after the level check. This shows clearly where your child is improving and what to work on next.",
   },
@@ -127,7 +139,7 @@ export default function GmbLandingPage() {
         </LazySection>
         <LazySection>
           <div className="gmbReviewsSection" data-scroll-section>
-            <ReviewsSection testimonials={gmbReviews} />
+            <ReviewsSection testimonials={gmbReviews} title="WHAT PARENTS AND STUDENTS SAY ABOUT IGNITE" />
           </div>
         </LazySection>
         <LazySection>
