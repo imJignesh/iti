@@ -578,33 +578,65 @@ export default function GmbHero() {
             font-size: 1rem;
           }
 
-          .heroHighlights {
-            grid-template-columns: 1fr;
+          .gmbHeroContent {
+            display: flex;
+            flex-direction: column;
+          }
+
+          /* Mobile order: heading, buttons, highlights, intro text */
+          .actions {
+            order: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
-            margin-top: 24px;
+            margin-top: 20px;
+          }
+
+          .heroHighlights {
+            order: 2;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 20px;
+          }
+
+          .description {
+            order: 3;
           }
 
           .heroHighlight {
-            min-height: 72px;
+            min-height: 0;
+            padding: 10px 12px;
           }
 
-          .actions {
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            margin-top: 24px;
+          .heroHighlight::before {
+            display: none;
+          }
+
+          .heroHighlight strong {
+            font-size: 0.88rem;
+          }
+
+          .heroHighlight span {
+            font-size: 0.76rem;
           }
 
           .action {
-            width: auto;
-            min-width: 230px;
-            padding: 8px 10px 8px 16px;
+            width: 100%;
+            min-height: 48px;
+            justify-content: center;
+            gap: 8px;
+            padding: 8px 10px;
+            font-size: 0.8rem;
+          }
+
+          .actionPrimary {
+            grid-column: 1 / -1;
           }
 
           .action img {
-            width: 30px;
-            height: 30px;
-            flex-basis: 30px;
+            width: 26px;
+            height: 26px;
+            flex-basis: 26px;
           }
 
           .locationCard {
