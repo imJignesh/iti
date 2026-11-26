@@ -1,5 +1,4 @@
-const DIRECTIONS_URL =
-  "https://www.google.com/maps/dir/?api=1&destination=Ignite+Training+Institute%2C+Al+Moosa+Tower+1%2C+Sheikh+Zayed+Road%2C+Dubai&destination_place_id=ChIJs57i-LhDXz4R3ADMkpobs0Q";
+const DIRECTIONS_URL = "https://maps.app.goo.gl/wA94yvAvyNqSWje37";
 
 export default function GmbHero() {
   return (

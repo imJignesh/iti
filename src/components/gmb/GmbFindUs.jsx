@@ -1,5 +1,4 @@
-const DIRECTIONS_URL =
-  "https://www.google.com/maps/dir/?api=1&destination=Ignite+Training+Institute%2C+Al+Moosa+Tower+1%2C+Sheikh+Zayed+Road%2C+Dubai&destination_place_id=ChIJs57i-LhDXz4R3ADMkpobs0Q";
+const DIRECTIONS_URL = "https://maps.app.goo.gl/wA94yvAvyNqSWje37";
 
 const OPENING_HOURS = [
   "Monday",
@@ -57,29 +56,14 @@ export default function GmbFindUs() {
             </p>
           </div>
 
-          <aside className="mapCard" aria-label="Sheikh Zayed Road centre Google Maps details">
-            <span className="mapIcon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
-                <circle cx="12" cy="10" r="2.5" />
-              </svg>
-            </span>
-            <span className="mapLabel">Address</span>
-            <strong className="plusCode">Al Moosa Tower 1, Office 1503</strong>
-            <p>Sheikh Zayed Road, near Emirates Towers Metro, Dubai</p>
-            <div className="mapFrame">
-              <iframe
-                title="Map showing Ignite Training Institute at Al Moosa Tower 1, Sheikh Zayed Road"
-                src="https://www.google.com/maps?q=Ignite+Training+Institute,+Al+Moosa+Tower+1,+Sheikh+Zayed+Road,+Dubai&output=embed"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
-            </div>
-            <a href={DIRECTIONS_URL} target="_blank" rel="noreferrer">
-              <span>Open in Google Maps</span>
-              <img src="/assets/rar.webp" alt="" width="35" height="35" aria-hidden="true" />
-            </a>
+          <aside className="mapCard" aria-label="Sheikh Zayed Road centre map">
+            <iframe
+              title="Map showing Ignite Training Institute at Al Moosa Tower 1, Sheikh Zayed Road"
+              src="https://www.google.com/maps?q=25.216861,55.277798&z=17&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </aside>
         </div>
       </div>
@@ -225,75 +209,12 @@ export default function GmbFindUs() {
 
         .mapCard {
           position: relative;
-          display: flex;
-          min-height: 100%;
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 36px;
+          min-height: 420px;
           overflow: hidden;
-          background: linear-gradient(145deg, #073f3a 0%, #075448 60%, #086b5c 100%);
+          background: #075448;
         }
 
-        .mapCard::after {
-          position: absolute;
-          right: -110px;
-          bottom: -150px;
-          width: 330px;
-          height: 330px;
-          background: rgba(172, 242, 214, 0.08);
-          border-radius: 50%;
-          content: "";
-        }
-
-        .mapIcon {
-          position: relative;
-          z-index: 1;
-          margin-bottom: 18px;
-        }
-
-        .mapLabel {
-          position: relative;
-          z-index: 1;
-          color: #c9f4e1;
-          font-size: 0.78rem;
-          font-weight: 800;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-        }
-
-        .plusCode {
-          position: relative;
-          z-index: 1;
-          margin-top: 9px;
-          color: #a6eac7;
-          font-size: clamp(2rem, 3vw, 3rem);
-          line-height: 1;
-        }
-
-        .mapCard p {
-          position: relative;
-          z-index: 1;
-          max-width: 520px;
-          margin: 14px 0 20px;
-          color: rgba(255, 255, 255, 0.86);
-          font-size: 1.05rem;
-          line-height: 1.6;
-        }
-
-        .mapFrame {
-          position: relative;
-          z-index: 1;
-          width: 100%;
-          min-height: 240px;
-          flex: 1 1 auto;
-          margin-bottom: 20px;
-          overflow: hidden;
-          background: #e8efe9;
-          border: 1px solid rgba(172, 242, 214, 0.55);
-          border-radius: 16px;
-        }
-
-        .mapFrame iframe {
+        .mapCard iframe {
           position: absolute;
           inset: 0;
           width: 100%;
@@ -301,44 +222,12 @@ export default function GmbFindUs() {
           border: 0;
         }
 
-        .mapCard a {
-          position: relative;
-          z-index: 1;
-          display: inline-flex;
-          min-height: 50px;
-          align-items: center;
-          justify-content: space-between;
-          gap: 18px;
-          margin-top: auto;
-          padding: 8px 9px 8px 20px;
-          color: #201d6d;
-          background: linear-gradient(90deg, #acf2d6, #e7f6ff);
-          border-radius: 30px;
-          box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.18);
-          font-size: 0.84rem;
-          font-weight: 800;
-          letter-spacing: 0.03em;
-          text-decoration: none;
-          text-transform: uppercase;
-          transition: transform 180ms ease;
-        }
-
-        .mapCard a:hover {
-          transform: translateY(-2px);
-        }
-
-        .mapCard a img {
-          width: 35px;
-          height: 35px;
-          object-fit: contain;
-        }
-
         @media (max-width: 991px) {
           .findUs { padding: 50px 0; }
           .sectionContainer { width: 92vw; }
           .sectionIntro p { max-width: 700px; font-size: 20px; line-height: 1.5; }
           .locationLayout { grid-template-columns: 1fr; max-width: 88vw; }
-          .mapCard { min-height: 520px; }
+          .mapCard { min-height: 420px; }
         }
 
         @media (max-width: 575px) {
@@ -351,12 +240,7 @@ export default function GmbFindUs() {
           .hoursCard { padding: 24px 20px; }
           .hoursRow { padding: 11px 0; }
           .hoursRow dt, .hoursRow dd { font-size: 0.92rem; }
-          .mapCard { min-height: 480px; padding: 26px 22px; }
-          .mapFrame { min-height: 220px; }
-          .mapIcon { margin-bottom: 24px; }
-          .mapCard p { margin: 12px 0 16px; font-size: 0.96rem; }
-          .mapCard a { min-height: 46px; padding-left: 17px; font-size: 0.76rem; }
-          .mapCard a img { width: 31px; height: 31px; }
+          .mapCard { min-height: 320px; }
         }
       `}</style>
     </section>
