@@ -36,7 +36,7 @@ export default function GmbCourses() {
           </h3>
           <p>
             Find your child&apos;s curriculum below to see the year groups, subjects and course options.
-            Ignite is also one of the <a href="/">tuition centres in Dubai</a> offering the same programmes online.
+            You can also compare our programmes as a whole on our <a href="/">tuition centres in Dubai</a> page.
           </p>
         </header>
         <div className="grid">
