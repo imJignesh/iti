@@ -4,7 +4,6 @@ import GmbWhatWeTeach from "@/components/gmb/GmbWhatWeTeach";
 import GmbHowItWorks from "@/components/gmb/GmbHowItWorks";
 import GmbTutors from "@/components/gmb/GmbTutors";
 import LazySection from "@/components/LazySection";
-import GmbResults from "@/components/gmb/GmbResults";
 import ReviewsSection from "@/components/shared/ReviewsSection";
 import { getReviewsData } from "@/data/reviewsData";
 import GmbInsideCentre from "@/components/gmb/GmbInsideCentre";
@@ -122,11 +121,6 @@ export default function GmbLandingPage() {
           </div>
         </LazySection>
         <LazySection>
-          <div className="gmbResultsSection" data-scroll-section>
-            <GmbResults />
-          </div>
-        </LazySection>
-        <LazySection>
           <div className="gmbReviewsSection" data-scroll-section>
             <ReviewsSection testimonials={gmbReviews} />
           </div>
@@ -164,7 +158,6 @@ export default function GmbLandingPage() {
 
       <style jsx global>{`
         .gmbLandingPage .trainersSection .fade-in-section,
-        .gmbLandingPage .gmbResultsSection .fade-in-section,
         .gmbLandingPage .gmbReviewsSection .fade-in-section,
         .gmbLandingPage .gmbInsideCentreSection .fade-in-section,
         .gmbLandingPage .gmbFindUsSection .fade-in-section,
