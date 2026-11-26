@@ -2,7 +2,7 @@ const CURRICULA = [
   {
     category: "IB",
     title: "IB Diploma (IBDP)",
-    description: "HL and SL subject tutoring, IAs, Extended Essay and TOK.",
+    description: "IB tuition on Sheikh Zayed Road: HL and SL subjects, IAs, Extended Essay and TOK.",
     links: [{ label: "View IBDP tutors", href: "/courses/ibdp-tutors-in-dubai" }],
   },
   {
@@ -14,13 +14,13 @@ const CURRICULA = [
   {
     category: "British",
     title: "IGCSE and GCSE",
-    description: "Board-specific teaching for Cambridge, Edexcel and AQA papers.",
+    description: "IGCSE tuition near Emirates Towers, taught to your board: Cambridge, Edexcel or AQA.",
     links: [{ label: "View IGCSE tutors", href: "/courses/igcse-tutors-in-dubai" }],
   },
   {
     category: "British",
     title: "A-Levels",
-    description: "AS and A2 tutoring with past-paper practice and mock exams.",
+    description: "A-Level classes at Al Moosa Tower for AS and A2, with past papers and mock exams.",
     links: [{ label: "View A-Level tutors", href: "/courses/a-level-tutors-in-dubai" }],
   },
   {

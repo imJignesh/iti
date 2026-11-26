@@ -26,7 +26,7 @@ const gmbFaqs = [
   },
   {
     question: "Which curricula do your tutors in Sheikh Zayed Road, Dubai teach?",
-    answer: "Our tutors in Sheikh Zayed Road, Dubai teach IGCSE, A Level, IBDP, IB MYP, AP and more. Choose your curriculum and subject to see the tutors, topics and exam preparation for each.",
+    answer: "Our tutors in Sheikh Zayed Road, Dubai teach IGCSE, A Level, IBDP, IB MYP, AP and ACT. Choose your curriculum and subject to see the tutors, topics and exam preparation for each.",
   },
   {
     question: "How much does tutoring cost in Dubai?",

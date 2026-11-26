@@ -47,7 +47,7 @@ export default function GmbHero() {
 
           <p className="description">
             Ignite Training Institute is a tuition centre in Sheikh Zayed Road, Dubai, near
-            Al Moosa Tower. We offer IB, IGCSE, A-Level, AP and more, in person at Al Moosa
+            Al Moosa Tower. We teach IB, IGCSE, A-Level, AP and ACT, in person at Al Moosa
             Tower 1, Office 1503, or online. Start with a free demo class.
           </p>
 
