@@ -6,7 +6,7 @@ const CURRICULA = [
     subjects: "Maths AA, Maths AI, Physics, Chemistry, Biology, Computer Science, Business Management, Economics, English Language and Literature, French, Spanish and Psychology.",
     formats: ["One-to-one tutoring", "Small-group IB finals preparation", "Pre-IBDP summer bridge course", "IBDP spring revision course"],
     description: "IB tuition on Sheikh Zayed Road: HL and SL subjects, IAs, Extended Essay and TOK.",
-    links: [{ label: "View IBDP tutors", href: "/courses/ibdp-tutors-in-dubai" }],
+    links: [{ label: "IB Diploma tutors in Dubai", href: "/courses/ibdp-tutors-in-dubai" }],
   },
   {
     category: "IB",
@@ -15,7 +15,7 @@ const CURRICULA = [
     subjects: "Maths (Standard and Extended), Physics, Chemistry, Biology, English Language and Literature, and French.",
     formats: ["One-to-one tutoring", "Final eAssessment preparation in groups"],
     description: "Support in maths, sciences, languages and the personal project.",
-    links: [{ label: "View MYP tutors", href: "/courses/myp-tutors-in-dubai" }],
+    links: [{ label: "IB MYP tutors", href: "/courses/myp-tutors-in-dubai" }],
   },
   {
     category: "British Curriculum",
@@ -24,7 +24,7 @@ const CURRICULA = [
     subjects: "Maths (Core and Extended), Further Maths, Statistics, Physics, Chemistry, Biology, Combined Science and Double Award Science, Computer Science and ICT, Business Studies, Economics, Accounting, English, French, Spanish, Psychology and Environmental Management.",
     formats: ["One-to-one tutoring", "Year 10 groups", "Year 11 finals preparation", "Customised resit preparation courses"],
     description: "IGCSE tuition near Emirates Towers, taught to your board: Cambridge, Edexcel or AQA.",
-    links: [{ label: "View IGCSE tutors", href: "/courses/igcse-tutors-in-dubai" }],
+    links: [{ label: "IGCSE tutors in Dubai", href: "/courses/igcse-tutors-in-dubai" }],
   },
   {
     category: "British Curriculum",
@@ -33,7 +33,7 @@ const CURRICULA = [
     subjects: "Pure Maths, Statistics, Mechanics, Further Maths, Physics, Chemistry, Biology, Computer Science, Business Studies, Economics, Accounting, English, French, Spanish, Psychology, History and Geography.",
     formats: ["One-to-one tutoring", "AS (Year 12) groups", "A2 (Year 13) groups", "AS summer head start", "Customised resit preparation courses"],
     description: "A-Level classes at Al Moosa Tower for AS and A2, with past papers and mock exams.",
-    links: [{ label: "View A-Level tutors", href: "/courses/a-level-tutors-in-dubai" }],
+    links: [{ label: "A-Level tutors in Dubai", href: "/courses/a-level-tutors-in-dubai" }],
   },
   {
     category: "American",
@@ -49,7 +49,7 @@ const CURRICULA = [
     title: "Homeschooling (Private Candidates)",
     description: "Structured support for homeschooled students and private candidates.",
     links: [
-      { label: "View homeschooling", href: "/courses/homeschooling-tutors-in-dubai" },
+      { label: "Homeschooling support", href: "/courses/homeschooling-tutors-in-dubai" },
     ],
   },
 ];
