@@ -79,9 +79,9 @@ export default function GmbWhatWeTeach() {
             Curricula and exams supported at our <span className="highlight">Sheikh Zayed Road centre</span>
           </h3>
           <p>
-            Choose your child&apos;s curriculum below to see the subjects and course options. To explore all
-            our programmes, visit our{" "}
-            <a href="/">tuition centres in Dubai</a> page.
+            Choose your child&apos;s curriculum below to see the subjects and course options. You can also explore all
+            programmes offered at our{" "}
+            <a href="/">tuition centres in Dubai</a>.
           </p>
         </div>
 
