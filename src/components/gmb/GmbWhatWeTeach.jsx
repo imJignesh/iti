@@ -4,7 +4,7 @@ const CURRICULA = [
     title: "IB Diploma (IBDP)",
     years: "Grades 11 and 12, HL and SL",
     subjects: "Maths AA, Maths AI, Physics, Chemistry, Biology, Computer Science, Business Management, Economics, English Language and Literature, French, Spanish and Psychology.",
-    formats: ["One-to-one tutoring", "Group finals preparation", "Pre-IBDP summer bridge course", "Spring revision course"],
+    formats: ["One-to-one tutoring", "Small Group IB finals preparation", "Pre-IBDP summer bridge course", "IBDP Spring revision course"],
     description: "IB tuition on Sheikh Zayed Road: HL and SL subjects, IAs, Extended Essay and TOK.",
     links: [{ label: "View IBDP tutors", href: "/courses/ibdp-tutors-in-dubai" }],
   },
@@ -13,25 +13,25 @@ const CURRICULA = [
     title: "IB MYP",
     years: "Grades 6 to 10",
     subjects: "Maths (Standard and Extended), Physics, Chemistry, Biology, English Language and Literature, and French.",
-    formats: ["One-to-one tutoring", "eAssessment preparation in groups"],
+    formats: ["One-to-one tutoring", "Final eAssessment preparation in groups"],
     description: "Support in maths, sciences, languages and the personal project.",
     links: [{ label: "View MYP tutors", href: "/courses/myp-tutors-in-dubai" }],
   },
   {
-    category: "British",
+    category: "British Curriculum",
     title: "IGCSE and GCSE",
-    years: "Grades 9 to 11",
-    subjects: "Maths (Core and Extended), Further Maths, Statistics, Physics, Chemistry, Biology, Combined and Double Award Science, Computer Science and ICT, Business Studies, Economics, Accounting, English, French, Spanish, Psychology and Environmental Management.",
-    formats: ["One-to-one tutoring", "Year 10 groups", "Group finals preparation", "Resit course"],
+    years: "Years 9 to 11",
+    subjects: "Maths (Core and Extended), Further Maths, Statistics, Physics, Chemistry, Biology, Combined Science and Double Award Science, Computer Science and ICT, Business Studies, Economics, Accounting, English, French, Spanish, Psychology and Environmental Management.",
+    formats: ["One-to-one tutoring", "Year 10 groups", "Year 11 finals preparation", "Customised Resit Preparation"],
     description: "IGCSE tuition near Emirates Towers, taught to your board: Cambridge, Edexcel or AQA.",
     links: [{ label: "View IGCSE tutors", href: "/courses/igcse-tutors-in-dubai" }],
   },
   {
-    category: "British",
+    category: "British Curriculum",
     title: "A-Levels",
     years: "Years 12 and 13",
-    subjects: "Pure Maths, Statistics, Further Maths, Physics, Chemistry, Biology, Computer Science, Business Studies, Economics, Accounting, English, French, Spanish, Psychology and Environmental Management.",
-    formats: ["One-to-one tutoring", "AS (Year 12) groups", "A2 (Year 13) groups", "AS summer head start", "Resit programme"],
+    subjects: "Pure Maths, Statistics, Mechanics, Further Maths, Physics, Chemistry, Biology, Computer Science, Business Studies, Economics, Accounting, English, French, Spanish, Psychology, History and Geography.",
+    formats: ["One-to-one tutoring", "AS (Year 12) groups", "A2 (Year 13) groups", "AS summer head start", "Customised Resit Preparation Courses"],
     description: "A-Level classes at Al Moosa Tower for AS and A2, with past papers and mock exams.",
     links: [{ label: "View A-Level tutors", href: "/courses/a-level-tutors-in-dubai" }],
   },
@@ -46,7 +46,7 @@ const CURRICULA = [
   },
   {
     category: "Flexible",
-    title: "Homeschooling",
+    title: "Homeschooling (Private Candidates)",
     description: "Structured support for homeschooled students and private candidates.",
     links: [
       { label: "View homeschooling", href: "/courses/homeschooling-tutors-in-dubai" },
@@ -76,11 +76,11 @@ export default function GmbWhatWeTeach() {
         <div className="sectionIntro">
           <h2 className="SubHeading">What We Teach</h2>
           <h3 id="what-we-teach-title" className="testTitle">
-            Curricula and exams taught at our <span className="highlight">Sheikh Zayed Road centre</span>
+            Curricula and exams supported at our <span className="highlight">Sheikh Zayed Road centre</span>
           </h3>
           <p>
-            Find your child&apos;s curriculum to see the year groups, subjects and course options, or start
-            from a subject. You can also compare our programmes as a whole on our{" "}
+            Find your child&apos;s curriculum, subjects and course options. You can also compare our
+            programmes as a whole on our{" "}
             <a href="/">tuition centres in Dubai</a> page.
           </p>
         </div>
