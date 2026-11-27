@@ -57,7 +57,7 @@ export default function GmbFindUs() {
           <aside className="mapCard" aria-label="Sheikh Zayed Road centre map">
             <iframe
               title="Map showing Ignite Training Institute at Al Moosa Tower 1, Sheikh Zayed Road"
-              src="https://www.google.com/maps?q=25.216861,55.277798&z=17&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.6010810897133!2d55.2777655!3d25.2166721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43b8f8e29eb3%3A0x44b31b9a92cc00dc!2sIgnite%20Training%20Institute!5e0!3m2!1sen!2sin!4v1774356673335!5m2!1sen!2sin"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
